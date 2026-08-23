@@ -1,0 +1,6 @@
+personal_aws_account_id = "736654693886"
+aws_region              = "us-east-1"
+domain_name             = "qcon26.hatchman76.com"
+root_domain             = "hatchman76.com"
+cloudfront_price_class  = "PriceClass_100"
+
