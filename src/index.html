@@ -7,263 +7,54 @@
       name="description"
       content="Adapt or Drift: Resilience Engineering When AI Moves the Operating Point — Andrew Hatch at QCon San Francisco 2026."
     />
-    <meta name="theme-color" content="#07111f" />
+    <meta name="theme-color" content="#07101d" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <title>Adapt or Drift — QCon SF 2026</title>
+    <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
-    <div class="fallback-message" role="status">
-      This presentation uses 3D transforms. A current version of Chrome, Firefox, or Safari is recommended.
-    </div>
+    <p class="fallback-message" role="status">
+      This presentation requires a current web browser.
+    </p>
 
     <main
       id="impress"
-      data-width="1280"
-      data-height="720"
-      data-perspective="1200"
-      data-transition-duration="900"
+      data-width="1920"
+      data-height="1080"
+      data-perspective="0"
+      data-transition-duration="0"
       data-autoplay="0"
     >
-      <section id="title" class="step slide title-slide" data-x="0" data-y="0" data-scale="1.15">
-        <p class="eyebrow">QCon San Francisco · November 2026</p>
-        <h1><span>Adapt</span> or Drift</h1>
-        <p class="subtitle">Resilience Engineering When AI Moves the Operating Point</p>
-        <div class="speaker-lockup">
-          <span class="speaker-mark" aria-hidden="true">AH</span>
-          <p><strong>Andrew Hatch</strong><br />Engineering Leader · Cisco ThousandEyes</p>
-        </div>
-        <p class="draft-chip">Working deck scaffold</p>
-        <div class="notes">
-          Open with the audience promise, not the history of the model. Establish that the operating point is already moving.
-        </div>
-      </section>
+      <section id="title" class="step title-slide" data-x="0" data-y="0" data-scale="1">
+        <div class="title-copy">
+          <header class="conference-label">
+            <span>QCon San Francisco 2026</span>
+            <span class="session-label">Session</span>
+          </header>
 
-      <section id="question" class="step slide" data-x="1450" data-y="0">
-        <p class="eyebrow">The question</p>
-        <h2>Can the system <em>adapt</em>—</h2>
-        <p class="hero-question">or does it silently leave acceptable behavior?</p>
-        <ul class="signal-list">
-          <li class="substep">Models change</li>
-          <li class="substep">Workloads compound</li>
-          <li class="substep">Cost and latency move</li>
-          <li class="substep">Uncertainty reaches the control plane</li>
-        </ul>
-        <div class="notes">
-          The talk is about behavior under change, not a catalog of AI failure modes.
-        </div>
-      </section>
+          <h1>
+            Adapt or Drift:
+            <span>Resilience Engineering When AI Moves the Operating Point</span>
+          </h1>
 
-      <section id="operating-point" class="step slide model-slide" data-x="3000" data-y="0">
-        <p class="eyebrow">Rasmussen's dynamic safety model</p>
-        <h2>Every system has an operating point.</h2>
-        <div class="boundary-model" role="img" aria-label="Operating point between economic, workload, and acceptable-performance boundaries">
-          <span class="boundary boundary-economic">Economic failure</span>
-          <span class="boundary boundary-workload">Unacceptable workload</span>
-          <span class="boundary boundary-performance">Unacceptable performance</span>
-          <span class="operating-point" aria-label="Operating point"></span>
-          <span class="pressure pressure-cost">cost</span>
-          <span class="pressure pressure-work">work</span>
-          <span class="pressure pressure-risk">risk</span>
-        </div>
-        <p class="caption">Pressure never stops. Feedback determines whether movement becomes adaptation or drift.</p>
-        <div class="notes">
-          Reintroduce the model briefly. The 2024 talk supplies the foundation; this talk changes the forces acting on it.
-        </div>
-      </section>
+          <footer class="session-details">
+            <div>
+              <p class="speaker">Andrew Hatch</p>
+              <p class="role">Engineering Leader and SRE Manager @Cisco ThousandEyes</p>
+            </div>
+            <div class="schedule">
+              <p>Monday, November 16, 2026 · 2:45 PM PST</p>
+              <p>Seacliff ABC · Hyatt Regency, San Francisco</p>
+            </div>
+          </footer>
 
-      <section id="cloud-precedent" class="step slide" data-x="4600" data-y="-1150" data-rotate="-5">
-        <p class="eyebrow">We have seen this movie before</p>
-        <h2>Cloud moved the operating point.</h2>
-        <div class="sequence" aria-label="Cloud adoption sequence">
-          <span class="substep">Leverage</span>
-          <span class="sequence-arrow substep" aria-hidden="true">→</span>
-          <span class="substep">Sprawl</span>
-          <span class="sequence-arrow substep" aria-hidden="true">→</span>
-          <span class="substep">Cost shock</span>
-          <span class="sequence-arrow substep" aria-hidden="true">→</span>
-          <span class="substep accent">Guardrails</span>
+          <p class="track">Resilience Engineering: Everything Fails All the Time</p>
         </div>
-        <p class="big-statement">AI compresses that learning cycle.</p>
-        <div class="notes">
-          Use cloud as a shared precedent: powerful abstraction first, delayed operational maturity second.
-        </div>
-      </section>
 
-      <section id="ai-acceleration" class="step slide" data-x="4700" data-y="150">
-        <p class="eyebrow">What changed?</p>
-        <h2>AI accelerates movement across every boundary.</h2>
-        <div class="three-column">
-          <article class="substep">
-            <span class="metric">01</span>
-            <h3>Cheap intent</h3>
-            <p>Generating a proposal is nearly frictionless.</p>
-          </article>
-          <article class="substep">
-            <span class="metric">02</span>
-            <h3>Variable behavior</h3>
-            <p>The same interface can produce different outcomes.</p>
-          </article>
-          <article class="substep">
-            <span class="metric">03</span>
-            <h3>Delegated action</h3>
-            <p>Agents become permissioned distributed actors.</p>
-          </article>
-        </div>
         <div class="notes">
-          Replace these abstractions with one concrete system story as the talk develops.
-        </div>
-      </section>
-
-      <section id="economic-boundary" class="step slide boundary-slide economic" data-x="3000" data-y="-1900" data-rotate="-6">
-        <p class="eyebrow">Economic boundary</p>
-        <h2>Tokens are capacity planning.</h2>
-        <ul class="large-list">
-          <li class="substep"><strong>Model selection</strong> becomes routing.</li>
-          <li class="substep"><strong>Quality tiers</strong> become service classes.</li>
-          <li class="substep"><strong>Context growth</strong> becomes demand growth.</li>
-        </ul>
-        <p class="boundary-question">What feedback arrives before the bill?</p>
-        <div class="notes">
-          Anchor this section in real units: tokens, calls, latency, retries, and marginal value.
-        </div>
-      </section>
-
-      <section id="workload-boundary" class="step slide boundary-slide workload" data-x="4850" data-y="1900" data-rotate="6">
-        <p class="eyebrow">Workload boundary</p>
-        <h2>Output scales faster than attention.</h2>
-        <ul class="large-list">
-          <li class="substep">More changes to review</li>
-          <li class="substep">More exceptions to adjudicate</li>
-          <li class="substep">More automation to supervise</li>
-        </ul>
-        <p class="boundary-question">Who absorbs the verification load?</p>
-        <div class="notes">
-          The bottleneck moves from producing work to establishing justified confidence in it.
-        </div>
-      </section>
-
-      <section id="performance-boundary" class="step slide boundary-slide performance" data-x="1450" data-y="1900" data-rotate="-6">
-        <p class="eyebrow">Acceptable-performance boundary</p>
-        <h2>“It returned an answer” is not an SLO.</h2>
-        <div class="quality-grid">
-          <span class="substep">Correctness</span>
-          <span class="substep">Safety</span>
-          <span class="substep">Security</span>
-          <span class="substep">Latency</span>
-          <span class="substep">Cost</span>
-          <span class="substep">Behavior</span>
-        </div>
-        <p class="boundary-question">What does acceptable mean here?</p>
-        <div class="notes">
-          Define behavior in terms the system and the organization can observe, negotiate, and defend.
-        </div>
-      </section>
-
-      <section id="drift" class="step slide drift-slide" data-x="3000" data-y="0" data-scale="0.64">
-        <p class="eyebrow">A drift scenario</p>
-        <h2>Local wins can move the whole system.</h2>
-        <div class="drift-track" role="img" aria-label="An operating point drifting from a safe zone toward a boundary">
-          <span class="safe-zone">safe envelope</span>
-          <span class="drift-point start">1</span>
-          <span class="drift-point middle">2</span>
-          <span class="drift-point end">3</span>
-          <span class="drift-boundary">boundary</span>
-        </div>
-        <ol class="drift-story">
-          <li class="substep">A faster model removes delivery friction.</li>
-          <li class="substep">Volume and review debt rise invisibly.</li>
-          <li class="substep">A quality dip becomes normalized behavior.</li>
-        </ol>
-        <div class="notes">
-          Replace with a named case study. Animate the operating point as each locally rational decision accumulates.
-        </div>
-      </section>
-
-      <section id="safe-envelope" class="step overview-step" data-x="3100" data-y="200" data-scale="3.8">
-        <p class="overview-label">The safe operating envelope is a living agreement.</p>
-        <div class="notes">
-          Zoom out. The audience should feel the relationships between all three forces before introducing controls.
-        </div>
-      </section>
-
-      <section id="response-pattern" class="step slide" data-x="6850" data-y="0">
-        <p class="eyebrow">Build feedback into the architecture</p>
-        <h2>Sense. Constrain. Adapt. Correct.</h2>
-        <div class="response-grid">
-          <article class="substep"><strong>Sense</strong><span>quality · cost · behavior</span></article>
-          <article class="substep"><strong>Constrain</strong><span>gateways · QoS · policy · permissions</span></article>
-          <article class="substep"><strong>Adapt</strong><span>routing · fallback · circuit breaking</span></article>
-          <article class="substep"><strong>Correct</strong><span>escalation · feedback · learning</span></article>
-        </div>
-        <p class="caption">Working synthesis for the QCon narrative</p>
-        <div class="notes">
-          This four-part frame is provisional. Test it against the case study and the audience exercise.
-        </div>
-      </section>
-
-      <section id="team-exercise" class="step slide exercise-slide" data-x="8350" data-y="0">
-        <p class="eyebrow">Take this back to your team</p>
-        <h2>Draw your operating envelope.</h2>
-        <div class="prompt-stack">
-          <p class="substep"><span>1</span> Name the forces moving the point.</p>
-          <p class="substep"><span>2</span> Define each unacceptable boundary.</p>
-          <p class="substep"><span>3</span> Find the feedback that arrives too late.</p>
-          <p class="substep"><span>4</span> Choose one adaptive response.</p>
-        </div>
-        <div class="notes">
-          Design this as the immediate action attendees can complete with their teams after the conference.
-        </div>
-      </section>
-
-      <section id="takeaways" class="step slide" data-x="9850" data-y="0">
-        <p class="eyebrow">Three things to remember</p>
-        <ol class="takeaway-list">
-          <li class="substep"><span>01</span><strong>AI changes the forces, not the need for boundaries.</strong></li>
-          <li class="substep"><span>02</span><strong>Unobserved movement becomes organizational drift.</strong></li>
-          <li class="substep"><span>03</span><strong>Resilience is the capacity to adapt before failure defines the boundary.</strong></li>
-        </ol>
-        <div class="notes">
-          Final wording is provisional. Make each line earn its place through the preceding story.
-        </div>
-      </section>
-
-      <section id="references" class="step slide reference-slide" data-x="11350" data-y="0" data-scale="0.82">
-        <p class="eyebrow">Starting references</p>
-        <h2>Follow the argument.</h2>
-        <ul>
-          <li>Rasmussen — risk management in a dynamic society</li>
-          <li>Hatch — Defence at the Boundary of Acceptable Performance, SREcon24</li>
-          <li>QCon SF 2026 — published talk abstract and attendee takeaways</li>
-          <li>Case studies and primary sources — to be added and verified</li>
-        </ul>
-        <p class="reference-url">qcon26.hatchman76.com</p>
-        <div class="notes">
-          Build a complete, checked bibliography. Keep visible references legible and move detail to a companion page if needed.
-        </div>
-      </section>
-
-      <section id="close" class="step slide close-slide" data-x="12800" data-y="0">
-        <p class="eyebrow">Adapt or drift</p>
-        <h2>The operating point is already moving.</h2>
-        <p class="closing-question">What will your system notice—and do—next?</p>
-        <p class="speaker-footer">Andrew Hatch · qcon26.hatchman76.com</p>
-        <div class="notes">
-          End on the question. Leave the operating point visibly in motion, but inside an envelope the system can defend.
+          Official QCon title information only. Narrative content will be rebuilt from the archived Markdown slide copy.
         </div>
       </section>
     </main>
-
-    <aside class="deck-ui" aria-label="Presentation status">
-      <div
-        id="deck-progress"
-        class="deck-progress"
-        role="progressbar"
-        aria-label="Slide progress"
-        aria-valuemin="1"
-        aria-valuenow="1"
-      ></div>
-      <span id="deck-status" aria-live="polite">1 / 15</span>
-    </aside>
 
     <script type="module" src="/main.js"></script>
   </body>

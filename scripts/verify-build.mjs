@@ -10,9 +10,9 @@ const html = await readFile(indexPath, "utf8");
 const requiredMarkers = [
   'id="impress"',
   'id="title"',
-  'id="operating-point"',
-  'id="safe-envelope"',
-  'id="takeaways"',
+  "Adapt or Drift:",
+  "Resilience Engineering When AI Moves the Operating Point",
+  "Andrew Hatch",
 ];
 
 const missing = requiredMarkers.filter((marker) => !html.includes(marker));
@@ -23,9 +23,8 @@ if (missing.length > 0) {
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount < 12) {
-  throw new Error(`Expected at least 12 impress.js steps, found ${stepCount}`);
+if (stepCount !== 1) {
+  throw new Error(`Expected exactly one impress.js title step, found ${stepCount}`);
 }
 
 console.log(`Verified dist/index.html with ${stepCount} presentation steps.`);
-

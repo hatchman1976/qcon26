@@ -7,7 +7,7 @@ An interactive [impress.js](https://impress.js.org/) presentation for Andrew Hat
 - Intended live site: <https://qcon26.hatchman76.com>
 - Author: Andrew Hatch ([@hatchman1976](https://github.com/hatchman1976))
 
-The initial deck is a working scaffold. It preserves the spatial storytelling of the 2024 SREcon talk while setting up the QCon 2026 narrative, a modern local build, and AWS infrastructure.
+The rendered deck has deliberately been reset to one title slide using the official QCon session information and conference artwork. Copy from the discarded first draft is preserved as one Markdown file per slide under [`slides/`](slides/README.md) so useful ideas can be adapted without carrying its visual design forward.
 
 ## Work locally
 
@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Then open the local URL shown by Vite. Use arrow keys or Space to navigate. Press `P` for the presenter console when the browser allows pop-ups.
+Then open the local URL shown by Vite.
 
 Other useful commands:
 
@@ -32,11 +32,12 @@ npm run check     # Build and run structural checks
 
 ```text
 qcon26/
+├── slides/            # Archived first-draft copy, one Markdown file per slide
 ├── src/
-│   ├── index.html       # Slides, notes, and spatial coordinates
-│   ├── main.js          # impress.js initialization and deck UI
-│   ├── styles.css       # Presentation theme, model, print, accessibility
-│   └── public/          # Files copied unchanged into the build
+│   ├── index.html       # The single active QCon title step
+│   ├── main.js          # Minimal impress.js initialization
+│   ├── styles.css       # Minimal QCon-derived title treatment
+│   └── public/          # Favicon and local official QCon session artwork
 ├── scripts/
 │   ├── deploy.sh        # Human-run, account-checked AWS content deployment
 │   └── verify-build.mjs # Static build checks
@@ -44,6 +45,8 @@ qcon26/
 ├── TALK.md              # Working narrative and source notes
 └── vite.config.js
 ```
+
+The title background is the official QCon San Francisco session-field image served by the [QCon talk page](https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point), stored locally so the presentation does not depend on conference Wi-Fi.
 
 ## AWS hosting
 
