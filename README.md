@@ -3,6 +3,7 @@
 An interactive [impress.js](https://impress.js.org/) presentation for Andrew Hatch's QCon San Francisco 2026 talk, **“Adapt or Drift: Resilience Engineering When AI Moves the Operating Point.”**
 
 - Conference page: <https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point>
+- Repository: <https://github.com/hatchman1976/qcon26>
 - Intended live site: <https://qcon26.hatchman76.com>
 - Author: Andrew Hatch ([@hatchman1976](https://github.com/hatchman1976))
 
