@@ -4,19 +4,36 @@
 
 Rasmussen’s dynamic safety model
 
-**Every system has an operating point.**
+**One operating point. Three constraints. Multiple forces.**
 
 Diagram labels:
 
-- Economic failure
-- Unacceptable workload
-- Unacceptable performance
-- cost
-- work
-- risk
+- Boundary of economic failure
+- Boundary of unacceptable workload
+- Boundary of functionally acceptable performance
+- Perceived or marginal boundary
+- Operating point
+- Management pressure toward efficiency
+- Gradient toward least effort
+- Safety-control counter-gradient
 
-Pressure never stops. Feedback determines whether movement becomes adaptation or drift.
+The point moves continuously.<br>
+Boundaries constrain it.<br>
+Gradients and control loops move it.
 
 ## Speaker notes
 
-Reintroduce the model briefly. The 2024 talk supplies the foundation; this talk changes the forces acting on it.
+The operating point represents the current socio-technical operating state. It is not a fixed plan or ideal position.
+
+Rasmussen describes continuous, Brownian-like variation biased by pressures toward efficiency and least effort. Safety activity can create a counter-gradient.
+
+The boundaries do not automatically repel the point. A restoring response requires the organization to perceive proximity, interpret the signal, possess authority to act, and retain enough capacity to respond.
+
+There is no privileged center. Safe control means retaining adequate margin and recoverability. A single point can also have very little margin to two boundaries when it approaches their intersection.
+
+If the animation makes restoring force increase as the perceived point approaches an explicit safety goal, identify that as the talk's control-loop extension. Rasmussen defines the counter-gradient's direction but does not specify a proximity-dependent magnitude; Morrison and Wears add that behavior in their later formalization. The response must not imply direct knowledge of the true boundary.
+
+## Sources
+
+- [Rasmussen — Risk management in a dynamic society (1997)](https://doi.org/10.1016/S0925-7535(97)00052-0)
+- [Morrison and Wears — Modeling Rasmussen's dynamic modeling problem (2022)](https://doi.org/10.1007/s10111-021-00668-x)

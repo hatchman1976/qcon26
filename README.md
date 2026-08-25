@@ -7,7 +7,20 @@ An interactive [impress.js](https://impress.js.org/) presentation for Andrew Hat
 - Intended live site: <https://qcon26.hatchman76.com>
 - Author: Andrew Hatch ([@hatchman1976](https://github.com/hatchman1976))
 
-The rendered deck has deliberately been reset to one title slide using the official QCon session information and conference artwork. Copy from the discarded first draft is preserved as one Markdown file per slide under [`slides/`](slides/README.md) so useful ideas can be adapted without carrying its visual design forward.
+The rendered deck has deliberately been reset to one title slide using the official QCon session information and conference artwork. The revised narrative is maintained as one Markdown file per proposed slide under [`slides/`](slides/README.md), independently of the eventual visual design.
+
+## Narrative focus
+
+The 2024 SREcon talk foregrounded the geometry of Rasmussen's model: boundaries, margin, and continuous drift. The 2026 talk foregrounds the temporal control problem introduced by AI-mediated work:
+
+- AI is not a fourth boundary; it changes existing gradients and control-loop gain and delay, and it can sometimes reshape existing constraints.
+- Candidate change can become cheaper and faster while model consumption, infrastructure commitments, expert verification, and recovery all remain real costs.
+- Unit economics and aggregate economics can move in opposite directions: falling token or serving cost does not prevent total spend from rising when use expands faster.
+- Economic usage moves the operating point; sustainable financial capacity can reshape the actual economic boundary; budgets, quotas, and ROI targets create inner guardrails.
+- When admitted change outruns feedback and assurance, one operating state can approach the workload–performance joint-constraint region.
+- The goal is not to return to a geometric center. It is to restore sufficient margin, bounded excursions, and recoverability.
+
+The full conceptual guardrails, causal mechanism, and evidence requirements are maintained in [`TALK.md`](TALK.md).
 
 ## Work locally
 
@@ -32,7 +45,7 @@ npm run check     # Build and run structural checks
 
 ```text
 qcon26/
-├── slides/            # Archived first-draft copy, one Markdown file per slide
+├── slides/            # Revised working narrative, one Markdown file per slide
 ├── src/
 │   ├── index.html       # The single active QCon title step
 │   ├── main.js          # Minimal impress.js initialization

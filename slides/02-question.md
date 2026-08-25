@@ -1,18 +1,19 @@
-# Slide 02 — The question
+# Slide 02 — The new question
 
 ## Slide copy
 
-The question
+The question has changed
 
-**Can the system adapt—**
+**Can our feedback loops keep pace with AI-enabled change?**
 
-or does it silently leave acceptable behavior?
-
-- Models change
-- Workloads compound
-- Cost and latency move
-- Uncertainty reaches the control plane
+Candidate generation can accelerate.<br>
+Expert verification remains capacity-limited.<br>
+Perception and correction can lag.
 
 ## Speaker notes
 
-The talk is about behavior under change, not a catalog of AI failure modes.
+The 2024 question was where the operating point was moving and whether the organization could see the boundaries.
+
+The 2026 question adds time: can sensing, verification, and corrective action keep pace with the rate and variability of change?
+
+The talk is about a control-capacity mismatch, not a catalog of AI failure modes.
