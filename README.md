@@ -7,7 +7,7 @@ An interactive [impress.js](https://impress.js.org/) presentation for Andrew Hat
 - Intended live site: <https://qcon26.hatchman76.com>
 - Author: Andrew Hatch ([@hatchman1976](https://github.com/hatchman1976))
 
-The rendered deck has deliberately been reset to one title slide using the official QCon session information and conference artwork. The revised narrative is maintained as one Markdown file per proposed slide under [`slides/`](slides/README.md), independently of the eventual visual design.
+The rendered deck currently contains the official QCon title slide, an opening Takeaways slide, introductions to socio-technical systems and resilience engineering, a Model section slide, a plain-language introduction to Rasmussen's model, and three adapted slides from Andrew's 2024 SREcon presentation: “The Model,” the socio-technical-systems definition, and the people-and-systems hierarchy. It uses that talk's pale backgrounds, Maven Pro and Comic Neue typography, collage-like placement, and staged reveals. Slide copy and speaker notes are maintained as one Markdown file per slide under [`slides/`](slides/README.md).
 
 ## Narrative focus
 
@@ -16,7 +16,7 @@ The 2024 SREcon talk foregrounded the geometry of Rasmussen's model: boundaries,
 - AI is not a fourth boundary; it changes existing gradients and control-loop gain and delay, and it can sometimes reshape existing constraints.
 - Candidate change can become cheaper and faster while model consumption, infrastructure commitments, expert verification, and recovery all remain real costs.
 - Unit economics and aggregate economics can move in opposite directions: falling token or serving cost does not prevent total spend from rising when use expands faster.
-- Economic usage moves the operating point; sustainable financial capacity can reshape the actual economic boundary; budgets, quotas, and ROI targets create inner guardrails.
+- Economic usage moves the operating point; sustainable financial capacity can reshape the economic boundary; budgets, quotas, forecasts, and ROI targets provide signals and setpoints for the economic controller—not additional Rasmussen boundaries.
 - When admitted change outruns feedback and assurance, one operating state can approach the workload–performance joint-constraint region.
 - The goal is not to return to a geometric center. It is to restore sufficient margin, bounded excursions, and recoverability.
 
@@ -24,42 +24,41 @@ The full conceptual guardrails, causal mechanism, and evidence requirements are 
 
 ## Work locally
 
-Requirements: Node.js 20.19+ (or 22.12+) and npm.
+The repository contains the deployable static site directly in `src/`. There is no build step and no generated site directory.
 
 ```bash
-npm install
-npm run dev
+python3 -m http.server 8000 --bind 127.0.0.1 --directory src
 ```
 
-Then open the local URL shown by Vite.
+Then open <http://127.0.0.1:8000/>. Refresh the page after editing a source file.
 
-Other useful commands:
+The optional structural check reads `src/` directly and does not generate files:
 
 ```bash
-npm run build     # Build the static site into dist/
-npm run preview   # Preview the production build
-npm run check     # Build and run structural checks
+npm run check
 ```
 
 ## Project structure
 
 ```text
 qcon26/
-├── slides/            # Revised working narrative, one Markdown file per slide
+├── slides/            # Current rendered flow, one Markdown file per slide
+│   └── ideas/         # Preserved narrative ideas that are not rendered
 ├── src/
-│   ├── index.html       # The single active QCon title step
-│   ├── main.js          # Minimal impress.js initialization
-│   ├── styles.css       # Minimal QCon-derived title treatment
-│   └── public/          # Favicon and local official QCon session artwork
+│   ├── index.html       # Active Impress steps and speaker notes
+│   ├── main.js          # Impress.js initialization
+│   ├── styles.css       # SREcon24-derived presentation theme
+│   ├── fonts/           # Locally hosted presentation fonts
+│   ├── images/          # Presentation artwork
+│   └── vendor/          # Vendored Impress.js runtime and license
 ├── scripts/
 │   ├── deploy.sh        # Human-run, account-checked AWS content deployment
-│   └── verify-build.mjs # Static build checks
+│   └── verify-site.mjs  # Direct source checks
 ├── terraform/           # S3, CloudFront, ACM, and Route 53
-├── TALK.md              # Working narrative and source notes
-└── vite.config.js
+└── TALK.md              # Working narrative and source notes
 ```
 
-The title background is the official QCon San Francisco session-field image served by the [QCon talk page](https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point), stored locally so the presentation does not depend on conference Wi-Fi.
+The title copy comes from the [QCon talk page](https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point). The visual theme and locally hosted artwork are adapted from Andrew's [SREcon24 presentation](https://srecon24.hatchman76.com), so the presentation does not depend on conference Wi-Fi.
 
 ## AWS hosting
 
@@ -79,14 +78,14 @@ See [terraform/README.md](terraform/README.md) for the human-run setup. In accor
 
 ## Content deployment
 
-After the infrastructure exists, build and deploy from a human-only terminal:
+After the infrastructure exists, verify and deploy the static source from a human-only terminal:
 
 ```bash
 npm run check
 AWS_PROFILE=hatchman76 ./scripts/deploy.sh
 ```
 
-The deployment script independently checks that `AWS_PROFILE` is `hatchman76` and that STS resolves to the expected personal account before it syncs content or invalidates CloudFront.
+The deployment script independently checks that `AWS_PROFILE` is `hatchman76` and that STS resolves to the expected personal account before it syncs `src/` or invalidates CloudFront.
 
 ## License
 

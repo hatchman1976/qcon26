@@ -1,4 +1,4 @@
-# Slide 15 — Close
+# Working idea — Close
 
 ## Slide copy
 

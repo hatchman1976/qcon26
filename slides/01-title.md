@@ -1,15 +1,12 @@
-# Slide 01 — Adapt or Drift
+# Slide 1 — Adapt or Drift
 
 ## Slide copy
 
-QCon San Francisco · November 2026
-
-**Adapt or Drift**
+**Adapt or Drift:**
 
 Resilience Engineering When AI Moves the Operating Point
 
-Andrew Hatch<br>
-Engineering Leader · Cisco ThousandEyes
+Andrew Hatch
 
 ## Speaker notes
 
@@ -21,4 +18,5 @@ In 2026, the question is whether the organization's feedback loops can keep pace
 
 ## Sources
 
+- [QCon session page](https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point)
 - [Defence at the Boundary of Acceptable Performance — SREcon24](https://www.usenix.org/conference/srecon24americas/presentation/hatch)

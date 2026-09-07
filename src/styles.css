@@ -1,12 +1,43 @@
+@font-face {
+  font-family: "Maven Pro";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("/fonts/maven-pro.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Comic Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/comic-neue-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Comic Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/comic-neue-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/open-sans.woff2") format("woff2");
+}
+
 :root {
-  color-scheme: dark;
-  font-family: "Titillium Web", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+  font-family: "Open Sans", Arial, sans-serif;
   font-synthesis: none;
-  --qcon-green: #1e8d44;
-  --qcon-blue: #2b6cad;
-  --qcon-navy: #07101d;
-  --white: #ffffff;
-  --muted: #d4dbe4;
+  --surface-default: #ade8ff;
+  --surface-introduction: #cfd8dc;
+  --ink: #000000;
+  --link: royalblue;
 }
 
 * {
@@ -15,24 +46,45 @@
 
 html,
 body {
+  width: 100%;
   min-height: 100%;
   margin: 0;
   overflow: hidden;
-  background: var(--qcon-navy);
+}
+
+body {
+  background: var(--surface-default);
+  color: var(--ink);
+  transition: background-color 1s;
+}
+
+body.impress-on-title,
+body.impress-on-takeaways,
+body.impress-on-sociotechnical-101,
+body.impress-on-resilience-engineering-101,
+body.impress-on-model,
+body.impress-on-model-in-plain-english,
+body.impress-on-the-model,
+body.impress-on-social-and-systems-wiki,
+body.impress-on-social-and-systems {
+  background-color: var(--surface-introduction);
 }
 
 .fallback-message {
-  display: none;
   max-width: 42rem;
   margin: 4rem auto;
   padding: 1rem;
-  color: var(--white);
+  border: 1px solid #6a7378;
+  border-radius: 10px;
+  background: var(--surface-introduction);
+  color: var(--ink);
   font-size: 1.25rem;
+  line-height: 1.35;
   text-align: center;
 }
 
-.impress-not-supported .fallback-message {
-  display: block;
+.impress-supported .fallback-message {
+  display: none;
 }
 
 .impress-not-supported #impress {
@@ -41,121 +93,597 @@ body {
 
 .step {
   position: relative;
-  width: 1920px;
-  height: 1080px;
-}
-
-.title-slide {
-  overflow: hidden;
-  background-color: var(--qcon-navy);
-  background-image:
-    linear-gradient(90deg, rgba(4, 10, 20, 0.98) 0%, rgba(4, 10, 20, 0.9) 48%, rgba(4, 10, 20, 0.3) 100%),
-    linear-gradient(0deg, rgba(4, 10, 20, 0.96) 0%, rgba(4, 10, 20, 0.15) 72%),
-    url("/images/qcon-session-field.webp");
-  background-position: center;
-  background-size: cover;
-  color: var(--white);
-}
-
-.title-slide::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 12px;
-  content: "";
-  background: linear-gradient(90deg, var(--qcon-green), var(--qcon-blue));
-}
-
-.title-copy {
-  position: absolute;
-  inset: 96px 118px 84px;
-  display: flex;
-  flex-direction: column;
-}
-
-.conference-label {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-bottom: 74px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 27px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.session-label {
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: var(--qcon-green);
-  font-size: 18px;
-  letter-spacing: 0.08em;
-}
-
-h1 {
-  max-width: 1450px;
-  margin: 0;
-  font-size: 124px;
-  font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.045em;
-  text-wrap: balance;
-}
-
-h1 span {
   display: block;
-  max-width: 1380px;
-  margin-top: 22px;
-  font-size: 78px;
-  line-height: 1.04;
-  letter-spacing: -0.025em;
-}
-
-.session-details {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 80px;
-  margin-top: auto;
-  padding-top: 44px;
-  border-top: 1px solid rgba(255, 255, 255, 0.34);
-}
-
-.session-details p {
+  width: 1020px;
+  height: 780px;
   margin: 0;
+  padding: 40px 60px;
+  color: var(--ink);
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 30px;
+  letter-spacing: -1px;
 }
 
-.speaker {
-  font-size: 42px;
-  font-weight: 700;
+.impress-enabled .step {
+  opacity: 0.3;
+  transition: opacity 1s;
 }
 
-.role,
-.schedule {
-  color: var(--muted);
-  font-size: 25px;
-  line-height: 1.4;
-}
-
-.role {
-  margin-top: 4px !important;
-}
-
-.schedule {
-  text-align: right;
-}
-
-.track {
-  margin: 32px 0 0;
-  color: var(--muted);
-  font-size: 22px;
-  letter-spacing: 0.025em;
+.impress-enabled .step.active {
+  opacity: 1;
 }
 
 .notes {
   display: none;
+}
+
+p {
+  margin: 0.7em;
+  text-align: center;
+}
+
+a {
+  color: var(--link);
+  font-family: "Comic Neue", cursive;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#impress .step .substep {
+  opacity: 0;
+}
+
+#impress .step .substep.substep-visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+/* Title slide: QCon copy in the visual language of the 2024 presentation. */
+.title-slide {
+  overflow: hidden;
+}
+
+.title-heading {
+  position: absolute;
+  top: 28px;
+  right: 34px;
+  left: 34px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 68px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.title-heading span {
+  display: block;
+  max-width: 930px;
+  margin: 12px auto 0;
+  font-size: 51px;
+  line-height: 1.04;
+  letter-spacing: -1.5px;
+}
+
+.title-model img {
+  position: absolute;
+  height: auto;
+}
+
+.title-model-outline {
+  top: 286px;
+  left: 310px;
+  width: 400px;
+}
+
+.title-model-margin {
+  top: 291px;
+  left: 350px;
+  width: 220px;
+}
+
+.title-model-tank {
+  top: 384px;
+  left: 440px;
+  width: 150px;
+}
+
+.title-speaker {
+  position: absolute;
+  top: 548px;
+  right: 80px;
+  left: 80px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.title-role,
+.title-event {
+  position: absolute;
+  right: 60px;
+  left: 60px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  line-height: 1.15;
+}
+
+.title-role {
+  top: 624px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.title-event {
+  top: 674px;
+  font-size: 22px;
+}
+
+/* Opening summary placeholder. */
+.takeaways-slide {
+  overflow: hidden;
+}
+
+.takeaways-title {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  left: 60px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.takeaways-statement {
+  position: absolute;
+  top: 150px;
+  right: 92px;
+  left: 92px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.takeaways-adaptation {
+  position: absolute;
+  top: 350px;
+  right: 92px;
+  left: 92px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.takeaways-system-note {
+  position: absolute;
+  right: 70px;
+  bottom: 142px;
+  left: 70px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.takeaways-consequence-note {
+  position: absolute;
+  right: 50px;
+  bottom: 32px;
+  left: 50px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.topic-slide {
+  overflow: hidden;
+}
+
+.topic-slide-title {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  left: 60px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+/* A child-simple bridge from the title into Rasmussen's original diagram. */
+.plain-model-slide {
+  overflow: hidden;
+}
+
+.plain-model-title {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  left: 60px;
+  z-index: 5;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+.plain-model-outline {
+  position: absolute;
+  top: 126px;
+  left: 160px;
+  z-index: 1;
+  width: 700px;
+  height: auto;
+}
+
+.plain-boundary-reveal {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.plain-model-point {
+  position: absolute;
+  top: 334px;
+  left: 442px;
+  z-index: 4;
+  width: 140px;
+  height: auto;
+}
+
+.plain-model-point-label {
+  position: absolute;
+  top: 395px;
+  left: 405px;
+  z-index: 4;
+  width: 210px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.plain-model-point-label small {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.plain-boundary {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 270px;
+  font-family: "Comic Neue", cursive;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.plain-boundary > span {
+  flex: 0 0 auto;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-size: 48px;
+}
+
+.plain-boundary p {
+  margin: 0;
+  text-align: left;
+}
+
+.plain-boundary-performance {
+  top: 142px;
+  left: 34px;
+}
+
+.plain-boundary-economic {
+  top: 142px;
+  right: 28px;
+  width: 238px;
+}
+
+.plain-boundary-workload {
+  right: 28px;
+  bottom: 116px;
+  width: 300px;
+}
+
+.plain-pressure {
+  position: absolute;
+  z-index: 5;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.pressure-efficiency {
+  top: 246px;
+  right: 238px;
+  transform: rotate(-9deg);
+}
+
+.pressure-effort {
+  bottom: 260px;
+  right: 228px;
+  transform: rotate(-10deg);
+}
+
+.plain-model-margin img {
+  position: absolute;
+  top: 131px;
+  left: 230px;
+  z-index: 2;
+  width: 385px;
+  height: auto;
+}
+
+.plain-model-margin p {
+  position: absolute;
+  top: 271px;
+  left: 152px;
+  z-index: 5;
+  width: 220px;
+  margin: 0;
+  color: #b3261e;
+  font-family: "Comic Neue", cursive;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: left;
+  transform: rotate(-7deg);
+}
+
+.plain-model-summary {
+  position: absolute;
+  right: 120px;
+  bottom: 12px;
+  left: 120px;
+  z-index: 5;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+/* “The Model”: a faithful, locally hosted adaptation of the SREcon24 slide. */
+.model-portrait,
+.model-original,
+.domain-icon {
+  position: absolute;
+  height: auto;
+}
+
+.model-portrait {
+  top: 50px;
+  left: 150px;
+  width: 150px;
+}
+
+.regular-text {
+  position: absolute;
+  font-family: "Comic Neue", cursive;
+  font-size: 25px;
+}
+
+.model-person {
+  top: 250px;
+  left: 10px;
+  width: 400px;
+  text-align: center;
+}
+
+.model-original {
+  top: 50px;
+  right: 40px;
+  width: 500px;
+}
+
+.model-paper-link {
+  position: absolute;
+  top: 400px;
+  right: 10px;
+  width: 500px;
+  font-size: 25px;
+}
+
+.domain-icon {
+  width: 120px;
+}
+
+.domain-radioactive {
+  bottom: 200px;
+  left: 50px;
+}
+
+.domain-ship {
+  bottom: 200px;
+  left: 300px;
+}
+
+.domain-hospital {
+  bottom: 50px;
+  left: 150px;
+}
+
+.sociotechnical-heading {
+  right: 10px;
+  bottom: 250px;
+  width: 400px;
+  text-align: left;
+}
+
+.sociotechnical-hierarchical {
+  right: 150px;
+  bottom: 200px;
+  width: 200px;
+  text-align: left;
+}
+
+.sociotechnical-multidisciplinary {
+  right: 150px;
+  bottom: 150px;
+  width: 200px;
+  text-align: left;
+}
+
+.systems-thinking {
+  right: 10px;
+  bottom: 90px;
+  width: 400px;
+  text-align: left;
+}
+
+/* SREcon24 socio-technical-system definition and visual explanation. */
+.social-wiki-slide,
+.social-systems-slide {
+  overflow: hidden;
+}
+
+.social-wiki-title {
+  margin: 0.5em 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.social-wiki-definition {
+  position: absolute;
+  top: 300px;
+  left: 10px;
+  width: 1000px;
+  height: auto;
+  font-family: "Comic Neue", cursive;
+  font-size: 40px;
+  text-align: left;
+}
+
+.social-systems-slide img {
+  position: absolute;
+  height: auto;
+}
+
+.social-separated {
+  top: 50px;
+  left: 50px;
+  width: 400px;
+}
+
+.social-together {
+  top: 50px;
+  right: 50px;
+  width: 300px;
+}
+
+.social-interaction-ring {
+  top: 120px;
+  right: 190px;
+  width: 90px;
+}
+
+.social-hierarchy-model {
+  bottom: 100px;
+  left: 200px;
+  width: 200px;
+}
+
+.social-hierarchy-label {
+  position: absolute;
+  bottom: 30px;
+  left: 100px;
+  width: 400px;
+  height: auto;
+  margin: 0.7em;
+  font-family: "Comic Neue", cursive;
+  font-size: 25px;
+  text-align: left;
+}
+
+.social-hierarchy-research {
+  bottom: 110px;
+  left: 10px;
+  width: 200px;
+}
+
+.social-hierarchy-environment {
+  right: auto;
+  bottom: 110px;
+  left: 380px;
+  width: 260px;
+}
+
+.social-you-logo {
+  right: 20px;
+  bottom: 160px;
+  width: 400px;
+}
+
+.social-you-label {
+  position: absolute;
+  right: 70px;
+  bottom: 100px;
+  width: 300px;
+  height: auto;
+  margin: 0.7em;
+  font-family: "Comic Neue", cursive;
+  font-size: 30px;
+  text-align: center;
+  transform-origin: center;
+}
+
+.social-you-label:hover {
+  animation: social-you-shake 100ms ease-in-out infinite;
+}
+
+@keyframes social-you-shake {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+
+  25% {
+    transform: translate(2px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  75% {
+    transform: translate(1px, 1px) rotate(0.5deg);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -172,13 +700,22 @@ h1 span {
   html,
   body {
     overflow: visible !important;
-    background: var(--qcon-navy) !important;
+    background: var(--surface-introduction) !important;
   }
 
   #impress,
   .step {
     position: static !important;
     transform: none !important;
+  }
+
+  .step {
+    page-break-after: always;
+    opacity: 1 !important;
+  }
+
+  .substep {
+    opacity: 1 !important;
   }
 
   .fallback-message {

@@ -1,4 +1,4 @@
-# Slide 13 — Takeaways
+# Working idea — Takeaways
 
 ## Slide copy
 
@@ -16,4 +16,4 @@ Complete the synthesis:
 
 “AI can make each action cheaper while making the aggregate system more expensive. Every admitted AI output carries two costs: generation and assurance. If throughput is protected, safety margin pays the difference.”
 
-Repeat the visual grammar: usage moves the operating point; a real change in sustainable financial capacity moves the outer economic boundary; budgets and ROI targets move an inner guardrail. The distinction is what makes the dynamic-envelope argument testable rather than metaphorical.
+Repeat the visual grammar: usage moves the operating point; a real change in sustainable financial capacity can reshape the economic boundary; forecasts inform the economic controller; budgets and ROI targets change its setpoints and decisions. They do not create an inner Rasmussen boundary. The distinction is what makes the dynamic-envelope argument testable rather than metaphorical.

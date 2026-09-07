@@ -1,4 +1,4 @@
-# Slide 10 — Controlled operating regime
+# Working idea — Controlled operating regime
 
 ## Slide copy
 
@@ -10,8 +10,8 @@ Enough margin · bounded excursions · recoverability
 
 Diagram labels:
 
-- Actual functional boundary — solid
-- Perceived or marginal boundary — dotted
+- Actual acceptable-performance boundary — solid
+- Perceived acceptable-performance boundary — dotted
 - Safety goal
 - Operating-point kernel
 - Excursion range
@@ -22,7 +22,7 @@ Monitoring observes proxies—not the true boundary.
 
 There is no preferred geometric center. A system may operate near a known boundary with small, controlled excursions and strong recovery. The objective is sufficient margin and recoverability, not maximum distance from every boundary.
 
-The dotted line is the organization's perceived or marginal boundary, not the point where harm necessarily begins. Place the safety goal inside it. Repeated crossings without visible harm can move the perceived boundary outward and silently consume error margin.
+The dotted line is the organization's perceived acceptable-performance boundary, not the point where harm necessarily begins. Place the safety goal inside it. Repeated crossings without visible harm can move the perceived boundary outward and silently consume error margin. This dotted-line grammar belongs to the performance side of Rasmussen's model.
 
 Do not describe the solid boundary as perfectly known, permanently fixed, or a line whose every crossing causes instant chaos. Consequences depend on reversibility and recovery, and redesign can change the system's functional limits.
 

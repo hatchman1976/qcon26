@@ -24,3 +24,10 @@ This repository is Andrew Hatch's personal QCon 2026 presentation project.
 
 - Miro content for this talk must be accessed through Andrew's personal Miro identity and a purpose-built connector.
 - Do not fall back to Cisco credentials or browser authentication for missing personal connectors.
+
+## Static site workflow
+
+- `src/` is the website root and the exact content deployed to S3.
+- There is no build step, generated site, Vite workflow, or `dist/` deployment.
+- Edit and verify files in `src/` directly.
+- For local review, serve `src/` with `python3 -m http.server 8000 --bind 127.0.0.1 --directory src`.

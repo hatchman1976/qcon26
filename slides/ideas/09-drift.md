@@ -1,4 +1,4 @@
-# Slide 09 — Multiple closing margins
+# Working idea — Multiple closing margins
 
 ## Slide copy
 
@@ -7,7 +7,7 @@ When economic room narrows
 **One operating state. Multiple closing margins.**
 
 1. AI scale can raise model spend and candidate-change demand.
-2. A financial shock can contract the envelope; a cost target can tighten its guardrail.
+2. A financial shock can contract the envelope; management may lower its permitted-spend setpoint.
 3. Cost cuts can restore that margin by reducing human capacity.
 4. If throughput is fixed, assurance becomes the pressure-release valve.
 
@@ -15,7 +15,7 @@ Diagram labels:
 
 - Economic margin
 - Actual economic boundary
-- Budget / ROI guardrail
+- Budget / ROI control threshold
 - Workload margin
 - Performance margin
 - Actual operating point
@@ -26,7 +26,7 @@ Diagram labels:
 
 ## Speaker notes
 
-Animate one actual operating point, not one point per boundary. More AI use, infrastructure consumption, and admitted work move the point. A genuine change in funding, revenue, runway, financing, or sustainable cost can reshape the actual economic boundary. A budget or ROI target moves the inner guardrail. Never use one event to move all three.
+Animate one actual operating point, not one point per boundary. More AI use, infrastructure consumption, and admitted work move the point. A genuine change in funding, revenue, runway, financing, or sustainable cost can reshape the economic boundary. A budget or ROI target changes the controller's decision threshold and triggers actions; it does not move another Rasmussen boundary.
 
 Then branch the response. A safe economic controller can reduce low-value demand through admission control, rate limits, model routing, caching, batching, or scope reduction. A risk-transferring response protects output by cutting people or assurance capacity.
 

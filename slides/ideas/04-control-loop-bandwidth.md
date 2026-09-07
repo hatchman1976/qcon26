@@ -1,4 +1,4 @@
-# Slide 04 — Control-loop timing
+# Working idea — Control-loop timing
 
 ## Slide copy
 

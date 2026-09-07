@@ -1,4 +1,4 @@
-# Slide 11 — Control-loop bandwidth
+# Working idea — Control-loop bandwidth
 
 ## Slide copy
 

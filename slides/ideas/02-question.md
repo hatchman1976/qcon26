@@ -1,4 +1,4 @@
-# Slide 02 — The new question
+# Working idea — The new question
 
 ## Slide copy
 

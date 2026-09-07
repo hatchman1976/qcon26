@@ -1,6 +1,3 @@
-import "impress.js";
-import "./styles.css";
-
 const root = document.querySelector("#impress");
 
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

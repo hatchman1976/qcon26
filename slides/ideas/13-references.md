@@ -1,4 +1,4 @@
-# Slide 14 — References
+# Working idea — References
 
 ## Slide copy
 
@@ -16,7 +16,7 @@ qcon26.hatchman76.com
 
 Full references:
 
-- Rasmussen, J. (1997). “Risk management in a dynamic society: A modelling problem.” *Safety Science*, 27(2–3), 183–213. <https://doi.org/10.1016/S0925-7535(97)00052-0>
+- Rasmussen, J. (1997). “Risk management in a dynamic society: A modelling problem.” *Safety Science*, 27(2–3), 183–213. <https://doi.org/10.1016/S0925-7535%2897%2900052-0>
 - Cook, R. I., and Rasmussen, J. (2005). “‘Going solid’: a model of system dynamics and consequences for patient safety.” *Quality and Safety in Health Care*, 14(2), 130–134. <https://doi.org/10.1136/qshc.2003.009530>
 - Morrison, J. B., and Wears, R. L. (2022). “Modeling Rasmussen's dynamic modeling problem: drift towards a boundary of safety.” *Cognition, Technology & Work*, 24, 127–145. <https://doi.org/10.1007/s10111-021-00668-x>
 - Hatch, A. (2024). “Defence at the Boundary of Acceptable Performance.” USENIX SREcon24 Americas. <https://www.usenix.org/conference/srecon24americas/presentation/hatch>

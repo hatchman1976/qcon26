@@ -1,4 +1,4 @@
-# Slide 08 — Acceptable-performance boundary
+# Working idea — Acceptable-performance boundary
 
 ## Slide copy
 
@@ -34,6 +34,6 @@ Correctness, safety, security, latency, and behavior remain dimensions of accept
 
 ## Sources
 
-- [Rasmussen — Risk management in a dynamic society (1997)](https://doi.org/10.1016/S0925-7535(97)00052-0)
+- [Rasmussen — Risk management in a dynamic society (1997)](https://doi.org/10.1016/S0925-7535%2897%2900052-0)
 - [Cook and Rasmussen — Going solid (2005)](https://doi.org/10.1136/qshc.2003.009530)
 - [Morrison and Wears — Modeling Rasmussen's dynamic modeling problem (2022)](https://doi.org/10.1007/s10111-021-00668-x)

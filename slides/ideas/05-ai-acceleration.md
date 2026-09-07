@@ -1,4 +1,4 @@
-# Slide 05 — AI changes the control loop
+# Working idea — AI changes the control loop
 
 ## Slide copy
 

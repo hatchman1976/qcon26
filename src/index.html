@@ -7,8 +7,9 @@
       name="description"
       content="Adapt or Drift: Resilience Engineering When AI Moves the Operating Point — Andrew Hatch at QCon San Francisco 2026."
     />
-    <meta name="theme-color" content="#07101d" />
+    <meta name="theme-color" content="#cfd8dc" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
@@ -18,44 +19,309 @@
 
     <main
       id="impress"
-      data-width="1920"
-      data-height="1080"
-      data-perspective="0"
-      data-transition-duration="0"
+      data-width="1024"
+      data-height="768"
+      data-max-scale="10"
+      data-min-scale="0"
+      data-perspective="900"
+      data-transition-duration="1000"
       data-autoplay="0"
     >
-      <section id="title" class="step title-slide" data-x="0" data-y="0" data-scale="1">
-        <div class="title-copy">
-          <header class="conference-label">
-            <span>QCon San Francisco 2026</span>
-            <span class="session-label">Session</span>
-          </header>
+      <section id="title" class="step title-slide" data-y="8000" data-scale="25">
+        <h1 class="title-heading">
+          Adapt or Drift:
+          <span>Resilience Engineering When AI Moves the Operating Point</span>
+        </h1>
 
-          <h1>
-            Adapt or Drift:
-            <span>Resilience Engineering When AI Moves the Operating Point</span>
-          </h1>
+        <div class="title-model" aria-hidden="true">
+          <img class="title-model-outline" src="/images/srecon24/Rasmussen_plain_outline.png" alt="" />
+          <img class="title-model-margin" src="/images/srecon24/Rasmussen_error_margin.png" alt="" />
+          <img class="title-model-tank" src="/images/srecon24/cartoon-tank.png" alt="" />
+        </div>
 
-          <footer class="session-details">
-            <div>
-              <p class="speaker">Andrew Hatch</p>
-              <p class="role">Engineering Leader and SRE Manager @Cisco ThousandEyes</p>
-            </div>
-            <div class="schedule">
-              <p>Monday, November 16, 2026 · 2:45 PM PST</p>
-              <p>Seacliff ABC · Hyatt Regency, San Francisco</p>
-            </div>
-          </footer>
+        <p class="title-speaker">Andrew Hatch</p>
 
-          <p class="track">Resilience Engineering: Everything Fails All the Time</p>
+        <div class="notes">
+          Official QCon session title, speaker role, and schedule.
+
+          Source: https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point
+          Visual treatment adapted from Andrew Hatch's SREcon24 presentation.
+        </div>
+      </section>
+
+      <section id="takeaways" class="step takeaways-slide" data-y="33000" data-scale="25">
+        <h2 class="takeaways-title">Takeaways</h2>
+        <p class="takeaways-statement">Models: not always accurate, but they are useful....</p>
+        <p class="takeaways-adaptation">Understand conditions that lead to adversity.<br />Stay resilient and adaptive to change.</p>
+        <p class="takeaways-system-note">You are all part of complex socio-technical systems</p>
+        <p class="takeaways-consequence-note">
+          Attempts to change a complex system either in whole,<br />or in part, will yield unintended consequences
+        </p>
+      </section>
+
+      <section id="sociotechnical-101" class="step topic-slide" data-y="58000" data-scale="25">
+        <h2 class="topic-slide-title">SocioTechnical 101</h2>
+      </section>
+
+      <section id="resilience-engineering-101" class="step topic-slide" data-y="83000" data-scale="25">
+        <h2 class="topic-slide-title">Resilience Engineering 101</h2>
+      </section>
+
+      <section id="model" class="step topic-slide" data-y="108000" data-scale="25">
+        <h2 class="topic-slide-title">The Model</h2>
+      </section>
+
+      <section
+        id="model-in-plain-english"
+        class="step plain-model-slide"
+        data-y="133000"
+        data-scale="25"
+      >
+        <h2 class="plain-model-title">Three ways to lose</h2>
+
+        <div class="substep plain-boundary-reveal">
+          <img
+            class="plain-model-outline"
+            src="/images/srecon24/Rasmussen_boundary_performance.png?v=2"
+            alt=""
+          />
+          <div class="plain-boundary plain-boundary-performance">
+            <span aria-hidden="true">💥</span>
+            <p>The system stops working</p>
+          </div>
+        </div>
+
+        <div class="substep plain-boundary-reveal">
+          <img
+            class="plain-model-outline"
+            src="/images/srecon24/Rasmussen_boundary_economic.png?v=2"
+            alt=""
+          />
+          <div class="plain-boundary plain-boundary-economic">
+            <span aria-hidden="true">💸</span>
+            <p>Money runs out</p>
+          </div>
+        </div>
+
+        <div class="substep plain-boundary-reveal">
+          <img
+            class="plain-model-outline"
+            src="/images/srecon24/Rasmussen_boundary_workload.png?v=2"
+            alt=""
+          />
+          <div class="plain-boundary plain-boundary-workload">
+            <span aria-hidden="true">😫</span>
+            <p>People cannot keep up</p>
+          </div>
+        </div>
+
+        <img
+          class="plain-model-point"
+          src="/images/qcon-logo.svg"
+          alt="QCon logo representing the current operating point"
+        />
+        <p class="plain-model-point-label">
+          where we are now<br />
+          <small>the operating point</small>
+        </p>
+
+        <div class="substep plain-model-pressures">
+          <p class="plain-pressure pressure-efficiency">“Cheaper and faster”&nbsp; ↙</p>
+          <p class="plain-pressure pressure-effort">↖ &nbsp;“Make it easier”</p>
+        </div>
+
+        <div class="substep plain-model-margin">
+          <img src="/images/srecon24/Rasmussen_error_margin.png" alt="A dotted line inside the actual boundary" />
+          <p>where we think the edge is</p>
+        </div>
+
+        <p class="substep plain-model-summary">
+          The dot moves. The edges can move too.<br />
+          There is no magic center. Nothing pushes us back.
+        </p>
+
+        <div class="notes">
+          Plain-language script:
+
+          “This dot is not a person. It is the whole system — people, software, and rules — working right now. It keeps moving as work changes.
+
+          I am going to draw three chalk lines around it. The first marks where the system can no longer do its job acceptably or safely. The second marks where we can no longer pay the bills. The third marks where people cannot keep going.
+
+          We cannot see the performance line exactly, so we work from where we think it is. The gap between our perceived line and the real limit is our margin for error.
+
+          Everyone makes sensible choices. The business asks for cheaper and faster. People make work easier. Together, those pressures can move the dot toward the performance edge.
+
+          There is no magic safe spot in the middle. The lines do not push the dot back. Any line can move as demand, staffing, technology, or AI changes.
+
+          That is Rasmussen's warning: failure does not require one stupid decision. Normal adaptations can slowly move the system toward an edge nobody can see exactly.”
+
+          Adult one-sentence version: one current operating state moves within economic, workload, and acceptable-performance constraints; pressures move it, while sensing and control preserve margin and recoverability.
+
+          [Sources]
+          - https://doi.org/10.1016/S0925-7535(97)00052-0
+          - https://srecon24.hatchman76.com/#/the-model
+          - https://qconsf.com/
+        </div>
+      </section>
+
+      <section id="the-model" class="step model-slide" data-y="158000" data-scale="25">
+        <img
+          class="model-portrait"
+          src="/images/srecon24/Rasmussen_portrait.png"
+          alt="Portrait of Jens Rasmussen"
+        />
+        <p class="regular-text model-person">
+          Jens Rasmussen<br />
+          Human Factors and Safety Science
+        </p>
+
+        <div class="substep model-paper">
+          <img
+            class="model-original"
+            src="/images/srecon24/Rasmussen_Model_Original.png"
+            alt="Rasmussen's original dynamic safety model"
+          />
+          <p class="model-paper-link">
+            <a
+              href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF"
+              target="_blank"
+              rel="noreferrer"
+            >Risk Management in a Dynamic Society (1997)</a>
+          </p>
+        </div>
+
+        <div class="substep model-domains" aria-label="Examples of safety-critical domains">
+          <img
+            class="domain-icon domain-radioactive"
+            src="/images/srecon24/emoji-radioactive.png"
+            alt="Radiological safety"
+          />
+          <img
+            class="domain-icon domain-ship"
+            src="/images/srecon24/emoji-passenger-ship-boat.png"
+            alt="Maritime safety"
+          />
+          <img
+            class="domain-icon domain-hospital"
+            src="/images/srecon24/emoji-hospital.png"
+            alt="Healthcare safety"
+          />
+        </div>
+
+        <div class="substep model-sociotechnical">
+          <p class="regular-text sociotechnical-heading">Socio-Technical Systems</p>
+          <p class="regular-text sociotechnical-hierarchical">- Hierarchical</p>
+          <p class="regular-text sociotechnical-multidisciplinary">- Multi-disciplinary</p>
+        </div>
+
+        <div class="substep model-thinking">
+          <p class="regular-text systems-thinking">Systems Thinking</p>
         </div>
 
         <div class="notes">
-          Official QCon title information only. Narrative content will be rebuilt from the archived Markdown slide copy.
+          Introduce Jens Rasmussen and the 1997 model before applying it to software systems.
+
+          Reveal 1: the original model and paper.
+          Reveal 2: examples of safety-critical domains.
+          Reveal 3: hierarchical, multidisciplinary socio-technical systems.
+          Reveal 4: systems thinking.
+
+          Source slide and artwork: https://srecon24.hatchman76.com/#/the-model
+          Paper: https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+        </div>
+      </section>
+
+      <section
+        id="social-and-systems-wiki"
+        class="step social-wiki-slide"
+        data-y="183000"
+        data-scale="25"
+      >
+        <h1 class="social-wiki-title">Socio Technical Systems</h1>
+
+        <p class="social-wiki-definition">
+          ...in organizational development (Socio Technical Systems) is an approach to complex organizational work
+          design that recognizes the interaction between people and technology in workplaces.
+        </p>
+
+        <div class="notes">
+          Establish the working definition used in the 2024 talk: a socio-technical system cannot be understood by
+          examining either people or technology in isolation.
+
+          Source slide: https://srecon24.hatchman76.com/#/social-and-systems-wiki
+        </div>
+      </section>
+
+      <section
+        id="social-and-systems"
+        class="step social-systems-slide"
+        data-y="208000"
+        data-scale="25"
+      >
+        <img
+          class="social-separated"
+          src="/images/srecon24/man-woman-robot-separated-magnifying.png"
+          alt="People and technology examined separately through magnifying glasses"
+        />
+
+        <img
+          class="substep social-together"
+          src="/images/srecon24/robot-human-together.png"
+          alt="A person and robot holding hands"
+        />
+
+        <img
+          class="substep social-interaction-ring"
+          src="/images/srecon24/red-ring.png"
+          alt=""
+        />
+
+        <div class="substep social-hierarchy-model-reveal">
+          <img
+            class="social-hierarchy-model"
+            src="/images/srecon24/Rasmussen_Society_Model.png"
+            alt="Rasmussen structural hierarchy from government to worker"
+          />
+          <p class="social-hierarchy-label">Rasmussen Structural Hierarchy</p>
+        </div>
+
+        <img
+          class="substep social-hierarchy-research"
+          src="/images/srecon24/Rasmussen_Society_Research.png"
+          alt="Research disciplines aligned with the levels of Rasmussen's hierarchy"
+        />
+
+        <img
+          class="substep social-hierarchy-environment"
+          src="/images/srecon24/Rasmussen_Society_Environment.png"
+          alt="Environmental stressors aligned with Rasmussen's hierarchy"
+        />
+
+        <div class="substep social-you-reveal">
+          <img
+            class="social-you-logo"
+            src="/images/srecon24/you_logo_here.png"
+            alt="Your logo here"
+          />
+          <p class="social-you-label">This is you!</p>
+        </div>
+
+        <div class="notes">
+          Start with people and technology examined separately.
+
+          Reveal 1: bring the person and technology together.
+          Reveal 2: highlight their interaction.
+          Reveal 3: introduce Rasmussen's structural hierarchy.
+          Reveal 4: add the research disciplines that study its levels.
+          Reveal 5: add the environmental stressors acting across it.
+          Reveal 6: locate the audience and their organization inside the hierarchy.
+
+          Source slide and artwork: https://srecon24.hatchman76.com/#/social-and-systems
         </div>
       </section>
     </main>
 
-    <script type="module" src="/main.js"></script>
+    <script src="/vendor/impress.js/js/impress.min.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>

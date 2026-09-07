@@ -3,9 +3,8 @@
 .env.*
 !.env.example
 
-# JavaScript build output
+# Local package cache; the site itself has no generated output
 node_modules/
-dist/
 
 # Terraform local data and sensitive/generated artifacts
 **/.terraform/
