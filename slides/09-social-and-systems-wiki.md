@@ -1,4 +1,4 @@
-# Slide 8 — Socio-Technical Systems Definition
+# Slide 9 — Socio-Technical Systems Definition
 
 ## Slide copy
 
@@ -10,7 +10,7 @@
 
 Establish the working definition used in the 2024 talk: a socio-technical system cannot be understood by examining either people or technology in isolation.
 
-This definition is the bridge from Rasmussen's model to the organization and the AI-mediated workflows discussed later in the talk.
+This names the system in which the preceding behavioural adaptation occurs and prepares Rasmussen's control hierarchy on the next slide.
 
 ## Sources
 

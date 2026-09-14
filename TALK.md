@@ -12,11 +12,13 @@ The talk adapts Rasmussen's Dynamic Safety Model and the 2024 SREcon presentatio
 2. Takeaways
 3. SocioTechnical 101
 4. Resilience Engineering 101
-5. The Model
-6. Rasmussen in plain English
-7. Rasmussen source slide
-8. Socio-technical systems definition
-9. People, technology, and the structural hierarchy
+5. Rasmussen source slide
+6. The research behind the model
+7. Rasmussen in plain English
+8. Human behaviour with LLM tools
+9. Socio-technical systems definition
+10. Social control is multi-layered across society and within organizations
+11. AI enters the feedback and action channels of the control structure
 
 The matching one-slide-per-file notes are listed in [`slides/README.md`](slides/README.md).
 
@@ -47,6 +49,8 @@ This is a conditional mechanism, not a claim that AI or layoffs automatically ca
 - Treat economic activity, economic capacity, and economic control separately. Increased consumption or commitments move the operating point; changes in funding, revenue, runway, or sustainable cost structure can reshape the economic boundary; forecasts provide signals, while budgets, quotas, and return targets provide controller setpoints and decision thresholds.
 - Do not draw a budget or quota as an economic equivalent of Rasmussen's dotted performance boundary. It belongs to the 2026 control-loop overlay, not the original boundary geometry.
 - A falling token price does not imply falling aggregate cost. Unit cost and total demand can move in opposite directions.
+- AI changes the behaviour-shaping conditions and participates in recursive socio-technical adaptation. Its effects vary by task, person, incentives, and context; it does not determine one uniform response.
+- Rasmussen's framework remains applicable, but measures of human performance, learning, coordination, and control need revalidation in LLM-mediated work.
 
 ## The 2026 mechanism
 

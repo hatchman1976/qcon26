@@ -7,7 +7,7 @@ An interactive [impress.js](https://impress.js.org/) presentation for Andrew Hat
 - Intended live site: <https://qcon26.hatchman76.com>
 - Author: Andrew Hatch ([@hatchman1976](https://github.com/hatchman1976))
 
-The rendered deck currently contains the official QCon title slide, an opening Takeaways slide, introductions to socio-technical systems and resilience engineering, a Model section slide, a plain-language introduction to Rasmussen's model, and three adapted slides from Andrew's 2024 SREcon presentation: “The Model,” the socio-technical-systems definition, and the people-and-systems hierarchy. It uses that talk's pale backgrounds, Maven Pro and Comic Neue typography, collage-like placement, and staged reveals. Slide copy and speaker notes are maintained as one Markdown file per slide under [`slides/`](slides/README.md).
+The rendered deck currently contains the official QCon title slide, an opening Takeaways slide, introductions to socio-technical systems and resilience engineering, Rasmussen's source model, a map of the paper's wider research landscape, a plain-language explanation, a bridge examining human behaviour with LLM tools, two further adapted slides from Andrew's 2024 SREcon presentation, and an original slide showing how AI enters the control structure's feedback and action channels. It uses that talk's pale backgrounds, Maven Pro and Comic Neue typography, collage-like placement, and staged reveals. Slide copy and speaker notes are maintained as one Markdown file per slide under [`slides/`](slides/README.md).
 
 ## Narrative focus
 

@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#cfd8dc" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles.css?v=6" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
@@ -53,6 +53,9 @@
         <h2 class="takeaways-title">Takeaways</h2>
         <p class="takeaways-statement">Models: not always accurate, but they are useful....</p>
         <p class="takeaways-adaptation">Understand conditions that lead to adversity.<br />Stay resilient and adaptive to change.</p>
+        <p class="takeaways-risk-perspective">
+          Fundamentally, this model is a risk perspective.<br />A system-wide lens built from localized analysis, actions, and perspectives.
+        </p>
         <p class="takeaways-system-note">You are all part of complex socio-technical systems</p>
         <p class="takeaways-consequence-note">
           Attempts to change a complex system either in whole,<br />or in part, will yield unintended consequences
@@ -67,14 +70,155 @@
         <h2 class="topic-slide-title">Resilience Engineering 101</h2>
       </section>
 
-      <section id="model" class="step topic-slide" data-y="108000" data-scale="25">
-        <h2 class="topic-slide-title">The Model</h2>
+      <section id="the-model" class="step model-slide" data-y="108000" data-scale="25">
+        <img
+          class="model-portrait"
+          src="/images/srecon24/Rasmussen_portrait.png"
+          alt="Portrait of Jens Rasmussen"
+        />
+        <p class="regular-text model-person">
+          Jens Rasmussen<br />
+          Human Factors and Safety Science
+        </p>
+
+        <div class="substep model-paper">
+          <img
+            class="model-original"
+            src="/images/srecon24/Rasmussen_Model_Original.png"
+            alt="Rasmussen's original dynamic safety model"
+          />
+          <p class="model-paper-link">
+            <a
+              href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF"
+              target="_blank"
+              rel="noreferrer"
+            >Risk Management in a Dynamic Society (1997)</a>
+          </p>
+        </div>
+
+        <div class="substep model-domains" aria-label="Examples of safety-critical domains">
+          <img
+            class="domain-icon domain-radioactive"
+            src="/images/srecon24/emoji-radioactive.png"
+            alt="Radiological safety"
+          />
+          <img
+            class="domain-icon domain-ship"
+            src="/images/srecon24/emoji-passenger-ship-boat.png"
+            alt="Maritime safety"
+          />
+          <img
+            class="domain-icon domain-hospital"
+            src="/images/srecon24/emoji-hospital.png"
+            alt="Healthcare safety"
+          />
+        </div>
+
+        <div class="substep model-sociotechnical">
+          <p class="regular-text sociotechnical-heading">Socio-Technical Systems</p>
+          <p class="regular-text sociotechnical-hierarchical">- Hierarchical</p>
+          <p class="regular-text sociotechnical-multidisciplinary">- Multi-disciplinary</p>
+        </div>
+
+        <div class="substep model-thinking">
+          <p class="regular-text systems-thinking">Systems Thinking</p>
+        </div>
+
+        <div class="notes">
+          Introduce Jens Rasmussen and the 1997 model. The next slide maps the wider research landscape around Figure
+          3; the following slide translates the boundary model into plain language.
+
+          Reveal 1: the original model and paper.
+          Reveal 2: examples of safety-critical domains.
+          Reveal 3: hierarchical, multidisciplinary socio-technical systems.
+          Reveal 4: systems thinking.
+
+          Source slide and artwork: https://srecon24.hatchman76.com/#/the-model
+          Paper: https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+        </div>
+      </section>
+
+      <section id="paper-themes" class="step paper-themes-slide" data-y="133000" data-scale="25">
+        <h2 class="paper-themes-title">The research behind the model</h2>
+        <p class="paper-themes-lede">
+          The 31-page paper connects decades of studies across engineering and the human sciences.
+        </p>
+
+        <figure class="paper-themes-figure">
+          <img
+            src="/images/srecon24/Rasmussen_paper_figure_8.png"
+            alt="Page 201 of Rasmussen's paper, showing four research traditions converging on models of behaviour-shaping work features and criteria"
+          />
+          <figcaption>Figure 8: research traditions converge</figcaption>
+        </figure>
+
+        <div class="paper-themes-list">
+          <div class="substep paper-theme-pair">
+            <p class="paper-theme paper-theme-risk">
+              <strong>Risk analysis</strong>
+              <span>Different hazards require different strategies</span>
+            </p>
+            <p class="paper-theme paper-theme-defence">
+              <strong>Defence in depth</strong>
+              <span>Redundant layers can erode without visible failure</span>
+            </p>
+          </div>
+
+          <div class="substep paper-theme-pair">
+            <p class="paper-theme paper-theme-performance">
+              <strong>Human performance under pressure</strong>
+              <span>Studies move from error rates to work in context</span>
+            </p>
+            <p class="paper-theme paper-theme-control">
+              <strong>Feedback control</strong>
+              <span>Controllers need current state, authority, and competence</span>
+            </p>
+          </div>
+
+          <p class="substep paper-theme paper-theme-decisions">
+            <strong>Naturalistic decisions</strong>
+            <span>Local adaptations interact across the system</span>
+          </p>
+        </div>
+
+        <p class="substep paper-themes-summary">
+          Figure 3 is one of eight figures in a much wider argument.
+        </p>
+
+        <div class="notes">
+          The three-boundary diagram is the part most people remember, but this is a synthesis paper rather than a
+          single empirical validation of Figure 3.
+
+          Reveal 1: Rasmussen distinguishes empirical, evolutionary, and analytical risk strategies. Defence in depth
+          matters, but redundant protections can degrade quietly because a local violation may have no immediate
+          visible effect.
+
+          Reveal 2: The paper reviews human reliability, operator modelling, field evidence, and organisational
+          research. Its direction of travel is away from isolated error counts and toward behaviour in a real work
+          context shaped by workload, time, cost, and competing goals. Risk management becomes a feedback-control
+          problem spanning the whole socio-technical hierarchy.
+
+          Reveal 3: Decisions are embedded in continuous work. Locally sensible adaptations can interact across
+          controllers and create system-level risk.
+
+          Reveal 4: Figure 3 is one of eight figures in a 31-page, cross-disciplinary argument. The next slide simplifies
+          the geometry without discarding these mechanisms.
+
+          Source: Rasmussen, Risk Management in a Dynamic Society (1997), pp. 183–213.
+          Figure 8 and research convergence: p. 201.
+          Risk strategies: pp. 197–200.
+          Defence in depth: pp. 189–190, 198–199, 207–209.
+          Human and organisational adaptation under pressure: pp. 186–190, 193–196, 206–209.
+          Feedback control: pp. 183–186, 192–197.
+          Naturalistic decision making: pp. 186–190, 200–206.
+          https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+        </div>
       </section>
 
       <section
         id="model-in-plain-english"
         class="step plain-model-slide"
-        data-y="133000"
+        data-y="158000"
         data-scale="25"
       >
         <h2 class="plain-model-title">Three ways to lose</h2>
@@ -164,77 +308,97 @@
         </div>
       </section>
 
-      <section id="the-model" class="step model-slide" data-y="158000" data-scale="25">
-        <img
-          class="model-portrait"
-          src="/images/srecon24/Rasmussen_portrait.png"
-          alt="Portrait of Jens Rasmussen"
-        />
-        <p class="regular-text model-person">
-          Jens Rasmussen<br />
-          Human Factors and Safety Science
+      <section
+        id="ai-behaviour"
+        class="step ai-behaviour-slide"
+        data-y="183000"
+        data-scale="25"
+      >
+        <h2 class="ai-behaviour-title">Human behaviour with LLM tools</h2>
+        <p class="ai-behaviour-lede">
+          Rasmussen treats behaviour as part of control. LLM tools change the conditions in which people work.
         </p>
 
-        <div class="substep model-paper">
-          <img
-            class="model-original"
-            src="/images/srecon24/Rasmussen_Model_Original.png"
-            alt="Rasmussen's original dynamic safety model"
-          />
-          <p class="model-paper-link">
-            <a
-              href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF"
-              target="_blank"
-              rel="noreferrer"
-            >Risk Management in a Dynamic Society (1997)</a>
-          </p>
+        <div
+          class="ai-behaviour-map"
+          aria-label="Established human adaptation research, early evidence about LLM-mediated work, and open system-level questions"
+        >
+          <div class="ai-behaviour-section ai-behaviour-established">
+            <p class="ai-behaviour-label">ESTABLISHED</p>
+            <p class="ai-behaviour-statement">People adapt work to local conditions.</p>
+            <p class="ai-behaviour-detail">
+              Those adaptations can maintain control or create conditions for failure.
+            </p>
+            <div class="ai-behaviour-trace ai-behaviour-trace-established" aria-hidden="true"></div>
+          </div>
+
+          <div class="substep ai-behaviour-section ai-behaviour-evidence">
+            <p class="ai-behaviour-label">EARLY EVIDENCE</p>
+            <p class="ai-behaviour-statement">Studies find changes in task pace and cognitive effort.</p>
+            <p class="ai-behaviour-detail">Effects differ by task and experience.</p>
+            <div class="ai-behaviour-llm" aria-hidden="true">
+              <strong>LLM</strong>
+              <span>new condition</span>
+            </div>
+            <div class="ai-behaviour-trace ai-behaviour-trace-evidence" aria-hidden="true"></div>
+          </div>
+
+          <div class="substep ai-behaviour-section ai-behaviour-question">
+            <p class="ai-behaviour-label">OPEN QUESTION</p>
+            <p class="ai-behaviour-question-copy">
+              How do these changes affect judgment, learning, and feedback across the control structure?
+            </p>
+            <div class="ai-behaviour-trace ai-behaviour-trace-question" aria-hidden="true"></div>
+            <span class="ai-behaviour-question-mark" aria-hidden="true">?</span>
+          </div>
         </div>
 
-        <div class="substep model-domains" aria-label="Examples of safety-critical domains">
-          <img
-            class="domain-icon domain-radioactive"
-            src="/images/srecon24/emoji-radioactive.png"
-            alt="Radiological safety"
-          />
-          <img
-            class="domain-icon domain-ship"
-            src="/images/srecon24/emoji-passenger-ship-boat.png"
-            alt="Maritime safety"
-          />
-          <img
-            class="domain-icon domain-hospital"
-            src="/images/srecon24/emoji-hospital.png"
-            alt="Healthcare safety"
-          />
-        </div>
-
-        <div class="substep model-sociotechnical">
-          <p class="regular-text sociotechnical-heading">Socio-Technical Systems</p>
-          <p class="regular-text sociotechnical-hierarchical">- Hierarchical</p>
-          <p class="regular-text sociotechnical-multidisciplinary">- Multi-disciplinary</p>
-        </div>
-
-        <div class="substep model-thinking">
-          <p class="regular-text systems-thinking">Systems Thinking</p>
-        </div>
+        <p class="substep ai-behaviour-conclusion">
+          Rasmussen’s framework identifies what to examine. Work with LLM tools needs fresh evidence.
+        </p>
 
         <div class="notes">
-          Introduce Jens Rasmussen and the 1997 model before applying it to software systems.
+          Rasmussen treats human and organisational behaviour as constitutive of the socio-technical system. People
+          and organisations are adaptive components and controllers within it, not an external human input. The paper
+          argues that work migrates under local pressures and that control depends on objectives, feedback,
+          competence, coordination, and commitment.
 
-          Reveal 1: the original model and paper.
-          Reveal 2: examples of safety-critical domains.
-          Reveal 3: hierarchical, multidisciplinary socio-technical systems.
-          Reveal 4: systems thinking.
+          Starting state: The established point is contextual adaptation. Locally sensible behaviour can preserve
+          control, but interactions among adaptations can also create the conditions for failure.
 
-          Source slide and artwork: https://srecon24.hatchman76.com/#/the-model
-          Paper: https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+          Reveal 1: Early LLM evidence shows real but uneven changes. A 2025 CHI survey of 319 knowledge workers found
+          that critical-thinking effort shifted toward verification, response integration, and task stewardship;
+          higher confidence in AI was associated with less critical scrutiny. A randomized study of 758 consultants
+          found faster, higher-quality work on tasks within the model's capability frontier, but lower correctness on
+          a task outside it. Other workplace studies report heterogeneous gains by task and experience.
+
+          Reveal 2: The system-level question remains open. We need to re-measure problem framing, attention and
+          verification, skill retention under pressure, communication of intent, authority, and feedback fidelity
+          across the control hierarchy. Current task-level studies do not yet establish the accumulated effect on a
+          whole socio-technical system.
+
+          Reveal 3: This is a transferability and revalidation claim, not a claim that Rasmussen's framework or all
+          earlier human-factors research is obsolete. The framework tells us what to examine when technology changes
+          the behaviour-shaping conditions.
+
+          [Sources]
+          - Rasmussen, Risk Management in a Dynamic Society (1997), pp. 183–190, 193–197, 200–209:
+            https://doi.org/10.1016/S0925-7535(97)00052-0
+          - Lee et al., The Impact of Generative AI on Critical Thinking (CHI 2025):
+            https://doi.org/10.1145/3706598.3713778
+          - Dell'Acqua et al., Navigating the Jagged Technological Frontier (Organization Science, 2026):
+            https://doi.org/10.1287/orsc.2025.21838
+          - Dillon et al., Shifting Work Patterns with Generative AI (2025):
+            https://www.nber.org/papers/w33795
+          - Brynjolfsson, Li, and Raymond, Generative AI at Work (2025):
+            https://www.nber.org/papers/w31161
         </div>
       </section>
 
       <section
         id="social-and-systems-wiki"
         class="step social-wiki-slide"
-        data-y="183000"
+        data-y="208000"
         data-scale="25"
       >
         <h1 class="social-wiki-title">Socio Technical Systems</h1>
@@ -248,6 +412,9 @@
           Establish the working definition used in the 2024 talk: a socio-technical system cannot be understood by
           examining either people or technology in isolation.
 
+          This names the system in which the preceding behavioural adaptation occurs and prepares Rasmussen's control
+          hierarchy on the next slide.
+
           Source slide: https://srecon24.hatchman76.com/#/social-and-systems-wiki
         </div>
       </section>
@@ -255,9 +422,11 @@
       <section
         id="social-and-systems"
         class="step social-systems-slide"
-        data-y="208000"
+        data-y="233000"
         data-scale="25"
       >
+        <h2 class="social-systems-title">Where does control live?</h2>
+
         <img
           class="social-separated"
           src="/images/srecon24/man-woman-robot-separated-magnifying.png"
@@ -282,20 +451,37 @@
             src="/images/srecon24/Rasmussen_Society_Model.png"
             alt="Rasmussen structural hierarchy from government to worker"
           />
-          <p class="social-hierarchy-label">Rasmussen Structural Hierarchy</p>
+          <p class="social-hierarchy-label">
+            <strong>Social control hierarchy</strong>
+            <small>Rasmussen’s structural hierarchy</small>
+          </p>
         </div>
 
-        <img
-          class="substep social-hierarchy-research"
-          src="/images/srecon24/Rasmussen_Society_Research.png"
-          alt="Research disciplines aligned with the levels of Rasmussen's hierarchy"
-        />
+        <div class="substep social-hierarchy-scales" aria-label="The hierarchy operates at societal and organizational scales">
+          <p class="social-scales-heading">One hierarchy. Two nested scales.</p>
+          <p class="social-scale social-scale-society">
+            <strong>Society</strong>
+            <span>government · regulators · companies</span>
+          </p>
+          <p class="social-scale social-scale-organization">
+            <strong>Organization</strong>
+            <span>company · management · staff · workers</span>
+          </p>
+        </div>
 
-        <img
-          class="substep social-hierarchy-environment"
-          src="/images/srecon24/Rasmussen_Society_Environment.png"
-          alt="Environmental stressors aligned with Rasmussen's hierarchy"
-        />
+        <div class="substep social-context-reveal">
+          <img
+            class="social-hierarchy-research"
+            src="/images/srecon24/Rasmussen_Society_Research.png"
+            alt="Research disciplines aligned with the levels of Rasmussen's hierarchy"
+          />
+
+          <img
+            class="social-hierarchy-environment"
+            src="/images/srecon24/Rasmussen_Society_Environment.png"
+            alt="Environmental stressors aligned with Rasmussen's hierarchy"
+          />
+        </div>
 
         <div class="substep social-you-reveal">
           <img
@@ -311,12 +497,130 @@
 
           Reveal 1: bring the person and technology together.
           Reveal 2: highlight their interaction.
-          Reveal 3: introduce Rasmussen's structural hierarchy.
-          Reveal 4: add the research disciplines that study its levels.
-          Reveal 5: add the environmental stressors acting across it.
-          Reveal 6: locate the audience and their organization inside the hierarchy.
+          Reveal 3: introduce Rasmussen's social control hierarchy.
+          Reveal 4: name its two nested scales. Society governs and regulates organizations; organizations distribute
+          authority through the company, management, staff, and workers. The company sits at the seam: controlled by
+          the society around it while acting as a controller of the work inside it.
+          Reveal 5: add the research disciplines and environmental stressors that cross those levels.
+          Reveal 6: locate the audience and their organization inside the hierarchy. Control is distributed rather
+          than owned by any single actor, and information must travel upward while decisions and constraints travel
+          downward. Each layer adapts on a different timescale.
 
           Source slide and artwork: https://srecon24.hatchman76.com/#/social-and-systems
+        </div>
+      </section>
+
+      <section
+        id="ai-control-structure"
+        class="step ai-control-slide"
+        data-y="258000"
+        data-scale="25"
+      >
+        <h2 class="ai-control-title">AI enters the control structure</h2>
+        <p class="ai-control-lede">It changes the path from evidence to action.</p>
+
+        <div
+          class="ai-loop-diagram"
+          aria-label="A feedback loop between organizational controllers and the work system, with AI influencing both feedback and action"
+        >
+          <div class="ai-loop-controller">
+            <strong>CONTROLLERS</strong>
+            <span>goals · criteria · authority</span>
+          </div>
+
+          <div class="ai-loop-system">
+            <strong>WORK SYSTEM</strong>
+            <span>actual operating state</span>
+          </div>
+
+          <div class="ai-feedback-path" aria-hidden="true"></div>
+          <p class="ai-feedback-label">
+            <strong>FEEDBACK</strong>
+            <span>observations<br />and outcomes</span>
+          </p>
+
+          <div class="ai-action-path" aria-hidden="true"></div>
+          <p class="ai-action-label">
+            <strong>CONTROL</strong>
+            <span>decisions<br />and actions</span>
+          </p>
+
+          <div class="substep ai-loop-influence">
+            <div class="ai-loop-core">
+              <strong>AI</strong>
+              <span>lower effort</span>
+            </div>
+            <p class="ai-loop-sense">
+              <strong>Gather</strong>
+              <span>find and frame evidence</span>
+            </p>
+            <p class="ai-loop-options">
+              <strong>Offer options</strong>
+              <span>shape what gets considered</span>
+            </p>
+            <p class="ai-loop-act">
+              <strong>Draft action</strong>
+              <span>turn intent into output</span>
+            </p>
+          </div>
+
+          <div class="substep ai-loop-warnings">
+            <p class="ai-warning ai-warning-evidence">Plausible ≠ measured</p>
+            <p class="ai-warning ai-warning-intent">Fluent ≠ intended</p>
+          </div>
+        </div>
+
+        <div class="substep ai-drift-diagram" aria-label="The actual operating state has moved closer to the performance boundary than the controller perceives">
+          <p class="ai-drift-heading">When verification lags</p>
+          <div class="ai-performance-boundary" aria-hidden="true"></div>
+          <div class="ai-perceived-boundary" aria-hidden="true"></div>
+          <p class="ai-performance-label">performance<br />boundary</p>
+          <p class="ai-perceived-boundary-label">perceived<br />boundary</p>
+          <div class="ai-drift-trail" aria-hidden="true"></div>
+          <div class="ai-perceived-point" aria-hidden="true"></div>
+          <p class="ai-perceived-point-label">controller’s<br />delayed picture</p>
+          <div class="ai-actual-point" aria-hidden="true"></div>
+          <p class="ai-actual-point-label">actual state<br />after action</p>
+        </div>
+
+        <p class="substep ai-control-conclusion">
+          AI can make “generate, accept, act” the path of least effort.<br />
+          If verification does not keep pace, enacted decisions can consume margin before the control structure sees the change.
+        </p>
+
+        <blockquote class="ai-control-quote">
+          “No control system will perform better than its measuring channel.”
+          <cite>Jens Rasmussen, 1997</cite>
+        </blockquote>
+
+        <div class="notes">
+          Rasmussen's control structure is the distributed network of decision makers, goals, constraints, information,
+          competence, and authority that controls the work. AI is not automatically a new controller and it is not a
+          fourth boundary. It enters the channels that existing controllers use.
+
+          On the feedback side, AI can gather information, summarize evidence, find contradictions, and support testing.
+          It can also compress uncertainty into a fluent account that looks more directly observed than it really is.
+
+          On the control side, AI can present options, draft decisions, and turn loosely stated intent into detailed
+          output. That can increase useful capacity. It can also amplify a preference beyond what the communicator
+          intended or let plausible wording substitute for explicit criteria and verification.
+
+          “Least effort” is not a moral claim about laziness. It describes normal local adaptation under competing goals
+          and limited attention. AI output does not move the system merely by existing. The operating state moves when
+          people or automation admit and enact the resulting decisions.
+
+          This risk is conditional. AI can strengthen the safety counter-gradient when it improves testing, diagnosis,
+          challenge, and feedback. Risk rises when generation and action become easier faster than assurance and
+          correction. Then the actual operating state can move closer to a functional limit while the control
+          structure's picture of the system remains behind.
+
+          Rasmussen's 1997 paper describes behaviour and work activity migrating toward the boundary. “Operating point”
+          is later shorthand used explicitly by Cook and Rasmussen in 2005.
+
+          [Sources]
+          - https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+          - https://doi.org/10.1016/S0925-7535(97)00052-0
+          - https://doi.org/10.1136/qshc.2003.009530
         </div>
       </section>
     </main>

@@ -62,11 +62,13 @@ body.impress-on-title,
 body.impress-on-takeaways,
 body.impress-on-sociotechnical-101,
 body.impress-on-resilience-engineering-101,
-body.impress-on-model,
+body.impress-on-paper-themes,
 body.impress-on-model-in-plain-english,
+body.impress-on-ai-behaviour,
 body.impress-on-the-model,
 body.impress-on-social-and-systems-wiki,
-body.impress-on-social-and-systems {
+body.impress-on-social-and-systems,
+body.impress-on-ai-control-structure {
   background-color: var(--surface-introduction);
 }
 
@@ -263,9 +265,23 @@ a {
   left: 92px;
   margin: 0;
   font-family: "Comic Neue", cursive;
-  font-size: 50px;
+  font-size: 42px;
   font-weight: 700;
   line-height: 1.18;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.takeaways-risk-perspective {
+  position: absolute;
+  top: 480px;
+  right: 40px;
+  left: 40px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.15;
   letter-spacing: -1px;
   text-align: center;
 }
@@ -316,7 +332,7 @@ a {
   text-align: center;
 }
 
-/* A child-simple bridge from the title into Rasmussen's original diagram. */
+/* A child-simple translation of Rasmussen's original diagram. */
 .plain-model-slide {
   overflow: hidden;
 }
@@ -565,6 +581,334 @@ a {
   text-align: left;
 }
 
+/* The wider research landscape surrounding Rasmussen's boundary model. */
+.paper-themes-slide {
+  overflow: hidden;
+}
+
+.paper-themes-title {
+  position: absolute;
+  top: 18px;
+  right: 45px;
+  left: 45px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -1.7px;
+  text-align: center;
+}
+
+.paper-themes-lede {
+  position: absolute;
+  top: 82px;
+  right: 70px;
+  left: 70px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.paper-themes-figure {
+  position: absolute;
+  top: 145px;
+  left: 58px;
+  width: 410px;
+  height: 510px;
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 24px rgb(0 0 0 / 18%);
+  transform: rotate(-1deg);
+}
+
+.paper-themes-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.paper-themes-figure figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 7px 10px 8px;
+  background: rgb(255 255 255 / 90%);
+  font-family: "Comic Neue", cursive;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.paper-themes-list {
+  position: absolute;
+  top: 145px;
+  right: 48px;
+  width: 455px;
+}
+
+.paper-theme {
+  margin: 0 0 16px;
+  padding: 1px 0 4px 16px;
+  border-left: 6px solid #30343b;
+  text-align: left;
+}
+
+.paper-theme strong,
+.paper-theme span {
+  display: block;
+}
+
+.paper-theme strong {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.paper-theme span {
+  margin-top: 5px;
+  font-family: "Comic Neue", cursive;
+  font-size: 19px;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.paper-theme-risk,
+.paper-theme-control {
+  border-color: #225ea8;
+}
+
+.paper-theme-defence,
+.paper-theme-decisions {
+  border-color: #d1495b;
+}
+
+.paper-theme-performance {
+  border-color: #6b4f2a;
+}
+
+.paper-themes-summary {
+  position: absolute;
+  right: 48px;
+  bottom: 20px;
+  left: 500px;
+  margin: 0;
+  color: #8c1d18;
+  font-family: "Comic Neue", cursive;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.3px;
+  text-align: left;
+}
+
+/* Human adaptation evidence and the questions introduced by LLM-mediated work. */
+.ai-behaviour-slide {
+  overflow: hidden;
+}
+
+.ai-behaviour-title {
+  position: absolute;
+  top: 18px;
+  right: 45px;
+  left: 45px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -1.7px;
+  text-align: center;
+}
+
+.ai-behaviour-lede {
+  position: absolute;
+  top: 84px;
+  right: 65px;
+  left: 65px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+}
+
+.ai-behaviour-map {
+  position: absolute;
+  top: 180px;
+  left: 60px;
+  width: 900px;
+  height: 390px;
+  font-family: "Comic Neue", cursive;
+}
+
+.ai-behaviour-section {
+  position: absolute;
+  top: 0;
+  height: 360px;
+  text-align: left;
+}
+
+.ai-behaviour-established {
+  left: 0;
+  width: 265px;
+}
+
+.ai-behaviour-evidence {
+  left: 320px;
+  width: 270px;
+}
+
+.ai-behaviour-question {
+  right: 0;
+  width: 255px;
+}
+
+.ai-behaviour-label {
+  margin: 0 0 20px;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 1.4px;
+  text-align: left;
+}
+
+.ai-behaviour-established .ai-behaviour-label {
+  color: #30343b;
+}
+
+.ai-behaviour-evidence .ai-behaviour-label {
+  color: #164f90;
+}
+
+.ai-behaviour-question .ai-behaviour-label {
+  color: #9e2235;
+}
+
+.ai-behaviour-statement,
+.ai-behaviour-question-copy {
+  margin: 0;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.ai-behaviour-detail {
+  margin: 16px 0 0;
+  font-size: 22px;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.ai-behaviour-question-copy {
+  font-size: 27px;
+  line-height: 1.08;
+}
+
+.ai-behaviour-trace {
+  position: absolute;
+  top: 292px;
+  height: 7px;
+}
+
+.ai-behaviour-trace-established {
+  left: 0;
+  width: 280px;
+  background: #30343b;
+}
+
+.ai-behaviour-trace-evidence {
+  left: -22px;
+  width: 300px;
+  background: #225ea8;
+}
+
+.ai-behaviour-trace-question {
+  top: 289px;
+  left: -20px;
+  width: 218px;
+  height: 0;
+  border-top: 7px dashed #d1495b;
+}
+
+.ai-behaviour-llm {
+  position: absolute;
+  top: 248px;
+  left: -64px;
+  z-index: 2;
+  display: flex;
+  width: 96px;
+  height: 96px;
+  border: 4px solid #30343b;
+  border-radius: 50%;
+  background: #f4c95d;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.ai-behaviour-llm strong,
+.ai-behaviour-llm span {
+  display: block;
+}
+
+.ai-behaviour-llm strong {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 30px;
+  line-height: 0.9;
+  letter-spacing: -0.4px;
+}
+
+.ai-behaviour-llm span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.ai-behaviour-question-mark {
+  position: absolute;
+  top: 220px;
+  right: 0;
+  color: #9e2235;
+  font-family: "Comic Neue", cursive;
+  font-size: 112px;
+  font-weight: 700;
+  line-height: 1;
+  transform: rotate(7deg);
+}
+
+.ai-behaviour-conclusion {
+  position: absolute;
+  right: 80px;
+  bottom: 42px;
+  left: 80px;
+  margin: 0;
+  color: #8c1d18;
+  font-family: "Comic Neue", cursive;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+
 /* SREcon24 socio-technical-system definition and visual explanation. */
 .social-wiki-slide,
 .social-systems-slide {
@@ -595,22 +939,36 @@ a {
   height: auto;
 }
 
-.social-separated {
-  top: 50px;
+.social-systems-title {
+  position: absolute;
+  top: 20px;
+  right: 50px;
   left: 50px;
-  width: 400px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+.social-separated {
+  top: 90px;
+  left: 50px;
+  width: 360px;
 }
 
 .social-together {
-  top: 50px;
+  top: 90px;
   right: 50px;
-  width: 300px;
+  width: 265px;
 }
 
 .social-interaction-ring {
-  top: 120px;
-  right: 190px;
-  width: 90px;
+  top: 148px;
+  right: 172px;
+  width: 78px;
 }
 
 .social-hierarchy-model {
@@ -621,14 +979,77 @@ a {
 
 .social-hierarchy-label {
   position: absolute;
-  bottom: 30px;
-  left: 100px;
-  width: 400px;
+  bottom: 22px;
+  left: 150px;
+  width: 320px;
   height: auto;
-  margin: 0.7em;
+  margin: 0;
   font-family: "Comic Neue", cursive;
+  font-size: 29px;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.social-hierarchy-label strong,
+.social-hierarchy-label small {
+  display: block;
+}
+
+.social-hierarchy-label small {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.social-hierarchy-scales {
+  position: absolute;
+  top: 315px;
+  right: 25px;
+  width: 345px;
+  font-family: "Comic Neue", cursive;
+}
+
+.social-scales-heading {
+  margin: 0 0 9px;
   font-size: 25px;
+  font-weight: 700;
+  line-height: 1.05;
   text-align: left;
+}
+
+.social-scale {
+  margin: 8px 0;
+  padding: 9px 12px 10px;
+  border-left: 8px solid;
+  background: rgb(255 255 255 / 58%);
+  line-height: 1.05;
+  text-align: left;
+}
+
+.social-scale strong,
+.social-scale span {
+  display: block;
+}
+
+.social-scale strong {
+  margin-bottom: 3px;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.social-scale span {
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.social-scale-society {
+  border-color: #d1495b;
+}
+
+.social-scale-organization {
+  border-color: #225ea8;
 }
 
 .social-hierarchy-research {
@@ -644,16 +1065,21 @@ a {
   width: 260px;
 }
 
+.social-context-reveal img {
+  position: absolute;
+  height: auto;
+}
+
 .social-you-logo {
-  right: 20px;
-  bottom: 160px;
-  width: 400px;
+  right: 35px;
+  bottom: 90px;
+  width: 330px;
 }
 
 .social-you-label {
   position: absolute;
-  right: 70px;
-  bottom: 100px;
+  right: 50px;
+  bottom: 35px;
   width: 300px;
   height: auto;
   margin: 0.7em;
@@ -661,6 +1087,459 @@ a {
   font-size: 30px;
   text-align: center;
   transform-origin: center;
+}
+
+/* AI enters the feedback and action channels of the existing control structure. */
+.ai-control-slide {
+  overflow: hidden;
+}
+
+.ai-control-title {
+  position: absolute;
+  top: 18px;
+  right: 45px;
+  left: 45px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -1.7px;
+  text-align: center;
+}
+
+.ai-control-lede {
+  position: absolute;
+  top: 82px;
+  right: 80px;
+  left: 80px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.ai-loop-diagram {
+  position: absolute;
+  top: 142px;
+  left: 32px;
+  width: 570px;
+  height: 420px;
+  font-family: "Comic Neue", cursive;
+}
+
+.ai-loop-controller,
+.ai-loop-system {
+  position: absolute;
+  left: 145px;
+  z-index: 3;
+  width: 280px;
+  height: 76px;
+  padding: 10px 14px 8px;
+  border-left: 9px solid;
+  background: rgb(255 255 255 / 68%);
+  text-align: left;
+}
+
+.ai-loop-controller {
+  top: 0;
+  border-color: #30343b;
+}
+
+.ai-loop-system {
+  bottom: 0;
+  border-color: #6b4f2a;
+}
+
+.ai-loop-controller strong,
+.ai-loop-controller span,
+.ai-loop-system strong,
+.ai-loop-system span {
+  display: block;
+}
+
+.ai-loop-controller strong,
+.ai-loop-system strong {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: -0.4px;
+}
+
+.ai-loop-controller span,
+.ai-loop-system span {
+  margin-top: 5px;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.ai-feedback-path,
+.ai-action-path {
+  position: absolute;
+  top: 70px;
+  z-index: 1;
+  height: 280px;
+  border-left: 7px solid;
+}
+
+.ai-feedback-path {
+  left: 76px;
+  border-color: #225ea8;
+}
+
+.ai-feedback-path::before {
+  position: absolute;
+  top: -9px;
+  left: -13px;
+  width: 0;
+  height: 0;
+  border-right: 9px solid transparent;
+  border-bottom: 15px solid #225ea8;
+  border-left: 9px solid transparent;
+  content: "";
+}
+
+.ai-action-path {
+  right: 76px;
+  border-color: #d1495b;
+}
+
+.ai-action-path::after {
+  position: absolute;
+  bottom: -9px;
+  left: -13px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid #d1495b;
+  border-right: 9px solid transparent;
+  border-left: 9px solid transparent;
+  content: "";
+}
+
+.ai-feedback-label,
+.ai-action-label {
+  position: absolute;
+  top: 154px;
+  z-index: 2;
+  width: 140px;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.ai-feedback-label {
+  left: 5px;
+  color: #164f90;
+}
+
+.ai-action-label {
+  right: 5px;
+  color: #aa263b;
+}
+
+.ai-feedback-label strong,
+.ai-feedback-label span,
+.ai-action-label strong,
+.ai-action-label span {
+  display: block;
+}
+
+.ai-feedback-label strong,
+.ai-action-label strong {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 21px;
+  letter-spacing: 0;
+}
+
+.ai-feedback-label span,
+.ai-action-label span {
+  margin-top: 6px;
+  color: #000;
+  font-size: 17px;
+  letter-spacing: 0;
+}
+
+.ai-loop-influence,
+.ai-loop-warnings {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.ai-loop-core {
+  position: absolute;
+  top: 142px;
+  left: 223px;
+  display: flex;
+  width: 124px;
+  height: 124px;
+  border: 4px solid #30343b;
+  border-radius: 50%;
+  background: #f4c95d;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.ai-loop-core strong,
+.ai-loop-core span {
+  display: block;
+}
+
+.ai-loop-core strong {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 42px;
+  line-height: 0.9;
+}
+
+.ai-loop-core span {
+  margin-top: 7px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.ai-loop-sense,
+.ai-loop-options,
+.ai-loop-act {
+  position: absolute;
+  margin: 0;
+  padding: 5px 7px 6px;
+  background: rgb(255 255 255 / 78%);
+  line-height: 1;
+  text-align: left;
+}
+
+.ai-loop-sense {
+  top: 86px;
+  left: 140px;
+  width: 145px;
+  border-bottom: 5px solid #225ea8;
+}
+
+.ai-loop-options {
+  top: 279px;
+  left: 190px;
+  width: 190px;
+  border-bottom: 5px solid #81721f;
+  text-align: center;
+}
+
+.ai-loop-act {
+  top: 86px;
+  right: 140px;
+  width: 145px;
+  border-bottom: 5px solid #d1495b;
+  text-align: right;
+}
+
+.ai-loop-sense strong,
+.ai-loop-sense span,
+.ai-loop-options strong,
+.ai-loop-options span,
+.ai-loop-act strong,
+.ai-loop-act span {
+  display: block;
+}
+
+.ai-loop-sense strong,
+.ai-loop-options strong,
+.ai-loop-act strong {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 19px;
+}
+
+.ai-loop-sense span,
+.ai-loop-options span,
+.ai-loop-act span {
+  margin-top: 3px;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+.ai-warning {
+  position: absolute;
+  width: 182px;
+  margin: 0;
+  padding: 7px 8px;
+  border: 3px solid #b3261e;
+  background: #fff4ee;
+  color: #8c1d18;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.4px;
+}
+
+.ai-warning-evidence {
+  top: 244px;
+  left: 0;
+  transform: rotate(-3deg);
+}
+
+.ai-warning-intent {
+  top: 244px;
+  right: 0;
+  transform: rotate(3deg);
+}
+
+.ai-drift-diagram {
+  position: absolute;
+  top: 142px;
+  right: 24px;
+  width: 365px;
+  height: 420px;
+  font-family: "Comic Neue", cursive;
+  pointer-events: none;
+}
+
+.ai-drift-heading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ai-performance-boundary,
+.ai-perceived-boundary {
+  position: absolute;
+  top: 65px;
+  height: 275px;
+  transform: rotate(13deg);
+  transform-origin: center;
+}
+
+.ai-performance-boundary {
+  right: 42px;
+  border-left: 7px solid #b3261e;
+}
+
+.ai-perceived-boundary {
+  right: 100px;
+  border-left: 4px dashed #b3261e;
+}
+
+.ai-performance-label,
+.ai-perceived-boundary-label,
+.ai-perceived-point-label,
+.ai-actual-point-label {
+  position: absolute;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.ai-performance-label {
+  top: 47px;
+  right: 0;
+  width: 92px;
+  color: #8c1d18;
+  font-weight: 700;
+  text-align: right;
+}
+
+.ai-perceived-boundary-label {
+  right: 86px;
+  bottom: 34px;
+  width: 106px;
+  color: #8c1d18;
+  text-align: center;
+}
+
+.ai-drift-trail {
+  position: absolute;
+  top: 244px;
+  left: 144px;
+  width: 158px;
+  border-top: 4px dashed #6a7378;
+  transform: rotate(-13deg);
+  transform-origin: left center;
+}
+
+.ai-perceived-point,
+.ai-actual-point {
+  position: absolute;
+  z-index: 3;
+  border-radius: 50%;
+}
+
+.ai-perceived-point {
+  top: 232px;
+  left: 132px;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #6a7378;
+  background: #cfd8dc;
+}
+
+.ai-actual-point {
+  top: 194px;
+  left: 286px;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #fff4ee;
+  background: #b3261e;
+}
+
+.ai-perceived-point-label {
+  top: 265px;
+  left: 57px;
+  width: 125px;
+  color: #50565d;
+  text-align: center;
+}
+
+.ai-actual-point-label {
+  top: 145px;
+  left: 261px;
+  width: 106px;
+  color: #8c1d18;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ai-control-conclusion {
+  position: absolute;
+  top: 585px;
+  right: 70px;
+  left: 70px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+}
+
+.ai-control-quote {
+  position: absolute;
+  right: 80px;
+  bottom: 20px;
+  left: 80px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.ai-control-quote cite {
+  display: block;
+  margin-top: 5px;
+  font-size: 16px;
+  font-style: normal;
 }
 
 .social-you-label:hover {

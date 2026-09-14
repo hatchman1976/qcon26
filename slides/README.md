@@ -8,11 +8,13 @@ The numbered Markdown files in this directory mirror the rendered Impress deck i
 2. [Takeaways](02-takeaways.md) — `#/takeaways`
 3. [SocioTechnical 101](03-sociotechnical-101.md) — `#/sociotechnical-101`
 4. [Resilience Engineering 101](04-resilience-engineering-101.md) — `#/resilience-engineering-101`
-5. [The Model](05-model.md) — `#/model`
-6. [Rasmussen in plain English](06-model-in-plain-english.md) — `#/model-in-plain-english`
-7. [Rasmussen source slide](07-the-model.md) — `#/the-model`
-8. [Socio-technical systems definition](08-social-and-systems-wiki.md) — `#/social-and-systems-wiki`
-9. [People, technology, and the structural hierarchy](09-social-and-systems.md) — `#/social-and-systems`
+5. [Rasmussen source slide](05-model.md) — `#/the-model`
+6. [The research behind the model](06-paper-themes.md) — `#/paper-themes`
+7. [Rasmussen in plain English](07-model-in-plain-english.md) — `#/model-in-plain-english`
+8. [Human behaviour with LLM tools](08-ai-behaviour.md) — `#/ai-behaviour`
+9. [Socio-technical systems definition](09-social-and-systems-wiki.md) — `#/social-and-systems-wiki`
+10. [Social control is multi-layered](10-social-and-systems.md) — `#/social-and-systems`
+11. [AI enters the control structure](11-ai-control-structure.md) — `#/ai-control-structure`
 
 ## Archived working ideas
 
@@ -32,6 +34,7 @@ This revision incorporates a critical rereading of Rasmussen's model and makes t
 - A falling token or serving price is a unit-cost change, not proof that aggregate workflow cost is falling.
 - The 2024 talk explained the geometry of drift. The 2026 talk asks whether organizational feedback can keep pace with AI-enabled change.
 - AI is not a fourth boundary. It changes existing gradients and control-loop gain and delay, and it can sometimes reshape existing constraints.
+- AI changes the behaviour-shaping conditions and participates in recursive adaptation; it does not determine one uniform human response.
 
 - [The new question](ideas/02-question.md)
 - [Operating point](ideas/03-operating-point.md)
