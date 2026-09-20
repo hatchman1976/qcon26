@@ -1,4 +1,4 @@
-# Slide 6 — The Research Behind the Model
+# Slide 5 — The Research Behind the Model
 
 ## Slide copy
 

@@ -1,4 +1,4 @@
-# Slide 9 — Socio-Technical Systems Definition
+# Slide 3 — Socio-Technical Systems Definition
 
 ## Slide copy
 

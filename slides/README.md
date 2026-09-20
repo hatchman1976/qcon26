@@ -6,15 +6,13 @@ The numbered Markdown files in this directory mirror the rendered Impress deck i
 
 1. [Title](01-title.md) — `#/title`
 2. [Takeaways](02-takeaways.md) — `#/takeaways`
-3. [SocioTechnical 101](03-sociotechnical-101.md) — `#/sociotechnical-101`
-4. [Resilience Engineering 101](04-resilience-engineering-101.md) — `#/resilience-engineering-101`
-5. [Rasmussen source slide](05-model.md) — `#/the-model`
-6. [The research behind the model](06-paper-themes.md) — `#/paper-themes`
-7. [Rasmussen in plain English](07-model-in-plain-english.md) — `#/model-in-plain-english`
-8. [Human behaviour with LLM tools](08-ai-behaviour.md) — `#/ai-behaviour`
-9. [Socio-technical systems definition](09-social-and-systems-wiki.md) — `#/social-and-systems-wiki`
-10. [Social control is multi-layered](10-social-and-systems.md) — `#/social-and-systems`
-11. [AI enters the control structure](11-ai-control-structure.md) — `#/ai-control-structure`
+3. [Socio-technical systems definition](03-social-and-systems-wiki.md) — `#/social-and-systems-wiki`
+4. [Rasmussen source slide](04-model.md) — `#/the-model`
+5. [The research behind the model](05-paper-themes.md) — `#/paper-themes`
+6. [Rasmussen in plain English](06-model-in-plain-english.md) — `#/model-in-plain-english`
+7. [Human behaviour with LLM tools](07-ai-behaviour.md) — `#/ai-behaviour`
+8. [Social control is multi-layered](08-social-and-systems.md) — `#/social-and-systems`
+9. [AI enters the control structure](09-ai-control-structure.md) — `#/ai-control-structure`
 
 ## Archived working ideas
 

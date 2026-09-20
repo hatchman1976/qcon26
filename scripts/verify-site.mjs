@@ -12,8 +12,6 @@ const requiredMarkers = [
   'id="impress"',
   'id="title"',
   'id="takeaways"',
-  'id="sociotechnical-101"',
-  'id="resilience-engineering-101"',
   'id="the-model"',
   'id="paper-themes"',
   'id="model-in-plain-english"',
@@ -29,8 +27,6 @@ const requiredMarkers = [
   "Fundamentally, this model is a risk perspective.",
   "You are all part of complex socio-technical systems",
   "Attempts to change a complex system either in whole,",
-  '<h2 class="topic-slide-title">SocioTechnical 101</h2>',
-  '<h2 class="topic-slide-title">Resilience Engineering 101</h2>',
   "Three ways to lose",
   'src="/images/srecon24/Rasmussen_boundary_performance.png?v=2"',
   'src="/images/srecon24/Rasmussen_boundary_economic.png?v=2"',
@@ -98,8 +94,8 @@ await Promise.all(requiredFiles.map((file) => access(resolve(siteRoot, file))));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount !== 11) {
-  throw new Error(`Expected exactly eleven impress.js steps, found ${stepCount}`);
+if (stepCount !== 9) {
+  throw new Error(`Expected exactly nine impress.js steps, found ${stepCount}`);
 }
 
 console.log(`Verified src/index.html with ${stepCount} presentation steps.`);

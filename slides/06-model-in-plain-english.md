@@ -1,4 +1,4 @@
-# Slide 7 — Rasmussen in Plain English
+# Slide 6 — Rasmussen in Plain English
 
 ## Slide copy
 
