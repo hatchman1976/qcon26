@@ -29,7 +29,7 @@ Reveal 4:
 
 ## Speaker notes
 
-Introduce Jens Rasmussen and the 1997 model. The next slide maps the wider research landscape around Figure 3; the following slide turns the academic diagram into one operating state, three constraints, competing pressures, and an uncertain margin.
+Introduce Jens Rasmussen and the 1997 model. The next slide maps the wider research landscape around Figure 3; the slide after that locates people and technology within Rasmussen's social control hierarchy before the boundary model is translated into one operating state, three constraints, competing pressures, and an uncertain margin.
 
 The staged reveals follow the 2024 presentation: first the original model and paper, then examples of safety-critical domains, then the properties of socio-technical systems, and finally the systems-thinking lens.
 

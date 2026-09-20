@@ -1,4 +1,4 @@
-# Slide 8 — Social Control Is Multi-Layered
+# Slide 6 — Social Control Is Multi-Layered
 
 ## Slide copy
 

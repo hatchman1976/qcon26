@@ -9,9 +9,9 @@ The numbered Markdown files in this directory mirror the rendered Impress deck i
 3. [Socio-technical systems definition](03-social-and-systems-wiki.md) — `#/social-and-systems-wiki`
 4. [Rasmussen source slide](04-model.md) — `#/the-model`
 5. [The research behind the model](05-paper-themes.md) — `#/paper-themes`
-6. [Rasmussen in plain English](06-model-in-plain-english.md) — `#/model-in-plain-english`
-7. [Human behaviour with LLM tools](07-ai-behaviour.md) — `#/ai-behaviour`
-8. [Social control is multi-layered](08-social-and-systems.md) — `#/social-and-systems`
+6. [Social control is multi-layered](06-social-and-systems.md) — `#/social-and-systems`
+7. [Rasmussen in plain English](07-model-in-plain-english.md) — `#/model-in-plain-english`
+8. [Human behaviour with LLM tools](08-ai-behaviour.md) — `#/ai-behaviour`
 9. [AI enters the control structure](09-ai-control-structure.md) — `#/ai-control-structure`
 
 ## Archived working ideas

@@ -38,7 +38,7 @@ The paper reviews human reliability, operator modelling, field evidence, and org
 
 Decisions are embedded in continuous work. Locally sensible adaptations can interact across controllers and create system-level risk.
 
-Figure 3 is one of eight figures in a 31-page, cross-disciplinary argument. The next slide simplifies the geometry without discarding these mechanisms.
+Figure 3 is one of eight figures in a 31-page, cross-disciplinary argument. The next slide makes the paper's system-wide control hierarchy concrete; the following slide simplifies the geometry without discarding these mechanisms.
 
 ## Accuracy guardrails
 

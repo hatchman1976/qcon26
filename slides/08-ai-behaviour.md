@@ -1,4 +1,4 @@
-# Slide 7 — Human Behaviour with LLM Tools
+# Slide 8 — Human Behaviour with LLM Tools
 
 ## Slide copy
 
