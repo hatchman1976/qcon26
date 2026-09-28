@@ -61,10 +61,11 @@ body {
 body.impress-on-title,
 body.impress-on-takeaways,
 body.impress-on-paper-themes,
-body.impress-on-model-in-plain-english,
+body.impress-on-the-fish-diagram,
 body.impress-on-ai-behaviour,
 body.impress-on-the-model,
 body.impress-on-social-and-systems-wiki,
+body.impress-on-before-we-continue,
 body.impress-on-social-and-systems,
 body.impress-on-ai-control-structure {
   background-color: var(--surface-introduction);
@@ -223,7 +224,7 @@ a {
   font-size: 22px;
 }
 
-/* Opening summary placeholder. */
+/* Opening summary. */
 .takeaways-slide {
   overflow: hidden;
 }
@@ -242,93 +243,61 @@ a {
   text-align: center;
 }
 
-.takeaways-statement {
+.takeaways-table {
   position: absolute;
-  top: 150px;
-  right: 92px;
-  left: 92px;
-  margin: 0;
+  top: 114px;
+  left: 60px;
+  width: 900px;
+  height: 610px;
+  border-collapse: collapse;
+  table-layout: fixed;
   font-family: "Comic Neue", cursive;
-  font-size: 44px;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 1.18;
+  line-height: 1.14;
   letter-spacing: -1px;
-  text-align: center;
 }
 
-.takeaways-adaptation {
-  position: absolute;
-  top: 350px;
-  right: 92px;
-  left: 92px;
-  margin: 0;
-  font-family: "Comic Neue", cursive;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: -1px;
-  text-align: center;
+.takeaways-table td {
+  padding: 10px 14px;
+  vertical-align: middle;
+  text-align: left;
 }
 
-.takeaways-risk-perspective {
-  position: absolute;
-  top: 480px;
-  right: 40px;
-  left: 40px;
-  margin: 0;
-  font-family: "Comic Neue", cursive;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -1px;
-  text-align: center;
-}
-
-.takeaways-system-note {
-  position: absolute;
-  right: 70px;
-  bottom: 142px;
-  left: 70px;
-  margin: 0;
-  font-family: "Comic Neue", cursive;
-  font-size: 36px;
+.takeaways-table .takeaways-icon {
+  width: 112px;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 58px;
   font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -1px;
   text-align: center;
 }
 
-.takeaways-consequence-note {
-  position: absolute;
-  right: 50px;
-  bottom: 32px;
-  left: 50px;
-  margin: 0;
-  font-family: "Comic Neue", cursive;
-  font-size: 31px;
-  font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -1px;
-  text-align: center;
+.takeaways-table td:last-child {
+  padding-left: 24px;
+}
+
+.takeaways-flowchart {
+  display: block;
+  width: 80px;
+  height: 74px;
+  margin: auto;
+  color: #233844;
+}
+
+.takeaways-people {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  width: 84px;
+  margin: auto;
+  font-size: 35px;
+  line-height: 1;
 }
 
 /* A child-simple translation of Rasmussen's original diagram. */
 .plain-model-slide {
   overflow: hidden;
-}
-
-.plain-model-title {
-  position: absolute;
-  top: 20px;
-  right: 60px;
-  left: 60px;
-  z-index: 5;
-  margin: 0;
-  font-family: "Maven Pro", sans-serif;
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 1;
-  text-align: center;
 }
 
 .plain-model-outline {
@@ -340,45 +309,58 @@ a {
   height: auto;
 }
 
+.plain-boundary-reveal.substep-visible .plain-model-outline,
+.plain-model-margin.substep-visible .plain-model-error-margin {
+  animation: plain-boundary-expand-contract 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  transform-origin: center;
+}
+
+@keyframes plain-boundary-expand-contract {
+  0% {
+    transform: scale(0.92);
+  }
+
+  55% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .plain-boundary-reveal {
   position: absolute;
   inset: 0;
+  z-index: 2;
   pointer-events: none;
 }
 
 .plain-model-point {
   position: absolute;
-  top: 334px;
-  left: 442px;
+  top: 386.5px;
+  left: 494.5px;
   z-index: 4;
-  width: 140px;
+  width: 35px;
   height: auto;
+  animation: operating-point-pulse 2.8s ease-in-out infinite;
+  transform-origin: center;
 }
 
-.plain-model-point-label {
-  position: absolute;
-  top: 395px;
-  left: 405px;
-  z-index: 4;
-  width: 210px;
-  margin: 0;
-  font-family: "Comic Neue", cursive;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 1.05;
-}
+@keyframes operating-point-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
 
-.plain-model-point-label small {
-  font-size: 19px;
-  font-weight: 400;
+  50% {
+    transform: scale(1.055);
+  }
 }
 
 .plain-boundary {
   position: absolute;
   z-index: 5;
-  display: flex;
-  align-items: center;
-  gap: 10px;
   width: 270px;
   font-family: "Comic Neue", cursive;
   font-size: 29px;
@@ -386,15 +368,15 @@ a {
   line-height: 1.05;
 }
 
-.plain-boundary > span {
-  flex: 0 0 auto;
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
-  font-size: 48px;
-}
-
 .plain-boundary p {
   margin: 0;
   text-align: left;
+}
+
+.plain-boundary-name {
+  display: block;
+  font-size: 22px;
+  line-height: 1.1;
 }
 
 .plain-boundary-performance {
@@ -414,27 +396,6 @@ a {
   width: 300px;
 }
 
-.plain-pressure {
-  position: absolute;
-  z-index: 5;
-  margin: 0;
-  font-family: "Comic Neue", cursive;
-  font-size: 27px;
-  font-weight: 700;
-}
-
-.pressure-efficiency {
-  top: 246px;
-  right: 238px;
-  transform: rotate(-9deg);
-}
-
-.pressure-effort {
-  bottom: 260px;
-  right: 228px;
-  transform: rotate(-10deg);
-}
-
 .plain-model-margin img {
   position: absolute;
   top: 131px;
@@ -442,35 +403,6 @@ a {
   z-index: 2;
   width: 385px;
   height: auto;
-}
-
-.plain-model-margin p {
-  position: absolute;
-  top: 271px;
-  left: 152px;
-  z-index: 5;
-  width: 220px;
-  margin: 0;
-  color: #b3261e;
-  font-family: "Comic Neue", cursive;
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 1.05;
-  text-align: left;
-  transform: rotate(-7deg);
-}
-
-.plain-model-summary {
-  position: absolute;
-  right: 120px;
-  bottom: 12px;
-  left: 120px;
-  z-index: 5;
-  margin: 0;
-  font-family: "Comic Neue", cursive;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.18;
 }
 
 /* “The Model”: a faithful, locally hosted adaptation of the SREcon24 slide. */
@@ -914,6 +846,64 @@ a {
   text-align: left;
 }
 
+.before-continue-slide {
+  overflow: hidden;
+}
+
+.before-continue-title {
+  position: absolute;
+  top: 22px;
+  right: 60px;
+  left: 60px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+.before-continue-row {
+  position: absolute;
+  top: 145px;
+  left: 110px;
+  display: grid;
+  grid-template-columns: 270px 80px 1fr;
+  align-items: center;
+  width: 800px;
+  height: 230px;
+}
+
+.before-continue-row img {
+  display: block;
+  height: auto;
+  margin: auto;
+}
+
+.before-continue-ai {
+  width: 216px;
+}
+
+.before-continue-equals {
+  width: 50px;
+}
+
+.before-continue-row p {
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 40px;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.before-continue-complexity {
+  top: 405px;
+}
+
+.before-continue-complex {
+  width: 250px;
+}
+
 .social-systems-slide img {
   position: absolute;
   height: auto;
@@ -934,20 +924,143 @@ a {
 }
 
 .social-separated {
+  position: absolute;
   top: 90px;
   left: 50px;
-  width: 360px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 450px;
+  height: 280px;
+}
+
+.social-magnifier {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  border: 8px solid #000;
+  border-radius: 50%;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 67px;
+  line-height: 1;
+}
+
+.social-magnifier::after {
+  position: absolute;
+  bottom: -51px;
+  width: 16px;
+  height: 68px;
+  border-radius: 8px;
+  background: #000;
+  content: "";
+}
+
+.social-magnifier-people {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  padding: 8px;
+  font-size: 55px;
+}
+
+.social-magnifier-people::after {
+  left: -15px;
+  transform: rotate(47deg);
+}
+
+.social-complex-inspection {
+  position: relative;
+  display: block;
+  width: 250px;
+  height: 250px;
+  flex: 0 0 250px;
+}
+
+.social-complex-image {
+  top: -24px;
+  left: 0;
+  width: 250px;
+}
+
+.social-magnifier-complex {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  width: 120px;
+  height: 120px;
+  border-width: 7px;
+}
+
+.social-magnifier-complex::after {
+  right: -15px;
+  transform: rotate(-47deg);
 }
 
 .social-together {
-  top: 90px;
-  right: 50px;
-  width: 265px;
+  position: absolute;
+  top: 63px;
+  right: 70px;
+  width: 250px;
+  height: 240px;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  line-height: 1;
+}
+
+.social-together::before {
+  position: absolute;
+  top: 75px;
+  left: -147px;
+  color: #333;
+  content: "→";
+  font-family: "Maven Pro", sans-serif;
+  font-size: 80px;
+  line-height: 1;
+}
+
+.social-systems-slide .social-together-complex {
+  top: 0;
+  left: 0;
+  width: 250px;
+}
+
+.social-system-person {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 2px solid #111;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 36px;
+}
+
+.social-system-person-one {
+  top: 116px;
+  left: 18px;
+}
+
+.social-system-person-two {
+  top: 126px;
+  left: 87px;
+}
+
+.social-system-person-three {
+  top: 165px;
+  left: 160px;
+}
+
+.social-system-person-four {
+  top: 194px;
+  left: 48px;
 }
 
 .social-interaction-ring {
-  top: 148px;
-  right: 172px;
+  top: 210px;
+  right: 177px;
   width: 78px;
 }
 

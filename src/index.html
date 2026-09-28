@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#cfd8dc" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=6" />
+    <link rel="stylesheet" href="/styles.css?v=17" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
@@ -51,15 +51,41 @@
 
       <section id="takeaways" class="step takeaways-slide" data-y="33000" data-scale="25">
         <h2 class="takeaways-title">Takeaways</h2>
-        <p class="takeaways-statement">Models: not always accurate, but they are useful....</p>
-        <p class="takeaways-adaptation">Understand conditions that lead to adversity.<br />Stay resilient and adaptive to change.</p>
-        <p class="takeaways-risk-perspective">
-          Fundamentally, this model is a risk perspective.<br />A system-wide lens built from localized analysis, actions, and perspectives.
-        </p>
-        <p class="takeaways-system-note">You are all part of complex socio-technical systems</p>
-        <p class="takeaways-consequence-note">
-          Attempts to change a complex system either in whole,<br />or in part, will yield unintended consequences
-        </p>
+        <table class="takeaways-table" aria-label="Key takeaways">
+          <tbody>
+            <tr>
+              <td class="takeaways-icon">
+                <svg class="takeaways-flowchart" viewBox="0 0 96 88" role="img" aria-label="Flowchart model">
+                  <path d="M48 28v17M22 45h52M22 45v15M74 45v15" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+                  <rect x="28" y="4" width="40" height="24" rx="5" fill="#e8f4f7" stroke="currentColor" stroke-width="4" />
+                  <rect x="3" y="60" width="38" height="24" rx="5" fill="#e8f4f7" stroke="currentColor" stroke-width="4" />
+                  <rect x="55" y="60" width="38" height="24" rx="5" fill="#e8f4f7" stroke="currentColor" stroke-width="4" />
+                </svg>
+              </td>
+              <td>Models: not always accurate, but they are useful....</td>
+            </tr>
+            <tr>
+              <td class="takeaways-icon"><span role="img" aria-label="Growing plant">🌱</span></td>
+              <td>Understand conditions that lead to adversity.<br />Stay resilient and adaptive to change.</td>
+            </tr>
+            <tr>
+              <td class="takeaways-icon"><span role="img" aria-label="Warning">⚠️</span></td>
+              <td>Fundamentally, this model is a risk perspective.<br />A system-wide lens built from localized analysis, actions, and perspectives.</td>
+            </tr>
+            <tr>
+              <td class="takeaways-icon">
+                <span class="takeaways-people" role="img" aria-label="A group of people">
+                  <span>👩🏿</span><span>👨🏼</span><span>🧑🏽</span><span>🧕🏻</span>
+                </span>
+              </td>
+              <td>You are all part of complex socio-technical systems</td>
+            </tr>
+            <tr>
+              <td class="takeaways-icon"><span role="img" aria-label="Flame">🔥</span></td>
+              <td>Attempts to change a complex system either in whole,<br />or in part, will yield unintended consequences</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <section
@@ -86,7 +112,46 @@
         </div>
       </section>
 
-      <section id="the-model" class="step model-slide" data-y="83000" data-scale="25">
+      <section
+        id="before-we-continue"
+        class="step before-continue-slide"
+        data-y="83000"
+        data-scale="25"
+      >
+        <h1 class="before-continue-title">One more thing...</h1>
+
+        <div class="before-continue-row substep">
+          <img
+            class="before-continue-ai"
+            src="/images/srecon26/logo-ai-mashup.png"
+            alt="AI, LLM, and agent symbols"
+          />
+          <img class="before-continue-equals" src="/images/srecon26/symbol-equals.png" alt="equals" />
+          <p>Anything AI!<br />LLM, Agent etc...</p>
+        </div>
+
+        <div class="before-continue-row before-continue-complexity substep">
+          <img
+            class="before-continue-complex"
+            src="/images/srecon26/complex-sign-transparent.png"
+            alt="A complex system sign"
+          />
+          <img class="before-continue-equals" src="/images/srecon26/symbol-equals.png" alt="equals" />
+          <p>any complex distributed<br />software system</p>
+        </div>
+
+        <div class="notes">
+          Set the terminology for this talk: when discussing AI, include LLMs and agents; treat them as part of a
+          complex distributed software system.
+
+          Reveal 1: Anything AI includes LLMs, agents, and related tools.
+          Reveal 2: Those tools are part of a complex distributed software system.
+
+          Source slide and artwork: https://srecon26.hatchman76.com/#/before-we-continue
+        </div>
+      </section>
+
+      <section id="the-model" class="step model-slide" data-y="108000" data-scale="25">
         <img
           class="model-portrait"
           src="/images/srecon24/Rasmussen_portrait.png"
@@ -155,7 +220,7 @@
         </div>
       </section>
 
-      <section id="paper-themes" class="step paper-themes-slide" data-y="108000" data-scale="25">
+      <section id="paper-themes" class="step paper-themes-slide" data-y="133000" data-scale="25">
         <h2 class="paper-themes-title">The research behind the model</h2>
         <p class="paper-themes-lede">
           The 31-page paper connects decades of studies across engineering and the human sciences.
@@ -236,22 +301,33 @@
       <section
         id="social-and-systems"
         class="step social-systems-slide"
-        data-y="133000"
+        data-y="158000"
         data-scale="25"
       >
         <h2 class="social-systems-title">Where does control live?</h2>
 
-        <img
+        <div
           class="social-separated"
-          src="/images/srecon24/man-woman-robot-separated-magnifying.png"
-          alt="People and technology examined separately through magnifying glasses"
-        />
+          role="img"
+          aria-label="A diverse group of people and a complex system examined separately through magnifying glasses"
+        >
+          <span class="social-magnifier social-magnifier-people" aria-hidden="true">
+            <span>👩🏿</span><span>👨🏼</span>
+            <span>🧑🏽</span><span>🧕🏻</span>
+          </span>
+          <span class="social-complex-inspection" aria-hidden="true">
+            <img class="social-complex-image" src="/images/srecon26/complex-sign-transparent.png" alt="" />
+            <span class="social-magnifier social-magnifier-complex"></span>
+          </span>
+        </div>
 
-        <img
-          class="substep social-together"
-          src="/images/srecon24/robot-human-together.png"
-          alt="A person and robot holding hands"
-        />
+        <div class="substep social-together" role="img" aria-label="People working at different points in a complex system">
+          <img class="social-together-complex" src="/images/srecon26/complex-sign-transparent.png" alt="" />
+          <span class="social-system-person social-system-person-one" aria-hidden="true">👩🏿</span>
+          <span class="social-system-person social-system-person-two" aria-hidden="true">👨🏼</span>
+          <span class="social-system-person social-system-person-three" aria-hidden="true">🧑🏽</span>
+          <span class="social-system-person social-system-person-four" aria-hidden="true">🧕🏻</span>
+        </div>
 
         <img
           class="substep social-interaction-ring"
@@ -307,10 +383,12 @@
         </div>
 
         <div class="notes">
-          Start with people and technology examined separately.
+          The two magnifying glasses represent the old habit of studying people and technology as separate problems.
+          The second lens inspects only one part of the complex system. The arrow and next reveal show people working
+          within that system: the interaction is what makes it socio-technical.
 
-          Reveal 1: bring the person and technology together.
-          Reveal 2: highlight their interaction.
+          Reveal 1: show people at different points in the complex system, connected by its existing network.
+          Reveal 2: highlight one point of human-system interaction.
           Reveal 3: introduce Rasmussen's social control hierarchy.
           Reveal 4: name its two nested scales. Society governs and regulates organizations; organizations distribute
           authority through the company, management, staff, and workers. The company sits at the seam: controlled by
@@ -320,17 +398,30 @@
           than owned by any single actor, and information must travel upward while decisions and constraints travel
           downward. Each layer adapts on a different timescale.
 
-          Source slide and artwork: https://srecon24.hatchman76.com/#/social-and-systems
+          Source slide and hierarchy artwork: https://srecon24.hatchman76.com/#/social-and-systems
+          Complex-system artwork: https://srecon26.hatchman76.com/#/before-we-continue
         </div>
       </section>
 
       <section
-        id="model-in-plain-english"
+        id="the-fish-diagram"
         class="step plain-model-slide"
-        data-y="158000"
+        data-y="183000"
         data-scale="25"
       >
-        <h2 class="plain-model-title">Three ways to lose</h2>
+        <img
+          class="plain-model-point"
+          src="/images/operating-point.svg"
+          alt="Red circle marking the operating point"
+        />
+
+        <div class="substep plain-model-margin">
+          <img
+            class="plain-model-error-margin"
+            src="/images/srecon24/Rasmussen_error_margin.png"
+            alt="A dotted line inside the actual boundary"
+          />
+        </div>
 
         <div class="substep plain-boundary-reveal">
           <img
@@ -339,8 +430,7 @@
             alt=""
           />
           <div class="plain-boundary plain-boundary-performance">
-            <span aria-hidden="true">💥</span>
-            <p>The system stops working</p>
+            <p><strong class="plain-boundary-name">Boundary of functionally acceptable performance</strong></p>
           </div>
         </div>
 
@@ -351,8 +441,7 @@
             alt=""
           />
           <div class="plain-boundary plain-boundary-economic">
-            <span aria-hidden="true">💸</span>
-            <p>Money runs out</p>
+            <p><strong class="plain-boundary-name">Boundary to economic failure</strong></p>
           </div>
         </div>
 
@@ -363,35 +452,9 @@
             alt=""
           />
           <div class="plain-boundary plain-boundary-workload">
-            <span aria-hidden="true">😫</span>
-            <p>People cannot keep up</p>
+            <p><strong class="plain-boundary-name">Boundary to unacceptable workload</strong></p>
           </div>
         </div>
-
-        <img
-          class="plain-model-point"
-          src="/images/qcon-logo.svg"
-          alt="QCon logo representing the current operating point"
-        />
-        <p class="plain-model-point-label">
-          where we are now<br />
-          <small>the operating point</small>
-        </p>
-
-        <div class="substep plain-model-pressures">
-          <p class="plain-pressure pressure-efficiency">“Cheaper and faster”&nbsp; ↙</p>
-          <p class="plain-pressure pressure-effort">↖ &nbsp;“Make it easier”</p>
-        </div>
-
-        <div class="substep plain-model-margin">
-          <img src="/images/srecon24/Rasmussen_error_margin.png" alt="A dotted line inside the actual boundary" />
-          <p>where we think the edge is</p>
-        </div>
-
-        <p class="substep plain-model-summary">
-          The dot moves. The edges can move too.<br />
-          There is no magic center. Nothing pushes us back.
-        </p>
 
         <div class="notes">
           Plain-language script:
@@ -420,7 +483,7 @@
       <section
         id="ai-behaviour"
         class="step ai-behaviour-slide"
-        data-y="183000"
+        data-y="208000"
         data-scale="25"
       >
         <h2 class="ai-behaviour-title">Human behaviour with LLM tools</h2>
@@ -507,7 +570,7 @@
       <section
         id="ai-control-structure"
         class="step ai-control-slide"
-        data-y="208000"
+        data-y="233000"
         data-scale="25"
       >
         <h2 class="ai-control-title">AI enters the control structure</h2>
