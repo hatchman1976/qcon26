@@ -10,13 +10,17 @@ The talk adapts Rasmussen's Dynamic Safety Model and the 2024 SREcon presentatio
 
 1. Title
 2. Takeaways
-3. Socio-technical systems definition
-4. Rasmussen source slide
-5. The research behind the model
-6. Social control is multi-layered across society and within organizations
-7. Rasmussen in plain English
-8. Human behaviour with LLM tools
-9. AI enters the feedback and action channels of the control structure
+3. One more thing
+4. Socio-technical systems definition
+5. Rasmussen source slide
+6. The research behind the model
+7. Social control is multi-layered across society and within organizations
+8. Putting it Together
+9. The Fish Diagram
+10. Diagram Legend
+11. Human behaviour with LLM tools
+12. AI enters the feedback and action channels of the control structure
+13. AI and the economic boundary: financial margin, viability and organizational responses
 
 The matching one-slide-per-file notes are listed in [`slides/README.md`](slides/README.md).
 

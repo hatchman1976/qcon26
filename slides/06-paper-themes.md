@@ -1,4 +1,4 @@
-# Slide 5 — The Research Behind the Model
+# Slide 6 — The Research Behind the Model
 
 ## Slide copy
 
@@ -12,25 +12,27 @@ Starting state:
 
 Reveal 1:
 
-- **Risk analysis:** Different hazards require different strategies
-- **Defence in depth:** Redundant layers can erode without visible failure
+- ⚠️ **Risk analysis:** Different hazards require different strategies
 
 Reveal 2:
 
-- **Human performance under pressure:** Studies move from error rates to work in context
-- **Feedback control:** Controllers need current state, authority, and competence
+- 🛡️ **Defence in depth:** Redundant layers can erode without visible failure
 
 Reveal 3:
 
-- **Naturalistic decisions:** Local adaptations interact across the system
+- 💪 **Human performance under pressure:** Studies move from error rates to work in context
 
 Reveal 4:
 
-**Figure 3 is one of eight figures in a much wider argument.**
+- 🔄 **Feedback control:** Controllers need current state, authority, and competence
+
+Reveal 5:
+
+- 🧠 **Naturalistic decisions:** Local adaptations interact across the system
 
 ## Speaker notes
 
-The three-boundary diagram is the part most people remember, but this is a synthesis paper rather than a single empirical validation of Figure 3.
+This is a synthesis paper rather than a single empirical validation of the model.
 
 Rasmussen distinguishes empirical, evolutionary, and analytical risk strategies. Defence in depth matters, but redundant protections can degrade quietly because a local violation may have no immediate visible effect.
 
@@ -38,7 +40,7 @@ The paper reviews human reliability, operator modelling, field evidence, and org
 
 Decisions are embedded in continuous work. Locally sensible adaptations can interact across controllers and create system-level risk.
 
-Figure 3 is one of eight figures in a 31-page, cross-disciplinary argument. The next slide makes the paper's system-wide control hierarchy concrete; the following slide simplifies the geometry without discarding these mechanisms.
+The next slide makes the paper's system-wide control hierarchy concrete; the following slide simplifies the geometry without discarding these mechanisms.
 
 ## Accuracy guardrails
 

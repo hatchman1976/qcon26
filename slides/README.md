@@ -6,13 +6,17 @@ The numbered Markdown files in this directory mirror the rendered Impress deck i
 
 1. [Title](01-title.md) — `#/title`
 2. [Takeaways](02-takeaways.md) — `#/takeaways`
-3. [Socio-technical systems definition](03-social-and-systems-wiki.md) — `#/social-and-systems-wiki`
-4. [Rasmussen source slide](04-model.md) — `#/the-model`
-5. [The research behind the model](05-paper-themes.md) — `#/paper-themes`
-6. [Social control is multi-layered](06-social-and-systems.md) — `#/social-and-systems`
-7. [Rasmussen in plain English](07-model-in-plain-english.md) — `#/model-in-plain-english`
-8. [Human behaviour with LLM tools](08-ai-behaviour.md) — `#/ai-behaviour`
-9. [AI enters the control structure](09-ai-control-structure.md) — `#/ai-control-structure`
+3. [One more thing](03-before-we-continue.md) — `#/before-we-continue`
+4. [Socio-technical systems definition](04-social-and-systems-wiki.md) — `#/social-and-systems-wiki`
+5. [Rasmussen source slide](05-model.md) — `#/the-model`
+6. [The research behind the model](06-paper-themes.md) — `#/paper-themes`
+7. [Social control is multi-layered](07-social-and-systems.md) — `#/social-and-systems`
+8. [Putting it Together](07a-complex-system-and-boundaries.md) — `#/complex-system-and-boundaries`
+9. [The Fish Diagram](08-fish-diagram.md) — `#/the-fish-diagram`
+10. [Diagram Legend](09-diagram-legend.md) — `#/diagram-legend`
+11. [Human behaviour with LLM tools](10-ai-behaviour.md) — `#/ai-behaviour`
+12. [AI enters the control structure](11-ai-control-structure.md) — `#/ai-control-structure`
+13. [AI and the economic boundary](12-ai-economic-boundary.md) — `#/ai-economic-boundary`
 
 ## Archived working ideas
 

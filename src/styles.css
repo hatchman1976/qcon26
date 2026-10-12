@@ -61,13 +61,23 @@ body {
 body.impress-on-title,
 body.impress-on-takeaways,
 body.impress-on-paper-themes,
+body.impress-on-diagram-legend,
+body.impress-on-fish-diagram-overlay,
+body.impress-on-economic-boundary,
+body.impress-on-economic-boundary-actions,
+body.impress-on-workload-boundary,
+body.impress-on-workload-boundary-actions,
+body.impress-on-performance-boundary,
+body.impress-on-error-margin,
 body.impress-on-the-fish-diagram,
 body.impress-on-ai-behaviour,
 body.impress-on-the-model,
 body.impress-on-social-and-systems-wiki,
 body.impress-on-before-we-continue,
 body.impress-on-social-and-systems,
-body.impress-on-ai-control-structure {
+body.impress-on-complex-system-and-boundaries,
+body.impress-on-ai-control-structure,
+body.impress-on-ai-economic-boundary {
   background-color: var(--surface-introduction);
 }
 
@@ -106,11 +116,6 @@ body.impress-on-ai-control-structure {
 }
 
 .impress-enabled .step {
-  opacity: 0.3;
-  transition: opacity 1s;
-}
-
-.impress-enabled .step.active {
   opacity: 1;
 }
 
@@ -295,9 +300,168 @@ a {
   line-height: 1;
 }
 
+/* A quick key to the symbols used in the Fish diagram. */
+.diagram-legend-slide {
+  overflow: hidden;
+}
+
+.diagram-legend-title {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  left: 60px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.diagram-legend-grid {
+  position: absolute;
+  top: 130px;
+  left: 70px;
+  display: grid;
+  width: 880px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 20px;
+  font-family: "Comic Neue", cursive;
+}
+
+.diagram-legend-item {
+  display: flex;
+  min-height: 125px;
+  align-items: center;
+  gap: 18px;
+}
+
+.diagram-legend-symbol {
+  position: relative;
+  display: grid;
+  width: 84px;
+  height: 76px;
+  flex: 0 0 84px;
+  place-items: center;
+  font-size: 47px;
+  line-height: 1;
+}
+
+.diagram-legend-margin {
+  padding-bottom: 12px;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.diagram-legend-symbol img {
+  width: 52px;
+  height: 52px;
+}
+
+.diagram-legend-surface::after {
+  width: 70px;
+  height: 51px;
+  border: 2px solid #76ad7b;
+  border-radius: 50%;
+  background: #b6e2b6;
+  content: "";
+}
+
+.diagram-legend-item p {
+  margin: 0;
+  text-align: left;
+}
+
+.diagram-legend-item strong,
+.diagram-legend-item p span {
+  display: block;
+}
+
+.diagram-legend-item strong {
+  font-size: 29px;
+  line-height: 1.05;
+}
+
+.diagram-legend-item p span {
+  margin-top: 8px;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.diagram-legend-actions {
+  grid-column: 1 / -1;
+  min-height: 100px;
+}
+
+.diagram-legend-actions-symbol {
+  display: block;
+}
+
+.diagram-legend-actions-symbol img {
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  width: 60px;
+  height: auto;
+}
+
+.diagram-legend-actions-symbol > span {
+  position: absolute;
+  top: 0;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.diagram-legend-action-hand {
+  left: 4px;
+}
+
+.diagram-legend-action-chart {
+  right: 4px;
+}
+
 /* A child-simple translation of Rasmussen's original diagram. */
 .plain-model-slide {
   overflow: hidden;
+}
+
+.plain-playing-surface {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.plain-playing-surface-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  fill: #b6e2b6;
+  fill-opacity: 0.82;
+}
+
+.plain-playing-surface-label {
+  position: absolute;
+  top: 442px;
+  left: 372px;
+  z-index: 2;
+  width: 285px;
+  color: #1d5d31;
+  font-family: "Comic Neue", cursive;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#impress #the-fish-diagram:has(.plain-roaming-point-position.is-moving) .plain-playing-surface-shade,
+#impress #the-fish-diagram:has(.plain-roaming-point-position.is-moving) .plain-playing-surface-label {
+  opacity: 0;
+  transition: opacity 750ms ease;
 }
 
 .plain-model-outline {
@@ -336,6 +500,74 @@ a {
   pointer-events: none;
 }
 
+.plain-barrier-motion {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.plain-economic-motion {
+  --barrier-inward-x: -105px;
+  --barrier-inward-y: 70px;
+  --barrier-outward-x: 85px;
+  --barrier-outward-y: -55px;
+}
+
+.plain-workload-motion {
+  --barrier-inward-x: -90px;
+  --barrier-inward-y: -60px;
+  --barrier-outward-x: 75px;
+  --barrier-outward-y: 50px;
+}
+
+.plain-barrier-moving {
+  opacity: 0;
+}
+
+#impress #the-fish-diagram .plain-barrier-motion.substep-visible {
+  transition: opacity 120ms linear;
+}
+
+#impress #the-fish-diagram:has(.plain-economic-motion.substep-visible) .plain-economic-reveal .plain-model-outline,
+#impress #the-fish-diagram:has(.plain-workload-motion.substep-visible) .plain-workload-reveal .plain-model-outline {
+  opacity: 0.24;
+  transition: opacity 180ms linear;
+}
+
+.plain-barrier-motion.substep-visible .plain-barrier-moving {
+  animation: plain-barrier-shift 4.8s cubic-bezier(0.3, 0, 0.7, 1) both;
+}
+
+@keyframes plain-barrier-shift {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  38% {
+    opacity: 1;
+    transform: translate(var(--barrier-inward-x), var(--barrier-inward-y));
+  }
+
+  73% {
+    opacity: 1;
+    transform: translate(var(--barrier-outward-x), var(--barrier-outward-y));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.plain-point-reveal {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
 .plain-model-point {
   position: absolute;
   top: 386.5px;
@@ -343,8 +575,61 @@ a {
   z-index: 4;
   width: 35px;
   height: auto;
-  animation: operating-point-pulse 2.8s ease-in-out infinite;
+  animation: operating-point-pulse 1.8s ease-in-out infinite;
   transform-origin: center;
+}
+
+.plain-point-label {
+  position: absolute;
+  top: 340px;
+  left: 422px;
+  width: 180px;
+  font-family: "Comic Neue", cursive;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.plain-roaming-point-reveal {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.plain-roaming-point-position {
+  position: absolute;
+  top: 386.5px;
+  left: 494.5px;
+  display: block;
+  width: 35px;
+  height: 35px;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.plain-roaming-point-position.is-moving {
+  transition: transform 6000ms ease-in-out;
+}
+
+body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
+  visibility: hidden;
+}
+
+.plain-roaming-point {
+  display: block;
+  width: 100%;
+  height: 100%;
+  animation: operating-point-pulse 1.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+#impress #the-fish-diagram:has(.plain-roaming-point-reveal.substep-visible) .plain-point-reveal .plain-model-point {
+  opacity: 0.45;
+  filter: grayscale(0.35);
+  animation: none;
+  transform: scale(1);
+  transition: opacity 650ms ease, filter 650ms ease;
 }
 
 @keyframes operating-point-pulse {
@@ -354,7 +639,7 @@ a {
   }
 
   50% {
-    transform: scale(1.055);
+    transform: scale(1.18);
   }
 }
 
@@ -379,13 +664,30 @@ a {
   line-height: 1.1;
 }
 
+.plain-boundary-emoji {
+  display: block;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.plain-boundary-performance .plain-boundary-emoji {
+  margin-top: 10px;
+}
+
+.plain-boundary-economic .plain-boundary-emoji,
+.plain-boundary-workload .plain-boundary-emoji {
+  margin-bottom: 5px;
+}
+
 .plain-boundary-performance {
   top: 142px;
   left: 34px;
 }
 
 .plain-boundary-economic {
-  top: 142px;
+  top: 95px;
   right: 28px;
   width: 238px;
 }
@@ -403,6 +705,135 @@ a {
   z-index: 2;
   width: 385px;
   height: auto;
+}
+
+.plain-margin-label {
+  position: absolute;
+  top: 270px;
+  left: 270px;
+  z-index: 3;
+  font-family: "Comic Neue", cursive;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.plain-guardian-actions {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+#impress #the-fish-diagram .plain-guardian-actions.substep-visible {
+  transition: none;
+}
+
+.plain-guardian-icon {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 35px;
+  line-height: 1;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) scale(0.4);
+  animation: plain-guardian-arrive 1350ms cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+}
+
+.plain-guardian-margin {
+  width: 42.5px;
+  max-width: 42.5px;
+  height: auto;
+  filter: drop-shadow(1px 2px 1px rgb(0 0 0 / 0.25));
+}
+
+@keyframes plain-guardian-arrive {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.plain-gradient-arrows {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.plain-gradient-arrows.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.plain-gradient-cost {
+  color: #328ab7;
+}
+
+.plain-gradient-effort {
+  color: #a569b5;
+}
+
+.plain-gradient-arrow {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.plain-gradient-arrows.is-visible .plain-gradient-arrow {
+  animation: plain-gradient-draw 1800ms ease-in-out both;
+}
+
+.plain-gradient-arrowhead,
+.plain-gradient-label {
+  opacity: 0;
+}
+
+.plain-gradient-arrows.is-visible .plain-gradient-arrowhead,
+.plain-gradient-arrows.is-visible .plain-gradient-label {
+  animation: plain-gradient-finish 350ms ease-out 1800ms both;
+}
+
+.plain-gradient-label {
+  fill: currentColor;
+  stroke: var(--surface-introduction);
+  stroke-width: 5;
+  stroke-linejoin: round;
+  paint-order: stroke;
+  font-family: "Comic Neue", cursive;
+  font-size: 24px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+@keyframes plain-gradient-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes plain-gradient-finish {
+  to {
+    opacity: 1;
+  }
 }
 
 /* “The Model”: a faithful, locally hosted adaptation of the SREcon24 slide. */
@@ -527,10 +958,10 @@ a {
 
 .paper-themes-figure {
   position: absolute;
-  top: 145px;
-  left: 58px;
-  width: 410px;
-  height: 510px;
+  top: 175px;
+  left: 100px;
+  width: 330px;
+  height: 410px;
   margin: 0;
   overflow: hidden;
   background: #fff;
@@ -561,24 +992,41 @@ a {
 
 .paper-themes-list {
   position: absolute;
-  top: 145px;
+  top: 50%;
   right: 48px;
   width: 455px;
+  transform: translateY(-50%);
 }
 
 .paper-theme {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: start;
   margin: 0 0 16px;
-  padding: 1px 0 4px 16px;
-  border-left: 6px solid #30343b;
   text-align: left;
 }
 
-.paper-theme strong,
-.paper-theme span {
+.paper-theme-emoji {
+  display: block;
+  width: 42px;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 34px;
+  line-height: 1;
+  text-align: center;
+}
+
+.paper-theme-copy {
+  margin: 0;
+  text-align: left;
+}
+
+.paper-theme-copy strong,
+.paper-theme-copy span {
   display: block;
 }
 
-.paper-theme strong {
+.paper-theme-copy strong {
   font-family: "Maven Pro", sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -586,41 +1034,12 @@ a {
   letter-spacing: -0.5px;
 }
 
-.paper-theme span {
+.paper-theme-copy span {
   margin-top: 5px;
   font-family: "Comic Neue", cursive;
   font-size: 19px;
   line-height: 1.05;
   letter-spacing: 0;
-}
-
-.paper-theme-risk,
-.paper-theme-control {
-  border-color: #225ea8;
-}
-
-.paper-theme-defence,
-.paper-theme-decisions {
-  border-color: #d1495b;
-}
-
-.paper-theme-performance {
-  border-color: #6b4f2a;
-}
-
-.paper-themes-summary {
-  position: absolute;
-  right: 48px;
-  bottom: 20px;
-  left: 500px;
-  margin: 0;
-  color: #8c1d18;
-  font-family: "Comic Neue", cursive;
-  font-size: 23px;
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.3px;
-  text-align: left;
 }
 
 /* Human adaptation evidence and the questions introduced by LLM-mediated work. */
@@ -823,7 +1242,8 @@ a {
 
 /* SREcon24 socio-technical-system definition and visual explanation. */
 .social-wiki-slide,
-.social-systems-slide {
+.social-systems-slide,
+.complex-system-slide {
   overflow: hidden;
 }
 
@@ -837,13 +1257,117 @@ a {
 
 .social-wiki-definition {
   position: absolute;
-  top: 300px;
+  top: 220px;
   left: 10px;
   width: 1000px;
   height: auto;
   font-family: "Comic Neue", cursive;
-  font-size: 40px;
+  font-size: 30px;
   text-align: left;
+}
+
+.social-wiki-visual img {
+  position: absolute;
+  height: auto;
+}
+
+.social-wiki-visual .social-separated {
+  top: 380px;
+  left: 50px;
+}
+
+.social-wiki-visual .social-together {
+  top: 373px;
+  right: 20px;
+  width: 300px;
+  height: 288px;
+}
+
+.social-wiki-visual .social-together-complex {
+  top: 0;
+  left: 0;
+  width: 300px;
+}
+
+.complex-system-slide .social-together.complex-system-reveal {
+  top: 42%;
+  right: auto;
+  left: 50%;
+  width: 340px;
+  height: 223px;
+  transform: translate(-50%, -50%) scale(1.5);
+  transform-origin: center;
+}
+
+.complex-ai-coping {
+  position: absolute;
+  right: 60px;
+  bottom: 80px;
+  left: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 0;
+  text-align: center;
+}
+
+.complex-system-slide .complex-ai-image {
+  position: static;
+  display: block;
+  width: 128px;
+  height: auto;
+  flex: 0 0 128px;
+  margin: 0;
+}
+
+.complex-ai-coping figcaption {
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.social-system-network {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  width: 300px;
+  height: 288px;
+  transform: translate(-50%, -50%) scale(0.52);
+  transform-origin: center;
+}
+
+.social-fish-overlay-reveal {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.social-fish-outline {
+  top: 0;
+  left: 0;
+  width: 340px;
+  filter: drop-shadow(0.5px 0 0 #111) drop-shadow(-0.5px 0 0 #111)
+    drop-shadow(0 0.5px 0 #111) drop-shadow(0 -0.5px 0 #111);
+}
+
+.social-fish-error-margin {
+  top: 2.43px;
+  left: 34px;
+  width: 187px;
+  filter: drop-shadow(0.25px 0 0 #111) drop-shadow(-0.25px 0 0 #111)
+    drop-shadow(0 0.25px 0 #111) drop-shadow(0 -0.25px 0 #111);
+}
+
+.social-fish-operating-point {
+  top: 126.5px;
+  left: 162.5px;
+  width: 17px;
 }
 
 .before-continue-slide {
@@ -904,7 +1428,8 @@ a {
   width: 250px;
 }
 
-.social-systems-slide img {
+.social-systems-slide img,
+.complex-system-slide img {
   position: absolute;
   height: auto;
 }
@@ -927,11 +1452,30 @@ a {
   position: absolute;
   top: 90px;
   left: 50px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   width: 450px;
   height: 280px;
+}
+
+.social-separated-subjects,
+.social-separated-magnifiers {
+  position: absolute;
+  inset: 0;
+}
+
+.social-people-heads {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  width: 190px;
+  height: 190px;
+  padding: 16px;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 55px;
+  line-height: 1;
 }
 
 .social-magnifier {
@@ -939,8 +1483,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 160px;
-  height: 160px;
+  width: 190px;
+  height: 190px;
   border: 8px solid #000;
   border-radius: 50%;
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
@@ -951,19 +1495,17 @@ a {
 .social-magnifier::after {
   position: absolute;
   bottom: -51px;
-  width: 16px;
-  height: 68px;
-  border-radius: 8px;
+  width: 18px;
+  height: 78px;
+  border-radius: 9px;
   background: #000;
   content: "";
 }
 
 .social-magnifier-people {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  padding: 8px;
-  font-size: 55px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .social-magnifier-people::after {
@@ -971,27 +1513,19 @@ a {
   transform: rotate(47deg);
 }
 
-.social-complex-inspection {
-  position: relative;
-  display: block;
-  width: 250px;
-  height: 250px;
-  flex: 0 0 250px;
-}
-
 .social-complex-image {
-  top: -24px;
-  left: 0;
-  width: 250px;
+  top: 30px;
+  left: 295px;
+  width: 140px;
 }
 
 .social-magnifier-complex {
   position: absolute;
-  top: 20px;
-  left: 70px;
-  width: 120px;
-  height: 120px;
-  border-width: 7px;
+  top: 0;
+  left: 270px;
+  width: 190px;
+  height: 190px;
+  border-width: 8px;
 }
 
 .social-magnifier-complex::after {
@@ -1009,21 +1543,10 @@ a {
   line-height: 1;
 }
 
-.social-together::before {
-  position: absolute;
-  top: 75px;
-  left: -147px;
-  color: #333;
-  content: "→";
-  font-family: "Maven Pro", sans-serif;
-  font-size: 80px;
-  line-height: 1;
-}
-
-.social-systems-slide .social-together-complex {
+.complex-system-slide .social-together-complex {
   top: 0;
   left: 0;
-  width: 250px;
+  width: 300px;
 }
 
 .social-system-person {
@@ -1038,41 +1561,120 @@ a {
   font-size: 36px;
 }
 
+.social-wiki-visual .social-system-person,
+.complex-system-slide .social-system-person {
+  z-index: 2;
+}
+
+.complex-system-slide .social-arrow-pulses {
+  z-index: 3;
+}
+
+.social-wiki-visual .social-system-person,
+.complex-system-slide .social-system-person {
+  width: 63.25px;
+  height: 63.25px;
+  margin: -4.125px 0 0 -4.125px;
+  border-width: 2.3px;
+  font-size: 49.45px;
+}
+
+.social-arrow-pulses {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#impress .step .social-arrow-pulses.substep-visible {
+  transition: none;
+}
+
+.social-arrow-pulse {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  border-radius: 50%;
+  background: #ffb86b;
+  box-shadow: 0 0 0 1px #fff, 0 0 8px #ffb86b;
+  animation: social-arrow-pulse 1600ms ease-in-out both;
+}
+
+@keyframes social-arrow-pulse {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  30%,
+  75% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  55% {
+    opacity: 0.8;
+    transform: scale(0.85);
+  }
+}
+
+body.impress-on-social-and-systems-wiki .social-system-person,
+body.impress-on-complex-system-and-boundaries .social-system-person {
+  animation: social-wiki-head-pulse 2.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes social-wiki-head-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
 .social-system-person-one {
-  top: 116px;
-  left: 18px;
+  top: 115px;
+  left: -5px;
 }
 
 .social-system-person-two {
-  top: 126px;
-  left: 87px;
+  top: 79px;
+  left: 147px;
 }
 
 .social-system-person-three {
-  top: 165px;
-  left: 160px;
+  top: 161px;
+  left: 243px;
 }
 
 .social-system-person-four {
-  top: 194px;
-  left: 48px;
+  top: 227px;
+  left: 103px;
 }
 
-.social-interaction-ring {
-  top: 210px;
-  right: 177px;
-  width: 78px;
+.social-hierarchy-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 650px;
+  height: 100%;
+  transform: translateX(-50%);
 }
 
 .social-hierarchy-model {
-  bottom: 100px;
+  bottom: 230px;
   left: 200px;
   width: 200px;
 }
 
 .social-hierarchy-label {
   position: absolute;
-  bottom: 22px;
+  bottom: 152px;
   left: 150px;
   width: 320px;
   height: auto;
@@ -1095,65 +1697,15 @@ a {
   letter-spacing: 0;
 }
 
-.social-hierarchy-scales {
-  position: absolute;
-  top: 315px;
-  right: 25px;
-  width: 345px;
-  font-family: "Comic Neue", cursive;
-}
-
-.social-scales-heading {
-  margin: 0 0 9px;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 1.05;
-  text-align: left;
-}
-
-.social-scale {
-  margin: 8px 0;
-  padding: 9px 12px 10px;
-  border-left: 8px solid;
-  background: rgb(255 255 255 / 58%);
-  line-height: 1.05;
-  text-align: left;
-}
-
-.social-scale strong,
-.social-scale span {
-  display: block;
-}
-
-.social-scale strong {
-  margin-bottom: 3px;
-  font-family: "Maven Pro", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-}
-
-.social-scale span {
-  font-size: 18px;
-  letter-spacing: 0;
-}
-
-.social-scale-society {
-  border-color: #d1495b;
-}
-
-.social-scale-organization {
-  border-color: #225ea8;
-}
-
 .social-hierarchy-research {
-  bottom: 110px;
+  bottom: 240px;
   left: 10px;
   width: 200px;
 }
 
 .social-hierarchy-environment {
   right: auto;
-  bottom: 110px;
+  bottom: 240px;
   left: 380px;
   width: 260px;
 }
@@ -1161,25 +1713,6 @@ a {
 .social-context-reveal img {
   position: absolute;
   height: auto;
-}
-
-.social-you-logo {
-  right: 35px;
-  bottom: 90px;
-  width: 330px;
-}
-
-.social-you-label {
-  position: absolute;
-  right: 50px;
-  bottom: 35px;
-  width: 300px;
-  height: auto;
-  margin: 0.7em;
-  font-family: "Comic Neue", cursive;
-  font-size: 30px;
-  text-align: center;
-  transform-origin: center;
 }
 
 /* AI enters the feedback and action channels of the existing control structure. */
@@ -1635,36 +2168,169 @@ a {
   font-style: normal;
 }
 
-.social-you-label:hover {
-  animation: social-you-shake 100ms ease-in-out infinite;
+
+/* Economic state, viability constraint and control remain distinct. */
+.ai-economic-slide {
+  overflow: hidden;
 }
 
-@keyframes social-you-shake {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(0);
-  }
+.ai-economic-title {
+  position: absolute;
+  top: 18px;
+  right: 45px;
+  left: 45px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -1.7px;
+  text-align: center;
+}
 
-  25% {
-    transform: translate(2px, -1px) rotate(1deg);
-  }
+.ai-economic-lede {
+  position: absolute;
+  top: 90px;
+  right: 60px;
+  left: 60px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
 
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
+.ai-economic-distinction {
+  position: absolute;
+  top: 158px;
+  right: 70px;
+  left: 70px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  letter-spacing: 0;
+}
 
-  75% {
-    transform: translate(1px, 1px) rotate(0.5deg);
-  }
+.ai-economic-distinction > div {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: baseline;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #9ba8ae;
+}
+
+.ai-economic-distinction dt {
+  color: #164f90;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.ai-economic-distinction dd {
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.15;
+}
+
+.ai-economic-responses {
+  position: absolute;
+  top: 440px;
+  right: 70px;
+  left: 70px;
+  font-family: "Comic Neue", cursive;
+  letter-spacing: 0;
+}
+
+.ai-economic-response-heading {
+  margin: 0 0 24px;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+}
+
+.ai-economic-response-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.ai-economic-response-columns h4 {
+  margin: 0 0 12px;
+  font-size: 29px;
+  line-height: 1;
+}
+
+.ai-economic-preserve h4 {
+  color: #164f90;
+}
+
+.ai-economic-transfer h4 {
+  color: #8c1d18;
+}
+
+.ai-economic-response-columns p {
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.12;
+  text-align: left;
+}
+
+.ai-economic-conclusion {
+  position: absolute;
+  right: 60px;
+  bottom: 69px;
+  left: 60px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.ai-economic-source {
+  position: absolute;
+  right: 60px;
+  bottom: 22px;
+  left: 60px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .plain-gradient-arrows.is-visible .plain-gradient-arrow {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  .plain-gradient-arrows.is-visible .plain-gradient-arrowhead,
+  .plain-gradient-arrows.is-visible .plain-gradient-label {
+    animation: none;
+    opacity: 1;
+  }
+
+  #impress #the-fish-diagram:has(.plain-roaming-point-reveal.substep-visible) .plain-playing-surface-shade,
+  #impress #the-fish-diagram:has(.plain-roaming-point-reveal.substep-visible) .plain-playing-surface-label {
+    opacity: 0;
+  }
+
   *,
   *::before,
   *::after {
     transition-duration: 0.001ms !important;
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .social-arrow-pulse {
+    animation: none;
+    opacity: 1;
   }
 }
 

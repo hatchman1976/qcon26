@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#cfd8dc" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=17" />
+    <link rel="stylesheet" href="/styles.css?v=89" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
@@ -89,33 +89,9 @@
       </section>
 
       <section
-        id="social-and-systems-wiki"
-        class="step social-wiki-slide"
-        data-y="58000"
-        data-scale="25"
-      >
-        <h1 class="social-wiki-title">Socio Technical Systems</h1>
-
-        <p class="social-wiki-definition">
-          ...in organizational development (Socio Technical Systems) is an approach to complex organizational work
-          design that recognizes the interaction between people and technology in workplaces.
-        </p>
-
-        <div class="notes">
-          Establish the working definition used in the 2024 talk: a socio-technical system cannot be understood by
-          examining either people or technology in isolation.
-
-          This names the system the talk will examine and prepares Rasmussen's control hierarchy later in the
-          sequence.
-
-          Source slide: https://srecon24.hatchman76.com/#/social-and-systems-wiki
-        </div>
-      </section>
-
-      <section
         id="before-we-continue"
         class="step before-continue-slide"
-        data-y="83000"
+        data-y="58000"
         data-scale="25"
       >
         <h1 class="before-continue-title">One more thing...</h1>
@@ -148,6 +124,66 @@
           Reveal 2: Those tools are part of a complex distributed software system.
 
           Source slide and artwork: https://srecon26.hatchman76.com/#/before-we-continue
+        </div>
+      </section>
+
+      <section
+        id="social-and-systems-wiki"
+        class="step social-wiki-slide"
+        data-y="83000"
+        data-scale="25"
+      >
+        <h1 class="social-wiki-title">Socio Technical Systems</h1>
+
+        <p class="social-wiki-definition">
+          ...in organizational development (Socio Technical Systems) is an approach to complex organizational work
+          design that recognizes the interaction between people and technology in workplaces.
+        </p>
+
+        <div
+          class="social-wiki-visual"
+          role="img"
+          aria-label="People and a complex system examined separately, then people placed over nodes in the complex system"
+        >
+          <div class="social-separated" aria-hidden="true">
+            <div class="substep social-separated-subjects">
+              <span class="social-people-heads">
+                <span>👩🏿</span><span>👨🏼</span>
+                <span>🧑🏽</span><span>🧕🏻</span>
+              </span>
+              <img class="social-complex-image" src="/images/srecon26/complex-sign-transparent.png" alt="" />
+            </div>
+            <div class="substep social-separated-magnifiers">
+              <span class="social-magnifier social-magnifier-people"></span>
+              <span class="social-magnifier social-magnifier-complex"></span>
+            </div>
+          </div>
+
+          <div class="substep social-together" aria-hidden="true">
+            <img class="social-together-complex" src="/images/srecon26/complex-sign-transparent.png" alt="" />
+            <span class="social-system-person social-system-person-one">👩🏿</span>
+            <span class="social-system-person social-system-person-two">👨🏼</span>
+            <span class="social-system-person social-system-person-three">🧑🏽</span>
+            <span class="social-system-person social-system-person-four">🧕🏻</span>
+            <div class="substep social-arrow-pulses"></div>
+          </div>
+        </div>
+
+        <div class="notes">
+          Establish the working definition used in the 2024 talk: a socio-technical system cannot be understood by
+          examining either people or technology in isolation.
+
+          The visual contrasts studying people and technology separately with seeing people on the system's nodes.
+
+          Reveal 1: show the people and complex system separately.
+          Reveal 2: frame both with magnifying glasses to emphasize separate inspection.
+          Reveal 3: show people distributed across the complex system.
+          Reveal 4: keep light orange points pulsing at random arrow locations to draw attention to interactions between nodes.
+
+          This names the system the talk will examine and prepares Rasmussen's control hierarchy later in the
+          sequence.
+
+          Source slide: https://srecon24.hatchman76.com/#/social-and-systems-wiki
         </div>
       </section>
 
@@ -235,57 +271,58 @@
         </figure>
 
         <div class="paper-themes-list">
-          <div class="substep paper-theme-pair">
-            <p class="paper-theme paper-theme-risk">
+          <div class="substep paper-theme">
+            <span class="paper-theme-emoji" aria-hidden="true">⚠️</span>
+            <p class="paper-theme-copy">
               <strong>Risk analysis</strong>
               <span>Different hazards require different strategies</span>
             </p>
-            <p class="paper-theme paper-theme-defence">
+          </div>
+          <div class="substep paper-theme">
+            <span class="paper-theme-emoji" aria-hidden="true">🛡️</span>
+            <p class="paper-theme-copy">
               <strong>Defence in depth</strong>
               <span>Redundant layers can erode without visible failure</span>
             </p>
           </div>
-
-          <div class="substep paper-theme-pair">
-            <p class="paper-theme paper-theme-performance">
+          <div class="substep paper-theme">
+            <span class="paper-theme-emoji" aria-hidden="true">💪</span>
+            <p class="paper-theme-copy">
               <strong>Human performance under pressure</strong>
               <span>Studies move from error rates to work in context</span>
             </p>
-            <p class="paper-theme paper-theme-control">
+          </div>
+          <div class="substep paper-theme">
+            <span class="paper-theme-emoji" aria-hidden="true">🔄</span>
+            <p class="paper-theme-copy">
               <strong>Feedback control</strong>
               <span>Controllers need current state, authority, and competence</span>
             </p>
           </div>
-
-          <p class="substep paper-theme paper-theme-decisions">
-            <strong>Naturalistic decisions</strong>
-            <span>Local adaptations interact across the system</span>
-          </p>
+          <div class="substep paper-theme">
+            <span class="paper-theme-emoji" aria-hidden="true">🧠</span>
+            <p class="paper-theme-copy">
+              <strong>Naturalistic decisions</strong>
+              <span>Local adaptations interact across the system</span>
+            </p>
+          </div>
         </div>
 
-        <p class="substep paper-themes-summary">
-          Figure 3 is one of eight figures in a much wider argument.
-        </p>
-
         <div class="notes">
-          The three-boundary diagram is the part most people remember, but this is a synthesis paper rather than a
-          single empirical validation of Figure 3.
+          This is a synthesis paper rather than a single empirical validation of the model.
 
-          Reveal 1: Rasmussen distinguishes empirical, evolutionary, and analytical risk strategies. Defence in depth
-          matters, but redundant protections can degrade quietly because a local violation may have no immediate
-          visible effect.
-
-          Reveal 2: The paper reviews human reliability, operator modelling, field evidence, and organisational
+          Reveal 1: Rasmussen distinguishes empirical, evolutionary, and analytical risk strategies.
+          Reveal 2: Defence in depth matters, but redundant protections can degrade quietly because a local violation
+          may have no immediate visible effect.
+          Reveal 3: The paper reviews human reliability, operator modelling, field evidence, and organisational
           research. Its direction of travel is away from isolated error counts and toward behaviour in a real work
-          context shaped by workload, time, cost, and competing goals. Risk management becomes a feedback-control
-          problem spanning the whole socio-technical hierarchy.
-
-          Reveal 3: Decisions are embedded in continuous work. Locally sensible adaptations can interact across
+          context shaped by workload, time, cost, and competing goals.
+          Reveal 4: Risk management becomes a feedback-control problem spanning the whole socio-technical hierarchy.
+          Reveal 5: Decisions are embedded in continuous work. Locally sensible adaptations can interact across
           controllers and create system-level risk.
 
-          Reveal 4: Figure 3 is one of eight figures in a 31-page, cross-disciplinary argument. The next slide makes
-          the paper's system-wide control hierarchy concrete; the following slide simplifies the geometry without
-          discarding these mechanisms.
+          The next slide makes the paper's system-wide control hierarchy concrete; the following slide simplifies the
+          geometry without discarding these mechanisms.
 
           Source: Rasmussen, Risk Management in a Dynamic Society (1997), pp. 183–213.
           Figure 8 and research convergence: p. 201.
@@ -301,126 +338,154 @@
       <section
         id="social-and-systems"
         class="step social-systems-slide"
+        data-x="0"
         data-y="158000"
         data-scale="25"
       >
         <h2 class="social-systems-title">Where does control live?</h2>
 
-        <div
-          class="social-separated"
-          role="img"
-          aria-label="A diverse group of people and a complex system examined separately through magnifying glasses"
-        >
-          <span class="social-magnifier social-magnifier-people" aria-hidden="true">
-            <span>👩🏿</span><span>👨🏼</span>
-            <span>🧑🏽</span><span>🧕🏻</span>
-          </span>
-          <span class="social-complex-inspection" aria-hidden="true">
-            <img class="social-complex-image" src="/images/srecon26/complex-sign-transparent.png" alt="" />
-            <span class="social-magnifier social-magnifier-complex"></span>
-          </span>
-        </div>
+        <div class="social-hierarchy-content">
+          <div class="substep social-hierarchy-model-reveal">
+            <img
+              class="social-hierarchy-model"
+              src="/images/srecon24/Rasmussen_Society_Model.png"
+              alt="Rasmussen structural hierarchy from government to worker"
+            />
+            <p class="social-hierarchy-label">
+              <strong>Social control hierarchy</strong>
+              <small>Rasmussen’s structural hierarchy</small>
+            </p>
+          </div>
 
-        <div class="substep social-together" role="img" aria-label="People working at different points in a complex system">
-          <img class="social-together-complex" src="/images/srecon26/complex-sign-transparent.png" alt="" />
-          <span class="social-system-person social-system-person-one" aria-hidden="true">👩🏿</span>
-          <span class="social-system-person social-system-person-two" aria-hidden="true">👨🏼</span>
-          <span class="social-system-person social-system-person-three" aria-hidden="true">🧑🏽</span>
-          <span class="social-system-person social-system-person-four" aria-hidden="true">🧕🏻</span>
-        </div>
+          <div class="substep social-context-reveal">
+            <img
+              class="social-hierarchy-research"
+              src="/images/srecon24/Rasmussen_Society_Research.png"
+              alt="Research disciplines aligned with the levels of Rasmussen's hierarchy"
+            />
 
-        <img
-          class="substep social-interaction-ring"
-          src="/images/srecon24/red-ring.png"
-          alt=""
-        />
-
-        <div class="substep social-hierarchy-model-reveal">
-          <img
-            class="social-hierarchy-model"
-            src="/images/srecon24/Rasmussen_Society_Model.png"
-            alt="Rasmussen structural hierarchy from government to worker"
-          />
-          <p class="social-hierarchy-label">
-            <strong>Social control hierarchy</strong>
-            <small>Rasmussen’s structural hierarchy</small>
-          </p>
-        </div>
-
-        <div class="substep social-hierarchy-scales" aria-label="The hierarchy operates at societal and organizational scales">
-          <p class="social-scales-heading">One hierarchy. Two nested scales.</p>
-          <p class="social-scale social-scale-society">
-            <strong>Society</strong>
-            <span>government · regulators · companies</span>
-          </p>
-          <p class="social-scale social-scale-organization">
-            <strong>Organization</strong>
-            <span>company · management · staff · workers</span>
-          </p>
-        </div>
-
-        <div class="substep social-context-reveal">
-          <img
-            class="social-hierarchy-research"
-            src="/images/srecon24/Rasmussen_Society_Research.png"
-            alt="Research disciplines aligned with the levels of Rasmussen's hierarchy"
-          />
-
-          <img
-            class="social-hierarchy-environment"
-            src="/images/srecon24/Rasmussen_Society_Environment.png"
-            alt="Environmental stressors aligned with Rasmussen's hierarchy"
-          />
-        </div>
-
-        <div class="substep social-you-reveal">
-          <img
-            class="social-you-logo"
-            src="/images/srecon24/you_logo_here.png"
-            alt="Your logo here"
-          />
-          <p class="social-you-label">This is you!</p>
+            <img
+              class="social-hierarchy-environment"
+              src="/images/srecon24/Rasmussen_Society_Environment.png"
+              alt="Environmental stressors aligned with Rasmussen's hierarchy"
+            />
+          </div>
         </div>
 
         <div class="notes">
-          The two magnifying glasses represent the old habit of studying people and technology as separate problems.
-          The second lens inspects only one part of the complex system. The arrow and next reveal show people working
-          within that system: the interaction is what makes it socio-technical.
+          The previous slide shows people working within a complex system. This slide introduces the social control
+          hierarchy surrounding that work.
 
-          Reveal 1: show people at different points in the complex system, connected by its existing network.
-          Reveal 2: highlight one point of human-system interaction.
-          Reveal 3: introduce Rasmussen's social control hierarchy.
-          Reveal 4: name its two nested scales. Society governs and regulates organizations; organizations distribute
-          authority through the company, management, staff, and workers. The company sits at the seam: controlled by
-          the society around it while acting as a controller of the work inside it.
-          Reveal 5: add the research disciplines and environmental stressors that cross those levels.
-          Reveal 6: locate the audience and their organization inside the hierarchy. Control is distributed rather
-          than owned by any single actor, and information must travel upward while decisions and constraints travel
-          downward. Each layer adapts on a different timescale.
+          Reveal 1: introduce Rasmussen's social control hierarchy.
+          Reveal 2: add the research disciplines and environmental stressors that cross its levels.
+          Control is distributed rather than owned by any single actor, and information must travel upward while
+          decisions and constraints travel downward. Each layer adapts on a different timescale.
 
           Source slide and hierarchy artwork: https://srecon24.hatchman76.com/#/social-and-systems
-          Complex-system artwork: https://srecon26.hatchman76.com/#/before-we-continue
+        </div>
+      </section>
+
+      <section
+        id="complex-system-and-boundaries"
+        class="step complex-system-slide"
+        data-x="0"
+        data-y="183000"
+        data-scale="25"
+      >
+        <h2 class="social-systems-title">Putting it Together</h2>
+
+        <div
+          class="substep social-together complex-system-reveal"
+          role="img"
+          aria-label="People placed throughout a complex system; light orange points pulse along the connections"
+        >
+          <div class="social-system-network" aria-hidden="true">
+            <img class="social-together-complex" src="/images/srecon26/complex-sign-transparent.png" alt="" />
+            <span class="social-system-person social-system-person-one">👩🏿</span>
+            <span class="social-system-person social-system-person-two">👨🏼</span>
+            <span class="social-system-person social-system-person-three">🧑🏽</span>
+            <span class="social-system-person social-system-person-four">🧕🏻</span>
+            <div class="social-arrow-pulses"></div>
+          </div>
+          <div
+            class="substep social-fish-overlay-reveal"
+            role="img"
+            aria-label="The fish-shaped performance boundary and dotted error margin surround the complex system, with a red operating point inside"
+          >
+            <img
+              class="social-fish-outline"
+              src="/images/srecon24/Rasmussen_plain_outline.png"
+              alt="Fish-shaped acceptable-performance boundary"
+            />
+            <img
+              class="social-fish-error-margin"
+              src="/images/srecon24/Rasmussen_error_margin.png"
+              alt="Dotted error margin inside the performance boundary"
+            />
+            <img
+              class="social-fish-operating-point"
+              src="/images/operating-point.svg"
+              alt="Operating point"
+            />
+          </div>
+        </div>
+
+        <figure class="substep complex-ai-coping">
+          <img
+            class="complex-ai-image"
+            src="/images/srecon26/logo-ai-mashup.png"
+            alt="AI, LLM, and agent symbols in a colored ball"
+          />
+          <figcaption>...and how it changes our coping methods</figcaption>
+        </figure>
+
+        <div class="notes">
+          The hierarchy on the previous slide surrounds the people and interactions in this complex system.
+
+          Reveal 1: show people distributed through the complex system, with light orange points pulsing along its connections.
+          Reveal 2: place the fish-shaped performance boundary and dotted error margin around the smaller network,
+          with the operating point inside it.
+          The operating point represents the state of the whole system. The following slide explains the boundaries
+          and the margin in detail.
+          Reveal 3: show the AI artwork and coping-methods caption together in the lower row.
+
+          Source model and boundary artwork: https://srecon24.hatchman76.com/#/the-model
         </div>
       </section>
 
       <section
         id="the-fish-diagram"
         class="step plain-model-slide"
-        data-y="183000"
+        data-x="0"
+        data-y="208000"
         data-scale="25"
       >
-        <img
-          class="plain-model-point"
-          src="/images/operating-point.svg"
-          alt="Red circle marking the operating point"
-        />
-
-        <div class="substep plain-model-margin">
+        <div class="substep plain-boundary-reveal plain-economic-reveal">
           <img
-            class="plain-model-error-margin"
-            src="/images/srecon24/Rasmussen_error_margin.png"
-            alt="A dotted line inside the actual boundary"
+            class="plain-model-outline"
+            src="/images/srecon24/Rasmussen_boundary_economic.png?v=2"
+            alt=""
           />
+          <div class="plain-boundary plain-boundary-economic">
+            <p>
+              <span class="plain-boundary-emoji" aria-hidden="true">💸</span>
+              <strong class="plain-boundary-name">Boundary to economic failure</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="substep plain-boundary-reveal plain-workload-reveal">
+          <img
+            class="plain-model-outline"
+            src="/images/srecon24/Rasmussen_boundary_workload.png?v=2"
+            alt=""
+          />
+          <div class="plain-boundary plain-boundary-workload">
+            <p>
+              <span class="plain-boundary-emoji" aria-hidden="true">😢</span>
+              <strong class="plain-boundary-name">Boundary to unacceptable workload</strong>
+            </p>
+          </div>
         </div>
 
         <div class="substep plain-boundary-reveal">
@@ -430,40 +495,114 @@
             alt=""
           />
           <div class="plain-boundary plain-boundary-performance">
-            <p><strong class="plain-boundary-name">Boundary of functionally acceptable performance</strong></p>
+            <p>
+              <strong class="plain-boundary-name">Boundary of functionally acceptable performance</strong>
+              <span class="plain-boundary-emoji" aria-hidden="true">💥</span>
+            </p>
           </div>
         </div>
 
-        <div class="substep plain-boundary-reveal">
+        <div class="substep plain-model-margin">
           <img
-            class="plain-model-outline"
+            class="plain-model-error-margin"
+            src="/images/srecon24/Rasmussen_error_margin.png"
+            alt="A dotted line inside the actual boundary"
+          />
+          <span class="plain-margin-label">Error Margin</span>
+        </div>
+
+        <div class="substep plain-point-reveal">
+          <span class="plain-point-label">Operating Point</span>
+          <img
+            class="plain-model-point"
+            src="/images/operating-point.svg"
+            alt="Red circle marking the operating point"
+          />
+        </div>
+
+        <div class="substep plain-playing-surface">
+          <svg class="plain-playing-surface-shade" viewBox="0 0 1024 768" aria-hidden="true">
+            <path
+              d="M 565 144 C 686 159 793 240 840 350 C 811 453 704 539 550 562 C 435 538 272 443 232 350 C 218 262 392 163 565 144 Z"
+            />
+          </svg>
+          <span class="plain-playing-surface-label">Playing Surface</span>
+        </div>
+
+        <div class="substep plain-barrier-motion plain-economic-motion">
+          <img
+            class="plain-model-outline plain-barrier-moving"
             src="/images/srecon24/Rasmussen_boundary_economic.png?v=2"
             alt=""
           />
-          <div class="plain-boundary plain-boundary-economic">
-            <p><strong class="plain-boundary-name">Boundary to economic failure</strong></p>
-          </div>
         </div>
 
-        <div class="substep plain-boundary-reveal">
+        <div class="substep plain-barrier-motion plain-workload-motion">
           <img
-            class="plain-model-outline"
+            class="plain-model-outline plain-barrier-moving"
             src="/images/srecon24/Rasmussen_boundary_workload.png?v=2"
             alt=""
           />
-          <div class="plain-boundary plain-boundary-workload">
-            <p><strong class="plain-boundary-name">Boundary to unacceptable workload</strong></p>
-          </div>
         </div>
+
+        <div class="substep plain-roaming-point-reveal" aria-label="The playing surface fades as an operating point begins moving within it">
+          <span class="plain-roaming-point-position">
+            <img class="plain-roaming-point" src="/images/operating-point.svg" alt="" />
+          </span>
+        </div>
+
+        <div
+          class="substep plain-guardian-actions"
+          role="img"
+          aria-label="Five cost-pressure charts and five effort-saving hands appear throughout the playing surface, while seven safety tanks appear near the error margin"
+        ></div>
+
+        <svg
+          class="plain-gradient-arrows"
+          viewBox="0 0 1020 780"
+          role="img"
+          aria-label="Gradients toward cost efficiency and least effort are drawn from the economic and workload boundaries into the middle of the diagram, pointing toward the acceptable-performance boundary"
+        >
+          <defs>
+            <marker id="plain-cost-arrowhead" viewBox="0 0 18 18" refX="4" refY="9" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto">
+              <path class="plain-gradient-arrowhead" d="M 0 0 L 18 9 L 0 18 L 4 9 Z" fill="#328ab7" />
+            </marker>
+            <marker id="plain-effort-arrowhead" viewBox="0 0 18 18" refX="4" refY="9" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto">
+              <path class="plain-gradient-arrowhead" d="M 0 0 L 18 9 L 0 18 L 4 9 Z" fill="#a569b5" />
+            </marker>
+          </defs>
+          <g class="plain-gradient-cost">
+            <path class="plain-gradient-arrow" pathLength="1" d="M 731 210 C 656 244 557 291 465 318" marker-end="url(#plain-cost-arrowhead)" />
+            <text class="plain-gradient-label" x="555" y="235" transform="rotate(-22 555 235)">
+              <tspan x="555">Cost</tspan>
+              <tspan x="555" dy="26">efficiency</tspan>
+            </text>
+          </g>
+          <g class="plain-gradient-effort">
+            <path class="plain-gradient-arrow" pathLength="1" d="M 712 500 C 638 475 542 448 465 430" marker-end="url(#plain-effort-arrowhead)" />
+            <text class="plain-gradient-label" x="592" y="490" transform="rotate(16 592 490)">Least effort</text>
+          </g>
+        </svg>
 
         <div class="notes">
           Plain-language script:
 
-          “This dot is not a person. It is the whole system — people, software, and rules — working right now. It keeps moving as work changes.
+          “The economic boundary marks where we can no longer pay the bills. The workload boundary marks where people cannot keep going. The performance boundary marks where the system can no longer do its job acceptably or safely. We cannot see that line exactly, so the dotted line gives us a margin for error.
 
-          I am going to draw three chalk lines around it. The first marks where the system can no longer do its job acceptably or safely. The second marks where we can no longer pay the bills. The third marks where people cannot keep going.
+          This dot is not a person. It is the whole system — people, software, and rules — working right now. The green area is the playing surface.
 
-          We cannot see the performance line exactly, so we work from where we think it is. The gap between our perceived line and the real limit is our margin for error.
+          Watch the economic boundary move inward, pass through its original position, and move outward before settling back. The gray line holds its original position while the limit shifts. The workload boundary does the same. Inward shifts reduce the playing surface; outward shifts expand it.
+
+          After both boundaries have moved, a second pulsing dot starts in the same place. As it begins to wander, the green Playing Surface fades away. The original dot remains as a dim reference. The moving dot favors the error margin to show how pressure for efficiency and less effort can draw normal adaptations toward the performance boundary.
+
+          The charts stand for pressure to reduce cost, which a downturn can intensify. The hands stand for ways people reduce effort under workload; the tanks show safety action near the error margin. Rasmussen describes actors adapting within the work-space, encountering an effort gradient while management supplies a cost gradient. The charts and hands are scattered through that space to illustrate local adaptations, not measured locations of individual decisions in Figure 3.
+
+          Once every tank, hand, and chart has finished arriving, two arrows draw themselves from their boundaries
+          into the middle of the diagram, followed by their arrowheads and labels. The economic-side
+          arrow shows the gradient toward cost efficiency; the workload-side arrow shows the gradient toward least
+          effort. Both point toward the acceptable-performance side and stop within the work-space. Figure 3 and its
+          adjacent discussion support these directions of migration. The arrow endpoints are illustrative rather
+          than measured positions or fixed targets.
 
           Everyone makes sensible choices. The business asks for cheaper and faster. People make work easier. Together, those pressures can move the dot toward the performance edge.
 
@@ -475,15 +614,150 @@
 
           [Sources]
           - https://doi.org/10.1016/S0925-7535(97)00052-0
+          - https://backend.orbit.dtu.dk/ws/files/158016663/SAFESCI.PDF (Figure 3 and its discussion of effort and cost gradients)
           - https://srecon24.hatchman76.com/#/the-model
           - https://qconsf.com/
         </div>
       </section>
 
       <section
+        id="diagram-legend"
+        class="step diagram-legend-slide"
+        data-x="31000"
+        data-y="208000"
+        data-scale="25"
+      >
+        <h2 class="diagram-legend-title">Diagram Legend</h2>
+
+        <div class="diagram-legend-grid" aria-label="Symbols used in the Fish diagram">
+          <div class="diagram-legend-item">
+            <span class="diagram-legend-symbol" aria-hidden="true">💸</span>
+            <p><strong>Economic boundary</strong><span>Where money runs out</span></p>
+          </div>
+          <div class="diagram-legend-item">
+            <span class="diagram-legend-symbol" aria-hidden="true">😢</span>
+            <p><strong>Workload boundary</strong><span>Where people cannot keep up</span></p>
+          </div>
+          <div class="diagram-legend-item">
+            <span class="diagram-legend-symbol" aria-hidden="true">💥</span>
+            <p><strong>Performance boundary</strong><span>Where the system stops working acceptably</span></p>
+          </div>
+          <div class="diagram-legend-item">
+            <span class="diagram-legend-symbol diagram-legend-margin" aria-hidden="true">···</span>
+            <p><strong>Error margin</strong><span>Buffer before the performance limit</span></p>
+          </div>
+          <div class="diagram-legend-item">
+            <span class="diagram-legend-symbol" aria-hidden="true">
+              <img src="/images/operating-point.svg" alt="" />
+            </span>
+            <p><strong>Operating point</strong><span>Where the whole system is now</span></p>
+          </div>
+          <div class="diagram-legend-item">
+            <span class="diagram-legend-symbol diagram-legend-surface" aria-hidden="true"></span>
+            <p><strong>Playing surface</strong><span>Room within the boundaries</span></p>
+          </div>
+          <div class="diagram-legend-item diagram-legend-actions">
+            <span class="diagram-legend-symbol diagram-legend-actions-symbol" aria-hidden="true">
+              <img src="/images/srecon24/cartoon-tank.png" alt="" />
+              <span class="diagram-legend-action-hand">✋</span>
+              <span class="diagram-legend-action-chart">📉</span>
+            </span>
+            <p>
+              <strong>Actions and pressures</strong>
+              <span>Local actions and external pressures can change the operating point or its constraints.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="notes">
+          Recap the symbols used in the Fish diagram. The operating point represents the current state of
+          the whole socio-technical system, not a person. The dotted line marks a perceived limit inside the actual
+          performance boundary; the gap between them is the error margin. Boundaries constrain the playing surface,
+          but they do not push the point in any direction.
+
+          The combined tank, hand and chart are this talk's shorthand for actions and pressures: safety interventions,
+          adaptations to reduce effort, and pressure toward cost efficiency. Rasmussen's Figure 3 describes local
+          adaptive variations, effort and cost gradients, and a safety countergradient. Figure 1 shows technological,
+          market and political stressors acting across the socio-technical hierarchy. Local actions and wider
+          pressures interact; an external condition is not necessarily a deliberate action. In this adaptation,
+          changes can shift the operating point or reshape the constraints around it.
+
+          Actions may arise within a team's immediate work or elsewhere in the control hierarchy. Management and
+          regulators remain part of the wider socio-technical system; environmental stressors act across it.
+
+          Source: Rasmussen, Risk Management in a Dynamic Society (1997), Figures 1 and 3 and the discussion of
+          migration toward the boundary and control of system performance.
+          https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+        </div>
+      </section>
+
+      <section
+        id="fish-diagram-overlay"
+        class="step"
+        data-x="0"
+        data-y="208000"
+        data-scale="25"
+      ></section>
+
+      <section
+        id="economic-boundary"
+        class="step"
+        data-x="8400"
+        data-y="200975"
+        data-scale="3.55392"
+        style="height: 680px"
+      ></section>
+
+      <section
+        id="economic-boundary-actions"
+        class="step"
+        data-x="8335"
+        data-y="203765"
+        data-scale="2.94458"
+        style="height: 690px"
+      ></section>
+
+      <section
+        id="workload-boundary"
+        class="step"
+        data-x="6645"
+        data-y="212575"
+        data-scale="3.037465"
+        style="height: 688px"
+      ></section>
+
+      <section
+        id="workload-boundary-actions"
+        class="step"
+        data-x="5980"
+        data-y="215595"
+        data-scale="3.046219"
+        style="height: 686px"
+      ></section>
+
+      <section
+        id="performance-boundary"
+        class="step"
+        data-x="-9407"
+        data-y="203879"
+        data-scale="3.726491"
+        style="height: 671px"
+      ></section>
+
+      <section
+        id="error-margin"
+        class="step"
+        data-x="-4213"
+        data-y="206476"
+        data-scale="4.262906"
+        style="height: 719px"
+      ></section>
+
+      <section
         id="ai-behaviour"
         class="step ai-behaviour-slide"
-        data-y="208000"
+        data-x="0"
+        data-y="233000"
         data-scale="25"
       >
         <h2 class="ai-behaviour-title">Human behaviour with LLM tools</h2>
@@ -570,7 +844,7 @@
       <section
         id="ai-control-structure"
         class="step ai-control-slide"
-        data-y="233000"
+        data-y="258000"
         data-scale="25"
       >
         <h2 class="ai-control-title">AI enters the control structure</h2>
@@ -680,9 +954,96 @@
           - https://doi.org/10.1136/qshc.2003.009530
         </div>
       </section>
+      <section
+        id="ai-economic-boundary"
+        class="step ai-economic-slide"
+        data-x="0"
+        data-y="283000"
+        data-scale="25"
+      >
+        <h2 class="ai-economic-title">AI and the economic boundary</h2>
+        <p class="ai-economic-lede">Cheaper generation can still mean higher total cost.</p>
+
+        <dl class="ai-economic-distinction">
+          <div>
+            <dt>Operating state</dt>
+            <dd>More use and commitments can consume financial margin.</dd>
+          </div>
+          <div>
+            <dt>Economic boundary</dt>
+            <dd>Sustainable cost and financial capacity determine viability.</dd>
+          </div>
+          <div>
+            <dt>Economic control</dt>
+            <dd>Forecasts, budgets and quotas guide the response.</dd>
+          </div>
+        </dl>
+
+        <div class="substep ai-economic-responses">
+          <h3 class="ai-economic-response-heading">How organizations cope</h3>
+          <div class="ai-economic-response-columns">
+            <div class="ai-economic-preserve">
+              <h4>Preserve capacity</h4>
+              <p>Limit low-value use. Route or cache where quality holds. Fund verification and recovery.</p>
+            </div>
+            <div class="ai-economic-transfer">
+              <h4>Transfer pressure</h4>
+              <p>If output stays fixed while expertise or review are cut, workload can rise and performance margin can shrink.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="substep ai-economic-conclusion">Measure total cost per completed, verified, valuable outcome.</p>
+        <p class="ai-economic-source">
+          <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF" target="_blank" rel="noreferrer">Rasmussen (1997), Fig. 3</a>.
+          AI application for this talk.
+        </p>
+
+        <div class="notes">
+          This is the preceding slide's feedback-to-action problem applied to economic control. Rasmussen provides
+          the adaptation and control framework. The AI economics and response examples here are this talk's
+          application, not findings about AI in the 1997 paper.
+
+          Figure 3 separates the economic-failure constraint from management's pressure toward efficiency.
+          Manuscript pp. 9–11 explain how local adaptations under cost and effort criteria can interact and erode
+          shared defences without immediate visible failure. Page 12 emphasizes visible constraints and coping
+          skills. Pages 15–18 connect effective control to usable objectives, current state information, practical
+          competence and resources. Page 27 requires communication of changes and their implications across levels.
+
+          Separate three mechanisms. More consumption or commitments can move the operating state toward economic
+          failure if their cost outpaces the value and financial capacity supporting them. Sustainable savings can
+          expand the viable operating space, while reduced revenue, funding or runway can contract it. Forecasts
+          provide feedback. Budgets and quotas are management setpoints or decision thresholds. A revised spending
+          target does not by itself change the actual viability constraint. Figure 3's dotted perceived boundary
+          and error margin appear only on the performance side.
+
+          Lower cost per generation can help, but total economics also depend on activity. Additional workflows,
+          longer contexts, retries or agent loops can consume the saving. Include model use, platform commitments,
+          integration, tools and data, evaluation, human verification, rework and recovery in the outcome cost.
+          This is a conditional mechanism, not a prediction that cheaper AI must increase total cost.
+
+          Organizations can reduce low-value demand, cap unproductive loops, reduce scope, or route and cache work
+          where validated quality permits. They can also use AI to improve testing and diagnosis, increasing useful
+          assurance capacity. Financial feedback must reach people with the authority, competence and resources
+          to act. Teams need to communicate effects on review load and recovery capability as well as spending.
+
+          The transfer path is conditional. Holding output constant while removing relevant expertise or review
+          can make the remaining work exceed available capacity. If teams respond by thinning assurance or
+          postponing maintenance, performance margin can shrink while the visible cost metric improves. The
+          efficiency response seeks economic viability, but its side effects can consume other margins.
+          Reassess scope, capacity and outcomes together. Preserve the ability to verify work and recover.
+
+          [Source]
+          Rasmussen, Risk management in a dynamic society: A modelling problem (1997), Figure 3;
+          printed manuscript pp. 9–12, 15–18 and 27 in the DTU PDF. These are manuscript page numbers,
+          not the publisher's journal pagination.
+          https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+          https://doi.org/10.1016/S0925-7535(97)00052-0
+        </div>
+      </section>
     </main>
 
     <script src="/vendor/impress.js/js/impress.min.js"></script>
-    <script src="/main.js"></script>
+    <script src="/main.js?v=19"></script>
   </body>
 </html>

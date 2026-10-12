@@ -1,8 +1,8 @@
-# Slide 7 — Rasmussen in Plain English
+# Slide 8 — The Fish Diagram
 
 ## Slide copy
 
-**Three ways to lose**
+**The Fish Diagram**
 
 Starting state:
 
@@ -39,6 +39,11 @@ Reveal 6:
 **The dot moves. The edges can move too.**<br>
 **There is no magic center. Nothing pushes us back.**
 
+After all tank, hand, and chart arrival animations finish, automatically draw two arrows over 1.8 seconds, followed by their arrowheads and labels:
+
+- **Cost efficiency:** from the economic boundary into the middle of the diagram, pointing toward acceptable performance.
+- **Least effort:** from the workload boundary into the middle of the diagram, pointing in the same general direction.
+
 ## Speaker notes
 
 > This dot is not a person. It is the whole system — people, software, and rules — working right now. It keeps moving as work changes.
@@ -61,9 +66,11 @@ Adult one-sentence version: one current operating state moves within economic, w
 - The boundaries constrain the possible operating space; they are not forces and do not repel the dot.
 - In Rasmussen's Figure 3, the dotted perceived or marginal boundary appears only inside the actual acceptable-performance boundary; it is not repeated on the economic or workload sides.
 - There is no ideal geometric center. The objective is enough margin and recoverability.
+- Figure 3 describes management's cost gradient and actors' effort gradient encouraging migration toward the acceptable-performance boundary. This talk's arrows stop within the work-space; their endpoints are illustrative, not measured positions or fixed targets.
 
 ## Sources
 
 - [Rasmussen — Risk management in a dynamic society (1997)](https://doi.org/10.1016/S0925-7535%2897%2900052-0)
+- [Figure 3 and the discussion of effort and cost gradients](https://backend.orbit.dtu.dk/ws/files/158016663/SAFESCI.PDF#page=10)
 - [The Model — SREcon24 presentation](https://srecon24.hatchman76.com/#/the-model)
 - [QCon San Francisco](https://qconsf.com/)
