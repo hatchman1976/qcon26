@@ -16,7 +16,6 @@ const requiredMarkers = [
   'id="paper-themes"',
   'id="diagram-legend"',
   'id="the-fish-diagram"',
-  'id="ai-behaviour"',
   'id="economic-boundary"',
   'id="economic-boundary-actions"',
   'id="workload-boundary"',
@@ -32,12 +31,6 @@ const requiredMarkers = [
   'id="before-we-continue"',
   'id="social-and-systems"',
   'id="complex-system-and-boundaries"',
-  'id="ai-control-structure"',
-  'id="ai-economic-boundary"',
-  'id="ai-intervention"',
-  'id="ai-joint-evaluation"',
-  'id="automation-recovery"',
-  'id="adaptive-control"',
   "Adapt or Drift:",
   "Resilience Engineering When AI Moves the Operating Point",
   "Andrew Hatch",
@@ -57,19 +50,19 @@ const requiredMarkers = [
   "The research behind the model",
   "Human performance under pressure",
   "Figure 8: research traditions converge",
-  "Human behaviour with LLM tools",
-  "LLM tools change the conditions in which people work.",
-  "Work with LLM tools needs fresh evidence.",
   "Socio Technical Systems",
   "interaction between people and technology in workplaces",
   "Where does control live?",
   "Social control hierarchy",
   "Rasmussen’s structural hierarchy",
   "Dotted error margin inside the performance boundary",
-  "AI enters the control structure",
   "Plausible ≠ measured",
   "Fluent ≠ intended",
   "path of least effort",
+  "Use AI to improve assurance as well as output.",
+  "Match admitted work to verification capacity.",
+  "Test people, tools and workflow together.",
+  "Measure cost per completed, verified, valuable outcome.",
   "No control system will perform better than its measuring channel.",
   'href="/styles.css?v=',
   'src="/vendor/impress.js/js/impress.min.js"',
@@ -138,8 +131,8 @@ await Promise.all(requiredFiles.map((file) => access(resolve(siteRoot, file))));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount !== 30) {
-  throw new Error(`Expected exactly thirty impress.js steps, found ${stepCount}`);
+if (stepCount !== 23) {
+  throw new Error(`Expected exactly twenty-three impress.js steps, found ${stepCount}`);
 }
 
 console.log(`Verified src/index.html with ${stepCount} presentation steps.`);

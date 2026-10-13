@@ -2,6 +2,8 @@
 
 Reviewed 12 October 2026 for Andrew Hatch’s QCon talk, *Adapt or Drift*.
 
+Historical analysis of the earlier deck. Links to retired slide files below point to the preserved checkpoint; the [current integration map](2026-10-13-slide-consolidation.md) describes where their messages now live.
+
 The strongest addition is a practical account of **the capacity to intervene**. Our existing argument connects AI-mediated change to feedback delay, verification demand, economic pressure, and conditional drift. The next step is to show what people must be able to do when that feedback reveals trouble: challenge an output, halt admission, change the goal, and recover.
 
 Suggested framing for the talk:
@@ -22,9 +24,9 @@ The rendered presentation has 13 main content slides, plus fish-diagram camera s
 
 | Existing material | What is already strong | Proposed addition |
 | --- | --- | --- |
-| [Human behaviour with LLM tools](../slides/10-ai-behaviour.md), `#/ai-behaviour` | Distinguishes established adaptation, heterogeneous task evidence, and open system questions. | Make revalidation concrete: test whether people notice bad recommendations, challenge them, and recover under the workload of the intended workflow. |
-| [AI enters the control structure](../slides/11-ai-control-structure.md), `#/ai-control-structure` | Separates evidence from plausibility and actual state from delayed perception. | Make authority operational: the responsible actor needs time, independent evidence, and permission to reject, pause, escalate, or reverse an action. |
-| [AI and the economic boundary](../slides/12-ai-economic-boundary.md), `#/ai-economic-boundary` | Already counts verification, integration, rework, and recovery, and distinguishes preservation from pressure transfer. | Track who absorbs the work and when. A saving for the author may be a cost to the reviewer, maintainer, or on-call engineer. |
+| [Human behaviour with LLM tools](https://github.com/hatchman1976/qcon26/blob/fdc69535defa47e63cd4d84154268a56a2b9cdb0/slides/10-ai-behaviour.md), `#/ai-behaviour` | Distinguishes established adaptation, heterogeneous task evidence, and open system questions. | Make revalidation concrete: test whether people notice bad recommendations, challenge them, and recover under the workload of the intended workflow. |
+| [AI enters the control structure](https://github.com/hatchman1976/qcon26/blob/fdc69535defa47e63cd4d84154268a56a2b9cdb0/slides/11-ai-control-structure.md), `#/ai-control-structure` | Separates evidence from plausibility and actual state from delayed perception. | Make authority operational: the responsible actor needs time, independent evidence, and permission to reject, pause, escalate, or reverse an action. |
+| [AI and the economic boundary](https://github.com/hatchman1976/qcon26/blob/fdc69535defa47e63cd4d84154268a56a2b9cdb0/slides/12-ai-economic-boundary.md), `#/ai-economic-boundary` | Already counts verification, integration, rework, and recovery, and distinguishes preservation from pressure transfer. | Track who absorbs the work and when. A saving for the author may be a cost to the reviewer, maintainer, or on-call engineer. |
 | [Review-load mechanism](../TALK.md#the-2026-mechanism) | Separates queue growth from the further adaptations that can compromise assurance. | Discuss verification effort per change as variable. Volume alone misses the work of reconstructing context or disproving a convincing suggestion. |
 | [Control-loop response](../slides/ideas/11-response-pattern.md) | Already connects sensing with authority and response capacity. | Promote this working idea into the rendered flow, with exercised fallback and recovery capability as concrete examples. |
 

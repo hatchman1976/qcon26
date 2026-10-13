@@ -1,38 +1,29 @@
-# Slide 8 — Putting it Together
+# The TL;DR
 
-## Slide copy
+Rendered step: `#/complex-system-and-boundaries`.
 
-Starting state:
+## Slide copy and sequence
 
-- **Putting it Together**
+**The TL;DR**
 
-Reveal 1:
+AI changes the conditions in which people adapt.
 
-- Complex system network with people's heads throughout it, enlarged by 50% together with the fish diagram and positioned higher on the step
-- Light orange dots pulse automatically along the connections with this reveal
-
-Reveal 2:
-
-- Fish-shaped performance boundary surrounds the network
-- Dotted error margin and operating point appear within the diagram
-
-Reveal 3:
-
-- AI colored ball artwork and the caption "...and how it changes our coping methods" appear together as one substep, side by side in the lower row
+Reveal sequence: people/network and connection pulses; then fish boundaries, dotted margin and operating point; then AI artwork and the adaptation caption.
 
 ## Speaker notes
 
-This step puts the social control hierarchy and the boundary diagram together. It is positioned directly below the preceding Social and Systems step, continuing the downward slide transition.
+The hierarchy on the previous slide surrounds the people and interactions in this complex system.
 
-Reveal 1 shows people distributed throughout a complex system, with light orange dots pulsing along its connections as part of the same reveal.
+Reveal 1: show people distributed through the complex system, with light orange points pulsing along its connections. Reveal 2: place the fish-shaped performance boundary and dotted error margin around the smaller network, with the operating point inside it. The operating point represents the state of the whole system. The following slide explains the boundaries and the margin in detail. Reveal 3: show the AI artwork and adaptation caption together in the lower row.
 
-Reveal 2 places the fish-shaped performance boundary, dotted error margin, and operating point over the network. The combined diagram is 50% larger and positioned higher on the step, with the complex system sitting inside the fish diagram. The operating point represents the current state of the whole system; the people remain distributed across its work.
+Source model and boundary artwork: https://srecon24.hatchman76.com/#/the-model
 
-Reveal 3 adds the AI colored ball artwork and the caption "...and how it changes our coping methods" together. They sit side by side in the lower row as one substep.
+**Adaptation with LLM tools**
 
-The next step explains the individual boundaries and the pressures that can move the operating point.
+Tools change the conditions in which people work, and repeated adaptations change workflows, expectations and later decisions. Rasmussen remains a framework for examining these effects. Measures of human performance, learning, coordination and control need revalidation in LLM-mediated work; this does not make earlier human-factors research obsolete.
+
+- [Rasmussen (1997), Figures 1 and 3; control, adaptation and information](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
 
 ## Sources
 
-- [People and the system — SREcon24 presentation](https://srecon24.hatchman76.com/#/social-and-systems)
-- [Rasmussen — Risk Management in a Dynamic Society (1997)](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF), Figure 3
+- [Rasmussen (1997), Figures 1 and 3; control, adaptation and information](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)

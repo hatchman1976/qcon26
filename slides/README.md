@@ -25,17 +25,12 @@ The numbered Markdown files in this directory mirror the rendered Impress deck i
 19. [AI has to be paid for](09i-ai-economic-pressure.md) — `#/ai-economic-pressure`
 20. [AI and least effort](09j-ai-workload-pressure.md) — `#/ai-workload-pressure`
 21. [Change can outrun our view](09k-ai-margin-pressure.md) — `#/ai-margin-pressure`
-22. [Human behaviour with LLM tools](10-ai-behaviour.md) — `#/ai-behaviour`
-23. [AI enters the control structure](11-ai-control-structure.md) — `#/ai-control-structure`
-24. [AI and the economic boundary](12-ai-economic-boundary.md) — `#/ai-economic-boundary`
-25. [AI and the workload boundary](13-ai-intervention.md) — `#/ai-intervention`
-26. [AI and acceptable performance](14-ai-joint-evaluation.md) — `#/ai-joint-evaluation`
-27. [AI and the error margin](15-automation-recovery.md) — `#/automation-recovery`
-28. [Keeping the model in view](16-adaptive-control.md) — `#/adaptive-control`
 
-The deck contains 28 content steps and two overview/overlay camera steps, for 30 Impress steps. The six original boundary close-ups now contain examples, signals and actions. A five-step AI camera journey follows the fish overview and leads into the existing human-behaviour material. The economic slide and four closing slides repeat the **Economic / Workload / Performance / Error Margin** theme rail. The active theme is emphasized until the closing model synthesis brings all four into view. Error Margin is the protected performance-side buffer, not a fourth constraint. IDs and filenames remain stable for existing bookmarks.
+The deck contains 21 content steps and two overview/overlay camera steps, for 23 Impress steps. Six boundary close-ups explain capacity changes, signals, actions, failure consequences and protection. The five-step AI camera journey follows the fish overview and ends at the error-margin scene with a final assurance reveal. Content is plain and unframed; coordinates and detailed positioning remain for a later pass.
 
-The notes distinguish Rasmussen's framework, Chapter 5's synthesis, and this talk's software application. Chapter 5 was checked against the supplied full PDF, printed pp. 77–88 (PDF pp. 85–96). The AWS recovery example is retained in the Error Margin notes, with its conventional-automation scope explicit.
+The former seven-slide sequence from Human behaviour through Keeping the model in view has been integrated into earlier steps and removed. Behaviour and control evidence now lives in the hierarchy, arrival, workload and margin notes. Whole-workflow economics lives in the economic close-ups; joint evaluation lives in acceptable performance; recovery and the conventional-automation AWS example live in the error-margin notes. See the [integration map](../research/2026-10-13-slide-consolidation.md).
+
+The sources remain distinct: Rasmussen supplies the model, Chapter 5 supplies a contemporary resilience synthesis, and the software mechanism is this talk's application. Clinical joint-evaluation results do not estimate LLM software risk; the AWS example has no reported generative AI involvement.
 
 ## Archived working ideas
 

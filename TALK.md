@@ -14,35 +14,37 @@ The talk adapts Rasmussen's Dynamic Safety Model and the 2024 SREcon presentatio
 4. Socio-technical systems definition
 5. Rasmussen source slide
 6. The research behind the model
-7. Social control is multi-layered across society and within organizations
-8. Putting it Together
+7. Social control hierarchy
+8. The TL;DR: people, boundaries and adaptation
 9. The Fish Diagram
 10. Diagram Legend
-11. Human behaviour with LLM tools
-12. AI enters the feedback and action channels of the control structure
-13. AI and the economic boundary: financial margin, viability and organizational responses
-14. AI and the workload boundary: checking demand, focused capacity and admitted work
-15. AI and acceptable performance: joint outcomes across good, mediocre and poor output
-16. AI and the error margin: notice, intervene and recover before the buffer is exhausted
-17. Keeping the model in view: Economic, Workload, Performance and Error Margin
+11. Economic Boundary
+12. Economic Boundary Actions
+13. Workload Boundary
+14. Workload Boundary Actions
+15. Boundary of Acceptable Performance
+16. Protect the Error Margin
+17. AI enters the operating point
+18. AI in the Fish Diagram
+19. AI has to be paid for
+20. AI and least effort
+21. Change can outrun our view — close with assurance
 
-The rendered deck has 28 content steps and two overview/overlay camera steps, for 30 Impress steps. Between Diagram Legend and Human behaviour, the six boundary close-ups now contain examples and actions. The fish overview is followed by the five-step AI camera journey: arrival, clean roaming model, economics, workload and error-margin drift. See the full ordered list in [slides/README.md](slides/README.md).
-
-The matching one-slide-per-file notes are listed in [`slides/README.md`](slides/README.md).
+The deck contains 21 content steps and two overview/overlay camera steps, for 23 Impress steps. The seven trailing slides have been integrated into this earlier flow and removed. [The integration map](research/2026-10-13-slide-consolidation.md) records their destinations. Current copy and speaker notes live in [slides/README.md](slides/README.md).
 
 ## Boundary examples and the AI camera journey
 
 The original close-ups distinguish external financial capacity from internal targets, and effective workload capacity from incoming demand. Signal-to-action tables show cost efficiency, least-effort adaptation and protection. The acceptable-performance step distinguishes actual unacceptable outcomes from crossing the dotted warning.
 
-The five new AI steps reuse the coloured AI logo and Andrew’s SREcon26 slop-bucket artwork. The ball rolls over one operating point, the camera expands to a clean model, and the ball roams. The economics camera shows ETR’s 2026 budget overruns, the Uber CTO’s reported early budget exhaustion, and Workday’s 2025 workforce/investment priorities. The workload camera shows workslop, proxying judgment and intensified parallel work. The error-margin camera illustrates unfinished handoffs accumulating while the actual state outruns observation, with security and incident-understanding risks explicitly identified as inferences.
+The five AI steps reuse the coloured AI logo and Andrew’s SREcon26 slop-bucket artwork. The ball rolls over one operating point, the camera expands to a clean model, and the ball roams. The economics camera shows ETR’s 2026 budget overruns, the Uber CTO’s reported early budget exhaustion, and Workday’s 2025 workforce/investment priorities. The workload camera shows workslop, proxying judgment and intensified parallel work. The error-margin camera illustrates unfinished handoffs accumulating while the actual state outruns observation, with security and incident-understanding risks explicitly identified as inferences.
 
 [Evidence and scope](research/2026-10-13-ai-boundary-evidence.md) preserve dates, populations and causal limits. The story does not establish universal layoffs to fund AI, universally lower-quality output, or a causal burnout hierarchy by tool skill. Buckets and motion are explanatory metaphors. Reduced-motion mode keeps the same reveal and final-state information without animation.
 
-## The closing sequence: keep the four themes in view
+## Integrated themes: keep the model in view
 
 [AI Gold Rush 2 Versus AI Realism](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5), Chapter 5 of the supplied full book PDF, extends the talk's practical argument. The chapter occupies printed pp. 77–88 (PDF pp. 85–96). An efficiency gain can displace verification, maintenance or recovery work. The responsible team needs source evidence, time to review and authority to change or stop the action. The resulting evaluation should measure joint performance and the ability to intervene as well as visible output.
 
-The economic slide and four closing slides now repeat **Economic / Workload / Performance / Error Margin**, emphasizing the active theme. The final slide brings all four together with the familiar model. These are three constraints and a protected buffer on the performance side, not four boundaries:
+Economic, Workload, Performance and Error Margin now live within the existing boundary close-ups and AI journey. The earlier performance step carries joint-evaluation questions, the error-margin step carries notice/intervene/recover, and the final AI margin reveal closes on assurance. These are three constraints and a protected performance-side buffer:
 
 - **Economic:** account for costs deferred or transferred to others (§5.2.4, printed p. 81 / PDF p. 89) and future adaptability, coupling and congestion (§5.5.2, printed p. 85 / PDF p. 93).
 - **Workload:** count filtering, revision and checking demands, including the expertise needed to reject plausible mistakes (§§5.3.1–5.3.4, printed pp. 82–83 / PDF pp. 90–91).
@@ -55,7 +57,7 @@ The source layers remain explicit. Rasmussen supplies the control framework. Ray
 
 The [AWS 19–20 October 2025 disruption report](https://aws.amazon.com/message/101925/) supplies a software control-and-recovery example, retained in the Error Margin notes. Chapter 5 also cites it in §5.3.6, printed p. 84 (PDF p. 92). Delayed DNS-plan application interacted with changed state and cleanup. Subsequent EC2 recovery entered congestive collapse, and AWS announced recovery testing and controls on incoming work among its corrective actions. The recovery-testing suite was being built, so the report does not establish that all announced work was complete. The report describes conventional automation and dependencies, with no reported generative AI involvement. It illustrates a mechanism relevant to the talk, not an AI-caused incident or a general verdict on automation.
 
-The closing slides ask the audience to preserve the ability to notice, challenge, act and recover. Error margin is not free staff capacity or the operating point's distance from a selected center. Corrective action restores margin and recoverability. It does not create a fourth boundary or return the operating point to a preferred center.
+The integrated steps ask the audience to preserve the ability to notice, challenge, act and recover. Error margin is not free staff capacity or the operating point's distance from a selected center. Corrective action restores margin and recoverability. It does not create a fourth boundary or return the operating point to a preferred center.
 
 ## The distinction this talk must make
 
@@ -203,7 +205,7 @@ This broader flow sketch includes material still held as working ideas. Its Sens
 
 ## Working response pattern
 
-The four verbs are this talk's synthesis. They support [Keeping the model in view](slides/16-adaptive-control.md) in the speaker notes, while Economic, Workload, Performance and Error Margin remain the audience-facing themes. The fuller mechanisms are retained here for speaker preparation:
+The four verbs are this talk's synthesis. They support the [final AI margin step](slides/09k-ai-margin-pressure.md) in the speaker notes, while the boundary close-ups retain the model’s three constraints and performance-side buffer. The fuller mechanisms are retained here for speaker preparation:
 
 - **Sense:** observe value per verified outcome, lifecycle cost, review-load ratio, performance proxies, signal quality, and feedback delay.
 - **Constrain:** rate-limit admitted work, cap work in progress and token budgets, enforce permissions, and preserve verification gates.
