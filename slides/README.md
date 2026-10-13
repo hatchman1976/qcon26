@@ -17,6 +17,14 @@ The numbered Markdown files in this directory mirror the rendered Impress deck i
 11. [Human behaviour with LLM tools](10-ai-behaviour.md) — `#/ai-behaviour`
 12. [AI enters the control structure](11-ai-control-structure.md) — `#/ai-control-structure`
 13. [AI and the economic boundary](12-ai-economic-boundary.md) — `#/ai-economic-boundary`
+14. [AI and the workload boundary](13-ai-intervention.md) — `#/ai-intervention`
+15. [AI and acceptable performance](14-ai-joint-evaluation.md) — `#/ai-joint-evaluation`
+16. [AI and the error margin](15-automation-recovery.md) — `#/automation-recovery`
+17. [Keeping the model in view](16-adaptive-control.md) — `#/adaptive-control`
+
+The deck contains 17 main slides and eight fish-diagram camera steps, for 25 Impress steps. The economic slide and four closing slides repeat the **Economic / Workload / Performance / Error Margin** theme rail. The active theme is emphasized until the closing model synthesis brings all four into view. Error Margin is the protected performance-side buffer, not a fourth constraint. IDs and filenames remain stable for existing bookmarks.
+
+The notes distinguish Rasmussen's framework, Chapter 5's synthesis, and this talk's software application. Chapter 5 was checked against the supplied full PDF, printed pp. 77–88 (PDF pp. 85–96). The AWS recovery example is retained in the Error Margin notes, with its conventional-automation scope explicit.
 
 ## Archived working ideas
 

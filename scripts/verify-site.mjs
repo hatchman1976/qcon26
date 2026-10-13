@@ -23,6 +23,10 @@ const requiredMarkers = [
   'id="complex-system-and-boundaries"',
   'id="ai-control-structure"',
   'id="ai-economic-boundary"',
+  'id="ai-intervention"',
+  'id="ai-joint-evaluation"',
+  'id="automation-recovery"',
+  'id="adaptive-control"',
   "Adapt or Drift:",
   "Resilience Engineering When AI Moves the Operating Point",
   "Andrew Hatch",
@@ -101,6 +105,8 @@ const requiredFiles = [
   "images/srecon24/Rasmussen_boundary_performance.png",
   "images/srecon24/Rasmussen_boundary_economic.png",
   "images/srecon24/Rasmussen_boundary_workload.png",
+  "images/srecon24/Rasmussen_error_margin.png",
+  "images/operating-point.svg",
   "images/srecon24/Rasmussen_portrait.png",
   "images/srecon24/Rasmussen_Model_Original.png",
   "images/srecon24/Rasmussen_paper_figure_8.png",
@@ -120,8 +126,8 @@ await Promise.all(requiredFiles.map((file) => access(resolve(siteRoot, file))));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount !== 20) {
-  throw new Error(`Expected exactly twenty impress.js steps, found ${stepCount}`);
+if (stepCount !== 25) {
+  throw new Error(`Expected exactly twenty-five impress.js steps, found ${stepCount}`);
 }
 
 console.log(`Verified src/index.html with ${stepCount} presentation steps.`);

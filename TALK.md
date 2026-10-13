@@ -21,8 +21,33 @@ The talk adapts Rasmussen's Dynamic Safety Model and the 2024 SREcon presentatio
 11. Human behaviour with LLM tools
 12. AI enters the feedback and action channels of the control structure
 13. AI and the economic boundary: financial margin, viability and organizational responses
+14. AI and the workload boundary: checking demand, focused capacity and admitted work
+15. AI and acceptable performance: joint outcomes across good, mediocre and poor output
+16. AI and the error margin: notice, intervene and recover before the buffer is exhausted
+17. Keeping the model in view: Economic, Workload, Performance and Error Margin
+
+The rendered deck has 17 main slides and eight fish-diagram camera steps, for 25 Impress steps.
 
 The matching one-slide-per-file notes are listed in [`slides/README.md`](slides/README.md).
+
+## The closing sequence: keep the four themes in view
+
+[AI Gold Rush 2 Versus AI Realism](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5), Chapter 5 of the supplied full book PDF, extends the talk's practical argument. The chapter occupies printed pp. 77–88 (PDF pp. 85–96). An efficiency gain can displace verification, maintenance or recovery work. The responsible team needs source evidence, time to review and authority to change or stop the action. The resulting evaluation should measure joint performance and the ability to intervene as well as visible output.
+
+The economic slide and four closing slides now repeat **Economic / Workload / Performance / Error Margin**, emphasizing the active theme. The final slide brings all four together with the familiar model. These are three constraints and a protected buffer on the performance side, not four boundaries:
+
+- **Economic:** account for costs deferred or transferred to others (§5.2.4, printed p. 81 / PDF p. 89) and future adaptability, coupling and congestion (§5.5.2, printed p. 85 / PDF p. 93).
+- **Workload:** count filtering, revision and checking demands, including the expertise needed to reject plausible mistakes (§§5.3.1–5.3.4, printed pp. 82–83 / PDF pp. 90–91).
+- **Performance:** test people and tools together across good, mediocre and poor output, situated in the actual work and throughout the lifecycle (§5.5.3, printed pp. 85–86 / PDF pp. 93–94).
+- **Error Margin:** apply the chapter's recognition, authority and recovery questions to Rasmussen's buffer before the functional performance limit (§5.1, §§5.3.2–5.3.5 and §§5.4–5.5). This framing is the talk's synthesis, not terminology or geometry supplied by Chapter 5.
+
+The source layers remain explicit. Rasmussen supplies the control framework. Rayo, Morey, Grøtan and Woods supply a contemporary resilience and cognitive-systems synthesis. Their chapter does not cite Rasmussen or establish the talk's review-load ratio. The software application and Sense / Constrain / Adapt / Correct response pattern are this talk's synthesis. Those verbs remain supporting mechanisms in speaker notes so the four audience themes stay prominent.
+
+[Morey, Rayo, and Woods (2025)](https://www.nature.com/articles/s41746-025-01784-y) motivate evaluation across strong, mediocre, and poor AI recommendations. Their experiment used predictive clinical AI in simulated patient cases, with 450 nursing students and 12 licensed nurses. Recommendation correctness affected joint performance, and added explanations did not significantly change recommendation effects in that task. This is not an LLM software study or evidence that explanations never help. For our software application, compare relevant baselines in controlled exercises and observe useful completion, verification effort, consequential-error detection, response time, and successful recovery.
+
+The [AWS 19–20 October 2025 disruption report](https://aws.amazon.com/message/101925/) supplies a software control-and-recovery example, retained in the Error Margin notes. Chapter 5 also cites it in §5.3.6, printed p. 84 (PDF p. 92). Delayed DNS-plan application interacted with changed state and cleanup. Subsequent EC2 recovery entered congestive collapse, and AWS announced recovery testing and controls on incoming work among its corrective actions. The recovery-testing suite was being built, so the report does not establish that all announced work was complete. The report describes conventional automation and dependencies, with no reported generative AI involvement. It illustrates a mechanism relevant to the talk, not an AI-caused incident or a general verdict on automation.
+
+The closing slides ask the audience to preserve the ability to notice, challenge, act and recover. Error margin is not free staff capacity or the operating point's distance from a selected center. Corrective action restores margin and recoverability. It does not create a fourth boundary or return the operating point to a preferred center.
 
 ## The distinction this talk must make
 
@@ -149,7 +174,9 @@ Separate the stages rather than calling every observation a leading indicator:
 - Burnout and restricted focus can warn that future performance-control capacity is being lost when corroborated by workload evidence.
 - Escaped defects, security failures, incidents, and difficult recovery are lagging performance signals.
 
-## Longer-term narrative ideas not currently rendered
+## Longer-term narrative ideas
+
+This broader flow sketch includes material still held as working ideas. Its Sense / Constrain / Adapt / Correct response supports the closing sequence in speaker notes.
 
 1. Title and audience promise
 2. The new question: can organizational feedback keep pace with AI-enabled change?
@@ -168,7 +195,7 @@ Separate the stages rather than calling every observation a leading indicator:
 
 ## Working response pattern
 
-The four verbs are a working synthesis, not final conference copy:
+The four verbs are this talk's synthesis. They support [Keeping the model in view](slides/16-adaptive-control.md) in the speaker notes, while Economic, Workload, Performance and Error Margin remain the audience-facing themes. The fuller mechanisms are retained here for speaker preparation:
 
 - **Sense:** observe value per verified outcome, lifecycle cost, review-load ratio, performance proxies, signal quality, and feedback delay.
 - **Constrain:** rate-limit admitted work, cap work in progress and token budgets, enforce permissions, and preserve verification gates.
@@ -229,3 +256,6 @@ Monitoring is only a sensor. Feedback becomes counterpressure when the signal is
 - Microsoft FY2026 Q3 outlook: <https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3>
 - Meta Q2 2026 results: <https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx>
 - Oracle FY2026 results: <https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/>
+- Rayo, Morey, Grøtan, and Woods. “AI Gold Rush 2 Versus AI Realism” (2026): <https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5>
+- Morey, Rayo, and Woods (2025), joint human–AI evaluation in simulated patient cases: <https://www.nature.com/articles/s41746-025-01784-y>
+- AWS. Summary of the Amazon DynamoDB Service Disruption in the Northern Virginia (US-EAST-1) Region, 19–20 October 2025: <https://aws.amazon.com/message/101925/>

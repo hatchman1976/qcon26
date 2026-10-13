@@ -69,6 +69,7 @@ body.impress-on-workload-boundary,
 body.impress-on-workload-boundary-actions,
 body.impress-on-performance-boundary,
 body.impress-on-error-margin,
+body.impress-on-fish-diagram-overview,
 body.impress-on-the-fish-diagram,
 body.impress-on-ai-behaviour,
 body.impress-on-the-model,
@@ -77,7 +78,11 @@ body.impress-on-before-we-continue,
 body.impress-on-social-and-systems,
 body.impress-on-complex-system-and-boundaries,
 body.impress-on-ai-control-structure,
-body.impress-on-ai-economic-boundary {
+body.impress-on-ai-economic-boundary,
+body.impress-on-ai-intervention,
+body.impress-on-ai-joint-evaluation,
+body.impress-on-automation-recovery,
+body.impress-on-adaptive-control {
   background-color: var(--surface-introduction);
 }
 
@@ -2302,6 +2307,253 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
   line-height: 1.1;
   letter-spacing: 0;
 }
+
+/* Chapter 5 stays anchored to Rasmussen's constraints and performance-side margin. */
+.realism-slide { overflow: hidden; }
+
+.realism-title {
+  position: absolute;
+  top: 18px;
+  right: 45px;
+  left: 45px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -1.7px;
+  text-align: center;
+}
+
+.theme-rail {
+  position: absolute;
+  top: 92px;
+  right: 70px;
+  left: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+
+.theme-name { color: #56636a; }
+.theme-current { font-weight: 700; }
+.theme-economic.theme-current { color: #225ea8; }
+.theme-workload.theme-current { color: #684879; }
+.theme-performance.theme-current { color: #765a24; }
+.theme-margin.theme-current { color: #8c1d18; }
+
+.realism-lede {
+  position: absolute;
+  top: 148px;
+  right: 60px;
+  left: 60px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.realism-conclusion {
+  position: absolute;
+  right: 65px;
+  bottom: 78px;
+  left: 65px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+}
+
+.realism-source {
+  position: absolute;
+  right: 60px;
+  bottom: 22px;
+  left: 60px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 18px;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.realism-source a,
+.theme-framed-slide .ai-economic-source a { color: #164f90; }
+.theme-framed-slide .ai-economic-lede { top: 145px; font-size: 29px; }
+.theme-framed-slide .ai-economic-distinction { top: 193px; }
+.theme-framed-slide .ai-economic-distinction > div { grid-template-columns: 250px 1fr; padding: 14px 0; }
+.theme-framed-slide .ai-economic-distinction dt,
+.theme-framed-slide .ai-economic-distinction dd { font-size: 25px; line-height: 1.1; }
+.theme-framed-slide .ai-economic-responses { top: 445px; }
+.theme-framed-slide .ai-economic-response-heading { margin-bottom: 20px; font-size: 29px; }
+.theme-framed-slide .ai-economic-response-columns h4 { font-size: 27px; }
+.theme-framed-slide .ai-economic-response-columns p { font-size: 25px; }
+.theme-framed-slide .ai-economic-conclusion { font-size: 28px; }
+
+.workload-anchor {
+  position: absolute;
+  top: 335px;
+  left: 55px;
+  width: 340px;
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 52px;
+  line-height: 1.08;
+  letter-spacing: -1.2px;
+  text-align: center;
+}
+
+.workload-mechanism,
+.margin-means {
+  position: absolute;
+  top: 215px;
+  right: 65px;
+  left: 450px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  letter-spacing: 0;
+}
+
+.workload-mechanism > div,
+.margin-means > div {
+  min-height: 137px;
+  padding: 12px 0 18px 24px;
+  border-left: 3px solid #9ba8ae;
+}
+
+.workload-mechanism dt,
+.margin-means dt {
+  margin: 0 0 10px;
+  color: #684879;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.workload-mechanism dd,
+.margin-means dd {
+  margin: 0;
+  font-size: 29px;
+  line-height: 1.15;
+}
+
+.joint-evaluation-cases {
+  position: absolute;
+  top: 205px;
+  right: 70px;
+  left: 70px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  letter-spacing: 0;
+}
+
+.joint-evaluation-cases > div {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  align-items: center;
+  gap: 30px;
+  min-height: 135px;
+  padding: 18px 0;
+  border-bottom: 1px solid #9ba8ae;
+}
+
+.joint-evaluation-cases dt {
+  color: #765a24;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.joint-evaluation-cases dd {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.15;
+}
+
+.joint-mistake dt { color: #8c1d18; }
+
+.margin-model {
+  position: absolute;
+  top: 208px;
+  left: 30px;
+  width: 430px;
+  height: 390px;
+  margin: 0;
+}
+
+.margin-model-boundary {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 430px;
+  height: auto;
+}
+
+.margin-context { opacity: 0.3; }
+.margin-model-dotted { position: absolute; top: 58px; left: 43px; width: 236px; height: auto; }
+.margin-model-point { position: absolute; top: 211px; left: 211px; width: 25px; height: auto; }
+.margin-model figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.margin-model figcaption strong { color: #8c1d18; }
+
+.margin-means { left: 510px; right: 50px; }
+.margin-means > div { min-height: 133px; }
+.margin-means dt { color: #8c1d18; }
+.margin-means dd { font-size: 28px; }
+.theme-focus-margin .realism-conclusion { bottom: 81px; font-size: 28px; }
+
+.adaptive-model {
+  position: absolute;
+  top: 274px;
+  left: 290px;
+  width: 440px;
+  height: 320px;
+  margin: 0;
+}
+.adaptive-model-outline { width: 440px; height: auto; }
+.adaptive-model-margin { position: absolute; top: 3px; left: 44px; width: 242px; height: auto; }
+.adaptive-model-point { position: absolute; top: 160px; left: 215px; width: 26px; height: auto; }
+.adaptive-model figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 340px;
+  font-family: "Comic Neue", cursive;
+  font-size: 22px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: center;
+}
+.adaptive-response { position: absolute; width: 265px; font-family: "Comic Neue", cursive; letter-spacing: 0; }
+.adaptive-response h3 { margin: 0 0 12px; font-family: "Maven Pro", sans-serif; font-size: 37px; font-weight: 500; line-height: 1; letter-spacing: -0.7px; }
+.adaptive-response p { margin: 0; font-size: 25px; line-height: 1.14; text-align: left; }
+.adaptive-economic { top: 208px; right: 55px; }
+.adaptive-economic h3 { color: #225ea8; }
+.adaptive-workload { top: 496px; right: 55px; }
+.adaptive-workload h3 { color: #684879; }
+.adaptive-performance { top: 208px; left: 55px; }
+.adaptive-performance h3 { color: #765a24; }
+.adaptive-margin { top: 496px; left: 55px; }
+.adaptive-margin h3 { color: #8c1d18; }
 
 @media (prefers-reduced-motion: reduce) {
   .plain-gradient-arrows.is-visible .plain-gradient-arrow {

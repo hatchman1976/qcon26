@@ -7,7 +7,7 @@ An interactive [impress.js](https://impress.js.org/) presentation for Andrew Hat
 - Intended live site: <https://qcon26.hatchman76.com>
 - Author: Andrew Hatch ([@hatchman1976](https://github.com/hatchman1976))
 
-The rendered deck currently contains the official QCon title slide, an opening Takeaways slide, an introduction to socio-technical systems, Rasmussen's source model, a map of the paper's wider research landscape, an adapted slide locating control across the social hierarchy, a plain-language explanation of the boundary model followed by a simple Diagram Legend, a bridge examining human behaviour with LLM tools, an original slide showing how AI enters the control structure's feedback and action channels, and a slide on AI economics and organizational coping responses. It uses the 2024 talk's pale backgrounds, Maven Pro and Comic Neue typography, collage-like placement, and staged reveals. Slide copy and speaker notes are maintained as one Markdown file per slide under [`slides/`](slides/README.md).
+The rendered deck contains 17 main slides and eight fish-diagram camera steps, for 25 Impress steps. It moves from the official QCon title and opening Takeaways through socio-technical systems, Rasmussen's model, human behaviour with LLM tools, AI in the control structure, and AI economics. The closing sequence keeps **Economic, Workload, Performance and Error Margin** visible through a recurring theme rail, then brings the four themes together around the familiar model. It uses the 2024 talk's pale backgrounds, Maven Pro and Comic Neue typography, collage-like placement, and staged reveals. Slide copy and speaker notes are maintained as one Markdown file per slide under [`slides/`](slides/README.md).
 
 ## Narrative focus
 
@@ -19,6 +19,11 @@ The 2024 SREcon talk foregrounded the geometry of Rasmussen's model: boundaries,
 - Economic usage moves the operating point; sustainable financial capacity can reshape the economic boundary; budgets, quotas, forecasts, and ROI targets provide signals and setpoints for the economic controller—not additional Rasmussen boundaries.
 - When admitted change outruns feedback and assurance, one operating state can approach the workload–performance joint-constraint region.
 - The goal is not to return to a geometric center. It is to restore sufficient margin, bounded excursions, and recoverability.
+- Responsibility needs practical access to evidence, time for review, and authority to intervene. Evaluate whether people, tools, and workflow can use useful recommendations, challenge convincing mistakes, and recover under pressure.
+
+The closing sequence draws on Chapter 5, [AI Gold Rush 2 Versus AI Realism](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5), reviewed against the supplied full book PDF, printed pp. 77–88 (PDF pp. 85–96). Economic addresses costs transferred or deferred; Workload addresses checking demand and finite capacity; Performance addresses situated, continuing joint evaluation; Error Margin applies those findings to Rasmussen's protected performance-side buffer. Error Margin remains a theme within the performance constraint, not a fourth boundary.
+
+The speaker notes preserve the source limits: the chapter is a resilience synthesis and does not use Rasmussen's model, its joint-evaluation empirical example concerns predictive clinical AI, and the AWS recovery example in the Error Margin notes describes conventional automation with no reported generative AI involvement. Sense / Constrain / Adapt / Correct remain supporting action verbs in the notes.
 
 The full conceptual guardrails, causal mechanism, and evidence requirements are maintained in [`TALK.md`](TALK.md).
 

@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#cfd8dc" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=89" />
+    <link rel="stylesheet" href="/styles.css?v=92" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
@@ -392,7 +392,7 @@
         data-y="183000"
         data-scale="25"
       >
-        <h2 class="social-systems-title">Putting it Together</h2>
+        <h2 class="social-systems-title">The TL;DR</h2>
 
         <div
           class="substep social-together complex-system-reveal"
@@ -754,6 +754,14 @@
       ></section>
 
       <section
+        id="fish-diagram-overview"
+        class="step"
+        data-x="0"
+        data-y="208000"
+        data-scale="25"
+      ></section>
+
+      <section
         id="ai-behaviour"
         class="step ai-behaviour-slide"
         data-x="0"
@@ -956,12 +964,18 @@
       </section>
       <section
         id="ai-economic-boundary"
-        class="step ai-economic-slide"
+        class="step ai-economic-slide theme-framed-slide theme-focus-economic"
         data-x="0"
         data-y="283000"
         data-scale="25"
       >
         <h2 class="ai-economic-title">AI and the economic boundary</h2>
+        <div class="theme-rail" aria-label="Economic, Workload, Performance and Error Margin">
+          <span class="theme-name theme-economic theme-current">Economic</span>
+          <span class="theme-name theme-workload">Workload</span>
+          <span class="theme-name theme-performance">Performance</span>
+          <span class="theme-name theme-margin">Error Margin</span>
+        </div>
         <p class="ai-economic-lede">Cheaper generation can still mean higher total cost.</p>
 
         <dl class="ai-economic-distinction">
@@ -996,49 +1010,251 @@
         <p class="substep ai-economic-conclusion">Measure total cost per completed, verified, valuable outcome.</p>
         <p class="ai-economic-source">
           <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF" target="_blank" rel="noreferrer">Rasmussen (1997), Fig. 3</a>.
-          AI application for this talk.
+          <a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5" target="_blank" rel="noreferrer">Chapter 5, pp. 81 and 85</a>.
         </p>
 
         <div class="notes">
-          This is the preceding slide's feedback-to-action problem applied to economic control. Rasmussen provides
-          the adaptation and control framework. The AI economics and response examples here are this talk's
-          application, not findings about AI in the 1997 paper.
+          <p>This is the preceding slide&#x27;s feedback-to-action problem applied to economic control. Rasmussen provides the adaptation and control framework. The AI economics and response examples here are this talk&#x27;s application, not findings about AI in the 1997 paper.</p>
 
-          Figure 3 separates the economic-failure constraint from management's pressure toward efficiency.
-          Manuscript pp. 9–11 explain how local adaptations under cost and effort criteria can interact and erode
-          shared defences without immediate visible failure. Page 12 emphasizes visible constraints and coping
-          skills. Pages 15–18 connect effective control to usable objectives, current state information, practical
-          competence and resources. Page 27 requires communication of changes and their implications across levels.
+          <p>Figure 3 separates the economic-failure constraint from management&#x27;s pressure toward efficiency. Manuscript pp. 9–11 explain how local adaptations under cost and effort criteria can interact and erode shared defences without immediate visible failure. Page 12 emphasizes visible constraints and coping skills. Pages 15–18 connect effective control to usable objectives, current state information, practical competence and resources. Page 27 requires communication of changes and their implications across levels.</p>
 
-          Separate three mechanisms. More consumption or commitments can move the operating state toward economic
-          failure if their cost outpaces the value and financial capacity supporting them. Sustainable savings can
-          expand the viable operating space, while reduced revenue, funding or runway can contract it. Forecasts
-          provide feedback. Budgets and quotas are management setpoints or decision thresholds. A revised spending
-          target does not by itself change the actual viability constraint. Figure 3's dotted perceived boundary
-          and error margin appear only on the performance side.
+          <p>Separate three mechanisms. More consumption or commitments can move the operating state toward economic failure if their cost outpaces the value and financial capacity supporting them. Sustainable savings can expand the viable operating space, while reduced revenue, funding or runway can contract it. Forecasts provide feedback. Budgets and quotas are management setpoints or decision thresholds. A revised spending target does not by itself change the actual viability constraint. Figure 3&#x27;s dotted perceived boundary and error margin appear only on the performance side.</p>
 
-          Lower cost per generation can help, but total economics also depend on activity. Additional workflows,
-          longer contexts, retries or agent loops can consume the saving. Include model use, platform commitments,
-          integration, tools and data, evaluation, human verification, rework and recovery in the outcome cost.
-          This is a conditional mechanism, not a prediction that cheaper AI must increase total cost.
+          <p>Lower cost per generation can help, but total economics also depend on activity. Additional workflows, longer contexts, retries or agent loops can consume the saving. Include model use, platform commitments, integration, tools and data, evaluation, human verification, rework and recovery in the outcome cost. This is a conditional mechanism, not a prediction that cheaper AI must increase total cost.</p>
 
-          Organizations can reduce low-value demand, cap unproductive loops, reduce scope, or route and cache work
-          where validated quality permits. They can also use AI to improve testing and diagnosis, increasing useful
-          assurance capacity. Financial feedback must reach people with the authority, competence and resources
-          to act. Teams need to communicate effects on review load and recovery capability as well as spending.
+          <p>Chapter 5 adds the work-transfer question: who receives the saving, who absorbs the new work, and when does that work become visible? Section 5.2.4 describes costs deferred in time or transferred to others. Section 5.5.2 asks evaluations to include future adaptability, coupling, congestion and conflict. Track authoring savings alongside reviewer, maintainer and on-call costs; a local saving is not sufficient evidence of a net workflow saving.</p>
 
-          The transfer path is conditional. Holding output constant while removing relevant expertise or review
-          can make the remaining work exceed available capacity. If teams respond by thinning assurance or
-          postponing maintenance, performance margin can shrink while the visible cost metric improves. The
-          efficiency response seeks economic viability, but its side effects can consume other margins.
-          Reassess scope, capacity and outcomes together. Preserve the ability to verify work and recover.
+          <p>Organizations can reduce low-value demand, cap unproductive loops, reduce scope, or route and cache work where validated quality permits. They can also use AI to improve testing and diagnosis, increasing useful assurance capacity. Financial feedback must reach people with the authority, competence and resources to act. Teams need to communicate effects on review load and recovery capability as well as spending.</p>
 
-          [Source]
-          Rasmussen, Risk management in a dynamic society: A modelling problem (1997), Figure 3;
-          printed manuscript pp. 9–12, 15–18 and 27 in the DTU PDF. These are manuscript page numbers,
-          not the publisher's journal pagination.
-          https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
-          https://doi.org/10.1016/S0925-7535(97)00052-0
+          <p>The transfer path is conditional. Holding output constant while removing relevant expertise or review can make the remaining work exceed available capacity. If teams respond by thinning assurance or postponing maintenance, performance margin can shrink while the visible cost metric improves. The efficiency response seeks economic viability, but its side effects can consume other margins. Reassess scope, capacity and outcomes together. Preserve the ability to verify work and recover.</p>
+
+          <p>Sources</p>
+          <ul>
+            <li><a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen — Risk management in a dynamic society: A modelling problem (1997), primary manuscript</a>, Figure 3; printed manuscript pp. 9–12, 15–18 and 27. These are manuscript page numbers, not the publisher&#x27;s journal pagination.</li>
+            <li><a href="https://doi.org/10.1016/S0925-7535%2897%2900052-0">Published paper and DOI</a></li>
+            <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5">Rayo, Morey, Grøtan and Woods — AI Gold Rush 2 Versus AI Realism (2026), Chapter 5</a>, §5.2.4, printed p. 81 (supplied PDF p. 89), and §5.5.2, printed p. 85 (PDF p. 93).</li>
+          </ul>
+        </div>
+      </section>
+      <section
+        id="ai-intervention"
+        class="step realism-slide theme-framed-slide theme-focus-workload"
+        data-x="0"
+        data-y="308000"
+        data-scale="25"
+      >
+        <h2 class="realism-title">AI and the workload boundary</h2>
+        <div class="theme-rail" aria-label="Economic, Workload, Performance and Error Margin">
+          <span class="theme-name theme-economic">Economic</span>
+          <span class="theme-name theme-workload theme-current">Workload</span>
+          <span class="theme-name theme-performance">Performance</span>
+          <span class="theme-name theme-margin">Error Margin</span>
+        </div>
+        <p class="realism-lede">Cheaper generation can create more checking work.</p>
+
+        <p class="workload-anchor">Verification<br />work</p>
+        <dl class="workload-mechanism" aria-label="Checking demand, available capacity and the organizational response">
+          <div>
+            <dt>Demand</dt>
+            <dd>Count review, integration and maintenance.</dd>
+          </div>
+          <div class="substep">
+            <dt>Capacity</dt>
+            <dd>Preserve focused attention and context.</dd>
+          </div>
+          <div class="substep">
+            <dt>Response</dt>
+            <dd>Change scope, timing or admitted work.</dd>
+          </div>
+        </dl>
+
+        <p class="substep realism-conclusion">Match admitted work to verification capacity.</p>
+        <p class="realism-source"><a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5" target="_blank" rel="noreferrer">Rayo et al., Chapter 5, §§5.3.1–4, pp. 82–83. Software application for this talk.</a></p>
+        <div class="notes">
+          <p>The economic slide asks where costs go. Here, follow the work: generating a candidate quickly does not establish that someone can verify, integrate or maintain it quickly. Chapter 5 §5.3.1 describes filtering and revision costs even in ordinary work. Sections 5.3.2–5.3.4 add a difficulty: plausible mistakes can demand expertise to recognize and correct. The amount of checking varies by task, output, workflow and expertise.</p>
+
+          <p>Count admitted work and the focused verification effort it requires. A reviewer assigned to many tasks can still lack the time or context to assess this one. The talk&#x27;s review-load ratio is an illustrative capacity heuristic, not a measure established by the chapter. Rising demand relative to effective capacity can increase backlog and delay; defects additionally depend on how the organization adapts to that pressure.</p>
+
+          <p>Protect contextual knowledge, source evidence and practical authority to change commitments. The chapter&#x27;s safety-manager story illustrates responsibility without adequate resources; it is a scenario, not a measured universal outcome. A named approver needs enough time to inspect the evidence and a usable way to reject, pause or reverse action.</p>
+
+          <p>Respond by limiting admitted work, changing scope or accepting latency; improve verification capacity where the tools actually help. AI can support tests and diagnosis as well as generation. Holding output fixed while removing expertise or thinning review can transfer economic pressure into workload and performance. That is a conditional mechanism, not an inevitable effect of AI.</p>
+
+          <p>Sources</p>
+          <ul>
+            <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5">Rayo, Morey, Grøtan and Woods — AI Gold Rush 2 Versus AI Realism (2026), Chapter 5</a>, §§5.3.1–5.3.4, printed pp. 82–83 (supplied PDF pp. 90–91); authority-responsibility scenario in §5.1, printed pp. 78–80 (PDF pp. 86–88).</li>
+            <li><a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen — Risk management in a dynamic society: A modelling problem (1997), primary manuscript</a>, Figure 3 and printed manuscript pp. 15–18 and 27 on effective control, competence, resources and communication.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="ai-joint-evaluation"
+        class="step realism-slide theme-framed-slide theme-focus-performance"
+        data-x="0"
+        data-y="333000"
+        data-scale="25"
+      >
+        <h2 class="realism-title">AI and acceptable performance</h2>
+        <div class="theme-rail" aria-label="Economic, Workload, Performance and Error Margin">
+          <span class="theme-name theme-economic">Economic</span>
+          <span class="theme-name theme-workload">Workload</span>
+          <span class="theme-name theme-performance theme-current">Performance</span>
+          <span class="theme-name theme-margin">Error Margin</span>
+        </div>
+        <p class="realism-lede">Evaluate people, tools and workflow together.</p>
+
+        <dl class="joint-evaluation-cases" aria-label="Good and mediocre output, convincing mistakes and performance under pressure">
+          <div class="joint-useful">
+            <dt>Good or<br />mediocre output</dt>
+            <dd>Can the team reach a verified outcome?</dd>
+          </div>
+          <div class="substep joint-mistake">
+            <dt>Convincing<br />mistake</dt>
+            <dd>Can the team detect and correct it?</dd>
+          </div>
+          <div class="substep joint-pressure">
+            <dt>Under<br />pressure</dt>
+            <dd>Can the team stop and recover?</dd>
+          </div>
+        </dl>
+
+        <p class="substep realism-conclusion">Measure joint performance as conditions change.</p>
+        <p class="realism-source"><a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5" target="_blank" rel="noreferrer">Rayo et al., Chapter 5, §5.5.3, pp. 85–86. Evaluation applied to software work.</a></p>
+        <div class="notes">
+          <p>Performance belongs to the people, tools and workflow together. Chapter 5 §5.5.3 calls for evaluation across good, mediocre and poor AI performance, situated in the work and repeated through the lifecycle. A model benchmark cannot establish operational joint performance.</p>
+
+          <p>With good or mediocre output, observe whether the team reaches a verified, valuable outcome, how much revision and checking it requires, and how this compares with a relevant baseline. Include a plausible consequential mistake in a controlled exercise. Can people access the evidence, recognize the error and correct it before enactment? Also exercise stale observations, scarce time, excess review demand and unavailable supporting services. Can people stop, change scope and recover? These are evaluation conditions for this talk&#x27;s software application, not defects to insert into production.</p>
+
+          <p>The chapter&#x27;s empirical anchor, Morey, Rayo and Woods (2025), studied predictive clinical AI in simulated patient cases with 450 nursing students and 12 licensed nurses. Recommendation correctness improved or degraded performance; added explanations did not significantly alter those effects in that experiment. This motivates the evaluation design. It is not an LLM software-risk estimate or evidence that explanations never help.</p>
+
+          <p>Measure outcome quality, verification effort, consequential-error detection, response time and successful recovery. Repeat appropriate evaluation when models, workflow, staffing or dependencies materially change. These are proposed engineering measures rather than a universal score. Production monitoring supplies fallible proxies; it does not reveal the actual functional limit.</p>
+
+          <p>Sources</p>
+          <ul>
+            <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5">Rayo, Morey, Grøtan and Woods — AI Gold Rush 2 Versus AI Realism (2026), Chapter 5</a>, §5.5.3, printed pp. 85–86 (supplied PDF pp. 93–94).</li>
+            <li><a href="https://www.nature.com/articles/s41746-025-01784-y">Morey, Rayo and Woods (2025), npj Digital Medicine</a>, Results and Discussion.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="automation-recovery"
+        class="step realism-slide theme-framed-slide theme-focus-margin"
+        data-x="0"
+        data-y="358000"
+        data-scale="25"
+      >
+        <h2 class="realism-title">AI and the error margin</h2>
+        <div class="theme-rail" aria-label="Economic, Workload, Performance and Error Margin">
+          <span class="theme-name theme-economic">Economic</span>
+          <span class="theme-name theme-workload">Workload</span>
+          <span class="theme-name theme-performance">Performance</span>
+          <span class="theme-name theme-margin theme-current">Error Margin</span>
+        </div>
+        <p class="realism-lede">Protect the buffer before unacceptable performance.</p>
+
+        <figure class="margin-model" aria-label="The protected error margin lies only between the dotted perceived performance boundary and the solid actual performance limit">
+          <img class="margin-model-boundary margin-context" src="/images/srecon24/Rasmussen_boundary_economic.png?v=2" alt="" />
+          <img class="margin-model-boundary margin-context" src="/images/srecon24/Rasmussen_boundary_workload.png?v=2" alt="" />
+          <img class="margin-model-boundary" src="/images/srecon24/Rasmussen_boundary_performance.png?v=2" alt="" />
+          <img class="margin-model-dotted" src="/images/srecon24/Rasmussen_error_margin.png" alt="" />
+          <img class="margin-model-point" src="/images/operating-point.svg" alt="" />
+          <figcaption><strong>Error Margin:</strong> gap between the lines at left<br />Solid: actual limit. Dotted: perceived boundary</figcaption>
+        </figure>
+        <dl class="margin-means" aria-label="Detection, intervention and recovery help protect the error margin">
+          <div class="substep">
+            <dt>Notice</dt>
+            <dd>Detect drift while action is still possible.</dd>
+          </div>
+          <div class="substep">
+            <dt>Intervene</dt>
+            <dd>Pause, reject or reverse with authority.</dd>
+          </div>
+          <div class="substep">
+            <dt>Recover</dt>
+            <dd>Keep fallbacks usable under pressure.</dd>
+          </div>
+        </dl>
+
+        <p class="substep realism-conclusion">Maintain the means to act before the margin is exhausted.</p>
+        <p class="realism-source"><a href="https://doi.org/10.1016/S0925-7535(97)00052-0" target="_blank" rel="noreferrer">Rasmussen (1997), Fig. 3</a>. <a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5" target="_blank" rel="noreferrer">Chapter 5, pp. 82–86</a>. Performance-side application.</p>
+        <div class="notes">
+          <p>Rasmussen&#x27;s error margin is the protected buffer between the dotted perceived or marginal boundary and the actual functional performance limit. Crossing the dotted line starts consuming that buffer; it does not establish that harm has occurred. The margin is exhausted at the functional limit. It is not a fourth constraint, a measurement of free staff capacity, or the operating point&#x27;s distance from any chosen center.</p>
+
+          <p>Our application of Chapter 5 is to preserve the means of noticing and responding before that margin is exhausted. Sections 5.3.2–5.3.5 describe difficulties recognizing plausible errors and interpreting uncertain capability. A persuasive explanation is not automatically independent evidence. Section 5.1&#x27;s scenario describes responsibility without adequate resources and decay of alternative methods. Sections 5.4–5.5 support challenging exercises and continued assurance.</p>
+
+          <p>Notice requires usable signals and timely interpretation. Intervention requires evidence, authority, tools and remaining response capacity. Recovery requires contextual knowledge and fallbacks that people can actually use under pressure. A written rollback procedure alone does not demonstrate that capability. Neither the boundary nor awareness of it automatically pushes the operating state back. Corrective action restores sufficient margin and recoverability, not a preferred geometric center.</p>
+
+          <p>The AWS 19–20 October 2025 disruption is a supporting example of conventional automation, with no reported generative AI involvement. A stale DNS-plan check and later EC2 recovery congestion illustrate changing state, coupled automation and recovery demand. AWS announced recovery testing and incoming-work controls. The report does not establish that all announced work was complete. Use it as a mechanism example, not as evidence of an AI-caused incident.</p>
+
+          <p>Sources</p>
+          <ul>
+            <li><a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen — Risk management in a dynamic society: A modelling problem (1997), primary manuscript</a>, Figure 3 and discussion of marginal boundaries and control.</li>
+            <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5">Rayo, Morey, Grøtan and Woods — AI Gold Rush 2 Versus AI Realism (2026), Chapter 5</a>, §5.1, printed pp. 78–80 (supplied PDF pp. 86–88); §§5.3.2–5.3.5, printed pp. 82–84 (PDF pp. 90–92); §§5.4–5.5, printed pp. 84–86 (PDF pp. 92–94). The error-margin framing is this talk&#x27;s application of Rasmussen.</li>
+            <li><a href="https://aws.amazon.com/message/101925/">AWS — Summary of the Amazon DynamoDB Service Disruption in the Northern Virginia (US-EAST-1) Region, 19–20 October 2025</a>, DynamoDB and EC2 sections and corrective actions; also cited by Chapter 5 §5.3.6, printed p. 84 (PDF p. 92).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="adaptive-control"
+        class="step realism-slide theme-framed-slide theme-focus-all"
+        data-x="0"
+        data-y="383000"
+        data-scale="25"
+      >
+        <h2 class="realism-title">Keeping the model in view</h2>
+        <div class="theme-rail" aria-label="Economic, Workload, Performance and Error Margin">
+          <span class="theme-name theme-economic theme-current">Economic</span>
+          <span class="theme-name theme-workload theme-current">Workload</span>
+          <span class="theme-name theme-performance theme-current">Performance</span>
+          <span class="theme-name theme-margin theme-current">Error Margin</span>
+        </div>
+        <p class="realism-lede">Three constraints and a protected performance buffer.</p>
+
+        <figure class="adaptive-model" aria-label="One operating state, three constraints and an error margin only on the performance side">
+          <img class="adaptive-model-outline" src="/images/srecon24/Rasmussen_plain_outline.png" alt="" />
+          <img class="adaptive-model-margin" src="/images/srecon24/Rasmussen_error_margin.png" alt="" />
+          <img class="adaptive-model-point" src="/images/operating-point.svg" alt="" />
+          <figcaption>Current operating state</figcaption>
+        </figure>
+        <div class="substep adaptive-response adaptive-economic">
+          <h3>Economic</h3>
+          <p>Count cost per<br />verified outcome.</p>
+        </div>
+        <div class="substep adaptive-response adaptive-workload">
+          <h3>Workload</h3>
+          <p>Match admitted work<br />to review capacity.</p>
+        </div>
+        <div class="substep adaptive-response adaptive-performance">
+          <h3>Performance</h3>
+          <p>Test joint outcomes,<br />including mistakes.</p>
+        </div>
+        <div class="substep adaptive-response adaptive-margin">
+          <h3>Error Margin</h3>
+          <p>Maintain detection<br />and recovery capacity.</p>
+        </div>
+
+        <p class="substep realism-conclusion">Use AI to improve assurance as well as output.</p>
+        <p class="realism-source"><a href="https://doi.org/10.1016/S0925-7535(97)00052-0" target="_blank" rel="noreferrer">Rasmussen (1997)</a>. <a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5" target="_blank" rel="noreferrer">Chapter 5</a> applied through this talk’s boundary model.</p>
+        <div class="notes">
+          <p>Keep the four audience themes tied to one model. Economic failure, unacceptable workload and functionally unacceptable performance constrain the feasible operating space. The error margin is the protected performance-side buffer, not an additional constraint. This closing arrangement is the talk&#x27;s synthesis; Chapter 5 does not use Rasmussen&#x27;s model.</p>
+
+          <p>Economic: evaluate cost per completed, verified, valuable outcome. Include the work transferred to reviewers, maintainers and responders, along with future coupling and recovery costs. Budgets and quotas guide control; they do not themselves define the actual viability constraint.</p>
+
+          <p>Workload: match admitted work to focused review capacity and contextual knowledge. Change scope, timing or demand when verification cannot keep pace. Queue growth does not alone prove a defect increase; risk additionally depends on adaptations that shed assurance.</p>
+
+          <p>Performance: evaluate people and tools together across good, mediocre and poor outputs, including convincing mistakes. Repeat appropriate evaluation as models, workflow, staffing and dependencies change. Operational signals remain imperfect proxies for the functional limit.</p>
+
+          <p>Error Margin: maintain usable signals, authority to intervene and practiced recovery. The margin does not act on its own. Timely interpretation and a capable response let feedback restore margin and recoverability.</p>
+
+          <p>Sense, Constrain, Adapt and Correct remain useful action verbs supporting these themes, rather than a second audience framework. Use AI to strengthen testing, diagnosis and verification where joint evidence supports it. The desired outcome is sufficient margin, bounded excursions and recoverability, with no privileged geometric center.</p>
+
+          <p>Sources</p>
+          <ul>
+            <li><a href="https://doi.org/10.1016/S0925-7535%2897%2900052-0">Rasmussen — Risk management in a dynamic society: A modelling problem (1997)</a>, Figure 3 and discussion of adaptation and control.</li>
+            <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5">Rayo, Morey, Grøtan and Woods — AI Gold Rush 2 Versus AI Realism (2026), Chapter 5</a>, §5.2.4, printed p. 81 (supplied PDF p. 89), and §§5.4–5.5, printed pp. 84–86 (PDF pp. 92–94).</li>
+          </ul>
         </div>
       </section>
     </main>
