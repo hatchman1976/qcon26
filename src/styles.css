@@ -1606,6 +1606,14 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   animation: social-arrow-pulse 1600ms ease-in-out both;
 }
 
+#social-and-systems-wiki .social-arrow-pulse {
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  background: radial-gradient(circle at 35% 30%, #fff36c 0 18%, #ff9500 40%, #ff5200 78%);
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #b33e00, 0 0 12px 3px rgb(255 106 0 / 75%);
+}
+
 @keyframes social-arrow-pulse {
   0%,
   100% {
@@ -2585,6 +2593,100 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
     opacity: 1;
   }
 }
+
+/* AI arrives at one operating state before the camera opens onto its constraints. */
+.ai-journey-slide { background: var(--surface-introduction); }
+#impress .ai-journey-slide:not(.active) { opacity: 0; pointer-events: none; }
+body.impress-on-ai-operating-point,
+body.impress-on-ai-fish-diagram,
+body.impress-on-ai-economic-pressure,
+body.impress-on-ai-workload-pressure,
+body.impress-on-ai-margin-pressure { background: var(--surface-introduction); }
+.ai-arrival-slide { overflow: hidden; }
+.ai-arrival-title { position: absolute; top: 90px; left: 50px; right: 50px; margin: 0; font-family: "Maven Pro", sans-serif; font-size: 54px; font-weight: 500; line-height: 1.1; text-align: center; }
+.ai-arrival-point { position: absolute; top: 320px; left: 440px; width: 140px; height: 140px; }
+.ai-arrival-reveal { position: absolute; inset: 0; }
+.ai-arrival-ball { position: absolute; top: 310px; left: 430px; width: 160px; height: 160px; object-fit: contain; }
+.ai-arrival-reveal.substep-visible .ai-arrival-ball { animation: ai-ball-roll-in 2400ms cubic-bezier(0.18, 0.65, 0.3, 1) both; }
+.ai-arrival-question { position: absolute; left: 60px; right: 60px; top: 565px; margin: 0; font-family: "Comic Neue", cursive; font-size: 38px; font-weight: 700; line-height: 1.15; }
+.ai-arrival-reveal.substep-visible .ai-arrival-question { animation: ai-question-arrive 2800ms ease both; }
+@keyframes ai-ball-roll-in { from { transform: translateX(-650px) rotate(-720deg); } to { transform: translateX(0) rotate(0); } }
+@keyframes ai-question-arrive { 0%, 80% { opacity: 0; } 100% { opacity: 1; } }
+.ai-fish-model { position: absolute; inset: 0; }
+.ai-fish-margin { position: absolute; top: 131px; left: 230px; width: 385px; height: auto; }
+.ai-roaming-point-position { position: absolute; top: 369px; left: 477px; width: 70px; height: 70px; will-change: transform; }
+.ai-roaming-point-position.is-moving { transition: transform 6000ms ease-in-out; }
+.ai-roaming-point { display: block; width: 100%; height: 100%; object-fit: contain; }
+body.impress-on-ai-economic-pressure #impress #ai-fish-diagram,
+body.impress-on-ai-workload-pressure #impress #ai-fish-diagram,
+body.impress-on-ai-margin-pressure #impress #ai-fish-diagram { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .ai-arrival-reveal.substep-visible .ai-arrival-ball,
+  .ai-arrival-reveal.substep-visible .ai-arrival-question { animation: none; }
+}
+
+/* Fish-diagram close-ups contain plain content in the diagram's coordinate space. */
+.boundary-detail-slide {
+  padding: 36px 46px;
+  height: 780px;
+}
+.boundary-detail-icon { position: absolute; left: 42px; top: 35px; width: 105px; height: 110px; font-size: 86px; line-height: 1.2; text-align: center; }
+.boundary-detail-title { margin: 0 0 0 130px; font-family: "Maven Pro", sans-serif; font-weight: 500; font-size: 46px; line-height: 1.08; letter-spacing: -1.5px; }
+.boundary-detail-lede { margin: 18px 0 0 130px; font-size: 26px; line-height: 1.22; text-align: left; letter-spacing: -0.6px; }
+.boundary-detail-grid { position: absolute; left: 46px; right: 46px; top: 215px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.boundary-detail-copy { padding: 18px 18px 12px; }
+.boundary-detail-copy h3 { margin: 0 0 18px; font-family: "Comic Neue", cursive; font-size: 34px; line-height: 1.05; letter-spacing: -0.5px; }
+.boundary-detail-copy ul { margin: 0; padding-left: 25px; }
+.boundary-detail-copy li { margin: 0 0 20px; font-size: 25px; line-height: 1.25; letter-spacing: -0.5px; }
+.boundary-detail-copy li:last-child { margin-bottom: 8px; }
+.ai-pressure-slide .boundary-detail-copy li { font-size: 24px; margin-bottom: 17px; }
+.ai-pressure-slide small { font-size: 18px; letter-spacing: 0; }
+.boundary-detail-conclusion { position: absolute; bottom: 77px; left: 46px; right: 46px; margin: 0; font-family: "Comic Neue", cursive; font-size: 28px; font-weight: 700; line-height: 1.18; text-align: left; }
+.boundary-detail-source { position: absolute; bottom: 25px; left: 46px; right: 46px; margin: 0; font-size: 17px; letter-spacing: 0; line-height: 1.2; text-align: left; }
+.boundary-detail-source a { font-family: inherit; }
+.boundary-action-table { position: absolute; top: 205px; left: 46px; right: 46px; width: 928px; border-collapse: collapse; font-size: 23px; line-height: 1.23; letter-spacing: -0.5px; }
+.boundary-action-table th { padding: 12px 16px; text-align: left; font-family: "Comic Neue", cursive; font-size: 28px; }
+.boundary-action-table td { padding: 14px 16px; text-align: left; vertical-align: top; }
+.boundary-action-table th:first-child { width: 42%; }
+.boundary-action-table strong { font-weight: 650; }
+.workslop-bucket { position: absolute; left: 46px; top: 225px; width: 235px; margin: 0; }
+.workslop-bucket img { width: 235px; height: 345px; object-fit: contain; }
+.workslop-bucket figcaption { margin-top: 8px; font-family: "Comic Neue", cursive; font-size: 23px; font-weight: 700; line-height: 1.1; text-align: center; }
+.workslop-chain { position: absolute; top: 210px; left: 320px; right: 46px; }
+.workslop-chain > div { margin-bottom: 24px; padding-left: 20px; }
+.workslop-chain h3 { margin: 0 0 8px; font-family: "Comic Neue", cursive; font-size: 31px; line-height: 1.1; }
+.workslop-chain p { margin: 0; font-size: 24px; line-height: 1.25; text-align: left; letter-spacing: -0.6px; }
+.workslop-evidence { position: absolute; top: 602px; left: 320px; right: 46px; margin: 0; font-size: 22px; line-height: 1.2; text-align: left; letter-spacing: -0.5px; }
+.workslop-evidence span { font-size: 18px; letter-spacing: 0; }
+.ai-workslop-slide .boundary-detail-conclusion { bottom: 68px; font-size: 27px; }
+.margin-pressure-scene { position: absolute; left: 38px; top: 211px; width: 440px; height: 395px; overflow: hidden; }
+.margin-pressure-scene svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.margin-functional-line, .margin-perceived-line { fill: none; stroke: #263846; stroke-width: 4; }
+.margin-perceived-line { stroke-dasharray: 3 10; stroke-linecap: round; }
+.margin-pressure-scene text { font-family: "Comic Neue", cursive; font-size: 19px; font-weight: 700; letter-spacing: 0; }
+.margin-pressure-scene .margin-buffer-label { font-size: 22px; fill: #725436; text-anchor: middle; }
+.margin-last-point { position: absolute; left: 318px; top: 143px; width: 26px; height: 26px; opacity: 0.48; }
+.margin-last-label { position: absolute; left: 283px; top: 184px; font-size: 18px; letter-spacing: 0; }
+.margin-actual-position { position: absolute; left: 309px; top: 134px; width: 44px; height: 44px; z-index: 3; }
+.margin-actual-position img { width: 100%; height: 100%; }
+.margin-pressure-scene.is-running .margin-actual-position { animation: ai-margin-drift 10500ms ease-in-out both; }
+.margin-actual-label { position: absolute; left: 62px; top: 83px; width: 57px; font-size: 16px; line-height: 1.08; letter-spacing: 0; opacity: 0; }
+.margin-pressure-scene.is-running .margin-actual-label { animation: ai-question-arrive 11000ms ease both; }
+.margin-bucket-pile { position: absolute; inset: 0; z-index: 2; }
+.margin-bucket { position: absolute; width: 57px; height: 85px; object-fit: contain; animation: slop-bucket-descend 3800ms ease-in-out both; }
+.margin-scene-caption { position: absolute; left: 252px; bottom: 4px; margin: 0; font-family: "Comic Neue", cursive; font-size: 21px; font-weight: 700; line-height: 1.1; text-align: left; }
+.margin-pressure-risks { position: absolute; top: 220px; left: 510px; right: 46px; }
+.margin-pressure-risks > div { padding-left: 18px; margin-bottom: 27px; }
+.margin-pressure-risks h3 { margin: 0 0 8px; font-family: "Comic Neue", cursive; font-size: 29px; line-height: 1.05; }
+.margin-pressure-risks p { margin: 0; font-size: 22px; line-height: 1.23; text-align: left; letter-spacing: -0.4px; }
+.margin-pressure-evidence { position: absolute; top: 604px; left: 46px; right: 46px; margin: 0; font-size: 23px; line-height: 1.25; text-align: left; letter-spacing: -0.5px; }
+.margin-pressure-evidence span { font-size: 18px; letter-spacing: 0; }
+.ai-margin-slide .boundary-detail-conclusion { bottom: 68px; font-size: 27px; }
+@keyframes slop-bucket-descend { from { transform: translateY(-430px) rotate(-10deg); opacity: 0; } 15% { opacity: 1; } to { transform: translateY(0) rotate(0); opacity: 1; } }
+@keyframes ai-margin-drift { 0%, 15% { transform: translateX(0); } 100% { transform: translateX(-245px); } }
+.margin-pressure-scene.is-settled .margin-actual-position { transform: translateX(-245px); }
+.margin-pressure-scene.is-settled .margin-actual-label { opacity: 1; }
+.margin-pressure-scene.is-settled .margin-bucket { animation: none; }
 
 @media print {
   html,

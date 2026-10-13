@@ -102,9 +102,9 @@ function stopRoamingPoint() {
   roamingPointCenter = roamingPointStart;
 }
 
-function isInsidePlayingSurface(x, y) {
+function isInsidePlayingSurface(x, y, clearance = 23) {
   // Keep the whole 35px circle clear of the boundary, not just its centre.
-  return [[0, 0], [-23, 0], [23, 0], [0, -23], [0, 23]].every(([dx, dy]) =>
+  return [[0, 0], [-clearance, 0], [clearance, 0], [0, -clearance], [0, clearance]].every(([dx, dy]) =>
     playingSurfaceContext.isPointInPath(playingSurfacePath, x + dx, y + dy)
   );
 }
@@ -293,6 +293,98 @@ document.addEventListener("impress:stepenter", (event) => {
   if (event.target.id === "the-fish-diagram" && guardianActionsStep.classList.contains("substep-visible")) {
     startGuardianActions();
   }
+});
+
+const aiRoamingPoint = document.querySelector(".ai-roaming-point-position");
+let aiRoamingTimeout;
+let aiRoamingCenter = { x: 512, y: 404 };
+
+function stopAiRoaming() {
+  window.clearTimeout(aiRoamingTimeout);
+  aiRoamingTimeout = undefined;
+  aiRoamingPoint.classList.remove("is-moving");
+  aiRoamingPoint.style.transform = "translate3d(0, 0, 0)";
+  aiRoamingCenter = { x: 512, y: 404 };
+}
+
+function moveAiRoamingPoint() {
+  if (!document.querySelector("#ai-fish-diagram.active") || prefersReducedMotion.matches) return;
+  const candidates = [];
+  for (let attempt = 0; attempt < 160; attempt += 1) {
+    const x = 290 + Math.random() * 490;
+    const y = 185 + Math.random() * 345;
+    if (isInsidePlayingSurface(x, y, 42) && Math.hypot(x - aiRoamingCenter.x, y - aiRoamingCenter.y) > 80) {
+      candidates.push({ x, y });
+    }
+  }
+  if (candidates.length === 0) {
+    candidates.push(...roamingPointFallbacks.filter(([x, y]) => isInsidePlayingSurface(x, y, 42))
+      .map(([x, y]) => ({ x, y })));
+  }
+  candidates.sort((a, b) => a.x - b.x);
+  const destination = candidates[Math.floor(Math.random() ** 2 * candidates.length)];
+  if (!destination) return;
+  aiRoamingPoint.classList.add("is-moving");
+  aiRoamingPoint.style.transform = `translate3d(${destination.x - 512}px, ${destination.y - 404}px, 0)`;
+  aiRoamingCenter = destination;
+  aiRoamingTimeout = window.setTimeout(moveAiRoamingPoint, 6800);
+}
+
+document.addEventListener("impress:stepenter", (event) => {
+  if (event.target.id !== "ai-fish-diagram") return;
+  stopAiRoaming();
+  if (!prefersReducedMotion.matches) aiRoamingTimeout = window.setTimeout(moveAiRoamingPoint, 1200);
+});
+document.addEventListener("impress:stepleave", (event) => {
+  if (event.target.id === "ai-fish-diagram") stopAiRoaming();
+});
+prefersReducedMotion.addEventListener("change", () => {
+  stopAiRoaming();
+  if (!prefersReducedMotion.matches && document.querySelector("#ai-fish-diagram.active")) {
+    aiRoamingTimeout = window.setTimeout(moveAiRoamingPoint, 1200);
+  }
+});
+
+const marginScene = document.querySelector(".margin-pressure-scene");
+const marginPile = document.querySelector(".margin-bucket-pile");
+const marginBucketSlots = [[120, 272], [163, 279], [95, 245], [144, 231], [179, 251], [114, 200], [153, 195], [134, 163]];
+let marginBucketTimers = [];
+
+function stopMarginPile() {
+  marginBucketTimers.forEach((timer) => window.clearTimeout(timer));
+  marginBucketTimers = [];
+  marginScene.classList.remove("is-running", "is-settled");
+  marginPile.replaceChildren();
+}
+
+function startMarginPile() {
+  stopMarginPile();
+  marginScene.classList.add(prefersReducedMotion.matches ? "is-settled" : "is-running");
+  marginBucketSlots.forEach(([x, y], index) => {
+    const addBucket = () => {
+      if (!document.querySelector("#ai-margin-pressure.active")) return;
+      const bucket = document.createElement("img");
+      bucket.className = "margin-bucket";
+      bucket.src = "/images/srecon26/ai-slop-bucket.png";
+      bucket.alt = "";
+      bucket.style.left = `${x}px`;
+      bucket.style.top = `${y}px`;
+      marginPile.appendChild(bucket);
+    };
+    if (prefersReducedMotion.matches) addBucket();
+    else marginBucketTimers.push(window.setTimeout(addBucket, 350 + index * 1150));
+  });
+}
+
+document.addEventListener("impress:stepenter", (event) => {
+  if (event.target.id === "ai-margin-pressure") startMarginPile();
+});
+document.addEventListener("impress:stepleave", (event) => {
+  if (event.target.id === "ai-margin-pressure") stopMarginPile();
+});
+prefersReducedMotion.addEventListener("change", () => {
+  if (document.querySelector("#ai-margin-pressure.active")) startMarginPile();
+  else stopMarginPile();
 });
 
 window.impress().init();

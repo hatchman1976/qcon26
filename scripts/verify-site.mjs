@@ -17,6 +17,17 @@ const requiredMarkers = [
   'id="diagram-legend"',
   'id="the-fish-diagram"',
   'id="ai-behaviour"',
+  'id="economic-boundary"',
+  'id="economic-boundary-actions"',
+  'id="workload-boundary"',
+  'id="workload-boundary-actions"',
+  'id="performance-boundary"',
+  'id="error-margin"',
+  'id="ai-operating-point"',
+  'id="ai-fish-diagram"',
+  'id="ai-economic-pressure"',
+  'id="ai-workload-pressure"',
+  'id="ai-margin-pressure"',
   'id="social-and-systems-wiki"',
   'id="before-we-continue"',
   'id="social-and-systems"',
@@ -101,6 +112,7 @@ const requiredFiles = [
   "images/srecon26/logo-ai-mashup.png",
   "images/srecon26/symbol-equals.png",
   "images/srecon26/complex-sign-transparent.png",
+  "images/srecon26/ai-slop-bucket.png",
   "images/srecon24/Rasmussen_plain_outline.png",
   "images/srecon24/Rasmussen_boundary_performance.png",
   "images/srecon24/Rasmussen_boundary_economic.png",
@@ -126,8 +138,8 @@ await Promise.all(requiredFiles.map((file) => access(resolve(siteRoot, file))));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount !== 25) {
-  throw new Error(`Expected exactly twenty-five impress.js steps, found ${stepCount}`);
+if (stepCount !== 30) {
+  throw new Error(`Expected exactly thirty impress.js steps, found ${stepCount}`);
 }
 
 console.log(`Verified src/index.html with ${stepCount} presentation steps.`);

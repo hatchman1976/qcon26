@@ -26,9 +26,17 @@ The talk adapts Rasmussen's Dynamic Safety Model and the 2024 SREcon presentatio
 16. AI and the error margin: notice, intervene and recover before the buffer is exhausted
 17. Keeping the model in view: Economic, Workload, Performance and Error Margin
 
-The rendered deck has 17 main slides and eight fish-diagram camera steps, for 25 Impress steps.
+The rendered deck has 28 content steps and two overview/overlay camera steps, for 30 Impress steps. Between Diagram Legend and Human behaviour, the six boundary close-ups now contain examples and actions. The fish overview is followed by the five-step AI camera journey: arrival, clean roaming model, economics, workload and error-margin drift. See the full ordered list in [slides/README.md](slides/README.md).
 
 The matching one-slide-per-file notes are listed in [`slides/README.md`](slides/README.md).
+
+## Boundary examples and the AI camera journey
+
+The original close-ups distinguish external financial capacity from internal targets, and effective workload capacity from incoming demand. Signal-to-action tables show cost efficiency, least-effort adaptation and protection. The acceptable-performance step distinguishes actual unacceptable outcomes from crossing the dotted warning.
+
+The five new AI steps reuse the coloured AI logo and Andrew’s SREcon26 slop-bucket artwork. The ball rolls over one operating point, the camera expands to a clean model, and the ball roams. The economics camera shows ETR’s 2026 budget overruns, the Uber CTO’s reported early budget exhaustion, and Workday’s 2025 workforce/investment priorities. The workload camera shows workslop, proxying judgment and intensified parallel work. The error-margin camera illustrates unfinished handoffs accumulating while the actual state outruns observation, with security and incident-understanding risks explicitly identified as inferences.
+
+[Evidence and scope](research/2026-10-13-ai-boundary-evidence.md) preserve dates, populations and causal limits. The story does not establish universal layoffs to fund AI, universally lower-quality output, or a causal burnout hierarchy by tool skill. Buckets and motion are explanatory metaphors. Reduced-motion mode keeps the same reveal and final-state information without animation.
 
 ## The closing sequence: keep the four themes in view
 

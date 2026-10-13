@@ -4,40 +4,20 @@
 
 **The Fish Diagram**
 
-Starting state:
+Starting state: no boundary lines or operating point yet.
 
-- The QCon logo marks **where we are now**
-- The logo is the **operating point**
-- No boundary lines yet
+Presenter reveals, in order:
 
-Reveal 1:
-
-- Draw the acceptable-performance boundary
-- 💥 **The system stops working**
-
-Reveal 2:
-
-- Draw the economic boundary
-- 💸 **Money runs out**
-
-Reveal 3:
-
-- Draw the workload boundary
-- 😫 **People cannot keep up**
-
-Reveal 4:
-
-- “Cheaper and faster”
-- “Make it easier”
-
-Reveal 5:
-
-**Where we think the edge is**
-
-Reveal 6:
-
-**The dot moves. The edges can move too.**<br>
-**There is no magic center. Nothing pushes us back.**
+1. Economic boundary and 💸 label.
+2. Workload boundary and 😢 label.
+3. Functionally acceptable-performance boundary and 💥 label.
+4. Dotted performance-side line and **Error Margin**.
+5. Red **Operating Point**, representing one whole-system state.
+6. Shaded **Playing Surface**.
+7. Economic boundary shifts inward and outward against its original reference.
+8. Workload boundary shifts inward and outward against its original reference.
+9. A moving operating point starts; the shaded surface fades.
+10. Cost charts, effort-saving hands and safety tanks arrive across the model.
 
 After all tank, hand, and chart arrival animations finish, automatically draw two arrows over 1.8 seconds, followed by their arrowheads and labels:
 
@@ -74,3 +54,9 @@ Adult one-sentence version: one current operating state moves within economic, w
 - [Figure 3 and the discussion of effort and cost gradients](https://backend.orbit.dtu.dk/ws/files/158016663/SAFESCI.PDF#page=10)
 - [The Model — SREcon24 presentation](https://srecon24.hatchman76.com/#/the-model)
 - [QCon San Francisco](https://qconsf.com/)
+
+## Following camera steps
+
+After Diagram Legend, the camera returns to this model, visits six boundary/action close-ups, then returns to the overview. The close-ups add examples of external economic capacity, sustainable workload capacity, signal-to-action choices, consequences of functional failure and protection of the performance-side margin. Each has its own source/notes file in [the ordered slide list](README.md).
+
+The next camera journey introduces AI at the same operating point, expands to the clean model, then inspects AI economics, workload and the error margin before returning to the existing human-behaviour material.

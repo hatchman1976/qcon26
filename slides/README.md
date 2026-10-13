@@ -14,15 +14,26 @@ The numbered Markdown files in this directory mirror the rendered Impress deck i
 8. [Putting it Together](07a-complex-system-and-boundaries.md) — `#/complex-system-and-boundaries`
 9. [The Fish Diagram](08-fish-diagram.md) — `#/the-fish-diagram`
 10. [Diagram Legend](09-diagram-legend.md) — `#/diagram-legend`
-11. [Human behaviour with LLM tools](10-ai-behaviour.md) — `#/ai-behaviour`
-12. [AI enters the control structure](11-ai-control-structure.md) — `#/ai-control-structure`
-13. [AI and the economic boundary](12-ai-economic-boundary.md) — `#/ai-economic-boundary`
-14. [AI and the workload boundary](13-ai-intervention.md) — `#/ai-intervention`
-15. [AI and acceptable performance](14-ai-joint-evaluation.md) — `#/ai-joint-evaluation`
-16. [AI and the error margin](15-automation-recovery.md) — `#/automation-recovery`
-17. [Keeping the model in view](16-adaptive-control.md) — `#/adaptive-control`
+11. [Economic Boundary](09a-economic-boundary.md) — `#/economic-boundary`
+12. [Economic Boundary Actions](09b-economic-boundary-actions.md) — `#/economic-boundary-actions`
+13. [Workload Boundary](09c-workload-boundary.md) — `#/workload-boundary`
+14. [Workload Boundary Actions](09d-workload-boundary-actions.md) — `#/workload-boundary-actions`
+15. [Boundary of Acceptable Performance](09e-performance-boundary.md) — `#/performance-boundary`
+16. [Protect the Error Margin](09f-error-margin.md) — `#/error-margin`
+17. [AI enters the operating point](09g-ai-operating-point.md) — `#/ai-operating-point`
+18. [AI in the Fish Diagram](09h-ai-fish-diagram.md) — `#/ai-fish-diagram`
+19. [AI has to be paid for](09i-ai-economic-pressure.md) — `#/ai-economic-pressure`
+20. [AI and least effort](09j-ai-workload-pressure.md) — `#/ai-workload-pressure`
+21. [Change can outrun our view](09k-ai-margin-pressure.md) — `#/ai-margin-pressure`
+22. [Human behaviour with LLM tools](10-ai-behaviour.md) — `#/ai-behaviour`
+23. [AI enters the control structure](11-ai-control-structure.md) — `#/ai-control-structure`
+24. [AI and the economic boundary](12-ai-economic-boundary.md) — `#/ai-economic-boundary`
+25. [AI and the workload boundary](13-ai-intervention.md) — `#/ai-intervention`
+26. [AI and acceptable performance](14-ai-joint-evaluation.md) — `#/ai-joint-evaluation`
+27. [AI and the error margin](15-automation-recovery.md) — `#/automation-recovery`
+28. [Keeping the model in view](16-adaptive-control.md) — `#/adaptive-control`
 
-The deck contains 17 main slides and eight fish-diagram camera steps, for 25 Impress steps. The economic slide and four closing slides repeat the **Economic / Workload / Performance / Error Margin** theme rail. The active theme is emphasized until the closing model synthesis brings all four into view. Error Margin is the protected performance-side buffer, not a fourth constraint. IDs and filenames remain stable for existing bookmarks.
+The deck contains 28 content steps and two overview/overlay camera steps, for 30 Impress steps. The six original boundary close-ups now contain examples, signals and actions. A five-step AI camera journey follows the fish overview and leads into the existing human-behaviour material. The economic slide and four closing slides repeat the **Economic / Workload / Performance / Error Margin** theme rail. The active theme is emphasized until the closing model synthesis brings all four into view. Error Margin is the protected performance-side buffer, not a fourth constraint. IDs and filenames remain stable for existing bookmarks.
 
 The notes distinguish Rasmussen's framework, Chapter 5's synthesis, and this talk's software application. Chapter 5 was checked against the supplied full PDF, printed pp. 77–88 (PDF pp. 85–96). The AWS recovery example is retained in the Error Margin notes, with its conventional-automation scope explicit.
 

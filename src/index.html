@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#cfd8dc" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=92" />
+    <link rel="stylesheet" href="/styles.css?v=95" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
@@ -178,7 +178,7 @@
           Reveal 1: show the people and complex system separately.
           Reveal 2: frame both with magnifying glasses to emphasize separate inspection.
           Reveal 3: show people distributed across the complex system.
-          Reveal 4: keep light orange points pulsing at random arrow locations to draw attention to interactions between nodes.
+          Reveal 4: keep bright orange points with yellow highlights and a bold rim pulsing at random arrow locations to draw attention to interactions between nodes.
 
           This names the system the talk will examine and prepares Rasmussen's control hierarchy later in the
           sequence.
@@ -701,57 +701,218 @@
 
       <section
         id="economic-boundary"
-        class="step"
+        class="step boundary-detail-slide"
         data-x="8400"
         data-y="200975"
         data-scale="3.55392"
-        style="height: 680px"
-      ></section>
+      >
+        <span class="boundary-detail-icon" aria-hidden="true">💸</span>
+        <h2 class="boundary-detail-title">Economic Boundary</h2>
+        <p class="boundary-detail-lede">External conditions change what the business can sustain.</p>
+        <div class="boundary-detail-grid">
+          <div class="boundary-detail-copy">
+            <h3>More room to operate</h3>
+            <ul>
+              <li>Stronger demand and better pricing power</li>
+              <li>Fresh funding or cheaper financing</li>
+              <li>Lower energy, supplier or infrastructure costs</li>
+            </ul>
+          </div>
+          <div class="substep boundary-detail-copy">
+            <h3>Less room to operate</h3>
+            <ul>
+              <li>Market slowdown, churn or price competition</li>
+              <li>Costlier credit or funding that dries up</li>
+              <li>Higher supplier costs or currency shocks</li>
+            </ul>
+          </div>
+        </div>
+        <p class="boundary-detail-conclusion">Sustainable capacity changes the boundary.<br />A tighter internal budget changes the target.</p>
+        <p class="boundary-detail-source">Model: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figures 1 &amp; 3</a> · Business examples: this talk’s application.</p>
+        <div class="notes">
+          These are common external conditions, not measurements of a universal boundary. Holding the work and
+          commitments broadly constant, stronger sustainable revenue, accessible capital or a lower sustainable
+          cost base can expand financial viability. Losing them can contract it. Favorable demand also brings work:
+          growth does not automatically increase every margin. An internal cost target or budget cut is a management
+          decision; it is not itself the actual economic-failure constraint. Watch actual cash, obligations and value.
+        </div>
+      </section>
 
       <section
         id="economic-boundary-actions"
-        class="step"
+        class="step boundary-detail-slide"
         data-x="8335"
         data-y="203765"
         data-scale="2.94458"
-        style="height: 690px"
-      ></section>
+      >
+        <span class="boundary-detail-icon" role="img" aria-label="Downward cost chart">📉</span>
+        <h2 class="boundary-detail-title">Economic Boundary Actions</h2>
+        <p class="boundary-detail-lede">Signals become decisions that push toward cost efficiency.</p>
+        <table class="boundary-action-table">
+          <thead><tr><th>Leading signal / metric</th><th>Possible management action</th></tr></thead>
+          <tbody>
+            <tr><td>Forecast cash burn ↑<br />Runway ↓</td><td>Reduce scope; defer investment;<br />reprioritize commitments</td></tr>
+            <tr><td>Cost per verified outcome ↑</td><td>Renegotiate suppliers; rightsize resources;<br />remove low-value work</td></tr>
+            <tr><td>Idle capacity or unused licences ↑</td><td>Consolidate platforms; retire unused capacity;<br />check redundancy before cutting</td></tr>
+            <tr><td>Projected margin ↓</td><td>Freeze hiring; reduce staffing or maintenance<br /><strong>→ savings can transfer risk</strong></td></tr>
+          </tbody>
+        </table>
+        <p class="boundary-detail-conclusion">The gradient points toward cost efficiency.<br />Watch for lost assurance on the performance side.</p>
+        <p class="boundary-detail-source">Model: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figure 3</a> · Signals and responses: illustrative, not automatic rules.</p>
+        <div class="notes">
+          A forecast is a signal and a budget is a target. An actor with authority decides what to do. These are
+          possible organizational responses, not recommendations to reduce staffing or resilience. Unit economics
+          should include human verification and recovery. Right-sizing and retiring unused services can preserve
+          performance; cutting necessary expertise, maintenance or redundancy while retaining commitments can
+          consume performance margin. Validate the effect of savings across the whole workflow. Existing incidents
+          or realized losses are lagging outcomes; forecast cash and projected margins are earlier financial signals.
+        </div>
+      </section>
 
       <section
         id="workload-boundary"
-        class="step"
+        class="step boundary-detail-slide"
         data-x="6645"
         data-y="212575"
         data-scale="3.037465"
-        style="height: 688px"
-      ></section>
+      >
+        <span class="boundary-detail-icon" aria-hidden="true">😢</span>
+        <h2 class="boundary-detail-title">Workload Boundary</h2>
+        <p class="boundary-detail-lede">The sustainable capacity to do and understand the work can change.</p>
+        <div class="boundary-detail-grid">
+          <div class="boundary-detail-copy">
+            <h3>More room to operate</h3>
+            <ul>
+              <li>More trained people and relevant expertise</li>
+              <li>Better tools and reliable toil reduction</li>
+              <li>Protected focus, recovery time and knowledge sharing</li>
+            </ul>
+          </div>
+          <div class="substep boundary-detail-copy">
+            <h3>Less room to operate</h3>
+            <ul>
+              <li>Attrition, layoffs or unavailable specialists</li>
+              <li>Fatigue, burnout and constant interruptions</li>
+              <li>Fragile tooling and lost operational knowledge</li>
+            </ul>
+          </div>
+        </div>
+        <p class="boundary-detail-conclusion">Less effective capacity shortens the playing surface.<br />More incoming work also moves the operating point.</p>
+        <p class="boundary-detail-source">Model: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figure 3</a> · Capacity examples: this talk’s application.</p>
+        <div class="notes">
+          Holding the kind and quality of required work broadly constant, usable expert capacity can change the
+          sustainable workload limit. Headcount is an imperfect proxy: new hires need onboarding, relevant expertise,
+          tools and coordination. Greater raw demand is not itself a capacity expansion; it can instead move the
+          operating point toward the workload constraint. Automation can remove toil but adds maintenance and
+          exception work. Burnout and lost knowledge can reduce future effective capacity. These examples are
+          mechanisms for discussion, not a numerical mapping from staff count to diagram geometry.
+        </div>
+      </section>
 
       <section
         id="workload-boundary-actions"
-        class="step"
+        class="step boundary-detail-slide"
         data-x="5980"
         data-y="215595"
         data-scale="3.046219"
-        style="height: 686px"
-      ></section>
+      >
+        <span class="boundary-detail-icon" role="img" aria-label="Effort-saving hand">✋</span>
+        <h2 class="boundary-detail-title">Workload Boundary Actions</h2>
+        <p class="boundary-detail-lede">People adapt toward least effort when demand strains capacity.</p>
+        <table class="boundary-action-table">
+          <thead><tr><th>Early signal / metric</th><th>Possible adaptation</th></tr></thead>
+          <tbody>
+            <tr><td>Queue age and work in progress ↑</td><td>Automate repeatable toil; improve tooling;<br />limit incoming work</td></tr>
+            <tr><td>Interruptions and handoffs ↑<br />Focus time ↓</td><td>Batch tasks; standardize paths;<br />simplify tools and coordination</td></tr>
+            <tr><td>Overtime and fatigue ↑<br />Recovery time ↓</td><td>Reduce scope; protect rest; share on-call load<br /><strong>or rush and bypass checks</strong></td></tr>
+            <tr><td>Review findings and rework ↑</td><td>Improve tests and shared understanding<br /><strong>or accept output without examining it</strong></td></tr>
+          </tbody>
+        </table>
+        <p class="boundary-detail-conclusion">Reducing toil can preserve control.<br />Skipping checks saves effort now and creates work later.</p>
+        <p class="boundary-detail-source"><a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figure 3</a> · <a href="https://sre.google/workbook/eliminating-toil/">Google SRE: Eliminating Toil</a> · Illustrative signals and choices.</p>
+        <div class="notes">
+          The hand denotes the gradient toward least effort, not a moral judgment. Better technology and automation
+          can remove repeatable toil and improve assurance. They require maintenance, competence and exception
+          handling. Under pressure, equally understandable adaptations can thin verification or normalize rushed
+          handoffs. Queue age, interruptions and recovery time can warn of emerging capacity problems. Review
+          findings/rework are current quality feedback and possible warnings about future workload, not universally
+          leading indicators. Burnout is a condition to investigate with people, not a diagnosis from a single metric.
+          These actions do not guarantee a particular trajectory; watch their effect on verification and recovery.
+        </div>
+      </section>
 
       <section
         id="performance-boundary"
-        class="step"
+        class="step boundary-detail-slide"
         data-x="-9407"
         data-y="203879"
         data-scale="3.726491"
-        style="height: 671px"
-      ></section>
+      >
+        <span class="boundary-detail-icon" aria-hidden="true">💥</span>
+        <h2 class="boundary-detail-title">Boundary of<br />Acceptable Performance</h2>
+        <p class="boundary-detail-lede">Crossing the functional limit means unacceptable outcomes.</p>
+        <div class="boundary-detail-grid">
+          <div class="boundary-detail-copy">
+            <h3>Failure in the service</h3>
+            <ul>
+              <li>Outages and cascading system failures</li>
+              <li>Lost, corrupted or exposed customer data</li>
+              <li>Recovery that cannot restore service in time</li>
+            </ul>
+          </div>
+          <div class="substep boundary-detail-copy">
+            <h3>Harm beyond the service</h3>
+            <ul>
+              <li>Customer operations disrupted; safety put at risk</li>
+              <li>Trust and reputation damaged</li>
+              <li>Contractual losses or regulatory consequences</li>
+            </ul>
+          </div>
+        </div>
+        <p class="boundary-detail-conclusion">The solid line is the functional limit.<br />The dotted line is our earlier, fallible warning.</p>
+        <p class="boundary-detail-source"><a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figure 3</a> · Software consequences: illustrative and context-dependent.</p>
+        <div class="notes">
+          The acceptable-performance boundary is defined by the system's required functions and tolerated harms.
+          Not every crossing is an immediate catastrophe: an unacceptable outcome can be local or escalate through
+          dependencies. Availability, data integrity, confidentiality and safe recovery are software examples.
+          Reputation, commercial losses and regulatory consequences can follow that failure; they are not separate
+          Rasmussen boundaries. Formal SLOs and compliance checks are useful proxies, not an exact picture of the
+          true functional limit. Crossing the dotted perceived boundary enters the protected error margin; it does
+          not prove a failure has already occurred. The model does not provide a measurable distance to catastrophe.
+        </div>
+      </section>
 
       <section
         id="error-margin"
-        class="step"
+        class="step boundary-detail-slide"
         data-x="-4213"
         data-y="206476"
         data-scale="4.262906"
-        style="height: 719px"
-      ></section>
+      >
+        <img class="boundary-detail-icon" src="/images/srecon24/cartoon-tank.png" alt="Safety action" />
+        <h2 class="boundary-detail-title">Protect the Error Margin</h2>
+        <p class="boundary-detail-lede">Notice, act and recover before the functional limit is crossed.</p>
+        <table class="boundary-action-table">
+          <thead><tr><th>Signal / concern</th><th>Action that preserves margin</th></tr></thead>
+          <tbody>
+            <tr><td>Blind spots or stale telemetry</td><td>Improve monitoring; check user journeys;<br />connect alerts to an owner who can act</td></tr>
+            <tr><td>Saturation or shrinking headroom</td><td>Improve software efficiency; load-test;<br />add scalable capacity and tested redundancy</td></tr>
+            <tr><td>Changes exceed verification capacity</td><td>Limit admission; use canaries and rollback;<br />retain independent review and access controls</td></tr>
+            <tr><td>Slow or uncertain recovery</td><td>Exercise failover and restore; update runbooks;<br />practice diagnosis and share expertise</td></tr>
+          </tbody>
+        </table>
+        <p class="boundary-detail-conclusion">Monitoring is a sensor. Protection needs a response.<br />Preserve time, authority and the ability to recover.</p>
+        <p class="boundary-detail-source"><a href="https://sre.google/sre-book/monitoring-distributed-systems/">Google SRE: Monitoring</a> · <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figure 3</a> · Engineering applications.</p>
+        <div class="notes">
+          The dotted line represents a fallible perceived limit. Crossing it consumes the deliberately protected
+          error margin; failure is not inevitable at that point. An alert does not push the operating point back.
+          It needs timely interpretation, authority to slow or change work and people with tools to execute a
+          response. Capacity, efficiency and redundancy may improve feasible performance, but need realistic load,
+          failure and recovery testing: correlated dependencies can defeat nominal redundancy. Canaries, least
+          privilege, independent review, rollback and restore exercises preserve bounded excursions and recovery.
+          An error budget is a service-management mechanism, not a geometric measurement of Rasmussen's error margin.
+        </div>
+      </section>
 
       <section
         id="fish-diagram-overview"
@@ -761,11 +922,175 @@
         data-scale="25"
       ></section>
 
+      <section id="ai-operating-point" class="step ai-journey-slide ai-arrival-slide"
+        data-x="50" data-y="233350" data-scale="7">
+        <h2 class="ai-arrival-title">Here is our operating point.</h2>
+        <img class="ai-arrival-point" src="/images/operating-point.svg" alt="Red circle representing the whole system’s current operating state" />
+        <div class="substep ai-arrival-reveal">
+          <img class="ai-arrival-ball" src="/images/srecon26/logo-ai-mashup.png" alt="The coloured AI ball rolls in from the left and covers the operating point" />
+          <p class="ai-arrival-question">What changes when AI enters the work?</p>
+        </div>
+        <div class="notes">
+          Start with just the red operating point: the whole socio-technical system's current state. On the next
+          click the AI ball rolls in from the left and settles over it. The artwork is a visual shorthand for
+          AI-mediated work at the same operating state. It is not a second operating point, a person, or a fourth
+          constraint. Ask what changes in cost, effort, evidence and recovery. The following step expands the view
+          to the same three boundaries and the performance-side error margin. Reduced-motion mode shows the settled
+          ball without rolling; the reveal still requires the presenter to advance.
+        </div>
+      </section>
+
+      <section id="ai-fish-diagram" class="step ai-journey-slide ai-fish-slide"
+        data-x="0" data-y="233000" data-scale="25" aria-label="AI operating point moving within the three boundary lines and the dotted error margin">
+        <div class="ai-fish-model" aria-hidden="true">
+          <img class="plain-model-outline" src="/images/srecon24/Rasmussen_plain_outline.png" alt="" />
+          <img class="ai-fish-margin" src="/images/srecon24/Rasmussen_error_margin.png" alt="" />
+        </div>
+        <span class="ai-roaming-point-position">
+          <img class="ai-roaming-point" src="/images/srecon26/logo-ai-mashup.png" alt="AI ball representing the current operating point" />
+        </span>
+        <div class="notes">
+          Open the camera from the operating point onto the familiar model. The display deliberately contains
+          only the three functional boundary lines, the performance-side dotted error margin and the AI ball.
+          There is no fourth AI boundary. After the camera settles, the ball wanders from the middle, with a bias
+          toward the performance side, as in the original diagram. The trajectory is illustrative, not measured,
+          and no geometric center is an ideal state. Organizational choices and usable feedback shape the actual
+          trajectory. Reduced-motion mode keeps the ball stationary. The next three steps inspect economics,
+          workload and the error margin. They are followed by the existing human-behaviour evidence and control slides.
+        </div>
+      </section>
+
+      <section id="ai-economic-pressure" class="step boundary-detail-slide ai-pressure-slide"
+        data-x="8400" data-y="225975" data-scale="3.55392">
+        <span class="boundary-detail-icon" role="img" aria-label="Cost-efficiency pressure">📉</span>
+        <h2 class="boundary-detail-title">AI has to be paid for</h2>
+        <p class="boundary-detail-lede">Adoption and usage can outrun the plan. The bill competes for the same money.</p>
+        <div class="boundary-detail-grid">
+          <div class="boundary-detail-copy">
+            <h3>The bill grows</h3>
+            <ul>
+              <li><strong>47%</strong> of surveyed tech leaders reported AI spending over plan. <small>ETR, 2026</small></li>
+              <li>Uber’s annual AI budget was exhausted by April. <small>CTO interview, 2026</small></li>
+              <li>More seats, agent loops and adoption add demand.</li>
+            </ul>
+          </div>
+          <div class="substep boundary-detail-copy">
+            <h3>Money moves</h3>
+            <ul>
+              <li>Cut contractors, delay infrastructure refresh, or reduce other software spend.</li>
+              <li>Workday announced an <strong>8.5% workforce cut</strong> while prioritizing AI/platform investment. <small>2025</small></li>
+              <li>Redirect investment toward AI products with stronger expected returns.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="boundary-detail-conclusion">Freeing money can reduce human and technical capacity.<br />Check the effect on workload, assurance and recovery.</p>
+        <p class="boundary-detail-source"><a href="https://research.etr.ai/etr-data-drop/ai-demand-is-strong.-ai-budget-control-is-still-catching-up">ETR · Aug 2026</a> · <a href="https://www.theinformation.com/newsletters/applied-ai/uber-cto-shows-claude-code-can-blow-ai-budgets">Uber CTO · Apr 2026</a> · <a href="https://www.sec.gov/Archives/edgar/data/1327811/000132781125000030/wday-020525x991.htm">Workday CEO / SEC · Feb 2025</a></p>
+        <div class="notes">
+          ETR surveyed 1,636 technology leaders, June 2–July 5, 2026. Its 47% is reported spending above plan,
+          not a prevalence estimate of annual budgets exhausted early. Among respondents reallocating to cover
+          overruns, 61% cut contractor/consultant spending, 49% legacy infrastructure modernization or hardware
+          refresh, 36% non-AI licenses and 28% internal headcount budgets. The subgroup denominator matters; a smaller
+          headcount budget does not itself prove layoffs. The Uber case is an executive's reported account rather
+          than audited finances. Workday's February 2025 memo announced roughly 1,750 eliminations, alongside
+          continued strategic hiring and AI/platform priorities. It does not say every eliminated role was replaced
+          by AI or every saved dollar funded AI. Other restructuring causes were also described.
+          The portfolio-return example is an illustrative management choice. These cases support financial
+          pressure and reallocation, not the claim that AI-related layoffs are universal or necessarily harmful.
+          Cost control can preserve other margins by dropping low-value work. It transfers pressure when required
+          output stays constant but relevant expertise, maintenance or assurance disappears. More AI expenditure
+          moves the operating state; budgets remain targets, not an extra dotted economic boundary.
+        </div>
+      </section>
+
+      <section id="ai-workload-pressure" class="step boundary-detail-slide ai-workslop-slide"
+        data-x="6645" data-y="237575" data-scale="3.037465">
+        <span class="boundary-detail-icon" role="img" aria-label="Least-effort pressure">✋</span>
+        <h2 class="boundary-detail-title">AI and least effort</h2>
+        <p class="boundary-detail-lede">Polished output can pass the thinking to someone else.</p>
+        <figure class="workslop-bucket">
+          <img src="/images/srecon26/ai-slop-bucket.png" alt="AI slop bucket from the earlier SREcon presentation" />
+          <figcaption>A handoff without<br />understanding</figcaption>
+        </figure>
+        <div class="workslop-chain">
+          <div><h3>Proxy the judgment</h3><p>Forward AI answers, arguments or decisions<br />without checking the fundamentals.</p></div>
+          <div class="substep"><h3>Multiply the streams</h3><p>Agents clear more backlog; humans inherit<br />review, context and conflicting proposals.</p></div>
+          <div class="substep"><h3>Squeeze recovery</h3><p>Extra checking and context switching can<br />raise workload and burnout risk.</p></div>
+        </div>
+        <p class="workslop-evidence"><strong>40%</strong> received workslop; <strong>~2h</strong> to resolve an instance.<br /><span>US desk-worker survey, n=1,150 · September 2025</span></p>
+        <p class="boundary-detail-conclusion">Faster generation does not give humans more attention.</p>
+        <p class="boundary-detail-source"><a href="https://www.betterup.com/workslop">BetterUp / Stanford · 2025</a> · <a href="https://newsroom.haas.berkeley.edu/ai-promised-to-free-up-workers-time-uc-berkeley-haas-researchers-found-the-opposite/">Berkeley Haas · Feb 2026</a> · Bucket: Andrew’s SREcon26 artwork.</p>
+        <div class="notes">
+          Workslop is polished-looking output that leaves the recipient to reconstruct missing thinking. The
+          BetterUp/Stanford survey of 1,150 full-time US desk workers found 40% reporting receipt in the prior month,
+          and roughly two hours on average to resolve an incident. These are self-reports, not an objective audit
+          of every AI-generated artifact. The chain is this talk's software-workflow illustration: a person may use
+          an agent to proxy an argument, answer or decision without forming their own understanding. The recipient
+          must check the assumptions and reconcile conflicts. AI can also reduce this effort when used to build
+          comprehension and assurance.
+          Berkeley researchers observed eight months at one 200-person US technology company and conducted more
+          than 40 interviews. Broader task scope, parallel streams and work extending into breaks/evenings intensified
+          work. This motivates burnout risk from reduced recovery, not a universal causal finding. Expertise,
+          familiarity, staffing and the design of handoffs affect who carries the added load; these sources do not
+          prove that lower-skill or less-parallel users invariably suffer more burnout. Completed backlog counts
+          should be read alongside verification time, rework, interruptions, recovery and ability to explain changes.
+          The hand depicts least-effort adaptation. The bucket is an unfinished handoff, not a claim that all AI work
+          is poor. Keep a person accountable for explaining and checking the work they pass onward.
+        </div>
+      </section>
+
+      <section id="ai-margin-pressure" class="step boundary-detail-slide ai-margin-slide"
+        data-x="-4213" data-y="231476" data-scale="4.262906">
+        <span class="boundary-detail-icon" role="img" aria-label="Accumulating work">🪣</span>
+        <h2 class="boundary-detail-title">Change can outrun our view</h2>
+        <p class="boundary-detail-lede">We can consume error margin before our signals catch up.</p>
+        <div class="margin-pressure-scene" role="img" aria-label="AI-generated handoffs slowly pile up at the dotted perceived limit. The actual AI operating point drifts into the error margin, while the last observed point stays behind.">
+          <svg viewBox="0 0 440 395" aria-hidden="true">
+            <path class="margin-functional-line" d="M 94 30 C 8 100 8 290 94 365" />
+            <path class="margin-perceived-line" d="M 184 30 C 98 100 98 290 184 365" />
+            <text x="8" y="17">Functional limit</text>
+            <text x="184" y="17">Perceived limit</text>
+            <text class="margin-buffer-label" x="60" y="190" transform="rotate(-90 60 190)">Error margin</text>
+          </svg>
+          <img class="margin-last-point" src="/images/operating-point.svg" alt="" />
+          <span class="margin-last-label">Last observed</span>
+          <span class="margin-actual-position"><img src="/images/srecon26/logo-ai-mashup.png" alt="" /></span>
+          <span class="margin-actual-label">Actual state</span>
+          <div class="margin-bucket-pile" aria-hidden="true"></div>
+          <p class="margin-scene-caption">Unverified handoffs<br />are work still owed.</p>
+        </div>
+        <div class="margin-pressure-risks">
+          <div><h3>Security exposure</h3><p>Unchecked permissions, dependencies<br />and data paths can hide risk.</p></div>
+          <div class="substep"><h3>Incident understanding</h3><p>Who can explain the deployed change<br />and diagnose what breaks?</p></div>
+          <div class="substep"><h3>SREs must close the loop</h3><p>Validate changes; update probes, alerts<br />and runbooks; limit incoming work.</p></div>
+        </div>
+        <p class="margin-pressure-evidence">Coding study: <strong>50% vs 67%</strong> on an immediate skills quiz.<br /><span>AI vs no AI; n=52 · unfamiliar library · Anthropic, Jan 2026</span></p>
+        <p class="boundary-detail-conclusion">Protect understanding, verification and the route back.</p>
+        <p class="boundary-detail-source"><a href="https://www.anthropic.com/research/AI-assistance-coding-skills">Anthropic study · 2026</a> · <a href="https://www.betterup.com/workslop">Workslop survey · 2025</a> · Diagram and pile: illustrative mechanism.</p>
+        <div class="notes">
+          Buckets descend slowly and collect at the dotted perceived limit. Each represents an unfinished handoff
+          that someone must verify, process and understand, not an incident or a measured quantity of danger.
+          The AI ball moves into the strip between dotted and solid lines while the last observed red point stays
+          behind. That is an illustrative lag in perception: crossing the dotted line consumes error margin but
+          does not itself mean the solid functional limit has been crossed. Neither the pile nor the lines exerts
+          an automatic force. The animated separation and trajectory are this talk's synthesis, not empirical results.
+          Anthropic randomized 52 mostly junior Python engineers learning Trio. Mean immediate quiz performance
+          was 50% with AI and 67% without it; debugging had the largest gap. Completion speed did not improve
+          significantly. This small, short study does not measure long-term deskilling or production incidents.
+          Security exposure and harder incident diagnosis are potential consequences inferred here when verification
+          and understanding fail to keep pace. AI used for comprehension can support learning and assurance.
+          SRE work includes checking intent and permissions, testing dependency behavior and failure modes, and
+          reconfiguring monitoring when service behavior changes. Monitoring alone does not process the backlog.
+          Pair it with clear ownership, capacity to investigate, admitted-change limits, staged rollout, rollback
+          and recovery drills. Track review age, unknown ownership, stale probes and rehearsed diagnostic ability
+          alongside deployment volume. Reduced motion displays the final pile/state without falling or drifting.
+        </div>
+      </section>
+
       <section
         id="ai-behaviour"
         class="step ai-behaviour-slide"
         data-x="0"
-        data-y="233000"
+        data-y="258000"
         data-scale="25"
       >
         <h2 class="ai-behaviour-title">Human behaviour with LLM tools</h2>
@@ -852,7 +1177,8 @@
       <section
         id="ai-control-structure"
         class="step ai-control-slide"
-        data-y="258000"
+        data-x="0"
+        data-y="283000"
         data-scale="25"
       >
         <h2 class="ai-control-title">AI enters the control structure</h2>
@@ -966,7 +1292,7 @@
         id="ai-economic-boundary"
         class="step ai-economic-slide theme-framed-slide theme-focus-economic"
         data-x="0"
-        data-y="283000"
+        data-y="308000"
         data-scale="25"
       >
         <h2 class="ai-economic-title">AI and the economic boundary</h2>
@@ -1040,7 +1366,7 @@
         id="ai-intervention"
         class="step realism-slide theme-framed-slide theme-focus-workload"
         data-x="0"
-        data-y="308000"
+        data-y="333000"
         data-scale="25"
       >
         <h2 class="realism-title">AI and the workload boundary</h2>
@@ -1091,7 +1417,7 @@
         id="ai-joint-evaluation"
         class="step realism-slide theme-framed-slide theme-focus-performance"
         data-x="0"
-        data-y="333000"
+        data-y="358000"
         data-scale="25"
       >
         <h2 class="realism-title">AI and acceptable performance</h2>
@@ -1141,7 +1467,7 @@
         id="automation-recovery"
         class="step realism-slide theme-framed-slide theme-focus-margin"
         data-x="0"
-        data-y="358000"
+        data-y="383000"
         data-scale="25"
       >
         <h2 class="realism-title">AI and the error margin</h2>
@@ -1200,7 +1526,7 @@
         id="adaptive-control"
         class="step realism-slide theme-framed-slide theme-focus-all"
         data-x="0"
-        data-y="383000"
+        data-y="408000"
         data-scale="25"
       >
         <h2 class="realism-title">Keeping the model in view</h2>
@@ -1260,6 +1586,6 @@
     </main>
 
     <script src="/vendor/impress.js/js/impress.min.js"></script>
-    <script src="/main.js?v=19"></script>
+    <script src="/main.js?v=20"></script>
   </body>
 </html>
