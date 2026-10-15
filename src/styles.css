@@ -30,6 +30,31 @@
   src: url("/fonts/open-sans.woff2") format("woff2");
 }
 
+/* Exact source fonts for the SREcon26 WHOAMI slide. */
+@font-face {
+  font-family: "SREcon26 Archivo Black";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/srecon26-archivo-black-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SREcon26 Comic Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/srecon26-comic-neue-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SREcon26 Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/srecon26-open-sans-400-normal.woff2") format("woff2");
+}
+
 :root {
   color-scheme: light;
   font-family: "Open Sans", Arial, sans-serif;
@@ -59,6 +84,7 @@ body {
 }
 
 body.impress-on-title,
+body.impress-on-opening-hook,
 body.impress-on-takeaways,
 body.impress-on-paper-themes,
 body.impress-on-diagram-legend,
@@ -225,6 +251,60 @@ a {
 .title-event {
   top: 674px;
   font-size: 22px;
+}
+
+/* WHOAMI: preserve the original SREcon26 composition and typography. */
+body.impress-on-whoami {
+  background-color: #f5f8ff;
+}
+
+.whoami-slide {
+  font-family: "SREcon26 Open Sans", Arial, sans-serif;
+}
+
+.whoami-heading {
+  margin: 8px 0;
+  font-family: "SREcon26 Archivo Black", sans-serif;
+  font-size: 70px;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+
+.whoami-slide p {
+  margin: 11px;
+  font-family: "SREcon26 Comic Neue", cursive;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#impress .whoami-slide .substep {
+  transform: scale(0.92);
+}
+
+#impress .whoami-slide .substep.substep-visible {
+  transform: scale(1);
+  transition: opacity 0.3s ease-out, transform 0.4s ease-out;
+}
+
+/* Opening hook: capability and control, with room for a pause. */
+.opening-hook-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 70px 60px;
+  overflow: hidden;
+}
+
+.opening-hook-slide > p {
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1px;
+  text-align: left;
+  text-wrap: balance;
 }
 
 /* Opening summary. */
@@ -456,10 +536,14 @@ a {
   text-align: center;
 }
 
-#impress #the-fish-diagram:has(.plain-roaming-point-position.is-moving) .plain-playing-surface-shade,
-#impress #the-fish-diagram:has(.plain-roaming-point-position.is-moving) .plain-playing-surface-label {
-  opacity: 0;
+.plain-playing-surface-shade,
+.plain-playing-surface-label {
   transition: opacity 750ms ease;
+}
+
+#impress #the-fish-diagram:has(.plain-economic-motion.substep-visible) .plain-playing-surface-shade,
+#impress #the-fish-diagram:has(.plain-economic-motion.substep-visible) .plain-playing-surface-label {
+  opacity: 0;
 }
 
 .plain-model-outline {
@@ -535,6 +619,11 @@ a {
 
 .plain-barrier-motion.substep-visible .plain-barrier-moving {
   animation: plain-barrier-shift 4.8s cubic-bezier(0.3, 0, 0.7, 1) both;
+}
+
+/* Finish fading the playing surface before the first boundary moves. */
+.plain-economic-motion.substep-visible .plain-barrier-moving {
+  animation-delay: 750ms;
 }
 
 @keyframes plain-barrier-shift {
@@ -1148,6 +1237,35 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   pointer-events: none;
 }
 
+#impress .step .social-fish-overlay-reveal.substep-visible {
+  transition: none;
+}
+
+.social-fish-overlay-reveal.substep-visible .social-fish-piece {
+  animation: social-fish-piece-reveal 1200ms ease-in-out var(--fish-reveal-delay, 0ms) both;
+}
+
+.social-fish-workload {
+  --fish-reveal-delay: 800ms;
+}
+
+.social-fish-performance {
+  --fish-reveal-delay: 1600ms;
+}
+
+.social-fish-error-margin {
+  --fish-reveal-delay: 2400ms;
+}
+
+.social-fish-operating-point {
+  --fish-reveal-delay: 3200ms;
+}
+
+@keyframes social-fish-piece-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .social-fish-outline {
   top: 0;
   left: 0;
@@ -1392,21 +1510,13 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 
 .social-arrow-pulse {
   position: absolute;
-  width: 9px;
-  height: 9px;
-  margin: -4.5px 0 0 -4.5px;
-  border-radius: 50%;
-  background: #ffb86b;
-  box-shadow: 0 0 0 1px #fff, 0 0 8px #ffb86b;
-  animation: social-arrow-pulse 1600ms ease-in-out both;
-}
-
-#social-and-systems-wiki .social-arrow-pulse {
   width: 14px;
   height: 14px;
   margin: -7px 0 0 -7px;
+  border-radius: 50%;
   background: radial-gradient(circle at 35% 30%, #fff36c 0 18%, #ff9500 40%, #ff5200 78%);
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px #b33e00, 0 0 12px 3px rgb(255 106 0 / 75%);
+  animation: social-arrow-pulse 1600ms ease-in-out both;
 }
 
 @keyframes social-arrow-pulse {
@@ -1524,6 +1634,10 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .social-fish-overlay-reveal.substep-visible .social-fish-piece {
+    animation: none;
+  }
+
   .plain-gradient-arrows.is-visible .plain-gradient-arrow {
     animation: none;
     stroke-dashoffset: 0;
@@ -1535,9 +1649,8 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
     opacity: 1;
   }
 
-  #impress #the-fish-diagram:has(.plain-roaming-point-reveal.substep-visible) .plain-playing-surface-shade,
-  #impress #the-fish-diagram:has(.plain-roaming-point-reveal.substep-visible) .plain-playing-surface-label {
-    opacity: 0;
+  .plain-economic-motion.substep-visible .plain-barrier-moving {
+    animation-delay: 0ms;
   }
 
   *,
@@ -1568,8 +1681,14 @@ body.impress-on-ai-margin-pressure { background: var(--surface-introduction); }
 .ai-arrival-reveal { position: absolute; inset: 0; }
 .ai-arrival-ball { position: absolute; top: 310px; left: 430px; width: 160px; height: 160px; object-fit: contain; }
 .ai-arrival-reveal.substep-visible .ai-arrival-ball { animation: ai-ball-roll-in 2400ms cubic-bezier(0.18, 0.65, 0.3, 1) both; }
-.ai-arrival-question { position: absolute; left: 60px; right: 60px; top: 565px; margin: 0; font-family: "Comic Neue", cursive; font-size: 38px; font-weight: 700; line-height: 1.15; }
+.ai-arrival-question,
+.ai-arrival-nondeterminism { position: absolute; left: 60px; right: 60px; margin: 0; font-family: "Comic Neue", cursive; font-size: 38px; font-weight: 700; line-height: 1.15; text-align: center; }
+.ai-arrival-question { top: 565px; }
 .ai-arrival-reveal.substep-visible .ai-arrival-question { animation: ai-question-arrive 2800ms ease both; }
+.ai-arrival-nondeterminism { bottom: 35px; }
+.ai-arrival-nondeterminism span { white-space: nowrap; }
+#impress #ai-operating-point .ai-arrival-nondeterminism { opacity: 0; }
+#impress #ai-operating-point .ai-arrival-nondeterminism.substep-visible.is-ready { opacity: 1; }
 @keyframes ai-ball-roll-in { from { transform: translateX(-650px) rotate(-720deg); } to { transform: translateX(0) rotate(0); } }
 @keyframes ai-question-arrive { 0%, 80% { opacity: 0; } 100% { opacity: 1; } }
 .ai-fish-model { position: absolute; inset: 0; }
@@ -1591,6 +1710,7 @@ body.impress-on-ai-margin-pressure #impress #ai-fish-diagram { opacity: 1; }
   height: 780px;
 }
 .boundary-detail-icon { position: absolute; left: 42px; top: 35px; width: 105px; height: 110px; font-size: 86px; line-height: 1.2; text-align: center; }
+img.boundary-detail-icon { height: auto; }
 .boundary-detail-title { margin: 0 0 0 130px; font-family: "Maven Pro", sans-serif; font-weight: 500; font-size: 46px; line-height: 1.08; letter-spacing: -1.5px; }
 .boundary-detail-lede { margin: 18px 0 0 130px; font-size: 26px; line-height: 1.22; text-align: left; letter-spacing: -0.6px; }
 .boundary-detail-grid { position: absolute; left: 46px; right: 46px; top: 215px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -1609,9 +1729,9 @@ body.impress-on-ai-margin-pressure #impress #ai-fish-diagram { opacity: 1; }
 .boundary-action-table td { padding: 14px 16px; text-align: left; vertical-align: top; }
 .boundary-action-table th:first-child { width: 42%; }
 .boundary-action-table strong { font-weight: 650; }
-.workslop-bucket { position: absolute; left: 46px; top: 225px; width: 235px; margin: 0; }
-.workslop-bucket img { width: 235px; height: 345px; object-fit: contain; }
-.workslop-bucket figcaption { margin-top: 8px; font-family: "Comic Neue", cursive; font-size: 23px; font-weight: 700; line-height: 1.1; text-align: center; }
+.workload-proxy-figure { position: absolute; left: 46px; top: 225px; width: 235px; margin: 0; }
+.workload-proxy-figure img { width: 235px; height: 345px; object-fit: contain; }
+.workload-proxy-figure figcaption { margin-top: 8px; font-family: "Comic Neue", cursive; font-size: 23px; font-weight: 700; line-height: 1.1; text-align: center; }
 .workslop-chain { position: absolute; top: 210px; left: 320px; right: 46px; }
 .workslop-chain > div { margin-bottom: 24px; padding-left: 20px; }
 .workslop-chain h3 { margin: 0 0 8px; font-family: "Comic Neue", cursive; font-size: 31px; line-height: 1.1; }
@@ -1668,6 +1788,10 @@ body.impress-on-ai-margin-pressure #impress #ai-fish-diagram { opacity: 1; }
 
   .substep {
     opacity: 1 !important;
+  }
+
+  .social-fish-piece {
+    animation: none !important;
   }
 
   .fallback-message {

@@ -11,6 +11,8 @@ const html = await readFile(indexPath, "utf8");
 const requiredMarkers = [
   'id="impress"',
   'id="title"',
+  'id="whoami"',
+  'id="opening-hook"',
   'id="takeaways"',
   'id="the-model"',
   'id="paper-themes"',
@@ -103,9 +105,22 @@ const requiredFiles = [
   "main.js",
   "images/qcon-logo.svg",
   "images/srecon26/logo-ai-mashup.png",
+  "images/srecon26/Australia.png",
+  "images/srecon26/map-pin-red-hi.png",
+  "images/srecon26/thousand-eyes.png",
+  "images/srecon26/usa.png",
+  "images/srecon26/aws.png",
+  "images/srecon26/new-data-centre.png",
+  "images/srecon26/Linkedin-Logo.png",
+  "images/srecon26/medium-blog-icon.png",
+  "images/srecon26/logo-bluesky.png",
+  "fonts/srecon26-archivo-black-400-normal.woff2",
+  "fonts/srecon26-comic-neue-700-normal.woff2",
+  "fonts/srecon26-open-sans-400-normal.woff2",
   "images/srecon26/symbol-equals.png",
   "images/srecon26/complex-sign-transparent.png",
   "images/srecon26/ai-slop-bucket.png",
+  "images/meat-proxy.png",
   "images/srecon24/Rasmussen_plain_outline.png",
   "images/srecon24/Rasmussen_boundary_performance.png",
   "images/srecon24/Rasmussen_boundary_economic.png",
@@ -131,8 +146,8 @@ await Promise.all(requiredFiles.map((file) => access(resolve(siteRoot, file))));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount !== 23) {
-  throw new Error(`Expected exactly twenty-three impress.js steps, found ${stepCount}`);
+if (stepCount !== 25) {
+  throw new Error(`Expected exactly twenty-five impress.js steps, found ${stepCount}`);
 }
 
 console.log(`Verified src/index.html with ${stepCount} presentation steps.`);

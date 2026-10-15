@@ -295,6 +295,34 @@ document.addEventListener("impress:stepenter", (event) => {
   }
 });
 
+const aiArrivalSlide = document.querySelector("#ai-operating-point");
+const aiArrivalReveal = aiArrivalSlide.querySelector(".ai-arrival-reveal");
+const aiArrivalQuestion = aiArrivalSlide.querySelector(".ai-arrival-question");
+const aiArrivalFollowup = aiArrivalSlide.querySelector(".ai-arrival-nondeterminism");
+
+function syncAiArrivalFollowup() {
+  const questionAnimation = aiArrivalQuestion.getAnimations()
+    .find((animation) => animation.animationName === "ai-question-arrive");
+  const questionReady = prefersReducedMotion.matches || !questionAnimation || questionAnimation.playState === "finished";
+  const revealFollowup = aiArrivalSlide.classList.contains("active") &&
+    aiArrivalReveal.classList.contains("substep-visible") &&
+    aiArrivalFollowup.classList.contains("substep-visible") && questionReady;
+  aiArrivalFollowup.classList.toggle("is-ready", revealFollowup);
+}
+
+aiArrivalQuestion.addEventListener("animationend", (event) => {
+  if (event.animationName === "ai-question-arrive") window.requestAnimationFrame(syncAiArrivalFollowup);
+});
+for (const eventName of ["impress:substep:enter", "impress:substep:leave", "impress:stepenter"]) {
+  document.addEventListener(eventName, (event) => {
+    if (event.target === aiArrivalSlide) syncAiArrivalFollowup();
+  });
+}
+document.addEventListener("impress:stepleave", (event) => {
+  if (event.target === aiArrivalSlide) aiArrivalFollowup.classList.remove("is-ready");
+});
+prefersReducedMotion.addEventListener("change", syncAiArrivalFollowup);
+
 const aiRoamingPoint = document.querySelector(".ai-roaming-point-position");
 let aiRoamingTimeout;
 let aiRoamingCenter = { x: 512, y: 404 };

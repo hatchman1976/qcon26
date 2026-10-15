@@ -9,28 +9,30 @@ The talk adapts Rasmussen's Dynamic Safety Model and the 2024 SREcon presentatio
 ## Current rendered flow
 
 1. Title
-2. Takeaways
-3. One more thing
-4. Socio-technical systems definition
-5. Rasmussen source slide
-6. The research behind the model
-7. Social control hierarchy
-8. The TL;DR: people, boundaries and adaptation
-9. The Fish Diagram
-10. Diagram Legend
-11. Economic Boundary
-12. Economic Boundary Actions
-13. Workload Boundary
-14. Workload Boundary Actions
-15. Boundary of Acceptable Performance
-16. Protect the Error Margin
-17. AI enters the operating point
-18. AI in the Fish Diagram
-19. AI has to be paid for
-20. AI and least effort
-21. Change can outrun our view — close with assurance
+2. Opening hook: capability and control
+3. WHOAMI
+4. Takeaways
+5. One more thing
+6. Socio-technical systems definition
+7. Rasmussen source slide
+8. The research behind the model
+9. Social control hierarchy
+10. The TL;DR: people, boundaries and adaptation
+11. The Fish Diagram
+12. Diagram Legend
+13. Economic Boundary
+14. Economic Boundary Actions
+15. Workload Boundary
+16. Workload Boundary Actions
+17. Boundary of Acceptable Performance
+18. Protect the Error Margin
+19. AI enters the operating point
+20. AI in the Fish Diagram
+21. AI has to be paid for
+22. AI and least effort
+23. Change can outrun our view — close with assurance
 
-The deck contains 21 content steps and two overview/overlay camera steps, for 23 Impress steps. The seven trailing slides have been integrated into this earlier flow and removed. [The integration map](research/2026-10-13-slide-consolidation.md) records their destinations. Current copy and speaker notes live in [slides/README.md](slides/README.md).
+The deck contains 23 content steps and two overview/overlay camera steps, for 25 Impress steps. The seven trailing slides have been integrated into this earlier flow and removed. [The integration map](research/2026-10-13-slide-consolidation.md) records their destinations. Current copy and speaker notes live in [slides/README.md](slides/README.md).
 
 ## Boundary examples and the AI camera journey
 

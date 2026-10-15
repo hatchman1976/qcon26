@@ -14,9 +14,9 @@ Presenter reveals, in order:
 4. Dotted performance-side line and **Error Margin**.
 5. Red **Operating Point**, representing one whole-system state.
 6. Shaded **Playing Surface**.
-7. Economic boundary shifts inward and outward against its original reference.
+7. The shaded surface and its label fade away, then the economic boundary shifts inward and outward against its original reference.
 8. Workload boundary shifts inward and outward against its original reference.
-9. A moving operating point starts; the shaded surface fades.
+9. A moving operating point starts.
 10. Cost charts, effort-saving hands and safety tanks arrive across the model.
 
 After all tank, hand, and chart arrival animations finish, automatically draw two arrows over 1.8 seconds, followed by their arrowheads and labels:

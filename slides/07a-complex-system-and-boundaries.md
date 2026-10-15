@@ -8,13 +8,13 @@ Rendered step: `#/complex-system-and-boundaries`.
 
 AI changes the conditions in which people adapt.
 
-Reveal sequence: people/network and connection pulses; then fish boundaries, dotted margin and operating point; then AI artwork and the adaptation caption.
+Reveal sequence: people/network and connection pulses; then one trigger assembles the fish over 4.4 seconds, with each piece fading in for 1.2 seconds (economic, workload and performance boundaries, dotted margin, operating point); then AI artwork and the adaptation caption.
 
 ## Speaker notes
 
 The hierarchy on the previous slide surrounds the people and interactions in this complex system.
 
-Reveal 1: show people distributed through the complex system, with light orange points pulsing along its connections. Reveal 2: place the fish-shaped performance boundary and dotted error margin around the smaller network, with the operating point inside it. The operating point represents the state of the whole system. The following slide explains the boundaries and the margin in detail. Reveal 3: show the AI artwork and adaptation caption together in the lower row.
+Reveal 1: show people distributed through the complex system, with bright orange points with yellow highlights and a bold rim pulsing along its connections. Reveal 2: one trigger reveals the economic, workload and performance boundaries in sequence around the smaller network, followed by the dotted error margin and operating point. The operating point represents the state of the whole system. The following slide explains the boundaries and the margin in detail. Reveal 3: show the AI artwork and adaptation caption together in the lower row.
 
 Source model and boundary artwork: https://srecon24.hatchman76.com/#/the-model
 

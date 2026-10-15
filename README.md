@@ -7,7 +7,7 @@ An interactive [impress.js](https://impress.js.org/) presentation for Andrew Hat
 - Intended live site: <https://qcon26.hatchman76.com>
 - Author: Andrew Hatch ([@hatchman1976](https://github.com/hatchman1976))
 
-The rendered deck contains 21 content steps and two overview/overlay camera steps, for 23 Impress steps. It moves through socio-technical systems, Rasmussen's model and six boundary close-ups, then introduces the AI ball and follows it through economics, workload and error-margin drift. The final reveal asks the audience to use AI to improve assurance as well as output. Behaviour, control, joint evaluation and recovery messages are integrated into these earlier steps and their speaker notes. The fish-diagram content is plain and unframed, ready for a later positioning pass. Slide copy and notes are maintained under [`slides/`](slides/README.md).
+The rendered deck contains 23 content steps and two overview/overlay camera steps, for 25 Impress steps. After the title, a statement about capability and control opens the argument, followed by the WHOAMI introduction. The deck moves through socio-technical systems, Rasmussen's model and six boundary close-ups, then introduces the AI ball and follows it through economics, workload and error-margin drift. The final reveal asks the audience to use AI to improve assurance as well as output. Behaviour, control, joint evaluation and recovery messages are integrated into these earlier steps and their speaker notes. The fish-diagram content is plain and unframed, ready for a later positioning pass. Slide copy and notes are maintained under [`slides/`](slides/README.md).
 
 ## Narrative focus
 
