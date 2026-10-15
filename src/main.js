@@ -178,9 +178,11 @@ const guardianActionSlots = [
   ...[[645, 210], [620, 280], [700, 275], [780, 300]]
     .map(([x, y]) => ({ kind: "economic", x, y })),
   { kind: "workload", x: 660, y: 404, anchor: true },
+  { kind: "workload", x: 555, y: 510, anchor: true },
   ...[[710, 350], [770, 380], [740, 450], [690, 475]]
     .map(([x, y]) => ({ kind: "workload", x, y })),
-  ...[[470, 180], [410, 215], [330, 260], [265, 385], [315, 435], [380, 485], [470, 520]]
+  { kind: "margin", x: 257, y: 338, anchor: true, allowMarginGap: true },
+  ...[[470, 180], [410, 215], [330, 260], [315, 435], [380, 485], [470, 520]]
     .map(([x, y]) => ({ kind: "margin", x, y })),
 ];
 const guardianActionAnchors = guardianActionSlots.filter((slot) => slot.anchor);
@@ -197,9 +199,9 @@ function stopGuardianActions() {
   gradientArrows.classList.remove("is-visible");
 }
 
-function isValidGuardianPosition({ kind, anchor }, candidate) {
+function isValidGuardianPosition({ kind, anchor, allowMarginGap }, candidate) {
   if (kind !== "margin" && !isInsidePlayingSurface(candidate.x, candidate.y)) return false;
-  if (kind === "margin" && candidate.x < 360 && candidate.y > 300 && candidate.y < 370) return false;
+  if (kind === "margin" && !allowMarginGap && candidate.x < 360 && candidate.y > 300 && candidate.y < 370) return false;
   if (!anchor && guardianActionAnchors.some((reserved) =>
     Math.hypot(candidate.x - reserved.x, candidate.y - reserved.y) < 62
   )) return false;

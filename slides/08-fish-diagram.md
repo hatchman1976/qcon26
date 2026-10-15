@@ -17,7 +17,7 @@ Presenter reveals, in order:
 7. The shaded surface and its label fade away, then the economic boundary shifts inward and outward against its original reference.
 8. Workload boundary shifts inward and outward against its original reference.
 9. A moving operating point starts.
-10. Cost charts, effort-saving hands and safety tanks arrive across the model.
+10. Cost charts, effort-saving hands and safety tanks arrive across the model, including a hand just inside the intersection of the error margin and workload boundary.
 
 After all tank, hand, and chart arrival animations finish, automatically draw two arrows over 1.8 seconds, followed by their arrowheads and labels:
 
