@@ -1381,15 +1381,15 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 }
 
 .impress-enabled .complex-system-slide.present .social-fish-piece {
-  animation: social-fish-piece-reveal 1200ms ease-in-out var(--fish-reveal-delay, 0ms) both;
+  animation: social-fish-piece-reveal 1200ms ease-in-out both;
 }
 
 .impress-enabled .complex-system-slide.present .social-system-network {
-  animation: complex-network-reveal 1100ms ease-in-out 4400ms both;
+  animation: complex-network-reveal 1100ms ease-in-out 1200ms both;
 }
 
 .impress-enabled .complex-system-slide.present .complex-ai-coping {
-  animation: complex-ai-reveal 600ms ease-out 5500ms both;
+  animation: complex-ai-reveal 600ms ease-out 2300ms both;
 }
 
 @keyframes complex-network-reveal {
@@ -1400,22 +1400,6 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 @keyframes complex-ai-reveal {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-.social-fish-workload {
-  --fish-reveal-delay: 800ms;
-}
-
-.social-fish-performance {
-  --fish-reveal-delay: 1600ms;
-}
-
-.social-fish-error-margin {
-  --fish-reveal-delay: 2400ms;
-}
-
-.social-fish-operating-point {
-  --fish-reveal-delay: 3200ms;
 }
 
 @keyframes social-fish-piece-reveal {
@@ -1437,12 +1421,6 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   width: 187px;
   filter: drop-shadow(0.25px 0 0 #111) drop-shadow(-0.25px 0 0 #111)
     drop-shadow(0 0.25px 0 #111) drop-shadow(0 -0.25px 0 #111);
-}
-
-.social-fish-operating-point {
-  top: 126.5px;
-  left: 162.5px;
-  width: 17px;
 }
 
 .before-continue-slide {
