@@ -59,7 +59,7 @@
   color-scheme: light;
   font-family: "Open Sans", Arial, sans-serif;
   font-synthesis: none;
-  --surface-background: #ffddb3;
+  --surface-background: #b3d9ff;
   --ink: #000000;
   --link: royalblue;
 }
@@ -1300,6 +1300,8 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 .social-wiki-visual .social-separated {
   top: 380px;
   left: 50px;
+  transform: scale(1.1);
+  transform-origin: top left;
 }
 
 .social-wiki-visual .social-together {
