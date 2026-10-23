@@ -65,13 +65,27 @@ document.addEventListener("impress:substep:leave", (event) => {
 
 document.addEventListener("impress:stepenter", (event) => {
   const pulseStep = arrowPulseSteps.find(({ layer, trigger }) =>
-    event.target.contains(layer) && trigger.classList.contains("substep-visible")
+    event.target.contains(layer) && trigger?.classList.contains("substep-visible")
+  );
+  if (pulseStep) startArrowPulses(pulseStep);
+});
+
+document.addEventListener("animationstart", (event) => {
+  if (event.animationName !== "complex-network-reveal" || prefersReducedMotion.matches) return;
+  const pulseStep = arrowPulseSteps.find(({ layer }) =>
+    layer.parentElement === event.target && layer.closest(".step").classList.contains("present")
   );
   if (pulseStep) startArrowPulses(pulseStep);
 });
 
 document.addEventListener("impress:stepleave", (event) => {
   if (activeArrowPulseStep && event.target.contains(activeArrowPulseStep)) stopArrowPulses();
+});
+
+prefersReducedMotion.addEventListener("change", () => {
+  if (prefersReducedMotion.matches && activeArrowPulseStep?.closest("#complex-system-and-boundaries")) {
+    stopArrowPulses();
+  }
 });
 
 const roamingPointStep = document.querySelector("#the-fish-diagram .plain-roaming-point-reveal");
@@ -182,7 +196,7 @@ const guardianActionSlots = [
   ...[[710, 350], [770, 380], [740, 450], [690, 475]]
     .map(([x, y]) => ({ kind: "workload", x, y })),
   { kind: "margin", x: 257, y: 338, anchor: true, allowMarginGap: true },
-  ...[[470, 180], [410, 215], [330, 260], [315, 435], [380, 485], [470, 520]]
+  ...[[470, 180], [410, 215], [330, 220], [315, 435], [380, 485], [470, 520]]
     .map(([x, y]) => ({ kind: "margin", x, y })),
 ];
 const guardianActionAnchors = guardianActionSlots.filter((slot) => slot.anchor);
@@ -237,11 +251,14 @@ function showGuardianAction(slot) {
   icon.style.top = `${position.y}px`;
 
   if (kind === "margin") {
-    icon.src = "/images/srecon24/cartoon-tank.png";
+    icon.src = prefersReducedMotion.matches
+      ? "/images/qcon26/blocker-lemming.png"
+      : "/images/qcon26/blocker-lemming.gif";
+    icon.classList.add("blocker-lemming");
     icon.width = 50;
     icon.alt = "";
   } else {
-    icon.textContent = kind === "economic" ? "📉" : "✋";
+    icon.textContent = kind === "economic" ? "📉" : "🫷";
   }
 
   guardianActionsStep.appendChild(icon);
@@ -273,7 +290,7 @@ function startGuardianActions() {
   shuffledSlots.forEach((slot) => {
     revealAt += 500 + Math.random() * 1000;
     if (Math.random() < 0.25) revealAt += 500 + Math.random() * 700;
-    const delay = prefersReducedMotion.matches ? 0 : revealAt;
+    const delay = prefersReducedMotion.matches ? 0 : revealAt / 3;
     guardianActionTimeouts.push(window.setTimeout(() => {
       if (generation !== guardianActionGeneration || !guardianActionsStep.classList.contains("substep-visible")) return;
       showGuardianAction(slot);
@@ -325,7 +342,9 @@ document.addEventListener("impress:stepleave", (event) => {
 });
 prefersReducedMotion.addEventListener("change", syncAiArrivalFollowup);
 
-const aiRoamingPoint = document.querySelector(".ai-roaming-point-position");
+const aiFishSlide = document.querySelector("#ai-fish-diagram");
+const aiFishModel = aiFishSlide.querySelector(".ai-fish-model");
+const aiRoamingPoint = aiFishSlide.querySelector(".ai-roaming-point-position");
 let aiRoamingTimeout;
 let aiRoamingCenter = { x: 512, y: 404 };
 
@@ -338,6 +357,8 @@ function stopAiRoaming() {
 }
 
 function moveAiRoamingPoint() {
+  window.clearTimeout(aiRoamingTimeout);
+  aiRoamingTimeout = undefined;
   if (!document.querySelector("#ai-fish-diagram.active") || prefersReducedMotion.matches) return;
   const candidates = [];
   for (let attempt = 0; attempt < 160; attempt += 1) {
@@ -363,17 +384,16 @@ function moveAiRoamingPoint() {
 document.addEventListener("impress:stepenter", (event) => {
   if (event.target.id !== "ai-fish-diagram") return;
   stopAiRoaming();
-  if (!prefersReducedMotion.matches) aiRoamingTimeout = window.setTimeout(moveAiRoamingPoint, 1200);
+});
+aiFishModel.addEventListener("animationend", (event) => {
+  if (event.target === aiFishModel && event.animationName === "ai-fish-diagram-reveal") {
+    moveAiRoamingPoint();
+  }
 });
 document.addEventListener("impress:stepleave", (event) => {
   if (event.target.id === "ai-fish-diagram") stopAiRoaming();
 });
-prefersReducedMotion.addEventListener("change", () => {
-  stopAiRoaming();
-  if (!prefersReducedMotion.matches && document.querySelector("#ai-fish-diagram.active")) {
-    aiRoamingTimeout = window.setTimeout(moveAiRoamingPoint, 1200);
-  }
-});
+prefersReducedMotion.addEventListener("change", stopAiRoaming);
 
 const marginScene = document.querySelector(".margin-pressure-scene");
 const marginPile = document.querySelector(".margin-bucket-pile");

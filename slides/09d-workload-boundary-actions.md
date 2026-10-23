@@ -19,6 +19,10 @@ Reducing toil can preserve control.<br />Skipping checks saves effort now and cr
 
 [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · [Google SRE: Eliminating Toil](https://sre.google/workbook/eliminating-toil/) · Illustrative signals and choices.
 
+## Reveal sequence
+
+All visible content uses eight presenter-controlled substeps: title and icon together; introductory sentence; table headings together; each of the four table rows in order; then the closing statement. Reveal one group per advance, keeping both cells of each row together and preserving the table layout while rows are hidden.
+
 ## Speaker notes
 
 The hand denotes the gradient toward least effort, not a moral judgment. Better technology and automation can remove repeatable toil and improve assurance. They require maintenance, competence and exception handling. Under pressure, equally understandable adaptations can thin verification or normalize rushed handoffs. Queue age, interruptions and recovery time can warn of emerging capacity problems. Review findings/rework are current quality feedback and possible warnings about future workload, not universally leading indicators. Burnout is a condition to investigate with people, not a diagnosis from a single metric. These actions do not guarantee a particular trajectory; watch their effect on verification and recovery.

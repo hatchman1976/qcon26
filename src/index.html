@@ -7,9 +7,9 @@
       name="description"
       content="Adapt or Drift: Resilience Engineering When AI Moves the Operating Point — Andrew Hatch at QCon San Francisco 2026."
     />
-    <meta name="theme-color" content="#cfd8dc" />
+    <meta name="theme-color" content="#ffddb3" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=112" />
+    <link rel="stylesheet" href="/styles.css?v=131" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
@@ -36,7 +36,10 @@
         <div class="title-model" aria-hidden="true">
           <img class="title-model-outline" src="/images/srecon24/Rasmussen_plain_outline.png" alt="" />
           <img class="title-model-margin" src="/images/srecon24/Rasmussen_error_margin.png" alt="" />
-          <img class="title-model-tank" src="/images/srecon24/cartoon-tank.png" alt="" />
+          <picture class="title-model-lemming">
+            <source media="(prefers-reduced-motion: reduce)" srcset="/images/qcon26/blocker-lemming.png" />
+            <img class="blocker-lemming" src="/images/qcon26/blocker-lemming.gif" alt="" />
+          </picture>
         </div>
 
         <p class="title-speaker">Andrew Hatch</p>
@@ -46,6 +49,8 @@
 
           Source: https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point
           Visual treatment adapted from Andrew Hatch's SREcon24 presentation.
+          The Blocker Lemming continuously looks left and right. Its arms-out pose represents deliberate
+          safety intervention: pause or redirect work to preserve margin. Reduced-motion mode uses a still pose.
         </div>
       </section>
 
@@ -61,7 +66,7 @@
         <p>But less certainty we’re in control</p>
 
         <p>
-          Decades of research on sociotechnical systems and complexity still explain the risk.
+          Decades of research on sociotechnical systems and complexity still explain these risks.
         </p>
 
         <p>
@@ -69,6 +74,10 @@
         </p>
 
         <div class="notes">
+          The four statements fade in automatically from top to bottom once the slide settles, with
+          1.1 seconds between starts. The sequence replays on each visit; reduced-motion mode shows all
+          four immediately.
+
           Pause and let the statement land before explaining it.
 
           Spoken bridge: AI is changing what we can do and how fast we can do it. Rasmussen’s model still
@@ -164,15 +173,15 @@
               </td>
               <td>Models: not always accurate, but they are useful....</td>
             </tr>
-            <tr>
+            <tr class="substep">
               <td class="takeaways-icon"><span role="img" aria-label="Growing plant">🌱</span></td>
               <td>Understand conditions that lead to adversity.<br />Stay resilient and adaptive to change.</td>
             </tr>
-            <tr>
+            <tr class="substep">
               <td class="takeaways-icon"><span role="img" aria-label="Warning">⚠️</span></td>
               <td>Fundamentally, this model is a risk perspective.<br />A system-wide lens built from localized analysis, actions, and perspectives.</td>
             </tr>
-            <tr>
+            <tr class="substep">
               <td class="takeaways-icon">
                 <span class="takeaways-people" role="img" aria-label="A group of people">
                   <span>👩🏿</span><span>👨🏼</span><span>🧑🏽</span><span>🧕🏻</span>
@@ -180,7 +189,7 @@
               </td>
               <td>You are all part of complex socio-technical systems</td>
             </tr>
-            <tr>
+            <tr class="substep">
               <td class="takeaways-icon"><span role="img" aria-label="Flame">🔥</span></td>
               <td>Attempts to change a complex system either in whole,<br />or in part, will yield unintended consequences</td>
             </tr>
@@ -377,35 +386,35 @@
         </figure>
 
         <div class="paper-themes-list">
-          <div class="substep paper-theme">
+          <div class="paper-theme">
             <span class="paper-theme-emoji" aria-hidden="true">⚠️</span>
             <p class="paper-theme-copy">
               <strong>Risk analysis</strong>
               <span>Different hazards require different strategies</span>
             </p>
           </div>
-          <div class="substep paper-theme">
+          <div class="paper-theme">
             <span class="paper-theme-emoji" aria-hidden="true">🛡️</span>
             <p class="paper-theme-copy">
               <strong>Defence in depth</strong>
               <span>Redundant layers can erode without visible failure</span>
             </p>
           </div>
-          <div class="substep paper-theme">
+          <div class="paper-theme">
             <span class="paper-theme-emoji" aria-hidden="true">💪</span>
             <p class="paper-theme-copy">
               <strong>Human performance under pressure</strong>
               <span>Studies move from error rates to work in context</span>
             </p>
           </div>
-          <div class="substep paper-theme">
+          <div class="paper-theme">
             <span class="paper-theme-emoji" aria-hidden="true">🔄</span>
             <p class="paper-theme-copy">
               <strong>Feedback control</strong>
               <span>Controllers need current state, authority, and competence</span>
             </p>
           </div>
-          <div class="substep paper-theme">
+          <div class="paper-theme">
             <span class="paper-theme-emoji" aria-hidden="true">🧠</span>
             <p class="paper-theme-copy">
               <strong>Naturalistic decisions</strong>
@@ -416,6 +425,10 @@
 
         <div class="notes">
           This is a synthesis paper rather than a single empirical validation of the model.
+
+          The five research themes fade in automatically from top to bottom once the slide settles.
+          Each fade takes 600ms, with 1.1 seconds between starts. The sequence replays on each visit;
+          reduced-motion mode and print show all five immediately.
 
           Reveal 1: Rasmussen distinguishes empirical, evolutionary, and analytical risk strategies.
           Reveal 2: Defence in depth matters, but redundant protections can degrade quietly because a local violation
@@ -505,10 +518,10 @@
         data-y="233000"
         data-scale="25"
       >
-        <h2 class="social-systems-title">The TL;DR</h2>
+        <h2 class="social-systems-title">Putting it together</h2>
 
         <div
-          class="substep social-together complex-system-reveal"
+          class="social-together complex-system-reveal"
           role="img"
           aria-label="People placed throughout a complex system; bright orange points with yellow highlights pulse along the connections"
         >
@@ -521,7 +534,7 @@
             <div class="social-arrow-pulses"></div>
           </div>
           <div
-            class="substep social-fish-overlay-reveal"
+            class="social-fish-overlay-reveal"
             role="img"
             aria-label="The fish-shaped performance boundary and dotted error margin surround the complex system, with a red operating point inside"
           >
@@ -553,25 +566,26 @@
           </div>
         </div>
 
-        <figure class="substep complex-ai-coping">
+        <figure class="complex-ai-coping">
           <img
             class="complex-ai-image"
             src="/images/srecon26/logo-ai-mashup.png"
             alt="AI, LLM, and agent symbols in a colored ball"
           />
-          <figcaption>AI changes the conditions in which people adapt.</figcaption>
+          <figcaption>How AI changes the conditions in which people adapt.</figcaption>
         </figure>
 
         <div class="notes">
           The hierarchy on the previous slide surrounds the people and interactions in this complex system.
 
-          Reveal 1: show people distributed through the complex system, with bright orange points with yellow highlights
-          and a bold rim pulsing along its connections.
-          Reveal 2: one trigger assembles the fish around the smaller network over 4.4 seconds, fading in the
-          economic, workload and performance boundaries in sequence, followed by the dotted error margin and operating point.
+          Once the slide settles, automatically assemble the fish over 4.4 seconds, fading in the economic,
+          workload and performance boundaries in sequence, followed by the dotted error margin and operating point.
+          Then fade in people distributed through the complex system over 1.1 seconds, with bright orange points
+          with yellow highlights and a bold rim pulsing along its connections. At 5.5 seconds, fade in the AI artwork
+          and adaptation caption together in the lower row. No presenter clicks are needed. Replay on each visit;
+          reduced-motion mode and print show everything immediately without pulsing.
           The operating point represents the state of the whole system. The following slide explains the boundaries
           and the margin in detail.
-          Reveal 3: show the AI artwork and adaptation caption together in the lower row.
 
           Source model and boundary artwork: https://srecon24.hatchman76.com/#/the-model
           <h3>Adaptation with LLM tools</h3>
@@ -684,7 +698,7 @@
         <div
           class="substep plain-guardian-actions"
           role="img"
-          aria-label="Five cost-pressure charts and six effort-saving hands appear within the playing surface, including a hand near the intersection of the error margin and workload boundary, while seven safety tanks appear near the error margin"
+          aria-label="Five cost-pressure charts and six effort-saving hands appear within the playing surface, including a hand near the intersection of the error margin and workload boundary, while seven Blocker Lemmings represent safety interventions near the error margin"
         ></div>
 
         <svg
@@ -725,9 +739,9 @@
 
           After both boundaries have moved, a second pulsing dot starts in the same place and begins to wander. The original dot remains as a dim reference. The moving dot favors the error margin to show how pressure for efficiency and less effort can draw normal adaptations toward the performance boundary.
 
-          The charts stand for pressure to reduce cost, which a downturn can intensify. The hands stand for ways people reduce effort under workload; the tanks show safety action near the error margin. Rasmussen describes actors adapting within the work-space, encountering an effort gradient while management supplies a cost gradient. The charts and hands are scattered through that space to illustrate local adaptations, not measured locations of individual decisions in Figure 3.
+          The charts stand for pressure to reduce cost, which a downturn can intensify. The hands stand for ways people reduce effort under workload; the Blocker Lemmings show safety action near the error margin: pause or redirect work to preserve margin. Rasmussen describes actors adapting within the work-space, encountering an effort gradient while management supplies a cost gradient. The charts and hands are scattered through that space to illustrate local adaptations, not measured locations of individual decisions in Figure 3.
 
-          Once every tank, hand, and chart has finished arriving, two arrows draw themselves from their boundaries
+          Once every Blocker Lemming, hand, and chart has finished arriving, two arrows draw themselves from their boundaries
           into the middle of the diagram, followed by their arrowheads and labels. The economic-side
           arrow shows the gradient toward cost efficiency; the workload-side arrow shows the gradient toward least
           effort. Both point toward the acceptable-performance side and stop within the work-space. Figure 3 and its
@@ -757,39 +771,42 @@
         data-y="258000"
         data-scale="25"
       >
-        <h2 class="diagram-legend-title">Diagram Legend</h2>
+        <h2 class="diagram-legend-title substep">Diagram Legend</h2>
 
         <div class="diagram-legend-grid" aria-label="Symbols used in the Fish diagram">
-          <div class="diagram-legend-item">
+          <div class="diagram-legend-item substep">
             <span class="diagram-legend-symbol" aria-hidden="true">💸</span>
             <p><strong>Economic boundary</strong><span>Where money runs out</span></p>
           </div>
-          <div class="diagram-legend-item">
+          <div class="diagram-legend-item substep">
             <span class="diagram-legend-symbol" aria-hidden="true">😢</span>
             <p><strong>Workload boundary</strong><span>Where people cannot keep up</span></p>
           </div>
-          <div class="diagram-legend-item">
+          <div class="diagram-legend-item substep">
             <span class="diagram-legend-symbol" aria-hidden="true">💥</span>
             <p><strong>Performance boundary</strong><span>Where the system stops working acceptably</span></p>
           </div>
-          <div class="diagram-legend-item">
+          <div class="diagram-legend-item substep">
             <span class="diagram-legend-symbol diagram-legend-margin" aria-hidden="true">···</span>
             <p><strong>Error margin</strong><span>Buffer before the performance limit</span></p>
           </div>
-          <div class="diagram-legend-item">
+          <div class="diagram-legend-item substep">
             <span class="diagram-legend-symbol" aria-hidden="true">
               <img src="/images/operating-point.svg" alt="" />
             </span>
             <p><strong>Operating point</strong><span>Where the whole system is now</span></p>
           </div>
-          <div class="diagram-legend-item">
+          <div class="diagram-legend-item substep">
             <span class="diagram-legend-symbol diagram-legend-surface" aria-hidden="true"></span>
             <p><strong>Playing surface</strong><span>Room within the boundaries</span></p>
           </div>
-          <div class="diagram-legend-item diagram-legend-actions">
+          <div class="diagram-legend-item diagram-legend-actions substep">
             <span class="diagram-legend-symbol diagram-legend-actions-symbol" aria-hidden="true">
-              <img src="/images/srecon24/cartoon-tank.png" alt="" />
-              <span class="diagram-legend-action-hand">✋</span>
+              <picture>
+                <source media="(prefers-reduced-motion: reduce)" srcset="/images/qcon26/blocker-lemming.png" />
+                <img class="blocker-lemming" src="/images/qcon26/blocker-lemming.gif" alt="" />
+              </picture>
+              <span class="diagram-legend-action-hand">🫷</span>
               <span class="diagram-legend-action-chart">📉</span>
             </span>
             <p>
@@ -805,12 +822,15 @@
           performance boundary; the gap between them is the error margin. Boundaries constrain the playing surface,
           but they do not push the point in any direction.
 
-          The combined tank, hand and chart are this talk's shorthand for actions and pressures: safety interventions,
+          The combined Blocker Lemming, hand and chart are this talk's shorthand for actions and pressures: safety interventions,
           adaptations to reduce effort, and pressure toward cost efficiency. Rasmussen's Figure 3 describes local
           adaptive variations, effort and cost gradients, and a safety countergradient. Figure 1 shows technological,
           market and political stressors acting across the socio-technical hierarchy. Local actions and wider
           pressures interact; an external condition is not necessarily a deliberate action. In this adaptation,
           changes can shift the operating point or reshape the constraints around it.
+
+          The Blocker Lemming means pause or redirect work to preserve margin. It represents an active
+          intervention by people with evidence, authority and capacity; the boundary itself does not stop the point.
 
           Actions may arise within a team's immediate work or elsewhere in the control hierarchy. Management and
           regulators remain part of the wider socio-technical system; environmental stressors act across it.
@@ -836,29 +856,31 @@
         data-y="250375"
         data-scale="2.843136"
       >
-        <span class="boundary-detail-icon" aria-hidden="true">💸</span>
-        <h2 class="boundary-detail-title">Economic Boundary</h2>
-        <p class="boundary-detail-lede">External conditions change what the business can sustain.</p>
+        <div class="substep">
+          <span class="boundary-detail-icon" aria-hidden="true">💸</span>
+          <h2 class="boundary-detail-title">Economic Boundary</h2>
+        </div>
+        <p class="boundary-detail-lede substep">External conditions change what the business can sustain.</p>
         <div class="boundary-detail-grid">
-          <div class="boundary-detail-copy">
+          <div class="boundary-detail-copy substep">
             <h3>More room to operate</h3>
-            <ul>
-              <li>Stronger demand and better pricing power</li>
-              <li>Fresh funding or cheaper financing</li>
-              <li>Lower energy, supplier or infrastructure costs</li>
+            <ul class="boundary-emoji-list" role="list">
+              <li><span class="boundary-list-emoji" aria-hidden="true">📈</span><span>Stronger demand and better pricing power</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">💰</span><span>Fresh funding or cheaper financing</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">🏷️</span><span>Lower energy, supplier or infrastructure costs</span></li>
             </ul>
           </div>
           <div class="substep boundary-detail-copy">
             <h3>Less room to operate</h3>
-            <ul>
-              <li>Market slowdown, churn or price competition</li>
-              <li>Costlier credit or funding that dries up</li>
-              <li>Higher supplier costs or currency shocks</li>
+            <ul class="boundary-emoji-list" role="list">
+              <li><span class="boundary-list-emoji" aria-hidden="true">📉</span><span>Market slowdown, churn or price competition</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">🏦</span><span>Costlier credit or funding that dries up</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">💱</span><span>Higher supplier costs or currency shocks</span></li>
             </ul>
           </div>
         </div>
-        <p class="boundary-detail-conclusion">Sustainable capacity changes the boundary.<br />A tighter internal budget changes the target.</p>
-        <p class="boundary-detail-source">Model: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figures 1 &amp; 3</a> · Business examples: this talk’s application.</p>
+        <p class="boundary-detail-conclusion substep">Sustainable capacity changes the boundary.<br />A tighter internal budget changes the target.</p>
+
         <div class="notes">
           These are common external conditions, not measurements of a universal boundary. Holding the work and
           commitments broadly constant, stronger sustainable revenue, accessible capital or a lower sustainable
@@ -881,20 +903,22 @@
         data-y="253765"
         data-scale="2.355664"
       >
-        <span class="boundary-detail-icon" role="img" aria-label="Downward cost chart">📉</span>
-        <h2 class="boundary-detail-title">Economic Boundary Actions</h2>
-        <p class="boundary-detail-lede">Signals become decisions that push toward cost efficiency.</p>
+        <div class="substep">
+          <span class="boundary-detail-icon" role="img" aria-label="Downward cost chart">📉</span>
+          <h2 class="boundary-detail-title">Economic Boundary Actions</h2>
+        </div>
+        <p class="boundary-detail-lede substep">Signals become decisions that push toward cost efficiency.</p>
         <table class="boundary-action-table">
-          <thead><tr><th>Leading signal / metric</th><th>Possible management action</th></tr></thead>
+          <thead><tr class="substep"><th>Leading signal / metric</th><th>Possible management action</th></tr></thead>
           <tbody>
-            <tr><td>Forecast cash burn ↑<br />Runway ↓</td><td>Reduce scope; defer investment;<br />reprioritize commitments</td></tr>
-            <tr><td>Cost per verified outcome ↑</td><td>Renegotiate suppliers; rightsize resources;<br />remove low-value work</td></tr>
-            <tr><td>Idle capacity or unused licences ↑</td><td>Consolidate platforms; retire unused capacity;<br />check redundancy before cutting</td></tr>
-            <tr><td>Projected margin ↓</td><td>Freeze hiring; reduce staffing or maintenance<br /><strong>→ savings can transfer risk</strong></td></tr>
+            <tr class="substep"><td>Forecast cash burn ↑<br />Runway ↓</td><td>Reduce scope; defer investment;<br />reprioritize commitments</td></tr>
+            <tr class="substep"><td>Cost per verified outcome ↑</td><td>Renegotiate suppliers; rightsize resources;<br />remove low-value work</td></tr>
+            <tr class="substep"><td>Idle capacity or unused licences ↑</td><td>Consolidate platforms; retire unused capacity;<br />check redundancy before cutting</td></tr>
+            <tr class="substep"><td>Projected margin ↓</td><td>Freeze hiring; reduce staffing or maintenance<br /><strong>→ savings can transfer risk</strong></td></tr>
           </tbody>
         </table>
-        <p class="boundary-detail-conclusion">The gradient points toward cost efficiency.<br />Watch for lost assurance on the performance side.</p>
-        <p class="boundary-detail-source">Model: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figure 3</a> · Signals and responses: illustrative, not automatic rules.</p>
+        <p class="boundary-detail-conclusion substep">The gradient points toward cost efficiency.<br />Watch for lost assurance on the performance side.</p>
+
         <div class="notes">
           A forecast is a signal and a budget is a target. An actor with authority decides what to do. These are
           possible organizational responses, not recommendations to reduce staffing or resilience. Unit economics
@@ -920,29 +944,31 @@
         data-y="262575"
         data-scale="2.429972"
       >
-        <span class="boundary-detail-icon" aria-hidden="true">😢</span>
-        <h2 class="boundary-detail-title">Workload Boundary</h2>
-        <p class="boundary-detail-lede">The sustainable capacity to do and understand the work can change.</p>
+        <div class="substep">
+          <span class="boundary-detail-icon" aria-hidden="true">😢</span>
+          <h2 class="boundary-detail-title">Workload Boundary</h2>
+        </div>
+        <p class="boundary-detail-lede substep">The sustainable capacity to do and understand the work can change.</p>
         <div class="boundary-detail-grid">
-          <div class="boundary-detail-copy">
+          <div class="boundary-detail-copy substep">
             <h3>More room to operate</h3>
-            <ul>
-              <li>More trained people and relevant expertise</li>
-              <li>Better tools and reliable toil reduction</li>
-              <li>Protected focus, recovery time and knowledge sharing</li>
+            <ul class="boundary-emoji-list" role="list">
+              <li><span class="boundary-list-emoji" aria-hidden="true">👥</span><span>More trained people and relevant expertise</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">🛠️</span><span>Better tools and reliable toil reduction</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">🧘</span><span>Protected focus, recovery time and knowledge sharing</span></li>
             </ul>
           </div>
           <div class="substep boundary-detail-copy">
             <h3>Less room to operate</h3>
-            <ul>
-              <li>Attrition, layoffs or unavailable specialists</li>
-              <li>Fatigue, burnout and constant interruptions</li>
-              <li>Fragile tooling and lost operational knowledge</li>
+            <ul class="boundary-emoji-list" role="list">
+              <li><span class="boundary-list-emoji" aria-hidden="true">🚪</span><span>Attrition, layoffs or unavailable specialists</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">🥵</span><span>Fatigue, burnout and constant interruptions</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">🧩</span><span>Fragile tooling and lost operational knowledge</span></li>
             </ul>
           </div>
         </div>
-        <p class="boundary-detail-conclusion">Less effective capacity shortens the playing surface.<br />More incoming work also moves the operating point.</p>
-        <p class="boundary-detail-source">Model: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figure 3</a> · Capacity examples: this talk’s application.</p>
+        <p class="boundary-detail-conclusion substep">Less effective capacity shortens the playing surface.<br />More incoming work also moves the operating point.</p>
+
         <div class="notes">
           Holding the kind and quality of required work broadly constant, usable expert capacity can change the
           sustainable workload limit. Headcount is an imperfect proxy: new hires need onboarding, relevant expertise,
@@ -966,20 +992,22 @@
         data-y="266395"
         data-scale="2.436975"
       >
-        <span class="boundary-detail-icon" role="img" aria-label="Effort-saving hand">✋</span>
-        <h2 class="boundary-detail-title">Workload Boundary Actions</h2>
-        <p class="boundary-detail-lede">People adapt toward least effort when demand strains capacity.</p>
+        <div class="substep">
+          <span class="boundary-detail-icon" role="img" aria-label="Effort-saving hand">🫷</span>
+          <h2 class="boundary-detail-title">Workload Boundary Actions</h2>
+        </div>
+        <p class="boundary-detail-lede substep">People adapt toward least effort when demand strains capacity.</p>
         <table class="boundary-action-table">
-          <thead><tr><th>Early signal / metric</th><th>Possible adaptation</th></tr></thead>
+          <thead><tr class="substep"><th>Early signal / metric</th><th>Possible adaptation</th></tr></thead>
           <tbody>
-            <tr><td>Queue age and work in progress ↑</td><td>Automate repeatable toil; improve tooling;<br />limit incoming work</td></tr>
-            <tr><td>Interruptions and handoffs ↑<br />Focus time ↓</td><td>Batch tasks; standardize paths;<br />simplify tools and coordination</td></tr>
-            <tr><td>Overtime and fatigue ↑<br />Recovery time ↓</td><td>Reduce scope; protect rest; share on-call load<br /><strong>or rush and bypass checks</strong></td></tr>
-            <tr><td>Review findings and rework ↑</td><td>Improve tests and shared understanding<br /><strong>or accept output without examining it</strong></td></tr>
+            <tr class="substep"><td>Queue age and work in progress ↑</td><td>Automate repeatable toil; improve tooling;<br />limit incoming work</td></tr>
+            <tr class="substep"><td>Interruptions and handoffs ↑<br />Focus time ↓</td><td>Batch tasks; standardize paths;<br />simplify tools and coordination</td></tr>
+            <tr class="substep"><td>Overtime and fatigue ↑<br />Recovery time ↓</td><td>Reduce scope; protect rest; share on-call load<br /><strong>or rush and bypass checks</strong></td></tr>
+            <tr class="substep"><td>Review findings and rework ↑</td><td>Improve tests and shared understanding<br /><strong>or accept output without examining it</strong></td></tr>
           </tbody>
         </table>
-        <p class="boundary-detail-conclusion">Reducing toil can preserve control.<br />Skipping checks saves effort now and creates work later.</p>
-        <p class="boundary-detail-source"><a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figure 3</a> · <a href="https://sre.google/workbook/eliminating-toil/">Google SRE: Eliminating Toil</a> · Illustrative signals and choices.</p>
+        <p class="boundary-detail-conclusion substep">Reducing toil can preserve control.<br />Skipping checks saves effort now and creates work later.</p>
+
         <div class="notes">
           The hand denotes the gradient toward least effort, not a moral judgment. Better technology and automation
           can remove repeatable toil and improve assurance. They require maintenance, competence and exception
@@ -1006,29 +1034,31 @@
         data-y="255379"
         data-scale="2.981193"
       >
-        <span class="boundary-detail-icon" aria-hidden="true">💥</span>
-        <h2 class="boundary-detail-title">Boundary of<br />Acceptable Performance</h2>
-        <p class="boundary-detail-lede">Crossing the functional limit means unacceptable outcomes.</p>
+        <div class="substep">
+          <span class="boundary-detail-icon" aria-hidden="true">💥</span>
+          <h2 class="boundary-detail-title">Boundary of<br />Acceptable Performance</h2>
+        </div>
+        <p class="boundary-detail-lede substep">Crossing the functional limit means unacceptable outcomes.</p>
         <div class="boundary-detail-grid">
-          <div class="boundary-detail-copy">
+          <div class="boundary-detail-copy substep">
             <h3>Failure in the service</h3>
-            <ul>
-              <li>Outages and cascading system failures</li>
-              <li>Lost, corrupted or exposed customer data</li>
-              <li>Recovery that cannot restore service in time</li>
+            <ul class="boundary-emoji-list" role="list">
+              <li><span class="boundary-list-emoji" aria-hidden="true">🚨</span><span>Outages and cascading system failures</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">🔓</span><span>Lost, corrupted or exposed customer data</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">⏳</span><span>Recovery that cannot restore service in time</span></li>
             </ul>
           </div>
           <div class="substep boundary-detail-copy">
             <h3>Harm beyond the service</h3>
-            <ul>
-              <li>Customer operations disrupted; safety put at risk</li>
-              <li>Trust and reputation damaged</li>
-              <li>Contractual losses or regulatory consequences</li>
+            <ul class="boundary-emoji-list" role="list">
+              <li><span class="boundary-list-emoji" aria-hidden="true">🚧</span><span>Customer operations disrupted; safety put at risk</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">💔</span><span>Trust and reputation damaged</span></li>
+              <li><span class="boundary-list-emoji" aria-hidden="true">⚖️</span><span>Contractual losses or regulatory consequences</span></li>
             </ul>
           </div>
         </div>
-        <p class="boundary-detail-conclusion">Test people, tools and workflow together.<br />Can we use good output, catch mistakes and recover?</p>
-        <p class="boundary-detail-source"><a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen, Fig. 3</a> · <a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5">Chapter 5, §5.5.3</a> · <a href="https://www.nature.com/articles/s41746-025-01784-y">Morey et al. (2025)</a> · Software application.</p>
+        <p class="boundary-detail-conclusion substep">Test people, tools and workflow together.<br />Can we use good output, catch mistakes and recover?</p>
+
         <div class="notes">
           The acceptable-performance boundary is defined by the system's required functions and tolerated harms.
           Not every crossing is an immediate catastrophe: an unacceptable outcome can be local or escalate through
@@ -1051,25 +1081,24 @@
 
       <section
         id="error-margin"
-        class="step boundary-detail-slide"
+        class="step boundary-detail-slide boundary-detail-no-icon"
         data-x="-4213"
         data-y="256726"
         data-scale="2.72826"
       >
-        <img class="boundary-detail-icon" src="/images/srecon24/cartoon-tank.png" alt="Safety action" />
-        <h2 class="boundary-detail-title">Protect the Error Margin</h2>
-        <p class="boundary-detail-lede">Notice, act and recover before the functional limit is crossed.</p>
+        <h2 class="boundary-detail-title substep">Protect the Error Margin</h2>
+        <p class="boundary-detail-lede substep">Notice, act and recover before the functional limit is crossed.</p>
         <table class="boundary-action-table">
-          <thead><tr><th>Signal / concern</th><th>Action that preserves margin</th></tr></thead>
+          <thead><tr class="substep"><th>Signal / concern</th><th>Action that preserves margin</th></tr></thead>
           <tbody>
-            <tr><td>Blind spots or stale telemetry</td><td>Improve monitoring; check user journeys;<br />connect alerts to an owner who can act</td></tr>
-            <tr><td>Saturation or shrinking headroom</td><td>Improve software efficiency; load-test;<br />add scalable capacity and tested redundancy</td></tr>
-            <tr><td>Changes exceed verification capacity</td><td>Limit admission; use canaries and rollback;<br />retain independent review and access controls</td></tr>
-            <tr><td>Slow or uncertain recovery</td><td>Exercise failover and restore; update runbooks;<br />practice diagnosis and share expertise</td></tr>
+            <tr class="substep"><td>Blind spots or stale telemetry</td><td>Improve monitoring; check user journeys;<br />connect alerts to an owner who can act</td></tr>
+            <tr class="substep"><td>Saturation or shrinking headroom</td><td>Improve software efficiency; load-test;<br />add scalable capacity and tested redundancy</td></tr>
+            <tr class="substep"><td>Changes exceed verification capacity</td><td>Limit admission; use canaries and rollback;<br />retain independent review and access controls</td></tr>
+            <tr class="substep"><td>Slow or uncertain recovery</td><td>Exercise failover and restore; update runbooks;<br />practice diagnosis and share expertise</td></tr>
           </tbody>
         </table>
-        <p class="boundary-detail-conclusion">Monitoring is a sensor. Protection needs a response.<br />Preserve time, authority and the ability to recover.</p>
-        <p class="boundary-detail-source"><a href="https://sre.google/sre-book/monitoring-distributed-systems/">Google SRE: Monitoring</a> · <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figure 3</a> · Engineering applications.</p>
+        <p class="boundary-detail-conclusion substep">Monitoring is a sensor. Protection needs a response.<br />Preserve time, authority and the ability to recover.</p>
+
         <div class="notes">
           The dotted line represents a fallible perceived limit. Crossing it consumes the deliberately protected
           error margin; failure is not inevitable at that point. An alert does not push the operating point back.
@@ -1079,6 +1108,7 @@
           privilege, independent review, rollback and restore exercises preserve bounded excursions and recovery.
           An error budget is a service-management mechanism, not a geometric measurement of Rasmussen's error margin.
           <h3>Notice, intervene and recover</h3>
+          <p>Deliberate interventions pause or redirect work to preserve margin. Someone needs the evidence, authority and capacity to act.</p>
           <p>Notice requires usable signals and timely interpretation. Intervention requires evidence, authority, tools and remaining response capacity. Recovery requires contextual knowledge and fallbacks that people can use under pressure. A written rollback procedure does not establish that capability. Awareness and the margin itself exert no automatic restoring force; the objective is sufficient margin, bounded excursions and recoverability, not a preferred geometric center.</p>
           <p>Exercise stale observations, scarce time, excess review demand and unavailable supporting services outside production. Assess whether the team can pause, reduce scope and recover. Chapter 5 §§5.3.2–5.3.5 (printed pp. 82–84; PDF pp. 90–92) discusses difficulties recognizing plausible errors; §5.1 illustrates responsibility without resources and decay of alternatives; §§5.4–5.5 (printed pp. 84–86; PDF pp. 92–94) support challenging exercises and continuing assurance.</p>
           <p>The AWS 19–20 October 2025 disruption report describes conventional automation and dependencies, with no reported generative AI involvement. Delayed DNS-plan application interacted with changed state and cleanup; subsequent EC2 recovery entered congestive collapse. AWS announced recovery testing and controls on incoming work. The report does not establish that all announced work was complete. Use it as a control-and-recovery mechanism example, not an AI-caused incident or a general verdict on automation.</p>
@@ -1101,7 +1131,6 @@
 
       <section id="ai-operating-point" class="step ai-journey-slide ai-arrival-slide"
         data-x="50" data-y="283350" data-scale="7">
-        <h2 class="ai-arrival-title">Here is our operating point.</h2>
         <img class="ai-arrival-point" src="/images/operating-point.svg" alt="Red circle representing the whole system’s current operating state" />
         <div class="substep ai-arrival-reveal">
           <img class="ai-arrival-ball" src="/images/srecon26/logo-ai-mashup.png" alt="The coloured AI ball rolls in from the left and covers the operating point" />
@@ -1140,10 +1169,12 @@
         <div class="notes">
           Open the camera from the operating point onto the familiar model. The display deliberately contains
           only the three functional boundary lines, the performance-side dotted error margin and the AI ball.
-          There is no fourth AI boundary. After the camera settles, the ball wanders from the middle, with a bias
-          toward the performance side, as in the original diagram. The trajectory is illustrative, not measured,
+          There is no fourth AI boundary. After the camera settles, keep the ball stationary for three seconds,
+          then fade in the diagram over one second. Only once that fade completes does the ball begin to wander,
+          with a bias toward the performance side, as in the original diagram. The trajectory is illustrative, not measured,
           and no geometric center is an ideal state. Organizational choices and usable feedback shape the actual
-          trajectory. Reduced-motion mode keeps the ball stationary. The next three steps inspect economics,
+          trajectory. Replay the pause and fade on each visit. Reduced-motion mode shows the diagram immediately
+          and keeps the ball stationary. The next three steps inspect economics,
           workload and the error margin. The journey ends at the error-margin scene with the means to improve assurance and recover.
           <h3>One model through the journey</h3>
           <p>Economic failure, unacceptable workload and functionally unacceptable performance are the three constraints. Error margin is the protected performance-side buffer, not an additional constraint. The following economic, workload and error-margin close-ups carry the control and evidence questions within this model. The display stays text-free so the camera and one operating point carry the transition.</p>
@@ -1204,7 +1235,7 @@
 
       <section id="ai-workload-pressure" class="step boundary-detail-slide ai-workslop-slide"
         data-x="6645" data-y="287575" data-scale="3.037465">
-        <span class="boundary-detail-icon" role="img" aria-label="Least-effort pressure">✋</span>
+        <span class="boundary-detail-icon" role="img" aria-label="Least-effort pressure">🫷</span>
         <h2 class="boundary-detail-title">AI and least effort</h2>
         <p class="boundary-detail-lede">AI can make “generate, accept, act” the path of least effort.</p>
         <figure class="workload-proxy-figure">
@@ -1309,9 +1340,103 @@
 
         </div>
       </section>
+      <section id="workflow-cost" class="step practice-slide"
+        data-x="0" data-y="308000" data-scale="25">
+        <h2 class="practice-title">The cost of a verified outcome</h2>
+        <p class="practice-lede">Follow one AI-assisted change all the way into service.</p>
+        <dl class="practice-rows">
+          <div><dt>Generate</dt><dd>Model, tools and compute</dd></div>
+          <div><dt>Verify</dt><dd>Review, tests and security checks</dd></div>
+          <div><dt>Operate</dt><dd>Maintenance, rework and recovery</dd></div>
+        </dl>
+        <p class="practice-measure">Total workflow cost <span aria-label="divided by">÷</span> completed, verified outcomes</p>
+        <p class="substep practice-takeaway">Remove low-value demand before cutting assurance.</p>
+        <div class="notes">
+          <h3>One workflow, end to end</h3>
+          <p>The previous slide asks us to use AI to improve assurance. Here is how to start. Carry one example through this section: an AI-assisted change to a service's retry behaviour. These are proposed engineering practices and an illustrative workflow, not results from an intervention study.</p>
+          <p>Trace a small sample from request through generation, review, deployment and operation. Include model and tool charges, allocated platform costs, and the human effort to check intent, test behaviour, fix mistakes and maintain the result. Observe authoring time and reviewer or on-call effort separately so a local saving cannot hide transferred work. When combining effort and cash into a cost estimate, state the conversion assumptions and avoid counting the same labour twice. Compare comparable work with a relevant baseline and require useful outcomes, rather than counting every generated proposal as value.</p>
+          <p>The retry change may be quick to generate while someone else must understand failure modes, check dependency limits and repair an incident. A short pilot cannot establish long-term recovery cost. Mark that uncertainty and follow up after release. Do not claim a saving from a short generation-time measurement alone.</p>
+          <h3>A decision this enables</h3>
+          <p>If full cost rises without improved useful outcomes, retire low-value uses, reduce scope, bound agent loops and retries, or try less expensive routing where equivalent verification supports it. Check whether each change reduces total cost rather than moving work elsewhere. Preserve expertise and review capacity. Budgets and quotas are management controls, not additional Rasmussen boundaries.</p>
+          <p>Source basis: the lifecycle-cost identity in TALK.md and the earlier economic slides. Chapter 5 §§5.2.4 and 5.5.2 discusses transferred costs and future adaptability. The measure and retry example are this talk's software-workflow synthesis.</p>
+          <ul><li><a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5">Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5</a></li></ul>
+        </div>
+      </section>
+
+      <section id="verification-capacity" class="step practice-slide"
+        data-x="0" data-y="333000" data-scale="25">
+        <h2 class="practice-title">Work the team can verify</h2>
+        <p class="practice-lede">A growing review queue is a decision point.</p>
+        <dl class="practice-rows">
+          <div><dt>Watch</dt><dd>Review age and work in progress</dd></div>
+          <div><dt>Limit</dt><dd>Parallel agents and incoming changes</dd></div>
+          <div><dt>Protect</dt><dd>Focused review and learning time</dd></div>
+        </dl>
+        <p class="practice-measure">An owner with time and authority to pause intake</p>
+        <p class="substep practice-takeaway">When checking falls behind, change scope or timing.</p>
+        <div class="notes">
+          <h3>Admission creates a commitment</h3>
+          <p>In the retry example, many agents can propose changes across many services. The useful question is how much work we choose to admit to the team's verification queue. Count work in progress and the age of outstanding reviews alongside complexity, checking effort and effective expert capacity. Headcount or raw change count alone misses differences in context and risk.</p>
+          <p>Agree a local admission limit and review-age trigger before increasing parallel work. Use the team's baseline and the consequences of delay to choose them, then revise them with experience. There is no universally correct ratio or ticket limit. Keep room for interrupts and variable work rather than planning every reviewer's attention to full utilization.</p>
+          <p>When the trigger fires, the named lead can pause new agent submissions, defer low-value changes or reduce scope. Management must accept the changed delivery expectation and protect time for reviewers. Keep urgent reliability or security work on a deliberate triage path. Pausing new work does not abandon work already owed.</p>
+          <h3>Understanding is part of capacity</h3>
+          <p>Give engineers time to explain the retry policy, inspect the dependency and practise diagnosis. AI can help comprehension and test discovery, provided someone checks that the evidence is useful. Validate any claimed reduction in review effort. Do not treat reviewer availability after hours as sustainable capacity.</p>
+          <p>Queue growth shows delay and capacity pressure. It does not by itself establish a defect increase. Performance risk additionally depends on adaptations such as bypassed checks or reduced testing. This admission practice is the talk's application of the earlier workload argument. Google's overload chapter supports quantifying and reprioritizing work, with thresholds specific to each team.</p>
+          <ul><li><a href="https://sre.google/workbook/overload/">Google SRE Workbook, Identifying and Recovering from Overload</a></li></ul>
+        </div>
+      </section>
+
+      <section id="evidence-handoff" class="step practice-slide"
+        data-x="0" data-y="358000" data-scale="25">
+        <h2 class="practice-title">A handoff with evidence</h2>
+        <p class="practice-lede">Example: an AI-assisted change to retry behaviour.</p>
+        <dl class="practice-rows practice-rows-four">
+          <div><dt>Intent</dt><dd>Which failures should we retry?</dd></div>
+          <div><dt>Evidence</dt><dd>Retry limits, timeout and load tests</dd></div>
+          <div><dt>Exposure</dt><dd>Permissions, data paths and dependencies</dd></div>
+          <div><dt>Ownership</dt><dd>A maintainer who can explain the change</dd></div>
+        </dl>
+        <p class="substep practice-takeaway">AI can help find test gaps.<br />Check the results against the requirement.</p>
+        <div class="notes">
+          <h3>Enough evidence for the recipient</h3>
+          <p>Add a short handoff to the existing change process rather than creating a parallel bureaucracy. State the intended behaviour, link the relevant requirement or dependency documentation, show what was tested, and identify uncertainty. Record model or tool versions when needed to reproduce the work. Explain any changed permissions, data paths or dependency assumptions, including an explicit statement when none changes.</p>
+          <p>For this retry change, inspect which errors are transient, whether the operation is safe to repeat, how attempts and elapsed time are bounded, and what happens when many callers retry together. Use a controlled environment and representative failure conditions. Ask the author to explain the trade-offs and ask a maintainer to identify what they would inspect during an incident. These are examples to adapt to the service, not a universal test checklist.</p>
+          <h3>AI as an assurance aid</h3>
+          <p>Use AI to suggest edge cases, locate source evidence or draft tests. Validate the source and expected result independently against the requirement, a reference implementation or observed behaviour. A test copied from the same mistaken assumption can agree with faulty code. An additional model or a fluent explanation does not by itself provide independent evidence.</p>
+          <p>Choose checking depth according to the consequence and reversibility of the action. Enforce scoped permissions at the execution boundary and separate proposal from authority to enact consequential changes. Preserve a named maintainer and time to learn, so ownership includes practical understanding. The handoff is this talk's proposed practice, drawing on the earlier workload, security and incident-understanding discussion.</p>
+          <ul><li><a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5">Rayo, Morey, Grøtan and Woods (2026), Chapter 5 §§5.3 and 5.5.3, expertise and situated joint evaluation</a></li></ul>
+        </div>
+      </section>
+
+      <section id="rehearsed-recovery" class="step practice-slide"
+        data-x="0" data-y="383000" data-scale="25">
+        <h2 class="practice-title">Intervention and recovery</h2>
+        <p class="practice-lede">Controlled exercise: a retry change overloads a dependency.</p>
+        <dl class="practice-rows practice-rows-four">
+          <div><dt>Notice</dt><dd>Can our checks expose the mistake?</dd></div>
+          <div><dt>Stop</dt><dd>Who can pause further action?</dd></div>
+          <div><dt>Recover</dt><dd>Does the fallback restore service?</dd></div>
+          <div><dt>Repeat</dt><dd>After model or workflow changes</dd></div>
+        </dl>
+        <p class="substep practice-takeaway">Measure time to notice, stop and restore.<br />Test people, tools and workflow together.</p>
+        <div class="notes">
+          <h3>A convincing mistake, outside production</h3>
+          <p>In an isolated exercise, give the team a plausible retry change with a consequential flaw, such as a missing retry limit. It looks reasonable and its happy-path tests pass, but a dependency slowdown causes repeated calls. This is a fictional scenario to adapt, not an incident report. Include useful and mediocre recommendations as well, and compare with a relevant baseline. A single deliberately bad case is not a full evaluation of joint performance.</p>
+          <p>Observe whether the team finds the relevant evidence, detects the flaw and can reach someone with authority and capacity to act. Exercise the actual stop mechanism: pause new work, halt further rollout or revoke the tool's ability to act. Scoped credentials, bounded execution and separation between proposal and execution must make the limit enforceable. A written instruction to stop is insufficient if the system can continue acting.</p>
+          <p>Practise the fallback or rollback and confirm user-visible recovery. A code rollback may not reverse data changes or remove a backlog, so test restore or reconciliation where necessary. Start with limited exposure and service-specific observation when the change eventually enters the ordinary release process. Update the probes and runbook to match the changed service behaviour.</p>
+          <h3>Observe joint performance</h3>
+          <p>Record useful outcomes, checking effort, consequential-error detection, and the time to notice, intervene and restore. Use the findings to change the workflow, training, permissions or recovery mechanism. Repeat evaluation after material changes in models, tools, dependencies or staffing. The aim is sufficient margin and recoverability. Operational signals remain proxies for the actual functional limit, and an SLO error budget is not Rasmussen's error margin.</p>
+          <p>The exercise is the talk's software application of Chapter 5's situated joint-evaluation argument. The clinical evidence discussed earlier does not estimate software or LLM risk. Google's canary guidance supports bounded exposure, evaluation and an explicit rollout response.</p>
+          <ul>
+            <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5">Rayo, Morey, Grøtan and Woods (2026), Chapter 5 §5.5.3</a></li>
+            <li><a href="https://sre.google/workbook/canarying-releases/">Google SRE Workbook, Canarying Releases</a></li>
+          </ul>
+        </div>
+      </section>
+
     </main>
 
     <script src="/vendor/impress.js/js/impress.min.js"></script>
-    <script src="/main.js?v=26"></script>
+    <script src="/main.js?v=33"></script>
   </body>
 </html>

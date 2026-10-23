@@ -13,7 +13,7 @@ The numbered Markdown files in this directory mirror the rendered Impress deck i
 7. [Rasmussen source slide](05-model.md) — `#/the-model`
 8. [The research behind the model](06-paper-themes.md) — `#/paper-themes`
 9. [Social control is multi-layered](07-social-and-systems.md) — `#/social-and-systems`
-10. [Putting it Together](07a-complex-system-and-boundaries.md) — `#/complex-system-and-boundaries`
+10. [Putting it together](07a-complex-system-and-boundaries.md) — `#/complex-system-and-boundaries`
 11. [The Fish Diagram](08-fish-diagram.md) — `#/the-fish-diagram`
 12. [Diagram Legend](09-diagram-legend.md) — `#/diagram-legend`
 13. [Economic Boundary](09a-economic-boundary.md) — `#/economic-boundary`
@@ -27,8 +27,14 @@ The numbered Markdown files in this directory mirror the rendered Impress deck i
 21. [AI has to be paid for](09i-ai-economic-pressure.md) — `#/ai-economic-pressure`
 22. [AI and least effort](09j-ai-workload-pressure.md) — `#/ai-workload-pressure`
 23. [Change can outrun our view](09k-ai-margin-pressure.md) — `#/ai-margin-pressure`
+24. [The cost of a verified outcome](10-workflow-cost.md) — `#/workflow-cost`
+25. [Work the team can verify](11-verification-capacity.md) — `#/verification-capacity`
+26. [A handoff with evidence](12-evidence-handoff.md) — `#/evidence-handoff`
+27. [Intervention and recovery](13-rehearsed-recovery.md) — `#/rehearsed-recovery`
 
-The deck contains 23 content steps and two overview/overlay camera steps, for 25 Impress steps. Six boundary close-ups explain capacity changes, signals, actions, failure consequences and protection. The five-step AI camera journey follows the fish overview and ends at the error-margin scene with a final assurance reveal. Content is plain and unframed; coordinates and detailed positioning remain for a later pass.
+The deck contains 27 content steps and two overview/overlay camera steps, for 29 Impress steps. Six boundary close-ups explain capacity changes, signals, actions, failure consequences and protection. The five-step AI camera journey follows the fish overview. Its error-margin scene and assurance reveal bridge into four practical closing slides, ending with **Intervention and recovery**. Content is plain and unframed; coordinates and detailed positioning remain for a later pass.
+
+The practical section follows one illustrative AI-assisted change to a service's retry behaviour through whole-workflow cost, verification capacity, an inspectable handoff and a rehearsed intervention. The close asks whether people, tools and workflow can detect a convincing mistake, stop further action and restore service. These are proposed engineering practices rather than intervention-study findings. Local thresholds, useful baselines and controlled exercises keep the application specific to the team's work.
 
 The former seven-slide sequence from Human behaviour through Keeping the model in view has been integrated into earlier steps and removed. Behaviour and control evidence now lives in the hierarchy, arrival, workload and margin notes. Whole-workflow economics lives in the economic close-ups; joint evaluation lives in acceptable performance; recovery and the conventional-automation AWS example live in the error-margin notes. See the [integration map](../research/2026-10-13-slide-consolidation.md).
 

@@ -8,6 +8,10 @@ Resilience Engineering When AI Moves the Operating Point
 
 Andrew Hatch
 
+## Visual treatment
+
+Show a Blocker Lemming with its arms outstretched. Its head turns left, then right, then back again in a continuous loop. Keep a static pose when reduced motion is enabled.
+
 ## Speaker notes
 
 Open with the audience promise: this is not a replay of the 2024 talk.

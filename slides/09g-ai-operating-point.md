@@ -1,10 +1,8 @@
-# Here is our operating point.
+# AI enters the operating point
 
 Rendered step: `#/ai-operating-point`.
 
 ## Slide copy and sequence
-
-**Here is our operating point.**
 
 What changes when AI enters the work?
 

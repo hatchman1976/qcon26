@@ -19,6 +19,10 @@ The gradient points toward cost efficiency.<br />Watch for lost assurance on the
 
 Model: [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · Signals and responses: illustrative, not automatic rules.
 
+## Reveal sequence
+
+All visible content uses eight presenter-controlled substeps: title and icon together; introductory sentence; table headings together; each of the four table rows in order; then the closing statement. Reveal one group per advance, keeping both cells of each row together and preserving the table layout while rows are hidden.
+
 ## Speaker notes
 
 A forecast is a signal and a budget is a target. An actor with authority decides what to do. These are possible organizational responses, not recommendations to reduce staffing or resilience. Unit economics should include human verification and recovery. Right-sizing and retiring unused services can preserve performance; cutting necessary expertise, maintenance or redundancy while retaining commitments can consume performance margin. Validate the effect of savings across the whole workflow. Existing incidents or realized losses are lagging outcomes; forecast cash and projected margins are earlier financial signals.

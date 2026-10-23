@@ -6,6 +6,10 @@
 
 The 31-page paper connects decades of studies across engineering and the human sciences.
 
+## Reveal sequence
+
+Show the title, introduction and Figure 8 immediately. Once the slide settles, fade in the five research themes automatically from top to bottom without presenter clicks. Each fade takes 600ms, with 1.1 seconds between starts. Replay the sequence on each visit. Reduced-motion mode and print show all five immediately.
+
 Starting state:
 
 - Figure 8: research traditions converge

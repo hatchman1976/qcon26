@@ -17,12 +17,14 @@ Presenter reveals, in order:
 7. The shaded surface and its label fade away, then the economic boundary shifts inward and outward against its original reference.
 8. Workload boundary shifts inward and outward against its original reference.
 9. A moving operating point starts.
-10. Cost charts, effort-saving hands and safety tanks arrive across the model, including a hand just inside the intersection of the error margin and workload boundary.
+10. Cost charts, effort-saving hands and Blocker Lemmings representing safety interventions arrive across the model in a quick stagger (roughly eight seconds overall, with each entrance lasting 0.45 seconds), including a hand just inside the intersection of the error margin and workload boundary.
 
-After all tank, hand, and chart arrival animations finish, automatically draw two arrows over 1.8 seconds, followed by their arrowheads and labels:
+After all Blocker Lemming, hand, and chart arrival animations finish, automatically draw two arrows over 1.8 seconds, followed by their arrowheads and labels:
 
 - **Cost efficiency:** from the economic boundary into the middle of the diagram, pointing toward acceptable performance.
 - **Least effort:** from the workload boundary into the middle of the diagram, pointing in the same general direction.
+
+Visual: reuse the opening slide's original animated Blocker Lemming sprite (`blocker-lemming.gif`) for the diagram's safety interventions, with pixelated scaling. Use its static pose (`blocker-lemming.png`) for reduced motion and print.
 
 ## Speaker notes
 
@@ -35,6 +37,8 @@ After all tank, hand, and chart arrival animations finish, automatically draw tw
 > Everyone makes sensible choices. The business asks for cheaper and faster. People make work easier. Together, those pressures can move the dot toward the performance edge.
 >
 > There is no magic safe spot in the middle. The lines do not push the dot back. Any line can move as demand, staffing, technology, or AI changes.
+>
+> The little character with its arms out is a Blocker Lemming. Here it stands for a deliberate safety intervention: pause or redirect work to preserve margin. That takes people, evidence and authority to act.
 >
 > That is Rasmussen's warning: failure does not require one stupid decision. Normal adaptations can slowly move the system toward an edge nobody can see exactly.
 

@@ -29,6 +29,10 @@ const requiredMarkers = [
   'id="ai-economic-pressure"',
   'id="ai-workload-pressure"',
   'id="ai-margin-pressure"',
+  'id="workflow-cost"',
+  'id="verification-capacity"',
+  'id="evidence-handoff"',
+  'id="rehearsed-recovery"',
   'id="social-and-systems-wiki"',
   'id="before-we-continue"',
   'id="social-and-systems"',
@@ -127,6 +131,8 @@ const requiredFiles = [
   "images/srecon24/Rasmussen_boundary_workload.png",
   "images/srecon24/Rasmussen_error_margin.png",
   "images/operating-point.svg",
+  "images/qcon26/blocker-lemming.png",
+  "images/qcon26/blocker-lemming.gif",
   "images/srecon24/Rasmussen_portrait.png",
   "images/srecon24/Rasmussen_Model_Original.png",
   "images/srecon24/Rasmussen_paper_figure_8.png",
@@ -146,8 +152,8 @@ await Promise.all(requiredFiles.map((file) => access(resolve(siteRoot, file))));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount !== 25) {
-  throw new Error(`Expected exactly twenty-five impress.js steps, found ${stepCount}`);
+if (stepCount !== 29) {
+  throw new Error(`Expected exactly twenty-nine impress.js steps, found ${stepCount}`);
 }
 
 console.log(`Verified src/index.html with ${stepCount} presentation steps.`);

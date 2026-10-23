@@ -10,19 +10,23 @@ External conditions change what the business can sustain.
 
 **More room to operate**
 
-- Stronger demand and better pricing power
-- Fresh funding or cheaper financing
-- Lower energy, supplier or infrastructure costs
+- 📈 Stronger demand and better pricing power
+- 💰 Fresh funding or cheaper financing
+- 🏷️ Lower energy, supplier or infrastructure costs
 
 **Less room to operate**
 
-- Market slowdown, churn or price competition
-- Costlier credit or funding that dries up
-- Higher supplier costs or currency shocks
+- 📉 Market slowdown, churn or price competition
+- 🏦 Costlier credit or funding that dries up
+- 💱 Higher supplier costs or currency shocks
 
 Sustainable capacity changes the boundary.<br />A tighter internal budget changes the target.
 
 Model: [Rasmussen (1997), Figures 1 & 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · Business examples: this talk’s application.
+
+## Reveal sequence
+
+All visible content uses five presenter-controlled substeps: title and icon together; introductory sentence; the complete “More room to operate” column; the complete “Less room to operate” column; then the closing statement. Reveal one group per advance and preserve the layout while groups are hidden.
 
 ## Speaker notes
 

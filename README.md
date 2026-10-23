@@ -6,8 +6,9 @@ An interactive [impress.js](https://impress.js.org/) presentation for Andrew Hat
 - Repository: <https://github.com/hatchman1976/qcon26>
 - Intended live site: <https://qcon26.hatchman76.com>
 - Author: Andrew Hatch ([@hatchman1976](https://github.com/hatchman1976))
+- Speaker guidelines: [QCon presentation guidance](QCON-SPEAKER-GUIDELINES.md), transcribed from the supplied screenshot.
 
-The rendered deck contains 23 content steps and two overview/overlay camera steps, for 25 Impress steps. After the title, a statement about capability and control opens the argument, followed by the WHOAMI introduction. The deck moves through socio-technical systems, Rasmussen's model and six boundary close-ups, then introduces the AI ball and follows it through economics, workload and error-margin drift. The final reveal asks the audience to use AI to improve assurance as well as output. Behaviour, control, joint evaluation and recovery messages are integrated into these earlier steps and their speaker notes. The fish-diagram content is plain and unframed, ready for a later positioning pass. Slide copy and notes are maintained under [`slides/`](slides/README.md).
+The rendered deck contains 27 content steps and two overview/overlay camera steps, for 29 Impress steps. After the title, a statement about capability and control opens the argument, followed by the WHOAMI introduction. The deck moves through socio-technical systems, Rasmussen's model and six boundary close-ups, then introduces the AI ball and follows it through economics, workload and error-margin drift. The assurance reveal bridges into four practical closing slides about workflow cost, verification capacity, evidence in handoffs, and intervention and recovery. Behaviour, control, joint evaluation and recovery messages remain integrated into the earlier steps and their speaker notes. The fish-diagram content is plain and unframed, ready for a later positioning pass. Slide copy and notes are maintained under [`slides/`](slides/README.md).
 
 ## Narrative focus
 
@@ -24,6 +25,8 @@ The 2024 SREcon talk foregrounded the geometry of Rasmussen's model: boundaries,
 The integrated boundary and AI sequence draws on Chapter 5, [AI Gold Rush 2 Versus AI Realism](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5), reviewed against the supplied full book PDF, printed pp. 77–88 (PDF pp. 85–96). Economic addresses costs transferred or deferred; Workload addresses checking demand and finite capacity; Performance addresses situated, continuing joint evaluation; Error Margin applies those findings to Rasmussen's protected performance-side buffer. Error Margin remains a theme within the performance constraint, not a fourth boundary.
 
 The speaker notes preserve the source limits: the chapter is a resilience synthesis and does not use Rasmussen's model, its joint-evaluation empirical example concerns predictive clinical AI, and the AWS recovery example in the Error Margin notes describes conventional automation with no reported generative AI involvement. Sense / Constrain / Adapt / Correct remain supporting action verbs in the notes.
+
+The practical close applies these ideas to one illustrative AI-assisted change to a service's retry behaviour. It asks teams to account for generation, verification and operation; match admitted work to checking capacity; provide evidence and practical ownership; and rehearse a convincing mistake and recovery outside production. The deck ends with **Intervention and recovery**, testing people, tools and workflow together. These practices are the talk's proposed software application, with no universal admission threshold or claim that a short exercise proves long-term safety or return on investment.
 
 The full conceptual guardrails, causal mechanism, and evidence requirements are maintained in [`TALK.md`](TALK.md).
 

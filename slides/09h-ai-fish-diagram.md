@@ -4,11 +4,11 @@ Rendered step: `#/ai-fish-diagram`.
 
 ## Slide copy and sequence
 
-Only the three boundary lines, dotted performance-side error margin and one AI ball. The camera zooms out; the ball starts centrally and then roams. No visible text is added to this step.
+Only the three boundary lines, dotted performance-side error margin and one AI ball. The camera zooms out while the ball remains stationary. After the slide settles, pause for three seconds, then fade in the diagram over one second. Start the ball roaming only after the fade completes. Replay this sequence on each visit. Reduced-motion mode shows the diagram immediately and keeps the ball stationary. No visible text is added to this step.
 
 ## Speaker notes
 
-Open the camera from the operating point onto the familiar model. The display deliberately contains only the three functional boundary lines, the performance-side dotted error margin and the AI ball. There is no fourth AI boundary. After the camera settles, the ball wanders from the middle, with a bias toward the performance side, as in the original diagram. The trajectory is illustrative, not measured, and no geometric center is an ideal state. Organizational choices and usable feedback shape the actual trajectory. Reduced-motion mode keeps the ball stationary. The next three steps inspect economics, workload and the error margin. The journey ends at the error-margin scene with the means to improve assurance and recover.
+Open the camera from the operating point onto the familiar model. The display deliberately contains only the three functional boundary lines, the performance-side dotted error margin and the AI ball. There is no fourth AI boundary. After the camera settles, keep the ball stationary for three seconds, then fade in the diagram over one second. Only after that fade completes does the ball wander from the middle, with a bias toward the performance side, as in the original diagram. The trajectory is illustrative, not measured, and no geometric center is an ideal state. Organizational choices and usable feedback shape the actual trajectory. Replay the pause and fade on each visit. Reduced-motion mode shows the diagram immediately and keeps the ball stationary. The next three steps inspect economics, workload and the error margin. The journey ends at the error-margin scene with the means to improve assurance and recover.
 
 **One model through the journey**
 

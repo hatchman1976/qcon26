@@ -10,19 +10,23 @@ Crossing the functional limit means unacceptable outcomes.
 
 **Failure in the service**
 
-- Outages and cascading system failures
-- Lost, corrupted or exposed customer data
-- Recovery that cannot restore service in time
+- 🚨 Outages and cascading system failures
+- 🔓 Lost, corrupted or exposed customer data
+- ⏳ Recovery that cannot restore service in time
 
 **Harm beyond the service**
 
-- Customer operations disrupted; safety put at risk
-- Trust and reputation damaged
-- Contractual losses or regulatory consequences
+- 🚧 Customer operations disrupted; safety put at risk
+- 💔 Trust and reputation damaged
+- ⚖️ Contractual losses or regulatory consequences
 
 Test people, tools and workflow together.<br />Can we use good output, catch mistakes and recover?
 
 [Rasmussen, Fig. 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · [Chapter 5, §5.5.3](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5) · [Morey et al. (2025)](https://www.nature.com/articles/s41746-025-01784-y) · Software application.
+
+## Reveal sequence
+
+All visible content uses five presenter-controlled substeps: title and icon together; introductory sentence; the complete “Failure in the service” column; the complete “Harm beyond the service” column; then the closing statement. Reveal one group per advance and preserve the layout while groups are hidden.
 
 ## Speaker notes
 

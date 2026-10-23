@@ -10,19 +10,23 @@ The sustainable capacity to do and understand the work can change.
 
 **More room to operate**
 
-- More trained people and relevant expertise
-- Better tools and reliable toil reduction
-- Protected focus, recovery time and knowledge sharing
+- 👥 More trained people and relevant expertise
+- 🛠️ Better tools and reliable toil reduction
+- 🧘 Protected focus, recovery time and knowledge sharing
 
 **Less room to operate**
 
-- Attrition, layoffs or unavailable specialists
-- Fatigue, burnout and constant interruptions
-- Fragile tooling and lost operational knowledge
+- 🚪 Attrition, layoffs or unavailable specialists
+- 🥵 Fatigue, burnout and constant interruptions
+- 🧩 Fragile tooling and lost operational knowledge
 
 Less effective capacity shortens the playing surface.<br />More incoming work also moves the operating point.
 
 Model: [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · Capacity examples: this talk’s application.
+
+## Reveal sequence
+
+All visible content uses five presenter-controlled substeps: title and icon together; introductory sentence; the complete “More room to operate” column; the complete “Less room to operate” column; then the closing statement. Reveal one group per advance and preserve the layout while groups are hidden.
 
 ## Speaker notes
 

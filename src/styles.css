@@ -59,8 +59,7 @@
   color-scheme: light;
   font-family: "Open Sans", Arial, sans-serif;
   font-synthesis: none;
-  --surface-default: #ade8ff;
-  --surface-introduction: #cfd8dc;
+  --surface-background: #ffddb3;
   --ink: #000000;
   --link: royalblue;
 }
@@ -78,31 +77,8 @@ body {
 }
 
 body {
-  background: var(--surface-default);
+  background: var(--surface-background);
   color: var(--ink);
-  transition: background-color 1s;
-}
-
-body.impress-on-title,
-body.impress-on-opening-hook,
-body.impress-on-takeaways,
-body.impress-on-paper-themes,
-body.impress-on-diagram-legend,
-body.impress-on-fish-diagram-overlay,
-body.impress-on-economic-boundary,
-body.impress-on-economic-boundary-actions,
-body.impress-on-workload-boundary,
-body.impress-on-workload-boundary-actions,
-body.impress-on-performance-boundary,
-body.impress-on-error-margin,
-body.impress-on-fish-diagram-overview,
-body.impress-on-the-fish-diagram,
-body.impress-on-the-model,
-body.impress-on-social-and-systems-wiki,
-body.impress-on-before-we-continue,
-body.impress-on-social-and-systems,
-body.impress-on-complex-system-and-boundaries {
-  background-color: var(--surface-introduction);
 }
 
 .fallback-message {
@@ -111,7 +87,7 @@ body.impress-on-complex-system-and-boundaries {
   padding: 1rem;
   border: 1px solid #6a7378;
   border-radius: 10px;
-  background: var(--surface-introduction);
+  background: var(--surface-background);
   color: var(--ink);
   font-size: 1.25rem;
   line-height: 1.35;
@@ -214,15 +190,123 @@ a {
   width: 220px;
 }
 
-.title-model-tank {
-  top: 384px;
-  left: 440px;
-  width: 150px;
+.blocker-lemming {
+  image-rendering: pixelated;
+  object-fit: contain;
+}
+
+.title-model-lemming {
+  position: absolute;
+  top: 363px;
+  left: 450px;
+  width: 120px;
+}
+
+.title-model-lemming img {
+  position: static;
+  display: block;
+  width: 100%;
+}
+
+/* Practical closing section: flat rows, with detail kept in the speaker notes. */
+.practice-slide {
+  padding: 48px 54px;
+  background: var(--surface-background);
+}
+
+#impress .practice-slide:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.practice-title {
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.practice-lede {
+  margin: 24px 0 0;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+  text-align: left;
+}
+
+.practice-rows {
+  margin: 66px 0 0;
+}
+
+.practice-rows > div {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 24px;
+  align-items: baseline;
+  margin-bottom: 35px;
+}
+
+.practice-rows dt {
+  font-family: "Comic Neue", cursive;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.practice-rows dd {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+}
+
+.practice-measure {
+  margin: 45px 0 0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.8px;
+  text-align: left;
+}
+
+.practice-measure span {
+  padding: 0 4px;
+}
+
+.practice-rows-four {
+  margin-top: 55px;
+}
+
+.practice-rows-four > div {
+  margin-bottom: 32px;
+}
+
+.practice-takeaway {
+  position: absolute;
+  bottom: 55px;
+  left: 54px;
+  right: 54px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+@media print {
+  img.blocker-lemming {
+    content: url("/images/qcon26/blocker-lemming.png");
+  }
 }
 
 .title-speaker {
   position: absolute;
-  top: 548px;
+  top: 568px;
   right: 80px;
   left: 80px;
   margin: 0;
@@ -254,10 +338,6 @@ a {
 }
 
 /* WHOAMI: preserve the original SREcon26 composition and typography. */
-body.impress-on-whoami {
-  background-color: #f5f8ff;
-}
-
 .whoami-slide {
   font-family: "SREcon26 Open Sans", Arial, sans-serif;
 }
@@ -305,6 +385,31 @@ body.impress-on-whoami {
   letter-spacing: -1px;
   text-align: left;
   text-wrap: balance;
+}
+
+.impress-enabled .opening-hook-slide > p {
+  opacity: 0;
+}
+
+.impress-enabled .opening-hook-slide.present > p {
+  animation: opening-hook-reveal 600ms ease-out both;
+}
+
+.impress-enabled .opening-hook-slide.present > p:nth-of-type(2) {
+  animation-delay: 1100ms;
+}
+
+.impress-enabled .opening-hook-slide.present > p:nth-of-type(3) {
+  animation-delay: 2200ms;
+}
+
+.impress-enabled .opening-hook-slide.present > p:nth-of-type(4) {
+  animation-delay: 3300ms;
+}
+
+@keyframes opening-hook-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* Opening summary. */
@@ -476,14 +581,17 @@ body.impress-on-whoami {
 
 .diagram-legend-actions-symbol {
   display: block;
+  height: 116px;
 }
 
 .diagram-legend-actions-symbol img {
   position: absolute;
   bottom: 0;
-  left: 12px;
-  width: 60px;
-  height: auto;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transform: translateX(-50%);
 }
 
 .diagram-legend-actions-symbol > span {
@@ -825,13 +933,13 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   line-height: 1;
   white-space: nowrap;
   transform: translate(-50%, -50%) scale(0.4);
-  animation: plain-guardian-arrive 1350ms cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+  animation: plain-guardian-arrive 450ms cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
 }
 
 .plain-guardian-margin {
-  width: 42.5px;
-  max-width: 42.5px;
-  height: auto;
+  width: 38.25px;
+  max-width: 38.25px;
+  height: 50.4px;
   filter: drop-shadow(1px 2px 1px rgb(0 0 0 / 0.25));
 }
 
@@ -901,7 +1009,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 
 .plain-gradient-label {
   fill: currentColor;
-  stroke: var(--surface-introduction);
+  stroke: var(--surface-background);
   stroke-width: 5;
   stroke-linejoin: round;
   paint-order: stroke;
@@ -1094,6 +1202,35 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   text-align: left;
 }
 
+.impress-enabled .paper-themes-slide .paper-theme {
+  opacity: 0;
+}
+
+.impress-enabled .paper-themes-slide.present .paper-theme {
+  animation: paper-theme-reveal 600ms ease-out both;
+}
+
+.impress-enabled .paper-themes-slide.present .paper-theme:nth-child(2) {
+  animation-delay: 1100ms;
+}
+
+.impress-enabled .paper-themes-slide.present .paper-theme:nth-child(3) {
+  animation-delay: 2200ms;
+}
+
+.impress-enabled .paper-themes-slide.present .paper-theme:nth-child(4) {
+  animation-delay: 3300ms;
+}
+
+.impress-enabled .paper-themes-slide.present .paper-theme:nth-child(5) {
+  animation-delay: 4400ms;
+}
+
+@keyframes paper-theme-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .paper-theme-emoji {
   display: block;
   width: 42px;
@@ -1237,12 +1374,30 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   pointer-events: none;
 }
 
-#impress .step .social-fish-overlay-reveal.substep-visible {
-  transition: none;
+.impress-enabled .complex-system-slide :is(.social-fish-piece, .social-system-network, .complex-ai-coping) {
+  opacity: 0;
 }
 
-.social-fish-overlay-reveal.substep-visible .social-fish-piece {
+.impress-enabled .complex-system-slide.present .social-fish-piece {
   animation: social-fish-piece-reveal 1200ms ease-in-out var(--fish-reveal-delay, 0ms) both;
+}
+
+.impress-enabled .complex-system-slide.present .social-system-network {
+  animation: complex-network-reveal 1100ms ease-in-out 4400ms both;
+}
+
+.impress-enabled .complex-system-slide.present .complex-ai-coping {
+  animation: complex-ai-reveal 600ms ease-out 5500ms both;
+}
+
+@keyframes complex-network-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes complex-ai-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .social-fish-workload {
@@ -1634,8 +1789,18 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .social-fish-overlay-reveal.substep-visible .social-fish-piece {
+  .impress-enabled .opening-hook-slide > p,
+  .impress-enabled .opening-hook-slide.present > p,
+  .impress-enabled .paper-themes-slide .paper-theme,
+  .impress-enabled .paper-themes-slide.present .paper-theme {
     animation: none;
+    opacity: 1;
+  }
+
+  .impress-enabled .complex-system-slide :is(.social-fish-piece, .social-system-network, .complex-ai-coping),
+  .impress-enabled .complex-system-slide.present :is(.social-fish-piece, .social-system-network, .complex-ai-coping) {
+    animation: none;
+    opacity: 1;
   }
 
   .plain-gradient-arrows.is-visible .plain-gradient-arrow {
@@ -1668,15 +1833,9 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
 }
 
 /* AI arrives at one operating state before the camera opens onto its constraints. */
-.ai-journey-slide { background: var(--surface-introduction); }
+.ai-journey-slide { background: var(--surface-background); }
 #impress .ai-journey-slide:not(.active) { opacity: 0; pointer-events: none; }
-body.impress-on-ai-operating-point,
-body.impress-on-ai-fish-diagram,
-body.impress-on-ai-economic-pressure,
-body.impress-on-ai-workload-pressure,
-body.impress-on-ai-margin-pressure { background: var(--surface-introduction); }
 .ai-arrival-slide { overflow: hidden; }
-.ai-arrival-title { position: absolute; top: 90px; left: 50px; right: 50px; margin: 0; font-family: "Maven Pro", sans-serif; font-size: 54px; font-weight: 500; line-height: 1.1; text-align: center; }
 .ai-arrival-point { position: absolute; top: 320px; left: 440px; width: 140px; height: 140px; }
 .ai-arrival-reveal { position: absolute; inset: 0; }
 .ai-arrival-ball { position: absolute; top: 310px; left: 430px; width: 160px; height: 160px; object-fit: contain; }
@@ -1692,6 +1851,9 @@ body.impress-on-ai-margin-pressure { background: var(--surface-introduction); }
 @keyframes ai-ball-roll-in { from { transform: translateX(-650px) rotate(-720deg); } to { transform: translateX(0) rotate(0); } }
 @keyframes ai-question-arrive { 0%, 80% { opacity: 0; } 100% { opacity: 1; } }
 .ai-fish-model { position: absolute; inset: 0; }
+.impress-enabled #ai-fish-diagram.active .ai-fish-model { opacity: 0; }
+.impress-enabled #ai-fish-diagram.active.present .ai-fish-model { animation: ai-fish-diagram-reveal 1000ms ease-in-out 3000ms both; }
+@keyframes ai-fish-diagram-reveal { from { opacity: 0; } to { opacity: 1; } }
 .ai-fish-margin { position: absolute; top: 131px; left: 230px; width: 385px; height: auto; }
 .ai-roaming-point-position { position: absolute; top: 369px; left: 477px; width: 70px; height: 70px; will-change: transform; }
 .ai-roaming-point-position.is-moving { transition: transform 6000ms ease-in-out; }
@@ -1700,6 +1862,8 @@ body.impress-on-ai-economic-pressure #impress #ai-fish-diagram,
 body.impress-on-ai-workload-pressure #impress #ai-fish-diagram,
 body.impress-on-ai-margin-pressure #impress #ai-fish-diagram { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
+  .impress-enabled #ai-fish-diagram.active .ai-fish-model,
+  .impress-enabled #ai-fish-diagram.active.present .ai-fish-model { animation: none; opacity: 1; }
   .ai-arrival-reveal.substep-visible .ai-arrival-ball,
   .ai-arrival-reveal.substep-visible .ai-arrival-question { animation: none; }
 }
@@ -1713,12 +1877,17 @@ body.impress-on-ai-margin-pressure #impress #ai-fish-diagram { opacity: 1; }
 img.boundary-detail-icon { height: auto; }
 .boundary-detail-title { margin: 0 0 0 130px; font-family: "Maven Pro", sans-serif; font-weight: 500; font-size: 46px; line-height: 1.08; letter-spacing: -1.5px; }
 .boundary-detail-lede { margin: 18px 0 0 130px; font-size: 26px; line-height: 1.22; text-align: left; letter-spacing: -0.6px; }
+.boundary-detail-no-icon .boundary-detail-title,
+.boundary-detail-no-icon .boundary-detail-lede { margin-left: 0; }
 .boundary-detail-grid { position: absolute; left: 46px; right: 46px; top: 215px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
 .boundary-detail-copy { padding: 18px 18px 12px; }
 .boundary-detail-copy h3 { margin: 0 0 18px; font-family: "Comic Neue", cursive; font-size: 34px; line-height: 1.05; letter-spacing: -0.5px; }
 .boundary-detail-copy ul { margin: 0; padding-left: 25px; }
 .boundary-detail-copy li { margin: 0 0 20px; font-size: 25px; line-height: 1.25; letter-spacing: -0.5px; }
 .boundary-detail-copy li:last-child { margin-bottom: 8px; }
+.boundary-detail-copy .boundary-emoji-list { padding-left: 0; list-style: none; }
+.boundary-emoji-list li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 10px; align-items: start; }
+.boundary-list-emoji { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 30px; line-height: 1; letter-spacing: 0; text-align: center; }
 .ai-pressure-slide .boundary-detail-copy li { font-size: 24px; margin-bottom: 17px; }
 .ai-pressure-slide small { font-size: 18px; letter-spacing: 0; }
 .boundary-detail-conclusion { position: absolute; bottom: 77px; left: 46px; right: 46px; margin: 0; font-family: "Comic Neue", cursive; font-size: 28px; font-weight: 700; line-height: 1.18; text-align: left; }
@@ -1772,11 +1941,12 @@ img.boundary-detail-icon { height: auto; }
   html,
   body {
     overflow: visible !important;
-    background: var(--surface-introduction) !important;
+    background: var(--surface-background) !important;
   }
 
   #impress,
-  .step {
+  .step,
+  #impress .practice-slide:not(.active) {
     position: static !important;
     transform: none !important;
   }
@@ -1790,8 +1960,20 @@ img.boundary-detail-icon { height: auto; }
     opacity: 1 !important;
   }
 
-  .social-fish-piece {
+  .ai-fish-model {
     animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .impress-enabled .opening-hook-slide > p,
+  .impress-enabled .paper-themes-slide .paper-theme {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .impress-enabled .complex-system-slide :is(.social-fish-piece, .social-system-network, .complex-ai-coping) {
+    animation: none !important;
+    opacity: 1 !important;
   }
 
   .fallback-message {

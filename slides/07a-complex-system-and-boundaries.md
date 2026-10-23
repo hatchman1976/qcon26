@@ -1,20 +1,20 @@
-# The TL;DR
+# Putting it together
 
 Rendered step: `#/complex-system-and-boundaries`.
 
 ## Slide copy and sequence
 
-**The TL;DR**
+**Putting it together**
 
 AI changes the conditions in which people adapt.
 
-Reveal sequence: people/network and connection pulses; then one trigger assembles the fish over 4.4 seconds, with each piece fading in for 1.2 seconds (economic, workload and performance boundaries, dotted margin, operating point); then AI artwork and the adaptation caption.
+Automatic sequence after the slide settles: assemble the fish over 4.4 seconds, with each piece fading in for 1.2 seconds (economic, workload and performance boundaries, dotted margin, operating point). Then fade in the people/network and connection pulses over 1.1 seconds. At 5.5 seconds, fade in the AI artwork and adaptation caption over 600ms. No presenter clicks are needed. Replay the sequence on each visit; reduced-motion mode and print show everything immediately without pulsing.
 
 ## Speaker notes
 
 The hierarchy on the previous slide surrounds the people and interactions in this complex system.
 
-Reveal 1: show people distributed through the complex system, with bright orange points with yellow highlights and a bold rim pulsing along its connections. Reveal 2: one trigger reveals the economic, workload and performance boundaries in sequence around the smaller network, followed by the dotted error margin and operating point. The operating point represents the state of the whole system. The following slide explains the boundaries and the margin in detail. Reveal 3: show the AI artwork and adaptation caption together in the lower row.
+The economic, workload and performance boundaries fade in automatically, followed by the dotted error margin and operating point. Then people distributed through the complex system fade in, with bright orange points with yellow highlights and a bold rim pulsing along its connections. Finally, the AI artwork and adaptation caption appear together in the lower row. The operating point represents the state of the whole system. The following slide explains the boundaries and the margin in detail.
 
 Source model and boundary artwork: https://srecon24.hatchman76.com/#/the-model
 
