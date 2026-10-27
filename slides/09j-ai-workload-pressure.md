@@ -2,13 +2,13 @@
 
 Rendered step: `#/ai-workload-pressure`.
 
+Canvas position: `data-x="2100"`, `data-y="284150"`, `data-scale="3.037465"`, inside the lower-right portion of the AI fish diagram, moved 1,500 canvas units left.
+
 ## Slide copy and sequence
 
 **AI and least effort**
 
 AI can make “generate, accept, act” the path of least effort.
-
-Meat proxy<br />Fluency ≠ expertise
 
 **Proxy the judgment**
 
@@ -22,11 +22,15 @@ Agents generate more proposals; humans inherit<br />review, integration and main
 
 Extra checking and context switching can<br />raise workload and burnout risk.
 
-**40%** received workslop; **~2h** to resolve an instance.<br />US desk-worker survey, n=1,150 · September 2025
+## Reveal sequence
 
-Match admitted work to verification capacity.
+Place the three explanatory sections on the left. Align the meat-proxy illustration to the right of “Proxy the judgment”, the slop bucket to the right of “Multiply the streams”, and the exploding-head emoji 🤯 to the right of “Squeeze recovery”.
 
-[BetterUp / Stanford · 2025](https://www.betterup.com/workslop) · [Berkeley Haas · Feb 2026](https://newsroom.haas.berkeley.edu/ai-promised-to-free-up-workers-time-uc-berkeley-haas-researchers-found-the-opposite/) · Meat-proxy illustration.
+Use three evenly spaced rows with padded text, increased line spacing and a clear gap between each heading and its explanation. Center each illustration alongside its corresponding text block.
+
+All visible content uses eight presenter-controlled substeps: title and icon together; introductory sentence; “Proxy the judgment”; meat-proxy illustration; “Multiply the streams”; slop-bucket illustration; “Squeeze recovery”; then the exploding-head emoji. Each of the three content sections reveals its heading and explanation together. Each illustration appears on the next substep after its corresponding explanation. Preserve the layout while content is hidden.
+
+Presentation source links are collected on the final [References slide](14-references.md).
 
 ## Speaker notes
 

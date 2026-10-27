@@ -26,13 +26,17 @@ const requiredMarkers = [
   'id="error-margin"',
   'id="ai-operating-point"',
   'id="ai-fish-diagram"',
+  'id="ai-fish-diagram-overview"',
   'id="ai-economic-pressure"',
   'id="ai-workload-pressure"',
+  'id="erosion-of-expertise"',
+  'id="expertise-erosion-sequence"',
   'id="ai-margin-pressure"',
   'id="workflow-cost"',
   'id="verification-capacity"',
   'id="evidence-handoff"',
   'id="rehearsed-recovery"',
+  'id="references"',
   'id="social-and-systems-wiki"',
   'id="before-we-continue"',
   'id="social-and-systems"',
@@ -65,11 +69,8 @@ const requiredMarkers = [
   "Plausible ≠ measured",
   "Fluent ≠ intended",
   "path of least effort",
-  "Use AI to improve assurance as well as output.",
-  "Match admitted work to verification capacity.",
   "Test people, tools and workflow together.",
-  "Measure cost per completed, verified, valuable outcome.",
-  "No control system will perform better than its measuring channel.",
+  "Savings here can add work elsewhere. Who covers it and at what cost?",
   'href="/styles.css?v=',
   'src="/vendor/impress.js/js/impress.min.js"',
   'src="/main.js?v=',
@@ -103,6 +104,26 @@ if (stepCoordinate("fish-diagram-overlay", "x") !== fishX) {
   throw new Error("The step after Diagram Legend must return to the Fish diagram's column");
 }
 
+const sectionTags = [...html.matchAll(/<section\b[^>]*>/g)].map(([tag]) => tag);
+const workflowIndex = sectionTags.findIndex((tag) => /\bid="workflow-cost"/.test(tag));
+if (!/\bid="ai-fish-diagram-overview"/.test(sectionTags[workflowIndex - 1] ?? "") ||
+    !/<section\b[^>]*\bid="ai-fish-diagram-overview"[^>]*>\s*<\/section>/.test(html)) {
+  throw new Error("The empty AI fish diagram overview must immediately precede workflow cost");
+}
+for (const axis of ["x", "y", "scale"]) {
+  if (stepCoordinate("ai-fish-diagram-overview", axis) !== stepCoordinate("ai-fish-diagram", axis)) {
+    throw new Error(`AI fish diagram overview must match the original diagram's ${axis}`);
+  }
+}
+
+const lastSection = sectionTags.at(-1);
+if (!/\bid="references"/.test(lastSection ?? "") ||
+    stepCoordinate("references", "x") !== 0 ||
+    stepCoordinate("references", "y") !== 408000 ||
+    stepCoordinate("references", "scale") !== 25) {
+  throw new Error("References must be the final section at data-x=0, data-y=408000 and data-scale=25");
+}
+
 const requiredFiles = [
   "favicon.svg",
   "styles.css",
@@ -124,6 +145,7 @@ const requiredFiles = [
   "images/srecon26/symbol-equals.png",
   "images/srecon26/complex-sign-transparent.png",
   "images/srecon26/ai-slop-bucket.png",
+  "images/srecon26/book-accelerated-expertise.png",
   "images/meat-proxy.png",
   "images/srecon24/Rasmussen_plain_outline.png",
   "images/srecon24/Rasmussen_boundary_performance.png",
@@ -133,6 +155,8 @@ const requiredFiles = [
   "images/operating-point.svg",
   "images/qcon26/blocker-lemming.png",
   "images/qcon26/blocker-lemming.gif",
+  "images/qcon26/this-is-fine.gif",
+  "images/qcon26/this-is-fine-still.png",
   "images/srecon24/Rasmussen_portrait.png",
   "images/srecon24/Rasmussen_Model_Original.png",
   "images/srecon24/Rasmussen_paper_figure_8.png",
@@ -152,8 +176,8 @@ await Promise.all(requiredFiles.map((file) => access(resolve(siteRoot, file))));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount !== 29) {
-  throw new Error(`Expected exactly twenty-nine impress.js steps, found ${stepCount}`);
+if (stepCount !== 33) {
+  throw new Error(`Expected exactly thirty-three impress.js steps, found ${stepCount}`);
 }
 
 console.log(`Verified src/index.html with ${stepCount} presentation steps.`);

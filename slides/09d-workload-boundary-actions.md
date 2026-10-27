@@ -10,18 +10,18 @@ People adapt toward least effort when demand strains capacity.
 
 | Early signal / metric | Possible adaptation |
 | --- | --- |
-| Queue age and work in progress ↑ | Automate repeatable toil; improve tooling;<br />limit incoming work |
-| Interruptions and handoffs ↑<br />Focus time ↓ | Batch tasks; standardize paths;<br />simplify tools and coordination |
-| Overtime and fatigue ↑<br />Recovery time ↓ | Reduce scope; protect rest; share on-call load<br />**or rush and bypass checks** |
-| Review findings and rework ↑ | Improve tests and shared understanding<br />**or accept output without examining it** |
+| ⏳ Queue age and work in progress ↑ | 🛠️ Automate repeatable toil; improve tooling;<br />limit incoming work |
+| 🔀 Interruptions and handoffs ↑<br />Focus time ↓ | 🗂️ Batch tasks; standardize paths;<br />simplify tools and coordination |
+| 🥵 Overtime and fatigue ↑<br />Recovery time ↓ | 🛌 Reduce scope; protect rest; share on-call load<br />or rush and bypass checks |
+| 🔁 Review findings and rework ↑ | 🧪 Improve tests and shared understanding<br />or accept output without examining it |
 
-Reducing toil can preserve control.<br />Skipping checks saves effort now and creates work later.
+Reducing toil can preserve control, but skipping checks saves effort now and creates work later.
 
 [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · [Google SRE: Eliminating Toil](https://sre.google/workbook/eliminating-toil/) · Illustrative signals and choices.
 
 ## Reveal sequence
 
-All visible content uses eight presenter-controlled substeps: title and icon together; introductory sentence; table headings together; each of the four table rows in order; then the closing statement. Reveal one group per advance, keeping both cells of each row together and preserving the table layout while rows are hidden.
+All visible content uses thirteen presenter-controlled substeps: title and icon together; introductory sentence; the “Early signal / metric” heading; each of the four left-column signal cells from top to bottom; the “Possible adaptation” heading; each of the four right-column action cells from top to bottom; then the closing statement. Reveal one group per advance and preserve the table layout while cells are hidden.
 
 ## Speaker notes
 

@@ -10,23 +10,25 @@ The sustainable capacity to do and understand the work can change.
 
 **More room to operate**
 
-- 👥 More trained people and relevant expertise
+- 🎓 More trained people and relevant expertise
 - 🛠️ Better tools and reliable toil reduction
-- 🧘 Protected focus, recovery time and knowledge sharing
+- 🕒 Protected focus, recovery time and knowledge sharing
 
 **Less room to operate**
 
-- 🚪 Attrition, layoffs or unavailable specialists
+- [Exit sign](../src/images/srecon24/sign-exit.png) Attrition, layoffs or unavailable specialists
 - 🥵 Fatigue, burnout and constant interruptions
-- 🧩 Fragile tooling and lost operational knowledge
+- 🔥 Fragile tooling and lost operational knowledge
 
-Less effective capacity shortens the playing surface.<br />More incoming work also moves the operating point.
+The exit sign is 64px wide with a white backing inside its green panel; its surrounding area remains transparent.
+
+Less capacity moves the workload boundary inward, even with the same work.<br />More incoming work can move the operating point toward that boundary.
 
 Model: [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · Capacity examples: this talk’s application.
 
 ## Reveal sequence
 
-All visible content uses five presenter-controlled substeps: title and icon together; introductory sentence; the complete “More room to operate” column; the complete “Less room to operate” column; then the closing statement. Reveal one group per advance and preserve the layout while groups are hidden.
+All visible content uses eleven presenter-controlled substeps: title and icon together; introductory sentence; the “More room to operate” heading; each of its three items in order; the “Less room to operate” heading; each of its three items in order; then the closing statement. Reveal one group per advance, keeping each item's emoji and text together and preserving the layout while content is hidden.
 
 ## Speaker notes
 

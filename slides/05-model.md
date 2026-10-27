@@ -8,7 +8,7 @@ Human Factors and Safety Science
 Reveal 1:
 
 - Rasmussen's original dynamic safety model
-- [Risk Management in a Dynamic Society (1997)](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
+- Risk Management in a Dynamic Society (1997)
 
 Reveal 2:
 
@@ -32,6 +32,8 @@ Reveal 4:
 Introduce Jens Rasmussen and the 1997 model. The next slide maps the wider research landscape around Figure 3; the slide after that locates people and technology within Rasmussen's social control hierarchy before the boundary model is translated into one operating state, three constraints, competing pressures, and an uncertain margin.
 
 The staged reveals follow the 2024 presentation: first the original model and paper, then examples of safety-critical domains, then the properties of socio-technical systems, and finally the systems-thinking lens.
+
+The paper name appears as plain text on this slide. Its link is collected on the final [References slide](14-references.md).
 
 ## Sources
 

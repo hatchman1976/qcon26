@@ -30,19 +30,22 @@ The talk adapts Rasmussen's Dynamic Safety Model and the 2024 SREcon presentatio
 20. AI in the Fish Diagram
 21. AI has to be paid for
 22. AI and least effort
-23. Change can outrun our view — bridge from drift to assurance practices
-24. The cost of a verified outcome
-25. Work the team can verify
-26. A handoff with evidence
-27. Intervention and recovery
+23. The erosion of expertise
+24. Expertise erosion sequence — complex system, uncertainty, flame and “This is Fine”
+25. AI margin — empty placeholder
+26. The cost of a verified outcome
+27. Work the team can verify
+28. A handoff with evidence
+29. Intervention and recovery
+30. References
 
-The deck contains 27 content steps and two overview/overlay camera steps, for 29 Impress steps. The former seven trailing slides have been integrated into the earlier flow and removed. [The integration map](research/2026-10-13-slide-consolidation.md) records their destinations. Four practical closing slides now follow the AI margin scene, ending with **Intervention and recovery**. Current copy and speaker notes live in [slides/README.md](slides/README.md).
+The deck contains 29 content steps, three overview/overlay camera steps and one empty placeholder, for 33 Impress steps. The former seven trailing slides have been integrated into the earlier flow and removed. [The integration map](research/2026-10-13-slide-consolidation.md) records their destinations. The AI margin step is an empty placeholder retaining its ID and camera position. The next camera step returns to the AI fish diagram before four practical closing slides ending with **Intervention and recovery**, followed by References. Current copy and speaker notes live in [slides/README.md](slides/README.md).
 
 ## Boundary examples and the AI camera journey
 
 The original close-ups distinguish external financial capacity from internal targets, and effective workload capacity from incoming demand. Signal-to-action tables show cost efficiency, least-effort adaptation and protection. The acceptable-performance step distinguishes actual unacceptable outcomes from crossing the dotted warning.
 
-The five AI steps reuse the coloured AI logo and Andrew’s SREcon26 slop-bucket artwork. The ball rolls over one operating point, the camera expands to a clean model, and the ball roams. The economics camera shows ETR’s 2026 budget overruns, the Uber CTO’s reported early budget exhaustion, and Workday’s 2025 workforce/investment priorities. The workload camera shows workslop, proxying judgment and intensified parallel work. The error-margin camera illustrates unfinished handoffs accumulating while the actual state outruns observation, with security and incident-understanding risks explicitly identified as inferences. Its assurance reveal introduces the practical section rather than ending the presentation.
+The AI sequence reuses the coloured AI logo and Andrew’s SREcon26 slop-bucket artwork. The ball rolls over one operating point, the camera expands to a clean model, and the ball roams. The economics camera shows ETR’s 2026 budget overruns and infrastructure-refresh cuts, the Uber CTO’s reported early budget exhaustion, and Meta’s Hyperion financing with Blue Owl. The workload camera shows workslop, proxying judgment and intensified parallel work. A slide below it introduces the erosion of expertise using the Accelerated Expertise book cover and quotation. A separate image sequence then shows the complex system with people and flashing coloured balls, replaces the people with shrugging emojis, adds a glowing flame, and replaces the scene with “This is Fine”. These images are a metaphor for uncertain understanding and unaddressed trouble, not measured effects of AI. The following AI margin step is empty pending further work.
 
 [Evidence and scope](research/2026-10-13-ai-boundary-evidence.md) preserve dates, populations and causal limits. The story does not establish universal layoffs to fund AI, universally lower-quality output, or a causal burnout hierarchy by tool skill. Buckets and motion are explanatory metaphors. Reduced-motion mode keeps the same reveal and final-state information without animation.
 
@@ -61,7 +64,7 @@ These are proposed engineering practices and this talk's software-workflow synth
 
 [AI Gold Rush 2 Versus AI Realism](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5), Chapter 5 of the supplied full book PDF, extends the talk's practical argument. The chapter occupies printed pp. 77–88 (PDF pp. 85–96). An efficiency gain can displace verification, maintenance or recovery work. The responsible team needs source evidence, time to review and authority to change or stop the action. The resulting evaluation should measure joint performance and the ability to intervene as well as visible output.
 
-Economic, Workload, Performance and Error Margin live within the existing boundary close-ups and AI journey, then inform the practical closing section. The earlier performance step carries joint-evaluation questions, the error-margin step carries notice/intervene/recover, and the AI margin reveal introduces the assurance practices. These are three constraints and a protected performance-side buffer:
+Economic, Workload, Performance and Error Margin live within the existing boundary close-ups and AI journey, then inform the practical closing section. The earlier performance step carries joint-evaluation questions, and the error-margin step carries notice/intervene/recover. The AI margin placeholder currently contains no assurance reveal. These are three constraints and a protected performance-side buffer:
 
 - **Economic:** account for costs deferred or transferred to others (§5.2.4, printed p. 81 / PDF p. 89) and future adaptability, coupling and congestion (§5.5.2, printed p. 85 / PDF p. 93).
 - **Workload:** count filtering, revision and checking demands, including the expertise needed to reject plausible mistakes (§§5.3.1–5.3.4, printed pp. 82–83 / PDF pp. 90–91).
@@ -222,7 +225,7 @@ This broader flow sketch includes material still held as working ideas. Its Sens
 
 ## Working response pattern
 
-The four verbs are this talk's synthesis. They support the [AI margin bridge](slides/09k-ai-margin-pressure.md) and practical closing section in the speaker notes, while the boundary close-ups retain the model’s three constraints and performance-side buffer. The fuller mechanisms are retained here for speaker preparation:
+The four verbs are this talk's synthesis. They support the practical closing section in the speaker notes, while the boundary close-ups retain the model’s three constraints and performance-side buffer. The fuller mechanisms are retained here for speaker preparation:
 
 - **Sense:** observe value per verified outcome, lifecycle cost, review-load ratio, performance proxies, signal quality, and feedback delay.
 - **Constrain:** rate-limit admitted work, cap work in progress and token budgets, enforce permissions, and preserve verification gates.

@@ -1,6 +1,6 @@
 # Evidence for the AI boundary sequence
 
-Verified against public sources on 13 October 2026. Use the stated populations and qualifications in speaker notes. The slides can describe a risk or a pressure without claiming every organization experiences it.
+Initially verified against public sources on 13 October 2026; the economic budget and financing examples were updated on 26 October 2026. Use the stated populations and qualifications in speaker notes. The slides can describe a risk or a pressure without claiming every organization experiences it.
 
 ## 1. Economics: AI overruns redistribute the budget
 
@@ -16,12 +16,12 @@ Verified against public sources on 13 October 2026. Use the stated populations a
 - **Defensible slide copy:** “Uber’s CTO reported its annual AI budget exhausted by April as coding-tool use surged.”
 - **Limits:** Reported executive account in a paywalled interview, not an independently audited finance statement. Do not describe this as its entire IT budget. This card deliberately keeps source-derived copy below this source’s 25-word summary allowance. It is an illustrative company case, not a prevalence estimate.
 
-## 3. Economics and workload: restructuring to prioritize AI investment
+## 3. Economics: outside capital finances AI infrastructure
 
-- **Primary source:** [Workday CEO memo, Changes to Position Workday for the Future, SEC Exhibit 99.1](https://www.sec.gov/Archives/edgar/data/1327811/000132781125000030/wday-020525x991.htm), filed 5 February 2025.
-- **Scope:** Workday announced approximately 1,750 position eliminations (8.5% of its workforce). In the same memo, it said it would continue hiring in strategic areas while prioritizing AI and platform innovation and evaluating other investments’ ROI.
-- **Defensible slide copy:** “Workday announced an 8.5% workforce reduction while prioritizing AI and platform investment. Reallocation can shrink the human playing surface.”
-- **Limits:** This establishes an explicit corporate investment/restructuring connection. It does not establish that all savings funded AI, that AI replaced each role, or that workforce reductions to finance AI are universal. Workday identified other strategic/process/location changes too.
+- **Primary source:** [Meta / Blue Owl, Hyperion joint venture](https://about.fb.com/news/2025/10/meta-blue-owl-capital-develop-hyperion-data-center/), 21 October 2025.
+- **Scope:** Outside financing supports approximately $27 billion of development, with Meta retaining lease and guarantee commitments.
+- **Defensible slide copy:** “Bring in outside capital: Meta’s $27bn Hyperion venture with Blue Owl.”
+- **Limits:** Project cost is not annual AI spending; financing retains future obligations.
 
 ## 4. Workload: polished output can transfer effort to colleagues
 

@@ -10,10 +10,10 @@ Signals become decisions that push toward cost efficiency.
 
 | Leading signal / metric | Possible management action |
 | --- | --- |
-| Forecast cash burn ↑<br />Runway ↓ | Reduce scope; defer investment;<br />reprioritize commitments |
-| Cost per verified outcome ↑ | Renegotiate suppliers; rightsize resources;<br />remove low-value work |
-| Idle capacity or unused licences ↑ | Consolidate platforms; retire unused capacity;<br />check redundancy before cutting |
-| Projected margin ↓ | Freeze hiring; reduce staffing or maintenance<br />**→ savings can transfer risk** |
+| 💸 Forecast cash burn increases | ✂️ Reduce scope; defer investment;<br />reprioritize commitments |
+| 🧾 Cost per verified outcome increases | 🤝 Renegotiate suppliers; rightsize resources;<br />remove low-value work |
+| 💤 Idle capacity or unused licences | 🧹 Consolidate platforms; retire unused capacity |
+| 🗜️ Projected margin decreases | [Exit sign](../src/images/srecon24/sign-exit.png) Freeze hiring; reduce staffing or maintenance |
 
 The gradient points toward cost efficiency.<br />Watch for lost assurance on the performance side.
 
@@ -21,7 +21,7 @@ Model: [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/
 
 ## Reveal sequence
 
-All visible content uses eight presenter-controlled substeps: title and icon together; introductory sentence; table headings together; each of the four table rows in order; then the closing statement. Reveal one group per advance, keeping both cells of each row together and preserving the table layout while rows are hidden.
+All visible content uses thirteen presenter-controlled substeps: title and icon together; introductory sentence; left table heading; right table heading, **Possible management action**; each row's left-column signal and then its right-column action, one cell per advance from top to bottom; then the closing statement. Keep each cell's emoji and text together and preserve the table layout while content is hidden. Print shows the complete table.
 
 ## Speaker notes
 

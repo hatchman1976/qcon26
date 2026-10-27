@@ -5,6 +5,46 @@ if (prefersReducedMotion.matches) {
   root.dataset.transitionDuration = "0";
 }
 
+const plainFishSlide = root.querySelector("#the-fish-diagram");
+const plainFishGeometry = [...plainFishSlide.querySelectorAll(".plain-boundary-reveal, .plain-model-margin")];
+const plainFishCloseups = new Set([
+  "diagram-legend", "fish-diagram-overlay", "economic-boundary", "economic-boundary-actions",
+  "workload-boundary", "workload-boundary-actions", "performance-boundary", "error-margin", "fish-diagram-overview",
+]);
+const complexFishSlide = root.querySelector("#complex-system-and-boundaries");
+
+function retainPlainFishGeometry() {
+  plainFishGeometry.forEach((piece) => {
+    if (piece.classList.contains("substep-visible") && !piece.classList.contains("is-rendered")) {
+      piece.classList.add("is-rendered");
+    }
+  });
+}
+
+const plainFishObserver = new MutationObserver(retainPlainFishGeometry);
+plainFishGeometry.forEach((piece) => plainFishObserver.observe(piece, { attributes: true, attributeFilter: ["class"] }));
+document.addEventListener("impress:stepenter", (event) => {
+  if (plainFishCloseups.has(event.target.id)) {
+    plainFishGeometry.forEach((piece) => piece.classList.add("is-rendered"));
+  }
+  if (event.target === complexFishSlide && prefersReducedMotion.matches) {
+    complexFishSlide.classList.add("is-fish-rendered");
+  }
+});
+document.addEventListener("animationend", (event) => {
+  if (event.animationName === "social-fish-piece-reveal" && complexFishSlide.contains(event.target)) {
+    complexFishSlide.classList.add("is-fish-rendered");
+  }
+});
+document.addEventListener("impress:stepleave", (event) => {
+  if (event.target === complexFishSlide) complexFishSlide.classList.add("is-fish-rendered");
+});
+prefersReducedMotion.addEventListener("change", () => {
+  if (prefersReducedMotion.matches && complexFishSlide.classList.contains("active")) {
+    complexFishSlide.classList.add("is-fish-rendered");
+  }
+});
+
 const arrowPulseSteps = [...document.querySelectorAll(".social-arrow-pulses")]
   .map((layer) => ({ layer, trigger: layer.closest(".substep") }));
 let activeArrowPulseStep;
@@ -87,6 +127,51 @@ prefersReducedMotion.addEventListener("change", () => {
     stopArrowPulses();
   }
 });
+
+const expertiseSequenceSlide = root.querySelector("#expertise-erosion-sequence");
+const expertisePulseLayer = expertiseSequenceSlide.querySelector(".expertise-arrow-pulses");
+const expertiseShrugTrigger = expertiseSequenceSlide.querySelector(".expertise-shrug-trigger");
+const expertiseFireTrigger = expertiseSequenceSlide.querySelector(".expertise-fire-trigger");
+const expertiseFineScene = expertiseSequenceSlide.querySelector(".expertise-fine-scene");
+const expertiseFineImage = expertiseFineScene.querySelector("img");
+
+function syncExpertiseSequence() {
+  const active = expertiseSequenceSlide.classList.contains("active");
+  const shrugging = expertiseShrugTrigger.classList.contains("substep-visible");
+  const burning = expertiseFireTrigger.classList.contains("substep-visible");
+  const fine = expertiseFineScene.classList.contains("substep-visible");
+  const showPeople = active && !shrugging && !fine;
+
+  if (showPeople && !prefersReducedMotion.matches) {
+    if (activeArrowPulseStep !== expertisePulseLayer) {
+      startArrowPulses({ layer: expertisePulseLayer, trigger: null });
+    }
+  } else if (activeArrowPulseStep === expertisePulseLayer) {
+    stopArrowPulses();
+  }
+
+  expertiseSequenceSlide.querySelector(".expertise-people-scene").setAttribute("aria-hidden", String(!showPeople));
+  expertiseSequenceSlide.querySelector(".expertise-shrug-scene").setAttribute("aria-hidden", String(!active || !shrugging || fine));
+  expertiseSequenceSlide.querySelector(".expertise-fire").setAttribute("aria-hidden", String(!active || !burning || fine));
+  expertiseFineScene.setAttribute("aria-hidden", String(!fine));
+
+  const source = fine && !prefersReducedMotion.matches
+    ? expertiseFineImage.dataset.animatedSrc
+    : expertiseFineImage.dataset.stillSrc;
+  if (expertiseFineImage.getAttribute("src") !== source) expertiseFineImage.src = source;
+}
+
+for (const eventName of ["impress:substep:enter", "impress:substep:leave"]) {
+  document.addEventListener(eventName, (event) => {
+    if (expertiseSequenceSlide.contains(event.detail?.substep)) queueMicrotask(syncExpertiseSequence);
+  });
+}
+for (const eventName of ["impress:substep:show", "impress:substep:hide", "impress:stepenter", "impress:stepleave"]) {
+  document.addEventListener(eventName, () => queueMicrotask(syncExpertiseSequence));
+}
+prefersReducedMotion.addEventListener("change", syncExpertiseSequence);
+window.addEventListener("beforeprint", () => { expertiseFineImage.src = expertiseFineImage.dataset.stillSrc; });
+window.addEventListener("afterprint", syncExpertiseSequence);
 
 const roamingPointStep = document.querySelector("#the-fish-diagram .plain-roaming-point-reveal");
 const roamingPointPosition = roamingPointStep.querySelector(".plain-roaming-point-position");
@@ -314,52 +399,34 @@ document.addEventListener("impress:stepenter", (event) => {
   }
 });
 
-const aiArrivalSlide = document.querySelector("#ai-operating-point");
-const aiArrivalReveal = aiArrivalSlide.querySelector(".ai-arrival-reveal");
-const aiArrivalQuestion = aiArrivalSlide.querySelector(".ai-arrival-question");
-const aiArrivalFollowup = aiArrivalSlide.querySelector(".ai-arrival-nondeterminism");
-
-function syncAiArrivalFollowup() {
-  const questionAnimation = aiArrivalQuestion.getAnimations()
-    .find((animation) => animation.animationName === "ai-question-arrive");
-  const questionReady = prefersReducedMotion.matches || !questionAnimation || questionAnimation.playState === "finished";
-  const revealFollowup = aiArrivalSlide.classList.contains("active") &&
-    aiArrivalReveal.classList.contains("substep-visible") &&
-    aiArrivalFollowup.classList.contains("substep-visible") && questionReady;
-  aiArrivalFollowup.classList.toggle("is-ready", revealFollowup);
-}
-
-aiArrivalQuestion.addEventListener("animationend", (event) => {
-  if (event.animationName === "ai-question-arrive") window.requestAnimationFrame(syncAiArrivalFollowup);
-});
-for (const eventName of ["impress:substep:enter", "impress:substep:leave", "impress:stepenter"]) {
-  document.addEventListener(eventName, (event) => {
-    if (event.target === aiArrivalSlide) syncAiArrivalFollowup();
-  });
-}
-document.addEventListener("impress:stepleave", (event) => {
-  if (event.target === aiArrivalSlide) aiArrivalFollowup.classList.remove("is-ready");
-});
-prefersReducedMotion.addEventListener("change", syncAiArrivalFollowup);
-
 const aiFishSlide = document.querySelector("#ai-fish-diagram");
 const aiFishModel = aiFishSlide.querySelector(".ai-fish-model");
 const aiRoamingPoint = aiFishSlide.querySelector(".ai-roaming-point-position");
+const aiRoamingSteps = new Set([
+  "ai-operating-point", "ai-fish-diagram", "ai-economic-pressure", "ai-workload-pressure",
+  "erosion-of-expertise", "expertise-erosion-sequence", "ai-margin-pressure", "ai-fish-diagram-overview",
+]);
 let aiRoamingTimeout;
 let aiRoamingCenter = { x: 512, y: 404 };
 
-function stopAiRoaming() {
+function retainAiFishDiagram() {
+  aiFishSlide.classList.add("is-rendered");
+}
+
+function pauseAiRoaming() {
   window.clearTimeout(aiRoamingTimeout);
   aiRoamingTimeout = undefined;
+  if (!aiRoamingPoint.classList.contains("is-moving")) return;
+  const position = new DOMMatrixReadOnly(getComputedStyle(aiRoamingPoint).transform);
   aiRoamingPoint.classList.remove("is-moving");
-  aiRoamingPoint.style.transform = "translate3d(0, 0, 0)";
-  aiRoamingCenter = { x: 512, y: 404 };
+  aiRoamingPoint.style.transform = `translate3d(${position.m41}px, ${position.m42}px, 0)`;
+  aiRoamingCenter = { x: 512 + position.m41, y: 404 + position.m42 };
 }
 
 function moveAiRoamingPoint() {
   window.clearTimeout(aiRoamingTimeout);
   aiRoamingTimeout = undefined;
-  if (!document.querySelector("#ai-fish-diagram.active") || prefersReducedMotion.matches) return;
+  if (!aiFishSlide.classList.contains("is-rendered") || prefersReducedMotion.matches) return;
   const candidates = [];
   for (let attempt = 0; attempt < 160; attempt += 1) {
     const x = 290 + Math.random() * 490;
@@ -378,63 +445,122 @@ function moveAiRoamingPoint() {
   aiRoamingPoint.classList.add("is-moving");
   aiRoamingPoint.style.transform = `translate3d(${destination.x - 512}px, ${destination.y - 404}px, 0)`;
   aiRoamingCenter = destination;
-  aiRoamingTimeout = window.setTimeout(moveAiRoamingPoint, 6800);
+  // Match the six-second linear transition so there is no pause between destinations.
+  aiRoamingTimeout = window.setTimeout(moveAiRoamingPoint, 6000);
 }
 
-document.addEventListener("impress:stepenter", (event) => {
-  if (event.target.id !== "ai-fish-diagram") return;
-  stopAiRoaming();
-});
+function syncAiRoaming() {
+  const activeId = root.querySelector(".step.active")?.id;
+  if ((aiRoamingSteps.has(activeId) && !["ai-operating-point", "ai-fish-diagram"].includes(activeId)) ||
+      (activeId === "ai-fish-diagram" && prefersReducedMotion.matches)) {
+    retainAiFishDiagram();
+  }
+  if (prefersReducedMotion.matches) {
+    pauseAiRoaming();
+    return;
+  }
+  if (aiFishSlide.classList.contains("is-rendered") && aiRoamingTimeout === undefined) moveAiRoamingPoint();
+}
+
+document.addEventListener("impress:stepenter", syncAiRoaming);
 aiFishModel.addEventListener("animationend", (event) => {
   if (event.target === aiFishModel && event.animationName === "ai-fish-diagram-reveal") {
-    moveAiRoamingPoint();
+    retainAiFishDiagram();
+    syncAiRoaming();
   }
 });
 document.addEventListener("impress:stepleave", (event) => {
-  if (event.target.id === "ai-fish-diagram") stopAiRoaming();
+  if (event.target === aiFishSlide) retainAiFishDiagram();
 });
-prefersReducedMotion.addEventListener("change", stopAiRoaming);
+prefersReducedMotion.addEventListener("change", syncAiRoaming);
 
-const marginScene = document.querySelector(".margin-pressure-scene");
-const marginPile = document.querySelector(".margin-bucket-pile");
-const marginBucketSlots = [[120, 272], [163, 279], [95, 245], [144, 231], [179, 251], [114, 200], [153, 195], [134, 163]];
-let marginBucketTimers = [];
-
-function stopMarginPile() {
-  marginBucketTimers.forEach((timer) => window.clearTimeout(timer));
-  marginBucketTimers = [];
-  marginScene.classList.remove("is-running", "is-settled");
-  marginPile.replaceChildren();
+// Keep table cells in their semantic rows while revealing explicitly ordered columns.
+function orderedSubsteps(slide) {
+  if (!(slide instanceof Element) || !root.contains(slide) ||
+      !slide.matches('.step[data-substep-sequence="columns"]')) return [];
+  return [...slide.querySelectorAll(".ordered-substep")]
+    .sort((a, b) => Number(a.dataset.substepOrder) - Number(b.dataset.substepOrder));
 }
 
-function startMarginPile() {
-  stopMarginPile();
-  marginScene.classList.add(prefersReducedMotion.matches ? "is-settled" : "is-running");
-  marginBucketSlots.forEach(([x, y], index) => {
-    const addBucket = () => {
-      if (!document.querySelector("#ai-margin-pressure.active")) return;
-      const bucket = document.createElement("img");
-      bucket.className = "margin-bucket";
-      bucket.src = "/images/srecon26/ai-slop-bucket.png";
-      bucket.alt = "";
-      bucket.style.left = `${x}px`;
-      bucket.style.top = `${y}px`;
-      marginPile.appendChild(bucket);
-    };
-    if (prefersReducedMotion.matches) addBucket();
-    else marginBucketTimers.push(window.setTimeout(addBucket, 350 + index * 1150));
+function changeOrderedSubstep(slide, reason) {
+  const substeps = orderedSubsteps(slide);
+  const visible = substeps.filter((substep) => substep.classList.contains("substep-visible"));
+  const substep = reason === "next"
+    ? substeps.find((candidate) => !candidate.classList.contains("substep-visible"))
+    : visible.at(-1);
+  if (!substep) return;
+
+  substeps.forEach((candidate) => candidate.classList.remove("substep-active"));
+  if (reason === "next") {
+    substep.classList.add("substep-visible", "substep-active");
+  } else {
+    substep.classList.remove("substep-visible");
+    visible.at(-2)?.classList.add("substep-active");
+  }
+  return substep;
+}
+
+window.impress.addPreStepLeavePlugin((event) => {
+  if (!event?.target || !["next", "prev"].includes(event.detail?.reason)) return;
+  const { reason } = event.detail;
+  const substep = changeOrderedSubstep(event.target, reason);
+  if (!substep) return;
+  for (const eventName of ["impress:substep:stepleaveaborted", `impress:substep:${reason === "next" ? "enter" : "leave"}`]) {
+    event.target.dispatchEvent(new CustomEvent(eventName, {
+      bubbles: true,
+      cancelable: true,
+      detail: { reason, substep },
+    }));
+  }
+  return false;
+});
+
+document.addEventListener("impress:stepenter", (event) => {
+  orderedSubsteps(event.target).forEach((substep) => {
+    substep.classList.remove("substep-visible", "substep-active");
+  });
+});
+for (const [eventName, reason] of [["impress:substep:show", "next"], ["impress:substep:hide", "prev"]]) {
+  document.addEventListener(eventName, () => changeOrderedSubstep(root.querySelector(".step.active"), reason));
+}
+
+const referenceTablist = root.querySelector("#references .references-tabs");
+const referenceTabs = [...(referenceTablist?.querySelectorAll("[data-reference-tab]") ?? [])];
+
+function selectReferenceTab(tab) {
+  referenceTabs.forEach((candidate) => {
+    const selected = candidate === tab;
+    candidate.setAttribute("aria-selected", String(selected));
+    candidate.tabIndex = selected ? 0 : -1;
+    const panel = document.getElementById(candidate.getAttribute("aria-controls"));
+    if (panel) panel.hidden = !selected;
   });
 }
 
-document.addEventListener("impress:stepenter", (event) => {
-  if (event.target.id === "ai-margin-pressure") startMarginPile();
+referenceTablist?.addEventListener("click", (event) => {
+  const tab = event.target.closest("[data-reference-tab]");
+  if (!referenceTabs.includes(tab)) return;
+  event.stopPropagation();
+  selectReferenceTab(tab);
 });
-document.addEventListener("impress:stepleave", (event) => {
-  if (event.target.id === "ai-margin-pressure") stopMarginPile();
-});
-prefersReducedMotion.addEventListener("change", () => {
-  if (document.querySelector("#ai-margin-pressure.active")) startMarginPile();
-  else stopMarginPile();
-});
+
+const referenceTabKeys = ["ArrowLeft", "ArrowRight", "Home", "End", "Enter", " "];
+for (const eventName of ["keydown", "keyup"]) {
+  referenceTablist?.addEventListener(eventName, (event) => {
+    const tab = event.target.closest("[data-reference-tab]");
+    if (!referenceTabs.includes(tab) || !referenceTabKeys.includes(event.key)) return;
+    event.preventDefault();
+    event.stopPropagation();
+    if (eventName === "keyup") return;
+
+    let index = referenceTabs.indexOf(tab);
+    if (event.key === "ArrowLeft") index = (index - 1 + referenceTabs.length) % referenceTabs.length;
+    if (event.key === "ArrowRight") index = (index + 1) % referenceTabs.length;
+    if (event.key === "Home") index = 0;
+    if (event.key === "End") index = referenceTabs.length - 1;
+    selectReferenceTab(referenceTabs[index]);
+    referenceTabs[index].focus();
+  });
+}
 
 window.impress().init();

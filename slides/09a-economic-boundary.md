@@ -26,7 +26,7 @@ Model: [Rasmussen (1997), Figures 1 & 3](https://backend.orbit.dtu.dk/ws/portalf
 
 ## Reveal sequence
 
-All visible content uses five presenter-controlled substeps: title and icon together; introductory sentence; the complete “More room to operate” column; the complete “Less room to operate” column; then the closing statement. Reveal one group per advance and preserve the layout while groups are hidden.
+All visible content uses eleven presenter-controlled substeps: title and icon together; introductory sentence; the “More room to operate” heading; each of its three items in order; the “Less room to operate” heading; each of its three items in order; then the closing statement. Reveal one group per advance, keeping each item's emoji and text together and preserving the layout while content is hidden.
 
 ## Speaker notes
 

@@ -136,13 +136,108 @@ a {
   cursor: pointer;
 }
 
-#impress .step .substep {
+#impress .step .substep,
+#impress .step .ordered-substep {
   opacity: 0;
 }
 
-#impress .step .substep.substep-visible {
+#impress .step .substep.substep-visible,
+#impress .step .ordered-substep.substep-visible {
   opacity: 1;
   transition: opacity 1s;
+}
+
+/* Final bibliography, with all source links available on entry. */
+.references-slide {
+  padding: 36px 46px;
+  overflow: hidden;
+}
+
+.references-title {
+  margin: 0 0 14px;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.references-tabs {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 18px;
+}
+
+.references-tabs button {
+  padding: 4px 0;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--ink);
+  font-family: "Comic Neue", cursive;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.15;
+  cursor: pointer;
+}
+
+.references-tabs button[aria-selected="true"] {
+  border-bottom-color: var(--link);
+  color: var(--link);
+}
+
+.references-tabs button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+
+.references-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  text-align: left;
+}
+
+.references-group h3 {
+  margin: 0 0 18px;
+  font-family: "Comic Neue", cursive;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.references-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.references-list li {
+  margin: 0 0 12px;
+}
+
+.references-list a {
+  display: block;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.references-list strong {
+  display: block;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.references-list span {
+  display: block;
+  margin-top: 3px;
+  color: var(--ink);
+  font-size: 22px;
 }
 
 /* Title slide: QCon copy in the visual language of the 2024 presentation. */
@@ -588,8 +683,8 @@ a {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   transform: translateX(-50%);
 }
@@ -613,6 +708,8 @@ a {
 .plain-model-slide {
   overflow: hidden;
 }
+
+#impress #the-fish-diagram :is(.plain-boundary-reveal, .plain-model-margin).is-rendered { opacity: 1; }
 
 .plain-playing-surface {
   position: absolute;
@@ -649,8 +746,8 @@ a {
   transition: opacity 750ms ease;
 }
 
-#impress #the-fish-diagram:has(.plain-economic-motion.substep-visible) .plain-playing-surface-shade,
-#impress #the-fish-diagram:has(.plain-economic-motion.substep-visible) .plain-playing-surface-label {
+#impress #the-fish-diagram:has(.plain-boundary-motions.substep-visible) .plain-playing-surface-shade,
+#impress #the-fish-diagram:has(.plain-boundary-motions.substep-visible) .plain-playing-surface-label {
   opacity: 0;
 }
 
@@ -690,6 +787,7 @@ a {
   pointer-events: none;
 }
 
+.plain-boundary-motions,
 .plain-barrier-motion {
   position: absolute;
   inset: 0;
@@ -715,23 +813,28 @@ a {
   opacity: 0;
 }
 
-#impress #the-fish-diagram .plain-barrier-motion.substep-visible {
+#impress #the-fish-diagram .plain-boundary-motions.substep-visible {
   transition: opacity 120ms linear;
 }
 
-#impress #the-fish-diagram:has(.plain-economic-motion.substep-visible) .plain-economic-reveal .plain-model-outline,
-#impress #the-fish-diagram:has(.plain-workload-motion.substep-visible) .plain-workload-reveal .plain-model-outline {
+#impress #the-fish-diagram:has(.plain-boundary-motions.substep-visible) .plain-economic-reveal .plain-model-outline,
+#impress #the-fish-diagram:has(.plain-boundary-motions.substep-visible) .plain-workload-reveal .plain-model-outline {
   opacity: 0.24;
   transition: opacity 180ms linear;
 }
 
-.plain-barrier-motion.substep-visible .plain-barrier-moving {
+.plain-boundary-motions.substep-visible .plain-barrier-moving {
   animation: plain-barrier-shift 4.8s cubic-bezier(0.3, 0, 0.7, 1) both;
 }
 
 /* Finish fading the playing surface before the first boundary moves. */
-.plain-economic-motion.substep-visible .plain-barrier-moving {
+.plain-boundary-motions.substep-visible .plain-economic-motion .plain-barrier-moving {
   animation-delay: 750ms;
+}
+
+/* Start the workload boundary one second after the economic boundary. */
+.plain-boundary-motions.substep-visible .plain-workload-motion .plain-barrier-moving {
+  animation-delay: 1750ms;
 }
 
 @keyframes plain-barrier-shift {
@@ -1069,6 +1172,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   top: 400px;
   right: 10px;
   width: 500px;
+  font-family: "Comic Neue", cursive;
   font-size: 25px;
 }
 
@@ -1382,6 +1486,11 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 
 .impress-enabled .complex-system-slide.present .social-fish-piece {
   animation: social-fish-piece-reveal 1200ms ease-in-out both;
+}
+
+.impress-enabled .complex-system-slide.is-fish-rendered .social-fish-piece {
+  opacity: 1;
+  animation: none;
 }
 
 .impress-enabled .complex-system-slide.present .social-system-network {
@@ -1794,7 +1903,7 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
     opacity: 1;
   }
 
-  .plain-economic-motion.substep-visible .plain-barrier-moving {
+  .plain-boundary-motions.substep-visible :is(.plain-economic-motion, .plain-workload-motion) .plain-barrier-moving {
     animation-delay: 0ms;
   }
 
@@ -1815,37 +1924,56 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
 /* AI arrives at one operating state before the camera opens onto its constraints. */
 .ai-journey-slide { background: var(--surface-background); }
 #impress .ai-journey-slide:not(.active) { opacity: 0; pointer-events: none; }
-.ai-arrival-slide { overflow: hidden; }
-.ai-arrival-point { position: absolute; top: 320px; left: 440px; width: 140px; height: 140px; }
+@media screen {
+  #impress .expertise-sequence-slide:not(.active):has(.expertise-fine-scene.substep-visible) {
+    opacity: 1;
+    background: transparent;
+  }
+  #impress .ai-arrival-slide:not(.active):has(.ai-arrival-reveal.substep-visible) {
+    opacity: 1;
+    background: transparent;
+    z-index: 1;
+  }
+  .ai-arrival-slide:not(.active) :is(.ai-arrival-point, .ai-arrival-ball) { visibility: hidden; }
+  .ai-arrival-slide:not(.active) .ai-arrival-reveal.substep-visible .ai-arrival-question { animation: none; opacity: 1; }
+}
+.ai-arrival-slide { --ai-arrival-duration: 2400ms; overflow: hidden; }
+.ai-arrival-point { position: absolute; top: 320px; left: 440px; width: 140px; height: 140px; opacity: 1; }
+.ai-arrival-slide:has(.ai-arrival-reveal.substep-visible) .ai-arrival-point { animation: ai-arrival-point-fade 600ms ease-out var(--ai-arrival-duration) both; }
 .ai-arrival-reveal { position: absolute; inset: 0; }
 .ai-arrival-ball { position: absolute; top: 310px; left: 430px; width: 160px; height: 160px; object-fit: contain; }
-.ai-arrival-reveal.substep-visible .ai-arrival-ball { animation: ai-ball-roll-in 2400ms cubic-bezier(0.18, 0.65, 0.3, 1) both; }
+.ai-arrival-reveal.substep-visible .ai-arrival-ball { animation: ai-ball-roll-in var(--ai-arrival-duration) cubic-bezier(0.18, 0.65, 0.3, 1) both; }
 .ai-arrival-question,
-.ai-arrival-nondeterminism { position: absolute; left: 60px; right: 60px; margin: 0; font-family: "Comic Neue", cursive; font-size: 38px; font-weight: 700; line-height: 1.15; text-align: center; }
+.ai-fish-question { position: absolute; left: 60px; right: 60px; margin: 0; font-family: "Comic Neue", cursive; font-size: 38px; font-weight: 700; line-height: 1.15; text-align: center; }
 .ai-arrival-question { top: 565px; }
 .ai-arrival-reveal.substep-visible .ai-arrival-question { animation: ai-question-arrive 2800ms ease both; }
-.ai-arrival-nondeterminism { bottom: 35px; }
-.ai-arrival-nondeterminism span { white-space: nowrap; }
-#impress #ai-operating-point .ai-arrival-nondeterminism { opacity: 0; }
-#impress #ai-operating-point .ai-arrival-nondeterminism.substep-visible.is-ready { opacity: 1; }
+.ai-fish-question { bottom: 35px; visibility: hidden; }
+.ai-fish-question span { white-space: nowrap; }
+.ai-fish-question.substep-visible { visibility: visible; }
 @keyframes ai-ball-roll-in { from { transform: translateX(-650px) rotate(-720deg); } to { transform: translateX(0) rotate(0); } }
+@keyframes ai-arrival-point-fade { from { opacity: 1; } to { opacity: 0; } }
 @keyframes ai-question-arrive { 0%, 80% { opacity: 0; } 100% { opacity: 1; } }
 .ai-fish-model { position: absolute; inset: 0; }
-.impress-enabled #ai-fish-diagram.active .ai-fish-model { opacity: 0; }
-.impress-enabled #ai-fish-diagram.active.present .ai-fish-model { animation: ai-fish-diagram-reveal 1000ms ease-in-out 3000ms both; }
+.ai-fish-slide { background: transparent; }
+.impress-enabled #ai-fish-diagram:not(.is-rendered) .ai-fish-model { opacity: 0; }
+.impress-enabled #ai-fish-diagram.active.present:not(.is-rendered) .ai-fish-model { animation: ai-fish-diagram-reveal 500ms ease-in-out 500ms both; }
+#impress #ai-fish-diagram.is-rendered { opacity: 1; }
+.impress-enabled #ai-fish-diagram.is-rendered .ai-fish-model { opacity: 1; animation: none; }
 @keyframes ai-fish-diagram-reveal { from { opacity: 0; } to { opacity: 1; } }
 .ai-fish-margin { position: absolute; top: 131px; left: 230px; width: 385px; height: auto; }
+.ai-fish-slide .plain-boundary-workload { bottom: 158px; }
 .ai-roaming-point-position { position: absolute; top: 369px; left: 477px; width: 70px; height: 70px; will-change: transform; }
-.ai-roaming-point-position.is-moving { transition: transform 6000ms ease-in-out; }
+.ai-roaming-point-position.is-moving { transition: transform 6000ms linear; }
 .ai-roaming-point { display: block; width: 100%; height: 100%; object-fit: contain; }
-body.impress-on-ai-economic-pressure #impress #ai-fish-diagram,
-body.impress-on-ai-workload-pressure #impress #ai-fish-diagram,
-body.impress-on-ai-margin-pressure #impress #ai-fish-diagram { opacity: 1; }
+@media screen {
+  .expertise-erosion-slide.active, .expertise-sequence-slide.active { background: transparent; }
+}
 @media (prefers-reduced-motion: reduce) {
   .impress-enabled #ai-fish-diagram.active .ai-fish-model,
   .impress-enabled #ai-fish-diagram.active.present .ai-fish-model { animation: none; opacity: 1; }
   .ai-arrival-reveal.substep-visible .ai-arrival-ball,
   .ai-arrival-reveal.substep-visible .ai-arrival-question { animation: none; }
+  .ai-arrival-slide:has(.ai-arrival-reveal.substep-visible) .ai-arrival-point { animation: none; opacity: 0; }
 }
 
 /* Fish-diagram close-ups contain plain content in the diagram's coordinate space. */
@@ -1855,6 +1983,8 @@ body.impress-on-ai-margin-pressure #impress #ai-fish-diagram { opacity: 1; }
 }
 .boundary-detail-icon { position: absolute; left: 42px; top: 35px; width: 105px; height: 110px; font-size: 86px; line-height: 1.2; text-align: center; }
 img.boundary-detail-icon { height: auto; }
+#error-margin .error-margin-lemming { left: 65px; width: 60px; height: 60px; }
+.error-margin-lemming img { display: block; width: 100%; height: 100%; }
 .boundary-detail-title { margin: 0 0 0 130px; font-family: "Maven Pro", sans-serif; font-weight: 500; font-size: 46px; line-height: 1.08; letter-spacing: -1.5px; }
 .boundary-detail-lede { margin: 18px 0 0 130px; font-size: 26px; line-height: 1.22; text-align: left; letter-spacing: -0.6px; }
 .boundary-detail-no-icon .boundary-detail-title,
@@ -1868,6 +1998,11 @@ img.boundary-detail-icon { height: auto; }
 .boundary-detail-copy .boundary-emoji-list { padding-left: 0; list-style: none; }
 .boundary-emoji-list li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 10px; align-items: start; }
 .boundary-list-emoji { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 30px; line-height: 1; letter-spacing: 0; text-align: center; }
+.boundary-list-icon { display: block; width: 30px; height: 30px; object-fit: contain; }
+#workload-boundary .boundary-emoji-list li:has(> .boundary-exit-sign) { grid-template-columns: 64px minmax(0, 1fr); align-items: center; }
+#workload-boundary .boundary-exit-sign { position: relative; display: block; width: 64px; line-height: 0; }
+#workload-boundary .boundary-exit-sign::before { content: ""; position: absolute; inset: 10.6% 7.5%; border-radius: 2.5px; background: #fff; }
+#workload-boundary .boundary-exit-sign .boundary-list-icon { position: relative; width: 64px; height: auto; }
 .ai-pressure-slide .boundary-detail-copy li { font-size: 24px; margin-bottom: 17px; }
 .ai-pressure-slide small { font-size: 18px; letter-spacing: 0; }
 .boundary-detail-conclusion { position: absolute; bottom: 77px; left: 46px; right: 46px; margin: 0; font-family: "Comic Neue", cursive; font-size: 28px; font-weight: 700; line-height: 1.18; text-align: left; }
@@ -1878,46 +2013,55 @@ img.boundary-detail-icon { height: auto; }
 .boundary-action-table td { padding: 14px 16px; text-align: left; vertical-align: top; }
 .boundary-action-table th:first-child { width: 42%; }
 .boundary-action-table strong { font-weight: 650; }
-.workload-proxy-figure { position: absolute; left: 46px; top: 225px; width: 235px; margin: 0; }
-.workload-proxy-figure img { width: 235px; height: 345px; object-fit: contain; }
-.workload-proxy-figure figcaption { margin-top: 8px; font-family: "Comic Neue", cursive; font-size: 23px; font-weight: 700; line-height: 1.1; text-align: center; }
-.workslop-chain { position: absolute; top: 210px; left: 320px; right: 46px; }
-.workslop-chain > div { margin-bottom: 24px; padding-left: 20px; }
-.workslop-chain h3 { margin: 0 0 8px; font-family: "Comic Neue", cursive; font-size: 31px; line-height: 1.1; }
-.workslop-chain p { margin: 0; font-size: 24px; line-height: 1.25; text-align: left; letter-spacing: -0.6px; }
-.workslop-evidence { position: absolute; top: 602px; left: 320px; right: 46px; margin: 0; font-size: 22px; line-height: 1.2; text-align: left; letter-spacing: -0.5px; }
-.workslop-evidence span { font-size: 18px; letter-spacing: 0; }
-.ai-workslop-slide .boundary-detail-conclusion { bottom: 68px; font-size: 27px; }
-.margin-pressure-scene { position: absolute; left: 38px; top: 211px; width: 440px; height: 395px; overflow: hidden; }
-.margin-pressure-scene svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.margin-functional-line, .margin-perceived-line { fill: none; stroke: #263846; stroke-width: 4; }
-.margin-perceived-line { stroke-dasharray: 3 10; stroke-linecap: round; }
-.margin-pressure-scene text { font-family: "Comic Neue", cursive; font-size: 19px; font-weight: 700; letter-spacing: 0; }
-.margin-pressure-scene .margin-buffer-label { font-size: 22px; fill: #725436; text-anchor: middle; }
-.margin-last-point { position: absolute; left: 318px; top: 143px; width: 26px; height: 26px; opacity: 0.48; }
-.margin-last-label { position: absolute; left: 283px; top: 184px; font-size: 18px; letter-spacing: 0; }
-.margin-actual-position { position: absolute; left: 309px; top: 134px; width: 44px; height: 44px; z-index: 3; }
-.margin-actual-position img { width: 100%; height: 100%; }
-.margin-pressure-scene.is-running .margin-actual-position { animation: ai-margin-drift 10500ms ease-in-out both; }
-.margin-actual-label { position: absolute; left: 62px; top: 83px; width: 57px; font-size: 16px; line-height: 1.08; letter-spacing: 0; opacity: 0; }
-.margin-pressure-scene.is-running .margin-actual-label { animation: ai-question-arrive 11000ms ease both; }
-.margin-bucket-pile { position: absolute; inset: 0; z-index: 2; }
-.margin-bucket { position: absolute; width: 57px; height: 85px; object-fit: contain; animation: slop-bucket-descend 3800ms ease-in-out both; }
-.margin-scene-caption { position: absolute; left: 252px; bottom: 4px; margin: 0; font-family: "Comic Neue", cursive; font-size: 21px; font-weight: 700; line-height: 1.1; text-align: left; }
-.margin-pressure-risks { position: absolute; top: 220px; left: 510px; right: 46px; }
-.margin-pressure-risks > div { padding-left: 18px; margin-bottom: 27px; }
-.margin-pressure-risks h3 { margin: 0 0 8px; font-family: "Comic Neue", cursive; font-size: 29px; line-height: 1.05; }
-.margin-pressure-risks p { margin: 0; font-size: 22px; line-height: 1.23; text-align: left; letter-spacing: -0.4px; }
-.margin-pressure-evidence { position: absolute; top: 604px; left: 46px; right: 46px; margin: 0; font-size: 23px; line-height: 1.25; text-align: left; letter-spacing: -0.5px; }
-.margin-pressure-evidence span { font-size: 18px; letter-spacing: 0; }
-.ai-margin-slide .boundary-detail-conclusion { bottom: 68px; font-size: 27px; }
-@keyframes slop-bucket-descend { from { transform: translateY(-430px) rotate(-10deg); opacity: 0; } 15% { opacity: 1; } to { transform: translateY(0) rotate(0); opacity: 1; } }
-@keyframes ai-margin-drift { 0%, 15% { transform: translateX(0); } 100% { transform: translateX(-245px); } }
-.margin-pressure-scene.is-settled .margin-actual-position { transform: translateX(-245px); }
-.margin-pressure-scene.is-settled .margin-actual-label { opacity: 1; }
-.margin-pressure-scene.is-settled .margin-bucket { animation: none; }
+:is(#economic-boundary-actions, #workload-boundary-actions, #error-margin) .boundary-action-table td { padding-block: 12px; }
+#error-margin .boundary-action-table td { padding-block: 9px; }
+.boundary-action-table .boundary-action-entry { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 10px; align-items: start; }
+#economic-boundary-actions .boundary-action-icon { width: 30px; height: 30px; object-fit: contain; }
+
+.workload-proxy-figure { justify-self: center; width: 211.5px; margin: 0; }
+.workload-proxy-figure img { display: block; width: 211.5px; height: 211.5px; object-fit: contain; }
+.workload-slop-figure { justify-self: center; width: 120px; margin: 0; }
+.workload-slop-figure img { display: block; width: 120px; height: 180px; object-fit: contain; }
+.workload-recovery-figure { justify-self: center; width: 140px; margin: 0; font-size: 130px; line-height: 1; letter-spacing: 0; text-align: center; }
+.workslop-chain { position: absolute; top: 180px; left: 46px; right: 46px; display: grid; grid-template-columns: minmax(0, 1fr) 235px; grid-auto-rows: 140px; column-gap: 39px; row-gap: 28px; align-items: center; }
+.workslop-chain > div { margin: 0; padding: 12px 0 12px 20px; }
+.workslop-chain h3 { margin: 0 0 12px; font-family: "Comic Neue", cursive; font-size: 31px; line-height: 1.1; }
+.workslop-chain p { margin: 0; font-size: 24px; line-height: 1.35; text-align: left; letter-spacing: -0.6px; }
+.expertise-erosion-slide { padding: 36px 46px; }
+.expertise-erosion-title { position: absolute; top: 20px; left: 46px; right: 46px; margin: 0; font-family: "Maven Pro", sans-serif; font-weight: 400; font-size: 64px; line-height: 1.05; letter-spacing: -2px; text-align: center; }
+.expertise-erosion-book { position: absolute; left: 90px; top: 135px; width: 230px; margin: 0; }
+.expertise-erosion-book img { display: block; width: 100%; height: auto; }
+.expertise-erosion-book figcaption { width: 500px; margin-top: 24px; font-size: 24px; line-height: 1.18; letter-spacing: -0.35px; text-align: left; }
+.expertise-erosion-book figcaption a { font-family: inherit; }
+.expertise-erosion-quote { position: absolute; left: 370px; right: 46px; top: 135px; margin: 0; font-size: 32px; line-height: 1.28; letter-spacing: -0.35px; }
+.expertise-erosion-quote p { margin: 0; text-align: left; }
+/* One scene on entry, followed by three presenter-controlled replacements. */
+.expertise-sequence-visuals, .expertise-people-scene { position: absolute; inset: 0; opacity: 1; transition: opacity 800ms ease; }
+.expertise-people-network { position: absolute; top: 50%; left: 50%; width: 300px; height: 288px; transform: translate(-50%, -50%) scale(1.65); }
+.expertise-people-network > img { display: block; width: 300px; height: auto; }
+.expertise-people-network .social-system-person { z-index: 2; }
+.expertise-arrow-pulses { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.expertise-shrug-scene { position: absolute; top: 50%; left: 50%; width: 732px; display: flex; align-items: center; gap: 36px; margin: 0; transform: translate(-50%, -50%); opacity: 0; transition: opacity 800ms ease; }
+.expertise-sequence-shrug { flex: 0 0 100px; font-size: 100px; line-height: 1; letter-spacing: 0; text-align: center; }
+.expertise-shrug-network { position: relative; flex: 0 0 460px; }
+.expertise-shrug-network > img { display: block; width: 460px; height: auto; }
+.expertise-fire { position: absolute; top: 63%; left: 50%; font-size: 180px; line-height: 1; transform: translate(-50%, -50%); opacity: 0; transition: opacity 600ms ease; }
+.expertise-sequence-slide:has(.expertise-shrug-trigger.substep-visible) .expertise-people-scene { opacity: 0; }
+.expertise-sequence-slide:has(.expertise-shrug-trigger.substep-visible) .expertise-shrug-scene { opacity: 1; }
+.expertise-sequence-slide.active:has(.expertise-fire-trigger.substep-visible) .expertise-fire { opacity: 1; animation: expertise-fire-glow 1600ms ease-in-out infinite; }
+.expertise-sequence-slide:has(.expertise-fine-scene.substep-visible) .expertise-sequence-visuals { opacity: 0; pointer-events: none; }
+.expertise-sequence-slide:has(.expertise-fine-scene.substep-visible) .expertise-fire { animation: none; }
+.expertise-fine-scene { position: absolute; inset: 90px; margin: 0; }
+.expertise-fine-scene picture, .expertise-fine-scene img { display: block; width: 100%; height: 100%; object-fit: contain; }
+@keyframes expertise-fire-glow { from, to { filter: drop-shadow(0 0 8px #ff9700); } 50% { filter: drop-shadow(0 0 22px #ff3c00) drop-shadow(0 0 38px #ffd74a); } }
+@media (prefers-reduced-motion: reduce) {
+  .expertise-sequence-slide :is(.expertise-sequence-visuals, .expertise-people-scene, .expertise-shrug-scene, .expertise-fire, .expertise-fine-scene) { transition: none !important; }
+  .expertise-sequence-slide .expertise-fire { animation: none !important; filter: drop-shadow(0 0 10px #ff9700); }
+}
 
 @media print {
+  .expertise-sequence-visuals { display: none; }
+  .expertise-fine-scene { opacity: 1 !important; }
   html,
   body {
     overflow: visible !important;
@@ -1936,13 +2080,54 @@ img.boundary-detail-icon { height: auto; }
     opacity: 1 !important;
   }
 
-  .substep {
+  .references-slide {
+    height: auto;
+    overflow: visible;
+  }
+
+  .references-tabs {
+    display: none;
+  }
+
+  .references-page[hidden] {
+    display: block !important;
+  }
+
+  .references-page + .references-page {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .references-page::before {
+    display: block;
+    margin-bottom: 18px;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 32px;
+  }
+
+  #references-qcon::before { content: "QCon sources"; }
+  #references-srecon26::before { content: "SREcon26 sources"; }
+
+  .substep,
+  .ordered-substep {
     opacity: 1 !important;
   }
 
   .ai-fish-model {
     animation: none !important;
     opacity: 1 !important;
+  }
+
+  .ai-fish-question { visibility: visible !important; }
+
+  .ai-arrival-point {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  .ai-arrival-ball,
+  .ai-arrival-question {
+    animation: none !important;
   }
 
   .impress-enabled .opening-hook-slide > p,

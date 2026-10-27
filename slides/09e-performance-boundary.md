@@ -20,13 +20,13 @@ Crossing the functional limit means unacceptable outcomes.
 - 💔 Trust and reputation damaged
 - ⚖️ Contractual losses or regulatory consequences
 
-Test people, tools and workflow together.<br />Can we use good output, catch mistakes and recover?
+Can people, tools and workflows anticipate and adapt to failure, ensuring system capacity remains resilient to performance degradation and recovers?
 
 [Rasmussen, Fig. 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · [Chapter 5, §5.5.3](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5) · [Morey et al. (2025)](https://www.nature.com/articles/s41746-025-01784-y) · Software application.
 
 ## Reveal sequence
 
-All visible content uses five presenter-controlled substeps: title and icon together; introductory sentence; the complete “Failure in the service” column; the complete “Harm beyond the service” column; then the closing statement. Reveal one group per advance and preserve the layout while groups are hidden.
+All visible content uses eleven presenter-controlled substeps: title and icon together; introductory sentence; the “Failure in the service” heading; each of its three items in order; the “Harm beyond the service” heading; each of its three items in order; then the closing statement. Reveal one group per advance, keeping each item's emoji and text together and preserving the layout while content is hidden.
 
 ## Speaker notes
 

@@ -6,13 +6,11 @@ Rendered step: `#/ai-operating-point`.
 
 What changes when AI enters the work?
 
-And work function and outputs rely heavily on non-determinism?
-
-Starting state: red operating-point circle. First presenter reveal: AI ball rolls from the left and settles over the same point, then the “What changes” question appears. Next presenter reveal: the non-determinism question appears at the bottom, using the same 38px type. If the presenter advances quickly, that second line waits until the first question has finished appearing.
+Starting state: red operating-point circle. One presenter reveal: AI ball rolls from the left and settles over the same point after 2.4 seconds. Once it reaches the middle, the red circle fades out over 600 milliseconds. The “What changes” question appears as the ball settles and stays visible at its canvas position when navigating away. The inactive step shows only that revealed question, allowing the AI Fish Diagram and its own ball to appear behind it. Hiding this reveal restores the red point for replay; reduced motion immediately shows the settled AI ball with the red point hidden. The next advance moves to the AI Fish Diagram, where the non-determinism question has its own manual reveal.
 
 ## Speaker notes
 
-Start with just the red operating point: the whole socio-technical system's current state. On the next click the AI ball rolls in from the left and settles over it. The artwork is a visual shorthand for AI-mediated work at the same operating state. It is not a second operating point, a person, or a fourth constraint. Ask what changes in cost, effort, evidence and recovery. On the next click, reveal the non-determinism question at the bottom after the “What changes” question. The following step expands the view to the same three boundaries and the performance-side error margin. Reduced-motion mode shows the settled ball without rolling; the reveal still requires the presenter to advance.
+Start with just the red operating point: the whole socio-technical system's current state. On the next click the AI ball rolls in from the left and settles over it. Once the ball reaches the middle, the red circle fades out. The artwork is a visual shorthand for AI-mediated work at the same operating state. It is not a second operating point, a person, or a fourth constraint. Ask what changes in cost, effort, evidence and recovery. The following step expands the view to the same three boundaries and the performance-side error margin, then offers the non-determinism question as a manual reveal. Reduced-motion mode shows the settled ball without rolling; the reveal still requires the presenter to advance.
 
 **AI in the feedback and action channels**
 

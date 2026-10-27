@@ -26,17 +26,20 @@ The numbered Markdown files in this directory mirror the rendered Impress deck i
 20. [AI in the Fish Diagram](09h-ai-fish-diagram.md) — `#/ai-fish-diagram`
 21. [AI has to be paid for](09i-ai-economic-pressure.md) — `#/ai-economic-pressure`
 22. [AI and least effort](09j-ai-workload-pressure.md) — `#/ai-workload-pressure`
-23. [Change can outrun our view](09k-ai-margin-pressure.md) — `#/ai-margin-pressure`
-24. [The cost of a verified outcome](10-workflow-cost.md) — `#/workflow-cost`
-25. [Work the team can verify](11-verification-capacity.md) — `#/verification-capacity`
-26. [A handoff with evidence](12-evidence-handoff.md) — `#/evidence-handoff`
-27. [Intervention and recovery](13-rehearsed-recovery.md) — `#/rehearsed-recovery`
+23. [The erosion of expertise](09j2-erosion-of-expertise.md) — `#/erosion-of-expertise`
+24. [Expertise erosion sequence](09j3-expertise-erosion-sequence.md) — `#/expertise-erosion-sequence`
+25. [AI margin — empty placeholder](09k-ai-margin-pressure.md) — `#/ai-margin-pressure`
+26. [The cost of a verified outcome](10-workflow-cost.md) — `#/workflow-cost`
+27. [Work the team can verify](11-verification-capacity.md) — `#/verification-capacity`
+28. [A handoff with evidence](12-evidence-handoff.md) — `#/evidence-handoff`
+29. [Intervention and recovery](13-rehearsed-recovery.md) — `#/rehearsed-recovery`
+30. [References](14-references.md) — `#/references`
 
-The deck contains 27 content steps and two overview/overlay camera steps, for 29 Impress steps. Six boundary close-ups explain capacity changes, signals, actions, failure consequences and protection. The five-step AI camera journey follows the fish overview. Its error-margin scene and assurance reveal bridge into four practical closing slides, ending with **Intervention and recovery**. Content is plain and unframed; coordinates and detailed positioning remain for a later pass.
+The deck contains 29 content steps, three overview/overlay camera steps and one empty placeholder, for 33 Impress steps. Six boundary close-ups explain capacity changes, signals, actions, failure consequences and protection. The AI camera journey follows the fish overview. Below the workload close-up, an expertise book and quotation lead into a separate complex-system sequence: people and flashing coloured balls; shrugging people; a glowing flame; then “This is Fine”. The AI margin step is an empty placeholder retaining its ID and camera position. The following [AI Fish Diagram overview](09l-ai-fish-diagram-overview.md) returns to the model before the four practical closing slides, ending with **Intervention and recovery**. A final **References** slide follows. Content is plain and unframed; coordinates and detailed positioning remain for a later pass.
 
 The practical section follows one illustrative AI-assisted change to a service's retry behaviour through whole-workflow cost, verification capacity, an inspectable handoff and a rehearsed intervention. The close asks whether people, tools and workflow can detect a convincing mistake, stop further action and restore service. These are proposed engineering practices rather than intervention-study findings. Local thresholds, useful baselines and controlled exercises keep the application specific to the team's work.
 
-The former seven-slide sequence from Human behaviour through Keeping the model in view has been integrated into earlier steps and removed. Behaviour and control evidence now lives in the hierarchy, arrival, workload and margin notes. Whole-workflow economics lives in the economic close-ups; joint evaluation lives in acceptable performance; recovery and the conventional-automation AWS example live in the error-margin notes. See the [integration map](../research/2026-10-13-slide-consolidation.md).
+The former seven-slide sequence from Human behaviour through Keeping the model in view has been integrated into earlier steps and removed. Behaviour and control evidence now lives in the hierarchy, arrival and workload notes. Whole-workflow economics lives in the economic close-ups; joint evaluation lives in acceptable performance; recovery and the conventional-automation AWS example live in the error-margin notes. See the [integration map](../research/2026-10-13-slide-consolidation.md).
 
 The sources remain distinct: Rasmussen supplies the model, Chapter 5 supplies a contemporary resilience synthesis, and the software mechanism is this talk's application. Clinical joint-evaluation results do not estimate LLM software risk; the AWS example has no reported generative AI involvement.
 

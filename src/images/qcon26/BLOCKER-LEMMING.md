@@ -1,14 +1,14 @@
 # Blocker Lemming artwork
 
 The presentation uses the original Amiga sprite of the arms-out Blocker
-character on the title slide, Fish Diagram, and diagram legend. Protect the
-Error Margin has no character artwork. The modern 3D artwork is retired and
+character on the title slide, Fish Diagram, diagram legend, and Protect the
+Error Margin slide. The modern 3D artwork is retired and
 must not be reintroduced. Game artwork belongs to its respective rights
 holders; inclusion here does not establish a reuse license.
 
 ## Original Amiga sprite
 
-The title slide, Fish Diagram, and diagram legend use the classic Amiga version of *Lemmings*
+The title slide, Fish Diagram, diagram legend, and Protect the Error Margin use the classic Amiga version of *Lemmings*
 (DMA Design / Psygnosis, 1991).
 
 ### Public source

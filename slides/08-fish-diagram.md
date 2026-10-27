@@ -4,9 +4,9 @@
 
 **The Fish Diagram**
 
-Starting state: no boundary lines or operating point yet.
+Starting state on the first visit: no boundary lines or operating point yet.
 
-Presenter reveals, in order:
+Presenter reveals for the first build, in order:
 
 1. Economic boundary and 💸 label.
 2. Workload boundary and 😢 label.
@@ -14,10 +14,11 @@ Presenter reveals, in order:
 4. Dotted performance-side line and **Error Margin**.
 5. Red **Operating Point**, representing one whole-system state.
 6. Shaded **Playing Surface**.
-7. The shaded surface and its label fade away, then the economic boundary shifts inward and outward against its original reference.
-8. Workload boundary shifts inward and outward against its original reference.
-9. A moving operating point starts.
-10. Cost charts, effort-saving hands and Blocker Lemmings representing safety interventions arrive across the model in a quick stagger (roughly eight seconds overall, with each entrance lasting 0.45 seconds), including a hand just inside the intersection of the error margin and workload boundary.
+7. The shaded surface and its label fade away over 750 ms, then the economic boundary shifts inward and outward against its original reference. The workload boundary starts the same 4.8-second motion one second after the economic boundary begins, automatically within this reveal.
+8. A moving operating point starts after both boundary animations finish.
+9. Cost charts, effort-saving hands and Blocker Lemmings representing safety interventions arrive across the model in a quick stagger (roughly eight seconds overall, with each entrance lasting 0.45 seconds), including a hand just inside the intersection of the error margin and workload boundary.
+
+Once revealed, the three boundary lines, their labels, and the dotted error margin remain visible on the world canvas through later camera steps and return visits. Opening Diagram Legend, a boundary close-up, or the fish overview directly also establishes this static geometry for context. The manual substeps remain available; persistence does not freeze the moving boundaries, prevent their original references from dimming, or change the playing-surface, operating-point and intervention stages.
 
 After all Blocker Lemming, hand, and chart arrival animations finish, automatically draw two arrows over 1.8 seconds, followed by their arrowheads and labels:
 
@@ -61,6 +62,6 @@ Adult one-sentence version: one current operating state moves within economic, w
 
 ## Following camera steps
 
-After Diagram Legend, the camera returns to this model, visits six boundary/action close-ups, then returns to the overview. The close-ups add examples of external economic capacity, sustainable workload capacity, signal-to-action choices, consequences of functional failure and protection of the performance-side margin. Each has its own source/notes file in [the ordered slide list](README.md).
+After Diagram Legend, the camera returns to this model, visits six boundary/action close-ups, then returns to the overview. The boundary lines, labels and dotted margin stay in place while these slides build around the diagram. The close-ups add examples of external economic capacity, sustainable workload capacity, signal-to-action choices, consequences of functional failure and protection of the performance-side margin. Each has its own source/notes file in [the ordered slide list](README.md).
 
 The next camera journey introduces AI at the same operating point, expands to the clean model, then inspects AI economics, workload and the error margin before returning to the existing human-behaviour material.
