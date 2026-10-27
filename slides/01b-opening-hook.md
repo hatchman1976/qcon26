@@ -8,7 +8,7 @@
 
 **Decades of research on sociotechnical systems and complexity still explain the risk.**
 
-**The question is whether our ability to notice, understand and correct can keep pace.**
+**Will our ability to notice, understand and correct keep pace?**
 
 ## Layout
 

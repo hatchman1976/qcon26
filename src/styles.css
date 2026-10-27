@@ -59,6 +59,7 @@
   color-scheme: light;
   font-family: "Open Sans", Arial, sans-serif;
   font-synthesis: none;
+  --heading-font-family: "SREcon26 Archivo Black", sans-serif;
   --surface-background: #b3d9ff;
   --ink: #000000;
   --link: royalblue;
@@ -115,6 +116,16 @@ body {
   letter-spacing: -1px;
 }
 
+/* Keep slide titles and section headings consistent with WHOAMI. */
+#impress .step :is(h1, h2, h3, h4, h5, h6, th),
+#impress .paper-theme-copy strong,
+#impress .diagram-legend-item strong,
+#impress .practice-rows dt,
+#impress .sociotechnical-heading,
+#impress .systems-thinking {
+  font-family: var(--heading-font-family);
+}
+
 .impress-enabled .step {
   opacity: 1;
 }
@@ -155,7 +166,7 @@ a {
 
 .references-title {
   margin: 0 0 14px;
-  font-family: "Maven Pro", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 64px;
   font-weight: 400;
   line-height: 1.05;
@@ -251,7 +262,7 @@ a {
   right: 34px;
   left: 34px;
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 68px;
   font-weight: 400;
   line-height: 1;
@@ -316,7 +327,7 @@ a {
 
 .practice-title {
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 50px;
   font-weight: 500;
   line-height: 1.1;
@@ -337,7 +348,7 @@ a {
 
 .practice-rows > div {
   display: grid;
-  grid-template-columns: 190px 1fr;
+  grid-template-columns: 225px 1fr;
   gap: 24px;
   align-items: baseline;
   margin-bottom: 35px;
@@ -453,6 +464,16 @@ a {
   font-weight: 700;
 }
 
+.whoami-data-centre { width: 150px; line-height: 0; }
+.whoami-data-centre::before { content: ""; position: absolute; inset: 24.231% 4.79% 1.968% 9.112%; background: #fff; }
+.whoami-data-centre img { position: relative; display: block; }
+.whoami-linkedin { width: 80px; line-height: 0; }
+.whoami-linkedin::before { content: ""; position: absolute; inset: 10%; background: #fff; }
+.whoami-linkedin img { position: relative; display: block; }
+.whoami-bluesky { position: relative; display: block; width: 90px; line-height: 0; }
+.whoami-bluesky::before { content: ""; position: absolute; inset: 12%; border-radius: 25%; background: #fff; }
+.whoami-bluesky img { position: relative; display: block; }
+
 #impress .whoami-slide .substep {
   transform: scale(0.92);
 }
@@ -473,7 +494,7 @@ a {
 
 .opening-hook-slide > p {
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 42px;
   font-weight: 700;
   line-height: 1.18;
@@ -518,7 +539,7 @@ a {
   right: 60px;
   left: 60px;
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
@@ -589,7 +610,7 @@ a {
   right: 60px;
   left: 60px;
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
@@ -1155,9 +1176,10 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 }
 
 .model-person {
-  top: 250px;
-  left: 10px;
-  width: 400px;
+  top: 265px;
+  left: 0;
+  width: 450px;
+  margin: 0;
   text-align: center;
 }
 
@@ -1169,11 +1191,18 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 
 .model-paper-link {
   position: absolute;
-  top: 400px;
+  top: 435px;
   right: 10px;
-  width: 500px;
+  width: 550px;
+  margin: 0;
   font-family: "Comic Neue", cursive;
-  font-size: 25px;
+  font-size: 32px;
+  line-height: 1.15;
+}
+
+.model-slide .regular-text {
+  font-size: 32px;
+  line-height: 1.2;
 }
 
 .domain-icon {
@@ -1196,30 +1225,34 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 }
 
 .sociotechnical-heading {
-  right: 10px;
-  bottom: 250px;
-  width: 400px;
+  top: 540px;
+  right: 20px;
+  width: 490px;
+  margin: 0;
   text-align: left;
 }
 
 .sociotechnical-hierarchical {
-  right: 150px;
-  bottom: 200px;
-  width: 200px;
+  top: 590px;
+  right: 20px;
+  width: 430px;
+  margin: 0;
   text-align: left;
 }
 
 .sociotechnical-multidisciplinary {
-  right: 150px;
-  bottom: 150px;
-  width: 200px;
+  top: 640px;
+  right: 20px;
+  width: 430px;
+  margin: 0;
   text-align: left;
 }
 
 .systems-thinking {
-  right: 10px;
-  bottom: 90px;
-  width: 400px;
+  top: 700px;
+  right: 20px;
+  width: 490px;
+  margin: 0;
   text-align: left;
 }
 
@@ -1234,7 +1267,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   right: 45px;
   left: 45px;
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 54px;
   font-weight: 400;
   line-height: 1;
@@ -1249,20 +1282,20 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   left: 70px;
   margin: 0;
   font-family: "Comic Neue", cursive;
-  font-size: 27px;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.5px;
 }
 
 .paper-themes-figure {
   position: absolute;
-  top: 175px;
-  left: 100px;
-  width: 330px;
-  height: 410px;
+  top: 260px;
+  left: 30px;
+  width: 240px;
+  height: auto;
   margin: 0;
-  overflow: hidden;
+  overflow: visible;
   background: #fff;
   box-shadow: 0 10px 24px rgb(0 0 0 / 18%);
   transform: rotate(-1deg);
@@ -1275,26 +1308,22 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 }
 
 .paper-themes-figure figcaption {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: relative;
   padding: 7px 10px 8px;
   background: rgb(255 255 255 / 90%);
   font-family: "Comic Neue", cursive;
-  font-size: 17px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.1;
   letter-spacing: 0;
   text-align: center;
 }
 
 .paper-themes-list {
   position: absolute;
-  top: 50%;
-  right: 48px;
-  width: 455px;
-  transform: translateY(-50%);
+  top: 190px;
+  right: 40px;
+  left: 300px;
 }
 
 .paper-theme {
@@ -1355,18 +1384,18 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 }
 
 .paper-theme-copy strong {
-  font-family: "Maven Pro", sans-serif;
-  font-size: 26px;
+  font-family: var(--heading-font-family);
+  font-size: 32px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.1;
   letter-spacing: -0.5px;
 }
 
 .paper-theme-copy span {
   margin-top: 5px;
   font-family: "Comic Neue", cursive;
-  font-size: 19px;
-  line-height: 1.05;
+  font-size: 32px;
+  line-height: 1.15;
   letter-spacing: 0;
 }
 
@@ -1379,20 +1408,22 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 
 .social-wiki-title {
   margin: 0.5em 0;
-  font-family: "Maven Pro", sans-serif;
-  font-size: 70px;
+  font-family: var(--heading-font-family);
+  font-size: 64px;
   font-weight: 400;
   text-align: center;
 }
 
 .social-wiki-definition {
   position: absolute;
-  top: 220px;
-  left: 10px;
-  width: 1000px;
+  top: 175px;
+  left: 40px;
+  right: 40px;
+  margin: 0;
   height: auto;
   font-family: "Comic Neue", cursive;
-  font-size: 30px;
+  font-size: 36px;
+  line-height: 1.2;
   text-align: left;
 }
 
@@ -1431,11 +1462,15 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   transform-origin: center;
 }
 
+.complex-system-slide .social-systems-title {
+  font-size: 64px;
+}
+
 .complex-ai-coping {
   position: absolute;
-  right: 60px;
+  right: 30px;
   bottom: 80px;
-  left: 60px;
+  left: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1456,10 +1491,11 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 .complex-ai-coping figcaption {
   margin: 0;
   font-family: "Comic Neue", cursive;
-  font-size: 32px;
+  font-size: 40px;
   line-height: 1.15;
   letter-spacing: 0;
   text-align: left;
+  text-wrap: wrap;
 }
 
 .social-system-network {
@@ -1542,7 +1578,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   right: 60px;
   left: 60px;
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
@@ -1602,7 +1638,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   right: 50px;
   left: 50px;
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 50px;
   font-weight: 400;
   line-height: 1;
@@ -1985,7 +2021,7 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
 img.boundary-detail-icon { height: auto; }
 #error-margin .error-margin-lemming { left: 65px; width: 60px; height: 60px; }
 .error-margin-lemming img { display: block; width: 100%; height: 100%; }
-.boundary-detail-title { margin: 0 0 0 130px; font-family: "Maven Pro", sans-serif; font-weight: 500; font-size: 46px; line-height: 1.08; letter-spacing: -1.5px; }
+.boundary-detail-title { margin: 0 0 0 130px; font-family: var(--heading-font-family); font-weight: 500; font-size: 46px; line-height: 1.08; letter-spacing: -1.5px; }
 .boundary-detail-lede { margin: 18px 0 0 130px; font-size: 26px; line-height: 1.22; text-align: left; letter-spacing: -0.6px; }
 .boundary-detail-no-icon .boundary-detail-title,
 .boundary-detail-no-icon .boundary-detail-lede { margin-left: 0; }
@@ -2028,7 +2064,7 @@ img.boundary-detail-icon { height: auto; }
 .workslop-chain h3 { margin: 0 0 12px; font-family: "Comic Neue", cursive; font-size: 31px; line-height: 1.1; }
 .workslop-chain p { margin: 0; font-size: 24px; line-height: 1.35; text-align: left; letter-spacing: -0.6px; }
 .expertise-erosion-slide { padding: 36px 46px; }
-.expertise-erosion-title { position: absolute; top: 20px; left: 46px; right: 46px; margin: 0; font-family: "Maven Pro", sans-serif; font-weight: 400; font-size: 64px; line-height: 1.05; letter-spacing: -2px; text-align: center; }
+.expertise-erosion-title { position: absolute; top: 20px; left: 46px; right: 46px; margin: 0; font-family: var(--heading-font-family); font-weight: 400; font-size: 64px; line-height: 1.05; letter-spacing: -2px; text-align: center; }
 .expertise-erosion-book { position: absolute; left: 90px; top: 135px; width: 230px; margin: 0; }
 .expertise-erosion-book img { display: block; width: 100%; height: auto; }
 .expertise-erosion-book figcaption { width: 500px; margin-top: 24px; font-size: 24px; line-height: 1.18; letter-spacing: -0.35px; text-align: left; }
@@ -2101,7 +2137,7 @@ img.boundary-detail-icon { height: auto; }
   .references-page::before {
     display: block;
     margin-bottom: 18px;
-    font-family: "Maven Pro", sans-serif;
+    font-family: var(--heading-font-family);
     font-size: 32px;
   }
 

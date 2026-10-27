@@ -2,6 +2,8 @@
 
 The numbered Markdown files in this directory mirror the rendered Impress deck in `src/index.html`. They preserve one-slide-per-file copy and speaker notes, but they are not an automatic rendering input.
 
+Slide titles, section headings and table column headings share the Archivo Black font used by WHOAMI, through the CSS `--heading-font-family` variable. Body copy and diagram labels retain their existing fonts.
+
 ## Current rendered flow
 
 1. [Title](01-title.md) — `#/title`

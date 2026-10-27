@@ -10,7 +10,7 @@ Placed immediately after `#/ai-workload-pressure`, to its right at `data-x="9850
 2. The cover of *Accelerated Expertise: Training for High Proficiency in a Complex World* on the left, with a short citation below it: “Hoffman et al. (2013). [Accelerated Expertise](https://www.goodreads.com/book/show/17399473-accelerated-expertise). Psychology Press.” The book title opens its Goodreads page in a new tab.
 3. The quotation below to the right of the book. It has no separate credit or vertical rule.
 
-Each item uses one presenter-controlled substep, for three substeps. The slide uses the deck's shared blue background and regular-weight, 64px Maven Pro title styling. The quote uses 32px text and the book citation uses 24px text. The complex-system diagram and shrugging emojis now belong to the following [Expertise erosion sequence](09j3-expertise-erosion-sequence.md).
+Each item uses one presenter-controlled substep, for three substeps. The slide uses the deck's shared blue background and regular-weight, 64px Archivo Black title styling. The quote uses 32px text and the book citation uses 24px text. The complex-system diagram and shrugging emojis now belong to the following [Expertise erosion sequence](09j3-expertise-erosion-sequence.md).
 
 ## Book citation
 

@@ -6,6 +6,10 @@
 
 The 31-page paper connects decades of studies across engineering and the human sciences.
 
+## Typography and layout
+
+The introduction, research headings and explanations use 32px text. Figure 8 is reduced from 330px to 240px wide, with a 24px caption below it, leaving a wider column for the five research themes. The heading uses the shared Archivo Black font.
+
 ## Reveal sequence
 
 Show the title, introduction and Figure 8 immediately. Once the slide settles, fade in the five research themes automatically from top to bottom without presenter clicks. Each fade takes 600ms, with 1.1 seconds between starts. Replay the sequence on each visit. Reduced-motion mode and print show all five immediately.

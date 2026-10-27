@@ -10,6 +10,8 @@ Rendered step: `#/social-and-systems-wiki`.
 
 ## Speaker notes
 
+The heading uses 64px Archivo Black to fit on one line. The definition uses 36px Comic Neue with 1.2 line spacing, positioned above the illustrations.
+
 Establish the working definition used in the 2024 talk: a socio-technical system cannot be understood by examining either people or technology in isolation.
 
 The visual contrasts studying people and technology separately with seeing people on the system's nodes.

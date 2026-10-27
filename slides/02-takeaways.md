@@ -6,7 +6,7 @@ Takeaways
 
 Models: not always accurate, but they are useful....
 
-Fundamentally, this model is a system-wide lens focused on risk, built from localized analysis, actions, and perspectives.
+This model is a system-wide lens focused on risk, built from localized analysis, actions, and perspectives.
 
 It helps to understand conditions that lead to adversity and how you stay resilient and adaptive to change.
 

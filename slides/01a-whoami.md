@@ -15,9 +15,9 @@ SWE/SRE Engineering Manager 15 years.
 3. Cisco ThousandEyes logo.
 4. SWE/SRE Engineering Manager 15 years.
 5. AWS logo.
-6. Data centre illustration.
-7. LinkedIn logo.
-8. Medium and Bluesky icons with @hatchman76.
+6. Data centre illustration with a solid white building interior and a transparent exterior.
+7. LinkedIn logo with solid white lettering.
+8. Medium and Bluesky icons with @hatchman76, with a solid white Bluesky butterfly.
 
 ## Speaker notes
 

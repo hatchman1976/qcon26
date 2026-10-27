@@ -27,6 +27,10 @@ Reveal 4:
 
 **Systems Thinking**
 
+## Typography
+
+Editable text uses 32px type, increased from 25px. Socio-Technical Systems and Systems Thinking use the shared Archivo Black heading font. The right-hand labels have wider text areas and more vertical room; the source diagram and four reveals remain unchanged.
+
 ## Speaker notes
 
 Introduce Jens Rasmussen and the 1997 model. The next slide maps the wider research landscape around Figure 3; the slide after that locates people and technology within Rasmussen's social control hierarchy before the boundary model is translated into one operating state, three constraints, competing pressures, and an uncertain margin.

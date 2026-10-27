@@ -46,7 +46,7 @@ const requiredMarkers = [
   "Andrew Hatch",
   "Takeaways",
   "It helps to understand conditions that lead to adversity and how you stay resilient and adaptive to change.",
-  "Fundamentally, this model is a system-wide lens focused on risk, built from localized analysis, actions, and perspectives.",
+  "This model is a system-wide lens focused on risk, built from localized analysis, actions, and perspectives.",
   "We all are part of, and work/live within complex socio-technical systems",
   "Attempts to change a complex system in whole, or in part, will yield unintended consequences",
   "Diagram Legend",
