@@ -16,7 +16,7 @@ Crossing the functional limit means unacceptable outcomes.
 
 **Harm beyond the service**
 
-- 🚧 Customer operations disrupted; safety put at risk
+- 🚧 Customer operations disrupted, safety put at risk
 - 💔 Trust and reputation damaged
 - ⚖️ Contractual losses or regulatory consequences
 

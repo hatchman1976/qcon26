@@ -2,7 +2,7 @@
 
 Rendered step: `#/erosion-of-expertise`.
 
-Placed immediately after `#/ai-workload-pressure`, to its right at `data-x="9850"`, `data-y="284150"`, `data-scale="3.037465"`. This slide and the following expertise sequence have both moved 3,000 canvas units to the right, preserving their 3,250-unit horizontal spacing. The AI fish diagram remains visible behind both slides, whose active screen backgrounds are transparent.
+Placed immediately after `#/ai-workload-pressure`, to its right at `data-x="9850"`, `data-y="311150"`, `data-scale="3.037465"`. The book slide is 2,000 canvas units lower than the workload slide and the following expertise sequence. The following sequence remains at `data-x="13100"`, `data-y="309150"`. The AI fish diagram remains visible behind both slides, whose active screen backgrounds are transparent.
 
 ## Slide content and reveal sequence
 
@@ -11,6 +11,8 @@ Placed immediately after `#/ai-workload-pressure`, to its right at `data-x="9850
 3. The quotation below to the right of the book. It has no separate credit or vertical rule.
 
 Each item uses one presenter-controlled substep, for three substeps. The slide uses the deck's shared blue background and regular-weight, 64px Archivo Black title styling. The quote uses 32px text and the book citation uses 24px text. The complex-system diagram and shrugging emojis now belong to the following [Expertise erosion sequence](09j3-expertise-erosion-sequence.md).
+
+Revealed content stays visible when the camera leaves this step. Its inactive background is transparent, preserving the diagram behind the slide.
 
 ## Book citation
 
@@ -24,11 +26,13 @@ The year and publisher follow the publisher's DOI metadata, dated August 15, 201
 
 *Accelerated Expertise*, Robert R. Hoffman et al. Transcribed from the image supplied by Andrew.
 
-## Speaker notes and sources
+## Speaker notes
 
 The book is by Robert R. Hoffman, Paul Ward, Paul J. Feltovich, Lia DiBello, Stephen M. Fiore and Dee H. Andrews. Its reference is already included in the SREcon26 sources on the final [References slide](14-references.md).
 
 The book and quotation introduce the demands of understanding a complex system. This is a discussion of the risk to expertise, not a measured claim that all AI use erodes it.
+
+## Sources
 
 - [Source slide in Andrew's SREcon26 presentation](https://srecon26.hatchman76.com/#/generative-AI-student-learning)
 - [Original book-cover image](https://srecon26.hatchman76.com/images/book-accelerated-expertise.png), saved as `src/images/srecon26/book-accelerated-expertise.png`.

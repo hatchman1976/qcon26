@@ -1,39 +1,30 @@
-# Work the team can verify
+# Tool vs Operator
 
 Rendered step: `#/verification-capacity`.
 
-## Slide copy and sequence
+## Slide copy
 
-**Work the team can verify**
+**Tool vs Operator**
 
-A growing review queue is a decision point.
+| | Role | Meaning |
+| --- | --- | --- |
+| 🧰 | AI assists the operator | Explore, diagnose and test, with people checking the result. |
+| 🎛️ | AI acts in the system | Bound its permissions and pace, retain authority to stop and recover. |
 
-| Practice | Detail |
-| --- | --- |
-| Watch | Review age and work in progress |
-| Limit | Parallel agents and incoming changes |
-| Protect | Focused review and learning time |
+**Test people, tools and workflow together.**
 
-An owner with time and authority to pause intake
+## Preparation and reveals
 
-When checking falls behind, change scope or timing.
+Keep the existing step ID, order and camera: `data-x="0"`, `data-y="358000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Open Sans body text. Two native substeps introduce the role rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
 
-The final takeaway is a presenter reveal.
+Presentation source: [SREcon26 — Tool vs Operator](https://srecon26.hatchman76.com/#/tool-vs-operator). The QCon version uses a conditional control question, rather than treating either role as a guarantee of safety or degradation.
 
 ## Speaker notes
 
-### Admission creates a commitment
+AI can assist diagnosis, testing and explanation, and can also be authorised to act. It can change existing feedback and action channels. The distinction changes what must be bounded and observed. People need useful evidence, practical understanding and enforceable authority to interrupt or recover. Evaluate the joint workflow with relevant baselines and both helpful and misleading outputs. The clinical joint-performance research motivates this question but does not estimate software or LLM risk. Whether an application helps depends on its use and evaluation, not the label “tool” or “operator”.
 
-In the retry example, many agents can propose changes across many services. The useful question is how much work we choose to admit to the team's verification queue. Count work in progress and the age of outstanding reviews alongside complexity, checking effort and effective expert capacity. Headcount or raw change count alone misses differences in context and risk.
+## Sources
 
-Agree a local admission limit and review-age trigger before increasing parallel work. Use the team's baseline and the consequences of delay to choose them, then revise them with experience. There is no universally correct ratio or ticket limit. Keep room for interrupts and variable work rather than planning every reviewer's attention to full utilization.
-
-When the trigger fires, the named lead can pause new agent submissions, defer low-value changes or reduce scope. Management must accept the changed delivery expectation and protect time for reviewers. Keep urgent reliability or security work on a deliberate triage path. Pausing new work does not abandon work already owed.
-
-### Understanding is part of capacity
-
-Give engineers time to explain the retry policy, inspect the dependency and practise diagnosis. AI can help comprehension and test discovery, provided someone checks that the evidence is useful. Validate any claimed reduction in review effort. Do not treat reviewer availability after hours as sustainable capacity.
-
-Queue growth shows delay and capacity pressure. It does not by itself establish a defect increase. Performance risk additionally depends on adaptations such as bypassed checks or reduced testing. This admission practice is the talk's application of the earlier workload argument. Google's overload chapter supports quantifying and reprioritizing work, with thresholds specific to each team.
-
-- [Google SRE Workbook, Identifying and Recovering from Overload](https://sre.google/workbook/overload/)
+- [Rasmussen (1997), objectives, feedback and distributed control](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
+- [Morey, Rayo and Woods (2025), clinical AI and joint performance](https://www.nature.com/articles/s41746-025-01784-y)
+- [Rayo, Morey, Grøtan and Woods (2026), Chapter 5, situated joint evaluation](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5)

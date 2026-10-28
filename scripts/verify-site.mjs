@@ -28,6 +28,8 @@ const requiredMarkers = [
   'id="ai-fish-diagram"',
   'id="ai-fish-diagram-overview"',
   'id="ai-economic-pressure"',
+  'id="token-economy"',
+  'id="model-enshittification"',
   'id="ai-workload-pressure"',
   'id="erosion-of-expertise"',
   'id="expertise-erosion-sequence"',
@@ -38,6 +40,7 @@ const requiredMarkers = [
   'id="rehearsed-recovery"',
   'id="references"',
   'id="social-and-systems-wiki"',
+  'id="resilience-engineering"',
   'id="before-we-continue"',
   'id="social-and-systems"',
   'id="complex-system-and-boundaries"',
@@ -84,7 +87,7 @@ if (missing.length > 0) {
 
 function stepCoordinate(id, axis) {
   const tag = html.match(new RegExp(`<section\\b[^>]*\\bid="${id}"[^>]*>`))?.[0];
-  const value = tag?.match(new RegExp(`\\bdata-${axis}="(-?\\d+)"`))?.[1];
+  const value = tag?.match(new RegExp(`\\bdata-${axis}="(-?\\d+(?:\\.\\d+)?)"`))?.[1];
   if (value === undefined) throw new Error(`${id} needs an explicit data-${axis} coordinate`);
   return Number(value);
 }
@@ -105,23 +108,45 @@ if (stepCoordinate("fish-diagram-overlay", "x") !== fishX) {
 }
 
 const sectionTags = [...html.matchAll(/<section\b[^>]*>/g)].map(([tag]) => tag);
+const systemsDefinitionIndex = sectionTags.findIndex((tag) => /\bid="social-and-systems-wiki"/.test(tag));
+if (!/\bid="resilience-engineering"/.test(sectionTags[systemsDefinitionIndex + 1] ?? "") ||
+    !/\bid="the-model"/.test(sectionTags[systemsDefinitionIndex + 2] ?? "")) {
+  throw new Error("Resilience Engineering must follow the socio-technical definition and precede the model");
+}
+if (stepCoordinate("resilience-engineering", "x") !== 0 ||
+    stepCoordinate("resilience-engineering", "y") !== stepCoordinate("social-and-systems-wiki", "y") + 25000 ||
+    stepCoordinate("the-model", "y") !== stepCoordinate("resilience-engineering", "y") + 25000) {
+  throw new Error("Resilience Engineering must sit below the systems definition with one row of spacing before the model");
+}
+const economicIndex = sectionTags.findIndex((tag) => /\bid="ai-economic-pressure"/.test(tag));
+if (!/\bid="token-economy"/.test(sectionTags[economicIndex + 1] ?? "") ||
+    !/\bid="model-enshittification"/.test(sectionTags[economicIndex + 2] ?? "") ||
+    !/\bid="ai-workload-pressure"/.test(sectionTags[economicIndex + 3] ?? "")) {
+  throw new Error("Token progression and model enshittification must follow AI economics and precede AI workload");
+}
+if (stepCoordinate("model-enshittification", "x") !== stepCoordinate("token-economy", "x") ||
+    stepCoordinate("model-enshittification", "scale") !== stepCoordinate("token-economy", "scale") ||
+    Math.abs(stepCoordinate("model-enshittification", "y") - stepCoordinate("token-economy", "y") -
+      520 * stepCoordinate("token-economy", "scale")) > 0.001) {
+  throw new Error("Model enshittification must be the same size and two-thirds of a slide below token progression");
+}
 const workflowIndex = sectionTags.findIndex((tag) => /\bid="workflow-cost"/.test(tag));
 if (!/\bid="ai-fish-diagram-overview"/.test(sectionTags[workflowIndex - 1] ?? "") ||
-    !/<section\b[^>]*\bid="ai-fish-diagram-overview"[^>]*>\s*<\/section>/.test(html)) {
-  throw new Error("The empty AI fish diagram overview must immediately precede workflow cost");
+    !/\bid="ai-margin-pressure"/.test(sectionTags[workflowIndex - 2] ?? "")) {
+  throw new Error("The pressure summary must follow the margin scene and immediately precede workflow cost");
 }
-for (const axis of ["x", "y", "scale"]) {
-  if (stepCoordinate("ai-fish-diagram-overview", axis) !== stepCoordinate("ai-fish-diagram", axis)) {
-    throw new Error(`AI fish diagram overview must match the original diagram's ${axis}`);
-  }
+if (stepCoordinate("ai-fish-diagram-overview", "x") >= stepCoordinate("ai-margin-pressure", "x") ||
+    stepCoordinate("ai-fish-diagram-overview", "scale") <= stepCoordinate("ai-fish-diagram", "scale") ||
+    !html.includes('class="step ai-margin-summary"')) {
+  throw new Error("The pressure summary must zoom out and left while retaining the full fish model");
 }
 
 const lastSection = sectionTags.at(-1);
 if (!/\bid="references"/.test(lastSection ?? "") ||
     stepCoordinate("references", "x") !== 0 ||
-    stepCoordinate("references", "y") !== 408000 ||
+    stepCoordinate("references", "y") !== 433000 ||
     stepCoordinate("references", "scale") !== 25) {
-  throw new Error("References must be the final section at data-x=0, data-y=408000 and data-scale=25");
+  throw new Error("References must be the final section at data-x=0, data-y=433000 and data-scale=25");
 }
 
 const requiredFiles = [
@@ -176,8 +201,8 @@ await Promise.all(requiredFiles.map((file) => access(resolve(siteRoot, file))));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount !== 33) {
-  throw new Error(`Expected exactly thirty-three impress.js steps, found ${stepCount}`);
+if (stepCount !== 36) {
+  throw new Error(`Expected exactly thirty-six impress.js steps, found ${stepCount}`);
 }
 
 console.log(`Verified src/index.html with ${stepCount} presentation steps.`);

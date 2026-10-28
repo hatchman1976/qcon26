@@ -33,11 +33,13 @@ Editable text uses 32px type, increased from 25px. Socio-Technical Systems and S
 
 ## Speaker notes
 
-Introduce Jens Rasmussen and the 1997 model. The next slide maps the wider research landscape around Figure 3; the slide after that locates people and technology within Rasmussen's social control hierarchy before the boundary model is translated into one operating state, three constraints, competing pressures, and an uncertain margin.
 
-The staged reveals follow the 2024 presentation: first the original model and paper, then examples of safety-critical domains, then the properties of socio-technical systems, and finally the systems-thinking lens.
+Jens Rasmussen's 1997 model brings human factors and safety science into a systems view of risk. The boundary model connects one operating state, three constraints, competing pressures and an uncertain margin.
 
-The paper name appears as plain text on this slide. Its link is collected on the final [References slide](14-references.md).
+- The original model comes from Risk Management in a Dynamic Society (1997).
+- Examples of safety-critical domains include radiological safety, maritime safety and healthcare.
+- Socio-technical systems are hierarchical and multidisciplinary.
+- Systems thinking connects these levels and disciplines.
 
 ## Sources
 

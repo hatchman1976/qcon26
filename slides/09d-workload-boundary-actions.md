@@ -10,9 +10,9 @@ People adapt toward least effort when demand strains capacity.
 
 | Early signal / metric | Possible adaptation |
 | --- | --- |
-| ⏳ Queue age and work in progress ↑ | 🛠️ Automate repeatable toil; improve tooling;<br />limit incoming work |
-| 🔀 Interruptions and handoffs ↑<br />Focus time ↓ | 🗂️ Batch tasks; standardize paths;<br />simplify tools and coordination |
-| 🥵 Overtime and fatigue ↑<br />Recovery time ↓ | 🛌 Reduce scope; protect rest; share on-call load<br />or rush and bypass checks |
+| ⏳ Queue age and work in progress ↑ | 🛠️ Automate repeatable toil, improve tooling,<br />limit incoming work |
+| 🤝 Interruptions and handoffs ↑<br />Focus time ↓ | 🗂️ Batch tasks, standardize paths,<br />simplify tools and coordination |
+| 🥵 Overtime and fatigue ↑<br />Recovery time ↓ | 🛌 Reduce scope, protect rest, share on-call load<br />or rush and bypass checks |
 | 🔁 Review findings and rework ↑ | 🧪 Improve tests and shared understanding<br />or accept output without examining it |
 
 Reducing toil can preserve control, but skipping checks saves effort now and creates work later.
@@ -21,7 +21,7 @@ Reducing toil can preserve control, but skipping checks saves effort now and cre
 
 ## Reveal sequence
 
-All visible content uses thirteen presenter-controlled substeps: title and icon together; introductory sentence; the “Early signal / metric” heading; each of the four left-column signal cells from top to bottom; the “Possible adaptation” heading; each of the four right-column action cells from top to bottom; then the closing statement. Reveal one group per advance and preserve the table layout while cells are hidden.
+All visible content uses eight presenter-controlled substeps: title and icon together; introductory sentence; both column headings together as one header row; each of the four complete body rows from top to bottom; then the closing statement. Each row reveals its signal, adaptation, and emojis together on one advance. Preserve the table layout while rows are hidden.
 
 ## Speaker notes
 

@@ -2,13 +2,13 @@
 
 Rendered step: `#/expertise-erosion-sequence`.
 
-Placed immediately after `#/erosion-of-expertise` and before `#/ai-margin-pressure`, at `data-x="13100"`, `data-y="284150"`, `data-scale="3.037465"`. It has moved 3,000 canvas units to the right with the book slide, retaining their 3,250-unit horizontal spacing. The AI fish diagram remains visible behind both slides, although the sequence's camera position is beyond the fish outline.
+Placed immediately after `#/erosion-of-expertise` and before `#/ai-margin-pressure`, at `data-x="13100"`, `data-y="309150"`, `data-scale="3.037465"`. It has moved 3,000 canvas units to the right with the book slide, retaining their 3,250-unit horizontal spacing. The AI fish diagram remains visible behind both slides, although the sequence's camera position is beyond the fish outline.
 
 ## Slide content and reveal sequence
 
 This slide contains images only, with no visible heading. Its transparent background shows the deck's shared blue canvas and retains the fish-diagram lines as the camera moves right.
 
-On slide entry, show the complex-system diagram with four people and flashing coloured balls.
+On slide entry, show the complex-system diagram with four people and flashing coloured balls. The diagram remains 495px wide and centred at the same position when the shrugging people replace them.
 
 Use three presenter-controlled substeps:
 
@@ -20,7 +20,9 @@ Each transition preserves the slide's layout. Once the final GIF is revealed, it
 
 ## Speaker notes
 
-The sequence carries the expertise discussion from the preceding book quotation into a visual metaphor: the complex system remains while the ability to explain and manage it is uncertain. The flame and “This is Fine” scene illustrate unaddressed trouble. They are not measured effects, a literal failure model or evidence that every use of AI erodes expertise.
+The people, shrugging, flame and “This is Fine” are a metaphor for uncertain understanding and unaddressed trouble in a complex system. The system remains complex even when the people responsible for it can no longer explain what is happening or how to intervene.
+
+This is an illustration of a risk to expertise and control, not evidence that every use of AI causes expertise loss or failure.
 
 ## Sources and assets
 

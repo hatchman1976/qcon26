@@ -18,13 +18,12 @@ Once the slide settles, fade in the statements automatically from top to bottom.
 
 ## Speaker notes
 
-Pause and let the statement land before explaining it.
 
-Spoken bridge: “AI is changing what we can do and how fast we can do it. Rasmussen’s model still helps us understand the pressures. The question is whether our ability to notice, understand and correct can keep pace.”
+AI is changing what we can do and how fast we can do it. Rasmussen’s model still helps us understand the pressures. The question is whether our ability to notice, understand and correct can keep pace.
 
 AI can radically change how work gets done while still fitting familiar patterns of adaptation under pressure. But it can also influence what people accept as evidence and how intent becomes action. That changes the mechanisms we use to understand and control the system.
 
-**The framework can remain useful while our assumptions need rechecking.** Decades of research give us a lens; they don’t guarantee that familiar review processes or feedback loops will remain adequate.
+**The framework can remain useful while our assumptions need rechecking.** Decades of research give us a lens. They don’t guarantee that familiar review processes or feedback loops will remain adequate.
 
 Rasmussen supplies the boundary and control framework. Applying it to AI’s tempo, verification demand and feedback delay is this talk’s synthesis. Evaluate whether people, tools and workflow retain the capacity to intervene and recover. AI can also improve assurance.
 

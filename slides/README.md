@@ -10,36 +10,40 @@ Slide titles, section headings and table column headings share the Archivo Black
 2. [Opening hook: capability and control](01b-opening-hook.md) — `#/opening-hook`
 3. [WHOAMI](01a-whoami.md) — `#/whoami`
 4. [Takeaways](02-takeaways.md) — `#/takeaways`
-5. [One more thing](03-before-we-continue.md) — `#/before-we-continue`
+5. [Some recurring characters](03-before-we-continue.md) — `#/before-we-continue`
 6. [Socio-technical systems definition](04-social-and-systems-wiki.md) — `#/social-and-systems-wiki`
-7. [Rasmussen source slide](05-model.md) — `#/the-model`
-8. [The research behind the model](06-paper-themes.md) — `#/paper-themes`
-9. [Social control is multi-layered](07-social-and-systems.md) — `#/social-and-systems`
-10. [Putting it together](07a-complex-system-and-boundaries.md) — `#/complex-system-and-boundaries`
-11. [The Fish Diagram](08-fish-diagram.md) — `#/the-fish-diagram`
-12. [Diagram Legend](09-diagram-legend.md) — `#/diagram-legend`
-13. [Economic Boundary](09a-economic-boundary.md) — `#/economic-boundary`
-14. [Economic Boundary Actions](09b-economic-boundary-actions.md) — `#/economic-boundary-actions`
-15. [Workload Boundary](09c-workload-boundary.md) — `#/workload-boundary`
-16. [Workload Boundary Actions](09d-workload-boundary-actions.md) — `#/workload-boundary-actions`
-17. [Boundary of Acceptable Performance](09e-performance-boundary.md) — `#/performance-boundary`
-18. [Protect the Error Margin](09f-error-margin.md) — `#/error-margin`
-19. [AI enters the operating point](09g-ai-operating-point.md) — `#/ai-operating-point`
-20. [AI in the Fish Diagram](09h-ai-fish-diagram.md) — `#/ai-fish-diagram`
-21. [AI has to be paid for](09i-ai-economic-pressure.md) — `#/ai-economic-pressure`
-22. [AI and least effort](09j-ai-workload-pressure.md) — `#/ai-workload-pressure`
-23. [The erosion of expertise](09j2-erosion-of-expertise.md) — `#/erosion-of-expertise`
-24. [Expertise erosion sequence](09j3-expertise-erosion-sequence.md) — `#/expertise-erosion-sequence`
-25. [AI margin — empty placeholder](09k-ai-margin-pressure.md) — `#/ai-margin-pressure`
-26. [The cost of a verified outcome](10-workflow-cost.md) — `#/workflow-cost`
-27. [Work the team can verify](11-verification-capacity.md) — `#/verification-capacity`
-28. [A handoff with evidence](12-evidence-handoff.md) — `#/evidence-handoff`
-29. [Intervention and recovery](13-rehearsed-recovery.md) — `#/rehearsed-recovery`
-30. [References](14-references.md) — `#/references`
+7. [Resilience Engineering](04a-resilience-engineering.md) — `#/resilience-engineering`
+8. [Rasmussen source slide](05-model.md) — `#/the-model`
+9. [The research behind the model](06-paper-themes.md) — `#/paper-themes`
+10. [Social control is multi-layered](07-social-and-systems.md) — `#/social-and-systems`
+11. [Putting it together](07a-complex-system-and-boundaries.md) — `#/complex-system-and-boundaries`
+12. [The Fish Diagram](08-fish-diagram.md) — `#/the-fish-diagram`
+13. [Diagram Legend](09-diagram-legend.md) — `#/diagram-legend`
+14. [Economic Boundary](09a-economic-boundary.md) — `#/economic-boundary`
+15. [Economic Boundary Actions](09b-economic-boundary-actions.md) — `#/economic-boundary-actions`
+16. [Workload Boundary](09c-workload-boundary.md) — `#/workload-boundary`
+17. [Workload Boundary Actions](09d-workload-boundary-actions.md) — `#/workload-boundary-actions`
+18. [Boundary of Acceptable Performance](09e-performance-boundary.md) — `#/performance-boundary`
+19. [Protect the Error Margin](09f-error-margin.md) — `#/error-margin`
+20. [AI enters the operating point](09g-ai-operating-point.md) — `#/ai-operating-point`
+21. [AI in the Fish Diagram](09h-ai-fish-diagram.md) — `#/ai-fish-diagram`
+22. [AI has to be paid for](09i-ai-economic-pressure.md) — `#/ai-economic-pressure`
+23. [Tokenomic Progression](09i2-token-economy.md) — `#/token-economy`
+24. [Model Enshittification](09i3-model-enshittification.md) — `#/model-enshittification`
+25. [AI and least effort](09j-ai-workload-pressure.md) — `#/ai-workload-pressure`
+26. [The erosion of expertise](09j2-erosion-of-expertise.md) — `#/erosion-of-expertise`
+27. [Expertise erosion sequence](09j3-expertise-erosion-sequence.md) — `#/expertise-erosion-sequence`
+28. [AI margin pressure](09k-ai-margin-pressure.md) — `#/ai-margin-pressure`
+29. [Pressure and control: AI Fish Diagram summary](09l-ai-fish-diagram-overview.md) — `#/ai-fish-diagram-overview`
+30. [Skills that protect margin](10-workflow-cost.md) — `#/workflow-cost`
+31. [Tool vs Operator](11-verification-capacity.md) — `#/verification-capacity`
+32. [We have to adapt](12-evidence-handoff.md) — `#/evidence-handoff`
+33. [Humans are adaptable](13-rehearsed-recovery.md) — `#/rehearsed-recovery`
+34. [References](14-references.md) — `#/references`
 
-The deck contains 29 content steps, three overview/overlay camera steps and one empty placeholder, for 33 Impress steps. Six boundary close-ups explain capacity changes, signals, actions, failure consequences and protection. The AI camera journey follows the fish overview. Below the workload close-up, an expertise book and quotation lead into a separate complex-system sequence: people and flashing coloured balls; shrugging people; a glowing flame; then “This is Fine”. The AI margin step is an empty placeholder retaining its ID and camera position. The following [AI Fish Diagram overview](09l-ai-fish-diagram-overview.md) returns to the model before the four practical closing slides, ending with **Intervention and recovery**. A final **References** slide follows. Content is plain and unframed; coordinates and detailed positioning remain for a later pass.
+The deck contains 34 content steps and two overview/overlay camera steps, for 36 Impress steps. The Resilience Engineering definition follows the socio-technical systems introduction and precedes Rasmussen's model. Six boundary close-ups explain capacity changes, signals, actions, failure consequences and protection. The AI camera journey follows the fish overview. After AI economics, **Tokenomic Progression** distinguishes maxxing, metering and optimization in a two-column table. Its large footer becomes the shared heading of the following **Model Enshittification** step, which presents Doctorow's three-stage platform pattern as a conditional risk analogy. Below the workload close-up, an expertise book and quotation lead into a separate complex-system sequence: people and flashing coloured balls; shrugging people; a glowing flame; then “This is Fine”. **AI margin pressure** waits for two manual stages: buckets accumulate over the protective Lemming while a separate local ball approaches the dotted margin, then crosses the buffer to the actual performance boundary as a warning flashes. The global operating point keeps roaming through the scene, the following [Pressure and control summary](09l-ai-fish-diagram-overview.md) and four closing slides, ending with **Humans are adaptable**. The summary connects accumulated verification work with pressure on protective capacity and the ability to act on warnings. Revealed local phases persist without replay. A final **References** slide follows. Preparation sections in the slide files record the detailed camera and animation sequence; speaker notes carry the argument and evidence limits.
 
-The practical section follows one illustrative AI-assisted change to a service's retry behaviour through whole-workflow cost, verification capacity, an inspectable handoff and a rehearsed intervention. The close asks whether people, tools and workflow can detect a convincing mistake, stop further action and restore service. These are proposed engineering practices rather than intervention-study findings. Local thresholds, useful baselines and controlled exercises keep the application specific to the team's work.
+The four-slide closing arc returns to skills, control, boundary takeaways and adaptive capacity, adapting Andrew’s SREcon26 closing structure to this talk. **Skills that protect margin** connects systems understanding, critical judgment and adaptation. **Tool vs Operator** asks how AI is used and controlled, with people, tools and workflow tested together. **We have to adapt** brings back economic, workload and performance pressures and the protected error margin. **Humans are adaptable** closes on expertise, time and authority, and using AI to strengthen our capacity to understand, act and recover. These are the talk’s proposed applications, not guarantees of useful output or immunity from disruption. References follows the close.
 
 The former seven-slide sequence from Human behaviour through Keeping the model in view has been integrated into earlier steps and removed. Behaviour and control evidence now lives in the hierarchy, arrival and workload notes. Whole-workflow economics lives in the economic close-ups; joint evaluation lives in acceptable performance; recovery and the conventional-automation AWS example live in the error-margin notes. See the [integration map](../research/2026-10-13-slide-consolidation.md).
 

@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#b3d9ff" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=186" />
+    <link rel="stylesheet" href="/styles.css?v=213" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
@@ -45,12 +45,8 @@
         <p class="title-speaker">Andrew Hatch</p>
 
         <div class="notes">
-          Official QCon session title, speaker role, and schedule.
-
-          Source: https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point
-          Visual treatment adapted from Andrew Hatch's SREcon24 presentation.
-          The Blocker Lemming continuously looks left and right. Its arms-out pose represents deliberate
-          safety intervention: pause or redirect work to preserve margin. Reduced-motion mode uses a still pose.
+          <p>The Blocker Lemming represents deliberate safety intervention: pause or redirect work to preserve margin.</p>
+          <p>Session: <a href="https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point">Adapt or Drift: Resilience Engineering When AI Moves the Operating Point</a>.</p>
         </div>
       </section>
 
@@ -74,35 +70,15 @@
         </p>
 
         <div class="notes">
-          The four statements fade in automatically from top to bottom once the slide settles, with
-          1.1 seconds between starts. The sequence replays on each visit; reduced-motion mode shows all
-          four immediately.
-
-          Pause and let the statement land before explaining it.
-
-          Spoken bridge: AI is changing what we can do and how fast we can do it. Rasmussen’s model still
-          helps us understand the pressures. The question is whether our ability to notice, understand and
-          correct can keep pace.
-
-          <p>
-            AI can radically change how work gets done while still fitting familiar patterns of adaptation
-            under pressure. But it can also influence what people accept as evidence and how intent becomes
-            action. That changes the mechanisms we use to understand and control the system.
-          </p>
-
-          <p>
-            <strong>The framework can remain useful while our assumptions need rechecking.</strong>
-            Decades of research give us a lens; they don’t guarantee that familiar review processes or
-            feedback loops will remain adequate.
-          </p>
-
-          Rasmussen supplies the boundary and control framework. Applying it to AI’s tempo, verification
-          demand and feedback delay is this talk’s synthesis. Evaluate whether people, tools and workflow
-          retain the capacity to intervene and recover. AI can also improve assurance.
-
-          Sources:
-          https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point
-          https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+          <p>AI is changing what we can do and how fast we can do it. Rasmussen’s model still helps us understand the pressures. The question is whether our ability to notice, understand and correct can keep pace.</p>
+          <p>AI can radically change how work gets done while still fitting familiar patterns of adaptation under pressure. But it can also influence what people accept as evidence and how intent becomes action. That changes the mechanisms we use to understand and control the system.</p>
+          <p><strong>The framework can remain useful while our assumptions need rechecking.</strong> Decades of research give us a lens. They don’t guarantee that familiar review processes or feedback loops will remain adequate.</p>
+          <p>Rasmussen supplies the boundary and control framework. Applying it to AI’s tempo, verification demand and feedback delay is this talk’s synthesis. Evaluate whether people, tools and workflow retain the capacity to intervene and recover. AI can also improve assurance.</p>
+          <p>Sources:</p>
+          <ul>
+            <li><a href="https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point">QCon session description</a></li>
+            <li><a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen, Risk Management in a Dynamic Society (1997)</a></li>
+          </ul>
         </div>
       </section>
 
@@ -150,11 +126,14 @@
         </div>
 
         <div class="notes">
-          Introduce yourself using the same eight reveals as the SREcon26 WHOAMI slide:
-          Australia, United States, Cisco ThousandEyes, the engineering manager bio, AWS, data centre,
-          LinkedIn, then the Medium and Bluesky handle.
-
-          Source slide, artwork and fonts: https://srecon26.hatchman76.com/#/whoami
+          <p>Introduce your background:</p>
+          <ul>
+            <li>Australia and the United States.</li>
+            <li>Cisco ThousandEyes. SWE/SRE Engineering Manager, 15 years.</li>
+            <li>AWS and data centres.</li>
+            <li>LinkedIn.</li>
+            <li>Medium and Bluesky: @hatchman76.</li>
+          </ul>
         </div>
       </section>
 
@@ -203,7 +182,7 @@
         data-y="108000"
         data-scale="25"
       >
-        <h1 class="before-continue-title">One more thing...</h1>
+        <h1 class="before-continue-title">Some recurring characters</h1>
 
         <div class="before-continue-row substep">
           <img
@@ -226,13 +205,7 @@
         </div>
 
         <div class="notes">
-          Set the terminology for this talk: when discussing AI, include LLMs and agents; treat them as part of a
-          complex distributed software system.
-
-          Reveal 1: Anything AI includes LLMs, agents, and related tools.
-          Reveal 2: Those tools are part of a complex distributed software system.
-
-          Source slide and artwork: https://srecon26.hatchman76.com/#/before-we-continue
+          <p>Introduce the recurring images as visual shorthand the audience will see throughout the talk and should keep in mind. The AI image includes LLMs, agents and related tools. The complex-system image represents a complex distributed software system, of which those tools are a part.</p>
         </div>
       </section>
 
@@ -279,30 +252,31 @@
         </div>
 
         <div class="notes">
-          Establish the working definition used in the 2024 talk: a socio-technical system cannot be understood by
-          examining either people or technology in isolation.
-
-          The visual contrasts studying people and technology separately with seeing people on the system's nodes.
-
-          Reveal 1: show the people and complex system separately.
-          Reveal 2: frame both with magnifying glasses to emphasize separate inspection.
-          Reveal 3: show people distributed across the complex system.
-          Reveal 4: keep bright orange points with yellow highlights and a bold rim pulsing at random arrow locations to draw attention to interactions between nodes.
-
-          This names the system the talk will examine and prepares Rasmussen's control hierarchy later in the
-          sequence.
-
-          Source slide: https://srecon24.hatchman76.com/#/social-and-systems-wiki
+          <p>A socio-technical system cannot be understood by examining either people or technology in isolation.</p>
+          <p>The visual contrasts studying people and technology separately with seeing people as part of the system. Its connections emphasise the interactions between them.</p>
+          <p>This names the system the talk will examine and prepares Rasmussen’s control hierarchy.</p>
           <h3>People are part of control</h3>
           <p>People and organisations are adaptive components and controllers within the socio-technical system, not an external human input. Locally sensible adaptations can preserve control, or interact to create conditions for failure. Rasmussen connects effective control with usable objectives, feedback, competence, coordination and commitment.</p>
-          <ul>
-            <li>Rasmussen (1997), Figures 1 and 3; control, adaptation and information</li>
-          </ul>
-
+          <p>Source: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figures 1 and 3, control, adaptation and information</a>.</p>
         </div>
       </section>
 
-      <section id="the-model" class="step model-slide" data-y="158000" data-scale="25">
+      <section id="resilience-engineering" class="step resilience-definition-slide"
+        data-x="0" data-y="158000" data-scale="25">
+        <h2 class="resilience-definition-title">Resilience Engineering</h2>
+        <p class="resilience-definition-copy substep">Build and sustain <strong>adaptive capacity</strong> in socio-technical systems to ensure they absorb and recover safely from incidents, anomalies and changing pressures.</p>
+        <div class="notes">
+          <h3>Build the ability to adapt before it is needed</h3>
+          <p>The opening definition is this talk’s synthesis, not a quotation. Resilience Engineering is the study and deliberate support of the capacities that help socio-technical systems continue to perform as conditions change. Sustaining that ability means maintaining expertise, coordination, time, resources and authority to act, and renewing them as the system evolves. Adaptive capacity is not simply spare infrastructure capacity.</p>
+          <p>Incidents and anomalies make adaptation visible, but it also occurs in everyday work. Keeping functioning can involve changing plans, priorities or ways of working. This does not promise immunity from disruption or unlimited capacity to absorb any event. Prepare for situations that exceed what was anticipated, and learn how people already prevent difficulties from becoming worse.</p>
+          <p>John Allspaw’s March 6, 2019 presentation abstract also places investment in adaptive capacity at the centre of the field. It remains a background source for the definition: <a href="https://speakerdeck.com/jallspaw/amplifying-sources-of-resilience">Amplifying Sources of Resilience</a>.</p>
+          <h3>Surprise and human adaptation</h3>
+          <p>David D. Woods: “Resilience concerns the capabilities a system needs to respond to inevitable surprises.” <a href="https://beta.irgc.org/wp-content/uploads/2018/12/Woods-for-IRGC-Resilience-Guide-Vol-2-2018.pdf">Resilience is a Verb (2018)</a>, p. 1.</p>
+          <p>Richard I. Cook: “Human practitioners are the adaptable element of complex systems.” <a href="https://www.adaptivecapacitylabs.com/HowComplexSystemsFail.pdf">How Complex Systems Fail</a>, point 12, p. 3 (1998, revised April 21, 2000).</p>
+        </div>
+      </section>
+
+      <section id="the-model" class="step model-slide" data-y="183000" data-scale="25">
         <img
           class="model-portrait"
           src="/images/srecon24/Rasmussen_portrait.png"
@@ -353,21 +327,18 @@
         </div>
 
         <div class="notes">
-          Introduce Jens Rasmussen and the 1997 model. The next slide maps the wider research landscape around Figure
-          3; the slide after that locates people and technology within Rasmussen's social control hierarchy before the
-          boundary model is translated into plain language.
-
-          Reveal 1: the original model and paper.
-          Reveal 2: examples of safety-critical domains.
-          Reveal 3: hierarchical, multidisciplinary socio-technical systems.
-          Reveal 4: systems thinking.
-
-          Source slide and artwork: https://srecon24.hatchman76.com/#/the-model
-          Paper: https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+          <p>Introduce Jens Rasmussen and the 1997 model. The next slide maps the wider research landscape around Figure 3, and the slide after that locates people and technology within Rasmussen’s social control hierarchy before the boundary model is translated into plain language.</p>
+          <ul>
+            <li>The original model comes from Risk Management in a Dynamic Society (1997).</li>
+            <li>Examples of safety-critical domains include radiological safety, maritime safety and healthcare.</li>
+            <li>Socio-technical systems are hierarchical and multidisciplinary.</li>
+            <li>Systems thinking connects these levels and disciplines.</li>
+          </ul>
+          <p>Paper: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen, Risk Management in a Dynamic Society (1997)</a>.</p>
         </div>
       </section>
 
-      <section id="paper-themes" class="step paper-themes-slide" data-y="183000" data-scale="25">
+      <section id="paper-themes" class="step paper-themes-slide" data-y="208000" data-scale="25">
         <h2 class="paper-themes-title">The research behind the model</h2>
         <p class="paper-themes-lede">
           The 31-page paper connects decades of studies across engineering and the human sciences.
@@ -420,33 +391,24 @@
         </div>
 
         <div class="notes">
-          This is a synthesis paper rather than a single empirical validation of the model.
-
-          The five research themes fade in automatically from top to bottom once the slide settles.
-          Each fade takes 600ms, with 1.1 seconds between starts. The sequence replays on each visit;
-          reduced-motion mode and print show all five immediately.
-
-          Reveal 1: Rasmussen distinguishes empirical, evolutionary, and analytical risk strategies.
-          Reveal 2: Defence in depth matters, but redundant protections can degrade quietly because a local violation
-          may have no immediate visible effect.
-          Reveal 3: The paper reviews human reliability, operator modelling, field evidence, and organisational
-          research. Its direction of travel is away from isolated error counts and toward behaviour in a real work
-          context shaped by workload, time, cost, and competing goals.
-          Reveal 4: Risk management becomes a feedback-control problem spanning the whole socio-technical hierarchy.
-          Reveal 5: Decisions are embedded in continuous work. Locally sensible adaptations can interact across
-          controllers and create system-level risk.
-
-          The next slide makes the paper's system-wide control hierarchy concrete; the following slide simplifies the
-          geometry without discarding these mechanisms.
-
-          Source: Rasmussen, Risk Management in a Dynamic Society (1997), pp. 183–213.
-          Figure 8 and research convergence: p. 201.
-          Risk strategies: pp. 197–200.
-          Defence in depth: pp. 189–190, 198–199, 207–209.
-          Human and organisational adaptation under pressure: pp. 186–190, 193–196, 206–209.
-          Feedback control: pp. 183–186, 192–197.
-          Naturalistic decision making: pp. 186–190, 200–206.
-          https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+          <p>This is a synthesis paper rather than a single empirical validation of the model.</p>
+          <ul>
+            <li>Rasmussen distinguishes empirical, evolutionary, and analytical risk strategies.</li>
+            <li>Defence in depth matters, but redundant protections can degrade quietly because a local violation may have no immediate visible effect.</li>
+            <li>The paper reviews human reliability, operator modelling, field evidence, and organisational research. Its direction of travel is away from isolated error counts and toward behaviour in a real work context shaped by workload, time, cost, and competing goals.</li>
+            <li>Risk management becomes a feedback-control problem spanning the whole socio-technical hierarchy.</li>
+            <li>Decisions are embedded in continuous work. Locally sensible adaptations can interact across controllers and create system-level risk.</li>
+          </ul>
+          <p>The next slide makes the paper’s system-wide control hierarchy concrete, and the following slide simplifies the geometry without discarding these mechanisms.</p>
+          <p>Source: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen, Risk Management in a Dynamic Society (1997)</a>, pp. 183–213.</p>
+          <ul>
+            <li>Figure 8 and research convergence: p. 201.</li>
+            <li>Risk strategies: pp. 197–200.</li>
+            <li>Defence in depth: pp. 189–190, 198–199, 207–209.</li>
+            <li>Human and organisational adaptation under pressure: pp. 186–190, 193–196, 206–209.</li>
+            <li>Feedback control: pp. 183–186, 192–197.</li>
+            <li>Naturalistic decision making: pp. 186–190, 200–206.</li>
+          </ul>
         </div>
       </section>
 
@@ -454,7 +416,7 @@
         id="social-and-systems"
         class="step social-systems-slide"
         data-x="0"
-        data-y="208000"
+        data-y="233000"
         data-scale="25"
       >
         <h2 class="social-systems-title">Where does control live?</h2>
@@ -488,22 +450,12 @@
         </div>
 
         <div class="notes">
-          The previous slide shows people working within a complex system. This slide introduces the social control
-          hierarchy surrounding that work.
-
-          Reveal 1: introduce Rasmussen's social control hierarchy.
-          Reveal 2: add the research disciplines and environmental stressors that cross its levels.
-          Control is distributed rather than owned by any single actor, and information must travel upward while
-          decisions and constraints travel downward. Each layer adapts on a different timescale.
-
-          Source slide and hierarchy artwork: https://srecon24.hatchman76.com/#/social-and-systems
+          <p>The social control hierarchy surrounds the people and technology doing the work. Research disciplines and environmental stressors cross its levels.</p>
+          <p>Control is distributed rather than owned by any single actor, and information must travel upward while decisions and constraints travel downward. Each layer adapts on a different timescale.</p>
           <h3>Goals, evidence and authority</h3>
-          <p>The control structure is the distributed network of decision makers, goals, constraints, information, competence and authority around the work. Observations and outcomes inform decisions; decisions and constraints change the work. Feedback must reach actors with the resources and authority to respond.</p>
+          <p>The control structure is the distributed network of decision makers, goals, constraints, information, competence and authority around the work. Observations and outcomes inform decisions, and decisions and constraints change the work. Feedback must reach actors with the resources and authority to respond.</p>
           <p>When AI enters these channels, re-examine problem framing, attention, verification, skill retention under pressure, communicated intent and feedback fidelity across the hierarchy. Task-level studies do not establish the accumulated effects on a whole socio-technical system.</p>
-          <ul>
-            <li>Rasmussen (1997), Figures 1 and 3; control, adaptation and information</li>
-          </ul>
-
+          <p>Source: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figures 1 and 3, control, adaptation and information</a>.</p>
         </div>
       </section>
 
@@ -511,7 +463,7 @@
         id="complex-system-and-boundaries"
         class="step complex-system-slide"
         data-x="0"
-        data-y="233000"
+        data-y="258000"
         data-scale="25"
       >
         <h2 class="social-systems-title">Putting it together</h2>
@@ -567,23 +519,11 @@
         </figure>
 
         <div class="notes">
-          The hierarchy on the previous slide surrounds the people and interactions in this complex system.
-
-          Once the slide settles, fade in the economic, workload and performance boundaries and dotted error
-          margin together over 1.2 seconds. This slide does not show an operating point.
-          Then fade in people distributed through the complex system over 1.1 seconds, with bright orange points
-          with yellow highlights and a bold rim pulsing along its connections. At 2.3 seconds, fade in the AI artwork
-          and adaptation caption together in the lower row. No presenter clicks are needed. Replay on each visit;
-          reduced-motion mode and print show everything immediately without pulsing.
-          The following slide explains the boundaries and the margin in detail.
-
-          Source model and boundary artwork: https://srecon24.hatchman76.com/#/the-model
+          <p>The hierarchy on the previous slide surrounds the people and interactions in this complex system. People and technology operate within economic, workload and performance constraints. The dotted error margin marks a buffer inside the performance boundary.</p>
+          <p>The following slide explains the boundaries and the margin in detail.</p>
           <h3>Adaptation with LLM tools</h3>
-          <p>Tools change the conditions in which people work, and repeated adaptations change workflows, expectations and later decisions. Rasmussen remains a framework for examining these effects. Measures of human performance, learning, coordination and control need revalidation in LLM-mediated work; this does not make earlier human-factors research obsolete.</p>
-          <ul>
-            <li>Rasmussen (1997), Figures 1 and 3; control, adaptation and information</li>
-          </ul>
-
+          <p>Tools change the conditions in which people work, and repeated adaptations change workflows, expectations and later decisions. Rasmussen remains a framework for examining these effects. Measures of human performance, learning, coordination and control need revalidation in LLM-mediated work. This does not make earlier human-factors research obsolete.</p>
+          <p>Source: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figures 1 and 3, control, adaptation and information</a>.</p>
         </div>
       </section>
 
@@ -591,7 +531,7 @@
         id="the-fish-diagram"
         class="step plain-model-slide"
         data-x="0"
-        data-y="258000"
+        data-y="283000"
         data-scale="25"
       >
         <div class="substep plain-boundary-reveal plain-economic-reveal">
@@ -655,9 +595,14 @@
         </div>
 
         <div class="substep plain-playing-surface">
-          <svg class="plain-playing-surface-shade" viewBox="0 0 1024 768" aria-hidden="true">
+          <svg class="plain-playing-surface-shade" viewBox="0 0 1020 780" aria-hidden="true">
             <path
-              d="M 565 144 C 686 159 793 240 840 350 C 811 453 704 539 550 562 C 435 538 272 443 232 350 C 218 262 392 163 565 144 Z"
+              d="M 484 138 L 514.5 139 L 547.5 142.5 L 606 154 L 659 171.5 L 679.5 180.5 L 709.5 196.5 L 731 210.5 L 752.5 227 L 765.5 238.5 L 791.5 266 L 808 287.5 L 821.5 308.5 L 837 338 L 841 347 L 841 350.5 L 832 369.5 L 817.5 394.5 L 786 436 L 761.5 461 L 743 477 L 702.5 505.5 L 657.5 529.5 L 601.5 551 L 548 565 L 512 571.5 L 479 575.5 L 406 548 L 350.5 523.5 L 282.5 487.5 L 235.5 456 L 216.5 440.5 L 197.5 422 L 177.5 396 L 165.5 369.5 L 162.5 354.5 L 162.5 337 L 169 312.5 L 175.5 300 L 187 284 L 215.5 256.5 L 251.5 231.5 L 302 204.5 L 344 186 L 414 160 Z"
+              data-roaming-envelope="M 565 144 C 686 159 793 240 840 350 C 811 453 704 539 550 562 C 435 538 272 443 232 350 C 218 262 392 163 565 144 Z"
+            />
+            <path
+              class="substep plain-playing-surface-margin"
+              d="M 562.4 145.4 L 547.5 142.5 L 514.5 139 L 484 138 L 414 160 L 344 186 L 302 204.5 L 251.5 231.5 L 215.5 256.5 L 187 284 L 175.5 300 L 169 312.5 L 162.5 337 L 162.5 354.5 L 165.5 369.5 L 177.5 396 L 197.5 422 L 216.5 440.5 L 235.5 456 L 282.5 487.5 L 350.5 523.5 L 406 548 L 479 575.5 L 512 571.5 L 548 565 L 552.8 563.7 L 513.7 550.3 L 479.3 537.5 L 433.8 518.9 L 411.4 508.9 L 356.5 481.3 L 335.3 469 L 314.5 455.7 L 294.7 441.4 L 276 425.7 L 258.7 408.1 L 251.1 398.6 L 244.3 388.4 L 238.5 377.5 L 234.2 366 L 231.7 354 L 231.1 341.7 L 232.8 329.7 L 236.4 317.8 L 241.7 306.8 L 248.3 296.6 L 256.1 286.9 L 264.5 278 L 283.1 261.9 L 313.5 241.2 L 334.8 229.2 L 356.8 218 L 390.2 203 L 413.1 193.8 L 447.6 181 L 482.4 169.2 Z"
             />
           </svg>
           <span class="plain-playing-surface-label">Playing Surface</span>
@@ -721,38 +666,24 @@
         </svg>
 
         <div class="notes">
-          Plain-language script:
-
-          “The economic boundary marks where we can no longer pay the bills. The workload boundary marks where people cannot keep going. The performance boundary marks where the system can no longer do its job acceptably or safely. We cannot see that line exactly, so the dotted line gives us a margin for error.
-
-          This dot is not a person. It is the whole system — people, software, and rules — working right now. The green area is the playing surface.
-
-          The green Playing Surface and its label fade away first. Then watch the economic boundary move inward, pass through its original position, and move outward before settling back. The workload boundary starts the same movement one second after the economic boundary begins, without another click. The gray lines hold their original positions while the limits shift. Inward shifts reduce the playing surface; outward shifts expand it.
-
-          After both boundaries have moved, a second pulsing dot starts in the same place and begins to wander. The original dot remains as a dim reference. The moving dot favors the error margin to show how pressure for efficiency and less effort can draw normal adaptations toward the performance boundary.
-
-          The charts stand for pressure to reduce cost, which a downturn can intensify. The hands stand for ways people reduce effort under workload; the Blocker Lemmings show safety action near the error margin: pause or redirect work to preserve margin. Rasmussen describes actors adapting within the work-space, encountering an effort gradient while management supplies a cost gradient. The charts and hands are scattered through that space to illustrate local adaptations, not measured locations of individual decisions in Figure 3.
-
-          Once every Blocker Lemming, hand, and chart has finished arriving, two arrows draw themselves from their boundaries
-          into the middle of the diagram, followed by their arrowheads and labels. The economic-side
-          arrow shows the gradient toward cost efficiency; the workload-side arrow shows the gradient toward least
-          effort. Both point toward the acceptable-performance side and stop within the work-space. Figure 3 and its
-          adjacent discussion support these directions of migration. The arrow endpoints are illustrative rather
-          than measured positions or fixed targets.
-
-          Everyone makes sensible choices. The business asks for cheaper and faster. People make work easier. Together, those pressures can move the dot toward the performance edge.
-
-          There is no magic safe spot in the middle. The lines do not push the dot back. Any line can move as demand, staffing, technology, or AI changes.
-
-          That is Rasmussen's warning: failure does not require one stupid decision. Normal adaptations can slowly move the system toward an edge nobody can see exactly.”
-
-          Adult one-sentence version: one current operating state moves within economic, workload, and acceptable-performance constraints; pressures move it, while sensing and control preserve margin and recoverability.
-
-          [Sources]
-          - https://doi.org/10.1016/S0925-7535(97)00052-0
-          - https://backend.orbit.dtu.dk/ws/files/158016663/SAFESCI.PDF (Figure 3 and its discussion of effort and cost gradients)
-          - https://srecon24.hatchman76.com/#/the-model
-          - https://qconsf.com/
+          <h3>Plain-language script</h3>
+          <p>“The economic boundary marks where we can no longer pay the bills. The workload boundary marks where people cannot keep going. The performance boundary marks where the system can no longer do its job acceptably or safely. We cannot see that line exactly, so the dotted line gives us a margin for error.</p>
+          <p>This dot is not a person. It is the whole system — people, software, and rules — working right now. The dim dot marks the starting reference position, not a second current operating state. The shaded area is the playing surface, with the error margin shown in orange.</p>
+          <p>Economic and workload limits can change as financial and human capacity change. Inward shifts reduce the playing surface; outward shifts expand it.</p>
+          <p>Pressure for efficiency and less effort can draw normal adaptations, and the whole system&#x27;s operating state, toward the performance boundary.</p>
+          <p>The charts stand for pressure to reduce cost, which a downturn can intensify. The hands stand for ways people reduce effort under workload; the Blocker Lemmings show safety action near the error margin: pause or redirect work to preserve margin. Rasmussen describes actors adapting within the work-space, encountering an effort gradient while management supplies a cost gradient. The charts and hands are scattered through that space to illustrate local adaptations, not measured locations of individual decisions in Figure 3.</p>
+          <p>The economic-side arrow shows the gradient toward cost efficiency; the workload-side arrow shows the gradient toward least effort. Both point toward the acceptable-performance side. Figure 3 and its adjacent discussion support these directions of migration. The arrow endpoints are illustrative rather than measured positions or fixed targets.</p>
+          <p>Everyone makes sensible choices. The business asks for cheaper and faster. People make work easier. Together, those pressures can move the dot toward the performance edge.</p>
+          <p>There is no magic safe spot in the middle. The lines do not push the dot back. Any line can move as demand, staffing, technology, or AI changes.</p>
+          <p>That is Rasmussen&#x27;s warning: failure does not require one stupid decision. Normal adaptations can slowly move the system toward an edge nobody can see exactly.”</p>
+          <p>Core point: one current operating state moves within economic, workload, and acceptable-performance constraints; pressures move it, while sensing and control preserve margin and recoverability.</p>
+          <h3>Sources</h3>
+          <ul>
+            <li>https://doi.org/10.1016/S0925-7535(97)00052-0</li>
+            <li>https://backend.orbit.dtu.dk/ws/files/158016663/SAFESCI.PDF (Figure 3 and its discussion of effort and cost gradients)</li>
+            <li>https://srecon24.hatchman76.com/#/the-model</li>
+            <li>https://qconsf.com/</li>
+          </ul>
         </div>
       </section>
 
@@ -760,7 +691,7 @@
         id="diagram-legend"
         class="step diagram-legend-slide"
         data-x="31000"
-        data-y="258000"
+        data-y="283000"
         data-scale="25"
       >
         <h2 class="diagram-legend-title substep">Diagram Legend</h2>
@@ -789,7 +720,17 @@
             <p><strong>Operating point</strong><span>Where the whole system is now</span></p>
           </div>
           <div class="diagram-legend-item substep">
-            <span class="diagram-legend-symbol diagram-legend-surface" aria-hidden="true"></span>
+            <span class="diagram-legend-symbol diagram-legend-surface" aria-hidden="true">
+              <svg viewBox="150 126 704 462" focusable="false">
+                <defs>
+                  <path id="legend-playing-surface-area" d="M 484 138 L 514.5 139 L 547.5 142.5 L 606 154 L 659 171.5 L 679.5 180.5 L 709.5 196.5 L 731 210.5 L 752.5 227 L 765.5 238.5 L 791.5 266 L 808 287.5 L 821.5 308.5 L 837 338 L 841 347 L 841 350.5 L 832 369.5 L 817.5 394.5 L 786 436 L 761.5 461 L 743 477 L 702.5 505.5 L 657.5 529.5 L 601.5 551 L 548 565 L 512 571.5 L 479 575.5 L 406 548 L 350.5 523.5 L 282.5 487.5 L 235.5 456 L 216.5 440.5 L 197.5 422 L 177.5 396 L 165.5 369.5 L 162.5 354.5 L 162.5 337 L 169 312.5 L 175.5 300 L 187 284 L 215.5 256.5 L 251.5 231.5 L 302 204.5 L 344 186 L 414 160 Z" />
+                  <path id="legend-playing-surface-margin" d="M 562.4 145.4 L 547.5 142.5 L 514.5 139 L 484 138 L 414 160 L 344 186 L 302 204.5 L 251.5 231.5 L 215.5 256.5 L 187 284 L 175.5 300 L 169 312.5 L 162.5 337 L 162.5 354.5 L 165.5 369.5 L 177.5 396 L 197.5 422 L 216.5 440.5 L 235.5 456 L 282.5 487.5 L 350.5 523.5 L 406 548 L 479 575.5 L 512 571.5 L 548 565 L 552.8 563.7 L 513.7 550.3 L 479.3 537.5 L 433.8 518.9 L 411.4 508.9 L 356.5 481.3 L 335.3 469 L 314.5 455.7 L 294.7 441.4 L 276 425.7 L 258.7 408.1 L 251.1 398.6 L 244.3 388.4 L 238.5 377.5 L 234.2 366 L 231.7 354 L 231.1 341.7 L 232.8 329.7 L 236.4 317.8 L 241.7 306.8 L 248.3 296.6 L 256.1 286.9 L 264.5 278 L 283.1 261.9 L 313.5 241.2 L 334.8 229.2 L 356.8 218 L 390.2 203 L 413.1 193.8 L 447.6 181 L 482.4 169.2 Z" />
+                </defs>
+                <use href="#legend-playing-surface-area" fill="#b6e2b6" fill-opacity="0.82" />
+                <use href="#legend-playing-surface-margin" fill="#ffad5c" />
+                <use href="#legend-playing-surface-area" fill="none" stroke="#000" stroke-width="12" stroke-linejoin="round" />
+              </svg>
+            </span>
             <p><strong>Playing surface</strong><span>Room within the boundaries</span></p>
           </div>
           <div class="diagram-legend-item diagram-legend-actions substep">
@@ -837,7 +778,7 @@
         id="fish-diagram-overlay"
         class="step"
         data-x="0"
-        data-y="258000"
+        data-y="283000"
         data-scale="25"
       ></section>
 
@@ -845,7 +786,7 @@
         id="economic-boundary"
         class="step boundary-detail-slide"
         data-x="9600"
-        data-y="250375"
+        data-y="275375"
         data-scale="2.843136"
       >
         <div class="substep">
@@ -859,7 +800,7 @@
             <ul class="boundary-emoji-list" role="list">
               <li class="substep"><span class="boundary-list-emoji" aria-hidden="true">📈</span><span>Stronger demand and better pricing power</span></li>
               <li class="substep"><span class="boundary-list-emoji" aria-hidden="true">💰</span><span>Fresh funding or cheaper financing</span></li>
-              <li class="substep"><span class="boundary-list-emoji" aria-hidden="true">🏷️</span><span>Lower energy, supplier or infrastructure costs</span></li>
+              <li class="substep"><span class="boundary-list-emoji" aria-hidden="true">🏭</span><span>Lower energy, supplier or infrastructure costs</span></li>
             </ul>
           </div>
           <div class="boundary-detail-copy">
@@ -871,7 +812,7 @@
             </ul>
           </div>
         </div>
-        <p class="boundary-detail-conclusion substep">Sustainable capacity changes the boundary.<br />A tighter internal budget changes the target.</p>
+        <p class="boundary-detail-conclusion substep">Greater financial capacity expands room to operate, tighter budgets increase pressure to reduce costs.</p>
 
         <div class="notes">
           These are common external conditions, not measurements of a universal boundary. Holding the work and
@@ -889,7 +830,7 @@
         id="economic-boundary-actions"
         class="step boundary-detail-slide"
         data-x="10635"
-        data-y="253765"
+        data-y="278765"
         data-scale="2.355664"
       >
         <div class="substep">
@@ -902,23 +843,23 @@
           <tbody>
             <tr>
               <td class="substep"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">💸</span><span>Forecast cash burn increases</span></div></td>
-              <td class="substep"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">✂️</span><span>Reduce scope; defer investment;<br />reprioritize commitments</span></div></td>
+              <td class="substep"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">✂️</span><span>Reduce scope, defer investment,<br />reprioritize commitments</span></div></td>
             </tr>
             <tr>
               <td class="substep"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🧾</span><span>Cost per verified outcome increases</span></div></td>
-              <td class="substep"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🤝</span><span>Renegotiate suppliers; rightsize resources;<br />remove low-value work</span></div></td>
+              <td class="substep"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🤝</span><span>Renegotiate suppliers, rightsize resources,<br />remove low-value work</span></div></td>
             </tr>
             <tr>
               <td class="substep"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">💤</span><span>Idle capacity or unused licences </span></div></td>
-              <td class="substep"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🧹</span><span>Consolidate platforms; retire unused capacity</span></div></td>
+              <td class="substep"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🧹</span><span>Consolidate platforms, retire unused capacity</span></div></td>
             </tr>
             <tr>
               <td class="substep"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🗜️</span><span>Projected margin decreases</span></div></td>
-              <td class="substep"><div class="boundary-action-entry"><img class="boundary-action-icon" src="/images/srecon24/sign-exit.png" alt="" aria-hidden="true" /><span>Freeze hiring; reduce staffing or maintenance</span></div></td>
+              <td class="substep"><div class="boundary-action-entry"><span class="boundary-exit-sign" aria-hidden="true"><img class="boundary-list-icon" src="/images/srecon24/sign-exit.png" alt="" /></span><span>Freeze hiring, reduce staffing or maintenance</span></div></td>
             </tr>
           </tbody>
         </table>
-        <p class="boundary-detail-conclusion substep">The gradient points toward cost efficiency.<br />Watch for lost assurance on the performance side.</p>
+        <p class="boundary-detail-conclusion substep">Cutting waste can reduce costs, but cutting expertise or maintenance can leave less room to operate safely.</p>
 
         <div class="notes">
           A forecast is a signal and a budget is a target. An actor with authority decides what to do. These are
@@ -942,7 +883,7 @@
         id="workload-boundary"
         class="step boundary-detail-slide"
         data-x="8845"
-        data-y="262575"
+        data-y="287575"
         data-scale="2.429972"
       >
         <div class="substep">
@@ -968,7 +909,7 @@
             </ul>
           </div>
         </div>
-        <p class="boundary-detail-conclusion substep">Less capacity moves the workload boundary inward, even with the same work.<br />More incoming work can move the operating point toward that boundary.</p>
+        <p class="boundary-detail-conclusion substep">Less capacity moves the boundary inward, more work can push the operating point toward it.</p>
 
         <div class="notes">
           Holding the kind and quality of required work broadly constant, usable expert capacity can change the
@@ -989,38 +930,37 @@
       <section
         id="workload-boundary-actions"
         class="step boundary-detail-slide"
-        data-substep-sequence="columns"
         data-x="5980"
-        data-y="266395"
+        data-y="291395"
         data-scale="2.436975"
       >
-        <div class="ordered-substep" data-substep-order="1">
+        <div class="substep">
           <span class="boundary-detail-icon" role="img" aria-label="Effort-saving hand">🫷</span>
           <h2 class="boundary-detail-title">Workload Boundary Actions</h2>
         </div>
-        <p class="boundary-detail-lede ordered-substep" data-substep-order="2">People adapt toward least effort when demand strains capacity.</p>
+        <p class="boundary-detail-lede substep">People adapt toward least effort when demand strains capacity.</p>
         <table class="boundary-action-table">
-          <thead><tr><th class="ordered-substep" data-substep-order="3">Early signal / metric</th><th class="ordered-substep" data-substep-order="8">Possible adaptation</th></tr></thead>
+          <thead><tr class="substep"><th>Early signal / metric</th><th>Possible adaptation</th></tr></thead>
           <tbody>
-            <tr>
-              <td class="ordered-substep" data-substep-order="4"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">⏳</span><span>Queue age and work in progress</span></div></td>
-              <td class="ordered-substep" data-substep-order="9"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🛠️</span><span>Automate repeatable toil; improve tooling;<br />limit incoming work</span></div></td>
+            <tr class="substep">
+              <td><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">⏳</span><span>Queue age and work in progress</span></div></td>
+              <td><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🛠️</span><span>Automate repeatable toil, improve tooling,<br />limit incoming work</span></div></td>
             </tr>
-            <tr>
-              <td class="ordered-substep" data-substep-order="5"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🔀</span><span>Interruptions and handoffs<br />Focus time</span></div></td>
-              <td class="ordered-substep" data-substep-order="10"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🗂️</span><span>Batch tasks; standardize paths;<br />simplify tools and coordination</span></div></td>
+            <tr class="substep">
+              <td><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🤝</span><span>Interruptions and handoffs<br />Focus time</span></div></td>
+              <td><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🗂️</span><span>Batch tasks, standardize paths,<br />simplify tools and coordination</span></div></td>
             </tr>
-            <tr>
-              <td class="ordered-substep" data-substep-order="6"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🥵</span><span>Overtime and fatigue<br />Recovery time</span></div></td>
-              <td class="ordered-substep" data-substep-order="11"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🛌</span><span>Reduce scope; protect rest; share on-call load<br />or rush and bypass checks</span></div></td>
+            <tr class="substep">
+              <td><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🥵</span><span>Overtime and fatigue<br />Recovery time</span></div></td>
+              <td><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🛌</span><span>Reduce scope, protect rest, share on-call load<br />or rush and bypass checks</span></div></td>
             </tr>
-            <tr>
-              <td class="ordered-substep" data-substep-order="7"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🔁</span><span>Review findings and rework</span></div></td>
-              <td class="ordered-substep" data-substep-order="12"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🧪</span><span>Improve tests and shared understanding<br />or accept output without examining it</span></div></td>
+            <tr class="substep">
+              <td><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🔁</span><span>Review findings and rework</span></div></td>
+              <td><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🧪</span><span>Improve tests and shared understanding<br />or accept output without examining it</span></div></td>
             </tr>
           </tbody>
         </table>
-        <p class="boundary-detail-conclusion ordered-substep" data-substep-order="13">Reducing toil can preserve control, but skipping checks saves effort now and creates work later.</p>
+        <p class="boundary-detail-conclusion substep">Reducing toil can preserve control, but skipping checks saves effort now and creates work later.</p>
 
         <div class="notes">
           The hand denotes the gradient toward least effort, not a moral judgment. Better technology and automation
@@ -1045,7 +985,7 @@
         id="performance-boundary"
         class="step boundary-detail-slide"
         data-x="-10407"
-        data-y="255379"
+        data-y="280379"
         data-scale="2.981193"
       >
         <div class="substep">
@@ -1063,9 +1003,9 @@
             </ul>
           </div>
           <div class="boundary-detail-copy">
-            <h3 class="substep">Harm beyond the service</h3>
+            <h3 class="substep">Consequences</h3>
             <ul class="boundary-emoji-list" role="list">
-              <li class="substep"><span class="boundary-list-emoji" aria-hidden="true">🚧</span><span>Customer operations disrupted; safety put at risk</span></li>
+              <li class="substep"><span class="boundary-list-emoji" aria-hidden="true">🚧</span><span>Customer operations disrupted, safety put at risk</span></li>
               <li class="substep"><span class="boundary-list-emoji" aria-hidden="true">💔</span><span>Trust and reputation damaged</span></li>
               <li class="substep"><span class="boundary-list-emoji" aria-hidden="true">⚖️</span><span>Contractual losses or regulatory consequences</span></li>
             </ul>
@@ -1098,7 +1038,7 @@
         class="step boundary-detail-slide"
         data-substep-sequence="columns"
         data-x="-4213"
-        data-y="256726"
+        data-y="281726"
         data-scale="2.72826"
       >
         <div class="ordered-substep" data-substep-order="1">
@@ -1110,27 +1050,27 @@
         </div>
         <p class="boundary-detail-lede ordered-substep" data-substep-order="2">Notice, act and recover before the functional limit is crossed.</p>
         <table class="boundary-action-table">
-          <thead><tr><th class="ordered-substep" data-substep-order="3">Signal / concern</th><th class="ordered-substep" data-substep-order="8">Action that preserves margin</th></tr></thead>
+          <thead><tr><th class="ordered-substep" data-substep-order="3">Signal / concern</th><th class="ordered-substep" data-substep-order="8">Protective actions</th></tr></thead>
           <tbody>
             <tr>
-              <td class="ordered-substep" data-substep-order="4"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">📡</span><span>Blind spots or stale telemetry</span></div></td>
-              <td class="ordered-substep" data-substep-order="9"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🔎</span><span>Improve monitoring; check user journeys;<br />connect alerts to an owner who can act</span></div></td>
+              <td class="ordered-substep" data-substep-order="4"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🕳️</span><span>Blind spots or stale telemetry</span></div></td>
+              <td class="ordered-substep" data-substep-order="9"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🔎</span><span>Improve monitoring, check user journeys, connect alerts to an owner who can act</span></div></td>
             </tr>
             <tr>
-              <td class="ordered-substep" data-substep-order="5"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🌡️</span><span>Saturation or shrinking headroom</span></div></td>
-              <td class="ordered-substep" data-substep-order="10"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">⚙️</span><span>Improve software efficiency; load-test;<br />add scalable capacity and tested redundancy</span></div></td>
+              <td class="ordered-substep" data-substep-order="5"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🪫</span><span>Saturation or shrinking headroom</span></div></td>
+              <td class="ordered-substep" data-substep-order="10"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">⚙️</span><span>Improve software efficiency, load-test, add scalable capacity and tested redundancy</span></div></td>
             </tr>
             <tr>
-              <td class="ordered-substep" data-substep-order="6"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">📥</span><span>Changes exceed verification capacity</span></div></td>
-              <td class="ordered-substep" data-substep-order="11"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🚦</span><span>Limit admission; use canaries and rollback;<br />retain independent review and access controls</span></div></td>
+              <td class="ordered-substep" data-substep-order="6"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🌊</span><span>Changes exceed verification capacity</span></div></td>
+              <td class="ordered-substep" data-substep-order="11"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🚦</span><span>Limit admission, use canaries and rollback, retain independent review and access controls</span></div></td>
             </tr>
             <tr>
               <td class="ordered-substep" data-substep-order="7"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">⏳</span><span>Slow or uncertain recovery</span></div></td>
-              <td class="ordered-substep" data-substep-order="12"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🛟</span><span>Exercise failover and restore; update runbooks;<br />practice diagnosis and share expertise</span></div></td>
+              <td class="ordered-substep" data-substep-order="12"><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🛟</span><span>Exercise failover and restore, update runbooks, practice diagnosis and share expertise</span></div></td>
             </tr>
           </tbody>
         </table>
-        <p class="boundary-detail-conclusion ordered-substep" data-substep-order="13">Ensure adaptive capacity is sustained, through authority and time needed to cultivate expertise, turning warning signals into effective action.</p>
+        <p class="boundary-detail-conclusion ordered-substep" data-substep-order="13">Sustain adaptive capacity turning signals into effective action</p>
 
         <div class="notes">
           The dotted line represents a fallible perceived limit. Crossing it consumes the deliberately protected
@@ -1158,41 +1098,33 @@
         id="fish-diagram-overview"
         class="step"
         data-x="0"
-        data-y="258000"
+        data-y="283000"
         data-scale="25"
       ></section>
 
       <section id="ai-operating-point" class="step ai-journey-slide ai-arrival-slide"
-        data-x="50" data-y="283350" data-scale="7">
+        data-x="50" data-y="308350" data-scale="7">
         <img class="ai-arrival-point" src="/images/operating-point.svg" alt="Red circle representing the whole system’s current operating state" />
         <div class="substep ai-arrival-reveal">
           <img class="ai-arrival-ball" src="/images/srecon26/logo-ai-mashup.png" alt="The coloured AI ball rolls in from the left and covers the operating point" />
           <p class="ai-arrival-question">What changes when AI enters the work?</p>
         </div>
         <div class="notes">
-          Start with just the red operating point: the whole socio-technical system's current state. On the next
-          click the AI ball rolls in from the left and settles over it. Once the ball reaches the middle, the red
-          circle fades out over 600 milliseconds. The artwork is a visual shorthand for
-          AI-mediated work at the same operating state. It is not a second operating point, a person, or a fourth
-          constraint. Ask what changes in cost, effort, evidence and recovery. Once revealed, the question remains
-          visible at its canvas position when navigating away. The following step expands the view
-          to the same three boundaries and the performance-side error margin, with the non-determinism question
-          at the bottom of that diagram. Reduced-motion mode shows the settled
-          ball without rolling; the reveal still requires the presenter to advance.
+          <p>The operating point represents the whole socio-technical system's current state. The AI artwork is shorthand for AI-mediated work at that same state, not a second operating point, a person or a fourth constraint. The reference ball marks the starting state, not an ideal or inherently safe location.</p>
+          <p>Ask what changes in cost, effort, evidence and recovery when AI enters the work.</p>
           <h3>AI in the feedback and action channels</h3>
-          <p>AI is not automatically a new controller. It influences channels used by existing controllers. On the feedback side it can gather and summarize observations, find contradictions and support testing; fluent summaries can also conceal uncertainty. On the action side it can present options, draft decisions and translate intent into output; plausible detail can exceed the communicator’s intended criteria.</p>
-          <p>AI output changes the operating state when people or automation admit and enact the resulting decisions, not merely when output is generated. The risk is conditional: AI can strengthen testing, diagnosis, challenge and verification. Risk rises when generation and action become easier faster than assurance and correction.</p>
-          <p>Rasmussen (1997) describes behaviour and work activity migrating toward the boundary. Cook and Rasmussen (2005) explicitly use operating-point terminology. The ball remains shorthand for one current whole-system state.</p>
-          <ul>
-            <li>Rasmussen (1997), Figures 1 and 3; control, adaptation and information</li>
-            <li>Cook and Rasmussen (2005), Going solid</li>
-          </ul>
-
+                    <p>AI is not automatically a new controller. It influences channels used by existing controllers. On the feedback side it can gather and summarize observations, find contradictions and support testing; fluent summaries can also conceal uncertainty. On the action side it can present options, draft decisions and translate intent into output; plausible detail can exceed the communicator’s intended criteria.</p>
+                    <p>AI output changes the operating state when people or automation admit and enact the resulting decisions, not merely when output is generated. The risk is conditional: AI can strengthen testing, diagnosis, challenge and verification. Risk rises when generation and action become easier faster than assurance and correction.</p>
+                    <p>Rasmussen (1997) describes behaviour and work activity migrating toward the boundary. Cook and Rasmussen (2005) explicitly use operating-point terminology. The ball remains shorthand for one current whole-system state.</p>
+                    <ul>
+                      <li>Rasmussen (1997), Figures 1 and 3; control, adaptation and information</li>
+                      <li>Cook and Rasmussen (2005), Going solid</li>
+                    </ul>
         </div>
       </section>
 
       <section id="ai-fish-diagram" class="step ai-journey-slide ai-fish-slide"
-        data-x="0" data-y="283000" data-scale="25" aria-label="AI operating point moving within the three boundary lines and the dotted error margin">
+        data-x="0" data-y="308000" data-scale="25" aria-label="AI operating point moving within the three boundary lines and the dotted error margin">
         <div class="ai-fish-model">
           <img class="plain-model-outline" src="/images/srecon24/Rasmussen_plain_outline.png" alt="" />
           <img class="ai-fish-margin" src="/images/srecon24/Rasmussen_error_margin.png" alt="" />
@@ -1220,29 +1152,16 @@
           <img class="ai-roaming-point" src="/images/srecon26/logo-ai-mashup.png" alt="AI ball representing the current operating point" />
         </span>
         <div class="notes">
-          Open the camera from the operating point onto the familiar model: the three functional boundary
-          lines, the performance-side dotted error margin and the AI ball. The economic-failure,
-          unacceptable-workload and acceptable-performance labels and their money-with-wings, crying and
-          explosion emojis fade in with the diagram, matching the original Fish Diagram.
-          There is no fourth AI boundary. After the camera settles, keep the ball stationary for half a second,
-          then fade in the diagram over half a second. Only once that fade completes does the ball begin to wander,
-          with a bias toward the performance side, as in the original diagram. The trajectory is illustrative, not measured,
-          and no geometric center is an ideal state. Organizational choices and usable feedback shape the actual
-          trajectory. The ball keeps moving continuously through the AI close-ups and overview, retaining its
-          position through camera changes. Once rendered, the diagram stays on the canvas permanently and its
-          entrance does not replay. The entrance pause applies before its first movement. Reduced-motion
-          mode shows the diagram immediately and keeps the ball stationary. On the next presenter advance, show the non-determinism question at
-          the bottom of the diagram. If revealed early, it appears with the diagram after the initial pause.
-          The following steps inspect economics, workload, expertise and the error margin.
-          The journey ends at the error-margin scene with the means to improve assurance and recover.
-          <h3>One model through the journey</h3>
-          <p>Economic failure, unacceptable workload and functionally unacceptable performance are the three constraints. Error margin is the protected performance-side buffer, not an additional constraint. The following economic, workload and error-margin close-ups carry the control and evidence questions within this model. Once revealed, the question remains on the fish diagram as the camera moves to the close-ups and overview.</p>
-
+          <h3>The same constraints still apply</h3>
+          <p>Economic failure, unacceptable workload and functionally unacceptable performance remain the three constraints. The error margin is the protected performance-side buffer, not an additional constraint. AI does not create a fourth boundary.</p>
+          <p>The moving ball represents one current whole-system state. The reference ball marks the starting position, not a second current state or an ideal geometric centre.</p>
+          <p>The trajectory illustrates how adaptation under pressure can move the operating state toward the performance side. It is not a measured path. Organisational choices and usable feedback shape the actual trajectory, and no geometric centre guarantees safety.</p>
+          <p>Ask how non-deterministic outputs change what people can understand, verify and rely on. Examine the consequences for economics, workload, expertise and the capacity to intervene and recover.</p>
         </div>
       </section>
 
       <section id="ai-economic-pressure" class="step boundary-detail-slide ai-pressure-slide"
-        data-x="3400" data-y="279850" data-scale="3.55392">
+        data-x="3400" data-y="304850" data-scale="3.55392">
         <div class="substep">
           <span class="boundary-detail-icon" role="img" aria-label="Cost-efficiency pressure">📉</span>
           <h2 class="boundary-detail-title">AI has to be paid for</h2>
@@ -1296,8 +1215,84 @@
         </div>
       </section>
 
+      <section id="token-economy" class="step token-economy-slide"
+        data-x="11250" data-y="304850" data-scale="3.55392">
+        <h2 class="token-economy-title substep">Tokenomic Progression</h2>
+        <table class="token-economy-table">
+          <thead>
+            <tr class="substep"><th scope="col">Approach</th><th scope="col">What it means</th></tr>
+          </thead>
+          <tbody>
+            <tr class="substep">
+              <th scope="row"><span class="token-economy-label"><span aria-hidden="true">🏆</span><span>Maxxing</span></span></th>
+              <td>Treat token consumption as a score to maximise.</td>
+            </tr>
+            <tr class="substep">
+              <th scope="row"><span class="token-economy-label"><span aria-hidden="true">📏</span><span>Metering</span></span></th>
+              <td>Count token use to track limits and allowances.</td>
+            </tr>
+            <tr class="substep">
+              <th scope="row"><span class="token-economy-label"><span aria-hidden="true">🔀</span><span>Optimization</span></span></th>
+              <td>Route users’ requests to cheaper models to reduce costs.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="token-economy-risk substep">
+          <h2 id="model-enshittification-heading" class="model-enshittification-title"><span aria-hidden="true">💩</span><span>Model Enshittification</span><span aria-hidden="true">💩</span></h2>
+        </div>
+        <div class="notes">
+          <h3>Token consumption, dependence and platform power</h3>
+          <p>Tokenmaxxing turns LLM-agent consumption into a public scoreboard. The tokenmaxxing.sh leaderboard ranks token counts and estimated API-equivalent spending. Those estimates are not reconciled bills, and token consumption does not measure useful outcomes, productivity or quality. These are language-model usage tokens, not cryptocurrency. The site was checked on October 27, 2026.</p>
+          <p>Doctorow’s enshittification model describes two-sided platforms. They first offer users substantial value, then shift value toward business customers such as advertisers and sellers, then squeeze both groups to retain more surplus for the platform. Business customers are distinct from the platform owner. This is a conditional analogy about AI dependence and pricing power, not a claim about every provider or measured model quality.</p>
+          <p>Cursor’s August 12, 2025 announcement describes a change in metering. Individual Auto usage had been unlimited since June. The announcement said it would count against included monthly usage at token rates from each user’s next renewal after September 15, 2025. Some annual renewals could fall in 2026. This dates the announcement and planned transition, not independently confirmed rollout for every subscriber. This does not establish deliberate lock-in, reduced model quality or rent extraction.</p>
+          <p>Optimization describes a business routing users’ requests to cheaper models to reduce costs. Microsoft’s model-router documentation describes a Cost mode that favours smaller, cheaper models, with possible quality trade-offs on complex prompts. Routing requires evaluation against the actual workload. Cheaper routing alone does not demonstrate deliberate degradation or Doctorow’s full platform cycle.</p>
+          <p>The parallel is a risk to examine: when workflows depend on a provider, that provider controls the meter and can change the terms. Token leaderboards can reward consumption while the organization needs useful, verified outcomes. These documented examples do not establish that every AI provider has completed Doctorow’s cycle. Ask about switching costs, portability, alternative suppliers and outcome cost before increased use becomes a commitment that is difficult to unwind.</p>
+          <ul>
+            <li>Cory Doctorow, Enshittification (MCD, 2025), publisher page and excerpt: https://us.macmillan.com/books/9780374619329/enshittification/</li>
+            <li>Doctorow, original platform lifecycle essay (January 21, 2023): https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys</li>
+            <li>Tokenmaxxing public leaderboard: https://tokenmaxxing.sh/</li>
+            <li>Michael Truell, Cursor pricing announcement (August 12, 2025): https://cursor.com/blog/aug-2025-pricing</li>
+            <li>Microsoft Learn, How model router works (checked October 27, 2026): https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router-how-it-works</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="model-enshittification" class="step model-enshittification-slide"
+        data-x="11250" data-y="306698.0384" data-scale="3.55392" aria-labelledby="model-enshittification-heading">
+        <h2 class="model-enshittification-title model-enshittification-print-title" aria-hidden="true"><span aria-hidden="true">💩</span><span>Model Enshittification</span><span aria-hidden="true">💩</span></h2>
+        <div class="substep model-stage model-stage-users">
+          <h3>Serve Users</h3>
+          <p>Build something people want to depend on.</p>
+        </div>
+        <div class="substep model-stage model-stage-business">
+          <h3>Favor Business</h3>
+          <p>Shift value to business customers at users’ expense.</p>
+        </div>
+        <div class="substep model-stage model-stage-rent">
+          <h3>Squeeze for Rent</h3>
+          <p>Capture more value from both sides.</p>
+        </div>
+        <div class="substep model-evidence-point model-evidence-costs">
+          <span class="model-evidence-emoji" aria-hidden="true">📉</span>
+          <p><strong>280× lower inference prices at GPT-3.5-level MMLU performance (2022–24).</strong> Hardware became more cost-efficient. Historical trends, not guarantees. <span class="model-evidence-source">Stanford AI Index, 2025</span></p>
+        </div>
+        <div class="substep model-evidence-point model-evidence-competition">
+          <span class="model-evidence-emoji" aria-hidden="true">🔒</span>
+          <p><strong>Cheaper compute does not guarantee cheaper access.</strong> Competition and switching costs shape who keeps the savings. <span class="model-evidence-source">CMA cloud findings, 2025</span></p>
+        </div>
+        <p class="token-economy-credit">After Cory Doctorow, <cite>Enshittification</cite> (2025)</p>
+        <div class="notes">
+          <p>Doctorow describes a two-sided platform moving value from users to business customers, then taking more from both groups. Business customers mean advertisers, sellers or other participants, distinct from the platform owner. The headings are a paraphrase. Applying this pattern to AI is a risk to examine, not a prediction that every provider follows it.</p>
+          <h3>Lower costs do not determine who keeps the savings</h3>
+          <p>Stanford’s AI Index article reports that the price of querying models at GPT-3.5-level MMLU performance fell from $20 per million tokens in November 2022 to $0.07 in October 2024. Its 2025 report also describes hardware costs per unit of performance declining by 30% annually. These are historical trends, not guarantees about future token prices or total workflow costs.</p>
+          <p>The cloud analogy concerns competition and switching. For its UK and EEA market definition, the CMA’s July 2025 cloud decision found concentrated supply, sustained AWS and Microsoft returns above their cost of capital, and barriers to switching. Its April 2024 foundation-model review identified risks from control over critical inputs and routes to customers. These findings support questioning how fully efficiency gains reach customers, rather than asserting an inevitable AI oligopoly.</p>
+          <p>The October 2026 CMA update records improvements, including removal of transfer fees for switching providers, while identifying remaining barriers. Cloud prices have risen for some services and fallen for others. The precedent is imperfect competition, not a claim that cloud prices never fall.</p>
+          <p>DeepSeek still supplies MIT-licensed model weights and charges for its hosted API. Open weights do not mean free compute. The evidence does not establish that incumbents will push DeepSeek out. The question is whether competing models remain practically accessible and switching remains viable as the market evolves.</p>
+        </div>
+      </section>
+
       <section id="ai-workload-pressure" class="step boundary-detail-slide ai-workslop-slide"
-        data-x="2100" data-y="284150" data-scale="3.037465">
+        data-x="4250" data-y="308750" data-scale="3.037465">
         <div class="substep">
           <span class="boundary-detail-icon" role="img" aria-label="Least-effort pressure">🫷</span>
           <h2 class="boundary-detail-title">AI and least effort</h2>
@@ -1308,7 +1303,7 @@
           <figure class="workload-proxy-figure substep">
             <img src="/images/meat-proxy.png" alt="Meat-proxy emoji: a person represented by a steak passing messages between two AI bots" />
           </figure>
-          <div class="substep"><h3>Multiply the streams</h3><p>Agents generate more proposals; humans inherit<br />review, integration and maintenance.</p></div>
+          <div class="substep"><h3>Multiply the streams</h3><p>Agents generate more proposals, and humans inherit<br />review, integration and maintenance.</p></div>
           <figure class="workload-slop-figure substep">
             <img src="/images/srecon26/ai-slop-bucket.png" alt="A bucket overflowing with AI slop" />
           </figure>
@@ -1352,7 +1347,7 @@
       </section>
 
       <section id="erosion-of-expertise" class="step ai-journey-slide expertise-erosion-slide"
-        data-x="9850" data-y="284150" data-scale="3.037465">
+        data-x="9850" data-y="311150" data-scale="3.037465">
         <h2 class="expertise-erosion-title substep">The erosion of expertise</h2>
         <figure class="expertise-erosion-book substep">
           <img src="/images/srecon26/book-accelerated-expertise.png" alt="Accelerated Expertise: Training for High Proficiency in a Complex World, by Robert R. Hoffman and colleagues" />
@@ -1362,21 +1357,14 @@
           <p>“However, all of our lessons learned in cognitive systems engineering and complexity theory imply that more automation may result in simplifications, but they will hide deeper complexity, and at those moments where resilience and high-performance are needed, there will have to be greater operator expertise.”</p>
         </blockquote>
         <div class="notes">
-          Accelerated Expertise: Training for High Proficiency in a Complex World, by Robert R. Hoffman,
-          Paul Ward, Paul J. Feltovich, Lia DiBello, Stephen M. Fiore and Dee H. Andrews.
-          Citation year and publisher follow the publisher's DOI record: 2013, Psychology Press,
-          DOI 10.4324/9780203797327. The print edition carries a 2014 copyright year.
-          The book cover is reused from Andrew's SREcon26 generative-AI-student-learning slide.
-          The quotation is transcribed from Andrew's supplied image and attributed there to Accelerated Expertise.
-          This is a discussion of the risk to expertise, not a measured claim that all AI use erodes it.
-          Source slide: https://srecon26.hatchman76.com/#/generative-AI-student-learning
-          Book cover: https://srecon26.hatchman76.com/images/book-accelerated-expertise.png
-          The book's reference is collected in the SREcon26 sources on the final References slide.
+          <p><cite>Accelerated Expertise: Training for High Proficiency in a Complex World</cite>, by Robert R. Hoffman, Paul Ward, Paul J. Feltovich, Lia DiBello, Stephen M. Fiore and Dee H. Andrews.</p>
+          <p>Citation year and publisher follow the publisher's DOI record: 2013, Psychology Press, DOI 10.4324/9780203797327. The print edition carries a 2014 copyright year.</p>
+          <p>The supplied quotation is attributed to <cite>Accelerated Expertise</cite>. Use it to discuss how automation can simplify the surface of work while obscuring complexity that demands greater expertise when resilience and high performance are needed. This is a discussion of the risk to expertise, not a measured claim that all AI use erodes it.</p>
         </div>
       </section>
 
       <section id="expertise-erosion-sequence" class="step ai-journey-slide expertise-sequence-slide"
-        data-x="13100" data-y="284150" data-scale="3.037465" aria-label="Complex-system expertise and This is Fine">
+        data-x="13100" data-y="309150" data-scale="3.037465" aria-label="Complex-system expertise and This is Fine">
         <div class="expertise-sequence-visuals">
           <div class="expertise-people-scene" role="img" aria-label="People distributed throughout a complex system, with colored balls flashing along its connections">
             <div class="expertise-people-network" aria-hidden="true">
@@ -1406,125 +1394,132 @@
           </picture>
         </figure>
         <div class="notes">
-          The people, shrugging, flame and final meme are an illustrative sequence about expertise and
-          understanding in complex systems, not a claim that all AI use causes expertise loss or failure.
-          Once revealed, the final This is Fine GIF remains visible and keeps playing as the camera navigates
-          away. Reversing its substep or re-entering this slide restores the earlier sequence for replay.
-          Diagram: https://srecon26.hatchman76.com/images/complex_sign_transparent.png
-          This is Fine: KC Green's comic, animated by Philcrifo via Imgur.
-          GIF source: https://imgur.com/gallery/i-animated-this-is-fine-comic-tjxrc
-          Original comic: https://gunshowcomic.com/648
+          <p>The people, shrugging, flame and “This is Fine” are a metaphor for uncertain understanding and unaddressed trouble in a complex system. The system remains complex even when the people responsible for it can no longer explain what is happening or how to intervene.</p>
+          <p>This is an illustration of a risk to expertise and control, not evidence that every use of AI causes expertise loss or failure.</p>
+          <p>Artwork credit: <cite>This is Fine</cite> by KC Green, animated by Philcrifo. Original comic: https://gunshowcomic.com/648. Animation credit: https://imgur.com/gallery/i-animated-this-is-fine-comic-tjxrc.</p>
         </div>
       </section>
 
-      <section id="ai-margin-pressure" class="step"
-        data-x="-6500" data-y="281476" data-scale="4.262906"
-        aria-label="AI margin pressure, empty slide"
-      ></section>
-      <section id="ai-fish-diagram-overview" class="step"
-        data-x="0" data-y="283000" data-scale="25"
-      ></section>
-
-      <section id="workflow-cost" class="step practice-slide"
-        data-x="0" data-y="308000" data-scale="25">
-        <h2 class="practice-title">The cost of a verified outcome</h2>
-        <p class="practice-lede">Follow one AI-assisted change all the way into service.</p>
-        <dl class="practice-rows">
-          <div><dt>Generate</dt><dd>Model, tools and compute</dd></div>
-          <div><dt>Verify</dt><dd>Review, tests and security checks</dd></div>
-          <div><dt>Operate</dt><dd>Maintenance, rework and recovery</dd></div>
-        </dl>
-        <p class="practice-measure">Total workflow cost <span aria-label="divided by">÷</span> completed, verified outcomes</p>
-        <p class="substep practice-takeaway">Remove low-value demand before cutting assurance.</p>
+      <section id="ai-margin-pressure" class="step ai-margin-pressure-slide"
+        data-x="-6500" data-y="306476" data-scale="4.262906" data-phase="0" data-progress="0"
+        aria-label="An illustrative pressure scenario: a protective Lemming is buried by workslop and a point crosses the error margin towards the performance boundary"
+      >
+        <div class="ai-margin-scene" aria-hidden="true">
+          <picture class="ai-margin-lemming">
+            <source media="(prefers-reduced-motion: reduce), print" srcset="/images/qcon26/blocker-lemming.png" />
+            <img src="/images/qcon26/blocker-lemming.gif" alt="" />
+          </picture>
+          <img class="ai-margin-start-reference" src="/images/srecon26/logo-ai-mashup.png" alt="" />
+          <svg class="ai-margin-trail" viewBox="0 0 1020 780">
+            <defs>
+              <path class="ai-margin-approach-guide" d="M800 350 C690 350 560 355 410.233 393.752" />
+              <mask id="ai-margin-trail-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1020" height="780">
+                <path class="ai-margin-trail-reveal" d="M800 350 C690 350 560 355 410.233 393.752 C350 350 228 268 156.5 216.8" pathLength="1" fill="none" stroke="white" stroke-width="12" stroke-dasharray="1" stroke-dashoffset="1" />
+                <circle cx="800" cy="350" r="68.7" fill="black" />
+                <circle class="ai-margin-trail-cutout" cx="800" cy="350" r="68.7" fill="black" />
+              </mask>
+            </defs>
+            <path class="ai-margin-trail-path" d="M800 350 C690 350 560 355 410.233 393.752 C350 350 228 268 156.5 216.8" mask="url(#ai-margin-trail-mask)" />
+          </svg>
+          <div class="ai-margin-rain"></div>
+          <span class="ai-margin-point"><img src="/images/srecon26/logo-ai-mashup.png" alt="" /></span>
+        </div>
+        <p class="ai-margin-warning" aria-live="polite" aria-hidden="true"><span class="ai-margin-red-light" aria-hidden="true">🚨</span><span>Error margin crossed</span></p>
+        <span class="substep ai-margin-pressure-trigger" aria-hidden="true"></span>
+        <span class="substep ai-margin-crossing-trigger" aria-hidden="true"></span>
         <div class="notes">
-          <h3>One workflow, end to end</h3>
-          <p>The previous slide asks us to use AI to improve assurance. Here is how to start. Carry one example through this section: an AI-assisted change to a service's retry behaviour. These are proposed engineering practices and an illustrative workflow, not results from an intervention study.</p>
-          <p>Trace a small sample from request through generation, review, deployment and operation. Include model and tool charges, allocated platform costs, and the human effort to check intent, test behaviour, fix mistakes and maintain the result. Observe authoring time and reviewer or on-call effort separately so a local saving cannot hide transferred work. When combining effort and cash into a cost estimate, state the conversion assumptions and avoid counting the same labour twice. Compare comparable work with a relevant baseline and require useful outcomes, rather than counting every generated proposal as value.</p>
-          <p>The retry change may be quick to generate while someone else must understand failure modes, check dependency limits and repair an incident. A short pilot cannot establish long-term recovery cost. Mark that uncertainty and follow up after release. Do not claim a saving from a short generation-time measurement alone.</p>
-          <h3>A decision this enables</h3>
-          <p>If full cost rises without improved useful outcomes, retire low-value uses, reduce scope, bound agent loops and retries, or try less expensive routing where equivalent verification supports it. Check whether each change reduces total cost rather than moving work elsewhere. Preserve expertise and review capacity. Budgets and quotas are management controls, not additional Rasmussen boundaries.</p>
-          <p>Source basis: the lifecycle-cost identity in TALK.md and the earlier economic slides. Chapter 5 §§5.2.4 and 5.5.2 discusses transferred costs and future adaptability. The measure and retry example are this talk's software-workflow synthesis.</p>
-          <ul><li>Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5</li></ul>
+          <p>The buckets represent accumulating workslop and pressure on the capacity to protect performance. The Lemming stands for deliberate intervention: someone with the expertise, time and authority to pause or redirect work.</p>
+          <p>This close-up is a separate illustrative scenario. Its point represents the state in that scenario, and its reference ball marks where the scenario began. The dotted trail is an illustrated journey, not a new boundary or a measured path.</p>
+          <p>The alert beacon marks a crossed perceived limit and the loss of protected margin. Warning signals do not restore control by themselves. People still need the understanding, resources and authority to intervene before the actual functional limit is reached.</p>
+          <p>This is a possible trajectory, not evidence that all AI output is workslop or that AI inevitably causes failure. Organisational choices, expertise and usable feedback shape what happens.</p>
+        </div>
+      </section>
+      <section id="ai-fish-diagram-overview" class="step ai-margin-summary"
+        data-x="-8000" data-y="308000" data-scale="42">
+        <h2>Pressure<br />and control</h2>
+        <ul>
+          <li><span aria-hidden="true">📥</span><span>Unverified work accumulates.</span></li>
+          <li><span aria-hidden="true">🛑</span><span>Time, expertise and protective action get squeezed.</span></li>
+          <li><span aria-hidden="true">🚨</span><span>Warnings help only when people can act.</span></li>
+        </ul>
+        <div class="notes">
+          <p>The scenario links accumulated verification work, pressure on protective capacity and the ability to intervene. More generated output is useful only when the system can understand, check and maintain what it accepts.</p>
+          <p>A warning needs someone able to respond. Protect expertise, focused time, usable feedback and authority to change commitments. The scenario illustrates a risk, not an inevitable effect of AI.</p>
         </div>
       </section>
 
-      <section id="verification-capacity" class="step practice-slide"
+      <section id="workflow-cost" class="step practice-slide closing-skills"
         data-x="0" data-y="333000" data-scale="25">
-        <h2 class="practice-title">Work the team can verify</h2>
-        <p class="practice-lede">A growing review queue is a decision point.</p>
-        <dl class="practice-rows">
-          <div><dt>Watch</dt><dd>Review age and work in progress</dd></div>
-          <div><dt>Limit</dt><dd>Parallel agents and incoming changes</dd></div>
-          <div><dt>Protect</dt><dd>Focused review and learning time</dd></div>
-        </dl>
-        <p class="practice-measure">An owner with time and authority to pause intake</p>
-        <p class="substep practice-takeaway">When checking falls behind, change scope or timing.</p>
+        <h2 class="practice-title">Skills that protect margin</h2>
+        <ul class="closing-rows">
+          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🔎</span><div><h3>Systems understanding</h3><p>Trace how AI shifts cost, workload and risk across the system.</p></div></li>
+          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🧠</span><div><h3>Critical judgment</h3><p>Challenge plausible output and test it against the real work.</p></div></li>
+          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🔄</span><div><h3>Adaptation and recovery</h3><p>Notice drift, revise mental models and act before margin runs out.</p></div></li>
+        </ul>
+        <p class="substep closing-takeaway">Expertise turns warnings into protective action.</p>
         <div class="notes">
-          <h3>Admission creates a commitment</h3>
-          <p>In the retry example, many agents can propose changes across many services. The useful question is how much work we choose to admit to the team's verification queue. Count work in progress and the age of outstanding reviews alongside complexity, checking effort and effective expert capacity. Headcount or raw change count alone misses differences in context and risk.</p>
-          <p>Agree a local admission limit and review-age trigger before increasing parallel work. Use the team's baseline and the consequences of delay to choose them, then revise them with experience. There is no universally correct ratio or ticket limit. Keep room for interrupts and variable work rather than planning every reviewer's attention to full utilization.</p>
-          <p>When the trigger fires, the named lead can pause new agent submissions, defer low-value changes or reduce scope. Management must accept the changed delivery expectation and protect time for reviewers. Keep urgent reliability or security work on a deliberate triage path. Pausing new work does not abandon work already owed.</p>
-          <h3>Understanding is part of capacity</h3>
-          <p>Give engineers time to explain the retry policy, inspect the dependency and practise diagnosis. AI can help comprehension and test discovery, provided someone checks that the evidence is useful. Validate any claimed reduction in review effort. Do not treat reviewer availability after hours as sustainable capacity.</p>
-          <p>Queue growth shows delay and capacity pressure. It does not by itself establish a defect increase. Performance risk additionally depends on adaptations such as bypassed checks or reduced testing. This admission practice is the talk's application of the earlier workload argument. Google's overload chapter supports quantifying and reprioritizing work, with thresholds specific to each team.</p>
-          <ul><li>Google SRE Workbook, Identifying and Recovering from Overload</li></ul>
+          <p>Rasmussen directs attention to how locally reasonable decisions interact across the whole system. AI can change cost, effort and the pace of proposed action. Expertise helps people see those interactions, question plausible explanations and recognise when a plan no longer fits. Protecting margin requires useful feedback and the capacity to act on it. Crossing the dotted line begins consuming the protected buffer before the actual functional boundary. It does not establish that harm has already occurred.</p>
+          <p>Sources: Rasmussen (1997), Cook (2000), Hoffman et al. (2013), Woods (2018).</p>
         </div>
       </section>
 
-      <section id="evidence-handoff" class="step practice-slide"
+      <section id="verification-capacity" class="step practice-slide closing-tools"
         data-x="0" data-y="358000" data-scale="25">
-        <h2 class="practice-title">A handoff with evidence</h2>
-        <p class="practice-lede">Example: an AI-assisted change to retry behaviour.</p>
-        <dl class="practice-rows practice-rows-four">
-          <div><dt>Intent</dt><dd>Which failures should we retry?</dd></div>
-          <div><dt>Evidence</dt><dd>Retry limits, timeout and load tests</dd></div>
-          <div><dt>Exposure</dt><dd>Permissions, data paths and dependencies</dd></div>
-          <div><dt>Ownership</dt><dd>A maintainer who can explain the change</dd></div>
-        </dl>
-        <p class="substep practice-takeaway">AI can help find test gaps.<br />Check the results against the requirement.</p>
+        <h2 class="practice-title">Tool vs Operator</h2>
+        <ul class="closing-rows closing-tool-rows">
+          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🧰</span><div><h3>AI assists the operator</h3><p>Explore, diagnose and test, with people checking the result.</p></div></li>
+          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🎛️</span><div><h3>AI acts in the system</h3><p>Bound its permissions and pace, retain authority to stop and recover.</p></div></li>
+        </ul>
+        <p class="substep closing-takeaway">Test people, tools and workflow together.</p>
         <div class="notes">
-          <h3>Enough evidence for the recipient</h3>
-          <p>Add a short handoff to the existing change process rather than creating a parallel bureaucracy. State the intended behaviour, link the relevant requirement or dependency documentation, show what was tested, and identify uncertainty. Record model or tool versions when needed to reproduce the work. Explain any changed permissions, data paths or dependency assumptions, including an explicit statement when none changes.</p>
-          <p>For this retry change, inspect which errors are transient, whether the operation is safe to repeat, how attempts and elapsed time are bounded, and what happens when many callers retry together. Use a controlled environment and representative failure conditions. Ask the author to explain the trade-offs and ask a maintainer to identify what they would inspect during an incident. These are examples to adapt to the service, not a universal test checklist.</p>
-          <h3>AI as an assurance aid</h3>
-          <p>Use AI to suggest edge cases, locate source evidence or draft tests. Validate the source and expected result independently against the requirement, a reference implementation or observed behaviour. A test copied from the same mistaken assumption can agree with faulty code. An additional model or a fluent explanation does not by itself provide independent evidence.</p>
-          <p>Choose checking depth according to the consequence and reversibility of the action. Enforce scoped permissions at the execution boundary and separate proposal from authority to enact consequential changes. Preserve a named maintainer and time to learn, so ownership includes practical understanding. The handoff is this talk's proposed practice, drawing on the earlier workload, security and incident-understanding discussion.</p>
-          <ul><li>Rayo, Morey, Grøtan and Woods (2026), Chapter 5 §§5.3 and 5.5.3, expertise and situated joint evaluation</li></ul>
+          <p>AI can assist diagnosis, testing and explanation, and can also be authorised to act. It can change existing feedback and action channels. The distinction changes what must be bounded and observed. People need useful evidence, practical understanding and enforceable authority to interrupt or recover. Evaluate the joint workflow with relevant baselines and both helpful and misleading outputs. The clinical joint-performance research motivates this question but does not estimate software or LLM risk. Whether an application helps depends on its use and evaluation, not the label “tool” or “operator”.</p>
+          <p>Sources: Rasmussen (1997), Morey et al. (2025), Rayo et al. (2026), Chapter 5.</p>
         </div>
       </section>
 
-      <section id="rehearsed-recovery" class="step practice-slide"
+      <section id="evidence-handoff" class="step practice-slide closing-summary"
         data-x="0" data-y="383000" data-scale="25">
-        <h2 class="practice-title">Intervention and recovery</h2>
-        <p class="practice-lede">Controlled exercise: a retry change overloads a dependency.</p>
-        <dl class="practice-rows practice-rows-four">
-          <div><dt>Notice</dt><dd>Can our checks expose the mistake?</dd></div>
-          <div><dt>Stop</dt><dd>Who can pause further action?</dd></div>
-          <div><dt>Recover</dt><dd>Does the fallback restore service?</dd></div>
-          <div><dt>Repeat</dt><dd>After model or workflow changes</dd></div>
-        </dl>
-        <p class="substep practice-takeaway">Measure time to notice, stop and restore.<br />Test people, tools and workflow together.</p>
+        <h2 class="practice-title">We have to adapt</h2>
+        <ul class="closing-rows closing-summary-rows">
+          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">💸</span><p><strong>Economic:</strong> Count generation, verification, operation and switching costs.</p></li>
+          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">😢</span><p><strong>Workload:</strong> Match AI output to the team’s ability to understand and check it.</p></li>
+          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">💥</span><p><strong>Performance:</strong> Test the work, including plausible AI mistakes and recovery.</p></li>
+          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🛟</span><p><strong>Error margin:</strong> Give people time, expertise and authority to turn signals into action.</p></li>
+        </ul>
+        <p class="substep closing-takeaway">Local savings can create pressure elsewhere.</p>
         <div class="notes">
-          <h3>A convincing mistake, outside production</h3>
-          <p>In an isolated exercise, give the team a plausible retry change with a consequential flaw, such as a missing retry limit. It looks reasonable and its happy-path tests pass, but a dependency slowdown causes repeated calls. This is a fictional scenario to adapt, not an incident report. Include useful and mediocre recommendations as well, and compare with a relevant baseline. A single deliberately bad case is not a full evaluation of joint performance.</p>
-          <p>Observe whether the team finds the relevant evidence, detects the flaw and can reach someone with authority and capacity to act. Exercise the actual stop mechanism: pause new work, halt further rollout or revoke the tool's ability to act. Scoped credentials, bounded execution and separation between proposal and execution must make the limit enforceable. A written instruction to stop is insufficient if the system can continue acting.</p>
-          <p>Practise the fallback or rollback and confirm user-visible recovery. A code rollback may not reverse data changes or remove a backlog, so test restore or reconciliation where necessary. Start with limited exposure and service-specific observation when the change eventually enters the ordinary release process. Update the probes and runbook to match the changed service behaviour.</p>
-          <h3>Observe joint performance</h3>
-          <p>Record useful outcomes, checking effort, consequential-error detection, and the time to notice, intervene and restore. Use the findings to change the workflow, training, permissions or recovery mechanism. Repeat evaluation after material changes in models, tools, dependencies or staffing. The aim is sufficient margin and recoverability. Operational signals remain proxies for the actual functional limit, and an SLO error budget is not Rasmussen's error margin.</p>
-          <p>The exercise is the talk's software application of Chapter 5's situated joint-evaluation argument. The clinical evidence discussed earlier does not estimate software or LLM risk. Google's canary guidance supports bounded exposure, evaluation and an explicit rollout response.</p>
-          <ul>
-            <li>Rayo, Morey, Grøtan and Woods (2026), Chapter 5 §5.5.3</li>
-            <li>Google SRE Workbook, Canarying Releases</li>
-          </ul>
+          <p>The same three constraints remain: economic viability, acceptable workload and acceptable performance. AI can save effort in one place while moving verification, maintenance or recovery work elsewhere. Count the whole workflow and protect the people who interpret warning signals and own corrective action. Error margin is a protected performance-side buffer, not an SLO error budget or a fourth constraint. These proposed responses need local evidence and adjustment as conditions change.</p>
+          <p>Sources: Rasmussen (1997), Rayo et al. (2026), CMA (2025).</p>
+        </div>
+      </section>
+
+      <section id="rehearsed-recovery" class="step practice-slide closing-humans"
+        data-x="0" data-y="408000" data-scale="25">
+        <h2 class="practice-title">Humans are adaptable</h2>
+        <div class="substep closing-human-scene">
+          <img src="/images/srecon24/robot-human-together.png" alt="A person and a robot holding hands" />
+          <p>Expertise, coordination and judgment help us respond when plans no longer fit.</p>
+        </div>
+        <div class="substep closing-capacity">
+          <span><span class="closing-emoji" aria-hidden="true">🧠</span>Expertise</span>
+          <span><span class="closing-emoji" aria-hidden="true">⏳</span>Time</span>
+          <span><span class="closing-emoji" aria-hidden="true">🛑</span>Authority</span>
+        </div>
+        <p class="substep closing-takeaway">Use AI to strengthen our capacity to understand, act and recover.</p>
+        <div class="notes">
+          <p>Adaptive capacity is developed before surprise and renewed through everyday work. Expertise, shared understanding and coordination help people change plans when familiar responses are no longer enough. They also need time, resources and authority to act. AI can contribute to that capacity when its use supports understanding and effective action. The aim is sustained joint performance and recoverability. This is the talk's application of resilience engineering, not a guarantee that humans or tools can absorb unlimited pressure.</p>
+          <p>Sources: Cook (2000), Allspaw (2019), Woods (2018), Hoffman et al. (2013).</p>
         </div>
       </section>
 
       <section id="references" class="step references-slide"
-        data-x="0" data-y="408000" data-scale="25">
+        data-x="0" data-y="433000" data-scale="25">
         <h2 class="references-title">References</h2>
         <div class="references-tabs" role="tablist" aria-label="Reference collections">
           <button id="references-tab-qcon" type="button" role="tab" data-reference-tab="qcon" aria-controls="references-qcon" aria-selected="true" tabindex="0">QCon sources (17)</button>
           <button id="references-tab-srecon26" type="button" role="tab" data-reference-tab="srecon26" aria-controls="references-srecon26" aria-selected="false" tabindex="-1">SREcon26 sources (13)</button>
+          <button id="references-tab-tokens" type="button" role="tab" data-reference-tab="tokens" aria-controls="references-tokens" aria-selected="false" tabindex="-1">Token economy (12)</button>
+          <button id="references-tab-resilience" type="button" role="tab" data-reference-tab="resilience" aria-controls="references-resilience" aria-selected="false" tabindex="-1">Resilience (2)</button>
         </div>
         <div id="references-qcon" class="references-page" role="tabpanel" aria-labelledby="references-tab-qcon">
           <div class="references-columns">
@@ -1579,7 +1574,7 @@
               <ul class="references-list">
                 <li><a href="https://www.youtube.com/watch?v=yGN5DBpW93g" target="_blank" rel="noreferrer"><strong>Russell L. Ackoff</strong><span>From Mechanistic to Systemic Thinking</span></a></li>
                 <li><a href="https://ckrybus.com/static/papers/Bainbridge_1983_Automatica.pdf" target="_blank" rel="noreferrer"><strong>Lisanne Bainbridge</strong><span>Ironies of Automation</span></a></li>
-                <li><a href="https://www.researchgate.net/publication/228797158_How_complex_systems_fail" target="_blank" rel="noreferrer"><strong>Richard I. Cook</strong><span>How Complex Systems Fail</span></a></li>
+                <li><a href="https://www.adaptivecapacitylabs.com/HowComplexSystemsFail.pdf" target="_blank" rel="noreferrer"><strong>Richard I. Cook</strong><span>How Complex Systems Fail</span></a></li>
                 <li><a href="https://arxiv.org/html/2506.14652v2" target="_blank" rel="noreferrer"><strong>Olteanu, Blodgett et al.</strong><span>Rigor in AI</span></a></li>
               </ul>
             </div>
@@ -1594,10 +1589,57 @@
             </div>
           </div>
         </div>
+        <div id="references-tokens" class="references-page" role="tabpanel" aria-labelledby="references-tab-tokens" hidden>
+          <div class="references-columns">
+            <div class="references-group">
+              <h3>Platform power</h3>
+              <ul class="references-list">
+                <li><a href="https://us.macmillan.com/books/9780374619329/enshittification/" target="_blank" rel="noreferrer"><strong>Cory Doctorow (2025)</strong><span>Enshittification · book and excerpt</span></a></li>
+                <li><a href="https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys" target="_blank" rel="noreferrer"><strong>Cory Doctorow (2023)</strong><span>Original platform lifecycle essay</span></a></li>
+                <li><a href="https://assets.publishing.service.gov.uk/media/688b20e6ff8c05468cb7b120/summary_of_final_decision.pdf" target="_blank" rel="noreferrer"><strong>CMA (2025)</strong><span>Cloud market · final decision</span></a></li>
+                <li><a href="https://www.gov.uk/government/news/cma-takes-first-steps-to-ensure-choice-in-business-software" target="_blank" rel="noreferrer"><strong>CMA (October 2026)</strong><span>Cloud switching improvements and remaining barriers</span></a></li>
+              </ul>
+            </div>
+            <div class="references-group">
+              <h3>Tokens &amp; costs</h3>
+              <ul class="references-list">
+                <li><a href="https://tokenmaxxing.sh/" target="_blank" rel="noreferrer"><strong>Tokenmaxxing leaderboard</strong><span>Token use and estimated API-equivalent spend</span></a></li>
+                <li><a href="https://cursor.com/blog/aug-2025-pricing" target="_blank" rel="noreferrer"><strong>Michael Truell / Cursor (2025)</strong><span>Auto usage and pricing changes</span></a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router-how-it-works" target="_blank" rel="noreferrer"><strong>Microsoft Learn (2026)</strong><span>Model routing and cost trade-offs</span></a></li>
+                <li><a href="https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts" target="_blank" rel="noreferrer"><strong>Stanford HAI (2025)</strong><span>Falling prices at fixed model capability</span></a></li>
+                <li><a href="https://hai.stanford.edu/ai-index/2025-ai-index-report" target="_blank" rel="noreferrer"><strong>Stanford AI Index (2025)</strong><span>Hardware-cost and efficiency trends</span></a></li>
+              </ul>
+            </div>
+            <div class="references-group">
+              <h3>AI competition</h3>
+              <ul class="references-list">
+                <li><a href="https://www.gov.uk/government/news/cma-outlines-growing-concerns-in-markets-for-ai-foundation-models" target="_blank" rel="noreferrer"><strong>CMA (2024)</strong><span>Foundation models · competition risks</span></a></li>
+                <li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017" target="_blank" rel="noreferrer"><strong>DeepSeek (October 2026)</strong><span>Model card and MIT-licensed weights</span></a></li>
+                <li><a href="https://api-docs.deepseek.com/quick_start/pricing/" target="_blank" rel="noreferrer"><strong>DeepSeek API</strong><span>Hosted service and token pricing</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="references-resilience" class="references-page" role="tabpanel" aria-labelledby="references-tab-resilience" hidden>
+          <div class="references-columns">
+            <div class="references-group">
+              <h3>Adaptive capacity</h3>
+              <ul class="references-list">
+                <li><a href="https://speakerdeck.com/jallspaw/amplifying-sources-of-resilience" target="_blank" rel="noreferrer"><strong>John Allspaw (2019)</strong><span>Amplifying Sources of Resilience · presentation abstract</span></a></li>
+              </ul>
+            </div>
+            <div class="references-group">
+              <h3>Adapting to surprise</h3>
+              <ul class="references-list">
+                <li><a href="https://beta.irgc.org/wp-content/uploads/2018/12/Woods-for-IRGC-Resilience-Guide-Vol-2-2018.pdf" target="_blank" rel="noreferrer"><strong>David D. Woods (2018)</strong><span>Resilience is a Verb · IRGC resource guide, Vol. 2</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <script src="/vendor/impress.js/js/impress.min.js"></script>
-    <script src="/main.js?v=42"></script>
+    <script src="/main.js?v=54"></script>
   </body>
 </html>

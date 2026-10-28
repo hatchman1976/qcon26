@@ -1,8 +1,8 @@
-# Slide 3 — One more thing...
+# Some recurring characters
 
 ## Slide copy
 
-**One more thing...**
+**Some recurring characters**
 
 Reveal 1:
 
@@ -15,9 +15,8 @@ Reveal 2:
 
 ## Speaker notes
 
-Set the terminology for this talk: when discussing AI, include LLMs and agents; treat them as part of a complex distributed software system.
 
-The source slide builds these two statements in sequence.
+The recurring images are visual shorthand: the AI ball represents AI, including LLMs and agents, and the complex-system drawing represents a complex distributed software system. The audience will see these images throughout the talk. AI participates within these systems.
 
 ## Sources
 

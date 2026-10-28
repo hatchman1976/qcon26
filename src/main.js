@@ -5,6 +5,52 @@ if (prefersReducedMotion.matches) {
   root.dataset.transitionDuration = "0";
 }
 
+// The native plugin resets reveals on entry. Keep these slides' last reveal
+// state when revisiting them, while still allowing manual reversal.
+document.addEventListener("impress:stepenter", (event) => {
+  if (!event.target.matches(".practice-slide, .token-economy-slide, .model-enshittification-slide, .ai-margin-pressure-slide")) return;
+  const revealed = [...event.target.querySelectorAll(".substep-visible")];
+  queueMicrotask(() => revealed.forEach((substep) => substep.classList.add("substep-visible")));
+}, true);
+
+const tokenEconomySlide = root.querySelector("#token-economy");
+const modelEnshittificationSlide = root.querySelector("#model-enshittification");
+document.addEventListener("impress:stepenter", (event) => {
+  if (event.target !== modelEnshittificationSlide) return;
+  // One heading occupies the same canvas position in both overlapping steps.
+  // Complete the preceding reveal sequence for direct links to this step too.
+  const substeps = [...tokenEconomySlide.querySelectorAll(".substep")];
+  substeps.forEach((substep, index) => {
+    substep.classList.add("substep-visible");
+    substep.classList.toggle("substep-active", index === substeps.length - 1);
+  });
+});
+
+const paperThemesSlide = root.querySelector("#paper-themes");
+const lastPaperTheme = paperThemesSlide.querySelector(".paper-theme:last-child");
+
+function retainPaperThemesForReducedMotion() {
+  if (prefersReducedMotion.matches && paperThemesSlide.classList.contains("has-entered")) {
+    paperThemesSlide.classList.add("is-rendered");
+  }
+}
+
+document.addEventListener("impress:stepenter", (event) => {
+  if (event.target !== paperThemesSlide) return;
+  // Keep the first entrance running on the canvas through navigation.
+  paperThemesSlide.classList.add("has-entered");
+  retainPaperThemesForReducedMotion();
+});
+paperThemesSlide.addEventListener("animationend", (event) => {
+  if (event.target === lastPaperTheme && event.animationName === "paper-theme-reveal") {
+    paperThemesSlide.classList.add("is-rendered");
+  }
+});
+prefersReducedMotion.addEventListener("change", retainPaperThemesForReducedMotion);
+window.addEventListener("beforeprint", () => {
+  if (paperThemesSlide.classList.contains("has-entered")) paperThemesSlide.classList.add("is-rendered");
+});
+
 const plainFishSlide = root.querySelector("#the-fish-diagram");
 const plainFishGeometry = [...plainFishSlide.querySelectorAll(".plain-boundary-reveal, .plain-model-margin")];
 const plainFishCloseups = new Set([
@@ -12,6 +58,10 @@ const plainFishCloseups = new Set([
   "workload-boundary", "workload-boundary-actions", "performance-boundary", "error-margin", "fish-diagram-overview",
 ]);
 const complexFishSlide = root.querySelector("#complex-system-and-boundaries");
+
+function retainComplexScene() {
+  complexFishSlide.classList.add("is-fish-rendered", "is-rendered");
+}
 
 function retainPlainFishGeometry() {
   plainFishGeometry.forEach((piece) => {
@@ -28,21 +78,27 @@ document.addEventListener("impress:stepenter", (event) => {
     plainFishGeometry.forEach((piece) => piece.classList.add("is-rendered"));
   }
   if (event.target === complexFishSlide && prefersReducedMotion.matches) {
-    complexFishSlide.classList.add("is-fish-rendered");
+    retainComplexScene();
   }
 });
 document.addEventListener("animationend", (event) => {
   if (event.animationName === "social-fish-piece-reveal" && complexFishSlide.contains(event.target)) {
     complexFishSlide.classList.add("is-fish-rendered");
   }
+  if (event.animationName === "complex-ai-reveal" && complexFishSlide.contains(event.target)) {
+    retainComplexScene();
+  }
 });
 document.addEventListener("impress:stepleave", (event) => {
-  if (event.target === complexFishSlide) complexFishSlide.classList.add("is-fish-rendered");
+  if (event.target === complexFishSlide) retainComplexScene();
 });
 prefersReducedMotion.addEventListener("change", () => {
   if (prefersReducedMotion.matches && complexFishSlide.classList.contains("active")) {
-    complexFishSlide.classList.add("is-fish-rendered");
+    retainComplexScene();
   }
+});
+window.addEventListener("beforeprint", () => {
+  if (complexFishSlide.classList.contains("active")) retainComplexScene();
 });
 
 const arrowPulseSteps = [...document.querySelectorAll(".social-arrow-pulses")]
@@ -105,7 +161,8 @@ document.addEventListener("impress:substep:leave", (event) => {
 
 document.addEventListener("impress:stepenter", (event) => {
   const pulseStep = arrowPulseSteps.find(({ layer, trigger }) =>
-    event.target.contains(layer) && trigger?.classList.contains("substep-visible")
+    event.target.contains(layer) && (trigger?.classList.contains("substep-visible") ||
+      (event.target === complexFishSlide && complexFishSlide.classList.contains("is-rendered") && !prefersReducedMotion.matches))
   );
   if (pulseStep) startArrowPulses(pulseStep);
 });
@@ -176,8 +233,9 @@ window.addEventListener("afterprint", syncExpertiseSequence);
 const roamingPointStep = document.querySelector("#the-fish-diagram .plain-roaming-point-reveal");
 const roamingPointPosition = roamingPointStep.querySelector(".plain-roaming-point-position");
 const workloadMovingLine = document.querySelector("#the-fish-diagram .plain-workload-motion .plain-barrier-moving");
+// Preserve the point's conservative motion envelope independently of the visible boundary fill.
 const playingSurfacePath = new Path2D(
-  document.querySelector("#the-fish-diagram .plain-playing-surface-shade path").getAttribute("d")
+  document.querySelector("#the-fish-diagram .plain-playing-surface-shade path").dataset.roamingEnvelope
 );
 const playingSurfaceCanvas = document.createElement("canvas");
 playingSurfaceCanvas.width = 1024;
@@ -403,11 +461,153 @@ const aiFishSlide = document.querySelector("#ai-fish-diagram");
 const aiFishModel = aiFishSlide.querySelector(".ai-fish-model");
 const aiRoamingPoint = aiFishSlide.querySelector(".ai-roaming-point-position");
 const aiRoamingSteps = new Set([
-  "ai-operating-point", "ai-fish-diagram", "ai-economic-pressure", "ai-workload-pressure",
-  "erosion-of-expertise", "expertise-erosion-sequence", "ai-margin-pressure", "ai-fish-diagram-overview",
+  "ai-operating-point", "ai-fish-diagram", "ai-economic-pressure", "token-economy", "model-enshittification",
+  "ai-workload-pressure", "erosion-of-expertise", "expertise-erosion-sequence", "ai-margin-pressure",
+  "ai-fish-diagram-overview",
 ]);
 let aiRoamingTimeout;
 let aiRoamingCenter = { x: 512, y: 404 };
+
+const aiMarginSlide = root.querySelector("#ai-margin-pressure");
+const aiMarginPath = aiMarginSlide.querySelector(".ai-margin-trail-path");
+const aiMarginTrailReveal = aiMarginSlide.querySelector(".ai-margin-trail-reveal");
+const aiMarginTrailCutout = aiMarginSlide.querySelector(".ai-margin-trail-cutout");
+const aiMarginPoint = aiMarginSlide.querySelector(".ai-margin-point");
+const aiMarginPressureTrigger = aiMarginSlide.querySelector(".ai-margin-pressure-trigger");
+const aiMarginCrossingTrigger = aiMarginSlide.querySelector(".ai-margin-crossing-trigger");
+const aiMarginPathLength = aiMarginPath.getTotalLength();
+const aiMarginThreshold = aiMarginSlide.querySelector(".ai-margin-approach-guide").getTotalLength() / aiMarginPathLength;
+let aiMarginPhase = 0;
+let aiMarginProgress = 0;
+let aiMarginFrame;
+let aiMarginRunning = false;
+
+// The close-up has its own illustrative point; the wider model keeps roaming.
+const aiMarginDiameter = Number.parseFloat(getComputedStyle(aiRoamingPoint).getPropertyValue("--ai-ball-diameter")) / 2 *
+  Number(aiFishSlide.dataset.scale) / Number(aiMarginSlide.dataset.scale);
+aiMarginSlide.style.setProperty("--ai-margin-ball-diameter", aiMarginDiameter + "px");
+aiMarginSlide.querySelectorAll("#ai-margin-trail-mask circle").forEach((cutout) => {
+  cutout.setAttribute("r", String(aiMarginDiameter / 2 + 3));
+});
+
+// Lower layers arrive first and bury the protective intervention right of the margin.
+const aiMarginBucketLandings = [
+  [525, 630], [598, 630], [671, 630], [744, 630], [817, 630], [890, 630],
+  [565, 555], [638, 555], [711, 555], [784, 555], [857, 555],
+  [640, 480], [713, 480], [786, 480],
+  [680, 430], [753, 430],
+];
+aiMarginBucketLandings.forEach(([x, floor], index) => {
+  const bucket = document.createElement("img");
+  bucket.className = "ai-margin-bucket";
+  bucket.src = "/images/srecon26/ai-slop-bucket.png";
+  bucket.alt = "";
+  bucket.style.setProperty("--rain-x", x + "px");
+  bucket.style.setProperty("--rain-start-x", "0px");
+  bucket.style.setProperty("--rain-delay", index * 240 + "ms");
+  bucket.style.setProperty("--rain-sway", (index % 3 - 1) * 10 + "px");
+  bucket.style.setProperty("--rain-floor", floor + "px");
+  bucket.style.setProperty("--rain-tilt", (index % 5 - 2) * 9 + "deg");
+  aiMarginSlide.querySelector(".ai-margin-rain").append(bucket);
+});
+
+function marginPhaseFromSubsteps() {
+  if (aiMarginCrossingTrigger.classList.contains("substep-visible")) return 2;
+  return aiMarginPressureTrigger.classList.contains("substep-visible") ? 1 : 0;
+}
+
+function renderAiMarginProgress(progress) {
+  aiMarginProgress = progress;
+  const point = aiMarginPath.getPointAtLength(aiMarginPathLength * progress);
+  aiMarginPoint.style.setProperty("--margin-point-x", point.x + "px");
+  aiMarginPoint.style.setProperty("--margin-point-y", point.y + "px");
+  aiMarginTrailReveal.style.strokeDashoffset = String(1 - progress);
+  aiMarginTrailCutout.setAttribute("cx", String(point.x));
+  aiMarginTrailCutout.setAttribute("cy", String(point.y));
+  aiMarginSlide.dataset.progress = progress.toFixed(3);
+  const crossed = progress > aiMarginThreshold + 0.0001;
+  aiMarginSlide.classList.toggle("has-crossed-margin", crossed);
+  aiMarginSlide.querySelector(".ai-margin-warning").setAttribute("aria-hidden", String(!crossed));
+}
+
+function stopAiMarginAnimation() {
+  window.cancelAnimationFrame(aiMarginFrame);
+  aiMarginFrame = undefined;
+  aiMarginRunning = false;
+}
+
+function settleAiMarginPhase() {
+  stopAiMarginAnimation();
+  aiMarginSlide.classList.toggle("is-raining", aiMarginPhase > 0);
+  aiMarginSlide.classList.toggle("is-pressure-complete", aiMarginPhase > 0);
+  aiMarginSlide.classList.toggle("is-complete", aiMarginPhase === 2);
+  renderAiMarginProgress(aiMarginPhase === 2 ? 1 : aiMarginPhase === 1 ? aiMarginThreshold : 0);
+}
+
+function animateAiMarginTo(target, duration) {
+  const from = aiMarginProgress;
+  const startedAt = performance.now();
+  aiMarginRunning = true;
+  const tick = (now) => {
+    const fraction = Math.min(1, (now - startedAt) / duration);
+    const eased = fraction * fraction * (3 - 2 * fraction);
+    renderAiMarginProgress(from + (target - from) * eased);
+    if (fraction === 1) settleAiMarginPhase();
+    else aiMarginFrame = window.requestAnimationFrame(tick);
+  };
+  aiMarginFrame = window.requestAnimationFrame(tick);
+}
+
+function syncAiMarginPhase() {
+  const phase = marginPhaseFromSubsteps();
+  if (phase === aiMarginPhase) {
+    if (prefersReducedMotion.matches && aiMarginRunning) settleAiMarginPhase();
+    return;
+  }
+  const previous = aiMarginPhase;
+  stopAiMarginAnimation();
+  aiMarginPhase = phase;
+  aiMarginSlide.dataset.phase = String(phase);
+  if (phase < previous || prefersReducedMotion.matches) {
+    settleAiMarginPhase();
+    return;
+  }
+  aiMarginSlide.classList.remove("is-complete");
+  aiMarginSlide.classList.add("is-raining");
+  if (phase === 1) {
+    aiMarginSlide.classList.remove("is-pressure-complete");
+    renderAiMarginProgress(0);
+    animateAiMarginTo(aiMarginThreshold, 6500);
+  } else {
+    // A rapid second advance completes the first revealed stage before crossing.
+    aiMarginSlide.classList.add("is-pressure-complete");
+    renderAiMarginProgress(aiMarginThreshold);
+    animateAiMarginTo(1, 4000);
+  }
+}
+
+new MutationObserver(syncAiMarginPhase).observe(aiMarginSlide, {
+  subtree: true, attributes: true, attributeFilter: ["class"],
+});
+document.addEventListener("impress:stepenter", (event) => {
+  if (event.target !== aiMarginSlide) return;
+  aiMarginSlide.classList.add("has-entered");
+  queueMicrotask(syncAiMarginPhase);
+});
+document.addEventListener("impress:stepleave", (event) => {
+  if (event.target === aiMarginSlide) settleAiMarginPhase();
+});
+prefersReducedMotion.addEventListener("change", syncAiMarginPhase);
+window.addEventListener("beforeprint", () => {
+  if (aiMarginRunning) settleAiMarginPhase();
+});
+aiMarginSlide.addEventListener("click", (event) => {
+  if (!aiMarginSlide.classList.contains("active") || event.button !== 0 ||
+      event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+      event.target.closest("a, button, input, select, textarea")) return;
+  event.stopPropagation();
+  window.impress().next(event);
+});
 
 function retainAiFishDiagram() {
   aiFishSlide.classList.add("is-rendered");
@@ -419,7 +619,7 @@ function pauseAiRoaming() {
   if (!aiRoamingPoint.classList.contains("is-moving")) return;
   const position = new DOMMatrixReadOnly(getComputedStyle(aiRoamingPoint).transform);
   aiRoamingPoint.classList.remove("is-moving");
-  aiRoamingPoint.style.transform = `translate3d(${position.m41}px, ${position.m42}px, 0)`;
+  aiRoamingPoint.style.transform = "translate3d(" + position.m41 + "px, " + position.m42 + "px, 0)";
   aiRoamingCenter = { x: 512 + position.m41, y: 404 + position.m42 };
 }
 
@@ -443,9 +643,8 @@ function moveAiRoamingPoint() {
   const destination = candidates[Math.floor(Math.random() ** 2 * candidates.length)];
   if (!destination) return;
   aiRoamingPoint.classList.add("is-moving");
-  aiRoamingPoint.style.transform = `translate3d(${destination.x - 512}px, ${destination.y - 404}px, 0)`;
+  aiRoamingPoint.style.transform = "translate3d(" + (destination.x - 512) + "px, " + (destination.y - 404) + "px, 0)";
   aiRoamingCenter = destination;
-  // Match the six-second linear transition so there is no pause between destinations.
   aiRoamingTimeout = window.setTimeout(moveAiRoamingPoint, 6000);
 }
 

@@ -12,7 +12,7 @@ The introduction, research headings and explanations use 32px text. Figure 8 is 
 
 ## Reveal sequence
 
-Show the title, introduction and Figure 8 immediately. Once the slide settles, fade in the five research themes automatically from top to bottom without presenter clicks. Each fade takes 600ms, with 1.1 seconds between starts. Replay the sequence on each visit. Reduced-motion mode and print show all five immediately.
+Show the title, introduction and Figure 8 immediately. On the first entry, once the slide settles, fade in the five research themes automatically from top to bottom without presenter clicks. Each fade takes 600ms, with 1.1 seconds between starts. The sequence continues if the camera leaves early, and revealed themes remain visible for the rest of the presentation. Returning does not replay the entrance. Reduced-motion mode and print show all five immediately.
 
 Starting state:
 

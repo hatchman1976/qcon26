@@ -2,7 +2,7 @@
 
 Rendered step: `#/ai-workload-pressure`.
 
-Canvas position: `data-x="2100"`, `data-y="284150"`, `data-scale="3.037465"`, inside the lower-right portion of the AI fish diagram, moved 1,500 canvas units left.
+Canvas position: `data-x="4250"`, `data-y="308750"`, `data-scale="3.037465"`, inside the lower-right part of the AI fish diagram. This matches the marked destination while preserving the slide's size.
 
 ## Slide copy and sequence
 
@@ -16,7 +16,7 @@ Pass off plausible AI reasoning as your own judgment.<br />Quick answers can hid
 
 **Multiply the streams**
 
-Agents generate more proposals; humans inherit<br />review, integration and maintenance.
+Agents generate more proposals, and humans inherit<br />review, integration and maintenance.
 
 **Squeeze recovery**
 

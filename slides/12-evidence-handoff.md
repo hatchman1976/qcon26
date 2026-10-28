@@ -1,36 +1,32 @@
-# A handoff with evidence
+# We have to adapt
 
 Rendered step: `#/evidence-handoff`.
 
-## Slide copy and sequence
+## Slide copy
 
-**A handoff with evidence**
+**We have to adapt**
 
-Example: an AI-assisted change to retry behaviour.
+| | Theme | Meaning |
+| --- | --- | --- |
+| 💸 | Economic | Count generation, verification, operation and switching costs. |
+| 😢 | Workload | Match AI output to the team’s ability to understand and check it. |
+| 💥 | Performance | Test the work, including plausible AI mistakes and recovery. |
+| 🛟 | Error margin | Give people time, expertise and authority to turn signals into action. |
 
-| Practice | Detail |
-| --- | --- |
-| Intent | Which failures should we retry? |
-| Evidence | Retry limits, timeout and load tests |
-| Exposure | Permissions, data paths and dependencies |
-| Ownership | A maintainer who can explain the change |
+**Local savings can create pressure elsewhere.**
 
-AI can help find test gaps.<br />Check the results against the requirement.
+## Preparation and reveals
 
-The final takeaway is a presenter reveal.
+Keep the existing step ID, order and camera: `data-x="0"`, `data-y="383000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Open Sans body text. Four native substeps introduce the theme rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
+
+Presentation source: [SREcon26 — We have to adapt](https://srecon26.hatchman76.com/#/takeaways-summary). The QCon version returns to its three constraints and performance-side buffer.
 
 ## Speaker notes
 
-### Enough evidence for the recipient
+The same three constraints remain: economic viability, acceptable workload and acceptable performance. AI can save effort in one place while moving verification, maintenance or recovery work elsewhere. Count the whole workflow and protect the people who interpret warning signals and own corrective action. Error margin is a protected performance-side buffer, not an SLO error budget or a fourth constraint. These proposed responses need local evidence and adjustment as conditions change.
 
-Add a short handoff to the existing change process rather than creating a parallel bureaucracy. State the intended behaviour, link the relevant requirement or dependency documentation, show what was tested, and identify uncertainty. Record model or tool versions when needed to reproduce the work. Explain any changed permissions, data paths or dependency assumptions, including an explicit statement when none changes.
+## Sources
 
-For this retry change, inspect which errors are transient, whether the operation is safe to repeat, how attempts and elapsed time are bounded, and what happens when many callers retry together. Use a controlled environment and representative failure conditions. Ask the author to explain the trade-offs and ask a maintainer to identify what they would inspect during an incident. These are examples to adapt to the service, not a universal test checklist.
-
-### AI as an assurance aid
-
-Use AI to suggest edge cases, locate source evidence or draft tests. Validate the source and expected result independently against the requirement, a reference implementation or observed behaviour. A test copied from the same mistaken assumption can agree with faulty code. An additional model or a fluent explanation does not by itself provide independent evidence.
-
-Choose checking depth according to the consequence and reversibility of the action. Enforce scoped permissions at the execution boundary and separate proposal from authority to enact consequential changes. Preserve a named maintainer and time to learn, so ownership includes practical understanding. The handoff is this talk's proposed practice, drawing on the earlier workload, security and incident-understanding discussion.
-
-- [Rayo, Morey, Grøtan and Woods (2026), Chapter 5 §§5.3 and 5.5.3, expertise and situated joint evaluation](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5)
+- [Rasmussen (1997), Figure 3, constraints, pressures and error margin](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
+- [Rayo, Morey, Grøtan and Woods (2026), Chapter 5, transferred costs and adaptive capacity](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5)
+- [CMA (2025), cloud-service switching barriers and competition](https://assets.publishing.service.gov.uk/media/688b20e6ff8c05468cb7b120/summary_of_final_decision.pdf)

@@ -13,12 +13,15 @@ Presenter reveals for the first build, in order:
 3. Functionally acceptable-performance boundary and 💥 label.
 4. Dotted performance-side line and **Error Margin**.
 5. Red **Operating Point**, representing one whole-system state.
-6. Shaded **Playing Surface**.
-7. The shaded surface and its label fade away over 750 ms, then the economic boundary shifts inward and outward against its original reference. The workload boundary starts the same 4.8-second motion one second after the economic boundary begins, automatically within this reveal.
-8. A moving operating point starts after both boundary animations finish.
-9. Cost charts, effort-saving hands and Blocker Lemmings representing safety interventions arrive across the model in a quick stagger (roughly eight seconds overall, with each entrance lasting 0.45 seconds), including a hand just inside the intersection of the error margin and workload boundary.
+6. Green **Playing Surface**, traced to the three actual boundary lines, with a black label.
+7. On the next presenter advance, the area between the dotted error margin and the actual performance boundary fades in orange; the rest remains green.
+8. The shaded surface and its label fade away over 750 ms, then the economic boundary shifts inward and outward against its original reference. The workload boundary starts the same 4.8-second motion one second after the economic boundary begins, automatically within this reveal.
+9. A moving operating point starts after both boundary animations finish.
+10. Cost charts, effort-saving hands and Blocker Lemmings representing safety interventions arrive across the model in a quick stagger (roughly eight seconds overall, with each entrance lasting 0.45 seconds), including a hand just inside the intersection of the error margin and workload boundary.
 
 Once revealed, the three boundary lines, their labels, and the dotted error margin remain visible on the world canvas through later camera steps and return visits. Opening Diagram Legend, a boundary close-up, or the fish overview directly also establishes this static geometry for context. The manual substeps remain available; persistence does not freeze the moving boundaries, prevent their original references from dimming, or change the playing-surface, operating-point and intervention stages.
+
+The fill uses the slide's 1020 × 780 coordinate frame and follows the boundary artwork. The original conservative roaming envelope is retained separately so this visual correction does not change operating-point motion.
 
 After all Blocker Lemming, hand, and chart arrival animations finish, automatically draw two arrows over 1.8 seconds, followed by their arrowheads and labels:
 
@@ -29,9 +32,9 @@ Visual: reuse the opening slide's original animated Blocker Lemming sprite (`blo
 
 ## Speaker notes
 
-> This dot is not a person. It is the whole system — people, software, and rules — working right now. It keeps moving as work changes.
+> This dot is not a person. It is the whole system — people, software, and rules — working right now. It keeps moving as work changes. The dim dot marks the starting reference position, not a second current operating state.
 >
-> I am going to draw three chalk lines around it. The first marks where the system can no longer do its job acceptably or safely. The second marks where we can no longer pay the bills. The third marks where people cannot keep going.
+> Three boundaries constrain the system's operating space. The performance boundary marks where the system can no longer do its job acceptably or safely. The economic boundary marks where we can no longer pay the bills. The workload boundary marks where people cannot keep going.
 >
 > We cannot see the performance line exactly, so we work from where we think it is. The gap between our perceived line and the real limit is our margin for error.
 >

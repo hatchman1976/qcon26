@@ -10,14 +10,16 @@ Signals become decisions that push toward cost efficiency.
 
 | Leading signal / metric | Possible management action |
 | --- | --- |
-| 💸 Forecast cash burn increases | ✂️ Reduce scope; defer investment;<br />reprioritize commitments |
-| 🧾 Cost per verified outcome increases | 🤝 Renegotiate suppliers; rightsize resources;<br />remove low-value work |
-| 💤 Idle capacity or unused licences | 🧹 Consolidate platforms; retire unused capacity |
-| 🗜️ Projected margin decreases | [Exit sign](../src/images/srecon24/sign-exit.png) Freeze hiring; reduce staffing or maintenance |
+| 💸 Forecast cash burn increases | ✂️ Reduce scope, defer investment,<br />reprioritize commitments |
+| 🧾 Cost per verified outcome increases | 🤝 Renegotiate suppliers, rightsize resources,<br />remove low-value work |
+| 💤 Idle capacity or unused licences | 🧹 Consolidate platforms, retire unused capacity |
+| 🗜️ Projected margin decreases | [Exit sign](../src/images/srecon24/sign-exit.png) Freeze hiring, reduce staffing or maintenance |
 
-The gradient points toward cost efficiency.<br />Watch for lost assurance on the performance side.
+Cutting waste can reduce costs, but cutting expertise or maintenance can leave less room to operate safely.
 
 Model: [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · Signals and responses: illustrative, not automatic rules.
+
+The exit sign is 64px wide with a solid white interior and a transparent exterior.
 
 ## Reveal sequence
 

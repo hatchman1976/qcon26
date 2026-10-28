@@ -12,59 +12,75 @@ The talk adapts Rasmussen's Dynamic Safety Model and the 2024 SREcon presentatio
 2. Opening hook: capability and control
 3. WHOAMI
 4. Takeaways
-5. One more thing
+5. Some recurring characters
 6. Socio-technical systems definition
-7. Rasmussen source slide
-8. The research behind the model
-9. Social control hierarchy
-10. Putting it together: people, boundaries and adaptation
-11. The Fish Diagram
-12. Diagram Legend
-13. Economic Boundary
-14. Economic Boundary Actions
-15. Workload Boundary
-16. Workload Boundary Actions
-17. Boundary of Acceptable Performance
-18. Protect the Error Margin
-19. AI enters the operating point
-20. AI in the Fish Diagram
-21. AI has to be paid for
-22. AI and least effort
-23. The erosion of expertise
-24. Expertise erosion sequence — complex system, uncertainty, flame and “This is Fine”
-25. AI margin — empty placeholder
-26. The cost of a verified outcome
-27. Work the team can verify
-28. A handoff with evidence
-29. Intervention and recovery
-30. References
+7. Resilience Engineering
+8. Rasmussen source slide
+9. The research behind the model
+10. Social control hierarchy
+11. Putting it together: people, boundaries and adaptation
+12. The Fish Diagram
+13. Diagram Legend
+14. Economic Boundary
+15. Economic Boundary Actions
+16. Workload Boundary
+17. Workload Boundary Actions
+18. Boundary of Acceptable Performance
+19. Protect the Error Margin
+20. AI enters the operating point
+21. AI in the Fish Diagram
+22. AI has to be paid for
+23. Tokenomic Progression
+24. Model Enshittification
+25. AI and least effort
+26. The erosion of expertise
+27. Expertise erosion sequence — complex system, uncertainty, flame and “This is Fine”
+28. AI margin pressure
+29. Pressure and control — AI Fish Diagram summary
+30. Skills that protect margin
+31. Tool vs Operator
+32. We have to adapt
+33. Humans are adaptable
+34. References
 
-The deck contains 29 content steps, three overview/overlay camera steps and one empty placeholder, for 33 Impress steps. The former seven trailing slides have been integrated into the earlier flow and removed. [The integration map](research/2026-10-13-slide-consolidation.md) records their destinations. The AI margin step is an empty placeholder retaining its ID and camera position. The next camera step returns to the AI fish diagram before four practical closing slides ending with **Intervention and recovery**, followed by References. Current copy and speaker notes live in [slides/README.md](slides/README.md).
+The deck contains 34 content steps and two overview/overlay camera steps, for 36 Impress steps. The former seven trailing slides have been integrated into the earlier flow and removed. [The integration map](research/2026-10-13-slide-consolidation.md) records their destinations. AI margin pressure now has two presenter-controlled stages and a separate local scenario ball. The global operating point keeps roaming through this scene, the **Pressure and control** summary and the closing slides ending with **Humans are adaptable**, followed by References. Current copy, preparation details and speaker notes live in [slides/README.md](slides/README.md).
+
+After the socio-technical systems introduction, [Resilience Engineering](slides/04a-resilience-engineering.md) defines the field through developing and sustaining adaptive capacity. The working definition is the talk's synthesis, supported by Allspaw's 2019 abstract and Woods's account of readiness for surprise. Cook supplies context on practitioners' role in adaptation. [Source context and alternative short quotations](research/2026-10-27-resilience-definition.md) remain in preparation notes.
 
 ## Boundary examples and the AI camera journey
 
 The original close-ups distinguish external financial capacity from internal targets, and effective workload capacity from incoming demand. Signal-to-action tables show cost efficiency, least-effort adaptation and protection. The acceptable-performance step distinguishes actual unacceptable outcomes from crossing the dotted warning.
 
-The AI sequence reuses the coloured AI logo and Andrew’s SREcon26 slop-bucket artwork. The ball rolls over one operating point, the camera expands to a clean model, and the ball roams. The economics camera shows ETR’s 2026 budget overruns and infrastructure-refresh cuts, the Uber CTO’s reported early budget exhaustion, and Meta’s Hyperion financing with Blue Owl. The workload camera shows workslop, proxying judgment and intensified parallel work. A slide below it introduces the erosion of expertise using the Accelerated Expertise book cover and quotation. A separate image sequence then shows the complex system with people and flashing coloured balls, replaces the people with shrugging emojis, adds a glowing flame, and replaces the scene with “This is Fine”. These images are a metaphor for uncertain understanding and unaddressed trouble, not measured effects of AI. The following AI margin step is empty pending further work.
+The AI sequence reuses the coloured AI logo and Andrew’s SREcon26 slop-bucket artwork. The ball rolls over one operating point, the camera expands to a clean model, and the ball roams. The economics camera shows ETR’s 2026 budget overruns and infrastructure-refresh cuts, the Uber CTO’s reported early budget exhaustion, and Meta’s Hyperion financing with Blue Owl. The workload camera shows workslop, proxying judgment and intensified parallel work. A slide below it introduces the erosion of expertise using the Accelerated Expertise book cover and quotation. A separate image sequence then shows the complex system with people and flashing coloured balls, replaces the people with shrugging emojis, adds a glowing flame, and replaces the scene with “This is Fine”. These images are a metaphor for uncertain understanding and unaddressed trouble, not measured effects of AI. The following [AI margin pressure scenario](slides/09k-ai-margin-pressure.md) illustrates accumulated verification work overwhelming protective capacity. Its warning distinguishes entering the protected buffer from reaching the actual functional limit. The [Pressure and control summary](slides/09l-ai-fish-diagram-overview.md) brings the argument together: unverified work accumulates; time, expertise and protective action get squeezed; warnings help only when people can act. This is an illustration of possible pressure and migration, not a claim that AI always creates workslop or causes failure.
+
+### Preparation: margin sequence and summary
+
+The margin scene retains its ID and camera at (-6500, 306476), scale 4.262906. Entry shows the original pixel Blocker Lemming at twice its former size, to the right of the dotted margin, and a static local ball with a faded starting reference at right; nothing starts automatically. There are no visible advance buttons. The first native manual substep starts 16 falling buckets that form a layered pile over the Lemming and moves the local ball from (800, 350) to the dotted margin at (410.233, 393.752) over 6.5 seconds. Its dotted trail appears gradually. The second manual substep takes the ball to a final center at (156.5, 216.8) over four seconds, leaving its rim touching the solid performance boundary. A spinning 🚨 beacon appears when the ball's center crosses the dotted margin. Arrow keys, Space or a click on the active scene advance the stages. The next advance opens the summary at (-8000, 308000), scale 42, zooming out to the left to show the whole fish.
+
+The local ball and reference are 560 world units across, half the 1,120-unit global operating point. The global ball keeps its continuous six-second roaming motion through this scene, the summary and closing slides, with no reset or transfer of control. Early exit settles only the revealed local phase. Back reverses stages; returning retains the completed phase without replay. Revealed local elements stay on the world canvas. Reduced motion settles each local phase immediately on its manual reveal and uses a static alert emoji after crossing; global roaming pauses at its current position.
 
 [Evidence and scope](research/2026-10-13-ai-boundary-evidence.md) preserve dates, populations and causal limits. The story does not establish universal layoffs to fund AI, universally lower-quality output, or a causal burnout hierarchy by tool skill. Buckets and motion are explanatory metaphors. Reduced-motion mode keeps the same reveal and final-state information without animation.
 
-## Practical closing section
+Between economics and workload, [Tokenomic Progression](slides/09i2-token-economy.md) distinguishes maxxing, metering and optimization in a two-column table. Its large footer becomes the shared heading of [Model Enshittification](slides/09i3-model-enshittification.md), which presents Doctorow's three-stage platform pattern as a conditional risk about dependence and pricing power. The public token leaderboard supports the consumption-score example. Microsoft Learn documents cost-oriented model routing with possible quality tradeoffs, not guaranteed equal quality or proof of enshittification. Cursor's 2025 Auto pricing announcement remains a historical metering example in speaker notes. Neither token counts nor cost optimization alone establish productivity, deliberate lock-in, degraded model quality or a completed extraction cycle. LLM tokens here are not cryptocurrency. [The original source review](research/2026-10-27-token-economy.md) preserves those limits. [The 28 October evidence review](research/2026-10-28-token-costs-and-market-power.md) adds falling prices at fixed capability, specific cloud-competition findings, subsequent improvements and active open-weight alternatives, without promising future price declines or claiming DeepSeek has been excluded.
 
-The four closing slides carry one illustrative AI-assisted change to a service's retry behaviour through the workflow. They turn the earlier economic, workload, performance and margin observations into practical engineering actions:
+## Closing arc
 
-1. **The cost of a verified outcome:** trace generation, verification and operation, count transferred work, state cost-conversion assumptions and compare useful outcomes with a relevant baseline. Remove low-value demand before cutting assurance. Follow maintenance and recovery costs beyond a short pilot.
-2. **Work the team can verify:** observe review age and work in progress alongside complexity, checking effort and effective capacity. Agree local admission limits and a response trigger, preserve focused review and learning, and give an owner time and authority to change scope or timing. Queue growth demonstrates delay and pressure, not defects by itself.
-3. **A handoff with evidence:** make intent, tests, uncertainty, permissions, dependencies and ownership inspectable. Use AI to find gaps while independently checking sources and expected results. Checking depth depends on consequence and reversibility; practical understanding accompanies named ownership.
-4. **Intervention and recovery:** outside production, test whether people, tools and workflow detect a convincing mistake, stop further action and restore service. Include useful and mediocre recommendations and a relevant baseline. Observe checking effort, error detection and time to notice, intervene and restore; update probes and runbooks from the exercise.
+The four closing slides adapt the structure of Andrew's SREcon26 close to the whole QCon argument: skills → control → boundary takeaways → adaptive capacity.
 
-These are proposed engineering practices and this talk's software-workflow synthesis, not results from an intervention study. There is no universal admission ratio or review-age threshold. A short exercise does not establish long-term safety, return on investment or immunity from rare failures. The objective remains sufficient margin, bounded excursions and recoverability across the existing constraints.
+1. **Skills that protect margin:** systems understanding traces how AI shifts cost, workload and risk. Critical judgment challenges plausible output against the real work. Adaptation and recovery connect warning signals with protective action.
+2. **Tool vs Operator:** AI can assist people or be authorised to act in the system. Its permissions and pace need bounds, and people need practical understanding and authority to stop and recover. Evaluate people, tools and workflow together, without assuming that either role guarantees safety or degradation.
+3. **We have to adapt:** count generation, verification, operation and switching costs, match output to checking capacity, test plausible mistakes and recovery, and preserve time, expertise and authority. Local savings can create pressure elsewhere.
+4. **Humans are adaptable:** expertise, coordination and judgment support responses when plans no longer fit. Expertise, time and authority let people use AI to strengthen the capacity to understand, act and recover.
+
+This is the talk's application of Rasmussen's control framework and the resilience and joint-evaluation research already discussed. Economic, workload and performance remain the three constraints, with a protected performance-side buffer. Crossing the dotted margin is a warning about remaining room to act, not proof that harm has occurred. Useful AI applications need evidence in their actual workflow, and adaptive capacity needs continuing support.
+
+The earlier fictional retry example, lifecycle-cost calculation, admission, handoff and recovery details remain in [supporting practical AI-workflow notes](research/2026-10-28-practical-ai-workflow-notes.md). They are preparation material rather than the current closing-slide copy. The final References slide follows **Humans are adaptable**.
 
 ## Integrated themes: keep the model in view
 
 [AI Gold Rush 2 Versus AI Realism](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5), Chapter 5 of the supplied full book PDF, extends the talk's practical argument. The chapter occupies printed pp. 77–88 (PDF pp. 85–96). An efficiency gain can displace verification, maintenance or recovery work. The responsible team needs source evidence, time to review and authority to change or stop the action. The resulting evaluation should measure joint performance and the ability to intervene as well as visible output.
 
-Economic, Workload, Performance and Error Margin live within the existing boundary close-ups and AI journey, then inform the practical closing section. The earlier performance step carries joint-evaluation questions, and the error-margin step carries notice/intervene/recover. The AI margin placeholder currently contains no assurance reveal. These are three constraints and a protected performance-side buffer:
+Economic, Workload, Performance and Error Margin live within the existing boundary close-ups and AI journey, then inform the closing arc. The earlier performance step carries joint-evaluation questions, and the error-margin step carries notice/intervene/recover. The AI margin scenario illustrates an approach to the dotted margin followed by consumption of the protected buffer toward the actual functional limit. It is not a measured loss of assurance or an incident claim. These are three constraints and a protected performance-side buffer:
 
 - **Economic:** account for costs deferred or transferred to others (§5.2.4, printed p. 81 / PDF p. 89) and future adaptability, coupling and congestion (§5.5.2, printed p. 85 / PDF p. 93).
 - **Workload:** count filtering, revision and checking demands, including the expertise needed to reject plausible mistakes (§§5.3.1–5.3.4, printed pp. 82–83 / PDF pp. 90–91).
@@ -225,7 +241,7 @@ This broader flow sketch includes material still held as working ideas. Its Sens
 
 ## Working response pattern
 
-The four verbs are this talk's synthesis. They support the practical closing section in the speaker notes, while the boundary close-ups retain the model’s three constraints and performance-side buffer. The fuller mechanisms are retained here for speaker preparation:
+The four verbs are this talk's synthesis. They support the boundary close-ups and closing argument, while retaining the model’s three constraints and performance-side buffer. The fuller mechanisms are retained here for speaker preparation:
 
 - **Sense:** observe value per verified outcome, lifecycle cost, review-load ratio, performance proxies, signal quality, and feedback delay.
 - **Constrain:** rate-limit admitted work, cap work in progress and token budgets, enforce permissions, and preserve verification gates.

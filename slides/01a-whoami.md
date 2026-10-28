@@ -21,7 +21,14 @@ SWE/SRE Engineering Manager 15 years.
 
 ## Speaker notes
 
-Introduce yourself using the same eight reveals as the SREcon26 WHOAMI slide.
+
+Andrew Hatch:
+
+- Australia and the United States.
+- Cisco ThousandEyes. SWE/SRE Engineering Manager, 15 years.
+- AWS and data centres.
+- LinkedIn.
+- Medium and Bluesky: @hatchman76.
 
 ## Placement
 

@@ -1,39 +1,34 @@
-# The cost of a verified outcome
+# Skills that protect margin
 
 Rendered step: `#/workflow-cost`.
 
-## Slide copy and sequence
+## Slide copy
 
-**The cost of a verified outcome**
+**Skills that protect margin**
 
-Follow one AI-assisted change all the way into service.
+| | Skill | Meaning |
+| --- | --- | --- |
+| 🔎 | Systems understanding | Trace how AI shifts cost, workload and risk across the system. |
+| 🧠 | Critical judgment | Challenge plausible output and test it against the real work. |
+| 🔄 | Adaptation and recovery | Notice drift, revise mental models and act before margin runs out. |
 
-| Practice | Detail |
-| --- | --- |
-| Generate | Model, tools and compute |
-| Verify | Review, tests and security checks |
-| Operate | Maintenance, rework and recovery |
+**Expertise turns warnings into protective action.**
 
-Total workflow cost ÷ completed, verified outcomes
+## Preparation and reveals
 
-Remove low-value demand before cutting assurance.
+Keep the existing step ID, order and camera: `data-x="0"`, `data-y="333000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Open Sans body text. Three native substeps introduce the skill rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
 
-The final takeaway is a presenter reveal.
+Closing arc: skills → control → boundary takeaways → adaptive capacity.
+
+Presentation source: [SREcon26 — Complex System SRE skills](https://srecon26.hatchman76.com/#/core-sre-skills).
 
 ## Speaker notes
 
-### One workflow, end to end
+Rasmussen directs attention to how locally reasonable decisions interact across the whole system. AI can change cost, effort and the pace of proposed action. Expertise helps people see those interactions, question plausible explanations and recognise when a plan no longer fits. Protecting margin requires useful feedback and the capacity to act on it. Crossing the dotted line begins consuming the protected buffer before the actual functional boundary. It does not establish that harm has already occurred.
 
-The previous slide asks us to use AI to improve assurance. Here is how to start. Carry one example through this section: an AI-assisted change to a service's retry behaviour. These are proposed engineering practices and an illustrative workflow, not results from an intervention study.
+## Sources
 
-Trace a small sample from request through generation, review, deployment and operation. Include model and tool charges, allocated platform costs, and the human effort to check intent, test behaviour, fix mistakes and maintain the result. Observe authoring time and reviewer or on-call effort separately so a local saving cannot hide transferred work. When combining effort and cash into a cost estimate, state the conversion assumptions and avoid counting the same labour twice. Compare comparable work with a relevant baseline and require useful outcomes, rather than counting every generated proposal as value.
-
-The retry change may be quick to generate while someone else must understand failure modes, check dependency limits and repair an incident. A short pilot cannot establish long-term recovery cost. Mark that uncertainty and follow up after release. Do not claim a saving from a short generation-time measurement alone.
-
-### A decision this enables
-
-If full cost rises without improved useful outcomes, retire low-value uses, reduce scope, bound agent loops and retries, or try less expensive routing where equivalent verification supports it. Check whether each change reduces total cost rather than moving work elsewhere. Preserve expertise and review capacity. Budgets and quotas are management controls, not additional Rasmussen boundaries.
-
-Source basis: the lifecycle-cost identity in TALK.md and the earlier economic slides. Chapter 5 §§5.2.4 and 5.5.2 discusses transferred costs and future adaptability. The measure and retry example are this talk's software-workflow synthesis.
-
-- [Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5)
+- [Rasmussen (1997), risk management, adaptation and control](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
+- [Cook, How Complex Systems Fail, points 12, 13 and 17](https://www.adaptivecapacitylabs.com/HowComplexSystemsFail.pdf)
+- [Hoffman et al. (2013), Accelerated Expertise](https://www.goodreads.com/book/show/17399473-accelerated-expertise)
+- [Woods (2018), Resilience is a Verb](https://beta.irgc.org/wp-content/uploads/2018/12/Woods-for-IRGC-Resilience-Guide-Vol-2-2018.pdf)

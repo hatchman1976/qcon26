@@ -10,20 +10,22 @@ Visual: a small, 60px original animated Blocker Lemming sits at the top left bes
 
 Notice, act and recover before the functional limit is crossed.
 
-| Signal / concern | Action that preserves margin |
+| Signal / concern | Protective actions |
 | --- | --- |
-| 📡 Blind spots or stale telemetry | 🔎 Improve monitoring; check user journeys;<br />connect alerts to an owner who can act |
-| 🌡️ Saturation or shrinking headroom | ⚙️ Improve software efficiency; load-test;<br />add scalable capacity and tested redundancy |
-| 📥 Changes exceed verification capacity | 🚦 Limit admission; use canaries and rollback;<br />retain independent review and access controls |
-| ⏳ Slow or uncertain recovery | 🛟 Exercise failover and restore; update runbooks;<br />practice diagnosis and share expertise |
+| 🕳️ Blind spots or stale telemetry | 🔎 Improve monitoring, check user journeys, connect alerts to an owner who can act |
+| 🪫 Saturation or shrinking headroom | ⚙️ Improve software efficiency, load-test, add scalable capacity and tested redundancy |
+| 🌊 Changes exceed verification capacity | 🚦 Limit admission, use canaries and rollback, retain independent review and access controls |
+| ⏳ Slow or uncertain recovery | 🛟 Exercise failover and restore, update runbooks, practice diagnosis and share expertise |
 
-Ensure adaptive capacity is sustained, through authority and time needed to cultivate expertise, turning warning signals into effective action.
+Sustain adaptive capacity turning signals into effective action
+
+The closing statement is centered horizontally, 48px above the bottom of the slide, and retains its own final substep.
 
 [Google SRE: Monitoring](https://sre.google/sre-book/monitoring-distributed-systems/) · [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · Engineering applications.
 
 ## Reveal sequence
 
-All visible content uses thirteen presenter-controlled substeps: title and lemming together; introductory sentence; the “Signal / concern” heading; each of the four left-column signal cells from top to bottom; the “Action that preserves margin” heading; each of the four right-column action cells from top to bottom; then the closing statement. Reveal one group per advance and preserve the table layout while cells are hidden.
+All visible content uses thirteen presenter-controlled substeps: title and lemming together; introductory sentence; the “Signal / concern” heading; each of the four left-column signal cells from top to bottom; the “Protective actions” heading; each of the four right-column action cells from top to bottom; then the closing statement. Reveal one group per advance and preserve the table layout while cells are hidden.
 
 ## Speaker notes
 

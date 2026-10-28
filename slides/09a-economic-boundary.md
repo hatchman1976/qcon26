@@ -12,7 +12,7 @@ External conditions change what the business can sustain.
 
 - 📈 Stronger demand and better pricing power
 - 💰 Fresh funding or cheaper financing
-- 🏷️ Lower energy, supplier or infrastructure costs
+- 🏭 Lower energy, supplier or infrastructure costs
 
 **Less room to operate**
 
@@ -20,7 +20,7 @@ External conditions change what the business can sustain.
 - 🏦 Costlier credit or funding that dries up
 - 💱 Higher supplier costs or currency shocks
 
-Sustainable capacity changes the boundary.<br />A tighter internal budget changes the target.
+Greater financial capacity expands room to operate, tighter budgets increase pressure to reduce costs.
 
 Model: [Rasmussen (1997), Figures 1 & 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · Business examples: this talk’s application.
 

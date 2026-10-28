@@ -2,7 +2,7 @@
 
 Rendered step: `#/ai-economic-pressure`.
 
-Canvas position: `data-x="3400"`, `data-y="279850"`, `data-scale="3.55392"`, inside the upper-right portion of the AI fish diagram.
+Canvas position: `data-x="3400"`, `data-y="304850"`, `data-scale="3.55392"`, inside the upper-right portion of the AI fish diagram.
 
 ## Slide copy and sequence
 
@@ -24,11 +24,11 @@ Cheaper generation can still mean higher total cost.
 
 Savings here can add work elsewhere. Who covers it and at what cost?
 
-## Reveal sequence
+## Preparation: reveal sequence
 
 All visible content uses eleven presenter-controlled substeps: title and icon together; introductory sentence; “The bill grows” heading; its three items individually; “Money moves” heading; its three items individually; then the bottom takeaway. Reveal one group per advance, completing the left column before the right and preserving the layout while content is hidden.
 
-The fish diagram remains permanently rendered on its transparent world canvas as the camera enters this close-up and while the content is revealed. It stays in place through all subsequent navigation without hiding or replaying its entrance. The AI ball keeps moving through camera transitions and presenter substeps without resetting to the center or restarting its trajectory. Opening this close-up directly commits the rendered diagram and starts the ball moving. Only reduced-motion mode pauses it at its current position; disabling that preference resumes movement without a reset.
+The fish diagram remains permanently rendered on its transparent world canvas as the camera enters this close-up and while the content is revealed. It stays in place through all subsequent navigation without hiding or replaying its entrance. During this close-up, the AI ball keeps moving through camera transitions and presenter substeps without resetting to the center or restarting its trajectory. Opening this close-up directly commits the rendered diagram and starts the ball moving. Reduced-motion mode pauses it at its current position, and disabling that preference resumes movement without a reset. The global ball continues roaming through the later margin-pressure scene, summary and closing slides; the margin scenario uses a separate half-size local ball for its manual stages.
 
 Presentation source links are collected on the final [References slide](14-references.md).
 

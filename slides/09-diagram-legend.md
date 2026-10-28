@@ -9,7 +9,7 @@
 - 💥 **Performance boundary** — Where the system stops working acceptably
 - ··· **Error margin** — Buffer before the performance limit
 - 🔴 **Operating point** — Where the whole system is now
-- 🟢 **Playing surface** — Room within the boundaries
+- Green fish-shaped area with an orange performance-side margin: **Playing surface** — Room within the boundaries
 - Blocker Lemming + 🫷 + 📉 **Actions and pressures** — Local actions and external pressures can change the operating point or its constraints.
 
 Visual: use the original animated Blocker Lemming sprite (`blocker-lemming.gif`), matching the title and Fish Diagram, with pixelated scaling. Use the static original pose (`blocker-lemming.png`) for reduced motion and print. The modern 3D artwork must not be used.

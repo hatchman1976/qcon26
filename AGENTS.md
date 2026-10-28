@@ -30,4 +30,5 @@ This repository is Andrew Hatch's personal QCon 2026 presentation project.
 - `src/` is the website root and the exact content deployed to S3.
 - There is no build step, generated site, Vite workflow, or `dist/` deployment.
 - Edit and verify files in `src/` directly.
+- Keep revealed slide content visible on the world canvas after leaving a step, unless Andrew explicitly requests that it be hidden or replaced.
 - For local review, serve `src/` with `python3 -m http.server 8000 --bind 127.0.0.1 --directory src`.

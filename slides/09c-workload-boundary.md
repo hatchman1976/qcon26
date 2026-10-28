@@ -22,7 +22,7 @@ The sustainable capacity to do and understand the work can change.
 
 The exit sign is 64px wide with a white backing inside its green panel; its surrounding area remains transparent.
 
-Less capacity moves the workload boundary inward, even with the same work.<br />More incoming work can move the operating point toward that boundary.
+Less capacity moves the boundary inward, more work can push the operating point toward it.
 
 Model: [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · Capacity examples: this talk’s application.
 
