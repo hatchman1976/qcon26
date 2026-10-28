@@ -22,11 +22,13 @@ Keep the existing step ID, order and camera: `data-x="0"`, `data-y="408000"`, `d
 
 Three native presenter-controlled substeps:
 
-1. The existing `/images/srecon24/robot-human-together.png` image and the statement about expertise, coordination and judgment together.
+1. The existing complex-system diagram (`/images/srecon26/complex-sign-transparent.png`), four emoji faces and flashing orange points appear with the statement about expertise, coordination and judgment. The 300px diagram coordinate system scales together to a 310px-wide visual, keeping the faces and points aligned.
 2. The three emoji labels together: 🧠 Expertise, ⏳ Time and 🛑 Authority.
 3. The final takeaway about strengthening our capacity to understand, act and recover.
 
 Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available. The References slide remains the final step.
+
+Orange points flash while this step is active and its first reveal is visible, including after the later reveals. Returning resumes the flashing. Exit and reduced motion retain steady orange markers with the diagram and faces. Print shows steady points.
 
 Presentation source: [SREcon26 — Humans are adaptable](https://srecon26.hatchman76.com/#/humans-are-adaptable).
 

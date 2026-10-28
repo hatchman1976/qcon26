@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#b3d9ff" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=213" />
+    <link rel="stylesheet" href="/styles.css?v=215" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
@@ -1424,28 +1424,25 @@
           <div class="ai-margin-rain"></div>
           <span class="ai-margin-point"><img src="/images/srecon26/logo-ai-mashup.png" alt="" /></span>
         </div>
+        <aside class="ai-margin-explanation" aria-labelledby="ai-margin-explanation-title">
+          <h2 id="ai-margin-explanation-title">Pressure<br />and control</h2>
+          <ul>
+            <li><span aria-hidden="true">📥</span><span>Unverified work accumulates.</span></li>
+            <li><span aria-hidden="true">🛑</span><span>Time, expertise and protective action get squeezed.</span></li>
+            <li><span aria-hidden="true">🚨</span><span>Warnings help only when people can act.</span></li>
+          </ul>
+        </aside>
         <p class="ai-margin-warning" aria-live="polite" aria-hidden="true"><span class="ai-margin-red-light" aria-hidden="true">🚨</span><span>Error margin crossed</span></p>
         <span class="substep ai-margin-pressure-trigger" aria-hidden="true"></span>
         <span class="substep ai-margin-crossing-trigger" aria-hidden="true"></span>
         <div class="notes">
-          <p>The buckets represent accumulating workslop and pressure on the capacity to protect performance. The Lemming stands for deliberate intervention: someone with the expertise, time and authority to pause or redirect work.</p>
-          <p>This close-up is a separate illustrative scenario. Its point represents the state in that scenario, and its reference ball marks where the scenario began. The dotted trail is an illustrated journey, not a new boundary or a measured path.</p>
-          <p>The alert beacon marks a crossed perceived limit and the loss of protected margin. Warning signals do not restore control by themselves. People still need the understanding, resources and authority to intervene before the actual functional limit is reached.</p>
-          <p>This is a possible trajectory, not evidence that all AI output is workslop or that AI inevitably causes failure. Organisational choices, expertise and usable feedback shape what happens.</p>
+          <p>The buckets represent accumulating verification and repair work. The Lemming represents the expertise and response capacity needed to protect performance. Cheap generation can move checking, maintenance and recovery work elsewhere, consuming attention and capacity even as visible output increases.</p>
+          <p>The dotted line warns about the remaining buffer. Crossing it begins consuming protected error margin, while the solid line marks the actual functional limit. A warning helps only if people have practical understanding, time, authority and means to reduce demand, challenge output, stop further action or recover.</p>
+          <p>The reference marks the scenario’s starting state. This is an illustrative possible journey, not a measured trajectory or claim that all AI output is workslop. Organisational choices and usable feedback shape whether people can detect and respond to a convincing mistake in their actual work.</p>
         </div>
       </section>
       <section id="ai-fish-diagram-overview" class="step ai-margin-summary"
-        data-x="-8000" data-y="308000" data-scale="42">
-        <h2>Pressure<br />and control</h2>
-        <ul>
-          <li><span aria-hidden="true">📥</span><span>Unverified work accumulates.</span></li>
-          <li><span aria-hidden="true">🛑</span><span>Time, expertise and protective action get squeezed.</span></li>
-          <li><span aria-hidden="true">🚨</span><span>Warnings help only when people can act.</span></li>
-        </ul>
-        <div class="notes">
-          <p>The scenario links accumulated verification work, pressure on protective capacity and the ability to intervene. More generated output is useful only when the system can understand, check and maintain what it accepts.</p>
-          <p>A warning needs someone able to respond. Protect expertise, focused time, usable feedback and authority to change commitments. The scenario illustrates a risk, not an inevitable effect of AI.</p>
-        </div>
+        data-x="-8000" data-y="308000" data-scale="42" aria-label="Overview of the AI fish diagram and accumulated margin pressure">
       </section>
 
       <section id="workflow-cost" class="step practice-slide closing-skills"
@@ -1497,7 +1494,16 @@
         data-x="0" data-y="408000" data-scale="25">
         <h2 class="practice-title">Humans are adaptable</h2>
         <div class="substep closing-human-scene">
-          <img src="/images/srecon24/robot-human-together.png" alt="A person and a robot holding hands" />
+          <figure class="closing-system-visual" role="img" aria-label="People throughout a complex system, with flashing orange balls along its connections">
+            <div class="closing-system-network" aria-hidden="true">
+              <img src="/images/srecon26/complex-sign-transparent.png" alt="" />
+              <span class="social-system-person social-system-person-one">👩🏿</span>
+              <span class="social-system-person social-system-person-two">👨🏼</span>
+              <span class="social-system-person social-system-person-three">🧑🏽</span>
+              <span class="social-system-person social-system-person-four">🧕🏻</span>
+              <div class="closing-arrow-pulses"></div>
+            </div>
+          </figure>
           <p>Expertise, coordination and judgment help us respond when plans no longer fit.</p>
         </div>
         <div class="substep closing-capacity">
@@ -1640,6 +1646,6 @@
     </main>
 
     <script src="/vendor/impress.js/js/impress.min.js"></script>
-    <script src="/main.js?v=54"></script>
+    <script src="/main.js?v=56"></script>
   </body>
 </html>

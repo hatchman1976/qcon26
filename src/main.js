@@ -230,6 +230,44 @@ prefersReducedMotion.addEventListener("change", syncExpertiseSequence);
 window.addEventListener("beforeprint", () => { expertiseFineImage.src = expertiseFineImage.dataset.stillSrc; });
 window.addEventListener("afterprint", syncExpertiseSequence);
 
+const closingRecoverySlide = root.querySelector("#rehearsed-recovery");
+const closingSystemReveal = closingRecoverySlide.querySelector(".closing-human-scene");
+const closingPulseLayer = closingRecoverySlide.querySelector(".closing-arrow-pulses");
+
+function syncClosingSystemPulses() {
+  const revealed = closingSystemReveal.classList.contains("substep-visible");
+  if (revealed && closingRecoverySlide.classList.contains("active") && !prefersReducedMotion.matches) {
+    if (activeArrowPulseStep !== closingPulseLayer) {
+      closingPulseLayer.replaceChildren();
+      startArrowPulses({ layer: closingPulseLayer, trigger: null });
+    }
+    return;
+  }
+  if (activeArrowPulseStep === closingPulseLayer) stopArrowPulses();
+  if (!revealed) {
+    closingPulseLayer.replaceChildren();
+  } else if (!closingPulseLayer.childElementCount) {
+    // Keep the diagram's orange markers visible when motion is paused.
+    for (const [x, y] of [[64, 125], [154, 156], [231, 176]]) {
+      const point = document.createElement("span");
+      point.className = "social-arrow-pulse closing-still-point";
+      point.style.left = x + "px";
+      point.style.top = y + "px";
+      closingPulseLayer.append(point);
+    }
+  }
+}
+
+new MutationObserver(syncClosingSystemPulses).observe(closingSystemReveal, {
+  attributes: true, attributeFilter: ["class"],
+});
+for (const eventName of ["impress:stepenter", "impress:stepleave"]) {
+  document.addEventListener(eventName, (event) => {
+    if (event.target === closingRecoverySlide) queueMicrotask(syncClosingSystemPulses);
+  });
+}
+prefersReducedMotion.addEventListener("change", syncClosingSystemPulses);
+
 const roamingPointStep = document.querySelector("#the-fish-diagram .plain-roaming-point-reveal");
 const roamingPointPosition = roamingPointStep.querySelector(".plain-roaming-point-position");
 const workloadMovingLine = document.querySelector("#the-fish-diagram .plain-workload-motion .plain-barrier-moving");
