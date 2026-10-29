@@ -13,19 +13,6 @@ document.addEventListener("impress:stepenter", (event) => {
   queueMicrotask(() => revealed.forEach((substep) => substep.classList.add("substep-visible")));
 }, true);
 
-const tokenEconomySlide = root.querySelector("#token-economy");
-const modelEnshittificationSlide = root.querySelector("#model-enshittification");
-document.addEventListener("impress:stepenter", (event) => {
-  if (event.target !== modelEnshittificationSlide) return;
-  // One heading occupies the same canvas position in both overlapping steps.
-  // Complete the preceding reveal sequence for direct links to this step too.
-  const substeps = [...tokenEconomySlide.querySelectorAll(".substep")];
-  substeps.forEach((substep, index) => {
-    substep.classList.add("substep-visible");
-    substep.classList.toggle("substep-active", index === substeps.length - 1);
-  });
-});
-
 const paperThemesSlide = root.querySelector("#paper-themes");
 const lastPaperTheme = paperThemesSlide.querySelector(".paper-theme:last-child");
 
@@ -512,7 +499,6 @@ const aiMarginTrailReveal = aiMarginSlide.querySelector(".ai-margin-trail-reveal
 const aiMarginTrailCutout = aiMarginSlide.querySelector(".ai-margin-trail-cutout");
 const aiMarginPoint = aiMarginSlide.querySelector(".ai-margin-point");
 const aiMarginPressureTrigger = aiMarginSlide.querySelector(".ai-margin-pressure-trigger");
-const aiMarginCrossingTrigger = aiMarginSlide.querySelector(".ai-margin-crossing-trigger");
 const aiMarginPathLength = aiMarginPath.getTotalLength();
 const aiMarginThreshold = aiMarginSlide.querySelector(".ai-margin-approach-guide").getTotalLength() / aiMarginPathLength;
 let aiMarginPhase = 0;
@@ -550,7 +536,6 @@ aiMarginBucketLandings.forEach(([x, floor], index) => {
 });
 
 function marginPhaseFromSubsteps() {
-  if (aiMarginCrossingTrigger.classList.contains("substep-visible")) return 2;
   return aiMarginPressureTrigger.classList.contains("substep-visible") ? 1 : 0;
 }
 
@@ -578,8 +563,8 @@ function settleAiMarginPhase() {
   stopAiMarginAnimation();
   aiMarginSlide.classList.toggle("is-raining", aiMarginPhase > 0);
   aiMarginSlide.classList.toggle("is-pressure-complete", aiMarginPhase > 0);
-  aiMarginSlide.classList.toggle("is-complete", aiMarginPhase === 2);
-  renderAiMarginProgress(aiMarginPhase === 2 ? 1 : aiMarginPhase === 1 ? aiMarginThreshold : 0);
+  aiMarginSlide.classList.toggle("is-complete", aiMarginPhase > 0);
+  renderAiMarginProgress(aiMarginPhase > 0 ? 1 : 0);
 }
 
 function animateAiMarginTo(target, duration) {
@@ -612,16 +597,9 @@ function syncAiMarginPhase() {
   }
   aiMarginSlide.classList.remove("is-complete");
   aiMarginSlide.classList.add("is-raining");
-  if (phase === 1) {
-    aiMarginSlide.classList.remove("is-pressure-complete");
-    renderAiMarginProgress(0);
-    animateAiMarginTo(aiMarginThreshold, 6500);
-  } else {
-    // A rapid second advance completes the first revealed stage before crossing.
-    aiMarginSlide.classList.add("is-pressure-complete");
-    renderAiMarginProgress(aiMarginThreshold);
-    animateAiMarginTo(1, 4000);
-  }
+  aiMarginSlide.classList.remove("is-pressure-complete");
+  renderAiMarginProgress(0);
+  animateAiMarginTo(1, 10500);
 }
 
 new MutationObserver(syncAiMarginPhase).observe(aiMarginSlide, {

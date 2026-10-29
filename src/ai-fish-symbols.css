@@ -1,0 +1,50 @@
+/* Local fish coordinates: x = 510 + world-x / 25,
+   y = 390 + (world-y - 308000) / 25. These fixed, compact positions
+   leave the inset slides, starting ball and both questions unobstructed.
+   The parent fish model owns the fade and its permanent rendered state. */
+#ai-fish-diagram .ai-fish-symbols {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+#ai-fish-diagram .ai-fish-symbol {
+  position: absolute;
+  display: block;
+  width: 34px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+}
+
+#ai-fish-diagram .ai-fish-symbol-graph-one { left: 490px; top: 235px; }
+#ai-fish-diagram .ai-fish-symbol-graph-two { left: 535px; top: 330px; }
+#ai-fish-diagram .ai-fish-symbol-graph-three { left: 540px; top: 190px; }
+#ai-fish-diagram .ai-fish-symbol-graph-four { left: 750px; top: 285px; }
+#ai-fish-diagram .ai-fish-symbol-hand-one { left: 590px; top: 510px; }
+#ai-fish-diagram .ai-fish-symbol-hand-two { left: 770px; top: 390px; }
+#ai-fish-diagram .ai-fish-symbol-hand-three { left: 540px; top: 515px; }
+#ai-fish-diagram .ai-fish-symbol-lemming-one { left: 320px; top: 435px; }
+#ai-fish-diagram .ai-fish-symbol-lemming-two { left: 420px; top: 505px; }
+#ai-fish-diagram .ai-fish-symbol-lemming-three { left: 375px; top: 235px; }
+#ai-fish-diagram .ai-fish-symbol-lemming-four { left: 437px; top: 192px; }
+#ai-fish-diagram .ai-fish-symbol-lemming-five { left: 480px; top: 535px; }
+
+#ai-fish-diagram .ai-fish-symbol > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+@media print {
+  #ai-fish-diagram .ai-fish-symbol > img {
+    content: url("/images/qcon26/blocker-lemming.png");
+  }
+}

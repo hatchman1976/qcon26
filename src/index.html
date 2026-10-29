@@ -9,7 +9,8 @@
     />
     <meta name="theme-color" content="#b3d9ff" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=215" />
+    <link rel="stylesheet" href="/styles.css?v=229" />
+    <link rel="stylesheet" href="/ai-fish-symbols.css?v=4" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
   <body class="impress-not-supported">
@@ -158,7 +159,7 @@
             </tr>
             <tr class="substep">
               <td class="takeaways-icon"><span role="img" aria-label="Growing plant">🌱</span></td>
-              <td>It helps to understand conditions that lead to adversity and how you stay resilient and adaptive to change.</td>
+              <td>It is a framework to build understanding of conditions that lead to adversity and how to stay resilient and adaptive to change.</td>
             </tr>
             <tr class="substep">
               <td class="takeaways-icon">
@@ -166,11 +167,11 @@
                   <span>👩🏿</span><span>👨🏼</span><span>🧑🏽</span><span>🧕🏻</span>
                 </span>
               </td>
-              <td>We all are part of, and work/live within complex socio-technical systems</td>
+              <td>Because we all are part of, and work/live within complex socio-technical systems</td>
             </tr>
             <tr class="substep">
               <td class="takeaways-icon"><span role="img" aria-label="Flame">🔥</span></td>
-              <td>Attempts to change a complex system in whole, or in part, will yield unintended consequences</td>
+              <td>And any attempts to change a complex system, either in whole, or in part, can lead to unintended consequences</td>
             </tr>
           </tbody>
         </table>
@@ -264,7 +265,7 @@
       <section id="resilience-engineering" class="step resilience-definition-slide"
         data-x="0" data-y="158000" data-scale="25">
         <h2 class="resilience-definition-title">Resilience Engineering</h2>
-        <p class="resilience-definition-copy substep">Build and sustain <strong>adaptive capacity</strong> in socio-technical systems to ensure they absorb and recover safely from incidents, anomalies and changing pressures.</p>
+        <p class="resilience-definition-copy substep">Build and sustain <strong class="resilience-key-phrase">adaptive capacity</strong> in socio-technical systems, both <strong class="resilience-key-phrase">technical and non-technical</strong>, ensuring they can absorb and <strong class="resilience-key-phrase">recover safely</strong> from incidents, anomalies and changing pressures.</p>
         <div class="notes">
           <h3>Build the ability to adapt before it is needed</h3>
           <p>The opening definition is this talk’s synthesis, not a quotation. Resilience Engineering is the study and deliberate support of the capacities that help socio-technical systems continue to perform as conditions change. Sustaining that ability means maintaining expertise, coordination, time, resources and authority to act, and renewing them as the system evolves. Adaptive capacity is not simply spare infrastructure capacity.</p>
@@ -1037,7 +1038,7 @@
         id="error-margin"
         class="step boundary-detail-slide"
         data-substep-sequence="columns"
-        data-x="-4213"
+        data-x="-3713"
         data-y="281726"
         data-scale="2.72826"
       >
@@ -1128,6 +1129,35 @@
         <div class="ai-fish-model">
           <img class="plain-model-outline" src="/images/srecon24/Rasmussen_plain_outline.png" alt="" />
           <img class="ai-fish-margin" src="/images/srecon24/Rasmussen_error_margin.png" alt="" />
+          <div class="ai-fish-symbols" role="img" aria-label="Four cost-pressure graphs, including two near the economic boundary, three effort-saving hands near the workload boundary and five Blocker Lemmings showing protective interventions along the error margin">
+            <span class="ai-fish-symbol ai-fish-symbol-graph-one" aria-hidden="true">📉</span>
+            <span class="ai-fish-symbol ai-fish-symbol-graph-two" aria-hidden="true">📉</span>
+            <span class="ai-fish-symbol ai-fish-symbol-graph-three" aria-hidden="true">📉</span>
+            <span class="ai-fish-symbol ai-fish-symbol-graph-four" aria-hidden="true">📉</span>
+            <span class="ai-fish-symbol ai-fish-symbol-hand-one" aria-hidden="true">🫷</span>
+            <span class="ai-fish-symbol ai-fish-symbol-hand-two" aria-hidden="true">🫷</span>
+            <span class="ai-fish-symbol ai-fish-symbol-hand-three" aria-hidden="true">🫷</span>
+            <picture class="ai-fish-symbol ai-fish-symbol-lemming-one" aria-hidden="true">
+              <source media="(prefers-reduced-motion: reduce), print" srcset="/images/qcon26/blocker-lemming.png" />
+              <img class="blocker-lemming" src="/images/qcon26/blocker-lemming.gif" alt="" />
+            </picture>
+            <picture class="ai-fish-symbol ai-fish-symbol-lemming-two" aria-hidden="true">
+              <source media="(prefers-reduced-motion: reduce), print" srcset="/images/qcon26/blocker-lemming.png" />
+              <img class="blocker-lemming" src="/images/qcon26/blocker-lemming.gif" alt="" />
+            </picture>
+            <picture class="ai-fish-symbol ai-fish-symbol-lemming-three" aria-hidden="true">
+              <source media="(prefers-reduced-motion: reduce), print" srcset="/images/qcon26/blocker-lemming.png" />
+              <img class="blocker-lemming" src="/images/qcon26/blocker-lemming.gif" alt="" />
+            </picture>
+            <picture class="ai-fish-symbol ai-fish-symbol-lemming-four" aria-hidden="true">
+              <source media="(prefers-reduced-motion: reduce), print" srcset="/images/qcon26/blocker-lemming.png" />
+              <img class="blocker-lemming" src="/images/qcon26/blocker-lemming.gif" alt="" />
+            </picture>
+            <picture class="ai-fish-symbol ai-fish-symbol-lemming-five" aria-hidden="true">
+              <source media="(prefers-reduced-motion: reduce), print" srcset="/images/qcon26/blocker-lemming.png" />
+              <img class="blocker-lemming" src="/images/qcon26/blocker-lemming.gif" alt="" />
+            </picture>
+          </div>
           <div class="plain-boundary plain-boundary-economic">
             <p>
               <span class="plain-boundary-emoji" aria-hidden="true">💸</span>
@@ -1185,7 +1215,7 @@
             </ul>
           </div>
         </div>
-        <p class="boundary-detail-conclusion substep">Savings here can add work elsewhere. Who covers it and at what cost?</p>
+        <p class="boundary-detail-conclusion substep"><span>Savings here can add work elsewhere. Who covers it and at what cost?</span></p>
 
         <div class="notes">
           ETR surveyed 1,636 technology leaders, June 2–July 5, 2026. Its 47% is reported spending above plan,
@@ -1237,9 +1267,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="token-economy-risk substep">
-          <h2 id="model-enshittification-heading" class="model-enshittification-title"><span aria-hidden="true">💩</span><span>Model Enshittification</span><span aria-hidden="true">💩</span></h2>
-        </div>
+        <p class="token-economy-question substep"><span>How does commercial AI evolve from here, and what are the risks?</span></p>
         <div class="notes">
           <h3>Token consumption, dependence and platform power</h3>
           <p>Tokenmaxxing turns LLM-agent consumption into a public scoreboard. The tokenmaxxing.sh leaderboard ranks token counts and estimated API-equivalent spending. Those estimates are not reconciled bills, and token consumption does not measure useful outcomes, productivity or quality. These are language-model usage tokens, not cryptocurrency. The site was checked on October 27, 2026.</p>
@@ -1258,29 +1286,35 @@
       </section>
 
       <section id="model-enshittification" class="step model-enshittification-slide"
-        data-x="11250" data-y="306698.0384" data-scale="3.55392" aria-labelledby="model-enshittification-heading">
-        <h2 class="model-enshittification-title model-enshittification-print-title" aria-hidden="true"><span aria-hidden="true">💩</span><span>Model Enshittification</span><span aria-hidden="true">💩</span></h2>
+        data-x="16750" data-y="307977.4496" data-scale="3.55392" aria-labelledby="model-enshittification-heading">
+        <h2 id="model-enshittification-heading" class="model-enshittification-title"><span aria-hidden="true">💩</span><span>Model Enshittification</span><span aria-hidden="true">💩</span></h2>
         <div class="substep model-stage model-stage-users">
           <h3>Serve Users</h3>
-          <p>Build something people want to depend on.</p>
+          <p>Make it useful and easy to adopt.</p>
         </div>
         <div class="substep model-stage model-stage-business">
           <h3>Favor Business</h3>
-          <p>Shift value to business customers at users’ expense.</p>
+          <p>Put paying business customers first.</p>
         </div>
         <div class="substep model-stage model-stage-rent">
           <h3>Squeeze for Rent</h3>
-          <p>Capture more value from both sides.</p>
+          <p>Charge more. Give both sides less.</p>
         </div>
         <div class="substep model-evidence-point model-evidence-costs">
-          <span class="model-evidence-emoji" aria-hidden="true">📉</span>
-          <p><strong>280× lower inference prices at GPT-3.5-level MMLU performance (2022–24).</strong> Hardware became more cost-efficient. Historical trends, not guarantees. <span class="model-evidence-source">Stanford AI Index, 2025</span></p>
+          <span class="model-evidence-emoji" aria-hidden="true">🏷️</span>
+          <div>
+            <p><strong>AI prices have fallen for the same capability.</strong></p>
+            <small class="model-evidence-source"><a href="https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts" target="_blank" rel="noreferrer">Stanford AI Index, 2025</a></small>
+          </div>
         </div>
         <div class="substep model-evidence-point model-evidence-competition">
-          <span class="model-evidence-emoji" aria-hidden="true">🔒</span>
-          <p><strong>Cheaper compute does not guarantee cheaper access.</strong> Competition and switching costs shape who keeps the savings. <span class="model-evidence-source">CMA cloud findings, 2025</span></p>
+          <span class="model-evidence-emoji" aria-hidden="true">💰</span>
+          <div>
+            <p><strong>Lower costs don’t guarantee lower prices.</strong></p>
+            <small class="model-evidence-source"><a href="https://assets.publishing.service.gov.uk/media/688b20e6ff8c05468cb7b120/summary_of_final_decision.pdf" target="_blank" rel="noreferrer">Cloud-market example: CMA, 2025</a></small>
+          </div>
         </div>
-        <p class="token-economy-credit">After Cory Doctorow, <cite>Enshittification</cite> (2025)</p>
+        <p class="token-economy-credit">After Cory Doctorow, <cite><a href="https://us.macmillan.com/books/9780374619329/enshittification/" target="_blank" rel="noreferrer">Enshittification</a></cite> (2025)</p>
         <div class="notes">
           <p>Doctorow describes a two-sided platform moving value from users to business customers, then taking more from both groups. Business customers mean advertisers, sellers or other participants, distinct from the platform owner. The headings are a paraphrase. Applying this pattern to AI is a risk to examine, not a prediction that every provider follows it.</p>
           <h3>Lower costs do not determine who keeps the savings</h3>
@@ -1347,7 +1381,7 @@
       </section>
 
       <section id="erosion-of-expertise" class="step ai-journey-slide expertise-erosion-slide"
-        data-x="9850" data-y="311150" data-scale="3.037465">
+        data-x="8850" data-y="310150" data-scale="3.037465">
         <h2 class="expertise-erosion-title substep">The erosion of expertise</h2>
         <figure class="expertise-erosion-book substep">
           <img src="/images/srecon26/book-accelerated-expertise.png" alt="Accelerated Expertise: Training for High Proficiency in a Complex World, by Robert R. Hoffman and colleagues" />
@@ -1364,7 +1398,7 @@
       </section>
 
       <section id="expertise-erosion-sequence" class="step ai-journey-slide expertise-sequence-slide"
-        data-x="13100" data-y="309150" data-scale="3.037465" aria-label="Complex-system expertise and This is Fine">
+        data-x="12100" data-y="308150" data-scale="3.037465" aria-label="Complex-system expertise and This is Fine">
         <div class="expertise-sequence-visuals">
           <div class="expertise-people-scene" role="img" aria-label="People distributed throughout a complex system, with colored balls flashing along its connections">
             <div class="expertise-people-network" aria-hidden="true">
@@ -1434,7 +1468,6 @@
         </aside>
         <p class="ai-margin-warning" aria-live="polite" aria-hidden="true"><span class="ai-margin-red-light" aria-hidden="true">🚨</span><span>Error margin crossed</span></p>
         <span class="substep ai-margin-pressure-trigger" aria-hidden="true"></span>
-        <span class="substep ai-margin-crossing-trigger" aria-hidden="true"></span>
         <div class="notes">
           <p>The buckets represent accumulating verification and repair work. The Lemming represents the expertise and response capacity needed to protect performance. Cheap generation can move checking, maintenance and recovery work elsewhere, consuming attention and capacity even as visible output increases.</p>
           <p>The dotted line warns about the remaining buffer. Crossing it begins consuming protected error margin, while the solid line marks the actual functional limit. A warning helps only if people have practical understanding, time, authority and means to reduce demand, challenge output, stop further action or recover.</p>
@@ -1442,7 +1475,7 @@
         </div>
       </section>
       <section id="ai-fish-diagram-overview" class="step ai-margin-summary"
-        data-x="-8000" data-y="308000" data-scale="42" aria-label="Overview of the AI fish diagram and accumulated margin pressure">
+        data-x="0" data-y="308000" data-scale="25" aria-label="Overview of the AI fish diagram and accumulated margin pressure">
       </section>
 
       <section id="workflow-cost" class="step practice-slide closing-skills"
@@ -1481,7 +1514,7 @@
           <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">💸</span><p><strong>Economic:</strong> Count generation, verification, operation and switching costs.</p></li>
           <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">😢</span><p><strong>Workload:</strong> Match AI output to the team’s ability to understand and check it.</p></li>
           <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">💥</span><p><strong>Performance:</strong> Test the work, including plausible AI mistakes and recovery.</p></li>
-          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🛟</span><p><strong>Error margin:</strong> Give people time, expertise and authority to turn signals into action.</p></li>
+          <li class="closing-row substep"><picture class="closing-emoji closing-lemming" aria-hidden="true"><source media="(prefers-reduced-motion: reduce), print" srcset="/images/qcon26/blocker-lemming.png" /><img class="blocker-lemming" src="/images/qcon26/blocker-lemming.gif" alt="" /></picture><p><strong>Error margin:</strong> Give people time, expertise and authority to turn signals into action.</p></li>
         </ul>
         <p class="substep closing-takeaway">Local savings can create pressure elsewhere.</p>
         <div class="notes">
@@ -1505,11 +1538,6 @@
             </div>
           </figure>
           <p>Expertise, coordination and judgment help us respond when plans no longer fit.</p>
-        </div>
-        <div class="substep closing-capacity">
-          <span><span class="closing-emoji" aria-hidden="true">🧠</span>Expertise</span>
-          <span><span class="closing-emoji" aria-hidden="true">⏳</span>Time</span>
-          <span><span class="closing-emoji" aria-hidden="true">🛑</span>Authority</span>
         </div>
         <p class="substep closing-takeaway">Use AI to strengthen our capacity to understand, act and recover.</p>
         <div class="notes">
@@ -1646,6 +1674,6 @@
     </main>
 
     <script src="/vendor/impress.js/js/impress.min.js"></script>
-    <script src="/main.js?v=56"></script>
+    <script src="/main.js?v=58"></script>
   </body>
 </html>

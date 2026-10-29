@@ -15,7 +15,7 @@ Rendered step: `#/verification-capacity`.
 
 ## Preparation and reveals
 
-Keep the existing step ID, order and camera: `data-x="0"`, `data-y="358000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Open Sans body text. Two native substeps introduce the role rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
+Keep the existing step ID, order and camera: `data-x="0"`, `data-y="358000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Comic Neue body text. Two native substeps introduce the role rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
 
 Presentation source: [SREcon26 — Tool vs Operator](https://srecon26.hatchman76.com/#/tool-vs-operator). The QCon version uses a conditional control question, rather than treating either role as a guarantee of safety or degradation.
 

@@ -8,6 +8,8 @@ Rendered step: `#/social-and-systems-wiki`.
 
 ...in organizational development (Socio Technical Systems) is an approach to complex organizational work design that recognizes the interaction between people and technology in workplaces.
 
+The definition uses bold 36px Comic Neue.
+
 ## Speaker notes
 
 

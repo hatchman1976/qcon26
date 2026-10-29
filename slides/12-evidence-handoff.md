@@ -11,13 +11,13 @@ Rendered step: `#/evidence-handoff`.
 | 💸 | Economic | Count generation, verification, operation and switching costs. |
 | 😢 | Workload | Match AI output to the team’s ability to understand and check it. |
 | 💥 | Performance | Test the work, including plausible AI mistakes and recovery. |
-| 🛟 | Error margin | Give people time, expertise and authority to turn signals into action. |
+| ![Blocker Lemming](../src/images/qcon26/blocker-lemming.gif) | Error margin | Give people time, expertise and authority to turn signals into action. |
 
 **Local savings can create pressure elsewhere.**
 
 ## Preparation and reveals
 
-Keep the existing step ID, order and camera: `data-x="0"`, `data-y="383000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Open Sans body text. Four native substeps introduce the theme rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
+Keep the existing step ID, order and camera: `data-x="0"`, `data-y="383000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Comic Neue body text. Four native substeps introduce the theme rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
 
 Presentation source: [SREcon26 — We have to adapt](https://srecon26.hatchman76.com/#/takeaways-summary). The QCon version returns to its three constraints and performance-side buffer.
 

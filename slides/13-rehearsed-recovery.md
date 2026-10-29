@@ -8,23 +8,16 @@ Rendered step: `#/rehearsed-recovery`.
 
 Expertise, coordination and judgment help us respond when plans no longer fit.
 
-🧠 Expertise
-
-⏳ Time
-
-🛑 Authority
-
 **Use AI to strengthen our capacity to understand, act and recover.**
 
 ## Preparation and reveals
 
-Keep the existing step ID, order and camera: `data-x="0"`, `data-y="408000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Open Sans body text.
+Keep the existing step ID, order and camera: `data-x="0"`, `data-y="408000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Comic Neue body text.
 
-Three native presenter-controlled substeps:
+Two native presenter-controlled substeps:
 
 1. The existing complex-system diagram (`/images/srecon26/complex-sign-transparent.png`), four emoji faces and flashing orange points appear with the statement about expertise, coordination and judgment. The 300px diagram coordinate system scales together to a 310px-wide visual, keeping the faces and points aligned.
-2. The three emoji labels together: 🧠 Expertise, ⏳ Time and 🛑 Authority.
-3. The final takeaway about strengthening our capacity to understand, act and recover.
+2. The final takeaway about strengthening our capacity to understand, act and recover.
 
 Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available. The References slide remains the final step.
 

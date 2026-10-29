@@ -48,10 +48,10 @@ const requiredMarkers = [
   "Resilience Engineering When AI Moves the Operating Point",
   "Andrew Hatch",
   "Takeaways",
-  "It helps to understand conditions that lead to adversity and how you stay resilient and adaptive to change.",
+  "It is a framework to build understanding of conditions that lead to adversity and how to stay resilient and adaptive to change.",
   "This model is a system-wide lens focused on risk, built from localized analysis, actions, and perspectives.",
-  "We all are part of, and work/live within complex socio-technical systems",
-  "Attempts to change a complex system in whole, or in part, will yield unintended consequences",
+  "Because we all are part of, and work/live within complex socio-technical systems",
+  "And any attempts to change a complex system, either in whole, or in part, can lead to unintended consequences",
   "Diagram Legend",
   "Operating point",
   'src="/images/srecon24/Rasmussen_boundary_performance.png?v=2"',
@@ -124,21 +124,20 @@ if (!/\bid="token-economy"/.test(sectionTags[economicIndex + 1] ?? "") ||
     !/\bid="ai-workload-pressure"/.test(sectionTags[economicIndex + 3] ?? "")) {
   throw new Error("Token progression and model enshittification must follow AI economics and precede AI workload");
 }
-if (stepCoordinate("model-enshittification", "x") !== stepCoordinate("token-economy", "x") ||
-    stepCoordinate("model-enshittification", "scale") !== stepCoordinate("token-economy", "scale") ||
-    Math.abs(stepCoordinate("model-enshittification", "y") - stepCoordinate("token-economy", "y") -
-      520 * stepCoordinate("token-economy", "scale")) > 0.001) {
-  throw new Error("Model enshittification must be the same size and two-thirds of a slide below token progression");
+if (stepCoordinate("model-enshittification", "scale") !== stepCoordinate("token-economy", "scale") ||
+    stepCoordinate("model-enshittification", "y") - stepCoordinate("token-economy", "y") <
+      780 * stepCoordinate("token-economy", "scale")) {
+  throw new Error("Model enshittification must be the same size and below token progression without overlap");
 }
 const workflowIndex = sectionTags.findIndex((tag) => /\bid="workflow-cost"/.test(tag));
 if (!/\bid="ai-fish-diagram-overview"/.test(sectionTags[workflowIndex - 1] ?? "") ||
     !/\bid="ai-margin-pressure"/.test(sectionTags[workflowIndex - 2] ?? "")) {
-  throw new Error("The pressure summary must follow the margin scene and immediately precede workflow cost");
+  throw new Error("The AI fish overview must follow the margin scene and immediately precede workflow cost");
 }
-if (stepCoordinate("ai-fish-diagram-overview", "x") >= stepCoordinate("ai-margin-pressure", "x") ||
-    stepCoordinate("ai-fish-diagram-overview", "scale") <= stepCoordinate("ai-fish-diagram", "scale") ||
+if (["x", "y", "scale"].some((axis) =>
+      stepCoordinate("ai-fish-diagram-overview", axis) !== stepCoordinate("ai-fish-diagram", axis)) ||
     !html.includes('class="step ai-margin-summary"')) {
-  throw new Error("The pressure summary must zoom out and left while retaining the full fish model");
+  throw new Error("The AI fish overview must match the AI fish diagram position and scale");
 }
 
 const lastSection = sectionTags.at(-1);

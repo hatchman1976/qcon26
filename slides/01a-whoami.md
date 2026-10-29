@@ -36,4 +36,4 @@ Immediately after the opening statement about capability and control, before Tak
 
 ## Sources
 
-- [WHOAMI — SREcon26 presentation](https://srecon26.hatchman76.com/#/whoami). Original artwork, fonts, text, spacing and background preserved.
+- [WHOAMI — SREcon26 presentation](https://srecon26.hatchman76.com/#/whoami). Original artwork, text, spacing and background preserved. Editable text follows the deck typography rule: Archivo Black headings and Comic Neue for the remaining text.

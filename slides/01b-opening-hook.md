@@ -12,7 +12,7 @@
 
 ## Layout
 
-All four statements use paragraph elements with the same bold type size. Left-align them and distribute the space between the paragraphs vertically, with the final statement at the bottom.
+All four statements use paragraph elements in 42px Archivo Black. Left-align them and distribute the space between the paragraphs vertically, with the final statement at the bottom.
 
 Once the slide settles, fade in the statements automatically from top to bottom. Each fade takes 600ms, with 1.1 seconds between starts. Replay the sequence on every visit. Reduced-motion mode and print show all four statements immediately.
 

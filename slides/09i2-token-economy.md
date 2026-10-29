@@ -2,7 +2,7 @@
 
 Rendered step: `#/token-economy`.
 
-Placed immediately after `#/ai-economic-pressure` and before [Model Enshittification](09i3-model-enshittification.md), at `data-x="11250"`, `data-y="304850"`, `data-scale="3.55392"`. Both token steps sit beside the fish diagram's economic side, with the permanent boundary lines just outside the left edge of their 16:9 views. They were shifted 750 world units left together.
+Placed immediately after `#/ai-economic-pressure` and before [Model Enshittification](09i3-model-enshittification.md), at `data-x="11250"`, `data-y="304850"`, `data-scale="3.55392"`. This step sits beside the fish diagram's economic side, with the permanent boundary lines just outside the left edge of its 16:9 view. The following step sits lower with a gap between their canvases.
 
 ## Slide copy and reveal sequence
 
@@ -13,11 +13,11 @@ Six native presenter-controlled substeps:
 3. 🏆 Maxxing — Treat token consumption as a score to maximise.
 4. 📏 Metering — Count token use to track limits and allowances.
 5. 🔀 Optimization — Route users’ requests to cheaper models to reduce costs.
-6. 💩 **Model Enshittification** 💩
+6. “How does commercial AI evolve from here, and what are the risks?”
 
-The table has two columns. Body row labels use regular-weight Open Sans, matching the descriptions in the right column. The column headings retain the presentation's heading font. Each body row reveals as a unit. The table starts 32px below the title and uses 10px cell padding to leave room for the large footer heading at local y=556. The footer heading and its flanking 💩 use 64px sizing.
+The table has two columns. All table text uses Open Sans, including column headings, row labels, descriptions and links. Body row labels retain regular weight. Each body row reveals as a unit. The table starts 16px below the title and uses 10px cell padding. The question uses 32px Comic Neue text, with balanced wrapping as needed, centered horizontally and vertically in the 124px bottom band from local y=620 to 36px above the slide's bottom. It remains the sixth reveal.
 
-The footer is the same heading element used by the following Model Enshittification step. It no longer has the “Risk” prefix, three-stage sentence or small attribution. The new step presents those stages with its own Doctorow attribution. The Cursor example remains in speaker notes rather than the visible table.
+The Model Enshittification heading and its flanking 💩 appear only on the following step, which has its own heading and Doctorow attribution. The two canvases do not overlap. The Cursor example remains in speaker notes rather than the visible table.
 
 Revealed content remains visible on the world canvas when leaving the slide. Source links are collected in **Token economy (12)** on the final [References slide](14-references.md).
 

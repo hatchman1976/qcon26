@@ -13,6 +13,8 @@ Reveal 2:
 
 - any complex distributed software system
 
+Both explanation rows use bold 40px Comic Neue.
+
 ## Speaker notes
 
 

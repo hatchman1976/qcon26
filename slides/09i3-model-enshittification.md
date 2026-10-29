@@ -8,21 +8,25 @@ Immediately after [Tokenomic Progression](09i2-token-economy.md) and before `#/a
 
 💩 **Model Enshittification** 💩
 
-1. **Serve Users** — Build something people want to depend on.
-2. **Favor Business** — Shift value to business customers at users’ expense.
-3. **Squeeze for Rent** — Capture more value from both sides.
-4. 📉 **280× lower inference prices at GPT-3.5-level MMLU performance (2022–24).** Hardware became more cost-efficient. Historical trends, not guarantees. Stanford AI Index, 2025.
-5. 🔒 **Cheaper compute does not guarantee cheaper access.** Competition and switching costs shape who keeps the savings. CMA cloud findings, 2025.
+1. **Serve Users** — Make it useful and easy to adopt.
+2. **Favor Business** — Put paying business customers first.
+3. **Squeeze for Rent** — Charge more. Give both sides less.
+4. 🏷️ **AI prices have fallen for the same capability.**
 
-Credit: After Cory Doctorow, *Enshittification* (2025).
+   [Stanford AI Index, 2025](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts)
+5. 💰 **Lower costs don’t guarantee lower prices.**
+
+   [Cloud-market example: CMA, 2025](https://assets.publishing.service.gov.uk/media/688b20e6ff8c05468cb7b120/summary_of_final_decision.pdf)
+
+Credit: After Cory Doctorow, [*Enshittification* (2025)](https://us.macmillan.com/books/9780374619329/enshittification/).
 
 ## Placement and reveal sequence
 
-The step uses the existing 1020×780 canvas at `data-x="11250"`, `data-y="306698.0384"`, `data-scale="3.55392"`. It sits 520 local pixels, or two thirds of a slide height, below the preceding token step. Both were moved 750 world units left toward the economic boundary, leaving the permanent fish lines just outside their 16:9 views. The camera change turns the preceding step's large footer into this step's heading.
+The step uses the existing 1020×780 canvas at `data-x="16750"`, `data-y="307977.4496"`, `data-scale="3.55392"`. Its center sits 880 local pixels below the preceding token step, leaving a 100px vertical gap between their canvases. A 5,500-world-unit shift right keeps it clear of the permanent fish boundary and nearby expertise visuals. It retains the same size as the token step.
 
-There is one shared on-screen heading on the world canvas. A separate heading is used only for printing. Its local y-position is 556 in the preceding step and 36 in this view. The heading and the 💩 on each side use 64px sizing. The three stages form a compact descending staircase at (60, 145), (240, 240) and (420, 335), with 32px stage headings and 26px explanatory text. Two emoji-led evidence points sit below at y455 and y575, using 26px text and 22px source labels. The attribution sits 48px above the bottom.
+The step owns its visible heading at local y=36, including for print. The heading and the 💩 on each side use 64px sizing. The three stages form a compact descending staircase at (60, 145), (240, 240) and (420, 335), with 32px stage headings and 26px explanatory text. Two emoji-led takeaways sit below at y455 and y575, using 32px text and 40px emojis. Each takeaway has its own small 20px source link below. The 22px Doctorow attribution sits 48px above the bottom, with the book text linked to its publisher page.
 
-Five native presenter-controlled substeps introduce the three stages, then the falling-cost evidence and the competition counterargument. The Doctorow credit fades in with “Squeeze for Rent”, without adding another click. The shared heading carries through from the preceding step. Revealed content remains visible after leaving the step. Article and report links remain in the final References collection.
+The heading is visible on entry. Five native presenter-controlled substeps introduce the three stages, then the falling-price takeaway and the lower-cost counterargument. Each source link appears with its takeaway. The Doctorow credit fades in with “Squeeze for Rent”, without adding another click. Direct entry does not reveal the preceding token slide's content. Revealed content remains visible after leaving the step. Article and report links also remain in the final References collection.
 
 ## Speaker notes
 

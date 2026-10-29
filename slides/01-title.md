@@ -12,6 +12,8 @@ Andrew Hatch
 
 Show a Blocker Lemming with its arms outstretched. Its head turns left, then right, then back again in a continuous loop. Keep a static pose when reduced motion is enabled.
 
+The speaker name uses 58px Archivo Black, centered at 608px from the top of the slide, 40px lower than its previous position.
+
 ## Speaker notes
 
 Open with the audience promise: this is not a replay of the 2024 talk.

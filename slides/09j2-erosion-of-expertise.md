@@ -2,7 +2,7 @@
 
 Rendered step: `#/erosion-of-expertise`.
 
-Placed immediately after `#/ai-workload-pressure`, to its right at `data-x="9850"`, `data-y="311150"`, `data-scale="3.037465"`. The book slide is 2,000 canvas units lower than the workload slide and the following expertise sequence. The following sequence remains at `data-x="13100"`, `data-y="309150"`. The AI fish diagram remains visible behind both slides, whose active screen backgrounds are transparent.
+Placed immediately after `#/ai-workload-pressure`, to its right at `data-x="8850"`, `data-y="310150"`, `data-scale="3.037465"`. Both expertise slides move 1,000 world units left and 1,000 up, closer to the AI fish diagram's workload boundary. The following sequence sits at `data-x="12100"`, `data-y="308150"`, preserving their 3,250-unit horizontal and 2,000-unit vertical offset. Both retain their existing size. The AI fish diagram remains visible behind both slides, whose active screen backgrounds are transparent.
 
 ## Slide content and reveal sequence
 

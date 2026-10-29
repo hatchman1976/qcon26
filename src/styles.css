@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "Maven Pro";
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-  src: url("/fonts/maven-pro.woff2") format("woff2");
-}
-
-@font-face {
   font-family: "Comic Neue";
   font-style: normal;
   font-weight: 400;
@@ -30,36 +22,22 @@
   src: url("/fonts/open-sans.woff2") format("woff2");
 }
 
-/* Exact source fonts for the SREcon26 WHOAMI slide. */
+/* Use the existing Archivo Black asset for every heading. */
 @font-face {
-  font-family: "SREcon26 Archivo Black";
+  font-family: "Archivo Black";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url("/fonts/srecon26-archivo-black-400-normal.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: "SREcon26 Comic Neue";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/fonts/srecon26-comic-neue-700-normal.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "SREcon26 Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/srecon26-open-sans-400-normal.woff2") format("woff2");
-}
-
 :root {
   color-scheme: light;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: var(--body-font-family);
   font-synthesis: none;
-  --heading-font-family: "SREcon26 Archivo Black", sans-serif;
+  --heading-font-family: "Archivo Black", sans-serif;
+  --table-font-family: "Open Sans", Arial, sans-serif;
+  --body-font-family: "Comic Neue", cursive;
   --surface-background: #b3d9ff;
   --ink: #000000;
   --link: royalblue;
@@ -111,19 +89,29 @@ body {
   margin: 0;
   padding: 40px 60px;
   color: var(--ink);
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: var(--body-font-family);
   font-size: 30px;
   letter-spacing: -1px;
 }
 
-/* Keep slide titles and section headings consistent with WHOAMI. */
-#impress .step :is(h1, h2, h3, h4, h5, h6, th),
+/* Heading, table and body typography applies across the whole deck. */
+#impress .step :is(h1, h2, h3, h4, h5, h6, [role="heading"]),
 #impress .paper-theme-copy strong,
 #impress .diagram-legend-item strong,
 #impress .practice-rows dt,
 #impress .sociotechnical-heading,
 #impress .systems-thinking {
   font-family: var(--heading-font-family);
+}
+
+#impress .step :is(h1, h2, h3, h4, h5, h6, [role="heading"]) :where(*):not([aria-hidden="true"], [role="img"]) {
+  font-family: inherit;
+}
+
+/* Tables take precedence over heading/body styles, including nested links. */
+#impress .step table,
+#impress .step table :where(*):not(:where(.takeaways-icon, .takeaways-icon *, .boundary-list-emoji, .token-economy-label > [aria-hidden="true"])) {
+  font-family: var(--table-font-family);
 }
 
 .impress-enabled .step {
@@ -141,7 +129,7 @@ p {
 
 a {
   color: var(--link);
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   text-align: center;
   text-decoration: underline;
   cursor: pointer;
@@ -194,13 +182,23 @@ a {
   margin: 0;
   transform: translateY(-50%);
   font-size: 42px;
+  font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.7px;
   text-align: left;
 }
 
 .resilience-definition-copy strong {
-  font-weight: 650;
+  font-weight: inherit;
+}
+
+.resilience-definition-copy .resilience-key-phrase {
+  font-size: 54px;
+  line-height: 1.15;
+  white-space: nowrap;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.1em;
 }
 
 /* This close-up stays on the canvas after its native substeps are revealed. */
@@ -217,7 +215,7 @@ a {
 
 .token-economy-table {
   width: 100%;
-  margin-top: 32px;
+  margin-top: 16px;
   border-collapse: collapse;
   table-layout: fixed;
   font-size: 32px;
@@ -241,7 +239,7 @@ a {
 }
 
 #impress .token-economy-slide .token-economy-table tbody :is(th, td) {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: var(--table-font-family);
   font-weight: 400;
   letter-spacing: -0.5px;
 }
@@ -258,11 +256,21 @@ a {
   line-height: 1.1;
 }
 
-.token-economy-risk {
+.token-economy-question {
   position: absolute;
-  top: 556px;
+  top: 620px;
+  bottom: 36px;
   right: 46px;
   left: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+  text-align: center;
+  text-wrap: balance;
 }
 
 .model-enshittification-title {
@@ -287,8 +295,6 @@ a {
 .model-enshittification-slide {
   padding: 36px 46px;
 }
-
-.model-enshittification-print-title { display: none; }
 
 .model-stage {
   position: absolute;
@@ -325,7 +331,7 @@ a {
   right: 60px;
   left: 60px;
   display: grid;
-  grid-template-columns: 36px minmax(0, 1fr);
+  grid-template-columns: 40px minmax(0, 1fr);
   gap: 18px;
   align-items: start;
 }
@@ -335,21 +341,24 @@ a {
 
 .model-evidence-emoji {
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 1;
   letter-spacing: 0;
 }
 
 .model-evidence-point p {
   margin: 0;
-  font-size: 26px;
-  line-height: 1.3;
+  font-size: 32px;
+  line-height: 1.25;
   letter-spacing: -0.35px;
   text-align: left;
 }
 
 .model-evidence-source {
-  font-size: 22px;
+  display: block;
+  margin-top: 8px;
+  font-size: 20px;
+  line-height: 1.25;
   white-space: nowrap;
 }
 
@@ -359,8 +368,8 @@ a {
   bottom: 48px;
   left: 46px;
   margin: 0;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 23px;
+  font-family: var(--body-font-family);
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.5px;
@@ -385,7 +394,7 @@ a {
   border-bottom: 3px solid transparent;
   background: transparent;
   color: var(--ink);
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 23px;
   font-weight: 700;
   line-height: 1.15;
@@ -411,7 +420,7 @@ a {
 
 .references-group h3 {
   margin: 0 0 18px;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--heading-font-family);
   font-size: 30px;
   line-height: 1.1;
   letter-spacing: -0.5px;
@@ -429,7 +438,7 @@ a {
 
 .references-list a {
   display: block;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: var(--body-font-family);
   font-size: 24px;
   line-height: 1.18;
   letter-spacing: -0.5px;
@@ -598,7 +607,9 @@ a {
 .closing-summary-rows { gap: 24px; }
 .closing-summary-rows .closing-row { grid-template-columns: 76px minmax(0, 1fr); gap: 24px; }
 .closing-summary-rows .closing-emoji { font-size: 68px; }
-.closing-summary-rows strong { font-family: var(--heading-font-family); font-weight: 400; }
+.closing-lemming { display: block; width: 68px; height: 68px; margin: 0 auto; }
+.closing-lemming img { display: block; width: 100%; height: 100%; }
+.closing-summary-rows strong { font-family: inherit; font-weight: 700; }
 .closing-summary .closing-takeaway { min-height: 70px; }
 
 .closing-human-scene {
@@ -625,15 +636,11 @@ a {
   text-align: left;
 }
 
-.closing-capacity { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; font-size: 32px; line-height: 1.2; letter-spacing: -0.6px; }
-.closing-capacity > span { display: flex; align-items: center; justify-content: center; gap: 12px; }
-.closing-capacity .closing-emoji { font-size: 40px; }
 .closing-humans .closing-takeaway { min-height: 120px; margin-top: 26px; font-size: 40px; }
 
 @media print {
   .closing-arrow-pulses .social-arrow-pulse { animation: none !important; opacity: 1; transform: none; }
   #impress :is(.token-economy-slide, .model-enshittification-slide) { position: relative !important; }
-  .model-enshittification-print-title { position: absolute; top: 36px; right: 46px; left: 46px; display: flex; }
   .model-stage { transform: none !important; }
   .model-enshittification-slide .token-economy-credit { opacity: 1 !important; }
   img.blocker-lemming {
@@ -643,11 +650,11 @@ a {
 
 .title-speaker {
   position: absolute;
-  top: 568px;
+  top: 608px;
   right: 80px;
   left: 80px;
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 58px;
   font-weight: 400;
   line-height: 1;
@@ -659,7 +666,7 @@ a {
   right: 60px;
   left: 60px;
   margin: 0;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   line-height: 1.15;
 }
 
@@ -676,12 +683,12 @@ a {
 
 /* WHOAMI: preserve the original SREcon26 composition and typography. */
 .whoami-slide {
-  font-family: "SREcon26 Open Sans", Arial, sans-serif;
+  font-family: var(--body-font-family);
 }
 
 .whoami-heading {
   margin: 8px 0;
-  font-family: "SREcon26 Archivo Black", sans-serif;
+  font-family: var(--heading-font-family);
   font-size: 70px;
   font-weight: 300;
   line-height: normal;
@@ -690,7 +697,7 @@ a {
 
 .whoami-slide p {
   margin: 11px;
-  font-family: "SREcon26 Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 36px;
   font-weight: 700;
 }
@@ -727,7 +734,7 @@ a {
   margin: 0;
   font-family: var(--heading-font-family);
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.18;
   letter-spacing: -1px;
   text-align: left;
@@ -786,7 +793,7 @@ a {
   height: 610px;
   border-collapse: collapse;
   table-layout: fixed;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--table-font-family);
   font-size: 32px;
   font-weight: 700;
   line-height: 1.14;
@@ -858,7 +865,7 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 40px;
   row-gap: 20px;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
 }
 
 .diagram-legend-item {
@@ -989,7 +996,7 @@ a {
   z-index: 2;
   width: 285px;
   color: #000;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 34px;
   font-weight: 700;
   text-align: center;
@@ -1136,7 +1143,7 @@ a {
   top: 340px;
   left: 422px;
   width: 180px;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 25px;
   font-weight: 700;
   text-align: center;
@@ -1199,7 +1206,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   position: absolute;
   z-index: 5;
   width: 270px;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 29px;
   font-weight: 700;
   line-height: 1.05;
@@ -1264,7 +1271,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   top: 270px;
   left: 270px;
   z-index: 3;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 22px;
   font-weight: 700;
   line-height: 1.1;
@@ -1370,7 +1377,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   stroke-width: 5;
   stroke-linejoin: round;
   paint-order: stroke;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 24px;
   font-weight: 700;
   text-anchor: middle;
@@ -1404,7 +1411,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 
 .regular-text {
   position: absolute;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 25px;
 }
 
@@ -1428,7 +1435,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   right: 10px;
   width: 550px;
   margin: 0;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 32px;
   line-height: 1.15;
 }
@@ -1514,7 +1521,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   right: 70px;
   left: 70px;
   margin: 0;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 32px;
   font-weight: 700;
   line-height: 1.15;
@@ -1544,7 +1551,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   position: relative;
   padding: 7px 10px 8px;
   background: rgb(255 255 255 / 90%);
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 24px;
   font-weight: 700;
   line-height: 1.1;
@@ -1631,7 +1638,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 
 .paper-theme-copy span {
   margin-top: 5px;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 32px;
   line-height: 1.15;
   letter-spacing: 0;
@@ -1659,8 +1666,9 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   right: 40px;
   margin: 0;
   height: auto;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 36px;
+  font-weight: 700;
   line-height: 1.2;
   text-align: left;
 }
@@ -1728,7 +1736,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 
 .complex-ai-coping figcaption {
   margin: 0;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 40px;
   line-height: 1.15;
   letter-spacing: 0;
@@ -1856,8 +1864,9 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 
 .before-continue-row p {
   margin: 0;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 40px;
+  font-weight: 700;
   line-height: 1.15;
   text-align: left;
 }
@@ -2121,7 +2130,7 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
   width: 320px;
   height: auto;
   margin: 0;
-  font-family: "Comic Neue", cursive;
+  font-family: var(--body-font-family);
   font-size: 29px;
   line-height: 1.05;
   text-align: center;
@@ -2229,7 +2238,7 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
 .ai-arrival-ball { position: absolute; top: 310px; left: 430px; width: 160px; height: 160px; object-fit: contain; }
 .ai-arrival-reveal.substep-visible .ai-arrival-ball { animation: ai-ball-roll-in var(--ai-arrival-duration) cubic-bezier(0.18, 0.65, 0.3, 1) both; }
 .ai-arrival-question,
-.ai-fish-question { position: absolute; left: 60px; right: 60px; margin: 0; font-family: "Comic Neue", cursive; font-size: 38px; font-weight: 700; line-height: 1.15; text-align: center; }
+.ai-fish-question { position: absolute; left: 60px; right: 60px; margin: 0; font-family: var(--body-font-family); font-size: 38px; font-weight: 700; line-height: 1.15; text-align: center; }
 .ai-arrival-question { top: 565px; }
 .ai-arrival-reveal.substep-visible .ai-arrival-question { animation: ai-question-arrive 2800ms ease both; }
 .ai-fish-question { bottom: 35px; visibility: hidden; }
@@ -2273,7 +2282,7 @@ body.impress-on-ai-margin-pressure .ai-roaming-point-position { visibility: hidd
 .ai-margin-pressure-slide.has-crossed-margin .ai-margin-warning { opacity: 1; }
 .ai-margin-red-light { flex: 0 0 72px; width: 72px; height: 72px; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 72px; font-weight: 400; line-height: 1; letter-spacing: 0; text-align: center; }
 .ai-margin-pressure-slide.has-crossed-margin .ai-margin-red-light { animation: ai-margin-red-alert 1200ms ease-in-out infinite; }
-.ai-margin-pressure-trigger, .ai-margin-crossing-trigger { position: absolute; width: 0; height: 0; pointer-events: none; }
+.ai-margin-pressure-trigger { position: absolute; width: 0; height: 0; pointer-events: none; }
 .ai-margin-explanation { position: absolute; z-index: 2; top: 405px; left: 90px; width: 290px; opacity: 0; pointer-events: none; }
 .ai-margin-pressure-slide.has-entered .ai-margin-explanation { opacity: 1; }
 .ai-margin-explanation h2 { margin: 0 0 16px; font-size: 32px; font-weight: 400; line-height: 1.05; letter-spacing: -1.1px; }
@@ -2320,7 +2329,7 @@ img.boundary-detail-icon { height: auto; }
 .boundary-detail-no-icon .boundary-detail-lede { margin-left: 0; }
 .boundary-detail-grid { position: absolute; left: 46px; right: 46px; top: 215px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
 .boundary-detail-copy { padding: 18px 18px 12px; }
-.boundary-detail-copy h3 { margin: 0 0 18px; font-family: "Comic Neue", cursive; font-size: 34px; line-height: 1.05; letter-spacing: -0.5px; }
+.boundary-detail-copy h3 { margin: 0 0 18px; font-family: var(--heading-font-family); font-size: 34px; line-height: 1.05; letter-spacing: -0.5px; }
 .boundary-detail-copy ul { margin: 0; padding-left: 25px; }
 .boundary-detail-copy li { margin: 0 0 20px; font-size: 25px; line-height: 1.25; letter-spacing: -0.5px; }
 .boundary-detail-copy li:last-child { margin-bottom: 8px; }
@@ -2335,12 +2344,13 @@ img.boundary-detail-icon { height: auto; }
 :is(#workload-boundary, #economic-boundary-actions) .boundary-exit-sign .boundary-list-icon { position: relative; width: 64px; height: auto; }
 .ai-pressure-slide .boundary-detail-copy li { font-size: 24px; margin-bottom: 17px; }
 .ai-pressure-slide small { font-size: 18px; letter-spacing: 0; }
-.boundary-detail-conclusion { position: absolute; bottom: 77px; left: 46px; right: 46px; margin: 0; font-family: "Comic Neue", cursive; font-size: 28px; font-weight: 700; line-height: 1.18; text-align: left; }
+.boundary-detail-conclusion { position: absolute; bottom: 77px; left: 46px; right: 46px; margin: 0; font-family: var(--body-font-family); font-size: 28px; font-weight: 700; line-height: 1.18; text-align: left; }
+.ai-pressure-slide .boundary-detail-conclusion { top: 620px; bottom: 36px; display: flex; align-items: center; justify-content: center; font-size: 32px; text-align: center; }
 #error-margin .boundary-detail-conclusion { bottom: 48px; text-align: center; }
 .boundary-detail-source { position: absolute; bottom: 25px; left: 46px; right: 46px; margin: 0; font-size: 17px; letter-spacing: 0; line-height: 1.2; text-align: left; }
 .boundary-detail-source a { font-family: inherit; }
 .boundary-action-table { position: absolute; top: 205px; left: 46px; right: 46px; width: 928px; border-collapse: collapse; font-size: 23px; line-height: 1.23; letter-spacing: -0.5px; }
-.boundary-action-table th { padding: 12px 16px; text-align: left; font-family: "Comic Neue", cursive; font-size: 28px; }
+.boundary-action-table th { padding: 12px 16px; text-align: left; font-family: var(--table-font-family); font-size: 28px; }
 .boundary-action-table td { padding: 14px 16px; text-align: left; vertical-align: top; }
 .boundary-action-table th:first-child { width: 42%; }
 .boundary-action-table strong { font-weight: 650; }
@@ -2355,7 +2365,7 @@ img.boundary-detail-icon { height: auto; }
 .workload-recovery-figure { justify-self: center; width: 140px; margin: 0; font-size: 130px; line-height: 1; letter-spacing: 0; text-align: center; }
 .workslop-chain { position: absolute; top: 180px; left: 46px; right: 46px; display: grid; grid-template-columns: minmax(0, 1fr) 235px; grid-auto-rows: 140px; column-gap: 39px; row-gap: 28px; align-items: center; }
 .workslop-chain > div { margin: 0; padding: 12px 0 12px 20px; }
-.workslop-chain h3 { margin: 0 0 12px; font-family: "Comic Neue", cursive; font-size: 31px; line-height: 1.1; }
+.workslop-chain h3 { margin: 0 0 12px; font-family: var(--heading-font-family); font-size: 31px; line-height: 1.1; }
 .workslop-chain p { margin: 0; font-size: 24px; line-height: 1.35; text-align: left; letter-spacing: -0.6px; }
 .expertise-erosion-slide { padding: 36px 46px; }
 .expertise-erosion-title { position: absolute; top: 20px; left: 46px; right: 46px; margin: 0; font-family: var(--heading-font-family); font-weight: 400; font-size: 64px; line-height: 1.05; letter-spacing: -2px; text-align: center; }

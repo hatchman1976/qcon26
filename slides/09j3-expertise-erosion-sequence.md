@@ -2,7 +2,7 @@
 
 Rendered step: `#/expertise-erosion-sequence`.
 
-Placed immediately after `#/erosion-of-expertise` and before `#/ai-margin-pressure`, at `data-x="13100"`, `data-y="309150"`, `data-scale="3.037465"`. It has moved 3,000 canvas units to the right with the book slide, retaining their 3,250-unit horizontal spacing. The AI fish diagram remains visible behind both slides, although the sequence's camera position is beyond the fish outline.
+Placed immediately after `#/erosion-of-expertise` and before `#/ai-margin-pressure`, at `data-x="12100"`, `data-y="308150"`, `data-scale="3.037465"`. Both expertise slides move 1,000 world units left and 1,000 up, closer to the AI fish diagram's workload boundary. The book slide sits at `data-x="8850"`, `data-y="310150"`, keeping this sequence 3,250 units to its right and 2,000 units above it. Both retain their existing size. The AI fish diagram remains visible behind both slides, although the sequence's camera position is beyond the fish outline.
 
 ## Slide content and reveal sequence
 
