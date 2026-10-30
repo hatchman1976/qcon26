@@ -2,6 +2,8 @@
 
 Rendered step: `#/economic-boundary`.
 
+Use bold Comic Neue for the introductory sentence, lists and conclusion, retaining Archivo Black headings.
+
 ## Slide copy and sequence
 
 **Economic Boundary**

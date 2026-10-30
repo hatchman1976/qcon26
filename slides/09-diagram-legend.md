@@ -1,5 +1,7 @@
 # Slide 9 — Diagram Legend
 
+Use bold Comic Neue for all seven descriptions, retaining Archivo Black for the title and item labels.
+
 ## Slide copy
 
 **Diagram Legend**

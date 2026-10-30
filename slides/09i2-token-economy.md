@@ -1,4 +1,4 @@
-# Tokenomic Progression
+# Tokenomics Evolution
 
 Rendered step: `#/token-economy`.
 
@@ -8,14 +8,14 @@ Placed immediately after `#/ai-economic-pressure` and before [Model Enshittifica
 
 Six native presenter-controlled substeps:
 
-1. **Tokenomic Progression**
-2. The table headings, **Approach** and **What it means**.
+1. **Tokenomics Evolution**
+2. The table headings, **Stage** and **Control intent**.
 3. 🏆 Maxxing — Treat token consumption as a score to maximise.
 4. 📏 Metering — Count token use to track limits and allowances.
 5. 🔀 Optimization — Route users’ requests to cheaper models to reduce costs.
 6. “How does commercial AI evolve from here, and what are the risks?”
 
-The table has two columns. All table text uses Open Sans, including column headings, row labels, descriptions and links. Body row labels retain regular weight. Each body row reveals as a unit. The table starts 16px below the title and uses 10px cell padding. The question uses 32px Comic Neue text, with balanced wrapping as needed, centered horizontally and vertically in the 124px bottom band from local y=620 to 36px above the slide's bottom. It remains the sixth reveal.
+The table has two columns. Column headings use 36px Archivo Black, and all body cells, including row labels and nested text, use bold 32px Comic Neue. Preserve the emoji font stack. Each body row reveals as a unit. The table is centered vertically between the slide title and the bottom question, with equal space above and below, and retains 10px cell padding. The question uses bold 32px Comic Neue, centered horizontally with balanced wrapping and 79px of clearance below it. It remains the sixth reveal.
 
 The Model Enshittification heading and its flanking 💩 appear only on the following step, which has its own heading and Doctorow attribution. The two canvases do not overlap. The Cursor example remains in speaker notes rather than the visible table.
 

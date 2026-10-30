@@ -4,9 +4,9 @@ Rendered step: `#/ai-operating-point`.
 
 ## Slide copy and sequence
 
-What changes when AI enters the work?
+What happens as AI infiltrates every part of the system?
 
-Starting state: red operating-point circle. One presenter reveal: AI ball rolls from the left and settles over the same point after 2.4 seconds. Once it reaches the middle, the red circle fades out over 600 milliseconds. The “What changes” question appears as the ball settles and stays visible at its canvas position when navigating away. Once revealed, the 160px AI ball also remains at its settled starting position after exit, at 45% opacity, while the red circle stays hidden. This faded ball marks the starting reference position. The AI Fish Diagram's moving ball represents the one current whole-system state. Hiding this reveal restores the red point for replay; reduced motion immediately shows the settled AI ball with the red point hidden. The next advance moves to the AI Fish Diagram, where the non-determinism question has its own manual reveal.
+Starting state: red operating-point circle. One presenter reveal: AI ball rolls from the left and settles over the same point after 2.4 seconds. Once it reaches the middle, the red circle fades out over 600 milliseconds. The question appears as the ball settles and stays visible at its canvas position when navigating away. Once revealed, the 160px AI ball also remains at its settled starting position after exit, at 45% opacity, while the red circle stays hidden. This faded ball marks the starting reference position. The AI Fish Diagram's moving ball represents the one current whole-system state. Hiding this reveal restores the red point for replay; reduced motion immediately shows the settled AI ball with the red point hidden. The next advance moves to the AI Fish Diagram, where the non-determinism question has its own manual reveal.
 
 The arrival ball is 160px across in a step scaled by 7, giving a world diameter of 1,120 units. The Fish Diagram's roaming ball is 44.8px across in a step scaled by 25, giving the same world diameter. Its starting center is at diagram coordinates (512, 404), aligned with the settled reference ball.
 

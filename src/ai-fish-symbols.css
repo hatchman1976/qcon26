@@ -1,7 +1,8 @@
 /* Local fish coordinates: x = 510 + world-x / 25,
    y = 390 + (world-y - 308000) / 25. These fixed, compact positions
    leave the inset slides, starting ball and both questions unobstructed.
-   The parent fish model owns the fade and its permanent rendered state. */
+   The parent fish model owns its permanent rendered state. Individual
+   symbols fade in once, in a randomly shuffled order after it renders. */
 #ai-fish-diagram .ai-fish-symbols {
   position: absolute;
   inset: 0;
@@ -22,13 +23,23 @@
   text-align: center;
 }
 
+.impress-enabled #ai-fish-diagram .ai-fish-symbol {
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+
+.impress-enabled #ai-fish-diagram .ai-fish-symbol.is-visible {
+  opacity: 1;
+}
+
 #ai-fish-diagram .ai-fish-symbol-graph-one { left: 490px; top: 235px; }
 #ai-fish-diagram .ai-fish-symbol-graph-two { left: 535px; top: 330px; }
 #ai-fish-diagram .ai-fish-symbol-graph-three { left: 540px; top: 190px; }
 #ai-fish-diagram .ai-fish-symbol-graph-four { left: 750px; top: 285px; }
 #ai-fish-diagram .ai-fish-symbol-hand-one { left: 590px; top: 510px; }
-#ai-fish-diagram .ai-fish-symbol-hand-two { left: 770px; top: 390px; }
+#ai-fish-diagram .ai-fish-symbol-hand-two { left: 800px; top: 350px; }
 #ai-fish-diagram .ai-fish-symbol-hand-three { left: 540px; top: 515px; }
+#ai-fish-diagram .ai-fish-symbol-hand-four { left: 660px; top: 492px; }
 #ai-fish-diagram .ai-fish-symbol-lemming-one { left: 320px; top: 435px; }
 #ai-fish-diagram .ai-fish-symbol-lemming-two { left: 420px; top: 505px; }
 #ai-fish-diagram .ai-fish-symbol-lemming-three { left: 375px; top: 235px; }
@@ -41,6 +52,13 @@
   height: 100%;
   object-fit: contain;
   image-rendering: pixelated;
+}
+
+@media (prefers-reduced-motion: reduce), print {
+  .impress-enabled #ai-fish-diagram .ai-fish-symbol {
+    opacity: 1;
+    transition: none;
+  }
 }
 
 @media print {

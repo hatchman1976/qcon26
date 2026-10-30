@@ -2,6 +2,8 @@
 
 Rendered step: `#/workflow-cost`.
 
+Use bold Comic Neue for the body text and closing takeaway, retaining Archivo Black headings.
+
 ## Slide copy
 
 **Skills that protect margin**

@@ -29,7 +29,7 @@ Reveal 4:
 
 ## Typography
 
-Editable text uses 32px type, increased from 25px. Socio-Technical Systems and Systems Thinking use the shared Archivo Black heading font. The right-hand labels have wider text areas and more vertical room; the source diagram and four reveals remain unchanged.
+Editable text uses 32px type, increased from 25px. The person caption, paper caption and two descriptive labels use bold Comic Neue. Socio-Technical Systems and Systems Thinking use the shared Archivo Black heading font. The right-hand labels have wider text areas and more vertical room; the source diagram and four reveals remain unchanged.
 
 ## Speaker notes
 

@@ -2,6 +2,8 @@
 
 Rendered step: `#/verification-capacity`.
 
+Use bold Comic Neue for the body text and closing takeaway, retaining Archivo Black headings.
+
 ## Slide copy
 
 **Tool vs Operator**

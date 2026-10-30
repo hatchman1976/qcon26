@@ -2,6 +2,10 @@
 
 Rendered step: `#/error-margin`.
 
+Use bold Comic Neue for the introductory sentence, closing statement and table body. Use Archivo Black for the slide heading and both table column headings, and preserve the emoji font stack.
+
+Canvas position: `data-x="-3713"`, `data-y="281676"`, `data-scale="2.72826"`. The whole step moves 50 canvas pixels upward.
+
 Visual: a small, 60px original animated Blocker Lemming sits at the top left beside the title. Use `blocker-lemming.gif`, with the original static `blocker-lemming.png` for reduced motion and print. The modern 3D artwork must not be used anywhere in the presentation.
 
 ## Slide copy and sequence

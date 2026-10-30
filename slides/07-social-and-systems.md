@@ -10,6 +10,8 @@ Reveal 1: social control hierarchy and its label.
 
 Reveal 2: research disciplines and environmental stressors.
 
+Keep the three original Rasmussen image assets and their embedded lettering. Display the hierarchy and research images at 264px wide and the environmental image at 343.2px in an 858px-wide composition, a further 10% enlargement. Keep the content wrapper 50px lower and the title at its original top position of 20px. The Archivo Black title is 55px, the Comic Neue caption is 30.8px, and “Rasmussen’s structural hierarchy” is 24px. Keep the images clear of the title and caption. Preserve the two reveals and keep their content visible after leaving the slide.
+
 ## Speaker notes
 
 

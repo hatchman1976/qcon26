@@ -2,6 +2,8 @@
 
 Rendered step: `#/performance-boundary`.
 
+Use bold Comic Neue for the introductory sentence, list text and closing sentence, retaining Archivo Black headings. Canvas position: `x=-10407`, `y=281579`, scale `2.981193`. The step is 1,200 world units lower to clear the fish diagram's performance-boundary label and explosion emoji.
+
 ## Slide copy and sequence
 
 **Boundary of<br />Acceptable Performance**
@@ -14,7 +16,7 @@ Crossing the functional limit means unacceptable outcomes.
 - 🔓 Lost, corrupted or exposed customer data
 - ⏳ Recovery that cannot restore service in time
 
-**Harm beyond the service**
+**Consequences**
 
 - 🚧 Customer operations disrupted, safety put at risk
 - 💔 Trust and reputation damaged
@@ -26,7 +28,7 @@ Can people, tools and workflows anticipate and adapt to failure, ensuring system
 
 ## Reveal sequence
 
-All visible content uses eleven presenter-controlled substeps: title and icon together; introductory sentence; the “Failure in the service” heading; each of its three items in order; the “Harm beyond the service” heading; each of its three items in order; then the closing statement. Reveal one group per advance, keeping each item's emoji and text together and preserving the layout while content is hidden.
+All visible content uses eleven presenter-controlled substeps: title and icon together; introductory sentence; the “Failure in the service” heading; each of its three items in order; the “Consequences” heading; each of its three items in order; then the closing statement. Reveal one group per advance, keeping each item's emoji and text together and preserving the layout while content is hidden.
 
 ## Speaker notes
 

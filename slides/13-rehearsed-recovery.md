@@ -2,6 +2,8 @@
 
 Rendered step: `#/rehearsed-recovery`.
 
+Use bold Comic Neue for the body text and closing takeaway, retaining Archivo Black for the slide heading.
+
 ## Slide copy
 
 **Humans are adaptable**

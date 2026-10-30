@@ -2,6 +2,8 @@
 
 Rendered step: `#/ai-economic-pressure`.
 
+Use bold Comic Neue for the introduction, both columns of body text and their source labels, and the bottom takeaway. Retain Archivo Black headings.
+
 Canvas position: `data-x="3400"`, `data-y="304850"`, `data-scale="3.55392"`, inside the upper-right portion of the AI fish diagram.
 
 ## Slide copy and sequence

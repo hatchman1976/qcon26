@@ -2,6 +2,8 @@
 
 Rendered step: `#/model-enshittification`.
 
+Use bold Comic Neue for all body text, evidence statements, source links and the Doctorow credit. Retain Archivo Black headings.
+
 Immediately after [Tokenomic Progression](09i2-token-economy.md) and before `#/ai-workload-pressure`.
 
 ## Slide copy
@@ -18,7 +20,7 @@ Immediately after [Tokenomic Progression](09i2-token-economy.md) and before `#/a
 
    [Cloud-market example: CMA, 2025](https://assets.publishing.service.gov.uk/media/688b20e6ff8c05468cb7b120/summary_of_final_decision.pdf)
 
-Credit: After Cory Doctorow, [*Enshittification* (2025)](https://us.macmillan.com/books/9780374619329/enshittification/).
+Credit: Cory Doctorow, [*Enshittification* (2025)](https://us.macmillan.com/books/9780374619329/enshittification/).
 
 ## Placement and reveal sequence
 
@@ -26,7 +28,7 @@ The step uses the existing 1020×780 canvas at `data-x="16750"`, `data-y="307977
 
 The step owns its visible heading at local y=36, including for print. The heading and the 💩 on each side use 64px sizing. The three stages form a compact descending staircase at (60, 145), (240, 240) and (420, 335), with 32px stage headings and 26px explanatory text. Two emoji-led takeaways sit below at y455 and y575, using 32px text and 40px emojis. Each takeaway has its own small 20px source link below. The 22px Doctorow attribution sits 48px above the bottom, with the book text linked to its publisher page.
 
-The heading is visible on entry. Five native presenter-controlled substeps introduce the three stages, then the falling-price takeaway and the lower-cost counterargument. Each source link appears with its takeaway. The Doctorow credit fades in with “Squeeze for Rent”, without adding another click. Direct entry does not reveal the preceding token slide's content. Revealed content remains visible after leaving the step. Article and report links also remain in the final References collection.
+The heading and its two 💩 emojis reveal together on the first native presenter-controlled substep. Five further substeps introduce the three stages, then the falling-price takeaway and the lower-cost counterargument, for six substeps in total. Each source link appears with its takeaway. The Doctorow credit fades in with “Squeeze for Rent”, without adding another click. Direct entry does not reveal the preceding token slide's content. Revealed content, including the title, remains visible after leaving the step. Article and report links also remain in the final References collection.
 
 ## Speaker notes
 

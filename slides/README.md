@@ -2,7 +2,7 @@
 
 The numbered Markdown files in this directory mirror the rendered Impress deck in `src/index.html`. They preserve one-slide-per-file copy and speaker notes, but they are not an automatic rendering input.
 
-Use Archivo Black for headings, the title-slide speaker name and the four opening-hook statements, Open Sans for all text inside rendered tables (including column headings, row labels, links and nested text), and Comic Neue for all other editable text. Comic Neue covers body copy, diagram labels, captions, other credits, links and controls outside tables. The table rule takes precedence inside a table. Preserve the emoji font stack and lettering embedded in image assets. This rule applies throughout the deck, including WHOAMI and print.
+Use Archivo Black for headings, the title-slide speaker name and the four opening-hook statements, Open Sans for all text inside rendered tables (including column headings, row labels, links and nested text), and Comic Neue for all other editable text. Economic Boundary Actions, Workload Boundary Actions, Protect the Error Margin and Tokenomic Progression use Archivo Black column headings and bold Comic Neue table body text. Comic Neue covers body copy, diagram labels, captions, other credits, links and controls outside tables. The table rule takes precedence inside other tables. Preserve the emoji font stack and lettering embedded in image assets. This rule applies throughout the deck, including WHOAMI and print.
 
 ## Current rendered flow
 

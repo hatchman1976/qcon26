@@ -6,6 +6,8 @@
 
 Starting state on the first visit: no boundary lines or operating point yet.
 
+The three boundary names and the Error Margin label use 22px Archivo Black. Operating Point uses 25px Archivo Black, centered in a 240px-wide label so it stays on one line. Preserve the emoji font for their symbols.
+
 Presenter reveals for the first build, in order:
 
 1. Economic boundary and 💸 label.

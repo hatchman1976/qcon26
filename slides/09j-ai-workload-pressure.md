@@ -2,7 +2,9 @@
 
 Rendered step: `#/ai-workload-pressure`.
 
-Canvas position: `data-x="4250"`, `data-y="308750"`, `data-scale="3.037465"`, inside the lower-right part of the AI fish diagram. This matches the marked destination while preserving the slide's size.
+Use bold Comic Neue for the introductory sentence and all three body-text blocks, retaining Archivo Black headings.
+
+Canvas position: `data-x="5000"`, `data-y="308750"`, `data-scale="3.037465"`, inside the lower-right part of the AI fish diagram. This moves the slide 750 canvas pixels farther right while preserving its vertical position and size. Move the nearby fish-diagram hand up and right to local (800, 350), and place a fourth hand at (660, 492), keeping both clear of the inset slides and captions.
 
 ## Slide copy and sequence
 
@@ -28,11 +30,15 @@ Place the three explanatory sections on the left. Align the meat-proxy illustrat
 
 Use three evenly spaced rows with padded text, increased line spacing and a clear gap between each heading and its explanation. Center each illustration alongside its corresponding text block.
 
-All visible content uses eight presenter-controlled substeps: title and icon together; introductory sentence; “Proxy the judgment”; meat-proxy illustration; “Multiply the streams”; slop-bucket illustration; “Squeeze recovery”; then the exploding-head emoji. Each of the three content sections reveals its heading and explanation together. Each illustration appears on the next substep after its corresponding explanation. Preserve the layout while content is hidden.
+All visible content uses eight presenter-controlled substeps: title and icon together; introductory sentence; “Proxy the judgment”; meat-proxy illustration; “Multiply the streams”; slop-bucket illustration; “Squeeze recovery”; then the exploding-head emoji and book citation. Each of the three content sections reveals its heading and explanation together. Each illustration appears on the next substep after its corresponding explanation. Preserve the layout while content is hidden.
+
+Use the original 211.5px meat-proxy image. The 20px Comic Neue citation is centered 24px above the bottom edge: Cory Doctorow (2026), [The Reverse Centaur's Guide to Life After AI](https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/). Revealed images and citation remain visible after exit.
 
 Presentation source links are collected on the final [References slide](14-references.md).
 
 ## Speaker notes
+
+Doctorow's reverse-centaur distinction asks who controls the work: whether a person chooses how a machine assists them or is required to serve the machine's pace and demands.
 
 Workslop is polished-looking output that leaves the recipient to reconstruct missing thinking. The BetterUp/Stanford survey of 1,150 full-time US desk workers found 40% reporting receipt in the prior month, and roughly two hours on average to resolve an incident. These are self-reports, not an objective audit of every AI-generated artifact. The chain is this talk's software-workflow illustration: a person may use an agent to proxy an argument, answer or decision without forming their own understanding. The recipient must check the assumptions and reconcile conflicts. AI can also reduce this effort when used to build comprehension and assurance. Berkeley researchers observed eight months at one 200-person US technology company and conducted more than 40 interviews. Broader task scope, parallel streams and work extending into breaks/evenings intensified work. This motivates burnout risk from reduced recovery, not a universal causal finding. Expertise, familiarity, staffing and the design of handoffs affect who carries the added load; these sources do not prove that lower-skill or less-parallel users invariably suffer more burnout. Completed backlog counts should be read alongside verification time, rework, interruptions, recovery and ability to explain changes. The hand depicts least-effort adaptation. The meat-proxy emoji illustrates an engineer coping with increased workload by relaying plausible AI reasoning, arguments or judgments as their own, without understanding the fundamentals. This can create the appearance of expertise while bypassing the work that develops and exercises it. It can also leave the recipient to verify reasoning the sender cannot explain. Keep a person accountable for understanding, explaining and checking the work they pass onward.
 
@@ -52,6 +58,7 @@ Preserve focused attention, contextual knowledge and usable authority to change 
 
 ## Sources
 
+- [Cory Doctorow — The Reverse Centaur's Guide to Life After AI, MCD, 2026](https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/)
 - [BetterUp / Stanford · 2025](https://www.betterup.com/workslop)
 - [Berkeley Haas · Feb 2026](https://newsroom.haas.berkeley.edu/ai-promised-to-free-up-workers-time-uc-berkeley-haas-researchers-found-the-opposite/)
 - [Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5)

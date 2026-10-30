@@ -8,7 +8,7 @@ Rendered step: `#/complex-system-and-boundaries`.
 
 ...and how AI changes the conditions to adapt.
 
-The heading uses 64px Archivo Black, and the adaptation caption uses 40px Comic Neue. The lower image-and-caption row spans 960px so the caption fits on one line. The diagram size and positions are unchanged.
+The heading uses 64px Archivo Black, and the adaptation caption uses bold 40px Comic Neue. The lower image-and-caption row spans 960px so the caption fits on one line. The diagram size and positions are unchanged.
 
 Automatic sequence after the slide first settles: fade in the economic, workload and performance boundaries and dotted margin together over 1.2 seconds. No operating point is shown on this slide. Then fade in the people/network and connection pulses over 1.1 seconds. At 2.3 seconds, fade in the AI artwork and adaptation caption over 600ms. No presenter clicks are needed.
 

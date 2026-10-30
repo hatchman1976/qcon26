@@ -32,7 +32,7 @@ The full conceptual guardrails, causal mechanism, and evidence requirements are 
 
 ## Work locally
 
-The repository contains the deployable static site directly in `src/`. There is no build step and no generated site directory. Follow the [deck typography rule](slides/README.md): Archivo Black headings, title-slide speaker name and opening-hook statements, Open Sans throughout rendered tables, and Comic Neue for all other editable text, preserving emoji fonts.
+The repository contains the deployable static site directly in `src/`. There is no build step and no generated site directory. Follow the [deck typography rule](slides/README.md): Archivo Black headings, title-slide speaker name and opening-hook statements, Open Sans by default for tables, and Comic Neue for other editable text. Preserve emoji fonts and the documented slide-specific table exceptions.
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1 --directory src

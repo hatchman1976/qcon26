@@ -498,6 +498,7 @@ const aiMarginPath = aiMarginSlide.querySelector(".ai-margin-trail-path");
 const aiMarginTrailReveal = aiMarginSlide.querySelector(".ai-margin-trail-reveal");
 const aiMarginTrailCutout = aiMarginSlide.querySelector(".ai-margin-trail-cutout");
 const aiMarginPoint = aiMarginSlide.querySelector(".ai-margin-point");
+const aiMarginSrePanic = aiMarginSlide.querySelector(".ai-margin-sre-panic");
 const aiMarginPressureTrigger = aiMarginSlide.querySelector(".ai-margin-pressure-trigger");
 const aiMarginPathLength = aiMarginPath.getTotalLength();
 const aiMarginThreshold = aiMarginSlide.querySelector(".ai-margin-approach-guide").getTotalLength() / aiMarginPathLength;
@@ -551,6 +552,9 @@ function renderAiMarginProgress(progress) {
   const crossed = progress > aiMarginThreshold + 0.0001;
   aiMarginSlide.classList.toggle("has-crossed-margin", crossed);
   aiMarginSlide.querySelector(".ai-margin-warning").setAttribute("aria-hidden", String(!crossed));
+  const hitBoundary = progress >= 1;
+  aiMarginSlide.classList.toggle("has-hit-performance-boundary", hitBoundary);
+  aiMarginSrePanic.setAttribute("aria-hidden", String(!hitBoundary));
 }
 
 function stopAiMarginAnimation() {
@@ -599,7 +603,7 @@ function syncAiMarginPhase() {
   aiMarginSlide.classList.add("is-raining");
   aiMarginSlide.classList.remove("is-pressure-complete");
   renderAiMarginProgress(0);
-  animateAiMarginTo(1, 10500);
+  animateAiMarginTo(1, 9000);
 }
 
 new MutationObserver(syncAiMarginPhase).observe(aiMarginSlide, {
@@ -625,9 +629,49 @@ aiMarginSlide.addEventListener("click", (event) => {
   window.impress().next(event);
 });
 
+const aiFishSymbols = [...aiFishSlide.querySelectorAll(".ai-fish-symbol")];
+const aiFishSymbolTimeouts = new Set();
+let aiFishSymbolsStarted = false;
+
+function revealAllAiFishSymbols() {
+  aiFishSymbolTimeouts.forEach((timeout) => window.clearTimeout(timeout));
+  aiFishSymbolTimeouts.clear();
+  aiFishSymbols.forEach((symbol) => symbol.classList.add("is-visible"));
+}
+
+function startAiFishSymbols() {
+  if (aiFishSymbolsStarted) return;
+  aiFishSymbolsStarted = true;
+  if (prefersReducedMotion.matches) {
+    revealAllAiFishSymbols();
+    return;
+  }
+
+  const shuffledSymbols = [...aiFishSymbols];
+  for (let index = shuffledSymbols.length - 1; index > 0; index -= 1) {
+    const otherIndex = Math.floor(Math.random() * (index + 1));
+    [shuffledSymbols[index], shuffledSymbols[otherIndex]] = [shuffledSymbols[otherIndex], shuffledSymbols[index]];
+  }
+
+  let revealAt = 0;
+  shuffledSymbols.forEach((symbol) => {
+    revealAt += 350 + Math.random() * 500;
+    const timeout = window.setTimeout(() => {
+      aiFishSymbolTimeouts.delete(timeout);
+      symbol.classList.add("is-visible");
+    }, revealAt);
+    aiFishSymbolTimeouts.add(timeout);
+  });
+}
+
 function retainAiFishDiagram() {
   aiFishSlide.classList.add("is-rendered");
+  startAiFishSymbols();
 }
+
+prefersReducedMotion.addEventListener("change", () => {
+  if (prefersReducedMotion.matches && aiFishSymbolsStarted) revealAllAiFishSymbols();
+});
 
 function pauseAiRoaming() {
   window.clearTimeout(aiRoamingTimeout);
