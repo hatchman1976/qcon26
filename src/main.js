@@ -498,7 +498,6 @@ const aiMarginPath = aiMarginSlide.querySelector(".ai-margin-trail-path");
 const aiMarginTrailReveal = aiMarginSlide.querySelector(".ai-margin-trail-reveal");
 const aiMarginTrailCutout = aiMarginSlide.querySelector(".ai-margin-trail-cutout");
 const aiMarginPoint = aiMarginSlide.querySelector(".ai-margin-point");
-const aiMarginSrePanic = aiMarginSlide.querySelector(".ai-margin-sre-panic");
 const aiMarginPressureTrigger = aiMarginSlide.querySelector(".ai-margin-pressure-trigger");
 const aiMarginPathLength = aiMarginPath.getTotalLength();
 const aiMarginThreshold = aiMarginSlide.querySelector(".ai-margin-approach-guide").getTotalLength() / aiMarginPathLength;
@@ -552,9 +551,6 @@ function renderAiMarginProgress(progress) {
   const crossed = progress > aiMarginThreshold + 0.0001;
   aiMarginSlide.classList.toggle("has-crossed-margin", crossed);
   aiMarginSlide.querySelector(".ai-margin-warning").setAttribute("aria-hidden", String(!crossed));
-  const hitBoundary = progress >= 1;
-  aiMarginSlide.classList.toggle("has-hit-performance-boundary", hitBoundary);
-  aiMarginSrePanic.setAttribute("aria-hidden", String(!hitBoundary));
 }
 
 function stopAiMarginAnimation() {

@@ -27,7 +27,7 @@ The exit sign is 64px wide with a solid white interior and a transparent exterio
 
 ## Reveal sequence
 
-All visible content uses thirteen presenter-controlled substeps: title and icon together; introductory sentence; left table heading; right table heading, **Possible management action**; each row's left-column signal and then its right-column action, one cell per advance from top to bottom; then the closing statement. Keep each cell's emoji and text together and preserve the table layout while content is hidden. Print shows the complete table.
+All visible content uses eight presenter-controlled substeps: title and icon together; introductory sentence; both column headings together; each of the four table body rows from top to bottom; then the closing statement. Each row reveals both cells, including their emojis and text, together in one advance. Preserve the table layout while rows are hidden. Revealed rows remain visible on the world canvas after exit. Print shows the complete table.
 
 ## Speaker notes
 

@@ -77,3 +77,42 @@ Face changes: heavy drooping eyelids, sad downcast eyes, subtly raised inner eye
 Preserve exactly from Image 1: same human identity, short curly brown hair, head position and orientation, Greco-Roman painted/fresco illustration style, ivory linen chiton, both human arms hanging fully limp at the sides with relaxed wrists and fingers, upright human torso, chestnut horse body standing normally on all four planted hooves, tail, anatomy, proportions, colors, lighting, shading, composition and full-body framing. Do not bend, lift or extend the arms. Do not change the normal standing horse stance.
 Constraints: one traditional centaur, one human head, two human arms and four horse legs. All hands, hooves and tail remain fully visible. Preserve the genuinely transparent background and opaque figure. No extra limbs, props, text, logo, watermark, frame, pedestal, architecture, colored background or ground shadow.
 ```
+
+## Roman portrait faces
+
+Created with the built-in imagegen editing tool on 30 October 2026. The faces use mature classical Roman portrait proportions and short sculpted waves, preserving the shocked and depressed expressions. Limp arms, normal horse stance and classical drapery remain unchanged.
+
+- [Shocked Roman portrait centaur](../src/images/qcon26/shocked-centaur-roman-face.png)
+- [Depressed Roman portrait centaur](../src/images/qcon26/depressed-centaur-roman-face.png)
+
+### Shocked face prompt
+
+Input: `src/images/qcon26/shocked-centaur-greco-roman.png`.
+
+```text
+Use case: precise-object-edit
+Asset type: transparent presentation illustration
+Edit target: supplied shocked Greco-Roman centaur.
+Primary request: redesign ONLY the human face and hair so the character looks like a classical ANCIENT ROMAN portrait, while preserving the shocked expression.
+Facial art direction: a mature adult face inspired by Roman portrait sculpture and Pompeian fresco painting, with realistic classical proportions, a prominent straight-to-aquiline nose and defined bridge, strong brow, deep-set almond-shaped eyes of natural size, defined cheekbones, a firm square jaw and clean-shaven chin. Replace the modern youthful cartoon face and oversized round eyes. Use short close-set sculpted Roman waves and a short forward-combed Caesar-style fringe rather than fluffy modern hair. Render the face in warm flesh tones, using the same painted/fresco medium as the rest of the image.
+Expression: unmistakable SHOCK through lifted brows, widened but proportionate eyes, and an open mouth in astonishment. Retain the original head position, angle and scale.
+Preserve exactly: ivory classical drapery and gold clasp, torso, both arms hanging fully limp with loose wrists and fingers, horse body standing normally on all four hooves, chestnut coloring, tail, anatomy, proportions, body pose, composition, full-body framing, shading and genuinely transparent background. Keep the character opaque. No body or clothing changes.
+Constraints: one traditional centaur with one human head, two human arms and four horse legs. No added props, laurels, helmets, weapons, scenery, pedestal, text, logos, watermark, border or background. Keep all hands, hooves and tail visible.
+```
+
+### Depressed face prompt
+
+Edit target: `src/images/qcon26/shocked-centaur-roman-face.png`.
+
+Expression reference only: `src/images/qcon26/depressed-centaur-greco-roman.png`.
+
+```text
+Use case: precise-object-edit
+Asset type: transparent presentation illustration
+Image 1 is the EDIT TARGET: the standing centaur with a mature classical ancient-Roman portrait face, proportionate eyes, sculptural nose and jaw, short Roman waves, ivory drapery and limp arms.
+Image 2 is an EXPRESSION REFERENCE ONLY: transfer its depressed/dejected emotion, without copying its younger cartoon facial proportions or hairstyle.
+Primary request: create a matching depressed version of Image 1, changing ONLY the human facial expression.
+Face changes: sad downcast eyes with lowered upper lids, subtly raised inner brows, a closed mouth with downturned corners and a resigned, worn-down expression. Keep natural-sized eyes and realistic classical facial anatomy. Preserve the same mature Roman portrait identity, prominent straight-to-aquiline nose, firm jaw, cheekbones, short sculpted Roman waves and warm painted flesh tones from Image 1. The expression should resemble the sorrow of a classical Roman portrait, clearly dejected rather than angry, shocked or asleep.
+Preserve exactly: original head location, angle and scale, body, ivory drapery and clasp, both human arms hanging completely limp with slack wrists and fingers, horse body standing normally on all four planted hooves, chestnut coat, tail, anatomy, proportions, classical fresco-like painted style, shading, composition, full-body framing and genuinely transparent background. Keep the character opaque.
+Constraints: one traditional centaur, one human head, two human arms and four horse legs. All hands, hooves and tail visible. No extra limbs, props, laurel wreath, helmet, weapons, scenery, pedestal, text, logo, watermark, border, colored background or ground shadow.
+```

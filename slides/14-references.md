@@ -4,13 +4,13 @@ Rendered step: `#/references`.
 
 The slide remains visible on the world canvas after exit, and its selected reference collection is retained on return.
 
-This final slide collects 44 unique sources in four selectable collections: 17 QCon sources, 13 sources from [SREcon26](https://srecon26.hatchman76.com/), twelve Token economy sources and two Resilience sources. The SREcon26 collection includes all twelve entries from that presentation's References slide and its inline Wharton learning-study link. Cook's paper now links directly to the author-lab PDF. Citation context remains in the relevant speaker notes; illustration credits remain beside their illustrations.
+This final slide collects 45 unique sources in four selectable collections: 18 QCon sources, 13 sources from [SREcon26](https://srecon26.hatchman76.com/), twelve Token economy sources and two Resilience sources. The SREcon26 collection includes all twelve entries from that presentation's References slide and its inline Wharton learning-study link. Cook's paper now links directly to the author-lab PDF. Citation context remains in the relevant speaker notes; illustration credits remain beside their illustrations.
 
 ## Slide copy
 
 **References**
 
-Collection tabs: **QCon sources (17)**, **SREcon26 sources (13)**, **Token economy (12)** and **Resilience (2)**.
+Collection tabs: **QCon sources (18)**, **SREcon26 sources (13)**, **Token economy (12)** and **Resilience (2)**.
 
 ### Model & operations
 
@@ -37,6 +37,7 @@ Collection tabs: **QCon sources (17)**, **SREcon26 sources (13)**, **Token econo
 - [ETR (2026) — AI demand and budget control](https://research.etr.ai/etr-data-drop/ai-demand-is-strong.-ai-budget-control-is-still-catching-up)
 - [Uber CTO (2026) — AI budget interview · The Information](https://www.theinformation.com/newsletters/applied-ai/uber-cto-shows-claude-code-can-blow-ai-budgets)
 - [Meta / Blue Owl (2025) — Hyperion data-center financing](https://about.fb.com/news/2025/10/meta-blue-owl-capital-develop-hyperion-data-center/)
+- [Cory Doctorow (2026) — The Reverse Centaur’s Guide to Life After AI](https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/)
 
 ### SREcon26 — Expertise & learning
 

@@ -9,8 +9,9 @@ Placed immediately after `#/ai-workload-pressure`, to its right at `data-x="8850
 1. The heading, **The erosion of expertise**.
 2. The cover of *Accelerated Expertise: Training for High Proficiency in a Complex World* on the left, with a short citation below it: “Hoffman et al. (2013). [Accelerated Expertise](https://www.goodreads.com/book/show/17399473-accelerated-expertise). Psychology Press.” The book title opens its Goodreads page in a new tab.
 3. The quotation below to the right of the book. It has no separate credit or vertical rule.
+4. The supplied dejected centaur, the text **... or worse** to its left, and the Reverse Centaur citation appear together in their own substep. The image stays 330px wide, 90px from the right edge and 72px above the bottom, preserving its transparent background and proportions. The text uses bold 44px Comic Neue. The citation is centered 24px above the bottom edge in bold 20px Comic Neue: Cory Doctorow (2026), [The Reverse Centaur’s Guide to Life After AI](https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/).
 
-Each item uses one presenter-controlled substep, for three substeps. The slide uses the deck's shared blue background and regular-weight, 64px Archivo Black title styling. The quote uses bold 32px Comic Neue and the book citation uses bold 24px Comic Neue, including the linked book title. The complex-system diagram and shrugging emojis now belong to the following [Expertise erosion sequence](09j3-expertise-erosion-sequence.md).
+Each item uses one presenter-controlled substep, for four substeps. The slide uses the deck's shared blue background and regular-weight, 64px Archivo Black title styling. The quote uses bold 32px Comic Neue and the book citation uses bold 24px Comic Neue, including the linked book title. The complex-system diagram and shrugging emojis now belong to the following [Expertise erosion sequence](09j3-expertise-erosion-sequence.md).
 
 Revealed content stays visible when the camera leaves this step. Its inactive background is transparent, preserving the diagram behind the slide.
 
@@ -32,7 +33,11 @@ The book is by Robert R. Hoffman, Paul Ward, Paul J. Feltovich, Lia DiBello, Ste
 
 The book and quotation introduce the demands of understanding a complex system. This is a discussion of the risk to expertise, not a measured claim that all AI use erodes it.
 
+Doctorow's reverse-centaur distinction asks who controls the work: whether a person chooses how a machine assists them or is required to serve the machine's pace and demands.
+
 ## Sources
 
+- Centaur illustration supplied by Andrew, saved as `src/images/qcon26/expertise-centaur.png`.
+- [Cory Doctorow — The Reverse Centaur's Guide to Life After AI, MCD, 2026](https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/)
 - [Source slide in Andrew's SREcon26 presentation](https://srecon26.hatchman76.com/#/generative-AI-student-learning)
 - [Original book-cover image](https://srecon26.hatchman76.com/images/book-accelerated-expertise.png), saved as `src/images/srecon26/book-accelerated-expertise.png`.
