@@ -6,7 +6,7 @@ const siteRoot = resolve(root, "src");
 const indexPath = resolve(siteRoot, "index.html");
 
 await access(indexPath);
-const html = await readFile(indexPath, "utf8");
+const html = (await readFile(indexPath, "utf8")).replace(/<!--[\s\S]*?-->/g, "");
 
 const requiredMarkers = [
   'id="impress"',
@@ -142,10 +142,10 @@ if (["x", "y", "scale"].some((axis) =>
 
 const lastSection = sectionTags.at(-1);
 if (!/\bid="references"/.test(lastSection ?? "") ||
-    stepCoordinate("references", "x") !== 0 ||
-    stepCoordinate("references", "y") !== 433000 ||
+    stepCoordinate("references", "x") !== 225000 ||
+    stepCoordinate("references", "y") !== 308000 ||
     stepCoordinate("references", "scale") !== 25) {
-  throw new Error("References must be the final section at data-x=0, data-y=433000 and data-scale=25");
+  throw new Error("References must be the final section at data-x=225000, data-y=308000 and data-scale=25");
 }
 
 const requiredFiles = [

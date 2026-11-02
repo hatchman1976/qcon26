@@ -20,12 +20,14 @@ Presenter reveals for the first build, in order:
 8. The shaded surface and its label fade away over 750 ms, then the economic boundary shifts inward and outward against its original reference. The workload boundary starts the same 4.8-second motion one second after the economic boundary begins, automatically within this reveal.
 9. A moving operating point starts after both boundary animations finish.
 10. Cost charts, effort-saving hands and Blocker Lemmings representing safety interventions arrive across the model in a quick stagger (roughly eight seconds overall, with each entrance lasting 0.45 seconds), including a hand just inside the intersection of the error margin and workload boundary.
+11. The **Cost efficiency** gradient arrow draws from the economic boundary toward the acceptable-performance side, with its arrowhead and label.
+12. The **Least effort** gradient arrow draws from the workload boundary in the same general direction, with its arrowhead and label.
 
 Once revealed, the three boundary lines, their labels, and the dotted error margin remain visible on the world canvas through later camera steps and return visits. Opening Diagram Legend, a boundary close-up, or the fish overview directly also establishes this static geometry for context. The manual substeps remain available; persistence does not freeze the moving boundaries, prevent their original references from dimming, or change the playing-surface, operating-point and intervention stages.
 
 The fill uses the slide's 1020 × 780 coordinate frame and follows the boundary artwork. The original conservative roaming envelope is retained separately so this visual correction does not change operating-point motion.
 
-After all Blocker Lemming, hand, and chart arrival animations finish, automatically draw two arrows over 1.8 seconds, followed by their arrowheads and labels:
+The two gradient arrows each have their own presenter-controlled substep after the chart, hand and Lemming reveal. Each draws over 1.8 seconds, followed by its arrowhead and label. They no longer start automatically when the icons finish arriving. Once revealed, both arrows stay visible after exit. Reduced motion shows each arrow immediately on its own substep, and print includes both arrows.
 
 - **Cost efficiency:** from the economic boundary into the middle of the diagram, pointing toward acceptable performance.
 - **Least effort:** from the workload boundary into the middle of the diagram, pointing in the same general direction.

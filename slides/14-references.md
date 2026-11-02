@@ -4,6 +4,8 @@ Rendered step: `#/references`.
 
 The slide remains visible on the world canvas after exit, and its selected reference collection is retained on return.
 
+Continue the horizontal closing sequence to the right of **Humans are adaptable**, at `data-x="225000"`, `data-y="308000"`, `data-scale="25"`.
+
 This final slide collects 45 unique sources in four selectable collections: 18 QCon sources, 13 sources from [SREcon26](https://srecon26.hatchman76.com/), twelve Token economy sources and two Resilience sources. The SREcon26 collection includes all twelve entries from that presentation's References slide and its inline Wharton learning-study link. Cook's paper now links directly to the author-lab PDF. Citation context remains in the relevant speaker notes; illustration credits remain beside their illustrations.
 
 ## Slide copy

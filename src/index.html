@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#b3d9ff" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=271" />
+    <link rel="stylesheet" href="/styles.css?v=273" />
     <link rel="stylesheet" href="/ai-fish-symbols.css?v=6" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
@@ -640,17 +640,14 @@
         ></div>
 
         <svg
-          class="plain-gradient-arrows"
+          class="substep plain-gradient-arrows plain-cost-gradient-reveal"
           viewBox="0 0 1020 780"
           role="img"
-          aria-label="Gradients toward cost efficiency and least effort are drawn from the economic and workload boundaries into the middle of the diagram, pointing toward the acceptable-performance boundary"
+          aria-label="Gradient toward cost efficiency, from the economic boundary toward the acceptable-performance boundary"
         >
           <defs>
             <marker id="plain-cost-arrowhead" viewBox="0 0 18 18" refX="4" refY="9" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto">
               <path class="plain-gradient-arrowhead" d="M 0 0 L 18 9 L 0 18 L 4 9 Z" fill="#328ab7" />
-            </marker>
-            <marker id="plain-effort-arrowhead" viewBox="0 0 18 18" refX="4" refY="9" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto">
-              <path class="plain-gradient-arrowhead" d="M 0 0 L 18 9 L 0 18 L 4 9 Z" fill="#a569b5" />
             </marker>
           </defs>
           <g class="plain-gradient-cost">
@@ -660,6 +657,19 @@
               <tspan x="555" dy="26">efficiency</tspan>
             </text>
           </g>
+        </svg>
+
+        <svg
+          class="substep plain-gradient-arrows plain-effort-gradient-reveal"
+          viewBox="0 0 1020 780"
+          role="img"
+          aria-label="Gradient toward least effort, from the workload boundary toward the acceptable-performance boundary"
+        >
+          <defs>
+            <marker id="plain-effort-arrowhead" viewBox="0 0 18 18" refX="4" refY="9" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto">
+              <path class="plain-gradient-arrowhead" d="M 0 0 L 18 9 L 0 18 L 4 9 Z" fill="#a569b5" />
+            </marker>
+          </defs>
           <g class="plain-gradient-effort">
             <path class="plain-gradient-arrow" pathLength="1" d="M 712 500 C 638 475 542 448 465 430" marker-end="url(#plain-effort-arrowhead)" />
             <text class="plain-gradient-label" x="592" y="490" transform="rotate(16 592 490)">Least effort</text>
@@ -744,8 +754,8 @@
               <span class="diagram-legend-action-chart">📉</span>
             </span>
             <p>
-              <strong>Actions and pressures</strong>
-              <span>Local actions and external pressures can change the operating point or its constraints.</span>
+              <strong>Local Actions and External pressures</strong>
+              <span>Change the operating point or its constraints.</span>
             </p>
           </div>
         </div>
@@ -1391,9 +1401,9 @@
         <blockquote class="expertise-erosion-quote substep">
           <p>“However, all of our lessons learned in cognitive systems engineering and complexity theory imply that more automation may result in simplifications, but they will hide deeper complexity, and at those moments where resilience and high-performance are needed, there will have to be greater operator expertise.”</p>
         </blockquote>
-        <div class="expertise-erosion-centaur-reveal substep">
-          <figure class="expertise-erosion-centaur">
-            <img src="/images/qcon26/expertise-centaur.png" width="1536" height="1024" alt="A dejected centaur with slumped shoulders and arms hanging at its sides" />
+        <div class="expertise-erosion-reverse-book-reveal substep">
+          <figure class="expertise-erosion-reverse-book">
+            <img src="/images/qcon26/book-reverse-centaurs-guide.jpg" width="1613" height="2479" alt="The Reverse Centaur’s Guide to Life After AI, by Cory Doctorow" />
           </figure>
           <p class="expertise-erosion-worse">... or worse</p>
           <p class="expertise-erosion-citation">Cory Doctorow (2026), <a href="https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/" target="_blank" rel="noreferrer"><cite>The Reverse Centaur’s Guide to Life After AI</cite></a>.</p>
@@ -1404,6 +1414,7 @@
           <p>The supplied quotation is attributed to <cite>Accelerated Expertise</cite>. Use it to discuss how automation can simplify the surface of work while obscuring complexity that demands greater expertise when resilience and high performance are needed. This is a discussion of the risk to expertise, not a measured claim that all AI use erodes it.</p>
           <p>Doctorow’s reverse-centaur distinction asks who controls the work: whether a person chooses how a machine assists them or is required to serve the machine’s pace and demands.</p>
           <p>Cory Doctorow, The Reverse Centaur’s Guide to Life After AI (MCD, 2026): https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/</p>
+          <p>Book-cover image supplied by Macmillan: https://mpd-biblio-covers.imgix.net/9780374621568.jpg</p>
         </div>
       </section>
 
@@ -1508,7 +1519,7 @@
       </section>
 
       <section id="workflow-cost" class="step practice-slide closing-skills"
-        data-x="0" data-y="333000" data-scale="25">
+        data-x="45000" data-y="308000" data-scale="25">
         <h2 class="practice-title">Skills that protect margin</h2>
         <ul class="closing-rows">
           <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🔎</span><div><h3>Systems understanding</h3><p>Trace how AI shifts cost, workload and risk across the system.</p></div></li>
@@ -1523,7 +1534,7 @@
       </section>
 
       <section id="verification-capacity" class="step practice-slide closing-tools"
-        data-x="0" data-y="358000" data-scale="25">
+        data-x="90000" data-y="308000" data-scale="25">
         <h2 class="practice-title">Tool vs Operator</h2>
         <ul class="closing-rows closing-tool-rows">
           <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🧰</span><div><h3>AI assists the operator</h3><p>Explore, diagnose and test, with people checking the result.</p></div></li>
@@ -1537,7 +1548,7 @@
       </section>
 
       <section id="evidence-handoff" class="step practice-slide closing-summary"
-        data-x="0" data-y="383000" data-scale="25">
+        data-x="135000" data-y="308000" data-scale="25">
         <h2 class="practice-title">We have to adapt</h2>
         <div class="closing-summary-content">
           <ul class="closing-rows closing-summary-rows">
@@ -1562,7 +1573,7 @@
       </section>
 
       <section id="rehearsed-recovery" class="step practice-slide closing-humans"
-        data-x="0" data-y="408000" data-scale="25">
+        data-x="180000" data-y="308000" data-scale="25">
         <h2 class="practice-title">Humans are adaptable</h2>
         <div class="substep closing-human-scene">
           <figure class="closing-system-visual" role="img" aria-label="People throughout a complex system, with flashing orange balls along its connections">
@@ -1585,7 +1596,7 @@
       </section>
 
       <section id="references" class="step references-slide"
-        data-x="0" data-y="433000" data-scale="25">
+        data-x="225000" data-y="308000" data-scale="25">
         <h2 class="references-title">References</h2>
         <div class="references-tabs" role="tablist" aria-label="Reference collections">
           <button id="references-tab-qcon" type="button" role="tab" data-reference-tab="qcon" aria-controls="references-qcon" aria-selected="true" tabindex="0">QCon sources (18)</button>
@@ -1710,9 +1721,13 @@
           </div>
         </div>
       </section>
+<!--       <section id="thank-you" class="step"
+        data-x="0" data-y="358000" data-scale="300" data-z="20">
+        <p class="substep">Thank you!</p>
+      </section> -->
     </main>
 
     <script src="/vendor/impress.js/js/impress.min.js"></script>
-    <script src="/main.js?v=63"></script>
+    <script src="/main.js?v=64"></script>
   </body>
 </html>

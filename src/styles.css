@@ -1375,14 +1375,11 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   z-index: 3;
   width: 100%;
   height: 100%;
-  visibility: hidden;
-  opacity: 0;
   pointer-events: none;
 }
 
-.plain-gradient-arrows.is-visible {
-  visibility: visible;
-  opacity: 1;
+#impress #the-fish-diagram .plain-gradient-arrows {
+  transition: none;
 }
 
 .plain-gradient-cost {
@@ -1402,7 +1399,7 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   stroke-dashoffset: 1;
 }
 
-.plain-gradient-arrows.is-visible .plain-gradient-arrow {
+.plain-gradient-arrows.substep-visible .plain-gradient-arrow {
   animation: plain-gradient-draw 1800ms ease-in-out both;
 }
 
@@ -1411,8 +1408,8 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   opacity: 0;
 }
 
-.plain-gradient-arrows.is-visible .plain-gradient-arrowhead,
-.plain-gradient-arrows.is-visible .plain-gradient-label {
+.plain-gradient-arrows.substep-visible .plain-gradient-arrowhead,
+.plain-gradient-arrows.substep-visible .plain-gradient-label {
   animation: plain-gradient-finish 350ms ease-out 1800ms both;
 }
 
@@ -2236,13 +2233,13 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
     opacity: 1;
   }
 
-  .plain-gradient-arrows.is-visible .plain-gradient-arrow {
+  .plain-gradient-arrows.substep-visible .plain-gradient-arrow {
     animation: none;
     stroke-dashoffset: 0;
   }
 
-  .plain-gradient-arrows.is-visible .plain-gradient-arrowhead,
-  .plain-gradient-arrows.is-visible .plain-gradient-label {
+  .plain-gradient-arrows.substep-visible .plain-gradient-arrowhead,
+  .plain-gradient-arrows.substep-visible .plain-gradient-label {
     animation: none;
     opacity: 1;
   }
@@ -2470,13 +2467,13 @@ img.boundary-detail-icon { height: auto; }
 .expertise-erosion-title { position: absolute; top: 20px; left: 46px; right: 46px; margin: 0; font-family: var(--heading-font-family); font-weight: 400; font-size: 64px; line-height: 1.05; letter-spacing: -2px; text-align: center; }
 .expertise-erosion-book { position: absolute; left: 90px; top: 135px; width: 230px; margin: 0; }
 .expertise-erosion-book img { display: block; width: 100%; height: auto; }
-.expertise-erosion-book figcaption { width: 500px; margin-top: 24px; font-size: 24px; font-weight: 700; line-height: 1.18; letter-spacing: -0.35px; text-align: left; }
+.expertise-erosion-book figcaption { width: 230px; margin-top: 24px; font-size: 24px; font-weight: 700; line-height: 1.18; letter-spacing: -0.35px; text-align: left; }
 .expertise-erosion-book figcaption a { font-family: inherit; }
-.expertise-erosion-quote { position: absolute; left: 370px; right: 46px; top: 135px; margin: 0; font-size: 32px; font-weight: 700; line-height: 1.28; letter-spacing: -0.35px; }
+.expertise-erosion-quote { position: absolute; left: 370px; right: 46px; top: 135px; margin: 0; font-size: 24px; font-weight: 700; line-height: 1.28; letter-spacing: -0.35px; }
 .expertise-erosion-quote p { margin: 0; text-align: left; }
-.expertise-erosion-centaur { position: absolute; right: 90px; bottom: 72px; width: 330px; margin: 0; }
-.expertise-erosion-centaur img { display: block; width: 100%; height: auto; }
-.expertise-erosion-worse { position: absolute; left: 350px; top: 585px; width: 240px; margin: 0; font-size: 44px; font-weight: 700; line-height: 1.2; letter-spacing: 0; text-align: right; white-space: nowrap; }
+.expertise-erosion-reverse-book { position: absolute; right: 90px; bottom: 60px; width: 250px; margin: 0; }
+.expertise-erosion-reverse-book img { display: block; width: 100%; height: auto; }
+.expertise-erosion-worse { position: absolute; left: 370px; top: 500px; width: 240px; margin: 0; font-size: 44px; font-weight: 700; line-height: 1.2; letter-spacing: 0; text-align: right; white-space: nowrap; }
 .expertise-erosion-citation {
   position: absolute;
   right: 46px;
@@ -2515,6 +2512,16 @@ img.boundary-detail-icon { height: auto; }
 }
 
 @media print {
+  #impress .plain-gradient-arrows .plain-gradient-arrow {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  #impress .plain-gradient-arrows :is(.plain-gradient-arrowhead, .plain-gradient-label) {
+    animation: none;
+    opacity: 1;
+  }
+
   .ai-margin-scene { opacity: 1 !important; }
   .ai-margin-explanation { opacity: 1 !important; }
   .ai-margin-reference-label { opacity: 1 !important; }

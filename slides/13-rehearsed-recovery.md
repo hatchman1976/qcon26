@@ -14,14 +14,14 @@ Expertise, coordination and judgment help us respond when plans no longer fit.
 
 ## Preparation and reveals
 
-Keep the existing step ID, order and camera: `data-x="0"`, `data-y="408000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Comic Neue body text.
+Keep the existing step ID and reveal order. Place this step in the horizontal closing sequence at `data-x="180000"`, `data-y="308000"`, `data-scale="25"`, moving the camera right from the previous step. Use the existing blue background, Archivo Black headings and Comic Neue body text.
 
 Two native presenter-controlled substeps:
 
 1. The existing complex-system diagram (`/images/srecon26/complex-sign-transparent.png`), four emoji faces and flashing orange points appear with the statement about expertise, coordination and judgment. The 300px diagram coordinate system scales together to a 310px-wide visual, keeping the faces and points aligned.
 2. The final takeaway about strengthening our capacity to understand, act and recover.
 
-Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available. The References slide remains the final step.
+Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available. The References slide is the final step, continuing to the right on the same horizontal row.
 
 Orange points flash while this step is active and its first reveal is visible, including after the later reveals. Returning resumes the flashing. Exit and reduced motion retain steady orange markers with the diagram and faces. Print shows steady points.
 

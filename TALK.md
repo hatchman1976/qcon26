@@ -66,6 +66,8 @@ Between economics and workload, [Tokenomic Progression](slides/09i2-token-econom
 
 ## Closing arc
 
+From the AI fish overview at (0, 308000), the four closing slides continue to the right at x=45000, 90000, 135000 and 180000, followed by References at x=225000. All share y=308000 and scale 25. Their reveal order stays the same.
+
 The four closing slides adapt the structure of Andrew's SREcon26 close to the whole QCon argument: skills → control → boundary takeaways → adaptive capacity.
 
 1. **Skills that protect margin:** systems understanding traces how AI shifts cost, workload and risk. Critical judgment challenges plausible output against the real work. Adaptation and recovery connect warning signals with protective action.

@@ -18,7 +18,7 @@ Use bold Comic Neue for the body text and closing takeaway, retaining Archivo Bl
 
 ## Preparation and reveals
 
-Keep the existing step ID, order and camera: `data-x="0"`, `data-y="333000"`, `data-scale="25"`. Use the existing blue background, Archivo Black headings and Comic Neue body text. Three native substeps introduce the skill rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
+Keep the existing step ID and reveal order. Place this step in the horizontal closing sequence at `data-x="45000"`, `data-y="308000"`, `data-scale="25"`, moving the camera right from the previous step. Use the existing blue background, Archivo Black headings and Comic Neue body text. Three native substeps introduce the skill rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
 
 Closing arc: skills → control → boundary takeaways → adaptive capacity.
 

@@ -354,7 +354,6 @@ document.addEventListener("impress:stepenter", (event) => {
 });
 
 const guardianActionsStep = document.querySelector("#the-fish-diagram .plain-guardian-actions");
-const gradientArrows = document.querySelector("#the-fish-diagram .plain-gradient-arrows");
 const guardianActionSlots = [
   { kind: "economic", x: 580, y: 180, anchor: true },
   ...[[645, 210], [620, 280], [700, 275], [780, 300]]
@@ -378,7 +377,6 @@ function stopGuardianActions() {
   guardianActionTimeouts = [];
   guardianActionPositions = [];
   guardianActionsStep.replaceChildren();
-  gradientArrows.classList.remove("is-visible");
 }
 
 function isValidGuardianPosition({ kind, anchor, allowMarginGap }, candidate) {
@@ -432,18 +430,6 @@ function showGuardianAction(slot) {
   guardianActionsStep.appendChild(icon);
 }
 
-async function revealGradientArrows(generation) {
-  const arrivalAnimations = guardianActionsStep.getAnimations({ subtree: true })
-    .filter((animation) => animation.animationName === "plain-guardian-arrive");
-  try {
-    await Promise.all(arrivalAnimations.map((animation) => animation.finished));
-  } catch {
-    return;
-  }
-  if (generation !== guardianActionGeneration || !guardianActionsStep.classList.contains("substep-visible")) return;
-  gradientArrows.classList.add("is-visible");
-}
-
 function startGuardianActions() {
   stopGuardianActions();
   const generation = guardianActionGeneration;
@@ -454,7 +440,6 @@ function startGuardianActions() {
   }
 
   let revealAt = 180;
-  let remainingSlots = shuffledSlots.length;
   shuffledSlots.forEach((slot) => {
     revealAt += 500 + Math.random() * 1000;
     if (Math.random() < 0.25) revealAt += 500 + Math.random() * 700;
@@ -462,8 +447,6 @@ function startGuardianActions() {
     guardianActionTimeouts.push(window.setTimeout(() => {
       if (generation !== guardianActionGeneration || !guardianActionsStep.classList.contains("substep-visible")) return;
       showGuardianAction(slot);
-      remainingSlots -= 1;
-      if (remainingSlots === 0) revealGradientArrows(generation);
     }, delay));
   });
 }
