@@ -5,6 +5,11 @@ if (prefersReducedMotion.matches) {
   root.dataset.transitionDuration = "0";
 }
 
+const openingHookSlide = root.querySelector("#opening-hook");
+document.addEventListener("impress:stepenter", (event) => {
+  if (event.target === openingHookSlide) openingHookSlide.classList.add("has-entered");
+});
+
 // The native plugin resets reveals on entry. Keep these slides' last reveal
 // state when revisiting them, while still allowing manual reversal.
 document.addEventListener("impress:stepenter", (event) => {
@@ -801,4 +806,88 @@ for (const eventName of ["keydown", "keyup"]) {
   });
 }
 
-window.impress().init();
+const presentation = window.impress();
+
+// Temporary review mode. Keep every authored substep and its animation hooks;
+// ?substeps=on restores normal clicks, or change #impress data-substeps to "on".
+const substepMode = new URLSearchParams(window.location.search).get("substeps") ?? root.dataset.substeps;
+if (substepMode === "off") {
+  const reviewStates = new WeakMap();
+  const reviewDelays = [
+    // Preserve replacement scenes instead of jumping straight to the last image.
+    ["#expertise-erosion-sequence .expertise-shrug-trigger", 1800],
+    ["#expertise-erosion-sequence .expertise-fire-trigger", 3600],
+    ["#expertise-erosion-sequence .expertise-fine-scene", 5400],
+    ["#the-fish-diagram .plain-playing-surface-margin", 1000],
+    ["#the-fish-diagram .plain-boundary-motions", 3000],
+    ["#the-fish-diagram .plain-roaming-point-reveal", 3000],
+    ["#the-fish-diagram .plain-guardian-actions", 9000],
+    ["#the-fish-diagram .plain-cost-gradient-reveal", 10000],
+    ["#the-fish-diagram .plain-effort-gradient-reveal", 11000],
+    ["#ai-margin-pressure .ai-margin-sre-panic", 9500],
+  ];
+
+  function revealForReview(slide, substeps) {
+    const state = reviewStates.get(slide);
+    const newlyRevealed = substeps.filter((substep) => !state.revealed.has(substep));
+    substeps.forEach((substep) => {
+      substep.classList.add("substep-visible");
+      state.revealed.add(substep);
+    });
+    newlyRevealed.forEach((substep) => slide.dispatchEvent(new CustomEvent("impress:substep:enter", {
+      bubbles: true,
+      detail: { reason: "review", substep },
+    })));
+  }
+
+  // Registered last: restore synchronously after native and ordered resets, so
+  // animation observers never see a transient hidden state when revisiting.
+  document.addEventListener("impress:stepenter", (event) => {
+    const slide = event.target;
+    if (!slide.matches("#impress .step")) return;
+    let state = reviewStates.get(slide);
+    if (state) {
+      state.revealed.forEach((substep) => substep.classList.add("substep-visible"));
+      return;
+    }
+    state = { revealed: new Set(), timers: new Set() };
+    reviewStates.set(slide, state);
+    const immediate = [];
+    slide.querySelectorAll(".substep, .ordered-substep").forEach((substep) => {
+      const delay = prefersReducedMotion.matches ? 0 : reviewDelays.find(([selector]) => substep.matches(selector))?.[1] ?? 0;
+      if (!delay) immediate.push(substep);
+      else state.timers.add(window.setTimeout(() => revealForReview(slide, [substep]), delay));
+    });
+    revealForReview(slide, immediate);
+  });
+
+  function completeReviewSlide(slide) {
+    const state = reviewStates.get(slide);
+    if (!state) return;
+    state.timers.forEach((timer) => window.clearTimeout(timer));
+    state.timers.clear();
+    revealForReview(slide, [...slide.querySelectorAll(".substep, .ordered-substep")]);
+  }
+
+  document.addEventListener("impress:stepleave", (event) => {
+    // Advancing early still leaves the completed content on the world canvas.
+    completeReviewSlide(event.target);
+  });
+  prefersReducedMotion.addEventListener("change", () => {
+    if (prefersReducedMotion.matches) completeReviewSlide(root.querySelector(".step.active"));
+  });
+
+  function navigateWholeSlide(direction) {
+    const slides = [...root.querySelectorAll(".step")];
+    const index = slides.indexOf(root.querySelector(".step.active"));
+    return presentation.goto(slides[(index + direction + slides.length) % slides.length]);
+  }
+
+  // goto bypasses both native and ordered substep interception in either direction.
+  presentation.next = () => navigateWholeSlide(1);
+  presentation.prev = () => navigateWholeSlide(-1);
+  // Touch release still calls next/prev; its preview must not consume substeps.
+  presentation.swipe = () => {};
+}
+
+presentation.init();

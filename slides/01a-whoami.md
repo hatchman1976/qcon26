@@ -13,7 +13,7 @@ SWE/SRE Engineering Manager 15 years.
 1. Australia with a red location pin.
 2. United States with a red location pin.
 3. Cisco ThousandEyes logo.
-4. SWE/SRE Engineering Manager 15 years.
+4. A fast six-second closing-credits scroll of the 28 previous titles and role labels extracted from Andrew's CVs, excluding Engineering Manager and Global Incident Commander. It runs upward through the lower part of the slide, with the maps and company logo remaining visible. SWE/SRE Engineering Manager 15 years appears automatically at the end of the same substep. Advancing early clears the credits and shows that text before later logos appear. Reduced-motion mode uses a static list before the manager text.
 5. AWS logo.
 6. Data centre illustration with a solid white building interior and a transparent exterior.
 7. LinkedIn logo with solid white lettering.

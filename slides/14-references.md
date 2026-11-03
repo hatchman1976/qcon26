@@ -6,7 +6,7 @@ The slide remains visible on the world canvas after exit, and its selected refer
 
 Continue the horizontal closing sequence to the right of **Humans are adaptable**, at `data-x="225000"`, `data-y="308000"`, `data-scale="25"`.
 
-This final slide collects 45 unique sources in four selectable collections: 18 QCon sources, 13 sources from [SREcon26](https://srecon26.hatchman76.com/), twelve Token economy sources and two Resilience sources. The SREcon26 collection includes all twelve entries from that presentation's References slide and its inline Wharton learning-study link. Cook's paper now links directly to the author-lab PDF. Citation context remains in the relevant speaker notes; illustration credits remain beside their illustrations.
+This slide collects 45 unique sources in four selectable collections: 18 QCon sources, 13 sources from [SREcon26](https://srecon26.hatchman76.com/), twelve Token economy sources and two Resilience sources. The SREcon26 collection includes all twelve entries from that presentation's References slide and its inline Wharton learning-study link. Cook's paper now links directly to the author-lab PDF. Citation context remains in the relevant speaker notes; illustration credits remain beside their illustrations.
 
 ## Slide copy
 
@@ -88,4 +88,4 @@ Cook's supporting quotation uses **How Complex Systems Fail**, already listed in
 
 ## Presentation behavior
 
-Show the QCon collection on initial entry. Keep all four collections on this single final slide, with no substeps. Switch collections with the tabs; when a tab is focused, Left/Right, Home/End, Enter and Space select a collection without advancing the presentation. Open source links in a new tab so the presentation stays available. Print includes all four collections. This is the final content slide after **Humans are adaptable**.
+Show the QCon collection on initial entry. Keep all four collections on this single slide, with no substeps. Switch collections with the tabs; when a tab is focused, Left/Right, Home/End, Enter and Space select a collection without advancing the presentation. Open source links in a new tab so the presentation stays available. Print includes all four collections. This slide follows **Humans are adaptable** and precedes the final **Thank you** step.

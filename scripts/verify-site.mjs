@@ -39,6 +39,7 @@ const requiredMarkers = [
   'id="evidence-handoff"',
   'id="rehearsed-recovery"',
   'id="references"',
+  'id="thank-you"',
   'id="social-and-systems-wiki"',
   'id="resilience-engineering"',
   'id="before-we-continue"',
@@ -140,12 +141,12 @@ if (["x", "y", "scale"].some((axis) =>
   throw new Error("The AI fish overview must match the AI fish diagram position and scale");
 }
 
-const lastSection = sectionTags.at(-1);
-if (!/\bid="references"/.test(lastSection ?? "") ||
+if (!/\bid="references"/.test(sectionTags.at(-2) ?? "") ||
+    !/\bid="thank-you"/.test(sectionTags.at(-1) ?? "") ||
     stepCoordinate("references", "x") !== 225000 ||
     stepCoordinate("references", "y") !== 308000 ||
     stepCoordinate("references", "scale") !== 25) {
-  throw new Error("References must be the final section at data-x=225000, data-y=308000 and data-scale=25");
+  throw new Error("References must be at data-x=225000, data-y=308000 and data-scale=25, followed by the final Thank you section");
 }
 
 const requiredFiles = [
@@ -200,8 +201,8 @@ await Promise.all(requiredFiles.map((file) => access(resolve(siteRoot, file))));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount !== 36) {
-  throw new Error(`Expected exactly thirty-six impress.js steps, found ${stepCount}`);
+if (stepCount !== 37) {
+  throw new Error(`Expected exactly thirty-seven impress.js steps, found ${stepCount}`);
 }
 
 console.log(`Verified src/index.html with ${stepCount} presentation steps.`);

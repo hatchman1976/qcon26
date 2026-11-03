@@ -757,6 +757,113 @@ a {
   transition: opacity 0.3s ease-out, transform 0.4s ease-out;
 }
 
+.whoami-career-intro {
+  --credits-duration: 6s;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.whoami-career-credits {
+  --credits-height: 285px;
+  position: absolute;
+  top: 445px;
+  right: 40px;
+  left: 40px;
+  height: var(--credits-height);
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: linear-gradient(transparent, #000 12%, #000 88%, transparent);
+}
+
+.whoami-credits-track {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--body-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  transform: translateY(var(--credits-height));
+}
+
+.whoami-current-role {
+  opacity: 0;
+}
+
+.whoami-slide:not(:has(.whoami-career-intro ~ .substep.substep-visible)) .whoami-career-intro.substep-visible .whoami-credits-track {
+  animation: whoami-credits-roll var(--credits-duration) linear both;
+}
+
+.whoami-career-intro.substep-visible .whoami-career-credits {
+  animation: whoami-credits-finish 1ms step-end var(--credits-duration) forwards;
+}
+
+.whoami-career-intro.substep-visible .whoami-current-role {
+  animation: whoami-current-role-reveal 300ms ease-out var(--credits-duration) both;
+}
+
+/* Advancing early completes this reveal before the later logos appear. */
+.whoami-slide:has(.whoami-career-intro ~ .substep.substep-visible) .whoami-career-credits {
+  animation: none;
+  visibility: hidden;
+}
+
+.whoami-slide:has(.whoami-career-intro ~ .substep.substep-visible) .whoami-current-role {
+  animation: none;
+  opacity: 1;
+}
+
+@keyframes whoami-credits-roll {
+  from { transform: translateY(var(--credits-height)); }
+  to { transform: translateY(-100%); }
+}
+
+@keyframes whoami-credits-finish {
+  from { visibility: visible; }
+  to { visibility: hidden; }
+}
+
+@keyframes whoami-current-role-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce), print {
+  .whoami-career-credits {
+    top: 150px;
+    height: 590px;
+    background: var(--surface-background);
+    mask-image: none;
+    z-index: 1;
+    overflow: auto;
+    pointer-events: auto;
+  }
+  .whoami-career-credits .whoami-credits-track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 24px;
+    animation: none !important;
+    transform: none;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whoami-career-intro.substep-visible .whoami-current-role {
+    animation-duration: 1ms;
+    animation-timing-function: step-end;
+  }
+}
+
+@media print {
+  .whoami-career-credits { display: none; }
+  .whoami-career-intro .whoami-current-role { animation: none !important; opacity: 1; }
+}
+
 /* Opening hook: capability and control, with room for a pause. */
 .opening-hook-slide {
   display: flex;
@@ -781,19 +888,19 @@ a {
   opacity: 0;
 }
 
-.impress-enabled .opening-hook-slide.present > p {
+.impress-enabled .opening-hook-slide.has-entered > p {
   animation: opening-hook-reveal 600ms ease-out both;
 }
 
-.impress-enabled .opening-hook-slide.present > p:nth-of-type(2) {
+.impress-enabled .opening-hook-slide.has-entered > p:nth-of-type(2) {
   animation-delay: 1100ms;
 }
 
-.impress-enabled .opening-hook-slide.present > p:nth-of-type(3) {
+.impress-enabled .opening-hook-slide.has-entered > p:nth-of-type(3) {
   animation-delay: 2200ms;
 }
 
-.impress-enabled .opening-hook-slide.present > p:nth-of-type(4) {
+.impress-enabled .opening-hook-slide.has-entered > p:nth-of-type(4) {
   animation-delay: 3300ms;
 }
 
@@ -2220,7 +2327,7 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
 
 @media (prefers-reduced-motion: reduce) {
   .impress-enabled .opening-hook-slide > p,
-  .impress-enabled .opening-hook-slide.present > p,
+  .impress-enabled .opening-hook-slide.has-entered > p,
   .impress-enabled .paper-themes-slide .paper-theme,
   .impress-enabled .paper-themes-slide.has-entered .paper-theme {
     animation: none;
