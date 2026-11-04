@@ -73,6 +73,42 @@ body {
   text-align: center;
 }
 
+.touch-navigation { display: none; }
+@media screen and (max-width: 900px), screen and (pointer: coarse) {
+  .impress-enabled .touch-navigation {
+    position: fixed;
+    z-index: 1000;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: min(350px, calc(100% - 24px));
+    transform: translateX(-50%);
+    pointer-events: none;
+    font-family: var(--body-font-family);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .touch-navigation button, .touch-navigation [data-slide-counter] {
+    padding: 10px 14px;
+    border: 1px solid rgb(0 0 0 / 25%);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  }
+  .touch-navigation button { min-width: 90px; min-height: 48px; pointer-events: auto; touch-action: manipulation; cursor: pointer; }
+  .touch-navigation button:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+}
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .impress-enabled .touch-navigation { width: calc(100% - 24px); }
+  .touch-navigation [data-slide-counter] { display: none; }
+}
+
 .impress-supported .fallback-message {
   display: none;
 }

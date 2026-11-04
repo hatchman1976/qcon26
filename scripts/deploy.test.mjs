@@ -28,10 +28,18 @@ const validDistribution = {
 const commandStub = `#!/usr/bin/env node
 const fs = require('node:fs');
 const path = require('node:path');
-const command = path.basename(process.argv[1]);
+const executable = process.argv[1];
+const command = path.basename(executable) === 'aws' ? 'aws' : 'terraform';
 const args = process.argv.slice(2);
-fs.appendFileSync(process.env.MOCK_LOG, JSON.stringify({ command, args }) + '\\n');
+fs.appendFileSync(process.env.MOCK_LOG, JSON.stringify({ command, executable, args }) + '\\n');
 if (command === 'terraform') {
+  if (args.join(' ') === 'version -json') {
+    const version = path.basename(executable) === 'terraform'
+      ? process.env.MOCK_TERRAFORM_VERSION
+      : process.env.MOCK_OVERRIDE_TERRAFORM_VERSION;
+    process.stdout.write(JSON.stringify({ terraform_version: version }));
+    process.exit(0);
+  }
   if (args.slice(0, 3).join(' ') !== '-chdir=terraform output -raw') process.exit(90);
   const outputs = JSON.parse(process.env.MOCK_OUTPUTS);
   if (!(args[3] in outputs)) process.exit(91);
@@ -45,11 +53,23 @@ if (command === 'terraform') {
 }
 `;
 
-function runDeployment({ profile = 'hatchman76', identity = account, outputs = {}, distribution = validDistribution } = {}) {
+function runDeployment({
+  profile = 'hatchman76', identity = account, outputs = {}, distribution = validDistribution,
+  terraformVersion = '1.17.1', terraformOverride, overrideVersion = '1.17.1',
+} = {}) {
   const temporaryDirectory = mkdtempSync(join(tmpdir(), 'qcon26-deploy-test-'));
   const log = join(temporaryDirectory, 'commands.jsonl');
   for (const command of ['aws', 'terraform']) {
     writeFileSync(join(temporaryDirectory, command), commandStub, { mode: 0o755 });
+  }
+  let overridePath = '';
+  if (terraformOverride === 'spaces') {
+    overridePath = join(temporaryDirectory, 'Terraform with spaces');
+    writeFileSync(overridePath, commandStub, { mode: 0o755 });
+  } else if (terraformOverride === 'missing') {
+    overridePath = join(temporaryDirectory, 'missing Terraform');
+  } else {
+    assert.equal(terraformOverride, undefined, 'Only local stub overrides are permitted');
   }
   writeFileSync(log, '');
   try {
@@ -60,8 +80,11 @@ function runDeployment({ profile = 'hatchman76', identity = account, outputs = {
         ...process.env,
         PATH: `${temporaryDirectory}:${process.env.PATH}`,
         AWS_PROFILE: profile,
+        QCON_TERRAFORM: overridePath,
         MOCK_LOG: log,
         MOCK_ACCOUNT: identity,
+        MOCK_TERRAFORM_VERSION: terraformVersion,
+        MOCK_OVERRIDE_TERRAFORM_VERSION: overrideVersion,
         MOCK_OUTPUTS: JSON.stringify({
           aws_account_id: account,
           s3_bucket_name: domain,
@@ -78,6 +101,45 @@ function runDeployment({ profile = 'hatchman76', identity = account, outputs = {
     rmSync(temporaryDirectory, { recursive: true, force: true });
   }
 }
+
+test('rejects unsupported Terraform versions before any AWS operation', () => {
+  for (const terraformVersion of ['1.9.8', '2.0.0', '2.1.0']) {
+    const result = runDeployment({ terraformVersion });
+    assert.notEqual(result.status, 0, result.stdout);
+    assert.match(result.stderr, /Refusing deployment:/);
+    assert.equal(result.calls.some(({ command }) => command === 'aws'), false);
+    assert.deepEqual(result.calls.map(({ command, args }) => ({ command, args })), [
+      { command: 'terraform', args: ['version', '-json'] },
+    ]);
+  }
+});
+
+test('accepts the minimum supported Terraform version', () => {
+  const result = runDeployment({ terraformVersion: '1.10.0' });
+  assert.equal(result.status, 0, result.stderr);
+});
+
+test('uses the Terraform override path with spaces for version and every state output', () => {
+  const result = runDeployment({ terraformVersion: '1.9.8', terraformOverride: 'spaces' });
+  assert.equal(result.status, 0, result.stderr);
+  const terraformCalls = result.calls.filter(({ command }) => command === 'terraform');
+  assert.equal(terraformCalls.length, 5);
+  for (const { executable } of terraformCalls) assert.match(executable, /\/Terraform with spaces$/);
+  assert.deepEqual(terraformCalls.map(({ args }) => args), [
+    ['version', '-json'],
+    ['-chdir=terraform', 'output', '-raw', 'aws_account_id'],
+    ['-chdir=terraform', 'output', '-raw', 's3_bucket_name'],
+    ['-chdir=terraform', 'output', '-raw', 's3_origin_domain_name'],
+    ['-chdir=terraform', 'output', '-raw', 'cloudfront_distribution_id'],
+  ]);
+});
+
+test('rejects an invalid Terraform override without falling back or calling AWS', () => {
+  const result = runDeployment({ terraformOverride: 'missing' });
+  assert.notEqual(result.status, 0, result.stdout);
+  assert.match(result.stderr, /[Tt]erraform/);
+  assert.deepEqual(result.calls, []);
+});
 
 function assertRefused(options) {
   const result = runDeployment(options);

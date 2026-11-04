@@ -8,7 +8,7 @@ This configuration creates `https://qcon26.hatchman76.com` in Andrew Hatch’s p
 
 ## Prerequisites
 
-Use Terraform **1.10 or later, below 2.0**, the AWS CLI and working personal profiles `hatchman76-bootstrap` and `hatchman76`. Existing resources must include the public `hatchman76.com` Route 53 zone, `TerraformDeployRole`, and the private state bucket `hatchman76-terraform-state` in `us-east-1`. The root domain must be delegated to that zone.
+Use Terraform **1.10 or later, below 2.0**, the AWS CLI and working personal profile `hatchman76`. The optional role-policy bootstrap also requires a valid admin profile, `hatchman76-bootstrap`. Existing resources must include the public `hatchman76.com` Route 53 zone, `TerraformDeployRole`, and the private state bucket `hatchman76-terraform-state` in `us-east-1`. The root domain must be delegated to that zone.
 
 The bootstrap identity needs permission to manage the QCon inline policy on the existing role and to access its own state. The bootstrap adds QCon hosting, content-deployment and main-state permissions to that role; it does not create or take ownership of the shared resources. Other policies, permission boundaries or organization controls can still restrict the role.
 
@@ -38,7 +38,9 @@ node --test scripts/deploy.test.mjs
 
 Terraform apply and AWS content writes must be run by Andrew in a human-only privileged terminal. The following commands are instructions for that terminal, from the repository root.
 
-First select the bootstrap profile and check that STS returns `Account` **736654693886**:
+Andrew installed `QCon26DeployPermissions` on the existing `TerraformDeployRole` through the AWS console. When that exact policy is already installed, skip the bootstrap commands below and start with the `hatchman76` hosting plan. The policy remains console-managed and the bootstrap Terraform root is unapplied; no new IAM user or root access keys are needed.
+
+Otherwise, select the valid bootstrap admin profile and check that STS returns `Account` **736654693886**:
 
 ```bash
 export AWS_PROFILE=hatchman76-bootstrap
@@ -56,7 +58,7 @@ Review the saved plan, then apply it manually:
 terraform -chdir=terraform/bootstrap apply qcon26-bootstrap.tfplan
 ```
 
-Switch profiles, verify the same account, and prepare the hosting plan:
+Select the main profile, verify the same account, and prepare the hosting plan:
 
 ```bash
 export AWS_PROFILE=hatchman76
@@ -85,6 +87,14 @@ AWS_PROFILE=hatchman76 ./scripts/deploy.sh
 ```
 
 The script checks the personal account and deployment targets, verifies the site source, uploads `src/` and invalidates CloudFront. Validate the HTTPS site after deployment and confirm that direct S3 access is denied.
+
+The script requires Terraform 1.10 or later, below 2.0. If the binary used for setup is outside `PATH`, pass it explicitly so deployment reads state with the same version:
+
+```bash
+AWS_PROFILE=hatchman76 \
+  QCON_TERRAFORM=/Users/ahatch/.local/share/qcon26/terraform/1.17.1/terraform \
+  ./scripts/deploy.sh
+```
 
 ## Inputs
 

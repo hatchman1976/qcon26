@@ -26,10 +26,13 @@ Open <http://127.0.0.1:8000/> and refresh after edits.
 - [Review mode](http://127.0.0.1:8000/?substeps=off) advances by whole slides and plays reveals automatically.
 - `?substeps=on` explicitly restores normal mode. `data-substeps` on `#impress` controls the default.
 
+On phones and tablets, swipe horizontally or use Back/Next. Each swipe advances one reveal or slide; links and reference tabs remain tappable. Landscape gives the fixed slide layout more readable space.
+
 Run the source check before publishing:
 
 ```bash
 npm run check
+node --test scripts/touch-navigation.test.mjs
 ```
 
 This checks required deck content, structure and assets; visually review changed slides and their transitions as well. Keep revealed content visible after leaving a slide unless it is intentionally replaced. Follow the [typography rule](slides/README.md) and [speaker guidance](QCON-SPEAKER-GUIDELINES.md).
@@ -37,7 +40,7 @@ This checks required deck content, structure and assets; visually review changed
 ## Project files
 
 - `src/index.html`: active steps and speaker notes.
-- `src/main.js`, `src/styles.css`, `src/ai-fish-symbols.css`: behavior and presentation styles.
+- `src/main.js`, `src/touch-navigation.js`, `src/styles.css`, `src/ai-fish-symbols.css`: behavior, touch navigation and presentation styles.
 - `src/fonts/`, `src/images/`, `src/vendor/`: local presentation assets and Impress.js.
 - `scripts/verify-site.mjs`: source checks.
 - `scripts/deploy.sh`: human-run content sync and CloudFront invalidation.
