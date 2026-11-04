@@ -13,7 +13,7 @@ Use bold Comic Neue for the body text and closing takeaway, retaining Archivo Bl
 | 🔎 | Systems understanding | Trace how AI shifts cost, workload and risk across the system. |
 | 🧠 | Critical judgment | Challenge plausible output and test it against the real work. |
 | 🔄 | Adaptation and recovery | Notice drift, revise mental models and act before margin runs out. |
-| 🎓 | [Learning Opportunities](https://github.com/DrCatHicks/learning-opportunities) | Build expertise with guided exercises while coding with AI. |
+| GitHub icon | [Learning Opportunities](https://github.com/DrCatHicks/learning-opportunities) | Build expertise with guided exercises while coding with AI. |
 
 **Expertise turns warnings into protective action.**
 
