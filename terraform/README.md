@@ -1,6 +1,6 @@
 # AWS hosting
 
-This configuration creates `https://qcon26.hatchman76.com` in Andrew Hatch’s personal account **736654693886**:
+This configuration creates `https://qcon26.hatchman76.com` in the project AWS account **736654693886**:
 
 - A private, encrypted, versioned S3 bucket with public access blocked.
 - CloudFront with signed Origin Access Control, HTTPS redirects and TLS 1.2 or later. Direct S3 object reads are denied; content is served through this distribution.
@@ -36,9 +36,9 @@ node --test scripts/deploy.test.mjs
 
 ## Human-run setup
 
-Terraform apply and AWS content writes must be run by Andrew in a human-only privileged terminal. The following commands are instructions for that terminal, from the repository root.
+Terraform apply and AWS content writes must be run manually in a human-only privileged terminal. The following commands are instructions for that terminal, from the repository root.
 
-Andrew installed `QCon26DeployPermissions` on the existing `TerraformDeployRole` through the AWS console. When that exact policy is already installed, skip the bootstrap commands below and start with the `hatchman76` hosting plan. The policy remains console-managed and the bootstrap Terraform root is unapplied; no new IAM user or root access keys are needed.
+`QCon26DeployPermissions` was installed on the existing `TerraformDeployRole` through the AWS console. When that exact policy is already installed, skip the bootstrap commands below and start with the `hatchman76` hosting plan. The policy remains console-managed and the bootstrap Terraform root is unapplied; no new IAM user or root access keys are needed.
 
 Otherwise, select the valid bootstrap admin profile and check that STS returns `Account` **736654693886**:
 
@@ -92,7 +92,7 @@ The script requires Terraform 1.10 or later, below 2.0. If the binary used for s
 
 ```bash
 AWS_PROFILE=hatchman76 \
-  QCON_TERRAFORM=/Users/ahatch/.local/share/qcon26/terraform/1.17.1/terraform \
+  QCON_TERRAFORM="$HOME/.local/share/qcon26/terraform/1.17.1/terraform" \
   ./scripts/deploy.sh
 ```
 

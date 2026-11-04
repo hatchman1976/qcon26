@@ -37,7 +37,7 @@ The site remains a directly served `src/` tree. These changes prepare local pres
 
 ## Subsequent styling correction
 
-At Andrew's request, the framed overlay treatment was removed from all nine boundary close-up steps. Steps now have transparent backgrounds and no outer borders or rounded corners. Content groups have no card backgrounds or coloured border decorations, and the active-only visibility gate was removed so content participates in the diagram's spatial canvas.
+The framed overlay treatment was removed from all nine boundary close-up steps. Steps now have transparent backgrounds and no outer borders or rounded corners. Content groups have no card backgrounds or coloured border decorations, and the active-only visibility gate was removed so content participates in the diagram's spatial canvas.
 
 Copy, source links, substep reveals and all 30 camera coordinate/scale definitions were preserved. The site check and browser checks for transparent, unframed content pass. Coordinates and detailed positioning are intentionally left for a later pass; the earlier layout-fit reviews describe the initial framed version.
 

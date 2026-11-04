@@ -1,6 +1,6 @@
 # AI Realism and the Rasmussen Presentation
 
-Reviewed 12 October 2026 for Andrew Hatch’s QCon talk, *Adapt or Drift*.
+Reviewed 12 October 2026 for the QCon talk, *Adapt or Drift*.
 
 Historical analysis of the earlier deck. Links to retired slide files below point to the preserved checkpoint; the [current integration map](2026-10-13-slide-consolidation.md) describes where their messages now live.
 

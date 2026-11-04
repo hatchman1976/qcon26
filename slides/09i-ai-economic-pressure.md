@@ -61,6 +61,6 @@ Rasmussen supplies the adaptation/control framework; Chapter 5 supplies a contem
 - [Rasmussen (1997), Figure 3; printed manuscript pp. 9–12, 15–18 and 27 (not journal pagination)](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
 - [Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5)
 
-- [Supplied full book PDF, Chapter 5, printed pp. 77–88 / PDF pp. 85–96](/Users/ahatch/Downloads/Living_with_the_new_safety_landscape.pdf) (local preparation reference).
+- Supplied full book PDF, Chapter 5, printed pp. 77–88 / PDF pp. 85–96, `Living_with_the_new_safety_landscape.pdf` (local preparation reference).
 
 Evidence scope: [AI boundary evidence](../research/2026-10-13-ai-boundary-evidence.md).

@@ -2,7 +2,7 @@
 
 Created on 30 October 2026 using the built-in imagegen tool for `#/ai-workload-pressure`.
 
-The illustration was removed from the presentation at Andrew's request. The files and prompts are retained as an unused draft.
+The illustration was removed from the presentation. The files and prompts are retained as an unused draft.
 
 Final asset: [reverse-centaur-weary.png](assets/unused-artwork/reverse-centaur-weary.png). This original illustration depicts the metaphor and is not artwork from Doctorow's book. The transparent PNG is 1024×1536px. The initial upright version is retained as [reverse-centaur.png](assets/unused-artwork/reverse-centaur.png).
 

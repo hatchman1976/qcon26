@@ -1,5 +1,5 @@
 variable "personal_aws_account_id" {
-  description = "Andrew Hatch's personal AWS account. Used as a fail-closed provider guard."
+  description = "Approved project AWS account. Used as a fail-closed provider guard."
   type        = string
   default     = "736654693886"
 

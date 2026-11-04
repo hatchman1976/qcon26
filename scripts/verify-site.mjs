@@ -47,7 +47,7 @@ const requiredMarkers = [
   'id="complex-system-and-boundaries"',
   "Adapt or Drift:",
   "Resilience Engineering When AI Moves the Operating Point",
-  "Andrew Hatch",
+  'class="title-speaker"',
   "Takeaways",
   "It is a framework for understanding the conditions that lead to adversity and how to stay resilient and adaptive to change.",
   "This model is a system-wide lens focused on risk, built from localized analysis, actions, and perspectives.",

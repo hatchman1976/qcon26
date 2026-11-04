@@ -25,7 +25,7 @@ The year and publisher follow the publisher's DOI metadata, dated August 15, 201
 
 > However, all of our lessons learned in cognitive systems engineering and complexity theory imply that more automation may result in simplifications, but they will hide deeper complexity, and at those moments where resilience and high-performance are needed, there will have to be greater operator expertise.
 
-*Accelerated Expertise*, Robert R. Hoffman et al. Transcribed from the image supplied by Andrew.
+*Accelerated Expertise*, Robert R. Hoffman et al. Transcribed from the supplied image.
 
 ## Speaker notes
 
@@ -39,5 +39,5 @@ Doctorow's reverse-centaur distinction asks who controls the work: whether a per
 
 - [Reverse Centaur book cover from Macmillan](https://mpd-biblio-covers.imgix.net/9780374621568.jpg), saved as `src/images/qcon26/book-reverse-centaurs-guide.jpg`.
 - [Cory Doctorow — The Reverse Centaur's Guide to Life After AI, MCD, 2026](https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/)
-- [Source slide in Andrew's SREcon26 presentation](https://srecon26.hatchman76.com/#/generative-AI-student-learning)
+- [Source slide in the SREcon26 presentation](https://srecon26.hatchman76.com/#/generative-AI-student-learning)
 - [Original book-cover image](https://srecon26.hatchman76.com/images/book-accelerated-expertise.png), saved as `src/images/srecon26/book-accelerated-expertise.png`.

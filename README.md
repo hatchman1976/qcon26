@@ -2,7 +2,7 @@
 
 <img src="src/favicon.svg" width="64" height="64" alt="Blocker Lemming" />
 
-Andrew Hatch’s interactive [impress.js](https://impress.js.org/) presentation, **“Adapt or Drift: Resilience Engineering When AI Moves the Operating Point.”**
+An interactive [impress.js](https://impress.js.org/) presentation, **“Adapt or Drift: Resilience Engineering When AI Moves the Operating Point.”**
 
 - [Conference talk](https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point)
 - [Repository](https://github.com/hatchman1976/qcon26)
@@ -49,20 +49,20 @@ This checks required deck content, structure and assets; visually review changed
 
 ## AWS hosting and deployment
 
-Terraform is intended for Andrew’s personal AWS account **736654693886**, using profile `hatchman76` and `hatchman76-bootstrap` for the role-policy bootstrap. Do not use Cisco or ThousandEyes identities. See [AGENTS.md](AGENTS.md) for the project boundaries.
+Terraform targets the project AWS account **736654693886**, using profile `hatchman76` and `hatchman76-bootstrap` for the role-policy bootstrap. Do not use Cisco or ThousandEyes identities. See [AGENTS.md](AGENTS.md) for the project boundaries.
 
-The site uses a private, encrypted, versioned S3 bucket behind CloudFront Origin Access Control. CloudFront redirects HTTP to HTTPS and uses an ACM certificate in `us-east-1`; Route 53 creates the `qcon26.hatchman76.com` aliases. Terraform state uses the existing personal S3 state bucket with separate QCon keys and native lock files.
+The site uses a private, encrypted, versioned S3 bucket behind CloudFront Origin Access Control. CloudFront redirects HTTP to HTTPS and uses an ACM certificate in `us-east-1`; Route 53 creates the `qcon26.hatchman76.com` aliases. Terraform state uses the existing S3 state bucket with separate QCon keys and native lock files.
 
-Follow the [Terraform setup and plan/apply instructions](terraform/README.md). Terraform apply and AWS content writes must be run by Andrew from a human-only privileged terminal. Once the infrastructure exists, deploy from the repository root:
+Follow the [Terraform setup and plan/apply instructions](terraform/README.md). Terraform apply and AWS content writes must be run manually from a human-only privileged terminal. Once the infrastructure exists, deploy from the repository root:
 
 ```bash
 AWS_PROFILE=hatchman76 ./scripts/deploy.sh
 ```
 
-The script verifies the personal account, bucket and CloudFront distribution, runs the source check, syncs assets and uploads `index.html` last, then invalidates CloudFront. It requires the AWS CLI, Node.js and initialized Terraform state.
+The script verifies the project account, bucket and CloudFront distribution, runs the source check, syncs assets and uploads `index.html` last, then invalidates CloudFront. It requires the AWS CLI, Node.js and initialized Terraform state.
 
 ## License
 
-Please check with Andrew before reproducing all or part of the presentation.
+Permission from the copyright holder is required before reproducing all or part of the presentation.
 
-Copyright © 2026 Andrew Hatch
+Copyright © 2026. All rights reserved.
