@@ -8,8 +8,8 @@
       content="Adapt or Drift: Resilience Engineering When AI Moves the Operating Point — Andrew Hatch at QCon San Francisco 2026."
     />
     <meta name="theme-color" content="#b3d9ff" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=276" />
+    <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any" />
+    <link rel="stylesheet" href="/styles.css?v=282" />
     <link rel="stylesheet" href="/ai-fish-symbols.css?v=6" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
@@ -135,20 +135,21 @@
             </ul>
           </div>
 
-          <div class="whoami-current-role" style="position: absolute; left: 0; top: 470px; width: 100%; text-align: center">
-            <p style="font-size: 30px; font-weight: bold; margin: 0">SWE/SRE Engineering Manager 15 years.</p>
-          </div>
+        </div>
+
+        <div class="substep whoami-current-role" style="position: absolute; left: 0; top: 470px; width: 100%; text-align: center">
+          <p style="font-size: 30px; font-weight: bold; margin: 0">SWE/SRE Engineering Manager 15 years.</p>
         </div>
 
         <div class="substep" style="position: absolute; left: 60px; top: 560px">
           <img src="/images/srecon26/aws.png" alt="AWS" style="width: 170px; height: auto" />
         </div>
 
-        <div class="substep whoami-data-centre" style="position: absolute; left: 270px; top: 560px">
+        <div class="substep whoami-data-centre" data-image-pop-group style="position: absolute; left: 270px; top: 560px">
           <img src="/images/srecon26/new-data-centre.png" alt="Data centre" style="width: 150px; height: auto" />
         </div>
 
-        <div class="substep whoami-linkedin" style="position: absolute; left: 430px; top: 570px">
+        <div class="substep whoami-linkedin" data-image-pop-group style="position: absolute; left: 430px; top: 570px">
           <img src="/images/srecon26/Linkedin-Logo.png" alt="LinkedIn" style="width: 80px; height: auto" />
         </div>
 
@@ -156,7 +157,7 @@
           <div style="display: flex; align-items: flex-start; gap: 20px">
             <div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
               <img src="/images/srecon26/medium-blog-icon.png" alt="Medium" style="width: 90px; height: auto" />
-              <span class="whoami-bluesky"><img src="/images/srecon26/logo-bluesky.png" alt="Bluesky" style="width: 90px; height: auto" /></span>
+              <span class="whoami-bluesky" data-image-pop-group><img src="/images/srecon26/logo-bluesky.png" alt="Bluesky" style="width: 90px; height: auto" /></span>
             </div>
             <p style="font-size: 40px; font-weight: bold; margin-top: 50px">@hatchman76</p>
           </div>
@@ -278,7 +279,7 @@
             </div>
           </div>
 
-          <div class="substep social-together" aria-hidden="true">
+          <div class="substep social-together" data-image-pop-group aria-hidden="true">
             <img class="social-together-complex" src="/images/srecon26/complex-sign-transparent.png" alt="" />
             <span class="social-system-person social-system-person-one">👩🏿</span>
             <span class="social-system-person social-system-person-two">👨🏼</span>
@@ -571,7 +572,7 @@
         data-y="283000"
         data-scale="25"
       >
-        <div class="substep plain-boundary-reveal plain-economic-reveal">
+        <div class="substep plain-boundary-reveal plain-economic-reveal" data-image-pop="off">
           <img
             class="plain-model-outline"
             src="/images/srecon24/Rasmussen_boundary_economic.png?v=2"
@@ -585,7 +586,7 @@
           </div>
         </div>
 
-        <div class="substep plain-boundary-reveal plain-workload-reveal">
+        <div class="substep plain-boundary-reveal plain-workload-reveal" data-image-pop="off">
           <img
             class="plain-model-outline"
             src="/images/srecon24/Rasmussen_boundary_workload.png?v=2"
@@ -599,7 +600,7 @@
           </div>
         </div>
 
-        <div class="substep plain-boundary-reveal">
+        <div class="substep plain-boundary-reveal" data-image-pop="off">
           <img
             class="plain-model-outline"
             src="/images/srecon24/Rasmussen_boundary_performance.png?v=2"
@@ -613,7 +614,7 @@
           </div>
         </div>
 
-        <div class="substep plain-model-margin">
+        <div class="substep plain-model-margin" data-image-pop="off">
           <img
             class="plain-model-error-margin"
             src="/images/srecon24/Rasmussen_error_margin.png"
@@ -645,10 +646,11 @@
           <span class="plain-playing-surface-label">Playing Surface</span>
         </div>
 
-        <div class="substep plain-boundary-motions" aria-label="The playing surface fades before the economic boundary moves inward and outward, with the workload boundary starting one second later">
+        <div class="substep plain-boundary-motions" data-image-pop="off" aria-label="The playing surface fades before the economic boundary moves inward and outward, with the workload boundary starting one second later">
           <div class="plain-barrier-motion plain-economic-motion">
             <img
               class="plain-model-outline plain-barrier-moving"
+              data-image-pop-animation="plain-barrier-shift"
               src="/images/srecon24/Rasmussen_boundary_economic.png?v=2"
               alt=""
             />
@@ -657,6 +659,7 @@
           <div class="plain-barrier-motion plain-workload-motion">
             <img
               class="plain-model-outline plain-barrier-moving"
+              data-image-pop-animation="plain-barrier-shift"
               src="/images/srecon24/Rasmussen_boundary_workload.png?v=2"
               alt=""
             />
@@ -902,7 +905,7 @@
             </tr>
             <tr class="substep">
               <td><div class="boundary-action-entry"><span class="boundary-list-emoji" aria-hidden="true">🗜️</span><span>Projected margin decreases</span></div></td>
-              <td><div class="boundary-action-entry"><span class="boundary-exit-sign" aria-hidden="true"><img class="boundary-list-icon" src="/images/srecon24/sign-exit.png" alt="" /></span><span>Freeze hiring, reduce staffing or maintenance</span></div></td>
+              <td><div class="boundary-action-entry"><span class="boundary-exit-sign" data-image-pop-group aria-hidden="true"><img class="boundary-list-icon" src="/images/srecon24/sign-exit.png" alt="" /></span><span>Freeze hiring, reduce staffing or maintenance</span></div></td>
             </tr>
           </tbody>
         </table>
@@ -950,7 +953,7 @@
           <div class="boundary-detail-copy">
             <h3 class="substep">Less room to operate</h3>
             <ul class="boundary-emoji-list" role="list">
-              <li class="substep"><span class="boundary-exit-sign" aria-hidden="true"><img class="boundary-list-icon" src="/images/srecon24/sign-exit.png" alt="" /></span><span>Attrition, layoffs or unavailable specialists</span></li>
+              <li class="substep"><span class="boundary-exit-sign" data-image-pop-group aria-hidden="true"><img class="boundary-list-icon" src="/images/srecon24/sign-exit.png" alt="" /></span><span>Attrition, layoffs or unavailable specialists</span></li>
               <li class="substep"><span class="boundary-list-emoji" aria-hidden="true">🥵</span><span>Fatigue, burnout and constant interruptions</span></li>
               <li class="substep"><span class="boundary-list-emoji" aria-hidden="true">🔥</span><span>Fragile tooling and lost operational knowledge</span></li>
             </ul>
@@ -1454,7 +1457,7 @@
         </div>
       </section>
 
-      <section id="expertise-erosion-sequence" class="step ai-journey-slide expertise-sequence-slide"
+      <section id="expertise-erosion-sequence" class="step ai-journey-slide expertise-sequence-slide" data-image-pop="off"
         data-x="12100" data-y="308150" data-scale="3.037465" aria-label="Complex-system expertise and This is Fine">
         <div class="expertise-sequence-visuals">
           <div class="expertise-people-scene" role="img" aria-label="People distributed throughout a complex system, with colored balls flashing along its connections">
@@ -1467,11 +1470,11 @@
               <div class="expertise-arrow-pulses"></div>
             </div>
           </div>
-          <figure class="expertise-shrug-scene" aria-hidden="true">
+          <figure class="expertise-shrug-scene" data-image-pop-group data-image-pop-trigger="#expertise-erosion-sequence .expertise-shrug-trigger" aria-hidden="true">
             <span class="expertise-sequence-shrug" role="img" aria-label="Woman shrugging">🤷‍♀️</span>
             <div class="expertise-shrug-network">
               <img src="/images/srecon26/complex-sign-transparent.png" alt="Interconnected nodes representing a complex system" />
-              <span class="expertise-fire" role="img" aria-label="Glowing flame" aria-hidden="true">🔥</span>
+              <span class="expertise-fire" data-image-pop-group data-image-pop-trigger="#expertise-erosion-sequence .expertise-fire-trigger" role="img" aria-label="Glowing flame" aria-hidden="true">🔥</span>
             </div>
             <span class="expertise-sequence-shrug" role="img" aria-label="Man shrugging">🤷‍♂️</span>
           </figure>
@@ -1561,11 +1564,13 @@
           <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🔎</span><div><h3>Systems understanding</h3><p>Trace how AI shifts cost, workload and risk across the system.</p></div></li>
           <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🧠</span><div><h3>Critical judgment</h3><p>Challenge plausible output and test it against the real work.</p></div></li>
           <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🔄</span><div><h3>Adaptation and recovery</h3><p>Notice drift, revise mental models and act before margin runs out.</p></div></li>
+          <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">🎓</span><div><h3><a href="https://github.com/DrCatHicks/learning-opportunities" target="_blank" rel="noreferrer" title="Learning Opportunities by Dr. Cat Hicks">Learning Opportunities</a></h3><p>Build expertise with guided exercises while coding with AI.</p></div></li>
         </ul>
         <p class="substep closing-takeaway">Expertise turns warnings into protective action.</p>
         <div class="notes">
           <p>Rasmussen directs attention to how locally reasonable decisions interact across the whole system. AI can change cost, effort and the pace of proposed action. Expertise helps people see those interactions, question plausible explanations and recognise when a plan no longer fits. Protecting margin requires useful feedback and the capacity to act on it. Crossing the dotted line begins consuming the protected buffer before the actual functional boundary. It does not establish that harm has already occurred.</p>
           <p>Sources: Rasmussen (1997), Cook (2000), Hoffman et al. (2013), Woods (2018).</p>
+          <p>Learning Opportunities, by Dr. Cat Hicks, offers optional 10–15 minute exercises using prediction, explanation and reflection during AI-assisted coding. Use it to keep active learning in engineering work. <a href="https://github.com/DrCatHicks/learning-opportunities">GitHub repository</a>.</p>
         </div>
       </section>
 
@@ -1593,7 +1598,7 @@
             <li class="closing-row substep"><span class="closing-emoji" aria-hidden="true">💥</span><p><strong>Performance:</strong> Test the work, including plausible AI mistakes and recovery.</p></li>
             <li class="closing-row substep"><picture class="closing-emoji closing-lemming" aria-hidden="true"><source media="(prefers-reduced-motion: reduce), print" srcset="/images/qcon26/blocker-lemming.png" /><img class="blocker-lemming" src="/images/qcon26/blocker-lemming.gif" alt="" /></picture><p><strong>Error margin:</strong> Give people time, expertise and authority to turn signals into action.</p></li>
           </ul>
-          <figure class="closing-summary-homer">
+          <figure class="closing-summary-homer" data-image-pop-group data-image-pop-trigger="#evidence-handoff .closing-takeaway">
             <picture>
               <source media="(prefers-reduced-motion: reduce), print" srcset="/images/srecon26/homer-simpson-side-eye-still.png" />
               <img src="/images/srecon26/homer-simpson-side-eye.gif" width="220" height="156" alt="Homer Simpson looking from side to side" />
@@ -1770,6 +1775,7 @@
     </main>
 
     <script src="/vendor/impress.js/js/impress.min.js"></script>
-    <script src="/main.js?v=66"></script>
+    <script src="/substep-image-pop.js?v=2"></script>
+    <script src="/main.js?v=69"></script>
   </body>
 </html>

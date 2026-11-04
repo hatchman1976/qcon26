@@ -2,9 +2,9 @@
 
 Created on 30 October 2026 with the built-in imagegen editing tool. The original shocked illustration remains unchanged. This standalone asset is not inserted into a slide.
 
-Final asset: [depressed-crawling-reverse-centaur.png](../src/images/qcon26/depressed-crawling-reverse-centaur.png).
+Final asset: [depressed-crawling-reverse-centaur.png](assets/unused-artwork/depressed-crawling-reverse-centaur.png).
 
-Input: [shocked-crawling-reverse-centaur.png](../src/images/qcon26/shocked-crawling-reverse-centaur.png).
+Input: [shocked-crawling-reverse-centaur.png](assets/unused-artwork/shocked-crawling-reverse-centaur.png).
 
 ## Final edit prompt
 

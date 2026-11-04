@@ -2,12 +2,12 @@
 
 Created on 30 October 2026 with the built-in imagegen editing tool. Both are traditional centaurs: a human head, torso and two arms joined to a horse body with four equine legs. The earlier reverse-centaur images remain unchanged. These standalone assets are not inserted into slides.
 
-- [Shocked centaur](../src/images/qcon26/shocked-centaur.png)
-- [Depressed centaur](../src/images/qcon26/depressed-centaur.png)
+- [Shocked centaur](assets/unused-artwork/shocked-centaur.png)
+- [Depressed centaur](assets/unused-artwork/depressed-centaur.png)
 
 ## Shocked centaur prompt
 
-Input: `src/images/qcon26/shocked-crawling-reverse-centaur.png`.
+Input: `research/assets/unused-artwork/shocked-crawling-reverse-centaur.png`.
 
 ```text
 Use case: precise-object-edit
@@ -23,9 +23,9 @@ Constraints: one centaur only; one human head, two human arms, four horse legs. 
 
 ## Depressed centaur prompt
 
-Edit target: `src/images/qcon26/shocked-centaur.png`.
+Edit target: `research/assets/unused-artwork/shocked-centaur.png`.
 
-Expression reference only: `src/images/qcon26/depressed-crawling-reverse-centaur.png`.
+Expression reference only: `research/assets/unused-artwork/depressed-crawling-reverse-centaur.png`.
 
 ```text
 Use case: precise-object-edit
@@ -42,12 +42,12 @@ Constraints: exactly one traditional centaur with one HUMAN head, two human arms
 
 Created with the built-in imagegen editing tool on 30 October 2026. Both have a normal standing horse stance, limp human arms and classical Greco-Roman styling, retaining their respective facial expressions. The preceding drafts remain unchanged.
 
-- [Shocked Greco-Roman centaur](../src/images/qcon26/shocked-centaur-greco-roman.png)
-- [Depressed Greco-Roman centaur](../src/images/qcon26/depressed-centaur-greco-roman.png)
+- [Shocked Greco-Roman centaur](assets/unused-artwork/shocked-centaur-greco-roman.png)
+- [Depressed Greco-Roman centaur](assets/unused-artwork/depressed-centaur-greco-roman.png)
 
 ### Shocked variant prompt
 
-Input: `src/images/qcon26/shocked-centaur.png`.
+Input: `research/assets/unused-artwork/shocked-centaur.png`.
 
 ```text
 Use case: precise-object-edit
@@ -63,9 +63,9 @@ Background: genuinely transparent, with opaque figure. No stone slab, pedestal, 
 
 ### Depressed variant prompt
 
-Edit target: `src/images/qcon26/shocked-centaur-greco-roman.png`.
+Edit target: `research/assets/unused-artwork/shocked-centaur-greco-roman.png`.
 
-Expression reference only: `src/images/qcon26/depressed-centaur.png`.
+Expression reference only: `research/assets/unused-artwork/depressed-centaur.png`.
 
 ```text
 Use case: precise-object-edit
@@ -82,12 +82,12 @@ Constraints: one traditional centaur, one human head, two human arms and four ho
 
 Created with the built-in imagegen editing tool on 30 October 2026. The faces use mature classical Roman portrait proportions and short sculpted waves, preserving the shocked and depressed expressions. Limp arms, normal horse stance and classical drapery remain unchanged.
 
-- [Shocked Roman portrait centaur](../src/images/qcon26/shocked-centaur-roman-face.png)
-- [Depressed Roman portrait centaur](../src/images/qcon26/depressed-centaur-roman-face.png)
+- [Shocked Roman portrait centaur](assets/unused-artwork/shocked-centaur-roman-face.png)
+- [Depressed Roman portrait centaur](assets/unused-artwork/depressed-centaur-roman-face.png)
 
 ### Shocked face prompt
 
-Input: `src/images/qcon26/shocked-centaur-greco-roman.png`.
+Input: `research/assets/unused-artwork/shocked-centaur-greco-roman.png`.
 
 ```text
 Use case: precise-object-edit
@@ -102,9 +102,9 @@ Constraints: one traditional centaur with one human head, two human arms and fou
 
 ### Depressed face prompt
 
-Edit target: `src/images/qcon26/shocked-centaur-roman-face.png`.
+Edit target: `research/assets/unused-artwork/shocked-centaur-roman-face.png`.
 
-Expression reference only: `src/images/qcon26/depressed-centaur-greco-roman.png`.
+Expression reference only: `research/assets/unused-artwork/depressed-centaur-greco-roman.png`.
 
 ```text
 Use case: precise-object-edit

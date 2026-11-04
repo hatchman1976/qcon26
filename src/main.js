@@ -10,10 +10,28 @@ document.addEventListener("impress:stepenter", (event) => {
   if (event.target === openingHookSlide) openingHookSlide.classList.add("has-entered");
 });
 
+const whoamiSlide = root.querySelector("#whoami");
+const whoamiCareerIntro = whoamiSlide.querySelector(".whoami-career-intro");
+const whoamiCurrentRole = whoamiSlide.querySelector(".whoami-current-role");
+whoamiSlide.addEventListener("animationend", (event) => {
+  if (event.animationName !== "whoami-credits-finish" ||
+      !event.target.matches(".whoami-career-credits") ||
+      !whoamiCareerIntro.classList.contains("substep-visible") ||
+      whoamiCurrentRole.classList.contains("substep-visible")) return;
+
+  // A native manager substep keeps an early advance separate from the AWS reveal.
+  whoamiSlide.querySelectorAll(".substep-active").forEach((substep) => substep.classList.remove("substep-active"));
+  whoamiCurrentRole.classList.add("substep-visible", "substep-active");
+  whoamiSlide.dispatchEvent(new CustomEvent("impress:substep:enter", {
+    bubbles: true,
+    detail: { reason: "credits", substep: whoamiCurrentRole },
+  }));
+});
+
 // The native plugin resets reveals on entry. Keep these slides' last reveal
 // state when revisiting them, while still allowing manual reversal.
 document.addEventListener("impress:stepenter", (event) => {
-  if (!event.target.matches(".practice-slide, .token-economy-slide, .model-enshittification-slide, .ai-margin-pressure-slide")) return;
+  if (!event.target.matches(".practice-slide, .token-economy-slide, .model-enshittification-slide, .ai-margin-pressure-slide, .expertise-sequence-slide")) return;
   const revealed = [...event.target.querySelectorAll(".substep-visible")];
   queueMicrotask(() => revealed.forEach((substep) => substep.classList.add("substep-visible")));
 }, true);
@@ -186,12 +204,14 @@ const expertiseFineImage = expertiseFineScene.querySelector("img");
 
 function syncExpertiseSequence() {
   const active = expertiseSequenceSlide.classList.contains("active");
+  if (active) expertiseSequenceSlide.classList.add("has-entered");
+  const entered = expertiseSequenceSlide.classList.contains("has-entered");
   const shrugging = expertiseShrugTrigger.classList.contains("substep-visible");
   const burning = expertiseFireTrigger.classList.contains("substep-visible");
   const fine = expertiseFineScene.classList.contains("substep-visible");
-  const showPeople = active && !shrugging && !fine;
+  const showPeople = entered && !shrugging && !fine;
 
-  if (showPeople && !prefersReducedMotion.matches) {
+  if (showPeople && active && !prefersReducedMotion.matches) {
     if (activeArrowPulseStep !== expertisePulseLayer) {
       startArrowPulses({ layer: expertisePulseLayer, trigger: null });
     }
@@ -200,8 +220,8 @@ function syncExpertiseSequence() {
   }
 
   expertiseSequenceSlide.querySelector(".expertise-people-scene").setAttribute("aria-hidden", String(!showPeople));
-  expertiseSequenceSlide.querySelector(".expertise-shrug-scene").setAttribute("aria-hidden", String(!active || !shrugging || fine));
-  expertiseSequenceSlide.querySelector(".expertise-fire").setAttribute("aria-hidden", String(!active || !burning || fine));
+  expertiseSequenceSlide.querySelector(".expertise-shrug-scene").setAttribute("aria-hidden", String(!entered || !shrugging || fine));
+  expertiseSequenceSlide.querySelector(".expertise-fire").setAttribute("aria-hidden", String(!entered || !burning || fine));
   expertiseFineScene.setAttribute("aria-hidden", String(!fine));
 
   const source = fine && !prefersReducedMotion.matches
@@ -317,7 +337,7 @@ function chooseRoamingPointDestination() {
 }
 
 function moveRoamingPoint() {
-  if (!roamingPointStep.classList.contains("substep-visible")) return;
+  if (prefersReducedMotion.matches || !roamingPointStep.classList.contains("substep-visible")) return;
 
   const destination = chooseRoamingPointDestination();
   roamingPointPosition.classList.add("is-moving");
@@ -356,6 +376,11 @@ document.addEventListener("impress:stepenter", (event) => {
   if (event.target.id === "the-fish-diagram" && roamingPointStep.classList.contains("substep-visible")) {
     startRoamingPoint();
   }
+});
+
+prefersReducedMotion.addEventListener("change", () => {
+  if (prefersReducedMotion.matches) stopRoamingPoint();
+  else if (roamingPointStep.classList.contains("substep-visible")) startRoamingPoint();
 });
 
 const guardianActionsStep = document.querySelector("#the-fish-diagram .plain-guardian-actions");
@@ -417,6 +442,7 @@ function showGuardianAction(slot) {
 
   const icon = kind === "margin" ? document.createElement("img") : document.createElement("span");
   icon.className = `plain-guardian-icon plain-guardian-${kind}`;
+  icon.setAttribute("data-image-pop-group", "");
   icon.setAttribute("aria-hidden", "true");
   icon.style.left = `${position.x}px`;
   icon.style.top = `${position.y}px`;
@@ -512,6 +538,8 @@ const aiMarginBucketLandings = [
 aiMarginBucketLandings.forEach(([x, floor], index) => {
   const bucket = document.createElement("img");
   bucket.className = "ai-margin-bucket";
+  bucket.dataset.imagePopTrigger = "#ai-margin-pressure .ai-margin-pressure-trigger";
+  bucket.dataset.imagePopAnimation = "ai-slop-rain";
   bucket.src = "/images/srecon26/ai-slop-bucket.png";
   bucket.alt = "";
   bucket.style.setProperty("--rain-x", x + "px");

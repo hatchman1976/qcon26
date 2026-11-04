@@ -1,101 +1,62 @@
 # QCon SF 2026 — Adapt or Drift
 
-An interactive [impress.js](https://impress.js.org/) presentation for Andrew Hatch's QCon San Francisco 2026 talk, **“Adapt or Drift: Resilience Engineering When AI Moves the Operating Point.”**
+<img src="src/favicon.svg" width="64" height="64" alt="Blocker Lemming" />
 
-- Conference page: <https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point>
-- Repository: <https://github.com/hatchman1976/qcon26>
-- Intended live site: <https://qcon26.hatchman76.com>
-- Author: Andrew Hatch ([@hatchman1976](https://github.com/hatchman1976))
-- Speaker guidelines: [QCon presentation guidance](QCON-SPEAKER-GUIDELINES.md), transcribed from the supplied screenshot.
+Andrew Hatch’s interactive [impress.js](https://impress.js.org/) presentation, **“Adapt or Drift: Resilience Engineering When AI Moves the Operating Point.”**
 
-The rendered deck contains 34 content steps and three overview/overlay camera steps, for 37 Impress steps. After the title, a statement about capability and control opens the argument, followed by the WHOAMI introduction. The deck moves through socio-technical systems, a definition of Resilience Engineering, Rasmussen's model and six boundary close-ups, then introduces the AI ball and follows it through economics, **Tokenomic Progression**, **Model Enshittification**, workload and the erosion of expertise. The expertise book and quotation lead into a separate visual sequence with the complex system, shrugging people, a flame and “This is Fine”. **AI margin pressure** uses one manual reveal: accumulating buckets cover the protective Lemming while a separate local ball makes one continuous journey through the dotted margin to the actual performance boundary as a warning pulses. The global operating point keeps roaming throughout. A static **Consequences** callout within the margin scene connects accumulated verification work, protective capacity and the ability to act on warnings. The following camera-only **AI Fish Diagram overview** opens onto the whole fish diagram. Four closing slides return to skills that protect margin, the control of AI as a tool or operator, boundary takeaways and human adaptive capacity, followed by References and a final Thank you slide. Behaviour, control, joint evaluation and recovery messages remain integrated into the earlier steps and their speaker notes. Slide copy, preparation details and notes are maintained under [`slides/`](slides/README.md).
+- [Conference talk](https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point)
+- [Repository](https://github.com/hatchman1976/qcon26)
+- Intended site: <https://qcon26.hatchman76.com>
 
-## Narrative focus
-
-The 2024 SREcon talk foregrounded the geometry of Rasmussen's model: boundaries, margin, and continuous drift. The 2026 talk foregrounds the temporal control problem introduced by AI-mediated work:
-
-- AI is not a fourth boundary; it changes existing gradients and control-loop gain and delay, and it can sometimes reshape existing constraints.
-- Candidate change can become cheaper and faster while model consumption, infrastructure commitments, expert verification, and recovery all remain real costs.
-- Unit economics and aggregate economics can move in opposite directions: falling token or serving cost does not prevent total spend from rising when use expands faster.
-- Economic usage moves the operating point; sustainable financial capacity can reshape the economic boundary; budgets, quotas, forecasts, and ROI targets provide signals and setpoints for the economic controller—not additional Rasmussen boundaries.
-- When admitted change outruns feedback and assurance, one operating state can approach the workload–performance joint-constraint region.
-- The goal is not to return to a geometric center. It is to restore sufficient margin, bounded excursions, and recoverability.
-- Responsibility needs practical access to evidence, time for review, and authority to intervene. Evaluate whether people, tools, and workflow can use useful recommendations, challenge convincing mistakes, and recover under pressure.
-
-The integrated boundary and AI sequence draws on Chapter 5, [AI Gold Rush 2 Versus AI Realism](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5), reviewed against the supplied full book PDF, printed pp. 77–88 (PDF pp. 85–96). Economic addresses costs transferred or deferred; Workload addresses checking demand and finite capacity; Performance addresses situated, continuing joint evaluation; Error Margin applies those findings to Rasmussen's protected performance-side buffer. Error Margin remains a theme within the performance constraint, not a fourth boundary.
-
-The speaker notes preserve the source limits: the chapter is a resilience synthesis and does not use Rasmussen's model, its joint-evaluation empirical example concerns predictive clinical AI, and the AWS recovery example in the Error Margin notes describes conventional automation with no reported generative AI involvement. Sense / Constrain / Adapt / Correct remain supporting action verbs in the notes.
-
-The close adapts the four-part SREcon26 structure to the QCon argument. **Skills that protect margin** connects systems understanding, critical judgment and adaptation. **Tool vs Operator** asks how AI assists or acts, with boundaries on its permissions and pace and joint evaluation of people, tools and workflow. **We have to adapt** returns to economic, workload and performance pressures and the protected margin. **Humans are adaptable** closes on expertise, time and authority, and using AI to strengthen our capacity to understand, act and recover. These are proposed applications of the talk’s framework. The [References slide](slides/14-references.md), before the final [Thank you slide](slides/15-thank-you.md), collects the research, studies, reports and guidance links.
-
-The full conceptual guardrails, causal mechanism, and evidence requirements are maintained in [`TALK.md`](TALK.md).
+The talk applies Rasmussen’s model to AI economics, workload, expertise and adaptive capacity. [`TALK.md`](TALK.md) holds the argument and evidence limits; [`slides/`](slides/README.md) holds the slide copy, preparation details and speaker notes. The rendered deck currently has 37 Impress steps, including three overview/overlay camera steps.
 
 ## Work locally
 
-The repository contains the deployable static site directly in `src/`. There is no build step and no generated site directory. Follow the [deck typography rule](slides/README.md): Archivo Black headings, title-slide speaker name and opening-hook statements, Open Sans by default for tables, and Comic Neue for other editable text. Preserve emoji fonts and the documented slide-specific table exceptions.
+`src/` is the complete deployable website. Edit it directly: there is no build step or generated site directory. The runtime, fonts and presentation artwork are hosted locally. Markdown slide files are reference material, not rendering inputs.
+
+Use Python 3 to serve the deck and Node.js 20.11 or later for the structural check. There are no npm dependencies to install.
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1 --directory src
 ```
 
-Then open <http://127.0.0.1:8000/>. Refresh the page after editing a source file.
+Open <http://127.0.0.1:8000/> and refresh after edits.
 
-Normal click-through substeps are enabled by default. Optional review mode remains available at <http://127.0.0.1:8000/?substeps=off>: navigation advances a whole slide, text and tables reveal automatically, and replacement scenes play automatically. Use `?substeps=on` to explicitly select normal mode. The default is controlled by `data-substeps="on"` on `#impress` in `src/index.html`.
+- Normal click-through substeps are enabled by default.
+- [Review mode](http://127.0.0.1:8000/?substeps=off) advances by whole slides and plays reveals automatically.
+- `?substeps=on` explicitly restores normal mode. `data-substeps` on `#impress` controls the default.
 
-The optional structural check reads `src/` directly and does not generate files:
+Run the source check before publishing:
 
 ```bash
 npm run check
 ```
 
-## Project structure
+This checks required deck content, structure and assets; visually review changed slides and their transitions as well. Keep revealed content visible after leaving a slide unless it is intentionally replaced. Follow the [typography rule](slides/README.md) and [speaker guidance](QCON-SPEAKER-GUIDELINES.md).
 
-```text
-qcon26/
-├── slides/            # Current rendered flow, one Markdown file per slide
-│   └── ideas/         # Preserved narrative ideas that are not rendered
-├── src/
-│   ├── index.html       # Active Impress steps and speaker notes
-│   ├── main.js          # Impress.js initialization
-│   ├── styles.css       # SREcon24-derived presentation theme
-│   ├── fonts/           # Locally hosted presentation fonts
-│   ├── images/          # Presentation artwork
-│   └── vendor/          # Vendored Impress.js runtime and license
-├── scripts/
-│   ├── deploy.sh        # Human-run, account-checked AWS content deployment
-│   └── verify-site.mjs  # Direct source checks
-├── terraform/           # S3, CloudFront, ACM, and Route 53
-└── TALK.md              # Working narrative and source notes
-```
+## Project files
 
-The title copy comes from the [QCon talk page](https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point). The visual theme and locally hosted artwork are adapted from Andrew's [SREcon24 presentation](https://srecon24.hatchman76.com), so the presentation does not depend on conference Wi-Fi.
+- `src/index.html`: active steps and speaker notes.
+- `src/main.js`, `src/styles.css`, `src/ai-fish-symbols.css`: behavior and presentation styles.
+- `src/fonts/`, `src/images/`, `src/vendor/`: local presentation assets and Impress.js.
+- `scripts/verify-site.mjs`: source checks.
+- `scripts/deploy.sh`: human-run content sync and CloudFront invalidation.
+- `terraform/`: hosting configuration and role-policy bootstrap.
+- `research/` and `slides/ideas/`: sources and material outside the rendered deck.
 
-## AWS hosting
+## AWS hosting and deployment
 
-Terraform defines:
+Terraform is intended for Andrew’s personal AWS account **736654693886**, using profile `hatchman76` and `hatchman76-bootstrap` for the role-policy bootstrap. Do not use Cisco or ThousandEyes identities. See [AGENTS.md](AGENTS.md) for the project boundaries.
 
-- a private, encrypted, versioned S3 content bucket;
-- CloudFront with Origin Access Control, HTTPS-only viewers, compression, and managed caching/security-header policies;
-- an ACM certificate in `us-east-1` with Route 53 DNS validation;
-- Route 53 `A` and `AAAA` aliases for `qcon26.hatchman76.com`;
-- S3 remote state with native lock-file locking.
+The site uses a private, encrypted, versioned S3 bucket behind CloudFront Origin Access Control. CloudFront redirects HTTP to HTTPS and uses an ACM certificate in `us-east-1`; Route 53 creates the `qcon26.hatchman76.com` aliases. Terraform state uses the existing personal S3 state bucket with separate QCon keys and native lock files.
 
-A narrowly scoped `terraform/bootstrap/` configuration adds QCon-specific S3 permissions to the existing personal `TerraformDeployRole`; it does not recreate the shared state bucket, IAM user, or IAM role owned by earlier projects.
-
-The AWS provider is pinned to personal account `736654693886` with `allowed_account_ids`. Selecting any Cisco/ThousandEyes account causes Terraform to fail before it manages resources.
-
-See [terraform/README.md](terraform/README.md) for the human-run setup. In accordance with this project's production guardrails, Terraform apply and AWS content writes must be run manually from a human-only privileged terminal.
-
-## Content deployment
-
-After the infrastructure exists, verify and deploy the static source from a human-only terminal:
+Follow the [Terraform setup and plan/apply instructions](terraform/README.md). Terraform apply and AWS content writes must be run by Andrew from a human-only privileged terminal. Once the infrastructure exists, deploy from the repository root:
 
 ```bash
-npm run check
 AWS_PROFILE=hatchman76 ./scripts/deploy.sh
 ```
 
-The deployment script independently checks that `AWS_PROFILE` is `hatchman76` and that STS resolves to the expected personal account before it syncs `src/` or invalidates CloudFront.
+The script verifies the personal account, bucket and CloudFront distribution, runs the source check, syncs assets and uploads `index.html` last, then invalidates CloudFront. It requires the AWS CLI, Node.js and initialized Terraform state.
 
 ## License
 

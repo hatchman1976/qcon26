@@ -8,6 +8,11 @@ output "s3_bucket_name" {
   value       = aws_s3_bucket.content.id
 }
 
+output "s3_origin_domain_name" {
+  description = "Regional S3 REST origin verified before content deployment"
+  value       = aws_s3_bucket.content.bucket_regional_domain_name
+}
+
 output "cloudfront_distribution_id" {
   description = "CloudFront distribution ID used for cache invalidation"
   value       = aws_cloudfront_distribution.site.id

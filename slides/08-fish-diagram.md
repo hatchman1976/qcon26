@@ -17,9 +17,9 @@ Presenter reveals for the first build, in order:
 5. Red **Operating Point**, representing one whole-system state.
 6. Green **Playing Surface**, traced to the three actual boundary lines, with a black label.
 7. On the next presenter advance, the area between the dotted error margin and the actual performance boundary fades in orange; the rest remains green.
-8. The shaded surface and its label fade away over 750 ms, then the economic boundary shifts inward and outward against its original reference. The workload boundary starts the same 4.8-second motion one second after the economic boundary begins, automatically within this reveal.
+8. The shaded surface and its label fade away over 750 ms, then the economic boundary shifts inward and outward against its original reference. The workload boundary starts the same 4.8-second motion one second after the economic boundary begins, automatically within this reveal. Both outward excursions are halved, with the inward movements unchanged.
 9. A moving operating point starts after both boundary animations finish.
-10. Cost charts, effort-saving hands and Blocker Lemmings representing safety interventions arrive across the model in a quick stagger (roughly eight seconds overall, with each entrance lasting 0.45 seconds), including a hand just inside the intersection of the error margin and workload boundary.
+10. Cost charts, effort-saving hands and Blocker Lemmings representing safety interventions arrive across the model in a quick stagger (roughly eight seconds overall, with each entrance lasting 0.4 seconds), including a hand just inside the intersection of the error margin and workload boundary.
 11. The **Cost efficiency** gradient arrow draws from the economic boundary toward the acceptable-performance side, with its arrowhead and label.
 12. The **Least effort** gradient arrow draws from the workload boundary in the same general direction, with its arrowhead and label.
 

@@ -146,6 +146,11 @@ a {
   transition: opacity 1s;
 }
 
+/* The shared image pop supplies the overshoot, independently of motion paths. */
+#impress .step .image-pop-reveal {
+  transition-duration: 180ms;
+}
+
 /* Final bibliography, with all source links available on entry. */
 .references-slide {
   padding: 36px 46px;
@@ -625,6 +630,11 @@ a {
   text-align: center;
 }
 
+.closing-skills .practice-title { min-height: 80px; }
+.closing-skills .closing-rows { gap: 8px; margin: 8px 0 6px; }
+.closing-skills .closing-row h3 { margin-bottom: 6px; }
+.closing-skills .closing-takeaway { min-height: 60px; margin-top: 6px; }
+
 .closing-tool-rows { gap: 38px; }
 .closing-tool-rows .closing-row { grid-template-columns: 140px minmax(0, 1fr); gap: 34px; }
 .closing-tool-rows .closing-emoji { font-size: 112px; }
@@ -758,7 +768,7 @@ a {
 }
 
 .whoami-career-intro {
-  --credits-duration: 6s;
+  --credits-duration: 3s;
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -789,10 +799,6 @@ a {
   transform: translateY(var(--credits-height));
 }
 
-.whoami-current-role {
-  opacity: 0;
-}
-
 .whoami-slide:not(:has(.whoami-career-intro ~ .substep.substep-visible)) .whoami-career-intro.substep-visible .whoami-credits-track {
   animation: whoami-credits-roll var(--credits-duration) linear both;
 }
@@ -801,19 +807,10 @@ a {
   animation: whoami-credits-finish 1ms step-end var(--credits-duration) forwards;
 }
 
-.whoami-career-intro.substep-visible .whoami-current-role {
-  animation: whoami-current-role-reveal 300ms ease-out var(--credits-duration) both;
-}
-
-/* Advancing early completes this reveal before the later logos appear. */
+/* The manager reveal completes the credits before the later logos appear. */
 .whoami-slide:has(.whoami-career-intro ~ .substep.substep-visible) .whoami-career-credits {
   animation: none;
   visibility: hidden;
-}
-
-.whoami-slide:has(.whoami-career-intro ~ .substep.substep-visible) .whoami-current-role {
-  animation: none;
-  opacity: 1;
 }
 
 @keyframes whoami-credits-roll {
@@ -824,11 +821,6 @@ a {
 @keyframes whoami-credits-finish {
   from { visibility: visible; }
   to { visibility: hidden; }
-}
-
-@keyframes whoami-current-role-reveal {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce), print {
@@ -852,16 +844,9 @@ a {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .whoami-career-intro.substep-visible .whoami-current-role {
-    animation-duration: 1ms;
-    animation-timing-function: step-end;
-  }
-}
-
 @media print {
   .whoami-career-credits { display: none; }
-  .whoami-career-intro .whoami-current-role { animation: none !important; opacity: 1; }
+  .whoami-current-role { opacity: 1 !important; }
 }
 
 /* Opening hook: capability and control, with room for a pause. */
@@ -1165,26 +1150,6 @@ a {
   height: auto;
 }
 
-.plain-boundary-reveal.substep-visible .plain-model-outline,
-.plain-model-margin.substep-visible .plain-model-error-margin {
-  animation: plain-boundary-expand-contract 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-  transform-origin: center;
-}
-
-@keyframes plain-boundary-expand-contract {
-  0% {
-    transform: scale(0.92);
-  }
-
-  55% {
-    transform: scale(1.06);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
 .plain-boundary-reveal {
   position: absolute;
   inset: 0;
@@ -1203,15 +1168,15 @@ a {
 .plain-economic-motion {
   --barrier-inward-x: -105px;
   --barrier-inward-y: 70px;
-  --barrier-outward-x: 85px;
-  --barrier-outward-y: -55px;
+  --barrier-outward-x: 42.5px;
+  --barrier-outward-y: -27.5px;
 }
 
 .plain-workload-motion {
   --barrier-inward-x: -90px;
   --barrier-inward-y: -60px;
-  --barrier-outward-x: 75px;
-  --barrier-outward-y: 50px;
+  --barrier-outward-x: 37.5px;
+  --barrier-outward-y: 25px;
 }
 
 .plain-barrier-moving {
@@ -1443,13 +1408,12 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 .plain-guardian-icon {
   position: absolute;
   display: block;
-  opacity: 0;
+  opacity: 1;
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
   font-size: 35px;
   line-height: 1;
   white-space: nowrap;
-  transform: translate(-50%, -50%) scale(0.4);
-  animation: plain-guardian-arrive 450ms cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+  transform: translate(-50%, -50%);
 }
 
 .plain-guardian-margin {
@@ -1457,23 +1421,6 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   max-width: 38.25px;
   height: 50.4px;
   filter: drop-shadow(1px 2px 1px rgb(0 0 0 / 0.25));
-}
-
-@keyframes plain-guardian-arrive {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.4);
-  }
-
-  70% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.12);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
 }
 
 .plain-gradient-arrows {
@@ -2377,7 +2324,7 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
     opacity: 1;
     background: transparent;
   }
-  #impress .expertise-sequence-slide:not(.active):has(.expertise-fine-scene.substep-visible) {
+  #impress .expertise-sequence-slide.has-entered:not(.active) {
     opacity: 1;
     background: transparent;
   }
@@ -2607,7 +2554,8 @@ img.boundary-detail-icon { height: auto; }
 .expertise-fire { position: absolute; top: 63%; left: 50%; font-size: 180px; line-height: 1; transform: translate(-50%, -50%); opacity: 0; transition: opacity 600ms ease; }
 .expertise-sequence-slide:has(.expertise-shrug-trigger.substep-visible) .expertise-people-scene { opacity: 0; }
 .expertise-sequence-slide:has(.expertise-shrug-trigger.substep-visible) .expertise-shrug-scene { opacity: 1; }
-.expertise-sequence-slide.active:has(.expertise-fire-trigger.substep-visible) .expertise-fire { opacity: 1; animation: expertise-fire-glow 1600ms ease-in-out infinite; }
+.expertise-sequence-slide:has(.expertise-fire-trigger.substep-visible) .expertise-fire { opacity: 1; }
+.expertise-sequence-slide.active:has(.expertise-fire-trigger.substep-visible) .expertise-fire { animation: expertise-fire-glow 1600ms ease-in-out infinite; }
 .expertise-sequence-slide:has(.expertise-fine-scene.substep-visible) .expertise-sequence-visuals { opacity: 0; pointer-events: none; }
 .expertise-sequence-slide:has(.expertise-fine-scene.substep-visible) .expertise-fire { animation: none; }
 .expertise-fine-scene { position: absolute; inset: 90px; margin: 0; }

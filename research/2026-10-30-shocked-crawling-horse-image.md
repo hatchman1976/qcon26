@@ -2,7 +2,7 @@
 
 Generated on 30 October 2026 using the built-in imagegen tool. This is a standalone presentation asset, not inserted into a slide.
 
-Asset: [shocked-crawling-reverse-centaur.png](../src/images/qcon26/shocked-crawling-reverse-centaur.png).
+Asset: [shocked-crawling-reverse-centaur.png](assets/unused-artwork/shocked-crawling-reverse-centaur.png).
 
 ## Final generation prompt
 

@@ -13,12 +13,13 @@ Use bold Comic Neue for the body text and closing takeaway, retaining Archivo Bl
 | 🔎 | Systems understanding | Trace how AI shifts cost, workload and risk across the system. |
 | 🧠 | Critical judgment | Challenge plausible output and test it against the real work. |
 | 🔄 | Adaptation and recovery | Notice drift, revise mental models and act before margin runs out. |
+| 🎓 | [Learning Opportunities](https://github.com/DrCatHicks/learning-opportunities) | Build expertise with guided exercises while coding with AI. |
 
 **Expertise turns warnings into protective action.**
 
 ## Preparation and reveals
 
-Keep the existing step ID and reveal order. Place this step in the horizontal closing sequence at `data-x="45000"`, `data-y="308000"`, `data-scale="25"`, moving the camera right from the previous step. Use the existing blue background, Archivo Black headings and Comic Neue body text. Three native substeps introduce the skill rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
+Keep the existing step ID and reveal order. Place this step in the horizontal closing sequence at `data-x="45000"`, `data-y="308000"`, `data-scale="25"`, moving the camera right from the previous step. Use the existing blue background, Archivo Black headings and Comic Neue body text. Four native substeps introduce the skill rows in order, each emoji, label and explanation together. A separate final substep introduces the takeaway. Revealed content stays on the world canvas after exit and retains its state on return. Manual reversal remains available.
 
 Closing arc: skills → control → boundary takeaways → adaptive capacity.
 
@@ -28,9 +29,12 @@ Presentation source: [SREcon26 — Complex System SRE skills](https://srecon26.h
 
 Rasmussen directs attention to how locally reasonable decisions interact across the whole system. AI can change cost, effort and the pace of proposed action. Expertise helps people see those interactions, question plausible explanations and recognise when a plan no longer fits. Protecting margin requires useful feedback and the capacity to act on it. Crossing the dotted line begins consuming the protected buffer before the actual functional boundary. It does not establish that harm has already occurred.
 
+Learning Opportunities, by Dr. Cat Hicks, offers optional 10–15 minute exercises using prediction, explanation and reflection during AI-assisted coding. Use it to keep active learning in engineering work.
+
 ## Sources
 
 - [Rasmussen (1997), risk management, adaptation and control](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
 - [Cook, How Complex Systems Fail, points 12, 13 and 17](https://www.adaptivecapacitylabs.com/HowComplexSystemsFail.pdf)
 - [Hoffman et al. (2013), Accelerated Expertise](https://www.goodreads.com/book/show/17399473-accelerated-expertise)
 - [Woods (2018), Resilience is a Verb](https://beta.irgc.org/wp-content/uploads/2018/12/Woods-for-IRGC-Resilience-Guide-Vol-2-2018.pdf)
+- [Dr. Cat Hicks, Learning Opportunities](https://github.com/DrCatHicks/learning-opportunities)

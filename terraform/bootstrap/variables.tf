@@ -4,8 +4,8 @@ variable "personal_aws_account_id" {
   default     = "736654693886"
 
   validation {
-    condition     = can(regex("^[0-9]{12}$", var.personal_aws_account_id))
-    error_message = "personal_aws_account_id must be a 12-digit AWS account ID."
+    condition     = var.personal_aws_account_id == "736654693886"
+    error_message = "This personal project is restricted to AWS account 736654693886."
   }
 }
 

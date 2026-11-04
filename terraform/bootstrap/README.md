@@ -1,8 +1,5 @@
 # QCon role-policy bootstrap
 
-This configuration adds one inline policy, `QCon26DeployPermissions`, to the existing personal-account `TerraformDeployRole`.
+Adds the `QCon26DeployPermissions` inline policy to the existing personal-account `TerraformDeployRole`, covering QCon hosting, content deployment and the main QCon Terraform state. Shared resources and existing role policies remain outside this configuration’s ownership.
 
-It does **not** recreate or take ownership of the shared state bucket, IAM user, IAM role, or legacy DynamoDB lock table. Its only managed resource is the QCon-specific inline policy.
-
-Run it manually with `AWS_PROFILE=hatchman76-bootstrap` after verifying that STS returns account `736654693886`. See the parent [README](../README.md) for the reviewed plan/apply sequence.
-
+Run manually with `AWS_PROFILE=hatchman76-bootstrap`, in the default workspace, after verifying account **736654693886**. The bootstrap identity needs access to its state and permission to manage the inline role policy. Follow the parent [setup instructions](../README.md) to review and apply the bootstrap before planning the main infrastructure.

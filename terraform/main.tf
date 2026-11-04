@@ -12,10 +12,6 @@ data "aws_route53_zone" "root" {
   private_zone = false
 }
 
-data "aws_cloudfront_cache_policy" "optimized" {
-  name = "Managed-CachingOptimized"
-}
-
 data "aws_cloudfront_response_headers_policy" "security_headers" {
   name = "Managed-SecurityHeadersPolicy"
 }
@@ -61,6 +57,11 @@ resource "aws_s3_bucket" "content" {
   bucket = var.domain_name
 
   lifecycle {
+    precondition {
+      condition     = terraform.workspace == "default"
+      error_message = "Use the default workspace; this project has one account and one site."
+    }
+
     precondition {
       condition     = endswith(var.domain_name, ".${var.root_domain}")
       error_message = "domain_name must be a subdomain of root_domain."
@@ -122,6 +123,34 @@ resource "aws_s3_bucket_lifecycle_configuration" "content" {
 
 # ---------- CloudFront ----------
 
+resource "aws_cloudfront_cache_policy" "site" {
+  name        = "qcon26-versioned-static-content"
+  comment     = "Honor origin revalidation headers and the deck's ?v= asset versions"
+  min_ttl     = 0
+  default_ttl = 86400
+  max_ttl     = 31536000
+
+  parameters_in_cache_key_and_forwarded_to_origin {
+    enable_accept_encoding_brotli = true
+    enable_accept_encoding_gzip   = true
+
+    cookies_config {
+      cookie_behavior = "none"
+    }
+
+    headers_config {
+      header_behavior = "none"
+    }
+
+    query_strings_config {
+      query_string_behavior = "whitelist"
+      query_strings {
+        items = ["v"]
+      }
+    }
+  }
+}
+
 resource "aws_cloudfront_origin_access_control" "site" {
   name                              = var.domain_name
   description                       = "Private S3 access for ${var.domain_name}"
@@ -151,7 +180,7 @@ resource "aws_cloudfront_distribution" "site" {
     allowed_methods            = ["GET", "HEAD", "OPTIONS"]
     cached_methods             = ["GET", "HEAD"]
     compress                   = true
-    cache_policy_id            = data.aws_cloudfront_cache_policy.optimized.id
+    cache_policy_id            = aws_cloudfront_cache_policy.site.id
     response_headers_policy_id = data.aws_cloudfront_response_headers_policy.security_headers.id
   }
 
@@ -185,6 +214,34 @@ resource "aws_s3_bucket_policy" "content" {
         Condition = {
           StringEquals = {
             "AWS:SourceArn" = aws_cloudfront_distribution.site.arn
+          }
+        }
+      },
+      {
+        Sid       = "DenyObjectReadsOutsideCloudFront"
+        Effect    = "Deny"
+        Principal = "*"
+        Action    = ["s3:GetObject", "s3:GetObjectVersion"]
+        Resource  = "${aws_s3_bucket.content.arn}/*"
+        Condition = {
+          ArnNotEquals = {
+            "AWS:SourceArn" = aws_cloudfront_distribution.site.arn
+          }
+        }
+      },
+      {
+        Sid       = "DenyInsecureTransport"
+        Effect    = "Deny"
+        Principal = "*"
+        Action    = "s3:*"
+        Resource = [
+          aws_s3_bucket.content.arn,
+          "${aws_s3_bucket.content.arn}/*",
+        ]
+        Condition = {
+          Bool = {
+            "aws:SecureTransport"       = "false"
+            "aws:PrincipalIsAWSService" = "false"
           }
         }
       }

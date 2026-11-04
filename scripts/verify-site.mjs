@@ -1,5 +1,5 @@
-import { access, readFile } from "node:fs/promises";
-import { resolve } from "node:path";
+import { access, readFile, stat } from "node:fs/promises";
+import { dirname, extname, relative, resolve, sep } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
 const siteRoot = resolve(root, "src");
@@ -149,55 +149,64 @@ if (!/\bid="references"/.test(sectionTags.at(-2) ?? "") ||
   throw new Error("References must be at data-x=225000, data-y=308000 and data-scale=25, followed by the final Thank you section");
 }
 
-const requiredFiles = [
-  "favicon.svg",
-  "styles.css",
-  "main.js",
-  "images/qcon-logo.svg",
-  "images/srecon26/logo-ai-mashup.png",
-  "images/srecon26/Australia.png",
-  "images/srecon26/map-pin-red-hi.png",
-  "images/srecon26/thousand-eyes.png",
-  "images/srecon26/usa.png",
-  "images/srecon26/aws.png",
-  "images/srecon26/new-data-centre.png",
-  "images/srecon26/Linkedin-Logo.png",
-  "images/srecon26/medium-blog-icon.png",
-  "images/srecon26/logo-bluesky.png",
-  "fonts/srecon26-archivo-black-400-normal.woff2",
-  "fonts/srecon26-comic-neue-700-normal.woff2",
-  "fonts/srecon26-open-sans-400-normal.woff2",
-  "images/srecon26/symbol-equals.png",
-  "images/srecon26/complex-sign-transparent.png",
-  "images/srecon26/ai-slop-bucket.png",
-  "images/srecon26/book-accelerated-expertise.png",
-  "images/meat-proxy.png",
-  "images/srecon24/Rasmussen_plain_outline.png",
-  "images/srecon24/Rasmussen_boundary_performance.png",
-  "images/srecon24/Rasmussen_boundary_economic.png",
-  "images/srecon24/Rasmussen_boundary_workload.png",
-  "images/srecon24/Rasmussen_error_margin.png",
-  "images/operating-point.svg",
-  "images/qcon26/blocker-lemming.png",
-  "images/qcon26/blocker-lemming.gif",
-  "images/qcon26/this-is-fine.gif",
-  "images/qcon26/this-is-fine-still.png",
-  "images/srecon24/Rasmussen_portrait.png",
-  "images/srecon24/Rasmussen_Model_Original.png",
-  "images/srecon24/Rasmussen_paper_figure_8.png",
-  "images/srecon24/emoji-radioactive.png",
-  "images/srecon24/emoji-passenger-ship-boat.png",
-  "images/srecon24/emoji-hospital.png",
-  "images/srecon24/red-ring.png",
-  "images/srecon24/Rasmussen_Society_Model.png",
-  "images/srecon24/Rasmussen_Society_Research.png",
-  "images/srecon24/Rasmussen_Society_Environment.png",
-  "images/srecon24/you_logo_here.png",
-  "vendor/impress.js/LICENSE",
-  "vendor/impress.js/js/impress.min.js",
-];
+// Follow authored local dependencies instead of maintaining an incomplete asset list.
+async function verifyLocalAssets(entryPath) {
+  const checked = new Set();
+  const pending = [{ path: entryPath, source: entryPath, reference: "index.html" }];
+  while (pending.length) {
+    const asset = pending.pop();
+    if (checked.has(asset.path)) continue;
+    if (relative(siteRoot, asset.path).startsWith(`..${sep}`)) {
+      throw new Error(`Local asset escapes src/: ${asset.reference}`);
+    }
+    let info;
+    try {
+      info = await stat(asset.path);
+    } catch {
+      throw new Error(`Missing local asset "${asset.reference}" referenced by ${relative(siteRoot, asset.source)}`);
+    }
+    if (info.isDirectory()) {
+      pending.push({ ...asset, path: resolve(asset.path, "index.html") });
+      continue;
+    }
+    if (!info.isFile()) throw new Error(`Local asset is not a file: ${asset.reference}`);
+    checked.add(asset.path);
+    const extension = extname(asset.path);
+    if (![".html", ".css", ".js", ".mjs"].includes(extension)) continue;
+    const content = (await readFile(asset.path, "utf8")).replace(/<!--[\s\S]*?-->/g, "");
+    const references = [];
+    if (extension === ".html") {
+      for (const [, name, , value] of content.matchAll(/\b(src|href|srcset|data-animated-src|data-still-src)\s*=\s*(["'])(.*?)\2/gi)) {
+        if (name.toLowerCase() === "srcset" && !value.startsWith("data:")) {
+          references.push(...value.split(",").map((candidate) => candidate.trim().split(/\s+/)[0]));
+        } else references.push(value);
+      }
+    } else if (extension === ".css") {
+      for (const match of content.matchAll(/url\(\s*["']?([^"')]+?)["']?\s*\)|@import\s+["']([^"']+)["']/gi)) {
+        references.push(match[1] ?? match[2]);
+      }
+    } else {
+      // Includes dynamic image creation and relative module imports. Ignore routes
+      // and interpolated strings whose final file name is unknown at check time.
+      for (const [, reference] of content.matchAll(/["'`]((?:\/|\.{1,2}\/)[^"'`\s]+)["'`]/g)) {
+        if (/\.[a-z0-9]+(?:[?#].*)?$/i.test(reference) && !reference.includes("${")) references.push(reference);
+      }
+    }
+    for (const reference of references) {
+      if (!reference || /^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(reference)) continue;
+      const pathname = decodeURIComponent(reference.split(/[?#]/)[0]);
+      if (!pathname) continue;
+      const assetPath = pathname.startsWith("/")
+        ? resolve(siteRoot, `.${pathname}`)
+        : resolve(dirname(asset.path), pathname);
+      pending.push({ path: assetPath, source: asset.path, reference });
+    }
+  }
+  return checked.size;
+}
 
-await Promise.all(requiredFiles.map((file) => access(resolve(siteRoot, file))));
+const assetCount = await verifyLocalAssets(indexPath);
+await access(resolve(siteRoot, "vendor/impress.js/LICENSE"));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
@@ -205,4 +214,4 @@ if (stepCount !== 37) {
   throw new Error(`Expected exactly thirty-seven impress.js steps, found ${stepCount}`);
 }
 
-console.log(`Verified src/index.html with ${stepCount} presentation steps.`);
+console.log(`Verified src/index.html with ${stepCount} presentation steps and ${assetCount} local files.`);
