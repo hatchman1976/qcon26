@@ -2,7 +2,7 @@
 
 Rendered step: `#/evidence-handoff`.
 
-Use bold Comic Neue for every summary row and the closing takeaway, retaining Archivo Black for the slide heading.
+Use bold Comic Neue for every summary row and Archivo Black for the slide heading and closing takeaway.
 
 ## Slide copy
 

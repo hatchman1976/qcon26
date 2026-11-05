@@ -2,7 +2,7 @@
 
 Rendered step: `#/verification-capacity`.
 
-Use bold Comic Neue for the body text and closing takeaway, retaining Archivo Black headings.
+Use bold Comic Neue for the body text and Archivo Black for the headings and closing takeaway.
 
 ## Slide copy
 
