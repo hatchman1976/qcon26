@@ -2,7 +2,7 @@
 
 Rendered step: `#/error-margin`.
 
-Use bold Comic Neue for the introductory sentence, closing statement and table body. Use Archivo Black for the slide heading and both table column headings, and preserve the emoji font stack.
+Use bold Comic Neue for the introductory sentence and table body. Use Archivo Black for the slide heading, both table column headings and closing statement, and preserve the emoji font stack.
 
 Canvas position: `data-x="-3713"`, `data-y="281676"`, `data-scale="2.72826"`. The whole step moves 50 canvas pixels upward.
 

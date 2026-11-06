@@ -2,7 +2,7 @@
 
 Rendered step: `#/performance-boundary`.
 
-Use bold Comic Neue for the introductory sentence, list text and closing sentence, retaining Archivo Black headings. Canvas position: `x=-10407`, `y=281579`, scale `2.981193`. The step is 1,200 world units lower to clear the fish diagram's performance-boundary label and explosion emoji.
+Use bold Comic Neue for the introductory sentence and list text, and Archivo Black for headings and the closing sentence. Canvas position: `x=-10407`, `y=281579`, scale `2.981193`. The step is 1,200 world units lower to clear the fish diagram's performance-boundary label and explosion emoji.
 
 ## Slide copy and sequence
 

@@ -2,7 +2,7 @@
 
 Rendered step: `#/economic-boundary-actions`.
 
-Use bold Comic Neue for the introductory sentence, conclusion and table body text. Use Archivo Black for the slide heading and table column headings, and preserve the emoji font stack.
+Use bold Comic Neue for the introductory sentence and table body text. Use Archivo Black for the slide heading, table column headings and conclusion, and preserve the emoji font stack.
 
 Canvas position: `x=10635`, `y=279265`, scale `2.355664`. The step is 500 world units lower, with its horizontal position and scale unchanged.
 

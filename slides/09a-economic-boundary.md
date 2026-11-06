@@ -2,7 +2,7 @@
 
 Rendered step: `#/economic-boundary`.
 
-Use bold Comic Neue for the introductory sentence, lists and conclusion, retaining Archivo Black headings.
+Use bold Comic Neue for the introductory sentence and lists, and Archivo Black for headings and the conclusion.
 
 ## Slide copy and sequence
 

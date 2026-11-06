@@ -2510,6 +2510,11 @@ img.boundary-detail-icon { height: auto; }
   font-weight: 700;
 }
 
+#impress :is(#economic-boundary, #economic-boundary-actions, #workload-boundary, #workload-boundary-actions, #performance-boundary, #error-margin) .boundary-detail-conclusion {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+}
+
 #workload-boundary .boundary-detail-grid {
   grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
 }
