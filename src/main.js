@@ -528,7 +528,7 @@ aiMarginSlide.querySelectorAll("#ai-margin-trail-mask circle").forEach((cutout) 
   cutout.setAttribute("r", String(aiMarginDiameter / 2 + 3));
 });
 
-// Lower layers arrive first behind the visible protective intervention right of the margin.
+// Lower layers arrive first and partly cover the protective intervention right of the margin.
 const aiMarginBucketLandings = [
   [525, 630], [598, 630], [671, 630], [744, 630], [817, 630], [890, 630],
   [565, 555], [638, 555], [711, 555], [784, 555], [857, 555],
