@@ -31,7 +31,7 @@ The talk adapts Rasmussen's Dynamic Safety Model and the 2024 SREcon presentatio
 21. AI in the Fish Diagram
 22. AI has to be paid for
 23. Tokenomic Progression
-24. Model Enshittification
+24. The price of dependence
 25. AI and least effort
 26. The erosion of expertise
 27. Expertise erosion sequence — complex system, uncertainty, flame and “This is Fine”
@@ -62,7 +62,7 @@ The local ball and reference are 560 world units across, half the 1,120-unit glo
 
 [Evidence and scope](research/2026-10-13-ai-boundary-evidence.md) preserve dates, populations and causal limits. The story does not establish universal layoffs to fund AI, universally lower-quality output, or a causal burnout hierarchy by tool skill. Buckets and motion are explanatory metaphors. Reduced-motion mode keeps the same reveal and final-state information without animation.
 
-Between economics and workload, [Tokenomic Progression](slides/09i2-token-economy.md) distinguishes maxxing, metering and optimization in a two-column table. Its closing question leads to the separate [Model Enshittification](slides/09i3-model-enshittification.md) slide below, which presents Doctorow's three-stage platform pattern as a conditional risk about dependence and pricing power. The public token leaderboard supports the consumption-score example. Microsoft Learn documents cost-oriented model routing with possible quality tradeoffs, not guaranteed equal quality or proof of enshittification. Cursor's 2025 Auto pricing announcement remains a historical metering example in speaker notes. Neither token counts nor cost optimization alone establish productivity, deliberate lock-in, degraded model quality or a completed extraction cycle. LLM tokens here are not cryptocurrency. [The original source review](research/2026-10-27-token-economy.md) preserves those limits. [The 28 October evidence review](research/2026-10-28-token-costs-and-market-power.md) adds falling prices at fixed capability, specific cloud-competition findings, subsequent improvements and active open-weight alternatives, without promising future price declines or claiming DeepSeek has been excluded.
+Between economics and workload, [Tokenomic Progression](slides/09i2-token-economy.md) distinguishes maxxing, metering and optimization in a two-column table. Its closing question leads to the separate [The price of dependence](slides/09i3-model-enshittification.md) slide below, which presents Doctorow's three-stage platform pattern as a conditional risk about dependence and pricing power. The public token leaderboard supports the consumption-score example. Microsoft Learn documents cost-oriented model routing with possible quality tradeoffs, not guaranteed equal quality or proof of enshittification. Cursor's 2025 Auto pricing announcement remains a historical metering example in speaker notes. Neither token counts nor cost optimization alone establish productivity, deliberate lock-in, degraded model quality or a completed extraction cycle. LLM tokens here are not cryptocurrency. [The original source review](research/2026-10-27-token-economy.md) preserves those limits. [The 28 October evidence review](research/2026-10-28-token-costs-and-market-power.md) adds falling prices at fixed capability, specific cloud-competition findings, subsequent improvements and active open-weight alternatives, without promising future price declines or claiming DeepSeek has been excluded.
 
 ## Closing arc
 

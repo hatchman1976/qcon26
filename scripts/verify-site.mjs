@@ -29,7 +29,7 @@ const requiredMarkers = [
   'id="ai-fish-diagram-overview"',
   'id="ai-economic-pressure"',
   'id="token-economy"',
-  'id="model-enshittification"',
+  'id="price-of-dependence"',
   'id="ai-workload-pressure"',
   'id="erosion-of-expertise"',
   'id="expertise-erosion-sequence"',
@@ -121,14 +121,14 @@ if (stepCoordinate("resilience-engineering", "x") !== 0 ||
 }
 const economicIndex = sectionTags.findIndex((tag) => /\bid="ai-economic-pressure"/.test(tag));
 if (!/\bid="token-economy"/.test(sectionTags[economicIndex + 1] ?? "") ||
-    !/\bid="model-enshittification"/.test(sectionTags[economicIndex + 2] ?? "") ||
+    !/\bid="price-of-dependence"/.test(sectionTags[economicIndex + 2] ?? "") ||
     !/\bid="ai-workload-pressure"/.test(sectionTags[economicIndex + 3] ?? "")) {
-  throw new Error("Token progression and model enshittification must follow AI economics and precede AI workload");
+  throw new Error("Token progression and the price of dependence must follow AI economics and precede AI workload");
 }
-if (stepCoordinate("model-enshittification", "scale") !== stepCoordinate("token-economy", "scale") ||
-    stepCoordinate("model-enshittification", "y") - stepCoordinate("token-economy", "y") <
+if (stepCoordinate("price-of-dependence", "scale") !== stepCoordinate("token-economy", "scale") ||
+    stepCoordinate("price-of-dependence", "y") - stepCoordinate("token-economy", "y") <
       780 * stepCoordinate("token-economy", "scale")) {
-  throw new Error("Model enshittification must be the same size and below token progression without overlap");
+  throw new Error("The price of dependence must be the same size and below token progression without overlap");
 }
 const workflowIndex = sectionTags.findIndex((tag) => /\bid="workflow-cost"/.test(tag));
 if (!/\bid="ai-fish-diagram-overview"/.test(sectionTags[workflowIndex - 1] ?? "") ||

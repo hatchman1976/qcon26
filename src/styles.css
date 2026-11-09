@@ -335,19 +335,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
   margin: 0;
   font-size: 64px;
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -1.5px;
   white-space: nowrap;
-}
-
-.model-enshittification-title > span[aria-hidden] {
-  flex: 0 0 64px;
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
-  letter-spacing: 0;
 }
 
 .model-enshittification-slide {
@@ -2672,9 +2665,8 @@ img.boundary-detail-icon { height: auto; }
   }
 
   #references-qcon::before { content: "QCon sources"; }
-  #references-srecon26::before { content: "SREcon26 sources"; }
   #references-tokens::before { content: "Token economy sources"; }
-  #references-resilience::before { content: "Resilience sources"; }
+  #references-resilience::before { content: "Resilience and expertise sources"; }
 
   .substep,
   .ordered-substep {

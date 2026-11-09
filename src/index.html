@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#b3d9ff" />
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any" />
-    <link rel="stylesheet" href="/styles.css?v=289" />
+    <link rel="stylesheet" href="/styles.css?v=292" />
     <link rel="stylesheet" href="/ai-fish-symbols.css?v=6" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
@@ -1327,7 +1327,6 @@
           <p>The parallel is a risk to examine: when workflows depend on a provider, that provider controls the meter and can change the terms. Token leaderboards can reward consumption while the organization needs useful, verified outcomes. These documented examples do not establish that every AI provider has completed Doctorow’s cycle. Ask about switching costs, portability, alternative suppliers and outcome cost before increased use becomes a commitment that is difficult to unwind.</p>
           <ul>
             <li>Cory Doctorow, Enshittification (MCD, 2025), publisher page and excerpt: https://us.macmillan.com/books/9780374619329/enshittification/</li>
-            <li>Doctorow, original platform lifecycle essay (January 21, 2023): https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys</li>
             <li>Tokenmaxxing public leaderboard: https://tokenmaxxing.sh/</li>
             <li>Michael Truell, Cursor pricing announcement (August 12, 2025): https://cursor.com/blog/aug-2025-pricing</li>
             <li>Microsoft Learn, How model router works (checked October 27, 2026): https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router-how-it-works</li>
@@ -1335,9 +1334,9 @@
         </div>
       </section>
 
-      <section id="model-enshittification" class="step model-enshittification-slide"
-        data-x="16750" data-y="307977.4496" data-scale="3.55392" aria-labelledby="model-enshittification-heading">
-        <h2 id="model-enshittification-heading" class="model-enshittification-title substep"><span aria-hidden="true">💩</span><span>Model Enshittification</span><span aria-hidden="true">💩</span></h2>
+      <section id="price-of-dependence" class="step model-enshittification-slide"
+        data-x="16750" data-y="307977.4496" data-scale="3.55392" aria-labelledby="price-of-dependence-heading">
+        <h2 id="price-of-dependence-heading" class="model-enshittification-title substep">The price of dependence</h2>
         <div class="substep model-stage model-stage-users">
           <h3>Serve Users</h3>
           <p>Make it useful and easy to adopt.</p>
@@ -1360,14 +1359,15 @@
         <div class="substep model-evidence-point model-evidence-competition">
           <span class="model-evidence-emoji" aria-hidden="true">💰</span>
           <div>
-            <p><strong>Lower costs don’t guarantee lower prices.</strong></p>
-            <small class="model-evidence-source"><a href="https://assets.publishing.service.gov.uk/media/688b20e6ff8c05468cb7b120/summary_of_final_decision.pdf" target="_blank" rel="noreferrer">Cloud-market example: CMA, 2025</a></small>
+            <p><strong>When switching is costly, providers can gain pricing power.</strong></p>
+            <small class="model-evidence-source"><a href="https://doi.org/10.2307/2298075" target="_blank" rel="noreferrer">Theory: Klemperer, 1995</a></small>
           </div>
         </div>
         <p class="token-economy-credit">Cory Doctorow, <cite><a href="https://us.macmillan.com/books/9780374619329/enshittification/" target="_blank" rel="noreferrer">Enshittification</a></cite> (2025)</p>
         <div class="notes">
           <p>Doctorow describes a two-sided platform moving value from users to business customers, then taking more from both groups. Business customers mean advertisers, sellers or other participants, distinct from the platform owner. The headings are a paraphrase. Applying this pattern to AI is a risk to examine, not a prediction that every provider follows it.</p>
-          <h3>Lower costs do not determine who keeps the savings</h3>
+          <h3>Switching costs and pricing power</h3>
+          <p>Klemperer (1995, pp. 519, 523–528, 535–536) shows how switching costs can give suppliers power over existing customers, while competition for new customers can constrain prices. Low introductory prices followed by higher prices are one possible outcome. Prices can also fall, and entry, compatibility and using multiple suppliers can change the result. The paper does not establish how AI compute savings reach customer prices. Rebuilding integrations, validating replacement models and retraining people are illustrative AI switching costs, an application of the theory rather than findings about AI. Source: https://doi.org/10.2307/2298075</p>
           <p>Stanford’s AI Index article reports that the price of querying models at GPT-3.5-level MMLU performance fell from $20 per million tokens in November 2022 to $0.07 in October 2024. Its 2025 report also describes hardware costs per unit of performance declining by 30% annually. These are historical trends, not guarantees about future token prices or total workflow costs.</p>
           <p>The cloud analogy concerns competition and switching. For its UK and EEA market definition, the CMA’s July 2025 cloud decision found concentrated supply, sustained AWS and Microsoft returns above their cost of capital, and barriers to switching. Its April 2024 foundation-model review identified risks from control over critical inputs and routes to customers. These findings support questioning how fully efficiency gains reach customers, rather than asserting an inevitable AI oligopoly.</p>
           <p>The October 2026 CMA update records improvements, including removal of transfer fees for switching providers, while identifying remaining barriers. Cloud prices have risen for some services and fallen for others. The precedent is imperfect competition, not a claim that cloud prices never fall.</p>
@@ -1640,10 +1640,9 @@
         data-x="225000" data-y="308000" data-scale="25">
         <h2 class="references-title">References</h2>
         <div class="references-tabs" role="tablist" aria-label="Reference collections">
-          <button id="references-tab-qcon" type="button" role="tab" data-reference-tab="qcon" aria-controls="references-qcon" aria-selected="true" tabindex="0">QCon sources (18)</button>
-          <button id="references-tab-srecon26" type="button" role="tab" data-reference-tab="srecon26" aria-controls="references-srecon26" aria-selected="false" tabindex="-1">SREcon26 sources (13)</button>
+          <button id="references-tab-qcon" type="button" role="tab" data-reference-tab="qcon" aria-controls="references-qcon" aria-selected="true" tabindex="0">QCon sources (17)</button>
           <button id="references-tab-tokens" type="button" role="tab" data-reference-tab="tokens" aria-controls="references-tokens" aria-selected="false" tabindex="-1">Token economy (12)</button>
-          <button id="references-tab-resilience" type="button" role="tab" data-reference-tab="resilience" aria-controls="references-resilience" aria-selected="false" tabindex="-1">Resilience (2)</button>
+          <button id="references-tab-resilience" type="button" role="tab" data-reference-tab="resilience" aria-controls="references-resilience" aria-selected="false" tabindex="-1">Resilience &amp; expertise (4)</button>
         </div>
         <div id="references-qcon" class="references-page" role="tabpanel" aria-labelledby="references-tab-qcon">
           <div class="references-columns">
@@ -1666,7 +1665,6 @@
                 <li><a href="https://doi.org/10.1287/orsc.2025.21838" target="_blank" rel="noreferrer"><strong>Dell’Acqua et al.</strong><span>Navigating the jagged technological frontier</span></a></li>
                 <li><a href="https://www.nber.org/papers/w33795" target="_blank" rel="noreferrer"><strong>Dillon et al. (2025)</strong><span>Shifting work patterns with generative AI</span></a></li>
                 <li><a href="https://www.nber.org/papers/w31161" target="_blank" rel="noreferrer"><strong>Brynjolfsson et al. (2025)</strong><span>Generative AI at work</span></a></li>
-                <li><a href="https://www.anthropic.com/research/AI-assistance-coding-skills" target="_blank" rel="noreferrer"><strong>Anthropic (2026)</strong><span>AI assistance and coding skills</span></a></li>
               </ul>
             </div>
             <div class="references-group">
@@ -1682,45 +1680,13 @@
             </div>
           </div>
         </div>
-        <div id="references-srecon26" class="references-page" role="tabpanel" aria-labelledby="references-tab-srecon26" hidden>
-          <div class="references-columns">
-            <div class="references-group">
-              <h3>Expertise &amp; learning</h3>
-              <ul class="references-list">
-                <li><a href="https://doi.org/10.4324/9780203797327" target="_blank" rel="noreferrer" title="Hoffman, R. R., Ward, P., Feltovich, P. J., DiBello, L., Fiore, S. M., &amp; Andrews, D. H. (2013). Accelerated expertise: Training for high proficiency in a complex world. Psychology Press. https://doi.org/10.4324/9780203797327"><strong>Hoffman et al. (2013)</strong><span>Accelerated Expertise</span></a></li>
-                <li><a href="https://www.goodreads.com/book/show/294034.Five_Minds_for_the_Future" target="_blank" rel="noreferrer"><strong>Howard Gardner</strong><span>Five Minds for the Future</span></a></li>
-                <li><a href="https://www.goodreads.com/book/show/61812417-knowing-what-we-know" target="_blank" rel="noreferrer"><strong>Simon Winchester</strong><span>Knowing What We Know</span></a></li>
-                <li><a href="https://www.goodreads.com/book/show/20081966-talking-about-machines" target="_blank" rel="noreferrer"><strong>Julian E. Orr</strong><span>Talking about Machines</span></a></li>
-                <li><a href="https://knowledge.wharton.upenn.edu/article/without-guardrails-generative-ai-can-harm-education" target="_blank" rel="noreferrer"><strong>Wharton (2024)</strong><span>Generative AI and student learning</span></a></li>
-              </ul>
-            </div>
-            <div class="references-group">
-              <h3>Systems &amp; automation</h3>
-              <ul class="references-list">
-                <li><a href="https://www.youtube.com/watch?v=yGN5DBpW93g" target="_blank" rel="noreferrer"><strong>Russell L. Ackoff</strong><span>From Mechanistic to Systemic Thinking</span></a></li>
-                <li><a href="https://ckrybus.com/static/papers/Bainbridge_1983_Automatica.pdf" target="_blank" rel="noreferrer"><strong>Lisanne Bainbridge</strong><span>Ironies of Automation</span></a></li>
-                <li><a href="https://www.adaptivecapacitylabs.com/HowComplexSystemsFail.pdf" target="_blank" rel="noreferrer"><strong>Richard I. Cook</strong><span>How Complex Systems Fail</span></a></li>
-                <li><a href="https://arxiv.org/html/2506.14652v2" target="_blank" rel="noreferrer"><strong>Olteanu, Blodgett et al.</strong><span>Rigor in AI</span></a></li>
-              </ul>
-            </div>
-            <div class="references-group">
-              <h3>Work &amp; management</h3>
-              <ul class="references-list">
-                <li><a href="https://www.goodreads.com/book/show/1645506.Manufacturing_Advantage" target="_blank" rel="noreferrer"><strong>Appelbaum et al.</strong><span>Manufacturing Advantage</span></a></li>
-                <li><a href="https://www.goodreads.com/book/show/958259.The_Principles_of_Scientific_Management" target="_blank" rel="noreferrer"><strong>Frederick W. Taylor</strong><span>The Principles of Scientific Management</span></a></li>
-                <li><a href="https://www.goodreads.com/book/show/36644895-the-tyranny-of-metrics" target="_blank" rel="noreferrer"><strong>Jerry Z. Muller</strong><span>The Tyranny of Metrics</span></a></li>
-                <li><a href="https://www.goodreads.com/book/show/197716282-the-unaccountability-machine" target="_blank" rel="noreferrer"><strong>Dan Davies</strong><span>The Unaccountability Machine</span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
         <div id="references-tokens" class="references-page" role="tabpanel" aria-labelledby="references-tab-tokens" hidden>
           <div class="references-columns">
             <div class="references-group">
               <h3>Platform power</h3>
               <ul class="references-list">
                 <li><a href="https://us.macmillan.com/books/9780374619329/enshittification/" target="_blank" rel="noreferrer"><strong>Cory Doctorow (2025)</strong><span>Enshittification · book and excerpt</span></a></li>
-                <li><a href="https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys" target="_blank" rel="noreferrer"><strong>Cory Doctorow (2023)</strong><span>Original platform lifecycle essay</span></a></li>
+                <li><a href="https://doi.org/10.2307/2298075" target="_blank" rel="noreferrer" title="Competition when Consumers have Switching Costs: An Overview with Applications to Industrial Organization, Macroeconomics, and International Trade"><strong>Paul Klemperer (1995)</strong><span>Switching costs and competition</span></a></li>
                 <li><a href="https://assets.publishing.service.gov.uk/media/688b20e6ff8c05468cb7b120/summary_of_final_decision.pdf" target="_blank" rel="noreferrer"><strong>CMA (2025)</strong><span>Cloud market · final decision</span></a></li>
                 <li><a href="https://www.gov.uk/government/news/cma-takes-first-steps-to-ensure-choice-in-business-software" target="_blank" rel="noreferrer"><strong>CMA (October 2026)</strong><span>Cloud switching improvements and remaining barriers</span></a></li>
               </ul>
@@ -1751,12 +1717,19 @@
               <h3>Adaptive capacity</h3>
               <ul class="references-list">
                 <li><a href="https://speakerdeck.com/jallspaw/amplifying-sources-of-resilience" target="_blank" rel="noreferrer"><strong>John Allspaw (2019)</strong><span>Amplifying Sources of Resilience · presentation abstract</span></a></li>
+                <li><a href="https://beta.irgc.org/wp-content/uploads/2018/12/Woods-for-IRGC-Resilience-Guide-Vol-2-2018.pdf" target="_blank" rel="noreferrer"><strong>David D. Woods (2018)</strong><span>Resilience is a Verb · IRGC resource guide, Vol. 2</span></a></li>
               </ul>
             </div>
             <div class="references-group">
-              <h3>Adapting to surprise</h3>
+              <h3>Complex systems</h3>
               <ul class="references-list">
-                <li><a href="https://beta.irgc.org/wp-content/uploads/2018/12/Woods-for-IRGC-Resilience-Guide-Vol-2-2018.pdf" target="_blank" rel="noreferrer"><strong>David D. Woods (2018)</strong><span>Resilience is a Verb · IRGC resource guide, Vol. 2</span></a></li>
+                <li><a href="https://www.adaptivecapacitylabs.com/HowComplexSystemsFail.pdf" target="_blank" rel="noreferrer"><strong>Richard I. Cook</strong><span>How Complex Systems Fail</span></a></li>
+              </ul>
+            </div>
+            <div class="references-group">
+              <h3>Expertise</h3>
+              <ul class="references-list">
+                <li><a href="https://doi.org/10.4324/9780203797327" target="_blank" rel="noreferrer" title="Hoffman, R. R., Ward, P., Feltovich, P. J., DiBello, L., Fiore, S. M., &amp; Andrews, D. H. (2013). Accelerated expertise: Training for high proficiency in a complex world. Psychology Press. https://doi.org/10.4324/9780203797327"><strong>Hoffman et al. (2013)</strong><span>Accelerated Expertise</span></a></li>
               </ul>
             </div>
           </div>
@@ -1782,7 +1755,7 @@
 
     <script src="/vendor/impress.js/js/impress.min.js"></script>
     <script src="/substep-image-pop.js?v=2"></script>
-    <script src="/main.js?v=69"></script>
+    <script src="/main.js?v=70"></script>
     <script src="/touch-navigation.js?v=1"></script>
   </body>
 </html>

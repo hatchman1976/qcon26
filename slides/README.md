@@ -31,7 +31,7 @@ Substep images fade in and pop to 110% before settling at their configured size 
 21. [AI in the Fish Diagram](09h-ai-fish-diagram.md) — `#/ai-fish-diagram`
 22. [AI has to be paid for](09i-ai-economic-pressure.md) — `#/ai-economic-pressure`
 23. [Tokenomic Progression](09i2-token-economy.md) — `#/token-economy`
-24. [Model Enshittification](09i3-model-enshittification.md) — `#/model-enshittification`
+24. [The price of dependence](09i3-model-enshittification.md) — `#/price-of-dependence`
 25. [AI and least effort](09j-ai-workload-pressure.md) — `#/ai-workload-pressure`
 26. [The erosion of expertise](09j2-erosion-of-expertise.md) — `#/erosion-of-expertise`
 27. [Expertise erosion sequence](09j3-expertise-erosion-sequence.md) — `#/expertise-erosion-sequence`

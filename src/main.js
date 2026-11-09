@@ -500,7 +500,7 @@ const aiFishSlide = document.querySelector("#ai-fish-diagram");
 const aiFishModel = aiFishSlide.querySelector(".ai-fish-model");
 const aiRoamingPoint = aiFishSlide.querySelector(".ai-roaming-point-position");
 const aiRoamingSteps = new Set([
-  "ai-operating-point", "ai-fish-diagram", "ai-economic-pressure", "token-economy", "model-enshittification",
+  "ai-operating-point", "ai-fish-diagram", "ai-economic-pressure", "token-economy", "price-of-dependence",
   "ai-workload-pressure", "erosion-of-expertise", "expertise-erosion-sequence", "ai-margin-pressure",
   "ai-fish-diagram-overview",
 ]);
