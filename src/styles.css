@@ -1997,10 +1997,15 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 .before-continue-row p {
   margin: 0;
   font-family: var(--body-font-family);
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.15;
   text-align: left;
+}
+
+.before-continue-alias {
+  display: block;
+  margin-top: 12px;
 }
 
 .before-continue-complexity {

@@ -6,14 +6,17 @@
 
 Reveal 1:
 
-- Anything AI!
-- LLM, Agent etc...
+- Sophisticated word guessing machines, using weighted probability, trained on data obtained with or without consent
 
 Reveal 2:
 
+- a.k.a Large Language Models!
+
+Reveal 3:
+
 - any complex distributed software system
 
-Both explanation rows use bold 40px Comic Neue.
+Both explanation rows use bold 32px Comic Neue. The LLM label has its own substep below the first explanation.
 
 ## Speaker notes
 
