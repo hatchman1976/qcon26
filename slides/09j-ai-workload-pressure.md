@@ -32,7 +32,7 @@ Use three evenly spaced rows with padded text, increased line spacing and a clea
 
 All visible content uses eight presenter-controlled substeps: title and icon together; introductory sentence; “Proxy the judgment”; meat-proxy illustration; “Multiply the streams”; slop-bucket illustration; “Squeeze recovery”; then the exploding-head emoji. Each of the three content sections reveals its heading and explanation together. Each illustration appears on the next substep after its corresponding explanation. Preserve the layout while content is hidden.
 
-Use the original 211.5px meat-proxy image. Revealed images remain visible after exit. The Reverse Centaur book citation is on the following [Erosion of expertise slide](09j2-erosion-of-expertise.md).
+Use the original 211.5px meat-proxy image. Revealed images remain visible after exit. The following [Erosion of expertise slide](09j2-erosion-of-expertise.md) connects expertise to Bainbridge’s *Ironies of Automation*.
 
 Presentation source links are collected on the final [References slide](14-references.md).
 

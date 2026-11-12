@@ -9,9 +9,9 @@ Placed immediately after `#/ai-workload-pressure`, to its right at `data-x="8850
 1. The heading, **The erosion of expertise**.
 2. The cover of *Accelerated Expertise: Training for High Proficiency in a Complex World* on the left, with a short citation below it: “Hoffman et al. (2013). [Accelerated Expertise](https://www.goodreads.com/book/show/17399473-accelerated-expertise). Psychology Press.” The book title opens its Goodreads page in a new tab.
 3. The quotation below to the right of the book. It has no separate credit or vertical rule.
-4. The cover of Cory Doctorow’s *The Reverse Centaur’s Guide to Life After AI*, the text **... or worse** to its left, and the Reverse Centaur citation appear together in their own substep. The portrait cover is 250px wide (about 384px tall), 90px from the right edge and 60px above the bottom, preserving its proportions. The text uses bold 44px Comic Neue and sits beside the cover. The citation is centered 24px above the bottom edge in bold 20px Comic Neue: Cory Doctorow (2026), [The Reverse Centaur’s Guide to Life After AI](https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/).
+4. The top third of Lisanne Bainbridge’s *Ironies of Automation* first page, **This is not new** below it, and the paper citation appear together in their own substep. A 448px-wide frame at `right: 46px; top: 385px` uses aspect ratio `1182 / 562` and hidden overflow to crop the unchanged full-page image. The text is left-aligned with the frame at `top: 614px`, leaving a 16px gap beneath the image, in a matching 448px-wide block of bold 44px Comic Neue. The citation is right-aligned at the slide’s 46px right margin, 24px above the bottom edge, in bold 20px Comic Neue: Lisanne Bainbridge (1983), [Ironies of Automation](https://doi.org/10.1016/0005-1098(83)90046-8).
 
-Each item uses one presenter-controlled substep, for four substeps. The slide uses the deck's shared blue background and regular-weight, 64px Archivo Black title styling. The quote uses bold 24px Comic Neue to leave room for the larger Doctorow book cover, and the Accelerated Expertise citation uses bold 24px Comic Neue, including the linked book title. The complex-system diagram and shrugging emojis now belong to the following [Expertise erosion sequence](09j3-expertise-erosion-sequence.md).
+Each item uses one presenter-controlled substep, for four substeps. The slide uses the deck's shared blue background and regular-weight, 64px Archivo Black title styling. The quote and Accelerated Expertise citation use bold 24px Comic Neue, including the linked book title. The complex-system diagram and shrugging emojis belong to the following [Expertise erosion sequence](09j3-expertise-erosion-sequence.md).
 
 Revealed content stays visible when the camera leaves this step. Its inactive background is transparent, preserving the diagram behind the slide.
 
@@ -29,15 +29,15 @@ The year and publisher follow the publisher's DOI metadata, dated August 15, 201
 
 ## Speaker notes
 
-The book is by Robert R. Hoffman, Paul Ward, Paul J. Feltovich, Lia DiBello, Stephen M. Fiore and Dee H. Andrews. Its reference is already included in the SREcon26 sources on the final [References slide](14-references.md).
+The book is by Robert R. Hoffman, Paul Ward, Paul J. Feltovich, Lia DiBello, Stephen M. Fiore and Dee H. Andrews. Its reference is included in Resilience & expertise on the final [References slide](14-references.md).
 
 The book and quotation introduce the demands of understanding a complex system. This is a discussion of the risk to expertise, not a measured claim that all AI use erodes it.
 
-Doctorow's reverse-centaur distinction asks who controls the work: whether a person chooses how a machine assists them or is required to serve the machine's pace and demands.
+Bainbridge (1983) describes how automation can leave people responsible for abnormal conditions while reducing opportunities to practise the skills needed to diagnose and recover. The paper concerns industrial process control and flight-deck automation. Applying its lessons to AI is an analogy, not a study of LLMs.
 
 ## Sources
 
-- [Reverse Centaur book cover from Macmillan](https://mpd-biblio-covers.imgix.net/9780374621568.jpg), saved as `src/images/qcon26/book-reverse-centaurs-guide.jpg`.
-- [Cory Doctorow — The Reverse Centaur's Guide to Life After AI, MCD, 2026](https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/)
+- Bainbridge, L. (1983). [Ironies of automation.](https://doi.org/10.1016/0005-1098(83)90046-8) *Automatica, 19*(6), 775–779.
+- [First page of Bainbridge’s paper](https://gwern.net/doc/sociology/technology/1983-bainbridge.pdf), rendered as `src/images/qcon26/bainbridge-ironies-of-automation-first-page.png`.
 - [Source slide in the SREcon26 presentation](https://srecon26.hatchman76.com/#/generative-AI-student-learning)
 - [Original book-cover image](https://srecon26.hatchman76.com/images/book-accelerated-expertise.png), saved as `src/images/srecon26/book-accelerated-expertise.png`.

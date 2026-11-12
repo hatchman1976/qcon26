@@ -6,13 +6,13 @@ The slide remains visible on the world canvas after exit, and its selected refer
 
 Continue the horizontal closing sequence to the right of **Humans are adaptable**, at `data-x="225000"`, `data-y="308000"`, `data-scale="25"`.
 
-This slide collects 33 unique sources in three selectable collections: 17 QCon sources, twelve Token economy sources and four Resilience & expertise sources. Citation context remains in the relevant speaker notes; illustration credits remain beside their illustrations.
+This slide collects 33 unique sources in three selectable collections: 16 QCon sources, twelve Token economy sources and five Resilience & expertise sources. Citation context remains in the relevant speaker notes; illustration credits remain beside their illustrations.
 
 ## Slide copy
 
 **References**
 
-Collection tabs: **QCon sources (17)**, **Token economy (12)** and **Resilience & expertise (4)**.
+Collection tabs: **QCon sources (16)**, **Token economy (12)** and **Resilience & expertise (5)**.
 
 ### Model & operations
 
@@ -38,7 +38,6 @@ Collection tabs: **QCon sources (17)**, **Token economy (12)** and **Resilience 
 - [ETR (2026) — AI demand and budget control](https://research.etr.ai/etr-data-drop/ai-demand-is-strong.-ai-budget-control-is-still-catching-up)
 - [Uber CTO (2026) — AI budget interview · The Information](https://www.theinformation.com/newsletters/applied-ai/uber-cto-shows-claude-code-can-blow-ai-budgets)
 - [Meta / Blue Owl (2025) — Hyperion data-center financing](https://about.fb.com/news/2025/10/meta-blue-owl-capital-develop-hyperion-data-center/)
-- [Cory Doctorow (2026) — The Reverse Centaur’s Guide to Life After AI](https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/)
 
 ### Token economy
 
@@ -62,6 +61,7 @@ Collection tabs: **QCon sources (17)**, **Token economy (12)** and **Resilience 
 - [David D. Woods (2018) — Resilience is a Verb](https://beta.irgc.org/wp-content/uploads/2018/12/Woods-for-IRGC-Resilience-Guide-Vol-2-2018.pdf)
 - [Richard I. Cook — How Complex Systems Fail](https://www.adaptivecapacitylabs.com/HowComplexSystemsFail.pdf)
 - Hoffman, R. R., Ward, P., Feltovich, P. J., DiBello, L., Fiore, S. M., & Andrews, D. H. (2013). [*Accelerated expertise: Training for high proficiency in a complex world.*](https://doi.org/10.4324/9780203797327) Psychology Press.
+- Bainbridge, L. (1983). [Ironies of automation.](https://doi.org/10.1016/0005-1098(83)90046-8) *Automatica, 19*(6), 775–779.
 
 ## Presentation behavior
 

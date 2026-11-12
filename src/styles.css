@@ -2565,9 +2565,9 @@ img.boundary-detail-icon { height: auto; }
 .expertise-erosion-book figcaption a { font-family: inherit; }
 .expertise-erosion-quote { position: absolute; left: 370px; right: 46px; top: 135px; margin: 0; font-size: 24px; font-weight: 700; line-height: 1.28; letter-spacing: -0.35px; }
 .expertise-erosion-quote p { margin: 0; text-align: left; }
-.expertise-erosion-reverse-book { position: absolute; right: 90px; bottom: 60px; width: 250px; margin: 0; }
-.expertise-erosion-reverse-book img { display: block; width: 100%; height: auto; }
-.expertise-erosion-worse { position: absolute; left: 370px; top: 500px; width: 240px; margin: 0; font-size: 44px; font-weight: 700; line-height: 1.2; letter-spacing: 0; text-align: right; white-space: nowrap; }
+.expertise-erosion-paper { position: absolute; right: 46px; top: 385px; width: 448px; aspect-ratio: 1182 / 562; margin: 0; overflow: hidden; }
+.expertise-erosion-paper img { display: block; width: 100%; height: auto; }
+.expertise-erosion-history { position: absolute; right: 46px; top: 614px; width: 448px; margin: 0; font-size: 44px; font-weight: 700; line-height: 1.2; letter-spacing: 0; text-align: left; white-space: nowrap; }
 .expertise-erosion-citation {
   position: absolute;
   right: 46px;
@@ -2578,7 +2578,7 @@ img.boundary-detail-icon { height: auto; }
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: 0;
-  text-align: center;
+  text-align: right;
 }
 /* One scene on entry, followed by three presenter-controlled replacements. */
 .expertise-sequence-slide { --expertise-network-scale: 1.65; --expertise-network-width: calc(300px * var(--expertise-network-scale)); }
