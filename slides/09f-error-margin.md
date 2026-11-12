@@ -23,7 +23,7 @@ Notice, act and recover before the functional limit is crossed.
 
 Sustain adaptive capacity turning signals into effective action
 
-The closing statement is centered horizontally, 48px above the bottom of the slide, and retains its own final substep.
+The closing statement is left-aligned at the slide’s 46px left margin, 48px above the bottom, and retains its own final substep.
 
 [Google SRE: Monitoring](https://sre.google/sre-book/monitoring-distributed-systems/) · [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF) · Engineering applications.
 

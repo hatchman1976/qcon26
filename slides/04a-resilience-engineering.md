@@ -10,7 +10,7 @@ The title, **Resilience Engineering**, is visible on entry. One native presenter
 
 Build and sustain **adaptive capacity** in socio-technical systems, both **technical and non-technical**, ensuring they can absorb and **recover safely** from incidents, anomalies and changing pressures.
 
-The heading is centered, and the bold Comic Neue definition is vertically centered in the slide. Body text is 42px, with “adaptive capacity”, “technical and non-technical” and “recover safely” enlarged to 54px and underlined. Keep each enlarged phrase together on one line.
+The heading is centered, and the bold Comic Neue definition is vertically centered in the slide. Body text is 42px, with “adaptive capacity”, “technical and non-technical” and “recover safely” underlined at 44px with a line-height of 1 to avoid expanding the surrounding line spacing. Keep each emphasized phrase together on one line.
 
 Revealed content remains visible on the world canvas after leaving the slide. No automatic reveal is added.
 

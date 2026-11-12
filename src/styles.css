@@ -234,8 +234,8 @@ a {
 }
 
 .resilience-definition-copy .resilience-key-phrase {
-  font-size: 54px;
-  line-height: 1.15;
+  font-size: 44px;
+  line-height: 1;
   white-space: nowrap;
   text-decoration-line: underline;
   text-decoration-thickness: 3px;
@@ -2492,7 +2492,7 @@ img.boundary-detail-icon { height: auto; }
 .ai-pressure-slide small { font-size: 18px; letter-spacing: 0; }
 .boundary-detail-conclusion { position: absolute; bottom: 77px; left: 46px; right: 46px; margin: 0; font-family: var(--body-font-family); font-size: 28px; font-weight: 700; line-height: 1.18; text-align: left; }
 .ai-pressure-slide .boundary-detail-conclusion { top: 620px; bottom: 36px; display: flex; align-items: center; justify-content: center; font-size: 32px; text-align: center; }
-#error-margin .boundary-detail-conclusion { bottom: 48px; text-align: center; }
+#error-margin .boundary-detail-conclusion { bottom: 48px; text-align: left; }
 .boundary-detail-source { position: absolute; bottom: 25px; left: 46px; right: 46px; margin: 0; font-size: 17px; letter-spacing: 0; line-height: 1.2; text-align: left; }
 .boundary-detail-source a { font-family: inherit; }
 .boundary-action-table { position: absolute; top: 205px; left: 46px; right: 46px; width: 928px; border-collapse: collapse; font-size: 23px; line-height: 1.23; letter-spacing: -0.5px; }
@@ -2518,7 +2518,9 @@ img.boundary-detail-icon { height: auto; }
 }
 
 #workload-boundary .boundary-detail-copy h3 {
+  font-size: 30px;
   min-height: 2.1em;
+  white-space: nowrap;
 }
 
 #workload-boundary .boundary-detail-copy:last-child .boundary-emoji-list li {

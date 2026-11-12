@@ -2,7 +2,7 @@
 
 Rendered step: `#/workload-boundary`.
 
-Use bold Comic Neue for the introduction and list text, and Archivo Black for headings and the closing sentence. The left column uses 42% of the grid width, with the remaining space allocated to the right column. Reserve a 64px icon track for every right-column item so its text aligns with the exit-sign row. Both column headings reserve two lines to align the list starts.
+Use bold Comic Neue for the introduction and list text, and Archivo Black for headings and the closing sentence. The left column uses 42% of the grid width, with the remaining space allocated to the right column. Reserve a 64px icon track for every right-column item so its text aligns with the exit-sign row. Both column headings use 30px text on one line, with matching reserved height to align the list starts.
 
 ## Slide copy and sequence
 
