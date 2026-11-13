@@ -176,7 +176,7 @@ async function verifyLocalAssets(entryPath) {
     const content = (await readFile(asset.path, "utf8")).replace(/<!--[\s\S]*?-->/g, "");
     const references = [];
     if (extension === ".html") {
-      for (const [, name, , value] of content.matchAll(/\b(src|href|srcset|data-animated-src|data-still-src)\s*=\s*(["'])(.*?)\2/gi)) {
+      for (const [, name, , value] of content.matchAll(/\b(src|href|srcset|data-animated-src|data-still-src|data-console-css|data-console-css-iframe)\s*=\s*(["'])(.*?)\2/gi)) {
         if (name.toLowerCase() === "srcset" && !value.startsWith("data:")) {
           references.push(...value.split(",").map((candidate) => candidate.trim().split(/\s+/)[0]));
         } else references.push(value);

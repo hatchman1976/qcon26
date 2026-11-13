@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#b3d9ff" />
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any" />
-    <link rel="stylesheet" href="/styles.css?v=301" />
+    <link rel="stylesheet" href="/styles.css?v=302" />
     <link rel="stylesheet" href="/ai-fish-symbols.css?v=6" />
     <title>Adapt or Drift — QCon San Francisco 2026</title>
   </head>
@@ -28,6 +28,7 @@
       data-transition-duration="1000"
       data-autoplay="0"
       data-substeps="on"
+      data-console-css="/presenter-notes.css?v=1"
     >
       <section id="title" class="step title-slide" data-y="8000" data-scale="25">
         <h1 class="title-heading">
@@ -47,8 +48,9 @@
         <p class="title-speaker">Andrew Hatch</p>
 
         <div class="notes">
-          <p>The Blocker Lemming represents deliberate safety intervention: pause or redirect work to preserve margin.</p>
-          <p>Session: <a href="https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point">Adapt or Drift: Resilience Engineering When AI Moves the Operating Point</a>.</p>
+          <ul>
+            <li>Blocker Lemming: deliberate intervention. Pause or redirect work to preserve margin.</li>
+          </ul>
         </div>
       </section>
 
@@ -72,14 +74,11 @@
         </p>
 
         <div class="notes">
-          <p>AI is changing what we can do and how fast we can do it. Rasmussen’s model still helps us understand the pressures. The question is whether our ability to notice, understand and correct can keep pace.</p>
-          <p>AI can radically change how work gets done while still fitting familiar patterns of adaptation under pressure. But it can also influence what people accept as evidence and how intent becomes action. That changes the mechanisms we use to understand and control the system.</p>
-          <p><strong>The framework can remain useful while our assumptions need rechecking.</strong> Decades of research give us a lens. They don’t guarantee that familiar review processes or feedback loops will remain adequate.</p>
-          <p>Rasmussen supplies the boundary and control framework. Applying it to AI’s tempo, verification demand and feedback delay is this talk’s synthesis. Evaluate whether people, tools and workflow retain the capacity to intervene and recover. AI can also improve assurance.</p>
-          <p>Sources:</p>
           <ul>
-            <li><a href="https://qconsf.com/presentation/nov2026/adapt-or-drift-resilience-engineering-when-ai-moves-operating-point">QCon session description</a></li>
-            <li><a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen, Risk Management in a Dynamic Society (1997)</a></li>
+            <li>AI changes capability, pace and what people accept as evidence.</li>
+            <li>Can noticing, understanding and correction keep pace?</li>
+            <li>Rasmussen supplies the framework. Applying it to AI, verification and feedback delay is this talk’s synthesis.</li>
+            <li>Recheck familiar controls. AI can also improve assurance.</li>
           </ul>
         </div>
       </section>
@@ -164,13 +163,10 @@
         </div>
 
         <div class="notes">
-          <p>Introduce your background:</p>
           <ul>
-            <li>Australia and the United States.</li>
+            <li>Australia → United States.</li>
             <li>Cisco ThousandEyes. SWE/SRE Engineering Manager, 15 years.</li>
-            <li>AWS and data centres.</li>
-            <li>LinkedIn.</li>
-            <li>Medium and Bluesky: @hatchman76.</li>
+            <li>AWS and data centres. LinkedIn, Medium and Bluesky: @hatchman76.</li>
           </ul>
         </div>
       </section>
@@ -243,7 +239,11 @@
         </div>
 
         <div class="notes">
-          <p>Introduce the recurring images as visual shorthand the audience will see throughout the talk and should keep in mind. The AI image includes LLMs, agents and related tools. The complex-system image represents a complex distributed software system, of which those tools are a part.</p>
+          <ul>
+            <li>Recurring characters: keep these images in mind throughout the talk.</li>
+            <li>AI means LLMs, agents and related tools.</li>
+            <li>The complex system is the distributed software system, including people and AI.</li>
+          </ul>
         </div>
       </section>
 
@@ -290,12 +290,12 @@
         </div>
 
         <div class="notes">
-          <p>A socio-technical system cannot be understood by examining either people or technology in isolation.</p>
-          <p>The visual contrasts studying people and technology separately with seeing people as part of the system. Its connections emphasise the interactions between them.</p>
-          <p>This names the system the talk will examine and prepares Rasmussen’s control hierarchy.</p>
-          <h3>People are part of control</h3>
-          <p>People and organisations are adaptive components and controllers within the socio-technical system, not an external human input. Locally sensible adaptations can preserve control, or interact to create conditions for failure. Rasmussen connects effective control with usable objectives, feedback, competence, coordination and commitment.</p>
-          <p>Source: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figures 1 and 3, control, adaptation and information</a>.</p>
+          <ul>
+            <li>People and technology must be understood together, through their interactions.</li>
+            <li>People and organisations are adaptive components and controllers within the system.</li>
+            <li>Locally sensible adaptations can preserve control or combine into failure.</li>
+            <li>Control needs usable goals, feedback, competence, coordination and commitment.</li>
+          </ul>
         </div>
       </section>
 
@@ -304,13 +304,12 @@
         <h2 class="resilience-definition-title">Resilience Engineering</h2>
         <p class="resilience-definition-copy substep">Build and sustain <strong class="resilience-key-phrase">adaptive capacity</strong> in socio-technical systems, both <strong class="resilience-key-phrase">technical and non-technical</strong>, ensuring they can absorb and <strong class="resilience-key-phrase">recover safely</strong> from incidents, anomalies and changing pressures.</p>
         <div class="notes">
-          <h3>Build the ability to adapt before it is needed</h3>
-          <p>The opening definition is this talk’s synthesis, not a quotation. Resilience Engineering is the study and deliberate support of the capacities that help socio-technical systems continue to perform as conditions change. Sustaining that ability means maintaining expertise, coordination, time, resources and authority to act, and renewing them as the system evolves. Adaptive capacity is not simply spare infrastructure capacity.</p>
-          <p>Incidents and anomalies make adaptation visible, but it also occurs in everyday work. Keeping functioning can involve changing plans, priorities or ways of working. This does not promise immunity from disruption or unlimited capacity to absorb any event. Prepare for situations that exceed what was anticipated, and learn how people already prevent difficulties from becoming worse.</p>
-          <p>John Allspaw’s March 6, 2019 presentation abstract also places investment in adaptive capacity at the centre of the field. It remains a background source for the definition: <a href="https://speakerdeck.com/jallspaw/amplifying-sources-of-resilience">Amplifying Sources of Resilience</a>.</p>
-          <h3>Surprise and human adaptation</h3>
-          <p>David D. Woods: “Resilience concerns the capabilities a system needs to respond to inevitable surprises.” <a href="https://beta.irgc.org/wp-content/uploads/2018/12/Woods-for-IRGC-Resilience-Guide-Vol-2-2018.pdf">Resilience is a Verb (2018)</a>, p. 1.</p>
-          <p>Richard I. Cook: “Human practitioners are the adaptable element of complex systems.” <a href="https://www.adaptivecapacitylabs.com/HowComplexSystemsFail.pdf">How Complex Systems Fail</a>, point 12, p. 3 (1998, revised April 21, 2000).</p>
+          <ul>
+            <li>Sustain the ability to adapt as conditions change, in everyday work and surprise.</li>
+            <li>Maintain expertise, coordination, time, resources and authority. Adaptive capacity is more than spare infrastructure.</li>
+            <li>Prepare for events beyond what was anticipated. Learn how people already keep things working.</li>
+            <li>This definition is our synthesis, not a quotation or a promise of immunity.</li>
+          </ul>
         </div>
       </section>
 
@@ -365,14 +364,12 @@
         </div>
 
         <div class="notes">
-          <p>Introduce Jens Rasmussen and the 1997 model. The next slide maps the wider research landscape around Figure 3, and the slide after that locates people and technology within Rasmussen’s social control hierarchy before the boundary model is translated into plain language.</p>
           <ul>
-            <li>The original model comes from Risk Management in a Dynamic Society (1997).</li>
-            <li>Examples of safety-critical domains include radiological safety, maritime safety and healthcare.</li>
-            <li>Socio-technical systems are hierarchical and multidisciplinary.</li>
-            <li>Systems thinking connects these levels and disciplines.</li>
+            <li>Jens Rasmussen, 1997: risk management across a dynamic socio-technical system.</li>
+            <li>Safety-critical examples span radiological safety, maritime safety and healthcare.</li>
+            <li>Control crosses organisational levels and research disciplines.</li>
+            <li>Use systems thinking to connect them before simplifying the boundary model.</li>
           </ul>
-          <p>Paper: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen, Risk Management in a Dynamic Society (1997)</a>.</p>
         </div>
       </section>
 
@@ -429,23 +426,12 @@
         </div>
 
         <div class="notes">
-          <p>This is a synthesis paper rather than a single empirical validation of the model.</p>
           <ul>
-            <li>Rasmussen distinguishes empirical, evolutionary, and analytical risk strategies.</li>
-            <li>Defence in depth matters, but redundant protections can degrade quietly because a local violation may have no immediate visible effect.</li>
-            <li>The paper reviews human reliability, operator modelling, field evidence, and organisational research. Its direction of travel is away from isolated error counts and toward behaviour in a real work context shaped by workload, time, cost, and competing goals.</li>
-            <li>Risk management becomes a feedback-control problem spanning the whole socio-technical hierarchy.</li>
-            <li>Decisions are embedded in continuous work. Locally sensible adaptations can interact across controllers and create system-level risk.</li>
-          </ul>
-          <p>The next slide makes the paper’s system-wide control hierarchy concrete, and the following slide simplifies the geometry without discarding these mechanisms.</p>
-          <p>Source: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen, Risk Management in a Dynamic Society (1997)</a>, pp. 183–213.</p>
-          <ul>
-            <li>Figure 8 and research convergence: p. 201.</li>
-            <li>Risk strategies: pp. 197–200.</li>
-            <li>Defence in depth: pp. 189–190, 198–199, 207–209.</li>
-            <li>Human and organisational adaptation under pressure: pp. 186–190, 193–196, 206–209.</li>
-            <li>Feedback control: pp. 183–186, 192–197.</li>
-            <li>Naturalistic decision making: pp. 186–190, 200–206.</li>
+            <li>Synthesis of research traditions, not one experiment validating the model.</li>
+            <li>Risk strategies: empirical, evolutionary and analytical.</li>
+            <li>Defence in depth can erode quietly when violations have no immediate consequence.</li>
+            <li>Understand behaviour in real work: workload, time, cost and competing goals.</li>
+            <li>Risk management is feedback control across the hierarchy. Continuous, locally sensible decisions can combine into system-level risk.</li>
           </ul>
         </div>
       </section>
@@ -488,12 +474,13 @@
         </div>
 
         <div class="notes">
-          <p>The social control hierarchy surrounds the people and technology doing the work. Research disciplines and environmental stressors cross its levels.</p>
-          <p>Control is distributed rather than owned by any single actor, and information must travel upward while decisions and constraints travel downward. Each layer adapts on a different timescale.</p>
-          <h3>Goals, evidence and authority</h3>
-          <p>The control structure is the distributed network of decision makers, goals, constraints, information, competence and authority around the work. Observations and outcomes inform decisions, and decisions and constraints change the work. Feedback must reach actors with the resources and authority to respond.</p>
-          <p>When AI enters these channels, re-examine problem framing, attention, verification, skill retention under pressure, communicated intent and feedback fidelity across the hierarchy. Task-level studies do not establish the accumulated effects on a whole socio-technical system.</p>
-          <p>Source: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figures 1 and 3, control, adaptation and information</a>.</p>
+          <ul>
+            <li>Control is distributed across the hierarchy. Layers adapt on different timescales.</li>
+            <li>Evidence travels upward. Decisions and constraints shape the work.</li>
+            <li>Feedback must reach people with resources and authority to respond.</li>
+            <li>AI changes framing, evidence, verification, skills and communicated intent. Recheck these channels.</li>
+            <li>Task-level studies do not establish accumulated whole-system effects.</li>
+          </ul>
         </div>
       </section>
 
@@ -557,11 +544,12 @@
         </figure>
 
         <div class="notes">
-          <p>The hierarchy on the previous slide surrounds the people and interactions in this complex system. People and technology operate within economic, workload and performance constraints. The dotted error margin marks a buffer inside the performance boundary.</p>
-          <p>The following slide explains the boundaries and the margin in detail.</p>
-          <h3>Adaptation with LLM tools</h3>
-          <p>Tools change the conditions in which people work, and repeated adaptations change workflows, expectations and later decisions. Rasmussen remains a framework for examining these effects. Measures of human performance, learning, coordination and control need revalidation in LLM-mediated work. This does not make earlier human-factors research obsolete.</p>
-          <p>Source: <a href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF">Rasmussen (1997), Figures 1 and 3, control, adaptation and information</a>.</p>
+          <ul>
+            <li>The hierarchy surrounds people and technology working within economic, workload and performance constraints.</li>
+            <li>The dotted error margin provides a buffer inside the performance boundary.</li>
+            <li>Tools change work. Repeated adaptations change workflows, expectations and later decisions.</li>
+            <li>Revalidate learning, coordination and control in LLM-mediated work. Earlier human-factors research remains useful.</li>
+          </ul>
         </div>
       </section>
 
@@ -716,23 +704,12 @@
         </svg>
 
         <div class="notes">
-          <h3>Plain-language script</h3>
-          <p>“The economic boundary marks where we can no longer pay the bills. The workload boundary marks where people cannot keep going. The performance boundary marks where the system can no longer do its job acceptably or safely. We cannot see that line exactly, so the dotted line gives us a margin for error.</p>
-          <p>This dot is not a person. It is the whole system — people, software, and rules — working right now. The dim dot marks the starting reference position, not a second current operating state. The shaded area is the playing surface, with the error margin shown in orange.</p>
-          <p>Economic and workload limits can change as financial and human capacity change. Inward shifts reduce the playing surface; outward shifts expand it.</p>
-          <p>Pressure for efficiency and less effort can draw normal adaptations, and the whole system&#x27;s operating state, toward the performance boundary.</p>
-          <p>The charts stand for pressure to reduce cost, which a downturn can intensify. The hands stand for ways people reduce effort under workload; the Blocker Lemmings show safety action near the error margin: pause or redirect work to preserve margin. Rasmussen describes actors adapting within the work-space, encountering an effort gradient while management supplies a cost gradient. The charts and hands are scattered through that space to illustrate local adaptations, not measured locations of individual decisions in Figure 3.</p>
-          <p>The economic-side arrow shows the gradient toward cost efficiency; the workload-side arrow shows the gradient toward least effort. Both point toward the acceptable-performance side. Figure 3 and its adjacent discussion support these directions of migration. The arrow endpoints are illustrative rather than measured positions or fixed targets.</p>
-          <p>Everyone makes sensible choices. The business asks for cheaper and faster. People make work easier. Together, those pressures can move the dot toward the performance edge.</p>
-          <p>There is no magic safe spot in the middle. The lines do not push the dot back. Any line can move as demand, staffing, technology, or AI changes.</p>
-          <p>That is Rasmussen&#x27;s warning: failure does not require one stupid decision. Normal adaptations can slowly move the system toward an edge nobody can see exactly.”</p>
-          <p>Core point: one current operating state moves within economic, workload, and acceptable-performance constraints; pressures move it, while sensing and control preserve margin and recoverability.</p>
-          <h3>Sources</h3>
           <ul>
-            <li>https://doi.org/10.1016/S0925-7535(97)00052-0</li>
-            <li>https://backend.orbit.dtu.dk/ws/files/158016663/SAFESCI.PDF (Figure 3 and its discussion of effort and cost gradients)</li>
-            <li>https://srecon24.hatchman76.com/#/the-model</li>
-            <li>https://qconsf.com/</li>
+            <li>Three limits: cannot pay the bills, people cannot sustain the workload, performance becomes unacceptable or unsafe.</li>
+            <li>One dot = the whole system’s current state. Dim dot = starting reference, not another current state or ideal equilibrium.</li>
+            <li>Dotted line = perceived limit inside the actual performance boundary. Green = playing surface. Orange = buffer.</li>
+            <li>Charts and hands: cost and effort pressures toward the performance edge. Lemmings: safety intervention. Locations and arrow endpoints are illustrative.</li>
+            <li>Limits can move. Sensible local adaptations can combine into unsafe drift. There is no magic safe spot. Lines exert no restoring force. Sensing and action preserve margin.</li>
           </ul>
         </div>
       </section>
@@ -800,27 +777,12 @@
         </div>
 
         <div class="notes">
-          Recap the symbols used in the Fish diagram. The operating point represents the current state of
-          the whole socio-technical system, not a person. The dotted line marks a perceived limit inside the actual
-          performance boundary; the gap between them is the error margin. Boundaries constrain the playing surface,
-          but they do not push the point in any direction.
-
-          The combined Blocker Lemming, hand and chart are this talk's shorthand for actions and pressures: safety interventions,
-          adaptations to reduce effort, and pressure toward cost efficiency. Rasmussen's Figure 3 describes local
-          adaptive variations, effort and cost gradients, and a safety countergradient. Figure 1 shows technological,
-          market and political stressors acting across the socio-technical hierarchy. Local actions and wider
-          pressures interact; an external condition is not necessarily a deliberate action. In this adaptation,
-          changes can shift the operating point or reshape the constraints around it.
-
-          The Blocker Lemming means pause or redirect work to preserve margin. It represents an active
-          intervention by people with evidence, authority and capacity; the boundary itself does not stop the point.
-
-          Actions may arise within a team's immediate work or elsewhere in the control hierarchy. Management and
-          regulators remain part of the wider socio-technical system; environmental stressors act across it.
-
-          Source: Rasmussen, Risk Management in a Dynamic Society (1997), Figures 1 and 3 and the discussion of
-          migration toward the boundary and control of system performance.
-          https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF
+          <ul>
+            <li>One operating point represents the whole socio-technical system, not a person.</li>
+            <li>The dotted line is a fallible perceived performance limit. The gap to the actual limit is the protected error margin.</li>
+            <li>Boundaries constrain the playing surface. They do not push the point or automatically stop it.</li>
+            <li>Lemming: protective intervention. Hand: least effort. Chart: cost efficiency. These are this talk’s shorthand for interacting local actions and wider pressures.</li>
+          </ul>
         </div>
       </section>
 
@@ -865,14 +827,11 @@
         <p class="boundary-detail-conclusion substep">Greater financial capacity expands room to operate, tighter budgets increase pressure to reduce costs.</p>
 
         <div class="notes">
-          These are common external conditions, not measurements of a universal boundary. Holding the work and
-          commitments broadly constant, stronger sustainable revenue, accessible capital or a lower sustainable
-          cost base can expand financial viability. Losing them can contract it. Favorable demand also brings work:
-          growth does not automatically increase every margin. An internal cost target or budget cut is a management
-          decision; it is not itself the actual economic-failure constraint. Watch actual cash, obligations and value.
-          <h3>Activity, capacity and control</h3>
-          <p>More consumption or commitments can move the operating state toward economic failure when costs outpace value and supporting financial capacity. Sustainable savings can expand viable operating space; reduced revenue, funding or runway can contract it. Forecasts provide feedback, and budgets or quotas are management targets and decision thresholds. Revised targets do not by themselves change the actual viability constraint. Rasmussen draws the perceived boundary and error margin only on the performance side.</p>
-
+          <ul>
+            <li>Separate financial viability from a management budget target. Revising a target does not change the actual constraint.</li>
+            <li>Sustainable revenue, funding and lower costs can expand viable space. Growth also brings work and commitments.</li>
+            <li>More consumption can move the operating point toward failure when costs outpace value. Watch cash, obligations and value, not spending alone.</li>
+          </ul>
         </div>
       </section>
 
@@ -912,20 +871,12 @@
         <p class="boundary-detail-conclusion substep">Cutting waste can reduce costs, but cutting expertise or maintenance can leave less room to operate safely.</p>
 
         <div class="notes">
-          A forecast is a signal and a budget is a target. An actor with authority decides what to do. These are
-          possible organizational responses, not recommendations to reduce staffing or resilience. Unit economics
-          should include human verification and recovery. Right-sizing and retiring unused services can preserve
-          performance; cutting necessary expertise, maintenance or redundancy while retaining commitments can
-          consume performance margin. Validate the effect of savings across the whole workflow. Existing incidents
-          or realized losses are lagging outcomes; forecast cash and projected margins are earlier financial signals.
-          <h3>Account for transferred work</h3>
-          <p>Chapter 5 §5.2.4 (printed p. 81; supplied PDF p. 89) asks who receives a saving, who absorbs the work, and when it becomes visible. Track authoring savings beside reviewer, maintainer and on-call costs. Section 5.5.2 (printed p. 85; PDF p. 93) extends evaluation to future adaptability, coupling, congestion and conflict. A local saving is not sufficient evidence of a net workflow saving.</p>
-          <p>Financial feedback must reach people with authority, competence and resources to change commitments. They must communicate effects on review demand, maintenance and recovery across levels. Savings preserve other margins when low-value work is removed. If output stays fixed while expertise or review are cut, the resulting adaptations can transfer pressure into workload and acceptable performance.</p>
           <ul>
-            <li>Rasmussen (1997), Figure 3; printed manuscript pp. 9–12, 15–18 and 27 (not journal pagination)</li>
-            <li>Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5</li>
+            <li>A forecast is a signal. A budget is a target. Someone with authority chooses the response.</li>
+            <li>Remove waste and low-value work before cutting expertise, maintenance or recovery capacity. These examples are possible responses, not recommendations for staffing cuts.</li>
+            <li>Count verification, maintenance and on-call costs alongside authoring savings. Ask who receives the saving, who inherits the work and when the cost appears.</li>
+            <li>Keep financial decisions connected to their workload and performance effects.</li>
           </ul>
-
         </div>
       </section>
 
@@ -962,18 +913,12 @@
         <p class="boundary-detail-conclusion substep">Less capacity moves the boundary inward, more work can push the operating point toward it.</p>
 
         <div class="notes">
-          Holding the kind and quality of required work broadly constant, usable expert capacity can change the
-          sustainable workload limit. Headcount is an imperfect proxy: new hires need onboarding, relevant expertise,
-          tools and coordination. Greater raw demand is not itself a capacity expansion; it can instead move the
-          operating point toward the workload constraint. Automation can remove toil but adds maintenance and
-          exception work. Burnout and lost knowledge can reduce future effective capacity. These examples are
-          mechanisms for discussion, not a numerical mapping from staff count to diagram geometry.
-          <h3>Focused verification capacity</h3>
-          <p>Effective capacity means relevant expertise, focused time and enough context for this work, not merely assigned headcount. A reviewer can be allocated to many tasks yet lack usable time to assess this change. Protect contextual knowledge and recovery; changing demand or removing expert capacity can also change the verification effort required per item.</p>
           <ul>
-            <li>Rasmussen (1997), Figures 1 and 3; control, adaptation and information</li>
+            <li>Capacity means relevant expertise, focused time, context and workable tools. Headcount alone is a weak proxy.</li>
+            <li>More demand moves the operating point. More usable capacity can expand the sustainable workload limit.</li>
+            <li>Automation may remove toil while adding maintenance and exception work. Onboarding, coordination, fatigue and lost knowledge also affect capacity.</li>
+            <li>Protect focus, contextual knowledge and recovery. The diagram is conceptual, not a staffing-to-distance calculation.</li>
           </ul>
-
         </div>
       </section>
 
@@ -1013,21 +958,12 @@
         <p class="boundary-detail-conclusion substep">Reducing toil can preserve control, but skipping checks saves effort now and creates work later.</p>
 
         <div class="notes">
-          The hand denotes the gradient toward least effort, not a moral judgment. Better technology and automation
-          can remove repeatable toil and improve assurance. They require maintenance, competence and exception
-          handling. Under pressure, equally understandable adaptations can thin verification or normalize rushed
-          handoffs. Queue age, interruptions and recovery time can warn of emerging capacity problems. Review
-          findings/rework are current quality feedback and possible warnings about future workload, not universally
-          leading indicators. Burnout is a condition to investigate with people, not a diagnosis from a single metric.
-          These actions do not guarantee a particular trajectory; watch their effect on verification and recovery.
-          <h3>Match admission to assurance</h3>
-          <p>Count admitted work, focused verification effort per change and effective capacity. The review-load ratio in TALK.md is this talk’s illustrative capacity heuristic, not a measure established by Chapter 5. Demand rising relative to capacity can increase backlog and delay. Defects additionally depend on adaptations such as reduced review or testing; queue growth alone does not demonstrate a defect increase.</p>
-          <p>Change scope, timing or admitted work, and accept latency when necessary. Preserve source evidence and give reviewers time and practical authority to reject, pause or reverse action. Chapter 5 §5.1 (printed pp. 78–80; PDF pp. 86–88) illustrates responsibility without resources through a scenario, not a measured universal outcome. AI can strengthen tests, diagnosis and verification where tools actually help.</p>
           <ul>
-            <li>Rasmussen (1997), Figures 1 and 3; control, adaptation and information</li>
-            <li>Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5</li>
+            <li>Least effort is normal adaptation under competing goals, not laziness. Good automation can preserve control.</li>
+            <li>Watch queue age, interruptions and recovery time. Review findings are quality feedback, not universally leading indicators. Discuss fatigue with people rather than diagnosing from one metric.</li>
+            <li>Match admitted work to focused verification capacity. Rising queues indicate delay, not automatically more defects.</li>
+            <li>Change scope or timing, preserve source evidence, and give reviewers time and authority to pause or reject. The review-load ratio is this talk’s heuristic, not a validated universal measure.</li>
           </ul>
-
         </div>
       </section>
 
@@ -1064,22 +1000,12 @@
         <p class="boundary-detail-conclusion substep">Can people, tools and workflows anticipate and adapt to failure, ensuring system capacity remains resilient to performance degradation?</p>
 
         <div class="notes">
-          The acceptable-performance boundary is defined by the system's required functions and tolerated harms.
-          Not every crossing is an immediate catastrophe: an unacceptable outcome can be local or escalate through
-          dependencies. Availability, data integrity, confidentiality and safe recovery are software examples.
-          Reputation, commercial losses and regulatory consequences can follow that failure; they are not separate
-          Rasmussen boundaries. Formal SLOs and compliance checks are useful proxies, not an exact picture of the
-          true functional limit. Crossing the dotted perceived boundary enters the protected error margin; it does
-          not prove a failure has already occurred. The model does not provide a measurable distance to catastrophe.
-          <h3>Joint performance over the lifecycle</h3>
-          <p>Evaluate people, tools and workflow together across good, mediocre and poor AI output. A model benchmark alone cannot establish operational joint performance. Chapter 5 §5.5.3 (printed pp. 85–86; PDF pp. 93–94) calls for evaluation situated in the actual work and repeated through the lifecycle.</p>
-          <p>Compare verified outcomes, revision and checking effort with a relevant baseline. Include a plausible consequential mistake in a controlled exercise: can people access the evidence, detect it and correct it before enactment? Measure outcome quality, verification effort, consequential-error detection, response time and successful recovery. Re-evaluate when models, workflow, staffing or dependencies materially change. These are proposed engineering measures rather than a universal score; operational signals remain imperfect proxies for the true functional limit.</p>
-          <p>Morey, Rayo and Woods (2025) studied predictive clinical AI in simulated patient cases with 450 nursing students and 12 licensed nurses. Recommendation correctness improved or degraded joint performance. Added explanations did not significantly change those effects in this experiment. It motivates the evaluation design; it is not an LLM software-risk estimate or evidence that explanations never help.</p>
           <ul>
-            <li>Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5</li>
-            <li>Morey, Rayo and Woods (2025), npj Digital Medicine, Results and Discussion</li>
+            <li>The functional limit concerns required outcomes and tolerated harms. A crossing need not be catastrophic. SLOs and compliance checks are imperfect proxies.</li>
+            <li>Entering the error margin does not prove failure. The diagram gives no measurable distance to catastrophe.</li>
+            <li>Test people, tools and workflow together across good and poor output, then repeat as conditions change. Compare verified outcomes, checking effort, error detection and recovery with a relevant baseline.</li>
+            <li>Morey et al. (2025): simulated clinical cases, 450 nursing students and 12 nurses. Recommendation correctness mattered. Added explanations showed no significant effect here. This is not an LLM software-risk estimate.</li>
           </ul>
-
         </div>
       </section>
 
@@ -1123,24 +1049,12 @@
         <p class="boundary-detail-conclusion ordered-substep" data-substep-order="13">Sustain adaptive capacity by turning signals into effective action</p>
 
         <div class="notes">
-          The dotted line represents a fallible perceived limit. Crossing it consumes the deliberately protected
-          error margin; failure is not inevitable at that point. An alert does not push the operating point back.
-          It needs timely interpretation, authority to slow or change work and people with tools to execute a
-          response. Capacity, efficiency and redundancy may improve feasible performance, but need realistic load,
-          failure and recovery testing: correlated dependencies can defeat nominal redundancy. Canaries, least
-          privilege, independent review, rollback and restore exercises preserve bounded excursions and recovery.
-          An error budget is a service-management mechanism, not a geometric measurement of Rasmussen's error margin.
-          <h3>Notice, intervene and recover</h3>
-          <p>Deliberate interventions pause or redirect work to preserve margin. Someone needs the evidence, authority and capacity to act.</p>
-          <p>Notice requires usable signals and timely interpretation. Intervention requires evidence, authority, tools and remaining response capacity. Recovery requires contextual knowledge and fallbacks that people can use under pressure. A written rollback procedure does not establish that capability. Awareness and the margin itself exert no automatic restoring force; the objective is sufficient margin, bounded excursions and recoverability, not a preferred geometric center.</p>
-          <p>Exercise stale observations, scarce time, excess review demand and unavailable supporting services outside production. Assess whether the team can pause, reduce scope and recover. Chapter 5 §§5.3.2–5.3.5 (printed pp. 82–84; PDF pp. 90–92) discusses difficulties recognizing plausible errors; §5.1 illustrates responsibility without resources and decay of alternatives; §§5.4–5.5 (printed pp. 84–86; PDF pp. 92–94) support challenging exercises and continuing assurance.</p>
-          <p>The AWS 19–20 October 2025 disruption report describes conventional automation and dependencies, with no reported generative AI involvement. Delayed DNS-plan application interacted with changed state and cleanup; subsequent EC2 recovery entered congestive collapse. AWS announced recovery testing and controls on incoming work. The report does not establish that all announced work was complete. Use it as a control-and-recovery mechanism example, not an AI-caused incident or a general verdict on automation.</p>
           <ul>
-            <li>Rasmussen (1997), Figures 1 and 3; control, adaptation and information</li>
-            <li>Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5</li>
-            <li>AWS, 19–20 October 2025 disruption: DynamoDB, EC2 and corrective actions</li>
+            <li>The perceived limit is fallible. Entering the margin is a warning, not inevitable failure. An error budget is not a geometric measure of this margin.</li>
+            <li>Alerts need interpretation, authority, tools and remaining capacity for action. Awareness alone restores nothing.</li>
+            <li>Practise diagnosis, bounded changes and recovery under realistic pressure. A written rollback procedure or nominal redundancy does not establish usable capability.</li>
+            <li>If using the AWS October 2025 example: conventional automation, no reported generative AI involvement. Delayed DNS plans and congested EC2 recovery illustrate control problems. Announced corrective work was not all established as complete.</li>
           </ul>
-
         </div>
       </section>
 
@@ -1160,16 +1074,12 @@
           <p class="ai-arrival-question">What happens as AI infiltrates every part of the system?</p>
         </div>
         <div class="notes">
-          <p>The operating point represents the whole socio-technical system's current state. The AI artwork is shorthand for AI-mediated work at that same state, not a second operating point, a person or a fourth constraint. The reference ball marks the starting state, not an ideal or inherently safe location.</p>
-          <p>Ask what changes in cost, effort, evidence and recovery when AI enters the work.</p>
-          <h3>AI in the feedback and action channels</h3>
-                    <p>AI is not automatically a new controller. It influences channels used by existing controllers. On the feedback side it can gather and summarize observations, find contradictions and support testing; fluent summaries can also conceal uncertainty. On the action side it can present options, draft decisions and translate intent into output; plausible detail can exceed the communicator’s intended criteria.</p>
-                    <p>AI output changes the operating state when people or automation admit and enact the resulting decisions, not merely when output is generated. The risk is conditional: AI can strengthen testing, diagnosis, challenge and verification. Risk rises when generation and action become easier faster than assurance and correction.</p>
-                    <p>Rasmussen (1997) describes behaviour and work activity migrating toward the boundary. Cook and Rasmussen (2005) explicitly use operating-point terminology. The ball remains shorthand for one current whole-system state.</p>
-                    <ul>
-                      <li>Rasmussen (1997), Figures 1 and 3; control, adaptation and information</li>
-                      <li>Cook and Rasmussen (2005), Going solid</li>
-                    </ul>
+          <ul>
+            <li>The AI artwork still represents one whole-system state. The reference ball marks a starting position, not a second current state or an inherently safe centre.</li>
+            <li>AI can reshape feedback, summaries, options and actions used by existing controllers. It is not automatically a new controller.</li>
+            <li>Plausible ≠ measured. Fluent ≠ intended. Output affects operations when people or automation admit and enact it.</li>
+            <li>Ask whether testing, understanding and correction keep pace with easier generation and action. AI can strengthen assurance too.</li>
+          </ul>
         </div>
       </section>
 
@@ -1232,11 +1142,11 @@
           <img class="ai-roaming-point" src="/images/srecon26/logo-ai-mashup.png" alt="AI ball representing the current operating point" />
         </span>
         <div class="notes">
-          <h3>The same constraints still apply</h3>
-          <p>Economic failure, unacceptable workload and functionally unacceptable performance remain the three constraints. The error margin is the protected performance-side buffer, not an additional constraint. AI does not create a fourth boundary.</p>
-          <p>The moving ball represents one current whole-system state. The reference ball marks the starting position, not a second current state or an ideal geometric centre.</p>
-          <p>The trajectory illustrates how adaptation under pressure can move the operating state toward the performance side. It is not a measured path. Organisational choices and usable feedback shape the actual trajectory, and no geometric centre guarantees safety.</p>
-          <p>Ask how non-deterministic outputs change what people can understand, verify and rely on. Examine the consequences for economics, workload, expertise and the capacity to intervene and recover.</p>
+          <ul>
+            <li>The same three constraints remain: economic viability, sustainable workload and acceptable performance. The error margin is a protected buffer, not a fourth boundary.</li>
+            <li>One current system state, plus a starting reference. The illustrated trajectory is not measured and no geometric centre guarantees safety.</li>
+            <li>Ask how non-deterministic output changes verification, expertise and recovery. Choices and usable feedback shape what actually happens.</li>
+          </ul>
         </div>
       </section>
 
@@ -1268,30 +1178,12 @@
         <p class="boundary-detail-conclusion substep"><span>Savings here can add work elsewhere. Who covers it and at what cost?</span></p>
 
         <div class="notes">
-          ETR surveyed 1,636 technology leaders, June 2–July 5, 2026. Its 47% is reported spending above plan,
-          not a prevalence estimate of annual budgets exhausted early. Among respondents reallocating to cover
-          overruns, 61% cut contractor/consultant spending, 49% legacy infrastructure modernization or hardware
-          refresh, 36% non-AI licenses and 28% internal headcount budgets. The subgroup denominator matters; a smaller
-          headcount budget does not itself prove layoffs. The slide's 49% applies only to organizations
-          reallocating budgets to cover AI overruns, not all surveyed organizations. The Uber case is an executive's
-          reported account rather than audited finances. Meta's October 2025 Hyperion announcement describes
-          a joint venture with Blue Owl funds to finance roughly $27 billion of data-center development.
-          This brings in outside capital rather than cutting another internal budget, with future lease and
-          guarantee obligations. The amount is project development cost, not Meta's annual AI bill.
-          The portfolio-return example is an illustrative management choice. These cases distinguish reduced
-          infrastructure investment, external financing and product reprioritization.
-          Cost control can preserve other margins by dropping low-value work. It transfers pressure when required
-          output stays constant but relevant expertise, maintenance or assurance disappears. More AI expenditure
-          moves the operating state; budgets remain targets, not an extra dotted economic boundary.
-          <h3>Whole-workflow economics</h3>
-          <p>Include model use, platform commitments, integration, tools and data, evaluation, human verification, rework and recovery in outcome cost. Longer contexts, retries, agent loops and additional workflows can consume unit-cost savings. This is conditional, not a prediction that cheaper AI must increase spending. Evaluate work transferred or deferred to reviewers, maintainers and responders, along with future coupling, congestion and recovery costs.</p>
-          <p>Preserve capacity by reducing low-value demand, bounding loops, changing scope and routing or caching where verified quality permits. Organizations may also redirect portfolios toward products with stronger expected returns, as the visible example suggests. Keep verification and recovery funded. AI can improve tests and diagnosis as well as generation. If required output stays constant while relevant expertise or review is removed, workload can rise and performance margin can shrink.</p>
-          <p>Rasmussen supplies the adaptation/control framework; Chapter 5 supplies a contemporary resilience synthesis. The software economics and response examples are this talk’s application, not AI findings from the 1997 paper. Economic Chapter 5 references: §5.2.4, printed p. 81/PDF p. 89; §5.5.2, printed p. 85/PDF p. 93.</p>
           <ul>
-            <li>Rasmussen (1997), Figure 3; printed manuscript pp. 9–12, 15–18 and 27 (not journal pagination)</li>
-            <li>Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5</li>
+            <li>ETR: 1,636 technology leaders, June–July 2026. The 47% reported spending above plan. The 49% applies only to firms reallocating budgets for overruns, not everyone surveyed. Budget choices do not establish reliability harm.</li>
+            <li>Uber: executive account, not audited finances. Meta: $27bn Hyperion development financing, not an annual AI bill, with future obligations. Portfolio reprioritization is illustrative.</li>
+            <li>Unit savings can be absorbed by more use. Count verified outcome cost, integration, review, rework and recovery.</li>
+            <li>Remove low-value demand and bound loops. Savings transfer pressure when commitments remain but expertise or assurance is cut. This is the talk’s software application, not Rasmussen’s AI finding.</li>
           </ul>
-
         </div>
       </section>
 
@@ -1319,17 +1211,11 @@
         </table>
         <p class="token-economy-question substep"><span>How does commercial AI evolve from here, and what are the risks?</span></p>
         <div class="notes">
-          <h3>Token consumption, dependence and platform power</h3>
-          <p>Tokenmaxxing turns LLM-agent consumption into a public scoreboard. The tokenmaxxing.sh leaderboard ranks token counts and estimated API-equivalent spending. Those estimates are not reconciled bills, and token consumption does not measure useful outcomes, productivity or quality. These are language-model usage tokens, not cryptocurrency. The site was checked on October 27, 2026.</p>
-          <p>Doctorow’s enshittification model describes two-sided platforms. They first offer users substantial value, then shift value toward business customers such as advertisers and sellers, then squeeze both groups to retain more surplus for the platform. Business customers are distinct from the platform owner. This is a conditional analogy about AI dependence and pricing power, not a claim about every provider or measured model quality.</p>
-          <p>Cursor’s August 12, 2025 announcement describes a change in metering. Individual Auto usage had been unlimited since June. The announcement said it would count against included monthly usage at token rates from each user’s next renewal after September 15, 2025. Some annual renewals could fall in 2026. This dates the announcement and planned transition, not independently confirmed rollout for every subscriber. This does not establish deliberate lock-in, reduced model quality or rent extraction.</p>
-          <p>Optimization describes a business routing users’ requests to cheaper models to reduce costs. Microsoft’s model-router documentation describes a Cost mode that favours smaller, cheaper models, with possible quality trade-offs on complex prompts. Routing requires evaluation against the actual workload. Cheaper routing alone does not demonstrate deliberate degradation or Doctorow’s full platform cycle.</p>
-          <p>The parallel is a risk to examine: when workflows depend on a provider, that provider controls the meter and can change the terms. Token leaderboards can reward consumption while the organization needs useful, verified outcomes. These documented examples do not establish that every AI provider has completed Doctorow’s cycle. Ask about switching costs, portability, alternative suppliers and outcome cost before increased use becomes a commitment that is difficult to unwind.</p>
           <ul>
-            <li>Cory Doctorow, Enshittification (MCD, 2025), publisher page and excerpt: https://us.macmillan.com/books/9780374619329/enshittification/</li>
-            <li>Tokenmaxxing public leaderboard: https://tokenmaxxing.sh/</li>
-            <li>Michael Truell, Cursor pricing announcement (August 12, 2025): https://cursor.com/blog/aug-2025-pricing</li>
-            <li>Microsoft Learn, How model router works (checked October 27, 2026): https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router-how-it-works</li>
+            <li>Tokens measure usage, not useful outcomes. Tokenmaxxing leaderboard spending is an API-equivalent estimate, not reconciled bills. These are LLM tokens, not cryptocurrency.</li>
+            <li>Metering counts usage against allowances. Cost-oriented routing chooses cheaper models and may trade off quality. Neither alone proves deliberate degradation or rent extraction.</li>
+            <li>Cursor’s August 2025 announcement planned metered Auto usage from renewals after September 15. It does not independently confirm every subscriber’s rollout.</li>
+            <li>Evaluate routing against actual work. Ask about outcome cost, portability and alternatives before dependence grows. The following slide examines pricing power, not an inevitable path for every provider.</li>
           </ul>
         </div>
       </section>
@@ -1365,13 +1251,13 @@
         </div>
         <p class="token-economy-credit">Cory Doctorow, <cite><a href="https://us.macmillan.com/books/9780374619329/enshittification/" target="_blank" rel="noreferrer">Enshittification</a></cite> (2025)</p>
         <div class="notes">
-          <p>Doctorow describes a two-sided platform moving value from users to business customers, then taking more from both groups. Business customers mean advertisers, sellers or other participants, distinct from the platform owner. The headings are a paraphrase. Applying this pattern to AI is a risk to examine, not a prediction that every provider follows it.</p>
-          <h3>Switching costs and pricing power</h3>
-          <p>Klemperer (1995, pp. 519, 523–528, 535–536) shows how switching costs can give suppliers power over existing customers, while competition for new customers can constrain prices. Low introductory prices followed by higher prices are one possible outcome. Prices can also fall, and entry, compatibility and using multiple suppliers can change the result. The paper does not establish how AI compute savings reach customer prices. Rebuilding integrations, validating replacement models and retraining people are illustrative AI switching costs, an application of the theory rather than findings about AI. Source: https://doi.org/10.2307/2298075</p>
-          <p>Stanford’s AI Index article reports that the price of querying models at GPT-3.5-level MMLU performance fell from $20 per million tokens in November 2022 to $0.07 in October 2024. Its 2025 report also describes hardware costs per unit of performance declining by 30% annually. These are historical trends, not guarantees about future token prices or total workflow costs.</p>
-          <p>The cloud analogy concerns competition and switching. For its UK and EEA market definition, the CMA’s July 2025 cloud decision found concentrated supply, sustained AWS and Microsoft returns above their cost of capital, and barriers to switching. Its April 2024 foundation-model review identified risks from control over critical inputs and routes to customers. These findings support questioning how fully efficiency gains reach customers, rather than asserting an inevitable AI oligopoly.</p>
-          <p>The October 2026 CMA update records improvements, including removal of transfer fees for switching providers, while identifying remaining barriers. Cloud prices have risen for some services and fallen for others. The precedent is imperfect competition, not a claim that cloud prices never fall.</p>
-          <p>DeepSeek still supplies MIT-licensed model weights and charges for its hosted API. Open weights do not mean free compute. The evidence does not establish that incumbents will push DeepSeek out. The question is whether competing models remain practically accessible and switching remains viable as the market evolves.</p>
+          <ul>
+            <li>Doctorow: platforms shift value from users to business customers, then squeeze both. Business customers are distinct from the platform owner.</li>
+            <li>Stanford: fixed-capability inference prices fell about 280×, November 2022–October 2024. Historical trend, not a forecast.</li>
+            <li>Klemperer: switching costs can create power over existing customers. Competition for new customers can constrain it, and prices can fall.</li>
+            <li>AI examples: rebuilding integrations, revalidating models, retraining people. These illustrate theory, not proven AI pricing effects or inevitable consolidation.</li>
+            <li>Ask: can customers still switch and keep the savings?</li>
+          </ul>
         </div>
       </section>
 
@@ -1397,36 +1283,13 @@
           </figure>
         </div>
         <div class="notes">
-          Workslop is polished-looking output that leaves the recipient to reconstruct missing thinking. The
-          BetterUp/Stanford survey of 1,150 full-time US desk workers found 40% reporting receipt in the prior month,
-          and roughly two hours on average to resolve an incident. These are self-reports, not an objective audit
-          of every AI-generated artifact. The chain is this talk's software-workflow illustration: a person may use
-          an agent to proxy an argument, answer or decision without forming their own understanding. The recipient
-          must check the assumptions and reconcile conflicts. AI can also reduce this effort when used to build
-          comprehension and assurance.
-          Berkeley researchers observed eight months at one 200-person US technology company and conducted more
-          than 40 interviews. Broader task scope, parallel streams and work extending into breaks/evenings intensified
-          work. This motivates burnout risk from reduced recovery, not a universal causal finding. Expertise,
-          familiarity, staffing and the design of handoffs affect who carries the added load; these sources do not
-          prove that lower-skill or less-parallel users invariably suffer more burnout. Completed backlog counts
-          should be read alongside verification time, rework, interruptions, recovery and ability to explain changes.
-          The hand depicts least-effort adaptation. The meat-proxy emoji illustrates an engineer coping with
-          increased workload by relaying plausible AI reasoning, arguments or judgments as their own, without
-          understanding the fundamentals. This can create the appearance of expertise while bypassing the work
-          that develops and exercises it. It can also leave the recipient to verify reasoning the sender cannot
-          explain. Keep a person accountable for understanding, explaining and checking the work they pass onward.
-          <h3>Evidence, capacity and understanding</h3>
-          <p>Least effort describes normal adaptation under competing goals and limited attention, not a moral claim about laziness. Plausible ≠ measured. Fluent ≠ intended. Fast generation does not establish fast verification, integration or maintenance. Conflicting AI proposals still require people to reconstruct context and understand fundamentals. The meat-proxy scenario is this talk’s illustration, not a claim that all AI use reduces expertise. Chapter 5 §§5.3.1–5.3.4 (printed pp. 82–83; PDF pp. 90–91) discusses filtering, revision and plausible errors that need expertise to recognize and correct.</p>
-          <p>Current LLM evidence shows changes in task pace and cognitive effort that differ by task and experience. Lee et al. (CHI 2025) surveyed 319 knowledge workers: critical-thinking effort shifted toward verification, response integration and task stewardship, while higher confidence in AI was associated with less scrutiny. This is self-reported association, not causal proof. Dell’Acqua et al. randomized 758 consultants: work was faster and higher quality within the model’s capability frontier, but correctness was lower outside it. These are task-specific results, not a universal effect or a whole-system risk estimate. Dillon et al. and Brynjolfsson, Li and Raymond provide additional heterogeneous workplace evidence.</p>
-          <p>Preserve focused attention, contextual knowledge and usable authority to change commitments. Change scope, timing or admitted demand when checking cannot keep pace. AI can improve assurance capacity where joint evidence supports its testing and diagnosis. Demand relative to capacity can increase backlog and delay; defects additionally depend on adaptations that shed assurance. Do not treat generated backlog clearance as verified completion.</p>
           <ul>
-            <li>Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5</li>
-            <li>Lee et al. (CHI 2025), The Impact of Generative AI on Critical Thinking</li>
-            <li>Dell’Acqua et al., Navigating the Jagged Technological Frontier</li>
-            <li>Dillon et al. (2025), Shifting Work Patterns with Generative AI</li>
-            <li>Brynjolfsson, Li and Raymond (2025), Generative AI at Work</li>
+            <li>Least effort is normal adaptation under limited attention, not laziness. Fluent output can conceal missing understanding.</li>
+            <li>BetterUp/Stanford: 1,150 US desk workers, 40% received workslop in the prior month, roughly two hours on average to resolve an incident. Self-reports, not audited performance.</li>
+            <li>Berkeley: eight months at one 200-person company. Parallel work and reduced recovery suggest burnout risk, not universal causation.</li>
+            <li>Task studies show benefits within model capability and errors outside it. Effects vary by task and experience.</li>
+            <li>Measure checking, rework and recovery alongside output. Reduce admitted work when checking cannot keep pace. AI can strengthen assurance too.</li>
           </ul>
-
         </div>
       </section>
 
@@ -1448,12 +1311,12 @@
           <p class="expertise-erosion-citation">Lisanne Bainbridge (1983), <a href="https://doi.org/10.1016/0005-1098(83)90046-8" target="_blank" rel="noreferrer"><cite>Ironies of Automation</cite></a>.</p>
         </div>
         <div class="notes">
-          <p><cite>Accelerated Expertise: Training for High Proficiency in a Complex World</cite>, by Robert R. Hoffman, Paul Ward, Paul J. Feltovich, Lia DiBello, Stephen M. Fiore and Dee H. Andrews.</p>
-          <p>Citation year and publisher follow the publisher's DOI record: 2013, Psychology Press, DOI 10.4324/9780203797327. The print edition carries a 2014 copyright year.</p>
-          <p>The supplied quotation is attributed to <cite>Accelerated Expertise</cite>. Use it to discuss how automation can simplify the surface of work while obscuring complexity that demands greater expertise when resilience and high performance are needed. This is a discussion of the risk to expertise, not a measured claim that all AI use erodes it.</p>
-          <p>Bainbridge (1983) describes how automation can leave people responsible for abnormal conditions while reducing opportunities to practise the skills needed to diagnose and recover. The paper concerns industrial process control and flight-deck automation. Applying its lessons to AI is an analogy, not a study of LLMs.</p>
-          <p>Bainbridge, L. (1983). Ironies of automation. Automatica, 19(6), 775–779. https://doi.org/10.1016/0005-1098(83)90046-8</p>
-          <p>First-page image rendered from the paper: https://gwern.net/doc/sociology/technology/1983-bainbridge.pdf</p>
+          <ul>
+            <li>Hoffman et al.: automation can simplify the surface while hiding complexity that demands greater expertise during difficult conditions.</li>
+            <li>Bainbridge, 1983: people remain responsible for abnormal conditions while losing practice in the skills needed to diagnose and recover.</li>
+            <li>Her evidence concerns industrial control and flight decks. Applying it to LLMs is a historical analogy, not an AI experiment.</li>
+            <li>Preserve opportunities to practise, understand and intervene. Expertise loss is a risk, not an inevitable consequence of AI.</li>
+          </ul>
         </div>
       </section>
 
@@ -1488,9 +1351,11 @@
           </picture>
         </figure>
         <div class="notes">
-          <p>The people, shrugging, flame and “This is Fine” are a metaphor for uncertain understanding and unaddressed trouble in a complex system. The system remains complex even when the people responsible for it can no longer explain what is happening or how to intervene.</p>
-          <p>This is an illustration of a risk to expertise and control, not evidence that every use of AI causes expertise loss or failure.</p>
-          <p>Artwork credit: <cite>This is Fine</cite> by KC Green, animated by Philcrifo. Original comic: https://gunshowcomic.com/648. Animation credit: https://imgur.com/gallery/i-animated-this-is-fine-comic-tjxrc.</p>
+          <ul>
+            <li>The system stays complex even when the people responsible can no longer explain it.</li>
+            <li>Less understanding means fewer options for recognising trouble and intervening effectively.</li>
+            <li>The shrugging and fire illustrate a possible loss of expertise and control, not evidence that all AI use causes failure.</li>
+          </ul>
         </div>
       </section>
 
@@ -1547,10 +1412,13 @@
           <figcaption>Your SREs!</figcaption>
         </figure>
         <div class="notes">
-          <p>The buckets represent accumulating verification and repair work. The Lemming represents the expertise and response capacity needed to protect performance. Cheap generation can move checking, maintenance and recovery work elsewhere, consuming attention and capacity even as visible output increases.</p>
-          <p>The dotted line warns about the remaining buffer. Crossing it begins consuming protected error margin, while the solid line marks the actual functional limit. A warning helps only if people have practical understanding, time, authority and means to reduce demand, challenge output, stop further action or recover.</p>
-          <p>The faded reference marks where we think we are, while the moving point illustrates how actual conditions can drift. This is an illustrative possible journey, not a measured trajectory or claim that all AI output is workslop. Organisational choices and usable feedback shape whether people can detect and respond to a convincing mistake in their actual work.</p>
-          <p>GIF source: <a href="https://tenor.com/view/toad-screaming-aaaaaaaa-oof-gif-14875902">Toad Screaming</a>, shared by BrendaMcCoy on Tenor.</p>
+          <ul>
+            <li>More visible output can hide verification, repair and recovery work transferred elsewhere.</li>
+            <li>Buckets represent that work. The Lemming represents expertise and response capacity protecting performance.</li>
+            <li>Crossing the dotted line consumes the protected buffer. The solid line is the actual functional limit.</li>
+            <li>Perceived position can lag reality. This journey is illustrative, not measured, and not all AI output is workslop.</li>
+            <li>Warnings matter only with understanding, time, authority and means to reduce demand, challenge output or recover.</li>
+          </ul>
         </div>
       </section>
       <section id="ai-fish-diagram-overview" class="step ai-margin-summary"
@@ -1568,9 +1436,12 @@
         </ul>
         <p class="substep closing-takeaway">Expertise turns warnings into protective action.</p>
         <div class="notes">
-          <p>Rasmussen directs attention to how locally reasonable decisions interact across the whole system. AI can change cost, effort and the pace of proposed action. Expertise helps people see those interactions, question plausible explanations and recognise when a plan no longer fits. Protecting margin requires useful feedback and the capacity to act on it. Crossing the dotted line begins consuming the protected buffer before the actual functional boundary. It does not establish that harm has already occurred.</p>
-          <p>Sources: Rasmussen (1997), Cook (2000), Hoffman et al. (2013), Woods (2018).</p>
-          <p>Learning Opportunities, by Dr. Cat Hicks, offers optional 10–15 minute exercises using prediction, explanation and reflection during AI-assisted coding. Use it to keep active learning in engineering work. <a href="https://github.com/DrCatHicks/learning-opportunities">GitHub repository</a>.</p>
+          <ul>
+            <li>Rasmussen: locally reasonable decisions interact across the whole system. Follow where AI moves cost, effort and proposed action.</li>
+            <li>Expertise helps challenge plausible explanations and recognise when plans no longer fit. Warnings also need usable feedback and capacity to act.</li>
+            <li>Consuming error margin signals reduced buffer, not proof that harm has occurred.</li>
+            <li>Cat Hicks’s Learning Opportunities: optional 10–15 minute exercises using prediction, explanation and reflection. Keep deliberate learning in AI-assisted work.</li>
+          </ul>
         </div>
       </section>
 
@@ -1583,8 +1454,12 @@
         </ul>
         <p class="substep closing-takeaway">Test people, tools and workflow together.</p>
         <div class="notes">
-          <p>AI can assist diagnosis, testing and explanation, and can also be authorised to act. It can change existing feedback and action channels. The distinction changes what must be bounded and observed. People need useful evidence, practical understanding and enforceable authority to interrupt or recover. Evaluate the joint workflow with relevant baselines and both helpful and misleading outputs. The clinical joint-performance research motivates this question but does not estimate software or LLM risk. Whether an application helps depends on its use and evaluation, not the label “tool” or “operator”.</p>
-          <p>Sources: Rasmussen (1997), Morey et al. (2025), Rayo et al. (2026), Chapter 5.</p>
+          <ul>
+            <li>Assisting and acting create different control needs. Bound permissions and pace, observe effects, and retain authority to interrupt and recover.</li>
+            <li>Evaluate people, tools and workflow together against relevant baselines, including helpful and misleading AI output.</li>
+            <li>Clinical joint-performance research motivates this question. It does not estimate software or LLM risk.</li>
+            <li>Benefit depends on actual use and evaluation, not the label “tool” or “operator”.</li>
+          </ul>
         </div>
       </section>
 
@@ -1607,9 +1482,12 @@
         </div>
         <p class="substep closing-takeaway">Local savings can create pressure elsewhere.</p>
         <div class="notes">
-          <p>The same three constraints remain: economic viability, acceptable workload and acceptable performance. AI can save effort in one place while moving verification, maintenance or recovery work elsewhere. Count the whole workflow and protect the people who interpret warning signals and own corrective action. Error margin is a protected performance-side buffer, not an SLO error budget or a fourth constraint. These proposed responses need local evidence and adjustment as conditions change.</p>
-          <p>Sources: Rasmussen (1997), Rayo et al. (2026), CMA (2025).</p>
-          <p>Homer side-eye GIF reused from the SREcon26 presentation: https://srecon26.hatchman76.com/images/homer-simpson-side-eye.gif</p>
+          <ul>
+            <li>Return to three constraints: economic viability, acceptable workload and acceptable performance.</li>
+            <li>Savings in one place can transfer checking, maintenance and recovery work elsewhere. Count the whole workflow.</li>
+            <li>Error margin is the protected performance-side buffer, not an SLO error budget or a fourth constraint.</li>
+            <li>Protect those interpreting warnings and owning corrective action. Adapt these responses using local evidence as conditions change.</li>
+          </ul>
         </div>
       </section>
 
@@ -1631,8 +1509,12 @@
         </div>
         <p class="substep closing-takeaway">Use AI to strengthen our capacity to understand, act and recover.</p>
         <div class="notes">
-          <p>Adaptive capacity is developed before surprise and renewed through everyday work. Expertise, shared understanding and coordination help people change plans when familiar responses are no longer enough. They also need time, resources and authority to act. AI can contribute to that capacity when its use supports understanding and effective action. The aim is sustained joint performance and recoverability. This is the talk's application of resilience engineering, not a guarantee that humans or tools can absorb unlimited pressure.</p>
-          <p>Sources: Cook (2000), Allspaw (2019), Woods (2018), Hoffman et al. (2013).</p>
+          <ul>
+            <li>Develop adaptive capacity before surprise, and renew it through everyday work.</li>
+            <li>Expertise, shared understanding and coordination let people revise plans when familiar responses stop fitting.</li>
+            <li>They also need time, resources and authority. Human adaptability does not absorb unlimited pressure.</li>
+            <li>Use AI to strengthen understanding, effective action and recovery. Judge sustained joint performance, not output alone.</li>
+          </ul>
         </div>
       </section>
 

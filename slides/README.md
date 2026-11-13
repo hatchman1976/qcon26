@@ -2,6 +2,8 @@
 
 The numbered Markdown files in this directory mirror the rendered Impress deck in `src/index.html`. They preserve one-slide-per-file copy and speaker notes, but they are not an automatic rendering input.
 
+The live presenter console uses shorter speaking cues in `src/index.html`; these files retain the fuller preparation, evidence limits and source details.
+
 Use Archivo Black for headings, the title-slide speaker name and opening-hook statements. Use Open Sans inside tables and Comic Neue for other editable text. Exceptions: Economic Boundary Actions, Workload Boundary Actions, Protect the Error Margin and Tokenomic Progression use Archivo Black column headings and bold Comic Neue table bodies. Fish boundary labels and the original fish’s Error Margin and Operating Point labels use Archivo Black. Preserve emoji fonts and lettering embedded in artwork. These rules include WHOAMI and print.
 
 Substep images fade in and pop to 110% before settling at their configured size over 400ms. Images in tables and comparison grids use their normal reveal instead. Add `data-image-pop="off"` to an image or its container to opt out, or to `#impress` to disable it throughout. Reduced-motion and print skip the effect. `data-image-pop-group` keeps composite artwork together, and `data-image-pop-trigger` links an indirect reveal to its substep selector.

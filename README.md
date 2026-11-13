@@ -26,6 +26,8 @@ Open <http://127.0.0.1:8000/> and refresh after edits.
 - [Review mode](http://127.0.0.1:8000/?substeps=off) advances by whole slides and plays reveals automatically.
 - `?substeps=on` explicitly restores normal mode. `data-substeps` on `#impress` controls the default.
 
+Press `P` to open the presenter console. Its concise speaking cues use a fixed 20px font, styled in `src/presenter-notes.css`; fuller preparation and source details remain in `slides/`.
+
 On phones and tablets, swipe horizontally or use Back/Next. Each swipe advances one reveal or slide; links and reference tabs remain tappable. Landscape gives the fixed slide layout more readable space.
 
 Run the source check before publishing:

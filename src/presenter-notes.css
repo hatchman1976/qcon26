@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Comic Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/comic-neue-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Comic Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/comic-neue-bold.woff2") format("woff2");
+}
+
+#impressconsole body {
+  color: #17212b;
+  font-family: "Comic Neue", sans-serif;
+  font-size: 18px;
+}
+
+#impressconsole div#console {
+  bottom: 56px;
+}
+
+#impressconsole div#notes {
+  box-sizing: border-box;
+  padding: 24px;
+  border-color: #c8d1db;
+  background: #fafcff;
+  font-size: 20px;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+
+#impressconsole div#notes ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+#impressconsole div#notes li + li {
+  margin-top: 0.65em;
+}
+
+#impressconsole div#notes p {
+  margin: 0 0 0.65em;
+}
+
+#impressconsole div#notes a {
+  color: #214c9b;
+}
+
+#impressconsole div#controls {
+  bottom: 8px;
+  height: 36px;
+  line-height: 32px;
+}
+
+#impressconsole div#prev a,
+#impressconsole div#next a {
+  padding: 0 12px;
+  font-size: 18px;
+}
+
+#impressconsole div#clock,
+#impressconsole div#timer,
+#impressconsole div#status {
+  margin-right: 1em;
+  margin-left: 1em;
+}
