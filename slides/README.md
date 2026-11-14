@@ -19,41 +19,42 @@ Substep images fade in and pop to 110% before settling at their configured size 
 7. [Resilience Engineering](04a-resilience-engineering.md) — `#/resilience-engineering`
 8. [Rasmussen source slide](05-model.md) — `#/the-model`
 9. [The research behind the model](06-paper-themes.md) — `#/paper-themes`
-10. [Social control is multi-layered](07-social-and-systems.md) — `#/social-and-systems`
-11. [Putting it together](07a-complex-system-and-boundaries.md) — `#/complex-system-and-boundaries`
-12. [The Fish Diagram](08-fish-diagram.md) — `#/the-fish-diagram`
-13. [Diagram Legend](09-diagram-legend.md) — `#/diagram-legend`
-14. [Economic Boundary](09a-economic-boundary.md) — `#/economic-boundary`
-15. [Economic Boundary Actions](09b-economic-boundary-actions.md) — `#/economic-boundary-actions`
-16. [Workload Boundary](09c-workload-boundary.md) — `#/workload-boundary`
-17. [Workload Boundary Actions](09d-workload-boundary-actions.md) — `#/workload-boundary-actions`
-18. [Boundary of Acceptable Performance](09e-performance-boundary.md) — `#/performance-boundary`
-19. [Protect the Error Margin](09f-error-margin.md) — `#/error-margin`
-20. [AI enters the operating point](09g-ai-operating-point.md) — `#/ai-operating-point`
-21. [AI in the Fish Diagram](09h-ai-fish-diagram.md) — `#/ai-fish-diagram`
-22. [AI has to be paid for](09i-ai-economic-pressure.md) — `#/ai-economic-pressure`
-23. [Tokenomic Progression](09i2-token-economy.md) — `#/token-economy`
-24. [The price of dependence](09i3-model-enshittification.md) — `#/price-of-dependence`
-25. [AI and least effort](09j-ai-workload-pressure.md) — `#/ai-workload-pressure`
-26. [The erosion of expertise](09j2-erosion-of-expertise.md) — `#/erosion-of-expertise`
-27. [Expertise erosion sequence](09j3-expertise-erosion-sequence.md) — `#/expertise-erosion-sequence`
-28. [AI margin pressure](09k-ai-margin-pressure.md) — `#/ai-margin-pressure`
-29. [Skills that protect margin](10-workflow-cost.md) — `#/workflow-cost`
-30. [Tool vs Operator](11-verification-capacity.md) — `#/verification-capacity`
-31. [We have to adapt](12-evidence-handoff.md) — `#/evidence-handoff`
-32. [Humans are adaptable](13-rehearsed-recovery.md) — `#/rehearsed-recovery`
-33. [References](14-references.md) — `#/references`
-34. [Thank you](15-thank-you.md) — `#/thank-you`
+10. [Putting it together](07a-complex-system-and-boundaries.md) — `#/complex-system-and-boundaries`
+11. [The Fish Diagram](08-fish-diagram.md) — `#/the-fish-diagram`
+12. [Diagram Legend](09-diagram-legend.md) — `#/diagram-legend`
+13. [Economic Boundary](09a-economic-boundary.md) — `#/economic-boundary`
+14. [Economic Boundary Actions](09b-economic-boundary-actions.md) — `#/economic-boundary-actions`
+15. [Workload Boundary](09c-workload-boundary.md) — `#/workload-boundary`
+16. [Workload Boundary Actions](09d-workload-boundary-actions.md) — `#/workload-boundary-actions`
+17. [Boundary of Acceptable Performance](09e-performance-boundary.md) — `#/performance-boundary`
+18. [Protect the Error Margin](09f-error-margin.md) — `#/error-margin`
+19. [AI enters the operating point](09g-ai-operating-point.md) — `#/ai-operating-point`
+20. [AI in the Fish Diagram](09h-ai-fish-diagram.md) — `#/ai-fish-diagram`
+21. [AI has to be paid for](09i-ai-economic-pressure.md) — `#/ai-economic-pressure`
+22. [Tokenomic Progression](09i2-token-economy.md) — `#/token-economy`
+23. [The price of dependence](09i3-model-enshittification.md) — `#/price-of-dependence`
+24. [AI and least effort](09j-ai-workload-pressure.md) — `#/ai-workload-pressure`
+25. [The erosion of expertise](09j2-erosion-of-expertise.md) — `#/erosion-of-expertise`
+26. [Expertise erosion sequence](09j3-expertise-erosion-sequence.md) — `#/expertise-erosion-sequence`
+27. [AI margin pressure](09k-ai-margin-pressure.md) — `#/ai-margin-pressure`
+28. [Skills that protect margin](10-workflow-cost.md) — `#/workflow-cost`
+29. [Tool vs Operator](11-verification-capacity.md) — `#/verification-capacity`
+30. [We have to adapt](12-evidence-handoff.md) — `#/evidence-handoff`
+31. [Humans are adaptable](13-rehearsed-recovery.md) — `#/rehearsed-recovery`
+32. [References](14-references.md) — `#/references`
+33. [Thank you](15-thank-you.md) — `#/thank-you`
 
-The deck contains 34 content steps and three overview/overlay camera steps, for 37 Impress steps. In normal mode, [AI margin pressure](09k-ai-margin-pressure.md) has six manual reveals: the continuous ball-and-bucket sequence, the Consequences heading, its three points, then Toad and “Your SREs!”. The ball does not wait for a reveal at the dotted margin. Revealed content and the completed scene remain on the world canvas after exit. The camera-only [AI Fish Diagram overview](09l-ai-fish-diagram-overview.md) then returns to the framing of `#/ai-fish-diagram` before the closing sequence. Detailed scene timing and positioning belong in each slide’s preparation section; speaker notes carry the argument and evidence limits.
+The deck contains 33 content steps and three overview/overlay camera steps, for 36 Impress steps. In normal mode, [AI margin pressure](09k-ai-margin-pressure.md) has six manual reveals: the continuous ball-and-bucket sequence, the Consequences heading, its three points, then Toad and “Your SREs!”. The ball does not wait for a reveal at the dotted margin. Revealed content and the completed scene remain on the world canvas after exit. The camera-only [AI Fish Diagram overview](09l-ai-fish-diagram-overview.md) then returns to the framing of `#/ai-fish-diagram` before the closing sequence. Detailed scene timing and positioning belong in each slide’s preparation section; speaker notes carry the argument and evidence limits.
 
 The four-slide closing arc returns to skills, control, boundary takeaways and adaptive capacity, adapting the SREcon26 closing structure to this talk. The camera moves right from the AI fish overview through all four closing slides, sharing y=308000 and scale 25, at x=45000, 90000, 135000 and 180000. References completes the horizontal sequence at x=225000, with the same y-coordinate and scale. **Skills that protect margin** connects systems understanding, critical judgment and adaptation. **Tool vs Operator** asks how AI is used and controlled, with people, tools and workflow tested together. **We have to adapt** brings back economic, workload and performance pressures and the protected error margin. **Humans are adaptable** closes on expertise, time and authority, and using AI to strengthen our capacity to understand, act and recover. These are the talk’s proposed applications, not guarantees of useful output or immunity from disruption. References follows the close, then the final Thank you step displays the presentation URL.
 
-The former seven-slide sequence from Human behaviour through Keeping the model in view has been integrated into earlier steps and removed. Behaviour and control evidence now lives in the hierarchy, arrival and workload notes. Whole-workflow economics lives in the economic close-ups; joint evaluation lives in acceptable performance; recovery and the conventional-automation AWS example live in the error-margin notes. See the [integration map](../research/2026-10-13-slide-consolidation.md).
+The former seven-slide sequence from Human behaviour through Keeping the model in view has been integrated into earlier steps and removed. Behaviour and control evidence now lives in the research, arrival and workload notes. Whole-workflow economics lives in the economic close-ups; joint evaluation lives in acceptable performance; recovery and the conventional-automation AWS example live in the error-margin notes. See the [integration map](../research/2026-10-13-slide-consolidation.md).
 
 The sources remain distinct: Rasmussen supplies the model, Chapter 5 supplies a contemporary resilience synthesis, and the software mechanism is this talk's application. Clinical joint-evaluation results do not estimate LLM software risk; the AWS example has no reported generative AI involvement.
 
 ## Archived working ideas
+
+[Where does control live?](07-social-and-systems.md) is retained as preparation material and is no longer rendered.
 
 The files in [`ideas/`](ideas/) preserve material that may be adapted later. They are not currently rendered in the deck.
 

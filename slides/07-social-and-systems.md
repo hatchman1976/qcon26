@@ -1,6 +1,6 @@
 # Where does control live?
 
-Rendered step: `#/social-and-systems`.
+Archived preparation, no longer rendered. Former step: `#/social-and-systems`.
 
 ## Slide copy and sequence
 

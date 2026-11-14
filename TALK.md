@@ -17,30 +17,30 @@ The talk adapts Rasmussen's Dynamic Safety Model and the 2024 SREcon presentatio
 7. Resilience Engineering
 8. Rasmussen source slide
 9. The research behind the model
-10. Social control hierarchy
-11. Putting it together: people, boundaries and adaptation
-12. The Fish Diagram
-13. Diagram Legend
-14. Economic Boundary
-15. Economic Boundary Actions
-16. Workload Boundary
-17. Workload Boundary Actions
-18. Boundary of Acceptable Performance
-19. Protect the Error Margin
-20. AI enters the operating point
-21. AI in the Fish Diagram
-22. AI has to be paid for
-23. Tokenomic Progression
-24. The price of dependence
-25. AI and least effort
-26. The erosion of expertise
-27. Expertise erosion sequence — complex system, uncertainty, flame and “This is Fine”
-28. AI margin pressure
-29. Skills that protect margin
-30. Tool vs Operator
-31. We have to adapt
-32. Humans are adaptable
-33. References
+10. Putting it together: people, boundaries and adaptation
+11. The Fish Diagram
+12. Diagram Legend
+13. Economic Boundary
+14. Economic Boundary Actions
+15. Workload Boundary
+16. Workload Boundary Actions
+17. Boundary of Acceptable Performance
+18. Protect the Error Margin
+19. AI enters the operating point
+20. AI in the Fish Diagram
+21. AI has to be paid for
+22. Tokenomic Progression
+23. The price of dependence
+24. AI and least effort
+25. The erosion of expertise
+26. Expertise erosion sequence — complex system, uncertainty, flame and “This is Fine”
+27. AI margin pressure
+28. Skills that protect margin
+29. Tool vs Operator
+30. We have to adapt
+31. Humans are adaptable
+32. References
+33. Thank you
 
 The deck contains 33 content steps and three overview/overlay camera steps, for 36 Impress steps. The former seven trailing slides have been integrated into the earlier flow and removed. [The integration map](research/2026-10-13-slide-consolidation.md) records their destinations. AI margin pressure now has one presenter-controlled reveal for a continuous sequence and a separate local scenario ball. The static **Consequences** callout belongs to that margin scene. The global operating point keeps roaming through the scene, the camera-only **AI Fish Diagram overview** and the closing slides ending with **Humans are adaptable**, followed by References. Current copy, preparation details and speaker notes live in [slides/README.md](slides/README.md).
 

@@ -8,7 +8,7 @@ An interactive [impress.js](https://impress.js.org/) presentation, **“Adapt or
 - [Repository](https://github.com/hatchman1976/qcon26)
 - Intended site: <https://qcon26.hatchman76.com>
 
-The talk applies Rasmussen’s model to AI economics, workload, expertise and adaptive capacity. [`TALK.md`](TALK.md) holds the argument and evidence limits; [`slides/`](slides/README.md) holds the slide copy, preparation details and speaker notes. The rendered deck currently has 37 Impress steps, including three overview/overlay camera steps.
+The talk applies Rasmussen’s model to AI economics, workload, expertise and adaptive capacity. [`TALK.md`](TALK.md) holds the argument and evidence limits; [`slides/`](slides/README.md) holds the slide copy, preparation details and speaker notes. The rendered deck currently has 36 Impress steps, including three overview/overlay camera steps.
 
 ## Work locally
 

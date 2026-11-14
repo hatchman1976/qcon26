@@ -17,7 +17,7 @@ All revealed content remains visible on the world canvas after exit: the fish bo
 ## Speaker notes
 
 
-The hierarchy surrounds the people and interactions in this complex system. People and technology operate within economic, workload and performance constraints. The dotted error margin marks a buffer inside the performance boundary.
+People and technology operate within economic, workload and performance constraints. The dotted error margin marks a buffer inside the performance boundary. Feedback only helps when it reaches people with the resources and authority to act.
 
 **Adaptation with LLM tools**
 

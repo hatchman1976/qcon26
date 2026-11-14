@@ -1782,7 +1782,6 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
 
 /* SREcon24 socio-technical-system definition and visual explanation. */
 .social-wiki-slide,
-.social-systems-slide,
 .complex-system-slide {
   overflow: hidden;
 }
@@ -2021,7 +2020,6 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   width: 250px;
 }
 
-.social-systems-slide img,
 .complex-system-slide img {
   position: absolute;
   height: auto;
@@ -2248,69 +2246,6 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
 .social-system-person-four {
   top: 227px;
   left: 103px;
-}
-
-#social-and-systems .social-systems-title {
-  top: 20px;
-  font-size: 55px;
-}
-
-.social-hierarchy-content {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  width: 858px;
-  height: 100%;
-  transform: translateX(-50%);
-}
-
-.social-hierarchy-model {
-  bottom: 198px;
-  left: 264px;
-  width: 264px;
-}
-
-.social-hierarchy-label {
-  position: absolute;
-  bottom: 115px;
-  left: 198px;
-  width: 422.4px;
-  height: auto;
-  margin: 0;
-  font-family: var(--body-font-family);
-  font-size: 30.8px;
-  line-height: 1.05;
-  text-align: center;
-}
-
-.social-hierarchy-label strong,
-.social-hierarchy-label small {
-  display: block;
-}
-
-.social-hierarchy-label small {
-  margin-top: 5px;
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-.social-hierarchy-research {
-  bottom: 187px;
-  left: 13.2px;
-  width: 264px;
-}
-
-.social-hierarchy-environment {
-  right: auto;
-  bottom: 187.5px;
-  left: 501.6px;
-  width: 343.2px;
-}
-
-.social-context-reveal img {
-  position: absolute;
-  height: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

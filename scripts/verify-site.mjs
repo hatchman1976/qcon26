@@ -43,7 +43,6 @@ const requiredMarkers = [
   'id="social-and-systems-wiki"',
   'id="resilience-engineering"',
   'id="before-we-continue"',
-  'id="social-and-systems"',
   'id="complex-system-and-boundaries"',
   "Adapt or Drift:",
   "Resilience Engineering When AI Moves the Operating Point",
@@ -66,9 +65,6 @@ const requiredMarkers = [
   "Figure 8: research traditions converge",
   "Socio Technical Systems",
   "interaction between people and technology in workplaces",
-  "Where does control live?",
-  "Social control hierarchy",
-  "Rasmussen’s structural hierarchy",
   "Dotted error margin inside the performance boundary",
   "Plausible ≠ measured",
   "Fluent ≠ intended",
@@ -109,6 +105,10 @@ if (stepCoordinate("fish-diagram-overlay", "x") !== fishX) {
 }
 
 const sectionTags = [...html.matchAll(/<section\b[^>]*>/g)].map(([tag]) => tag);
+const paperThemesIndex = sectionTags.findIndex((tag) => /\bid="paper-themes"/.test(tag));
+if (!/\bid="complex-system-and-boundaries"/.test(sectionTags[paperThemesIndex + 1] ?? "")) {
+  throw new Error("Putting it together must immediately follow the research behind the model");
+}
 const systemsDefinitionIndex = sectionTags.findIndex((tag) => /\bid="social-and-systems-wiki"/.test(tag));
 if (!/\bid="resilience-engineering"/.test(sectionTags[systemsDefinitionIndex + 1] ?? "") ||
     !/\bid="the-model"/.test(sectionTags[systemsDefinitionIndex + 2] ?? "")) {
@@ -210,8 +210,8 @@ await access(resolve(siteRoot, "vendor/impress.js/LICENSE"));
 
 const stepCount = (html.match(/class="[^"]*\bstep\b[^"]*"/g) ?? []).length;
 
-if (stepCount !== 37) {
-  throw new Error(`Expected exactly thirty-seven impress.js steps, found ${stepCount}`);
+if (stepCount !== 36) {
+  throw new Error(`Expected exactly thirty-six impress.js steps, found ${stepCount}`);
 }
 
 console.log(`Verified src/index.html with ${stepCount} presentation steps and ${assetCount} local files.`);

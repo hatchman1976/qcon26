@@ -48,7 +48,7 @@ The paper reviews human reliability, operator modelling, field evidence, and org
 
 Decisions are embedded in continuous work. Locally sensible adaptations can interact across controllers and create system-level risk.
 
-The next slide makes the paper's system-wide control hierarchy concrete; the following slide simplifies the geometry without discarding these mechanisms.
+The next slide connects people, technology and adaptation to the economic, workload and performance constraints.
 
 ## Accuracy guardrails
 
