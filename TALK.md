@@ -94,8 +94,6 @@ The source layers remain explicit. Rasmussen supplies the control framework. Ray
 
 [Morey, Rayo, and Woods (2025)](https://www.nature.com/articles/s41746-025-01784-y) motivate evaluation across strong, mediocre, and poor AI recommendations. Their experiment used predictive clinical AI in simulated patient cases, with 450 nursing students and 12 licensed nurses. Recommendation correctness affected joint performance, and added explanations did not significantly change recommendation effects in that task. This is not an LLM software study or evidence that explanations never help. For our software application, compare relevant baselines in controlled exercises and observe useful completion, verification effort, consequential-error detection, response time, and successful recovery.
 
-The [AWS 19–20 October 2025 disruption report](https://aws.amazon.com/message/101925/) supplies a software control-and-recovery example, retained in the Error Margin notes. Chapter 5 also cites it in §5.3.6, printed p. 84 (PDF p. 92). Delayed DNS-plan application interacted with changed state and cleanup. Subsequent EC2 recovery entered congestive collapse, and AWS announced recovery testing and controls on incoming work among its corrective actions. The recovery-testing suite was being built, so the report does not establish that all announced work was complete. The report describes conventional automation and dependencies, with no reported generative AI involvement. It illustrates a mechanism relevant to the talk, not an AI-caused incident or a general verdict on automation.
-
 The integrated steps ask the audience to preserve the ability to notice, challenge, act and recover. Error margin is not free staff capacity or the operating point's distance from a selected center. Corrective action restores margin and recoverability. It does not create a fourth boundary or return the operating point to a preferred center.
 
 ## The distinction this talk must make
@@ -308,4 +306,3 @@ Monitoring is only a sensor. Feedback becomes counterpressure when the signal is
 - Oracle FY2026 results: <https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/>
 - Rayo, Morey, Grøtan, and Woods. “AI Gold Rush 2 Versus AI Realism” (2026): <https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5>
 - Morey, Rayo, and Woods (2025), joint human–AI evaluation in simulated patient cases: <https://www.nature.com/articles/s41746-025-01784-y>
-- AWS. Summary of the Amazon DynamoDB Service Disruption in the Northern Virginia (US-EAST-1) Region, 19–20 October 2025: <https://aws.amazon.com/message/101925/>

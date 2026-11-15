@@ -103,12 +103,6 @@ Closing line:
 
 Visually, reconnect to the existing control loop and one operating point. Reveal a signal, an actor interpreting it, and an authorized action that restores margin. A documented fallback should be shown as a capability exercised by people with usable tools and permissions. Do not make the boundary repel the point automatically or imply a preferred geometric center.
 
-## A software example worth using
-
-The [AWS report on the 19–20 October 2025 disruption](https://aws.amazon.com/message/101925/) offers a concrete control-and-recovery case. In its DynamoDB section, a freshness check became stale while plan application was delayed; an older DNS plan overwrote a newer one, and cleanup removed the active plan. Manual intervention was required. The EC2 section describes recovery work entering congestive collapse. AWS’s corrective actions include recovery testing and throttling incoming work according to queue size.
-
-Use this to connect delay, changing state, coupled automation, admission control, and recovery capacity. The report describes conventional automation and service dependencies, with no reported generative AI involvement. It illustrates a mechanism relevant to our argument, not an AI-caused incident or proof that more automation always harms resilience.
-
 ## Evidence and model discipline
 
 - Preserve one operating state and the three existing Rasmussen constraints. Verification, authority, fallback knowledge, and assurance belong within control and capacity; they do not introduce additional boundaries.

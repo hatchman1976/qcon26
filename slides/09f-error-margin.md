@@ -43,11 +43,8 @@ Notice requires usable signals and timely interpretation. Intervention requires 
 
 Exercise stale observations, scarce time, excess review demand and unavailable supporting services outside production. Assess whether the team can pause, reduce scope and recover. Chapter 5 §§5.3.2–5.3.5 (printed pp. 82–84; PDF pp. 90–92) discusses difficulties recognizing plausible errors; §5.1 illustrates responsibility without resources and decay of alternatives; §§5.4–5.5 (printed pp. 84–86; PDF pp. 92–94) support challenging exercises and continuing assurance.
 
-The AWS 19–20 October 2025 disruption report describes conventional automation and dependencies, with no reported generative AI involvement. Delayed DNS-plan application interacted with changed state and cleanup; subsequent EC2 recovery entered congestive collapse. AWS announced recovery testing and controls on incoming work. The report does not establish that all announced work was complete. Use it as a control-and-recovery mechanism example, not an AI-caused incident or a general verdict on automation.
-
 - [Rasmussen (1997), Figures 1 and 3; control, adaptation and information](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
 - [Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5)
-- [AWS, 19–20 October 2025 disruption: DynamoDB, EC2 and corrective actions](https://aws.amazon.com/message/101925/)
 
 ## Sources
 
@@ -55,4 +52,3 @@ The AWS 19–20 October 2025 disruption report describes conventional automation
 - [Rasmussen (1997), Figure 3](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
 - [Rasmussen (1997), Figures 1 and 3; control, adaptation and information](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
 - [Rayo, Morey, Grøtan and Woods (2026), AI Gold Rush 2 Versus AI Realism, Chapter 5](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5)
-- [AWS, 19–20 October 2025 disruption: DynamoDB, EC2 and corrective actions](https://aws.amazon.com/message/101925/)

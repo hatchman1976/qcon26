@@ -6,20 +6,19 @@ The slide remains visible on the world canvas after exit, and its selected refer
 
 Continue the horizontal closing sequence to the right of **Humans are adaptable**, at `data-x="225000"`, `data-y="308000"`, `data-scale="25"`.
 
-This slide collects 33 unique sources in three selectable collections: 16 QCon sources, twelve Token economy sources and five Resilience & expertise sources. Citation context remains in the relevant speaker notes; illustration credits remain beside their illustrations.
+This slide collects 32 unique sources in three selectable collections: 15 QCon sources, twelve Token economy sources and five Resilience & expertise sources. Citation context remains in the relevant speaker notes; illustration credits remain beside their illustrations.
 
 ## Slide copy
 
 **References**
 
-Collection tabs: **QCon sources (16)**, **Token economy (12)** and **Resilience & expertise (5)**.
+Collection tabs: **QCon sources (15)**, **Token economy (12)** and **Resilience & expertise (5)**.
 
 ### Model & operations
 
 - [Rasmussen (1997) — Risk management in a dynamic society](https://backend.orbit.dtu.dk/ws/portalfiles/portal/158016663/SAFESCI.PDF)
 - [Cook & Rasmussen (2005) — Going solid](https://doi.org/10.1136/qshc.2003.009530)
 - [Rayo et al. (2026) — AI Gold Rush 2 Versus AI Realism, Ch. 5](https://link.springer.com/chapter/10.1007/978-3-032-29336-7_5)
-- [AWS (2025) — October disruption and recovery report](https://aws.amazon.com/message/101925/)
 - [Google SRE Workbook — Identifying and recovering from overload](https://sre.google/workbook/overload/)
 - [Google SRE Workbook — Canarying releases](https://sre.google/workbook/canarying-releases/)
 
