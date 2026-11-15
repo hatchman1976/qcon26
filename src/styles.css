@@ -1674,7 +1674,6 @@ body.impress-on-error-margin #the-fish-diagram .plain-roaming-point-position {
   overflow: visible;
   background: #fff;
   box-shadow: 0 10px 24px rgb(0 0 0 / 18%);
-  transform: rotate(-1deg);
 }
 
 .paper-themes-figure img {
@@ -2319,13 +2318,9 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
 .ai-arrival-reveal { position: absolute; inset: 0; }
 .ai-arrival-ball { position: absolute; top: 310px; left: 430px; width: 160px; height: 160px; object-fit: contain; }
 .ai-arrival-reveal.substep-visible .ai-arrival-ball { animation: ai-ball-roll-in var(--ai-arrival-duration) cubic-bezier(0.18, 0.65, 0.3, 1) both; }
-.ai-arrival-question,
-.ai-fish-question { position: absolute; left: 60px; right: 60px; margin: 0; font-family: var(--body-font-family); font-size: 38px; font-weight: 700; line-height: 1.15; text-align: center; }
+.ai-arrival-question { position: absolute; left: 60px; right: 60px; margin: 0; font-family: var(--body-font-family); font-size: 38px; font-weight: 700; line-height: 1.15; text-align: center; }
 .ai-arrival-question { top: 565px; }
 .ai-arrival-reveal.substep-visible .ai-arrival-question { animation: ai-question-arrive 2800ms ease both; }
-.ai-fish-question { bottom: 35px; visibility: hidden; }
-.ai-fish-question span { white-space: nowrap; }
-.ai-fish-question.substep-visible { visibility: visible; }
 @keyframes ai-ball-roll-in { from { transform: translateX(-650px) rotate(-720deg); } to { transform: translateX(0) rotate(0); } }
 @keyframes ai-arrival-point-fade { from { opacity: 1; } to { opacity: 0; } }
 @keyframes ai-question-arrive { 0%, 80% { opacity: 0; } 100% { opacity: 1; } }
@@ -2628,8 +2623,6 @@ img.boundary-detail-icon { height: auto; }
     animation: none !important;
     opacity: 1 !important;
   }
-
-  .ai-fish-question { visibility: visible !important; }
 
   .ai-arrival-point {
     animation: none !important;
