@@ -2342,6 +2342,10 @@ body.impress-on-complex-system-and-boundaries .social-system-person {
 .ai-roaming-point-position { --ai-ball-diameter: 44.8px; position: absolute; top: calc(404px - var(--ai-ball-diameter) / 2); left: calc(512px - var(--ai-ball-diameter) / 2); width: var(--ai-ball-diameter); height: var(--ai-ball-diameter); will-change: transform; }
 .ai-roaming-point-position.is-moving { transition: transform 6000ms linear; }
 .ai-roaming-point { display: block; width: 100%; height: 100%; object-fit: contain; }
+@media screen {
+  .ai-roaming-point { opacity: 1; transition: opacity 600ms ease; }
+  body:is(.impress-on-ai-economic-pressure, .impress-on-ai-workload-pressure) .ai-roaming-point { opacity: 0; }
+}
 body.impress-on-ai-margin-pressure .ai-roaming-point-position { visibility: hidden; }
 /* Presenter-controlled pressure scene, independent of the roaming model point. */
 .ai-margin-pressure-slide { --ai-margin-ball-diameter: 131.36576px; padding: 0; }

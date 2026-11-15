@@ -34,6 +34,8 @@ All visible content uses eight presenter-controlled substeps: title and icon tog
 
 Use the original 211.5px meat-proxy image. Revealed images remain visible after exit. The following [Erosion of expertise slide](09j2-erosion-of-expertise.md) connects expertise to Bainbridge’s *Ironies of Automation*.
 
+The moving AI ball fades to zero opacity over 600ms on entry and back to full opacity over 600ms on exit. Its motion continues without resetting, and the faded starting reference remains visible. Reduced motion makes the fade immediate; print keeps the ball visible.
+
 Presentation source links are collected on the final [References slide](14-references.md).
 
 ## Speaker notes
